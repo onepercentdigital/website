@@ -19,7 +19,7 @@
 
 ### Core Libraries
 
-- **TanStack Router v1.136.2** - File-based routing with SSR support
+- **TanStack Router v1.136.3** - File-based routing with SSR support
 - **TanStack Query v5.90.9** - Server state management
 - **TanStack Form v1.25.0** - Form handling with validation
 - **Zod v4.1.12** - Schema validation
