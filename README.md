@@ -6,23 +6,41 @@ To run this application:
 
 ```bash
 bun install
-bun --bun run start
+bun run dev
 ```
+
+The app will start on http://localhost:3000
 
 # Building For Production
 
 To build this application for production:
 
 ```bash
-bun --bun run build
+bun run build
 ```
+
+To preview the production build:
+
+```bash
+bun run preview
+```
+
+## Deployment
+
+This project is configured to deploy to Cloudflare Workers:
+
+```bash
+bun run deploy
+```
+
+This will build the application and deploy it to Cloudflare's edge network.
 
 ## Testing
 
 This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
 
 ```bash
-bun --bun run test
+bun run test
 ```
 
 ## Styling
@@ -36,9 +54,15 @@ This project uses [Biome](https://biomejs.dev/) for linting and formatting. The 
 
 
 ```bash
-bun --bun run lint
-bun --bun run format
-bun --bun run check
+bun run lint
+bun run format
+bun run check
+```
+
+To automatically fix issues:
+
+```bash
+bun run lint-fix
 ```
 
 
