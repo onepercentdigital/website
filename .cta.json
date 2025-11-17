@@ -10,9 +10,17 @@
   "framework": "react-cra",
   "chosenAddOns": [
     "biome",
+    "cloudflare",
     "start",
+    "clerk",
+    "convex",
+    "sentry",
     "form",
     "shadcn",
-    "tanstack-query"
+    "table",
+    "store",
+    "tanstack-query",
+    "t3env",
+    "tanchat"
   ]
 }

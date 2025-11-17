@@ -6,41 +6,23 @@ To run this application:
 
 ```bash
 bun install
-bun run dev
+bun --bun run start
 ```
-
-The app will start on http://localhost:3000
 
 # Building For Production
 
 To build this application for production:
 
 ```bash
-bun run build
+bun --bun run build
 ```
-
-To preview the production build:
-
-```bash
-bun run preview
-```
-
-## Deployment
-
-This project is configured to deploy to Cloudflare Workers:
-
-```bash
-bun run deploy
-```
-
-This will build the application and deploy it to Cloudflare's edge network.
 
 ## Testing
 
 This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
 
 ```bash
-bun run test
+bun --bun run test
 ```
 
 ## Styling
@@ -54,16 +36,21 @@ This project uses [Biome](https://biomejs.dev/) for linting and formatting. The 
 
 
 ```bash
-bun run lint
-bun run format
-bun run check
+bun --bun run lint
+bun --bun run format
+bun --bun run check
 ```
 
-To automatically fix issues:
 
-```bash
-bun run lint-fix
-```
+## Setting up Clerk
+
+- Set the `VITE_CLERK_PUBLISHABLE_KEY` in your `.env.local`.
+
+
+## Setting up Convex
+
+- Set the `VITE_CONVEX_URL` and `CONVEX_DEPLOYMENT` environment variables in your `.env.local`. (Or run `npx convex init` to set them automatically.)
+- Run `npx convex dev` to start the Convex server.
 
 
 ## Shadcn
@@ -74,6 +61,62 @@ Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
 pnpx shadcn@latest add button
 ```
 
+
+## T3Env
+
+- You can use T3Env to add type safety to your environment variables.
+- Add Environment variables to the `src/env.mjs` file.
+- Use the environment variables in your code.
+
+### Usage
+
+```ts
+import { env } from "@/env";
+
+console.log(env.VITE_APP_TITLE);
+```
+
+
+
+
+
+# TanStack Chat Application
+
+Am example chat application built with TanStack Start, TanStack Store, and Claude AI.
+
+## .env Updates
+
+```env
+ANTHROPIC_API_KEY=your_anthropic_api_key
+```
+
+## ✨ Features
+
+### AI Capabilities
+- 🤖 Powered by Claude 3.5 Sonnet 
+- 📝 Rich markdown formatting with syntax highlighting
+- 🎯 Customizable system prompts for tailored AI behavior
+- 🔄 Real-time message updates and streaming responses (coming soon)
+
+### User Experience
+- 🎨 Modern UI with Tailwind CSS and Lucide icons
+- 🔍 Conversation management and history
+- 🔐 Secure API key management
+- 📋 Markdown rendering with code highlighting
+
+### Technical Features
+- 📦 Centralized state management with TanStack Store
+- 🔌 Extensible architecture for multiple AI providers
+- 🛠️ TypeScript for type safety
+
+## Architecture
+
+### Tech Stack
+- **Frontend Framework**: TanStack Start
+- **Routing**: TanStack Router
+- **State Management**: TanStack Store
+- **Styling**: Tailwind CSS
+- **AI Integration**: Anthropic's Claude API
 
 
 ## Routing
