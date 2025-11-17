@@ -3,14 +3,21 @@ import {
   ChevronDown,
   ChevronRight,
   ClipboardType,
+  Globe,
+  Guitar,
   Home,
   Menu,
+  MessagesSquare,
   Network,
   SquareFunction,
   StickyNote,
+  Store,
+  Table,
   X,
 } from 'lucide-react';
 import { useState } from 'react';
+import ClerkHeader from '../integrations/clerk/header-user.tsx';
+import TanChatAIAssistant from './example-AIAssistant.tsx';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -173,6 +180,45 @@ export default function Header() {
           )}
 
           <Link
+            to="/demo/clerk"
+            onClick={() => setIsOpen(false)}
+            className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <Globe size={20} />
+            <span className="font-medium">Clerk</span>
+          </Link>
+
+          <Link
+            to="/demo/convex"
+            onClick={() => setIsOpen(false)}
+            className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <Globe size={20} />
+            <span className="font-medium">Convex</span>
+          </Link>
+
+          <Link
+            to="/demo/sentry/testing"
+            onClick={() => setIsOpen(false)}
+            className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <Globe size={20} />
+            <span className="font-medium">Sentry</span>
+          </Link>
+
+          <Link
             to="/demo/form/simple"
             onClick={() => setIsOpen(false)}
             className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
@@ -199,6 +245,32 @@ export default function Header() {
           </Link>
 
           <Link
+            to="/demo/table"
+            onClick={() => setIsOpen(false)}
+            className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <Table size={20} />
+            <span className="font-medium">TanStack Table</span>
+          </Link>
+
+          <Link
+            to="/demo/store"
+            onClick={() => setIsOpen(false)}
+            className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <Store size={20} />
+            <span className="font-medium">Store</span>
+          </Link>
+
+          <Link
             to="/demo/tanstack-query"
             onClick={() => setIsOpen(false)}
             className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
@@ -211,8 +283,40 @@ export default function Header() {
             <span className="font-medium">TanStack Query</span>
           </Link>
 
+          <Link
+            to="/demo/tanchat"
+            onClick={() => setIsOpen(false)}
+            className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <MessagesSquare size={20} />
+            <span className="font-medium">Chat</span>
+          </Link>
+
+          <Link
+            to="/example/guitars"
+            onClick={() => setIsOpen(false)}
+            className="mb-2 flex items-center gap-3 rounded-lg p-3 transition-colors hover:bg-gray-800"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <Guitar size={20} />
+            <span className="font-medium">Guitar Demo</span>
+          </Link>
+
           {/* Demo Links End */}
         </nav>
+
+        <div className="flex flex-col gap-2 border-gray-700 border-t bg-gray-800 p-4">
+          <ClerkHeader />
+
+          <TanChatAIAssistant />
+        </div>
       </aside>
     </>
   );

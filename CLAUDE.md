@@ -1,434 +1,368 @@
-# CLAUDE.md
+# CLAUDE.md - Project Context for AI Assistants
 
 ## Project Overview
 
-**seo-website** is a modern full-stack React application built for onepercentseo.com using the TanStack Start framework. The project is configured for deployment on Cloudflare Workers and emphasizes SEO optimization, server-side rendering, and type safety.
+This is a **full-stack TypeScript web application** being developed as a replacement for **onepercentseo.com**. Built on a comprehensive TanStack starter template, it showcases modern React patterns and will be adapted for SEO-focused features and services.
 
-## Architecture
+### Repository
+- **Name**: seo-website
+- **Organization**: onepercentdigital
+- **Git Repository**: https://github.com/onepercentdigital/seo-website.git
+- **Current Branch**: feat/new-build
+- **Package Manager**: Bun 1.3.2
 
-### Tech Stack
+## Tech Stack
 
-- **Framework:** TanStack Start (full-stack React with SSR)
-- **Runtime:** Cloudflare Workers (edge deployment)
-- **Package Manager:** Bun 1
-- **Language:** TypeScript 5
-- **Build Tool:** Vite 7
-- **Styling:** Tailwind CSS v4 with @tailwindcss/vite plugin
-- **UI Components:** Shadcn/ui + Radix UI primitives
-- **Icons:** Lucide React
+### Core Framework
+- **TanStack Start** - Full-stack React framework with SSR, streaming, and server functions
+- **TanStack Router** - File-based routing with type-safe navigation
+- **React 19.2.0** - Latest React with concurrent features
+- **TypeScript 5.9.3** - Strict mode with no unused variables
+- **Vite 7.2.2** - Lightning-fast build tool and dev server
 
-### Core Libraries
+### State Management & Data Fetching
+- **TanStack Query** - Async state management, caching, and server synchronization
+- **TanStack Store** - Lightweight client state with derived state support
+- **TanStack Form** - Type-safe form handling with validation
+- **Convex 1.29.2** - Real-time backend database with TypeScript schema
 
-- **TanStack Router v1** - File-based routing with SSR support
-- **TanStack Query v5** - Server state management
-- **TanStack Form v1** - Form handling with validation
-- **Zod v4** - Schema validation
-- **React 19** - UI library
+### UI & Styling
+- **Tailwind CSS 4.1.17** - Utility-first CSS framework (latest v4)
+- **Shadcn/ui** - High-quality component library on Radix UI primitives
+- **Radix UI** - Unstyled, accessible component primitives
+- **Lucide React** - Beautiful, consistent icon system
+- **tw-animate-css** - Tailwind animation utilities
+- **class-variance-authority** - Type-safe component variants
 
-### Development Tools
+### AI Integration
+- **Anthropic AI SDK 2.0.44** - Claude AI integration for chat and assistance
+- **Vercel AI SDK 5.0.93** - Unified AI/ML interface
+- **MCP (Model Context Protocol)** - AI context management and tool use
 
-- **Biome v2** - Linting, formatting, and code organization
-- **Vitest v4** - Unit testing
-- **Testing Library** - React component testing
-- **Wrangler v4** - Cloudflare Workers deployment
+### Authentication & Backend
+- **Clerk 5.55.0** - Complete authentication and user management
+- **Convex** - Real-time backend with:
+  - Schema: `todos` (text, completed), `products` (title, imageId, price)
+  - CRUD operations for todos (list, add, toggle, remove)
+  - Automatic indexing by creation time
+
+### Deployment & Monitoring
+- **Cloudflare Workers** - Edge deployment with global CDN
+- **Wrangler 4.47.0** - Cloudflare deployment tooling
+- **Sentry 10.25.0** - Error tracking, performance monitoring, and instrumentation
+- **Node.js compatibility** - Enabled for Cloudflare Workers
+
+### Developer Experience
+- **Biome 2.3.6** - Ultra-fast linting and formatting (ESLint/Prettier replacement)
+- **Vitest 4.0.10** - Blazing fast unit test framework
+- **Testing Library** - React component testing utilities
+- **TanStack DevTools** - Integrated debugging for Router, Query, and Store
+- **TypeScript path aliases**: `@/*` → `./src/*`
 
 ## Project Structure
 
 ```
 seo-website/
-├── src/
-│   ├── components/
-│   │   ├── ui/              # Shadcn UI components
-│   │   ├── Header.tsx       # Main navigation component
-│   │   └── demo.*           # Demo components (can be removed)
-│   ├── routes/
-│   │   ├── __root.tsx       # Root layout with shell
-│   │   ├── index.tsx        # Home page
-│   │   └── demo/            # Demo routes (can be removed)
-│   ├── integrations/
-│   │   └── tanstack-query/  # Query client configuration
-│   ├── hooks/               # Custom React hooks
-│   ├── lib/
-│   │   └── utils.ts         # Utility functions (cn, etc.)
-│   ├── data/                # Static data
-│   ├── router.tsx           # Router configuration
-│   ├── routeTree.gen.ts     # Auto-generated route tree
-│   └── styles.css           # Global Tailwind styles
+├── src/                      # Source code (~320KB, 1,229 LOC)
+│   ├── components/          # React components
+│   │   ├── ui/             # Shadcn components (button, input, select, slider, etc.)
+│   │   ├── Header.tsx      # Main navigation with collapsible sidebar
+│   │   ├── example-AIAssistant.tsx
+│   │   └── example-GuitarRecommendation.tsx
+│   ├── routes/             # File-based routing (TanStack Router)
+│   │   ├── __root.tsx      # Root layout with providers (Clerk → Convex → Query)
+│   │   ├── index.tsx       # Landing page showcasing TanStack Start
+│   │   ├── demo/           # 19+ demo routes showcasing features
+│   │   └── example.guitars/
+│   ├── integrations/       # Third-party service wrappers
+│   │   ├── clerk/          # Authentication provider and components
+│   │   ├── convex/         # Database provider setup
+│   │   └── tanstack-query/ # Query client configuration and devtools
+│   ├── hooks/              # Custom React hooks (forms, contexts)
+│   ├── lib/                # Utilities, stores, and helpers
+│   │   ├── demo-store.ts   # TanStack Store examples
+│   │   └── utils.ts        # Shared utilities (cn, etc.)
+│   ├── data/               # Mock data and examples
+│   ├── utils/              # Helper functions and tools
+│   ├── env.ts              # Type-safe environment variables (T3 Env)
+│   ├── router.tsx          # Router configuration with Sentry
+│   ├── routeTree.gen.ts    # Auto-generated route tree (do not edit)
+│   └── styles.css          # Global styles and Tailwind directives
+│
+├── convex/                  # Convex backend
+│   ├── schema.ts           # Database schema definitions
+│   ├── todos.ts            # Todo CRUD operations (queries & mutations)
+│   ├── tsconfig.json       # Convex TypeScript config
+│   └── _generated/         # Auto-generated Convex types
+│
 ├── public/                  # Static assets
-├── dist/                    # Build output
-├── package.json             # Dependencies and scripts
-├── tsconfig.json            # TypeScript configuration
-├── vite.config.ts           # Vite configuration
-├── wrangler.jsonc           # Cloudflare Workers config
-├── biome.json               # Biome configuration
-├── components.json          # Shadcn configuration
-└── .cursorrules             # Cursor IDE rules
-
+│
+├── .cursorrules            # Cursor IDE rules (Convex, Sentry, Shadcn patterns)
+├── biome.json              # Biome linting and formatting config
+├── tsconfig.json           # TypeScript configuration
+├── vite.config.ts          # Vite build configuration
+├── wrangler.jsonc          # Cloudflare Workers deployment config
+├── package.json            # Dependencies and scripts
+└── README.md               # Getting started documentation
 ```
 
-## Configuration
+## Key Features & Capabilities
 
-### TypeScript (`tsconfig.json`)
+### Current Demo Features
+The starter includes comprehensive examples of:
 
-- **Target:** ES2022
-- **Module Resolution:** Bundler
-- **Strict Mode:** Enabled
-- **Path Aliases:** `@/*` maps to `./src/*`
-- **JSX:** react-jsx (automatic runtime)
+1. **TanStack Start Capabilities**
+   - Server Functions (type-safe RPC)
+   - API Routes
+   - SSR Modes: SPA, Full SSR, Data-only
+   - Streaming responses
 
-### Biome (`biome.json`)
+2. **State Management**
+   - TanStack Store with derived state
+   - TanStack Query for server state caching
+   - Real-time updates via Convex
 
-- **Formatter:** Spaces, single quotes for JS/TS
-- **Linter:** Recommended rules + sorted classes
-- **VCS:** Git integration enabled
-- **Ignored Files:** routeTree.gen.ts, styles.css
+3. **Forms & Validation**
+   - Simple forms
+   - Complex multi-field forms (address example)
+   - TanStack Form integration
 
-### Cloudflare (`wrangler.jsonc`)
+4. **Data Display**
+   - TanStack Table with sorting, filtering, pagination
+   - Example implementations with mock data
 
-- **Name:** seo-website
-- **Compatibility Date:** 2025-09-02
-- **Compatibility Flags:** nodejs_compat
-- **Entry Point:** @tanstack/react-start/server-entry
-- **Observability:** Enabled
+5. **Third-Party Integrations**
+   - Clerk authentication (sign in/up/out flows)
+   - Convex real-time database
+   - Sentry error tracking and performance monitoring
+   - Claude AI chat assistant
 
-### Vite (`vite.config.ts`)
+6. **Example Applications**
+   - AI-powered chat interface
+   - Guitar recommendation system
+   - Todo list with real-time sync
+   - Product catalog
 
-Plugins in order:
-1. `vite-tsconfig-paths` - Path alias resolution
-2. `@cloudflare/vite-plugin` - SSR environment
-3. `@tailwindcss/vite` - Tailwind CSS processing
-4. `@tanstack/react-start/plugin/vite` - TanStack Start integration
-5. `@vitejs/plugin-react` - React support
+### Planned: SEO Website Features
+This foundation will be adapted to replace **onepercentseo.com** with features such as:
+- SEO service pages and marketing content
+- Lead generation and contact forms
+- Case studies and portfolio
+- Blog/content management
+- Analytics and performance tracking
+- Client dashboards (potential)
+
+## Environment Variables
+
+### Required Environment Variables
+Configure these in `.env.local`:
+
+```bash
+# Clerk Authentication
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_...
+
+# Convex Database
+VITE_CONVEX_URL=https://...convex.cloud
+CONVEX_DEPLOYMENT=...
+
+# Sentry Monitoring
+VITE_SENTRY_DSN=https://...@sentry.io/...
+
+# AI Integration
+ANTHROPIC_API_KEY=sk-ant-...
+
+# Optional
+VITE_APP_TITLE=OnePercent SEO
+SERVER_URL=https://...
+```
+
+### Environment Variable Validation
+Uses **T3 Env** for runtime validation:
+- Client variables **must** be prefixed with `VITE_`
+- Type-safe access via `import { env } from '@/env'`
+- Empty strings treated as undefined
 
 ## Development Workflow
 
-### Available Scripts
-
+### Getting Started
 ```bash
-# Development
-bun run dev              # Start dev server on port 3000
+# Install dependencies
+bun install
 
-# Building
-bun run build            # Build for production + type check
-bun run preview          # Preview production build (builds with bun runtime)
-bun run serve            # Serve production build with Vite preview
+# Start development server (port 3000)
+bun run dev
 
-# Deployment
-bun run deploy           # Build with bun runtime, deploy to Cloudflare Workers
-
-# Code Quality
-bun run lint             # Run Biome linter
-bun run lint-fix         # Fix auto-fixable issues
-bun run lint-fix-unsafe  # Fix with unsafe transformations
-bun run format           # Format code
-bun run check            # Full Biome check
-bun run type             # TypeScript type checking
-bun run check:all        # Type check + Biome check
-
-# Testing
-bun run test             # Run Vitest tests
-
-# Cloudflare
-bun run cf-typegen       # Generate Cloudflare types
+# Start Convex backend (in separate terminal)
+npx convex dev
 ```
 
-### Adding New Routes
-
-TanStack Router uses file-based routing. To add a new route:
-
-1. Create a new file in `src/routes/` (e.g., `about.tsx`)
-2. The route tree will auto-regenerate in `src/routeTree.gen.ts`
-3. Add navigation links using `<Link to="/about">About</Link>`
-
-**Route Naming Conventions:**
-- `index.tsx` - Root of directory (`/`)
-- `about.tsx` - `/about`
-- `blog.post.tsx` - `/blog/post`
-- `_layout.tsx` - Layout without route segment
-- `__root.tsx` - Root layout (special file)
-
-### Adding UI Components
-
-This project uses Shadcn/ui. To add components:
-
+### Code Quality & Testing
 ```bash
-pnpx shadcn@latest add button
-pnpx shadcn@latest add card
-pnpx shadcn@latest add dialog
-```
+# Type checking
+bun run type
+# or
+tsc --noEmit
 
-Components are installed to `src/components/ui/` and can be customized.
+# Linting
+bun run lint
 
-### Path Aliases
+# Formatting
+bun run format
 
-Use `@/*` to import from `src/`:
+# Run all checks
+bun run check-all
 
-```typescript
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-```
-
-## Key Features
-
-### Server-Side Rendering (SSR)
-
-- **Full-document SSR** - Entire HTML rendered on server
-- **Streaming** - Progressive content delivery
-- **Multiple modes:**
-  - SPA mode (client-side only)
-  - Full SSR (complete server rendering)
-  - Data-only (SSR data, client rendering)
-
-### Type Safety
-
-- End-to-end TypeScript from server to client
-- Router context typing via `createRootRouteWithContext`
-- Zod schema validation for forms and data
-- Generated route types for type-safe navigation
-
-### Data Fetching
-
-**TanStack Query Integration:**
-```typescript
-const { data } = useQuery({
-  queryKey: ['todos'],
-  queryFn: fetchTodos,
-})
-```
-
-**Router Loaders:**
-```typescript
-export const Route = createFileRoute('/posts')({
-  loader: async () => fetchPosts(),
-  component: PostsPage,
-})
-```
-
-### Forms
-
-Using TanStack Form with Zod validation:
-
-```typescript
-const form = useForm({
-  defaultValues: { email: '' },
-  validators: {
-    onChange: z.object({
-      email: z.string().email(),
-    }),
-  },
-})
-```
-
-## Code Style Guidelines
-
-### Biome Configuration
-
-- **Indentation:** 2 spaces
-- **Quotes:** Single quotes for JS/TS
-- **Line Width:** Default (80 characters)
-- **Import Organization:** Auto-organized on save
-- **Class Sorting:** Tailwind classes must be sorted
-
-### Best Practices
-
-1. **Use path aliases:** `@/components/ui/button` instead of `../../../components/ui/button`
-2. **Type everything:** No implicit `any` types
-3. **Validate user input:** Use Zod schemas for all forms
-4. **Server functions:** Prefix with `'use server'` directive
-5. **Client components:** Use `'use client'` when needed
-6. **Component structure:**
-   ```typescript
-   // 1. Imports
-   import { createFileRoute } from '@tanstack/react-router'
-   
-   // 2. Route export
-   export const Route = createFileRoute('/page')({ component: Page })
-   
-   // 3. Component
-   function Page() {
-     return <div>Content</div>
-   }
-   ```
-
-## Testing
-
-### Unit Tests with Vitest
-
-```bash
+# Run tests
 bun run test
 ```
 
-Test files should be colocated with source files or in `__tests__` directories:
-- `component.test.tsx`
-- `utils.test.ts`
+### Building & Deployment
+```bash
+# Production build
+bun run build
 
-### Testing Library
+# Preview production build
+bun run serve
 
-```typescript
-import { render, screen } from '@testing-library/react'
-import { expect, test } from 'vitest'
+# Deploy to Cloudflare Workers
+bun run deploy
+```
 
-test('renders button', () => {
-  render(<Button>Click me</Button>)
-  expect(screen.getByText('Click me')).toBeInTheDocument()
+## Code Standards & Conventions
+
+### TypeScript
+- **Strict mode enabled** - No implicit any, strict null checks
+- **No unused variables** - `noUnusedLocals` and `noUnusedParameters` enforced
+- **Path aliases** - Use `@/` instead of relative imports
+- **Type safety everywhere** - Prefer explicit types over inference for public APIs
+
+### Biome Configuration
+- **Single quotes** for JavaScript/TypeScript strings
+- **Space indentation** (2 spaces)
+- **Sorted Tailwind classes** - Enforced via `useSortedClasses` rule
+- **Auto-organize imports** on format
+- **Files included**: `src/**/*`, `.vscode/**/*`, root config files
+- **Files excluded**: `src/routeTree.gen.ts`, `src/styles.css`
+
+### React Patterns
+- **Functional components** only
+- **Hooks** for state and side effects
+- **File-based routing** - Add files to `src/routes/` for new pages
+- **Provider composition** - Root layout wraps Clerk → Convex → TanStack Query
+- **Type-safe routing** - Use `Link` component from `@tanstack/react-router`
+
+### Component Organization
+- **UI components** in `src/components/ui/` (Shadcn managed)
+- **Feature components** in `src/components/`
+- **Route components** in `src/routes/`
+- **One component per file** for better code splitting
+
+## Key Configuration Files
+
+### `vite.config.ts`
+Plugins in order:
+1. TanStack DevTools
+2. Cloudflare integration (SSR environment)
+3. vite-tsconfig-paths (path aliases)
+4. Tailwind CSS
+5. TanStack Start
+6. Vite React
+
+### `tsconfig.json`
+- Target: ES2022
+- Module: ESNext
+- Module resolution: bundler
+- JSX: react-jsx
+- Path aliases: `@/*` → `./src/*`
+
+### `wrangler.jsonc`
+- Name: seo-website
+- Compatibility: 2025-09-02
+- Node.js compatibility enabled
+- Entry: `@tanstack/react-start/server-entry`
+
+## Important Notes for AI Assistants
+
+### Sentry Instrumentation
+When creating server functions, wrap with Sentry spans:
+```tsx
+import * as Sentry from '@sentry/tanstackstart-react'
+
+Sentry.startSpan({ name: 'Operation name' }, async () => {
+  // Server function logic
 })
 ```
 
-## Deployment
+### Convex Schema Patterns
+- Use `v.id("tableName")` for foreign keys
+- All documents have `_id` and `_creationTime` automatically
+- Create indexes for common queries: `.index("indexName", ["field1", "field2"])`
+- Use `v.union()` for discriminated unions
+- Use `v.optional()` for nullable fields
 
-### Cloudflare Workers
-
+### Shadcn Component Installation
 ```bash
-# Deploy to production
-bun run deploy
-
-# Deploy with wrangler directly
-wrangler deploy
+# Always use latest version
+pnpx shadcn@latest add <component-name>
 ```
 
-### Build Output
+### File Naming Conventions
+- **Demo files** prefixed with `demo.` can be safely deleted
+- **Example files** prefixed with `example.` are reference implementations
+- **Route files** follow TanStack Router conventions:
+  - `index.tsx` for index routes
+  - `route.tsx` for layout routes
+  - `$param.tsx` for dynamic segments
 
-- **Client Bundle:** `dist/client/` - Static assets
-- **Server Bundle:** `dist/server/` - Worker script
-- **Manifest:** Auto-generated asset manifest
-
-### Environment Variables
-
-Configure in Cloudflare dashboard or `wrangler.jsonc`:
-
-```jsonc
-{
-  "vars": {
-    "API_URL": "https://api.example.com"
-  }
-}
-```
+### Auto-Generated Files (Do Not Edit)
+- `src/routeTree.gen.ts` - Generated by TanStack Router
+- `convex/_generated/` - Generated by Convex
 
 ## Common Tasks
 
-### Cleaning Demo Files
+### Adding a New Route
+1. Create file in `src/routes/` (e.g., `src/routes/about.tsx`)
+2. Use `createFileRoute` from `@tanstack/react-router`
+3. Export component from route definition
+4. TanStack Router auto-generates route tree
 
-Demo files are prefixed with `demo` and can be safely removed:
-
+### Adding a Shadcn Component
 ```bash
-# Remove demo routes
-rm -rf src/routes/demo/
-
-# Remove demo components
-rm src/components/demo.*
-
-# Remove demo hooks
-rm src/hooks/demo.*
-
-# Remove demo data
-rm src/data/demo.*
+pnpx shadcn@latest add button
 ```
 
-Don't forget to update `src/components/Header.tsx` to remove demo navigation links.
+### Creating a Convex Table
+1. Add table to `convex/schema.ts`
+2. Create query/mutation file in `convex/`
+3. Use `useQuery` or `useMutation` hooks in React
 
-### Adding SEO Meta Tags
+### Adding Environment Variables
+1. Add to `.env.local`
+2. Define in `src/env.ts` with Zod schema
+3. Access via `import { env } from '@/env'`
 
-Edit `src/routes/__root.tsx`:
+## Resources & Documentation
 
-```typescript
-export const Route = createRootRouteWithContext<MyRouterContext>()({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Your SEO Title' },
-      { name: 'description', content: 'Your meta description' },
-      { property: 'og:title', content: 'Your OG Title' },
-      { property: 'og:description', content: 'Your OG Description' },
-    ],
-  }),
-})
-```
+- [TanStack Start Docs](https://tanstack.com/start)
+- [TanStack Router Docs](https://tanstack.com/router)
+- [TanStack Query Docs](https://tanstack.com/query)
+- [TanStack Form Docs](https://tanstack.com/form)
+- [TanStack Store Docs](https://tanstack.com/store)
+- [TanStack Table Docs](https://tanstack.com/table)
+- [Convex Docs](https://docs.convex.dev)
+- [Clerk Docs](https://clerk.com/docs)
+- [Shadcn UI](https://ui.shadcn.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Biome](https://biomejs.dev)
 
-### Adding Analytics
+## Project Status
 
-Add tracking scripts in `src/routes/__root.tsx`:
+- **Phase**: Foundation setup complete
+- **Next Steps**: Adapt for onepercentseo.com requirements
+- **Clean State**: No uncommitted changes
+- **Ready for**: Feature development and customization
 
-```typescript
-function RootDocument({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-        <script async src="https://analytics.example.com/script.js" />
-      </head>
-      <body>{children}</body>
-    </html>
-  )
-}
-```
+---
 
-## Troubleshooting
-
-### Type Errors
-
-```bash
-# Regenerate route tree
-bun run dev  # Auto-generates routeTree.gen.ts
-
-# Check types manually
-bun run type
-```
-
-### Build Failures
-
-```bash
-# Clear dist and node_modules
-rm -rf dist node_modules
-
-# Reinstall dependencies
-bun install
-
-# Rebuild
-bun run build
-```
-
-### Biome Issues
-
-```bash
-# Auto-fix safe issues
-bun run lint-fix
-
-# Auto-fix with unsafe transformations
-bun run lint-fix-unsafe
-
-# Check what would be changed
-bun run check
-```
-
-## Resources
-
-- [TanStack Start Documentation](https://tanstack.com/start)
-- [TanStack Router Documentation](https://tanstack.com/router)
-- [TanStack Query Documentation](https://tanstack.com/query)
-- [TanStack Form Documentation](https://tanstack.com/form)
-- [Tailwind CSS v4 Documentation](https://tailwindcss.com)
-- [Shadcn/ui Documentation](https://ui.shadcn.com)
-- [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers)
-- [Biome Documentation](https://biomejs.dev)
-- [Vitest Documentation](https://vitest.dev)
-
-## Git Information
-
-- **Current Branch:** main
-- **Remote:** https://github.com/onepercentdigital/seo-website.git
-- **Recent Commits:**
-  - build(wrangler): name and dep update
-  - Fix/biome
-  - Package/cloudflare
-  - build(repo): init
-
-## Notes for AI Assistants
-
-- **Demo Content:** Files prefixed with `demo` are example code and can be removed
-- **Auto-Generated Files:** `src/routeTree.gen.ts` is auto-generated, never edit manually
-- **Styling:** Use Tailwind utility classes, sorted alphabetically
-- **Component Library:** Prefer Shadcn/ui components over custom implementations
-- **Type Safety:** Always maintain strict TypeScript typing
-- **SSR Consideration:** Be mindful of client-only code (use `'use client'` when needed)
-- **Edge Runtime:** Code runs on Cloudflare Workers, avoid Node.js-specific APIs
+*Last Updated: 2025-11-17*
+*Maintained for: AI-assisted development with Claude and other AI tools*

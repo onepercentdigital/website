@@ -7,7 +7,11 @@ import {
 } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 import Header from '../components/Header';
+import ClerkProvider from '../integrations/clerk/provider';
+import ConvexProvider from '../integrations/convex/provider';
+
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools';
+import StoreDevtools from '../lib/demo-store-devtools';
 import appCss from '../styles.css?url';
 
 interface MyRouterContext {
@@ -46,20 +50,25 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <Header />
-        {children}
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-            TanStackQueryDevtools,
-          ]}
-        />
+        <ClerkProvider>
+          <ConvexProvider>
+            <Header />
+            {children}
+            <TanStackDevtools
+              config={{
+                position: 'bottom-right',
+              }}
+              plugins={[
+                {
+                  name: 'Tanstack Router',
+                  render: <TanStackRouterDevtoolsPanel />,
+                },
+                StoreDevtools,
+                TanStackQueryDevtools,
+              ]}
+            />
+          </ConvexProvider>
+        </ClerkProvider>
         <Scripts />
       </body>
     </html>
