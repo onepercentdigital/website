@@ -10,27 +10,27 @@
 
 - **Framework:** TanStack Start (full-stack React with SSR)
 - **Runtime:** Cloudflare Workers (edge deployment)
-- **Package Manager:** Bun 1.3.2
-- **Language:** TypeScript 5.9.3
-- **Build Tool:** Vite 7.2.2
+- **Package Manager:** Bun 1
+- **Language:** TypeScript 5
+- **Build Tool:** Vite 7
 - **Styling:** Tailwind CSS v4 with @tailwindcss/vite plugin
 - **UI Components:** Shadcn/ui + Radix UI primitives
 - **Icons:** Lucide React
 
 ### Core Libraries
 
-- **TanStack Router v1.136.3** - File-based routing with SSR support
-- **TanStack Query v5.90.9** - Server state management
-- **TanStack Form v1.25.0** - Form handling with validation
-- **Zod v4.1.12** - Schema validation
-- **React 19.2.0** - UI library
+- **TanStack Router v1** - File-based routing with SSR support
+- **TanStack Query v5** - Server state management
+- **TanStack Form v1** - Form handling with validation
+- **Zod v4** - Schema validation
+- **React 19** - UI library
 
 ### Development Tools
 
-- **Biome v2.3.5** - Linting, formatting, and code organization
-- **Vitest v4.0.9** - Unit testing
+- **Biome v2** - Linting, formatting, and code organization
+- **Vitest v4** - Unit testing
 - **Testing Library** - React component testing
-- **Wrangler v4.48.0** - Cloudflare Workers deployment
+- **Wrangler v4** - Cloudflare Workers deployment
 
 ## Project Structure
 
