@@ -24,7 +24,7 @@
     "@ai-sdk/anthropic": "^2.0.44",
     "@ai-sdk/mcp": "^0.0.8",
     "@ai-sdk/react": "^2.0.93",
-    "@clerk/clerk-react": "^5.55.0",
+    "@clerk/clerk-react": "^5.56.0",
     "@cloudflare/vite-plugin": "^1.14.2",
     "@convex-dev/react-query": "0.0.0-alpha.11",
     "@faker-js/faker": "^10.1.0",
