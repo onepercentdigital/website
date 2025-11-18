@@ -6,10 +6,11 @@ import {
   Scripts,
 } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
-import Header from '../components/Header';
+import { Footer } from '../components/Footer';
+import { Navigation } from '../components/Navigation';
+import { brand } from '../config/brand';
 import ClerkProvider from '../integrations/clerk/provider';
 import ConvexProvider from '../integrations/convex/provider';
-
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools';
 import StoreDevtools from '../lib/demo-store-devtools';
 import appCss from '../styles.css?url';
@@ -29,7 +30,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        name: 'description',
+        content: brand.seo.defaultDescription,
+      },
+      {
+        title: brand.seo.defaultTitle,
       },
     ],
     links: [
@@ -52,8 +57,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <ClerkProvider>
           <ConvexProvider>
-            <Header />
-            {children}
+            <Navigation />
+            <main>{children}</main>
+            <Footer />
             <TanStackDevtools
               config={{
                 position: 'bottom-right',

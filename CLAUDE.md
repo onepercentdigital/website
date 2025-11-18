@@ -2,14 +2,22 @@
 
 ## Project Overview
 
-This is a **full-stack TypeScript web application** being developed as a replacement for **onepercentseo.com**. Built on a comprehensive TanStack starter template, it showcases modern React patterns and will be adapted for SEO-focused features and services.
+This is a **full-stack TypeScript web application** being developed as a replacement for **onepercentseo.com**. Built on TanStack Start with a modern design system inspired by Vercel, it delivers SEO-optimized marketing content and a WordPress-like blog CMS.
 
 ### Repository
 - **Name**: seo-website
 - **Organization**: onepercentdigital
 - **Git Repository**: https://github.com/onepercentdigital/seo-website.git
-- **Current Branch**: feat/new-build
+- **Current Branch**: main
 - **Package Manager**: Bun 1.3.2
+
+### Future Rebranding
+The site is designed for easy rebranding:
+- Current: **One Percent SEO** (onepercentseo.com)
+- Future: **One Percent GEO** (onepercentgeo.com)
+- Potential: **One Percent Digital** (multi-vertical agency site)
+
+All branding is centralized in `src/config/brand.ts` for quick updates.
 
 ## Tech Stack
 
@@ -28,11 +36,20 @@ This is a **full-stack TypeScript web application** being developed as a replace
 
 ### UI & Styling
 - **Tailwind CSS 4.1.17** - Utility-first CSS framework (latest v4)
+- **DM Sans** - Primary font family (400, 500, 700 weights via @fontsource)
 - **Shadcn/ui** - High-quality component library on Radix UI primitives
 - **Radix UI** - Unstyled, accessible component primitives
 - **Lucide React** - Beautiful, consistent icon system
 - **tw-animate-css** - Tailwind animation utilities
 - **class-variance-authority** - Type-safe component variants
+
+### Design System
+- **Accent Color**: `#00cccc` (cyan/teal)
+- **Dark Mode**: Primarily black (`#0a0a0a`) with high contrast
+- **Light Mode**: Primarily white (`#ffffff`) with high contrast
+- **Typography**: DM Sans - 700 for headings, 400 for body text
+- **Visual Style**: Inspired by Vercel.com with subtle animations
+- **Theme Toggle**: Respects system preferences with manual override
 
 ### AI Integration
 - **Anthropic AI SDK 2.0.44** - Claude AI integration for chat and assistance
@@ -41,16 +58,16 @@ This is a **full-stack TypeScript web application** being developed as a replace
 
 ### Authentication & Backend
 - **Clerk 5.55.0** - Complete authentication and user management
-- **Convex** - Real-time backend with:
-  - Schema: `todos` (text, completed), `products` (title, imageId, price)
-  - CRUD operations for todos (list, add, toggle, remove)
-  - Automatic indexing by creation time
+- **User Roles**: Admin, Editor, Viewer
+- **App Domain**: app.onepercentgeo.com (for client/admin dashboard)
+- **Convex** - Real-time backend with comprehensive blog schema
 
 ### Deployment & Monitoring
 - **Cloudflare Workers** - Edge deployment with global CDN
+- **Cloudflare Images** - Image optimization and CDN delivery
 - **Wrangler 4.47.0** - Cloudflare deployment tooling
 - **Sentry 10.25.0** - Error tracking, performance monitoring, and instrumentation
-- **Node.js compatibility** - Enabled for Cloudflare Workers
+- **Plausible Analytics** - Privacy-focused web analytics (planned)
 
 ### Developer Experience
 - **Biome 2.3.6** - Ultra-fast linting and formatting (ESLint/Prettier replacement)
@@ -63,94 +80,197 @@ This is a **full-stack TypeScript web application** being developed as a replace
 
 ```
 seo-website/
-├── src/                      # Source code (~320KB, 1,229 LOC)
+├── src/
 │   ├── components/          # React components
 │   │   ├── ui/             # Shadcn components (button, input, select, slider, etc.)
-│   │   ├── Header.tsx      # Main navigation with collapsible sidebar
-│   │   ├── example-AIAssistant.tsx
-│   │   └── example-GuitarRecommendation.tsx
+│   │   ├── Logo.tsx        # SVG logo + DM Sans wordmark
+│   │   ├── Navigation.tsx  # Header with dropdowns and theme toggle
+│   │   ├── Footer.tsx      # Multi-column footer with CTA
+│   │   ├── ThemeToggle.tsx # Dark/light mode switcher
+│   │   ├── SEO.tsx         # Structured data injection component
+│   │   └── Header.tsx      # Legacy - can be removed
+│   │
 │   ├── routes/             # File-based routing (TanStack Router)
-│   │   ├── __root.tsx      # Root layout with providers (Clerk → Convex → Query)
-│   │   ├── index.tsx       # Landing page showcasing TanStack Start
-│   │   ├── demo/           # 19+ demo routes showcasing features
-│   │   └── example.guitars/
+│   │   ├── __root.tsx      # Root layout with Navigation + Footer
+│   │   ├── index.tsx       # Homepage with hero, services, testimonials
+│   │   ├── schedule.tsx    # Calendly integration (placeholder)
+│   │   ├── enterprise.tsx  # Enterprise solutions page
+│   │   ├── solutions.tsx   # Solutions landing (TBD)
+│   │   ├── services.geo.tsx    # GEO service page
+│   │   ├── services.seo.tsx    # SEO service page
+│   │   ├── resources.customers.tsx     # Customer showcase
+│   │   ├── resources.case-studies.tsx  # Case studies
+│   │   ├── blog.index.tsx  # Blog listing (to be implemented)
+│   │   └── demo/           # Demo routes (can be removed)
+│   │
+│   ├── config/             # Configuration files
+│   │   └── brand.ts        # Brand config (name, colors, nav, footer, SEO)
+│   │
+│   ├── lib/                # Utilities and helpers
+│   │   ├── seo.ts          # SEO utilities and structured data generators
+│   │   ├── utils.ts        # Shared utilities (cn, etc.)
+│   │   └── demo-store.ts   # Demo - can be removed
+│   │
 │   ├── integrations/       # Third-party service wrappers
-│   │   ├── clerk/          # Authentication provider and components
-│   │   ├── convex/         # Database provider setup
-│   │   └── tanstack-query/ # Query client configuration and devtools
-│   ├── hooks/              # Custom React hooks (forms, contexts)
-│   ├── lib/                # Utilities, stores, and helpers
-│   │   ├── demo-store.ts   # TanStack Store examples
-│   │   └── utils.ts        # Shared utilities (cn, etc.)
-│   ├── data/               # Mock data and examples
-│   ├── utils/              # Helper functions and tools
+│   │   ├── clerk/          # Authentication provider
+│   │   ├── convex/         # Database provider
+│   │   └── tanstack-query/ # Query client configuration
+│   │
 │   ├── env.ts              # Type-safe environment variables (T3 Env)
 │   ├── router.tsx          # Router configuration with Sentry
 │   ├── routeTree.gen.ts    # Auto-generated route tree (do not edit)
-│   └── styles.css          # Global styles and Tailwind directives
+│   └── styles.css          # Global styles with DM Sans imports
 │
 ├── convex/                  # Convex backend
-│   ├── schema.ts           # Database schema definitions
-│   ├── todos.ts            # Todo CRUD operations (queries & mutations)
+│   ├── schema.ts           # Database schema (posts, categories)
+│   ├── todos.ts            # Legacy todos (can be removed)
 │   ├── tsconfig.json       # Convex TypeScript config
 │   └── _generated/         # Auto-generated Convex types
 │
 ├── public/                  # Static assets
-│
-├── .cursorrules            # Cursor IDE rules (Convex, Sentry, Shadcn patterns)
 ├── biome.json              # Biome linting and formatting config
 ├── tsconfig.json           # TypeScript configuration
 ├── vite.config.ts          # Vite build configuration
 ├── wrangler.jsonc          # Cloudflare Workers deployment config
-├── package.json            # Dependencies and scripts
-└── README.md               # Getting started documentation
+└── package.json            # Dependencies and scripts
 ```
 
-## Key Features & Capabilities
+## Current Implementation Status
 
-### Current Demo Features
-The starter includes comprehensive examples of:
+### ✅ Completed Features
 
-1. **TanStack Start Capabilities**
-   - Server Functions (type-safe RPC)
-   - API Routes
-   - SSR Modes: SPA, Full SSR, Data-only
-   - Streaming responses
+#### Design System & Theming
+- DM Sans font family installed and configured
+- High-contrast dark/light mode with `#00cccc` accent
+- Theme toggle with system preference detection
+- Vercel-inspired subtle animations
+- Responsive design for mobile/tablet/desktop
 
-2. **State Management**
-   - TanStack Store with derived state
-   - TanStack Query for server state caching
-   - Real-time updates via Convex
+#### Core Components
+- **Logo Component**: SVG percentage symbol + DM Sans wordmark
+- **Navigation**: Sticky header with hover dropdowns (Services, Resources, Solutions)
+- **Footer**: Multi-column layout with services, resources, company, social links
+- **Theme Toggle**: Accessible button with sun/moon icons
+- **SEO Component**: Structured data (JSON-LD) injection
 
-3. **Forms & Validation**
-   - Simple forms
-   - Complex multi-field forms (address example)
-   - TanStack Form integration
+#### Homepage Sections
+1. **Hero**: "Capture total mind share" messaging with gradient background
+2. **Services**: GEO and SEO feature cards with checkmarks
+3. **Social Proof**: Stats (95% retention, $150M+ revenue, 1444% growth)
+4. **Case Study Highlight**: Featured case study with metrics and visual
+5. **Testimonials**: Three client testimonials with avatars
+6. **Final CTA**: Gradient background with "Join the Top 1%" messaging
 
-4. **Data Display**
-   - TanStack Table with sorting, filtering, pagination
-   - Example implementations with mock data
+#### SEO Infrastructure
+- `src/lib/seo.ts`: Meta tag generation utilities
+- Structured data helpers for Organization, LocalBusiness, Article, BreadcrumbList
+- Per-page SEO control via route `head()` function
+- Open Graph and Twitter Card support
+- Default SEO configuration in brand config
 
-5. **Third-Party Integrations**
-   - Clerk authentication (sign in/up/out flows)
-   - Convex real-time database
-   - Sentry error tracking and performance monitoring
-   - Claude AI chat assistant
+#### Blog Schema (Convex)
+```typescript
+posts: {
+  // Content
+  title, slug, content (Markdown/MDX), excerpt, featuredImage
+  
+  // Taxonomy
+  categoryId (optional)
+  
+  // Author
+  authorId (Clerk user ID), authorName (overridable string)
+  
+  // Publishing
+  status: 'draft' | 'published' | 'scheduled'
+  publishedAt, scheduledFor, modifiedAt
+  
+  // SEO
+  seo: { metaTitle, metaDescription, ogImage, noindex }
+  
+  // Relationships
+  relatedPostIds (manual selection)
+}
 
-6. **Example Applications**
-   - AI-powered chat interface
-   - Guitar recommendation system
-   - Todo list with real-time sync
-   - Product catalog
+categories: {
+  name, slug, description
+}
+```
 
-### Planned: SEO Website Features
-This foundation will be adapted to replace **onepercentseo.com** with features such as:
-- SEO service pages and marketing content
-- Lead generation and contact forms
-- Case studies and portfolio
-- Blog/content management
-- Analytics and performance tracking
-- Client dashboards (potential)
+Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, by_author
+
+#### Navigation Structure
+- **Services** (dropdown): GEO, SEO
+- **Resources** (dropdown): Customers, Blog, Case Studies
+- **Solutions** (dropdown): Coming Soon
+- **Enterprise** (direct link)
+- **Schedule a Call** (CTA button)
+
+#### Placeholder Routes
+All routes created with basic layouts:
+- `/schedule` - Calendly integration (placeholder)
+- `/services/geo` - GEO service page
+- `/services/seo` - SEO service page
+- `/resources/customers` - Customer showcase
+- `/resources/case-studies` - Case studies
+- `/solutions` - Solutions landing
+- `/enterprise` - Enterprise solutions
+- `/blog/` - Blog index (placeholder)
+
+### 🚧 To Be Implemented
+
+#### Blog CMS (Next Priority)
+1. **Admin Routes** (`/admin/*`)
+   - `/admin` - Dashboard or login redirect
+   - `/admin/posts` - Post listing with filters (draft/published/scheduled)
+   - `/admin/posts/new` - Create new post
+   - `/admin/posts/[id]/edit` - Edit existing post
+
+2. **Blog Editor**
+   - WYSIWYG editor with visual/MDX toggle
+   - Featured image upload to Cloudflare Images
+   - SEO meta fields (title, description, OG image)
+   - Category selection
+   - Author name override
+   - Status and scheduling
+   - Related posts picker
+   - Internal link component integration
+
+3. **Public Blog Routes**
+   - `/blog` - Post listing with category filters
+   - `/blog/[slug]` - Individual post page with related posts
+   - Automatic sitemap.xml generation
+
+4. **Blog Features**
+   - Auto-related posts by category + recency
+   - Manual related post selection
+   - Draft posts visible only to authenticated users
+   - Scheduled posts (manual publish at scheduled time)
+   - Last modified date display
+
+#### Content Pages
+- Fill in GEO and SEO service pages
+- Create case study content
+- Add customer logos and testimonials
+- Build enterprise page content
+- Define Solutions pages
+
+#### Integrations
+- **Calendly**: Embed on `/schedule` page
+- **Cloudflare Images**: Upload and optimization utilities
+- **Plausible Analytics**: Privacy-focused tracking
+- **WordPress Import**: Migration script for blog data
+
+#### Sitemap & SEO
+- Automatic sitemap.xml generation
+- robots.txt configuration
+- Open Graph image templates or upload system
+
+### 🗑️ Cleanup Tasks
+- Remove demo routes (`src/routes/demo/*`)
+- Remove example routes (`src/routes/example.guitars/*`)
+- Remove legacy Header.tsx component
+- Remove demo store and example components
+- Clean up legacy todos/products schema (optional)
 
 ## Environment Variables
 
@@ -168,12 +288,12 @@ CONVEX_DEPLOYMENT=...
 # Sentry Monitoring
 VITE_SENTRY_DSN=https://...@sentry.io/...
 
-# AI Integration
+# AI Integration (if needed)
 ANTHROPIC_API_KEY=sk-ant-...
 
-# Optional
-VITE_APP_TITLE=OnePercent SEO
-SERVER_URL=https://...
+# Cloudflare Images (to be added)
+# CLOUDFLARE_ACCOUNT_ID=...
+# CLOUDFLARE_API_TOKEN=...
 ```
 
 ### Environment Variable Validation
@@ -196,12 +316,12 @@ bun run dev
 npx convex dev
 ```
 
+The dev server runs at **http://localhost:3000/**
+
 ### Code Quality & Testing
 ```bash
 # Type checking
 bun run type
-# or
-tsc --noEmit
 
 # Linting
 bun run lint
@@ -241,15 +361,15 @@ bun run deploy
 - **Space indentation** (2 spaces)
 - **Sorted Tailwind classes** - Enforced via `useSortedClasses` rule
 - **Auto-organize imports** on format
-- **Files included**: `src/**/*`, `.vscode/**/*`, root config files
 - **Files excluded**: `src/routeTree.gen.ts`, `src/styles.css`
 
 ### React Patterns
 - **Functional components** only
 - **Hooks** for state and side effects
 - **File-based routing** - Add files to `src/routes/` for new pages
-- **Provider composition** - Root layout wraps Clerk → Convex → TanStack Query
+- **Provider composition** - Root wraps Navigation → Clerk → Convex → TanStack Query → Footer
 - **Type-safe routing** - Use `Link` component from `@tanstack/react-router`
+- **Internal links** - Always use `Link` for instant client-side navigation
 
 ### Component Organization
 - **UI components** in `src/components/ui/` (Shadcn managed)
@@ -257,7 +377,35 @@ bun run deploy
 - **Route components** in `src/routes/`
 - **One component per file** for better code splitting
 
+### SEO Best Practices
+1. **Per-Route Meta Tags**: Use `head()` function with `generateMetaTags()` helper
+2. **Structured Data**: Include Schema.org JSON-LD via `<SEO>` component
+3. **Internal Linking**: Use TanStack Router `Link` for fast navigation
+4. **Image Optimization**: Use Cloudflare Images with responsive sizing
+5. **SSR by Default**: All marketing pages are server-side rendered
+
 ## Key Configuration Files
+
+### `src/config/brand.ts`
+Centralized brand configuration:
+- Brand name, display name, tagline
+- Domains (main site, app subdomain)
+- Logo configuration
+- Social media links
+- Contact information
+- Default SEO meta tags
+- Navigation structure
+- Footer structure
+
+**To rebrand**: Update this file and styles.css color variables.
+
+### `src/lib/seo.ts`
+SEO utilities:
+- `generateMetaTags()` - Create meta tags for routes
+- `getOrganizationSchema()` - Organization structured data
+- `getLocalBusinessSchema()` - LocalBusiness structured data
+- `getArticleSchema()` - Article structured data for blog posts
+- `getBreadcrumbSchema()` - Breadcrumb navigation
 
 ### `vite.config.ts`
 Plugins in order:
@@ -268,13 +416,6 @@ Plugins in order:
 5. TanStack Start
 6. Vite React
 
-### `tsconfig.json`
-- Target: ES2022
-- Module: ESNext
-- Module resolution: bundler
-- JSX: react-jsx
-- Path aliases: `@/*` → `./src/*`
-
 ### `wrangler.jsonc`
 - Name: seo-website
 - Compatibility: 2025-09-02
@@ -283,15 +424,47 @@ Plugins in order:
 
 ## Important Notes for AI Assistants
 
-### Sentry Instrumentation
-When creating server functions, wrap with Sentry spans:
-```tsx
-import * as Sentry from '@sentry/tanstackstart-react'
+### Brand Configuration
+All branding is centralized in `src/config/brand.ts`:
+- Brand name and display name
+- Navigation and footer structure
+- Default SEO settings
+- Contact information
 
-Sentry.startSpan({ name: 'Operation name' }, async () => {
-  // Server function logic
+**Always reference this file** when creating new pages or components.
+
+### SEO Implementation
+Every route should include:
+```tsx
+import { generateMetaTags } from '@/lib/seo'
+
+export const Route = createFileRoute('/your-route')({
+  component: YourComponent,
+  head: () => generateMetaTags({
+    title: 'Page Title',
+    description: 'Page description',
+    // Optional: ogImage, canonical, noindex
+  }),
 })
 ```
+
+For structured data, use the `<SEO>` component:
+```tsx
+<SEO structuredData={[
+  { type: 'Organization', data: getOrganizationSchema() },
+  { type: 'Article', data: getArticleSchema({...}) }
+]} />
+```
+
+### Internal Links
+Always use TanStack Router's `Link` component:
+```tsx
+import { Link } from '@tanstack/react-router'
+
+<Link to="/services/geo">Learn about GEO</Link>
+```
+
+This ensures instant client-side navigation and type-safe routes.
 
 ### Convex Schema Patterns
 - Use `v.id("tableName")` for foreign keys
@@ -302,29 +475,54 @@ Sentry.startSpan({ name: 'Operation name' }, async () => {
 
 ### Shadcn Component Installation
 ```bash
-# Always use latest version
 pnpx shadcn@latest add <component-name>
 ```
 
 ### File Naming Conventions
-- **Demo files** prefixed with `demo.` can be safely deleted
-- **Example files** prefixed with `example.` are reference implementations
 - **Route files** follow TanStack Router conventions:
-  - `index.tsx` for index routes
+  - `index.tsx` for index routes (`/route/`)
   - `route.tsx` for layout routes
   - `$param.tsx` for dynamic segments
+  - `route.name.tsx` for nested routes (`/route/name`)
 
 ### Auto-Generated Files (Do Not Edit)
 - `src/routeTree.gen.ts` - Generated by TanStack Router
 - `convex/_generated/` - Generated by Convex
 
+### Theme Toggle Implementation
+The theme toggle:
+1. Detects system preference on mount
+2. Checks localStorage for manual preference
+3. Listens for system changes
+4. Updates `<html class="dark">` and localStorage
+
+**Do not** duplicate theme logic - use the existing `ThemeToggle` component.
+
 ## Common Tasks
 
-### Adding a New Route
+### Adding a New Page
 1. Create file in `src/routes/` (e.g., `src/routes/about.tsx`)
 2. Use `createFileRoute` from `@tanstack/react-router`
-3. Export component from route definition
-4. TanStack Router auto-generates route tree
+3. Include SEO meta tags in `head()` function
+4. Add to navigation config in `src/config/brand.ts` if needed
+
+Example:
+```tsx
+import { createFileRoute } from '@tanstack/react-router'
+import { generateMetaTags } from '@/lib/seo'
+
+export const Route = createFileRoute('/about')({
+  component: AboutPage,
+  head: () => generateMetaTags({
+    title: 'About Us',
+    description: 'Learn about our mission and team.',
+  }),
+})
+
+function AboutPage() {
+  return <div>About content</div>
+}
+```
 
 ### Adding a Shadcn Component
 ```bash
@@ -336,33 +534,282 @@ pnpx shadcn@latest add button
 2. Create query/mutation file in `convex/`
 3. Use `useQuery` or `useMutation` hooks in React
 
-### Adding Environment Variables
-1. Add to `.env.local`
-2. Define in `src/env.ts` with Zod schema
-3. Access via `import { env } from '@/env'`
+### Adding to Navigation
+1. Update `navigation.main` in `src/config/brand.ts`
+2. For dropdown items, add to `items` array
+3. For direct links, use `type: 'link'`
+
+### Rebranding the Site
+1. Update `src/config/brand.ts`:
+   - Change `name`, `displayName`, `tagline`, `domain`
+   - Update social links and contact info
+2. Update `src/styles.css` if changing accent color
+3. Update logo SVG in `src/components/Logo.tsx` if needed
 
 ## Resources & Documentation
 
 - [TanStack Start Docs](https://tanstack.com/start)
 - [TanStack Router Docs](https://tanstack.com/router)
 - [TanStack Query Docs](https://tanstack.com/query)
-- [TanStack Form Docs](https://tanstack.com/form)
-- [TanStack Store Docs](https://tanstack.com/store)
-- [TanStack Table Docs](https://tanstack.com/table)
 - [Convex Docs](https://docs.convex.dev)
 - [Clerk Docs](https://clerk.com/docs)
 - [Shadcn UI](https://ui.shadcn.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Biome](https://biomejs.dev)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Cloudflare Images](https://developers.cloudflare.com/images/)
+- [Schema.org](https://schema.org/)
+
+## Detailed Implementation Roadmap
+
+### Phase 1: Blog CMS Foundation (Next)
+
+#### 1.1 Convex Queries & Mutations
+Create `convex/posts.ts`:
+- `list()` - Get all posts with filters (status, category, author)
+- `getBySlug(slug)` - Get single post for public view
+- `getById(id)` - Get single post for editing
+- `create()` - Create new post
+- `update(id, data)` - Update existing post
+- `delete(id)` - Delete post
+- `publish(id)` - Publish draft post
+- `getRelatedPosts(postId)` - Auto-fetch related by category + manual selections
+
+Create `convex/categories.ts`:
+- `list()` - Get all categories
+- `create()` - Create category
+- `update()` - Update category
+
+#### 1.2 Admin Authentication & Routes
+1. Create protected route wrapper for `/admin/*`
+2. Check Clerk authentication and role (admin/editor)
+3. Redirect to Clerk sign-in if not authenticated
+4. Create admin layout component with sidebar navigation
+
+Routes to create:
+- `src/routes/admin.index.tsx` - Admin dashboard or redirect to posts
+- `src/routes/admin.posts.index.tsx` - Post listing table
+- `src/routes/admin.posts.new.tsx` - Create new post form
+- `src/routes/admin.posts.$id.edit.tsx` - Edit post form
+
+#### 1.3 Blog Editor Component
+Create `src/components/BlogEditor.tsx`:
+- Rich text editor (consider: TipTap, Lexical, or react-markdown with preview)
+- Toggle between WYSIWYG and MDX source view
+- Toolbar: Bold, Italic, Headings, Lists, Links, Images
+- Image upload to Cloudflare Images
+- Link picker that uses TanStack Router's `Link` component for internal links
+- Auto-save to drafts
+
+Form fields:
+- Title (required)
+- Slug (auto-generated from title, editable)
+- Content (MDX/Markdown)
+- Excerpt (optional, auto-generated from content if empty)
+- Featured Image (Cloudflare Images URL)
+- Category (select dropdown)
+- Author Name (default to current user, overridable)
+- Status (draft/published/scheduled radio)
+- Scheduled Date (datetime picker, shown if scheduled selected)
+- SEO Meta Title
+- SEO Meta Description
+- OG Image (default to featured image)
+- Related Posts (multi-select with search)
+
+#### 1.4 Cloudflare Images Integration
+Create `src/lib/cloudflare-images.ts`:
+- `uploadImage(file)` - Upload to Cloudflare Images
+- `getImageUrl(id, variant)` - Generate optimized image URLs
+- `deleteImage(id)` - Delete image from Cloudflare
+
+Image variants to configure:
+- `thumbnail` - 400px wide
+- `medium` - 800px wide
+- `large` - 1200px wide
+- `og` - 1200x630 for Open Graph
+
+#### 1.5 Public Blog Routes
+Create `src/routes/blog.index.tsx`:
+- List published posts (paginated)
+- Filter by category
+- Search by title/excerpt
+- Sort by published date (newest first)
+- Card grid layout with featured image, title, excerpt, date
+
+Create `src/routes/blog.$slug.tsx`:
+- Full post content rendering
+- Featured image with proper alt text
+- Author and dates (published, last modified)
+- Category tag
+- Related posts section (3-4 posts)
+- SEO meta tags from post.seo
+- Article structured data (Schema.org)
+- Breadcrumb navigation
+- Social share buttons (optional)
+
+### Phase 2: Content Pages
+
+#### 2.1 Service Pages
+`src/routes/services.geo.tsx`:
+- Hero section with GEO definition
+- How GEO works (3-4 step process)
+- Benefits list
+- Case study highlight
+- Pricing/CTA section
+- FAQ section
+- Related blog posts
+
+`src/routes/services.seo.tsx`:
+- Hero section with SEO value prop
+- Service offerings breakdown
+- Technical SEO, Content, Link Building sections
+- Results/metrics section
+- CTA section
+- FAQ section
+
+#### 2.2 Resources Pages
+`src/routes/resources.customers.tsx`:
+- Client logo grid
+- Testimonials
+- Industry breakdown
+- Results summary
+- CTA to schedule call
+
+`src/routes/resources.case-studies.tsx`:
+- Case study cards (filterable by industry/service)
+- Featured case study at top
+- Results metrics
+- Link to detailed case study pages (future: individual routes)
+
+#### 2.3 Other Pages
+`src/routes/enterprise.tsx`:
+- Enterprise-specific value props
+- Dedicated support features
+- Custom solutions
+- White-glove onboarding
+- CTA for enterprise demo
+
+`src/routes/solutions.tsx`:
+- To be defined based on business strategy
+- Placeholder for now
+
+`src/routes/schedule.tsx`:
+- Calendly embed
+- Contact information
+- Office hours
+- What to expect section
+
+### Phase 3: SEO & Performance
+
+#### 3.1 Sitemap Generation
+Create `src/routes/sitemap.xml.tsx`:
+- Static routes (homepage, services, resources, etc.)
+- Dynamic blog posts (fetch from Convex)
+- Update on build and post publish
+- Priority and change frequency metadata
+
+#### 3.2 Robots.txt
+Create `public/robots.txt`:
+- Allow all crawlers
+- Link to sitemap.xml
+- Disallow `/admin/*`
+
+#### 3.3 Image Optimization
+- Implement responsive images with srcset
+- Lazy loading for below-fold images
+- Proper alt text requirements
+- WebP format with fallbacks
+
+#### 3.4 Analytics Integration
+Add Plausible Analytics:
+- Add script to `__root.tsx`
+- Track page views automatically
+- Custom events for CTAs
+- Goal tracking for form submissions
+
+### Phase 4: WordPress Migration
+
+#### 4.1 Export WordPress Data
+User provides WordPress XML export file
+
+#### 4.2 Create Migration Script
+Create `scripts/migrate-wordpress.ts`:
+- Parse WordPress XML
+- Extract posts (title, content, slug, date, author, categories)
+- Download and upload featured images to Cloudflare Images
+- Convert WordPress content to Markdown/MDX
+- Insert into Convex posts table
+- Map WordPress categories to Convex categories
+- Preserve publish dates and authors
+
+Run with: `bun run scripts/migrate-wordpress.ts /path/to/export.xml`
+
+### Phase 5: Polish & Launch
+
+#### 5.1 Cleanup
+- Remove all demo routes (`src/routes/demo/*`)
+- Remove example routes (`src/routes/example.guitars/*`)
+- Remove legacy Header.tsx
+- Clean up package.json (remove unused deps)
+- Remove legacy todos/products Convex schema
+
+#### 5.2 Testing
+- Test all routes and navigation
+- Test theme toggle across pages
+- Test blog CRUD operations
+- Test image uploads
+- Test SEO meta tags with social preview tools
+- Test mobile responsiveness
+- Cross-browser testing
+
+#### 5.3 Performance Optimization
+- Analyze bundle size
+- Code split large pages/components
+- Optimize images
+- Enable Cloudflare caching
+- Test Core Web Vitals
+
+#### 5.4 Deployment
+- Set up production environment variables
+- Configure Cloudflare Workers
+- Set up custom domain (onepercentgeo.com)
+- Configure SSL/TLS
+- Set up deployment pipeline (GitHub Actions)
+- Deploy to production
+- Monitor with Sentry
 
 ## Project Status
 
-- **Phase**: Foundation setup complete
-- **Next Steps**: Adapt for onepercentseo.com requirements
-- **Clean State**: No uncommitted changes
-- **Ready for**: Feature development and customization
+- **Phase**: Homepage complete, blog CMS next
+- **Current State**: Clean build, dev server running at http://localhost:3000/
+- **Homepage**: ✅ Fully implemented with SEO
+- **Navigation**: ✅ Complete with dropdowns
+- **Footer**: ✅ Multi-column with CTA
+- **Blog Backend**: ✅ Schema ready
+- **Blog Frontend**: 🚧 To be implemented (Phase 1 priority)
+- **Content Pages**: 🚧 Placeholders created (Phase 2)
+- **SEO/Performance**: 🚧 Sitemap and analytics needed (Phase 3)
+- **Migration**: 🚧 WordPress import script needed (Phase 4)
+- **Ready for**: Blog CMS implementation - start with Phase 1.1 (Convex queries/mutations)
+
+## Quick Start Guide for Future AI Assistants
+
+When resuming work on this project:
+
+1. **Review Current State**: Homepage is complete, all foundation components built
+2. **Next Task**: Implement blog CMS starting with Phase 1.1 (Convex queries)
+3. **Key Files**: 
+   - Brand config: `src/config/brand.ts`
+   - SEO utilities: `src/lib/seo.ts`
+   - Blog schema: `convex/schema.ts`
+4. **Design System**: #00cccc accent, DM Sans font, Vercel-inspired
+5. **Blog Requirements**: 
+   - Single author, categories, draft/published/scheduled status
+   - Cloudflare Images for storage
+   - MDX content with WYSIWYG toggle
+   - Manual publish for scheduled posts
+   - Related posts (auto + manual)
+6. **Important**: Always use `Link` from `@tanstack/react-router` for internal links
 
 ---
 
-*Last Updated: 2025-11-17*
+*Last Updated: 2025-01-18*
 *Maintained for: AI-assisted development with Claude and other AI tools*

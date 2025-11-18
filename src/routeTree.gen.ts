@@ -9,7 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as ScheduleRouteImport } from './routes/schedule'
+import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as ServicesSeoRouteImport } from './routes/services.seo'
+import { Route as ServicesGeoRouteImport } from './routes/services.geo'
+import { Route as ResourcesCustomersRouteImport } from './routes/resources.customers'
+import { Route as ResourcesCaseStudiesRouteImport } from './routes/resources.case-studies'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
 import { Route as DemoTanchatRouteImport } from './routes/demo/tanchat'
 import { Route as DemoTableRouteImport } from './routes/demo/table'
@@ -31,9 +39,49 @@ import { Route as DemoStartSsrSpaModeRouteImport } from './routes/demo/start.ssr
 import { Route as DemoStartSsrFullSsrRouteImport } from './routes/demo/start.ssr.full-ssr'
 import { Route as DemoStartSsrDataOnlyRouteImport } from './routes/demo/start.ssr.data-only'
 
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnterpriseRoute = EnterpriseRouteImport.update({
+  id: '/enterprise',
+  path: '/enterprise',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSeoRoute = ServicesSeoRouteImport.update({
+  id: '/services/seo',
+  path: '/services/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesGeoRoute = ServicesGeoRouteImport.update({
+  id: '/services/geo',
+  path: '/services/geo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesCustomersRoute = ResourcesCustomersRouteImport.update({
+  id: '/resources/customers',
+  path: '/resources/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesCaseStudiesRoute = ResourcesCaseStudiesRouteImport.update({
+  id: '/resources/case-studies',
+  path: '/resources/case-studies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
@@ -139,12 +187,20 @@ const DemoStartSsrDataOnlyRoute = DemoStartSsrDataOnlyRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/enterprise': typeof EnterpriseRoute
+  '/schedule': typeof ScheduleRoute
+  '/solutions': typeof SolutionsRoute
   '/demo/clerk': typeof DemoClerkRoute
   '/demo/convex': typeof DemoConvexRoute
   '/demo/store': typeof DemoStoreRoute
   '/demo/table': typeof DemoTableRoute
   '/demo/tanchat': typeof DemoTanchatRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/customers': typeof ResourcesCustomersRoute
+  '/services/geo': typeof ServicesGeoRoute
+  '/services/seo': typeof ServicesSeoRoute
+  '/blog': typeof BlogIndexRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/api/tanchat': typeof DemoApiTanchatRoute
   '/demo/api/tq-todos': typeof DemoApiTqTodosRoute
@@ -162,12 +218,20 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/enterprise': typeof EnterpriseRoute
+  '/schedule': typeof ScheduleRoute
+  '/solutions': typeof SolutionsRoute
   '/demo/clerk': typeof DemoClerkRoute
   '/demo/convex': typeof DemoConvexRoute
   '/demo/store': typeof DemoStoreRoute
   '/demo/table': typeof DemoTableRoute
   '/demo/tanchat': typeof DemoTanchatRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/customers': typeof ResourcesCustomersRoute
+  '/services/geo': typeof ServicesGeoRoute
+  '/services/seo': typeof ServicesSeoRoute
+  '/blog': typeof BlogIndexRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/api/tanchat': typeof DemoApiTanchatRoute
   '/demo/api/tq-todos': typeof DemoApiTqTodosRoute
@@ -186,12 +250,20 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/enterprise': typeof EnterpriseRoute
+  '/schedule': typeof ScheduleRoute
+  '/solutions': typeof SolutionsRoute
   '/demo/clerk': typeof DemoClerkRoute
   '/demo/convex': typeof DemoConvexRoute
   '/demo/store': typeof DemoStoreRoute
   '/demo/table': typeof DemoTableRoute
   '/demo/tanchat': typeof DemoTanchatRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/customers': typeof ResourcesCustomersRoute
+  '/services/geo': typeof ServicesGeoRoute
+  '/services/seo': typeof ServicesSeoRoute
+  '/blog/': typeof BlogIndexRoute
   '/demo/api/names': typeof DemoApiNamesRoute
   '/demo/api/tanchat': typeof DemoApiTanchatRoute
   '/demo/api/tq-todos': typeof DemoApiTqTodosRoute
@@ -211,12 +283,20 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/enterprise'
+    | '/schedule'
+    | '/solutions'
     | '/demo/clerk'
     | '/demo/convex'
     | '/demo/store'
     | '/demo/table'
     | '/demo/tanchat'
     | '/demo/tanstack-query'
+    | '/resources/case-studies'
+    | '/resources/customers'
+    | '/services/geo'
+    | '/services/seo'
+    | '/blog'
     | '/demo/api/names'
     | '/demo/api/tanchat'
     | '/demo/api/tq-todos'
@@ -234,12 +314,20 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/enterprise'
+    | '/schedule'
+    | '/solutions'
     | '/demo/clerk'
     | '/demo/convex'
     | '/demo/store'
     | '/demo/table'
     | '/demo/tanchat'
     | '/demo/tanstack-query'
+    | '/resources/case-studies'
+    | '/resources/customers'
+    | '/services/geo'
+    | '/services/seo'
+    | '/blog'
     | '/demo/api/names'
     | '/demo/api/tanchat'
     | '/demo/api/tq-todos'
@@ -257,12 +345,20 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/enterprise'
+    | '/schedule'
+    | '/solutions'
     | '/demo/clerk'
     | '/demo/convex'
     | '/demo/store'
     | '/demo/table'
     | '/demo/tanchat'
     | '/demo/tanstack-query'
+    | '/resources/case-studies'
+    | '/resources/customers'
+    | '/services/geo'
+    | '/services/seo'
+    | '/blog/'
     | '/demo/api/names'
     | '/demo/api/tanchat'
     | '/demo/api/tq-todos'
@@ -281,12 +377,20 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EnterpriseRoute: typeof EnterpriseRoute
+  ScheduleRoute: typeof ScheduleRoute
+  SolutionsRoute: typeof SolutionsRoute
   DemoClerkRoute: typeof DemoClerkRoute
   DemoConvexRoute: typeof DemoConvexRoute
   DemoStoreRoute: typeof DemoStoreRoute
   DemoTableRoute: typeof DemoTableRoute
   DemoTanchatRoute: typeof DemoTanchatRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
+  ResourcesCaseStudiesRoute: typeof ResourcesCaseStudiesRoute
+  ResourcesCustomersRoute: typeof ResourcesCustomersRoute
+  ServicesGeoRoute: typeof ServicesGeoRoute
+  ServicesSeoRoute: typeof ServicesSeoRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   DemoApiNamesRoute: typeof DemoApiNamesRoute
   DemoApiTanchatRoute: typeof DemoApiTanchatRoute
   DemoApiTqTodosRoute: typeof DemoApiTqTodosRoute
@@ -305,11 +409,67 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enterprise': {
+      id: '/enterprise'
+      path: '/enterprise'
+      fullPath: '/enterprise'
+      preLoaderRoute: typeof EnterpriseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/seo': {
+      id: '/services/seo'
+      path: '/services/seo'
+      fullPath: '/services/seo'
+      preLoaderRoute: typeof ServicesSeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/geo': {
+      id: '/services/geo'
+      path: '/services/geo'
+      fullPath: '/services/geo'
+      preLoaderRoute: typeof ServicesGeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/customers': {
+      id: '/resources/customers'
+      path: '/resources/customers'
+      fullPath: '/resources/customers'
+      preLoaderRoute: typeof ResourcesCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/case-studies': {
+      id: '/resources/case-studies'
+      path: '/resources/case-studies'
+      fullPath: '/resources/case-studies'
+      preLoaderRoute: typeof ResourcesCaseStudiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/demo/tanstack-query': {
@@ -457,12 +617,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EnterpriseRoute: EnterpriseRoute,
+  ScheduleRoute: ScheduleRoute,
+  SolutionsRoute: SolutionsRoute,
   DemoClerkRoute: DemoClerkRoute,
   DemoConvexRoute: DemoConvexRoute,
   DemoStoreRoute: DemoStoreRoute,
   DemoTableRoute: DemoTableRoute,
   DemoTanchatRoute: DemoTanchatRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
+  ResourcesCaseStudiesRoute: ResourcesCaseStudiesRoute,
+  ResourcesCustomersRoute: ResourcesCustomersRoute,
+  ServicesGeoRoute: ServicesGeoRoute,
+  ServicesSeoRoute: ServicesSeoRoute,
+  BlogIndexRoute: BlogIndexRoute,
   DemoApiNamesRoute: DemoApiNamesRoute,
   DemoApiTanchatRoute: DemoApiTanchatRoute,
   DemoApiTqTodosRoute: DemoApiTqTodosRoute,
