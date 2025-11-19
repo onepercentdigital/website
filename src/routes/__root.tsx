@@ -3,11 +3,13 @@ import type { QueryClient } from '@tanstack/react-query';
 import {
   createRootRouteWithContext,
   HeadContent,
+  Outlet,
   Scripts,
 } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 import { Footer } from '../components/Footer';
 import { Navigation } from '../components/Navigation';
+import { NotFound } from '../components/NotFound';
 import { brand } from '../config/brand';
 import ClerkProvider from '../integrations/clerk/provider';
 import ConvexProvider from '../integrations/convex/provider';
@@ -45,8 +47,35 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
     ],
   }),
 
+  component: RootComponent,
+  notFoundComponent: NotFound,
   shellComponent: RootDocument,
 });
+
+function RootComponent() {
+  return (
+    <>
+      <Navigation />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+      <TanStackDevtools
+        config={{
+          position: 'bottom-right',
+        }}
+        plugins={[
+          {
+            name: 'Tanstack Router',
+            render: <TanStackRouterDevtoolsPanel />,
+          },
+          StoreDevtools,
+          TanStackQueryDevtools,
+        ]}
+      />
+    </>
+  );
+}
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
@@ -56,24 +85,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <ClerkProvider>
-          <ConvexProvider>
-            <Navigation />
-            <main>{children}</main>
-            <Footer />
-            <TanStackDevtools
-              config={{
-                position: 'bottom-right',
-              }}
-              plugins={[
-                {
-                  name: 'Tanstack Router',
-                  render: <TanStackRouterDevtoolsPanel />,
-                },
-                StoreDevtools,
-                TanStackQueryDevtools,
-              ]}
-            />
-          </ConvexProvider>
+          <ConvexProvider>{children}</ConvexProvider>
         </ClerkProvider>
         <Scripts />
       </body>
