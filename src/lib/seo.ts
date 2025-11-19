@@ -235,3 +235,31 @@ export function getBreadcrumbSchema(
     },
   });
 }
+
+/**
+ * Generate Service structured data
+ */
+export function getServiceSchema(config: {
+  name: string;
+  description: string;
+  url: string;
+  provider?: string;
+  areaServed?: string;
+  serviceType?: string;
+}) {
+  return generateStructuredData({
+    type: 'Service',
+    data: {
+      name: config.name,
+      description: config.description,
+      url: config.url,
+      provider: {
+        '@type': 'Organization',
+        name: config.provider || brand.displayName,
+        url: `https://${brand.domain}`,
+      },
+      areaServed: config.areaServed || 'Worldwide',
+      serviceType: config.serviceType,
+    },
+  });
+}

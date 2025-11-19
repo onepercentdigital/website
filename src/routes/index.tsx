@@ -196,7 +196,7 @@ function HomePage() {
                 <Target className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
-                $150M+
+                $200M+
               </div>
               <div className="text-muted-foreground tracking-wide">
                 SEO-driven revenue generated for clients
@@ -207,7 +207,7 @@ function HomePage() {
                 <Users className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
-                1444%
+                300%
               </div>
               <div className="text-muted-foreground tracking-wide">
                 Average organic traffic growth
