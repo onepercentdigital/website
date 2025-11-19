@@ -5,12 +5,15 @@ Modern, high-performance marketing website built with TanStack Start for One Per
 ## 🚀 Overview
 
 Full-stack TypeScript marketing website featuring:
+- **Production-ready pages**: Homepage, GEO service page, SEO service page, and branded 404
 - **Server-side rendering (SSR)** for optimal SEO/GEO performance
+- **Extreme typography scale** with Plus Jakarta Sans Variable font
 - **Real-time blog CMS** powered by Convex (to be implemented)
-- **Dark/light theme** with system preference detection
-- **Vercel-inspired design** with Tailwind CSS v4
+- **Dark/light theme** with system preference detection and synchronized toggles
+- **Vercel-inspired design** with Tailwind CSS v4 and dramatic visual hierarchy
 - **Type-safe routing** and data fetching with TanStack ecosystem
 - **Flat URL structure** for better UX and SEO (`/seo`, `/geo`, `/customers`)
+- **Comprehensive FAQs** on service pages with accordion UI
 
 ## 🛠️ Tech Stack
 
@@ -116,14 +119,15 @@ seo-website/
 │   │
 │   ├── routes/             # File-based routing (TanStack Router)
 │   │   ├── __root.tsx      # Root layout with providers
-│   │   ├── index.tsx       # Homepage
-│   │   ├── seo.tsx         # SEO service page (/seo)
-│   │   ├── geo.tsx         # GEO service page (/geo)
-│   │   ├── customers.tsx   # Customer showcase (/customers)
-│   │   ├── case-studies.tsx # Case studies (/case-studies)
-│   │   ├── enterprise.tsx  # Enterprise solutions
-│   │   ├── schedule.tsx    # Calendly integration
-│   │   └── blog/           # Blog pages (to be implemented)
+│   │   ├── index.tsx       # Homepage ✅ COMPLETE
+│   │   ├── seo.tsx         # SEO service page ✅ COMPLETE
+│   │   ├── geo.tsx         # GEO service page ✅ COMPLETE
+│   │   ├── customers.tsx   # Customer showcase ✅ COMPLETE
+│   │   ├── audit.tsx       # Free AI Search Audit (placeholder)
+│   │   ├── case-studies.tsx # Case studies (placeholder)
+│   │   ├── enterprise.tsx  # Enterprise solutions (placeholder)
+│   │   ├── solutions.tsx   # Solutions landing (placeholder)
+│   │   └── blog.index.tsx  # Blog index (to be implemented)
 │   │
 │   ├── config/
 │   │   └── brand.ts        # Centralized brand configuration
@@ -131,6 +135,9 @@ seo-website/
 │   ├── lib/
 │   │   ├── seo.ts          # SEO utilities and meta tag generators
 │   │   └── utils.ts        # Shared utility functions
+│   │
+│   ├── data/               # Data files and content
+│   │   └── customers.ts    # Customer data with TypeScript interfaces
 │   │
 │   ├── integrations/       # Third-party service wrappers
 │   │   ├── clerk/          # Authentication provider
@@ -140,7 +147,7 @@ seo-website/
 │   ├── env.ts              # Type-safe environment variables (T3 Env)
 │   ├── router.tsx          # Router configuration with Sentry
 │   ├── routeTree.gen.ts    # Auto-generated route tree (do not edit)
-│   └── styles.css          # Global styles with DM Sans imports
+│   └── styles.css          # Global styles with Plus Jakarta Sans Variable
 │
 ├── convex/                  # Convex backend
 │   ├── schema.ts           # Database schema (posts, categories)
@@ -149,6 +156,11 @@ seo-website/
 │   └── _generated/         # Auto-generated Convex types
 │
 ├── public/                  # Static assets
+│   ├── customer-logos/     # Customer logo images (WebP format)
+│   ├── favicon.ico         # Site favicon
+│   ├── logo.svg            # Brand logo
+│   └── robots.txt          # Search engine instructions
+│
 ├── biome.json              # Biome linting and formatting config
 ├── tsconfig.json           # TypeScript configuration
 ├── vite.config.ts          # Vite build configuration
@@ -242,14 +254,19 @@ The build process:
 
 This project uses **flat URLs** for better UX, SEO, and AI citations:
 
-- `/seo` - SEO service page
-- `/geo` - GEO service page
-- `/customers` - Customer showcase
+**✅ Production-Ready Pages:**
+- `/` - Homepage (6 sections, extreme typography, fully optimized)
+- `/seo` - SEO service page (7 sections with FAQ accordion)
+- `/geo` - GEO service page (7 sections with FAQ accordion)
+- `/customers` - Customer showcase (10 client logos, testimonials, industry breakdown)
+- `404` - Branded NotFound component with quick links
+
+**⚠️ Placeholder Pages (Need Content):**
+- `/audit` - Free AI Search Audit booking (needs Calendly integration)
 - `/case-studies` - Case studies
 - `/enterprise` - Enterprise solutions
 - `/solutions` - Solutions landing
-- `/schedule` - Schedule a call
-- `/blog` - Blog index
+- `/blog` - Blog index (needs CMS implementation)
 
 **Note:** Services, Resources, and Solutions are visual navigation categories only. They don't appear in URLs.
 

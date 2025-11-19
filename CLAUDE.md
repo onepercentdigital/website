@@ -28,14 +28,14 @@ All branding is centralized in `src/config/brand.ts` for quick updates.
 - **Vite 7.2.2** - Lightning-fast build tool and dev server
 
 ### State Management & Data Fetching
-- **TanStack Query** - Async state management, caching, and server synchronization
-- **TanStack Store** - Lightweight client state with derived state support
-- **TanStack Form** - Type-safe form handling with validation
-- **Convex 1.29.2** - Real-time backend database with TypeScript schema
+- **TanStack Query 5.90.10** - Async state management, caching, and server synchronization
+- **TanStack Store 0.8.0** - Lightweight client state with derived state support
+- **TanStack Form 1.25.0** - Type-safe form handling with validation
+- **Convex 1.29.3** - Real-time backend database with TypeScript schema
 
 ### UI & Styling
 - **Tailwind CSS 4.1.17** - Utility-first CSS framework (latest v4)
-- **DM Sans** - Primary font family (400, 500, 700 weights via @fontsource)
+- **Plus Jakarta Sans Variable** - Primary font family (weights 200-800 via @fontsource-variable)
 - **Shadcn/ui** - High-quality component library on Radix UI primitives
 - **Radix UI** - Unstyled, accessible component primitives
 - **Lucide React** - Beautiful, consistent icon system
@@ -46,26 +46,26 @@ All branding is centralized in `src/config/brand.ts` for quick updates.
 - **Accent Color**: `#00cccc` (cyan/teal)
 - **Dark Mode**: Primarily black (`#0a0a0a`) with high contrast
 - **Light Mode**: Primarily white (`#ffffff`) with high contrast
-- **Typography**: DM Sans - 700 for headings, 400 for body text
-- **Visual Style**: Inspired by Vercel.com with subtle animations
+- **Typography**: Plus Jakarta Sans Variable - Extreme scale with 800 for hero headings, 700 for section headings, 400 for body text
+- **Visual Style**: Inspired by Vercel.com with subtle animations and dramatic typography
 - **Theme Toggle**: Respects system preferences with manual override
 
 ### AI Integration
-- **Anthropic AI SDK 2.0.44** - Claude AI integration for chat and assistance
-- **Vercel AI SDK 5.0.93** - Unified AI/ML interface
-- **MCP (Model Context Protocol)** - AI context management and tool use
+- **Anthropic AI SDK 2.0.45** - Claude AI integration for chat and assistance
+- **Vercel AI SDK 5.0.97** - Unified AI/ML interface
+- **MCP (Model Context Protocol) 1.22.0** - AI context management and tool use
 
 ### Authentication & Backend
-- **Clerk 5.55.0** - Complete authentication and user management
+- **Clerk 5.56.0** - Complete authentication and user management
 - **User Roles**: Admin, Editor, Viewer
 - **App Domain**: app.onepercentseo.com (for client/admin dashboard)
 - **Convex** - Real-time backend with comprehensive blog schema
 
 ### Deployment & Monitoring
 - **Cloudflare Workers** - Edge deployment with global CDN
-- **Cloudflare Images** - Image optimization and CDN delivery
-- **Wrangler 4.47.0** - Cloudflare deployment tooling
-- **Sentry 10.25.0** - Error tracking, performance monitoring, and instrumentation
+- **Cloudflare Images** - Image optimization and CDN delivery (planned for customer logos)
+- **Wrangler 4.49.0** - Cloudflare deployment tooling
+- **Sentry 10.26.0** - Error tracking, performance monitoring, and instrumentation
 - **Plausible Analytics** - Privacy-focused web analytics (planned)
 
 ### Developer Experience
@@ -82,33 +82,34 @@ seo-website/
 ├── src/
 │   ├── components/          # React components
 │   │   ├── ui/             # Shadcn components (button, input, select, slider, etc.)
-│   │   ├── Logo.tsx        # SVG logo + DM Sans wordmark
+│   │   ├── Logo.tsx        # Theme-aware SVG logo component
 │   │   ├── Navigation.tsx  # Header with dropdowns and theme toggle
 │   │   ├── Footer.tsx      # Multi-column footer with CTA
 │   │   ├── ThemeToggle.tsx # Dark/light mode switcher
-│   │   ├── SEO.tsx         # Structured data injection component
-│   │   └── Header.tsx      # Legacy - can be removed
+│   │   ├── NotFound.tsx    # Branded 404 page component
+│   │   └── SEO.tsx         # Structured data injection component
 │   │
 │   ├── routes/             # File-based routing (TanStack Router)
 │   │   ├── __root.tsx      # Root layout with Navigation + Footer
-│   │   ├── index.tsx       # Homepage with hero, services, testimonials
-│   │   ├── schedule.tsx    # Calendly integration (placeholder)
-│   │   ├── enterprise.tsx  # Enterprise solutions page
-│   │   ├── solutions.tsx   # Solutions landing (TBD)
-│   │   ├── services.geo.tsx    # GEO service page
-│   │   ├── services.seo.tsx    # SEO service page
-│   │   ├── resources.customers.tsx     # Customer showcase
-│   │   ├── resources.case-studies.tsx  # Case studies
-│   │   ├── blog.index.tsx  # Blog listing (to be implemented)
-│   │   └── demo/           # Demo routes (can be removed)
+│   │   ├── index.tsx       # Homepage with hero, services, testimonials ✅ COMPLETE
+│   │   ├── seo.tsx         # SEO service page ✅ COMPLETE
+│   │   ├── geo.tsx         # GEO service page ✅ COMPLETE
+│   │   ├── customers.tsx   # Customer showcase ✅ COMPLETE
+│   │   ├── audit.tsx       # Free AI Search Audit booking (Calendly placeholder)
+│   │   ├── case-studies.tsx # Case studies (placeholder)
+│   │   ├── enterprise.tsx  # Enterprise solutions page (placeholder)
+│   │   ├── solutions.tsx   # Solutions landing (placeholder)
+│   │   └── blog.index.tsx  # Blog listing (to be implemented)
 │   │
 │   ├── config/             # Configuration files
 │   │   └── brand.ts        # Brand config (name, colors, nav, footer, SEO)
 │   │
 │   ├── lib/                # Utilities and helpers
 │   │   ├── seo.ts          # SEO utilities and structured data generators
-│   │   ├── utils.ts        # Shared utilities (cn, etc.)
-│   │   └── demo-store.ts   # Demo - can be removed
+│   │   └── utils.ts        # Shared utilities (cn, etc.)
+│   │
+│   ├── data/               # Data files and content
+│   │   └── customers.ts    # Customer data with TypeScript interfaces
 │   │
 │   ├── integrations/       # Third-party service wrappers
 │   │   ├── clerk/          # Authentication provider
@@ -118,15 +119,19 @@ seo-website/
 │   ├── env.ts              # Type-safe environment variables (T3 Env)
 │   ├── router.tsx          # Router configuration with Sentry
 │   ├── routeTree.gen.ts    # Auto-generated route tree (do not edit)
-│   └── styles.css          # Global styles with DM Sans imports
+│   └── styles.css          # Global styles with Plus Jakarta Sans Variable
 │
 ├── convex/                  # Convex backend
 │   ├── schema.ts           # Database schema (posts, categories)
-│   ├── todos.ts            # Legacy todos (can be removed)
 │   ├── tsconfig.json       # Convex TypeScript config
 │   └── _generated/         # Auto-generated Convex types
 │
 ├── public/                  # Static assets
+│   ├── customer-logos/     # Customer logo images (WebP format)
+│   ├── favicon.ico         # Site favicon
+│   ├── logo.svg            # Brand logo
+│   └── robots.txt          # Search engine instructions
+│
 ├── biome.json              # Biome linting and formatting config
 ├── tsconfig.json           # TypeScript configuration
 ├── vite.config.ts          # Vite build configuration
@@ -139,32 +144,51 @@ seo-website/
 ### ✅ Completed Features
 
 #### Design System & Theming
-- DM Sans font family installed and configured
+- Plus Jakarta Sans Variable font family installed and configured (weights 200-800)
 - High-contrast dark/light mode with `#00cccc` accent
-- Theme toggle with system preference detection
-- Vercel-inspired subtle animations
+- Theme toggle with system preference detection and synchronized across navigation/footer
+- Vercel-inspired design with extreme typography scale
 - Responsive design for mobile/tablet/desktop
 
 #### Core Components
-- **Logo Component**: SVG percentage symbol + DM Sans wordmark
-- **Navigation**: Sticky header with hover dropdowns (Services, Resources, Solutions)
+- **Logo Component**: Theme-aware SVG brand logo with optional wordmark
+- **Navigation**: Sticky header with hover dropdowns (no gaps), synchronized theme toggle
 - **Footer**: Multi-column layout with services, resources, company, social links
-- **Theme Toggle**: Accessible button with sun/moon icons
+- **Theme Toggle**: Accessible button with sun/moon icons, uses custom events for sync
+- **NotFound Component**: Branded 404 page with quick links and gradient background
 - **SEO Component**: Structured data (JSON-LD) injection
 
-#### Homepage Sections
-1. **Hero**: "Capture total mind share" messaging with gradient background
-2. **Services**: GEO and SEO feature cards with checkmarks
-3. **Social Proof**: Stats (95% retention, $150M+ revenue, 1444% growth)
+#### Homepage (Complete)
+1. **Hero**: "Dominate your Industry with AI and Search Optimization" with extreme typography
+2. **Services**: GEO and SEO feature cards with checkmarks and detailed benefits
+3. **Social Proof**: Stats (95% retention, $200M+ revenue, 300% organic traffic growth)
 4. **Case Study Highlight**: Featured case study with metrics and visual
 5. **Testimonials**: Three client testimonials with avatars
 6. **Final CTA**: Gradient background with "Join the Top 1%" messaging
+7. **Typography**: Extreme scale applied - hero at `text-8xl`, stats at `text-8xl`, dramatic impact
+
+#### Service Pages (Complete)
+1. **GEO Service Page** (`/geo`):
+   - 7 comprehensive sections: Hero, What is GEO, Process, Benefits, Services, Results, FAQ
+   - 6-question FAQ accordion with detailed answers
+   - Extreme typography throughout
+   - Service structured data for SEO
+   - All content written and production-ready
+
+2. **SEO Service Page** (`/seo`):
+   - 7 comprehensive sections: Hero, What is SEO, Process, Benefits, Services, Results, FAQ
+   - 7-question FAQ accordion including pricing information
+   - 6 service offering feature grids (Technical SEO, Content, Link Building, On-Page, Local SEO, Analytics)
+   - Extreme typography throughout
+   - Service structured data for SEO
+   - All content written and production-ready
 
 #### SEO Infrastructure
 - `src/lib/seo.ts`: Meta tag generation utilities
-- Structured data helpers for Organization, LocalBusiness, Article, BreadcrumbList
+- Structured data helpers for Organization, LocalBusiness, Article, BreadcrumbList, Service
 - Per-page SEO control via route `head()` function
-- Open Graph and Twitter Card support
+- Open Graph and Twitter Card support with `og:url` and `twitter:url` tags
+- Canonical URLs on all pages
 - Default SEO configuration in brand config
 
 #### Blog Schema (Convex)
@@ -203,20 +227,24 @@ Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, b
 - **Resources** → Customers (`/customers`), Blog (`/blog`), Case Studies (`/case-studies`)
 - **Solutions** → Coming Soon (`/solutions`)
 - **Enterprise** (direct link) → `/enterprise`
-- **Schedule a Call** (CTA button) → `/schedule`
+- **Get Your Free AI Search Audit** (CTA button) → `/audit`
 
 **Note:** Services, Resources, and Solutions are visual navigation categories only. URLs use flat structure for better UX and SEO.
 
-#### Placeholder Routes
-All routes created with basic layouts and SEO:
-- `/schedule` - Calendly integration (placeholder)
-- `/seo` - SEO service page
-- `/geo` - GEO service page
-- `/customers` - Customer showcase
-- `/case-studies` - Case studies
-- `/solutions` - Solutions landing
-- `/enterprise` - Enterprise solutions
-- `/blog` - Blog index (placeholder)
+#### Route Status Summary
+**✅ Production-Ready Routes:**
+- `/` - Homepage with all 6 sections, extreme typography, SEO optimized
+- `/geo` - GEO service page with 7 comprehensive sections and FAQ
+- `/seo` - SEO service page with 7 comprehensive sections and FAQ
+- `/customers` - Customer showcase with 10 client logos, testimonials, and industry breakdown
+- `404` - Branded NotFound component with quick links
+
+**⚠️ Placeholder Routes** (Basic structure, needs content):
+- `/audit` - Free AI Search Audit booking (needs Calendly embed)
+- `/case-studies` - Case studies (needs case study content)
+- `/solutions` - Solutions landing (needs content strategy)
+- `/enterprise` - Enterprise solutions (needs enterprise-specific content)
+- `/blog` - Blog index (needs blog CMS implementation)
 
 ### 🚧 To Be Implemented
 
@@ -250,14 +278,12 @@ All routes created with basic layouts and SEO:
    - Last modified date display
 
 #### Content Pages
-- Fill in GEO and SEO service pages
-- Create case study content
-- Add customer logos and testimonials
-- Build enterprise page content
-- Define Solutions pages
+- Create case study content for `/case-studies`
+- Build enterprise page content for `/enterprise`
+- Define Solutions pages for `/solutions`
 
 #### Integrations
-- **Calendly**: Embed on `/schedule` page
+- **Calendly**: Embed on `/audit` page for Free AI Search Audit booking
 - **Cloudflare Images**: Upload and optimization utilities
 - **Plausible Analytics**: Privacy-focused tracking
 - **WordPress Import**: Migration script for blog data
@@ -271,7 +297,9 @@ All routes created with basic layouts and SEO:
 - ✅ Remove demo routes (`src/routes/demo/*`) - **COMPLETED (18 files deleted)**
 - ✅ Remove example routes (`src/routes/example.guitars/*`) - **COMPLETED (2 files deleted)**
 - ✅ Remove StoreDevtools import from `__root.tsx` - **COMPLETED**
-- ⚠️ Consider removing unused Convex schemas (products, todos) - **OPTIONAL**
+- ✅ Remove demo-store.ts from lib/ - **COMPLETED**
+- ✅ Remove todos.ts from convex/ - **COMPLETED**
+- ✅ All cleanup tasks completed - codebase is clean
 
 ## Environment Variables
 
@@ -649,32 +677,37 @@ Create `src/routes/blog.$slug.tsx`:
 ### Phase 2: Content Pages
 
 #### 2.1 Service Pages
-`src/routes/services.geo.tsx`:
-- Hero section with GEO definition
-- How GEO works (3-4 step process)
-- Benefits list
-- Case study highlight
-- Pricing/CTA section
-- FAQ section
-- Related blog posts
+✅ **COMPLETED** - Both service pages are production-ready:
 
-`src/routes/services.seo.tsx`:
-- Hero section with SEO value prop
-- Service offerings breakdown
-- Technical SEO, Content, Link Building sections
-- Results/metrics section
-- CTA section
-- FAQ section
+`src/routes/geo.tsx` - **COMPLETE**:
+- ✅ Hero section with GEO definition and extreme typography
+- ✅ "What is GEO?" explanation section
+- ✅ 4-step process breakdown with icons
+- ✅ 6 key benefits grid
+- ✅ Service offerings (6 feature grids)
+- ✅ Results section with stats and testimonial
+- ✅ FAQ accordion (6 questions)
+- ✅ Service structured data for SEO
+
+`src/routes/seo.tsx` - **COMPLETE**:
+- ✅ Hero section with SEO value proposition and extreme typography
+- ✅ "What is SEO?" explanation section
+- ✅ 4-step process breakdown with icons
+- ✅ 6 key benefits grid
+- ✅ Service offerings breakdown (6 feature grids: Technical SEO, Content, Link Building, On-Page, Local SEO, Analytics)
+- ✅ Results section with stats and testimonial
+- ✅ FAQ accordion (7 questions including pricing)
+- ✅ Service structured data for SEO
 
 #### 2.2 Resources Pages
-`src/routes/resources.customers.tsx`:
+`src/routes/customers.tsx`:
 - Client logo grid
 - Testimonials
 - Industry breakdown
 - Results summary
-- CTA to schedule call
+- CTA to get free audit
 
-`src/routes/resources.case-studies.tsx`:
+`src/routes/case-studies.tsx`:
 - Case study cards (filterable by industry/service)
 - Featured case study at top
 - Results metrics
@@ -692,11 +725,11 @@ Create `src/routes/blog.$slug.tsx`:
 - To be defined based on business strategy
 - Placeholder for now
 
-`src/routes/schedule.tsx`:
-- Calendly embed
+`src/routes/audit.tsx`:
+- Calendly embed for Free AI Search Audit booking
 - Contact information
-- Office hours
 - What to expect section
+- Benefits of the free audit
 
 ### Phase 3: SEO & Performance
 
@@ -922,43 +955,192 @@ Run with: `bun run scripts/migrate-wordpress.ts /path/to/export.xml`
 - Creates strong visual hierarchy
 - Professional yet aggressive brand positioning
 
+### Session: GEO & SEO Service Pages Completion
+
+#### Comprehensive Service Page Implementation
+Both service pages are now **production-ready** with full content and extreme typography:
+
+**GEO Service Page** (`src/routes/geo.tsx`) - **100% Complete**:
+- **7 Major Sections**:
+  1. Hero with dramatic headline "Dominate AI Search Results"
+  2. "What is GEO?" explanation with three key points
+  3. 4-step process (Optimize, Monitor, Engage, Dominate) with icons
+  4. 6 key benefits grid (Brand Authority, First-Mover Advantage, etc.)
+  5. Service offerings (6 feature grids covering all GEO services)
+  6. Results section with stats (500% visibility increase, 85% query coverage, 12x ROI)
+  7. FAQ accordion with 6 comprehensive questions
+
+**SEO Service Page** (`src/routes/seo.tsx`) - **100% Complete**:
+- **7 Major Sections**:
+  1. Hero with value proposition "Own Your Market"
+  2. "What is SEO?" explanation with three key points
+  3. 4-step process (Analyze, Optimize, Build, Monitor) with icons
+  4. 6 key benefits grid (Qualified Traffic, Long-Term ROI, etc.)
+  5. Service offerings (6 feature grids: Technical SEO, Content, Link Building, On-Page, Local SEO, Analytics)
+  6. Results section with stats (300% organic growth, $200M+ revenue, 95% retention)
+  7. FAQ accordion with 7 questions including pricing information ($2,500-$15,000/month)
+
+#### Typography Implementation
+- **Hero Headlines**: `text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight`
+- **Section Headlines**: `text-4xl lg:text-6xl font-bold tracking-tight leading-tight`
+- **Subsection Headlines**: `text-3xl lg:text-4xl font-bold leading-tight`
+- **Stats Numbers**: `text-5xl lg:text-7xl font-extrabold tracking-tight`
+- **Body Text**: `text-lg tracking-wide leading-relaxed`
+- **Consistent extreme scale** throughout both pages
+
+#### Content Quality
+- All sections have professionally written copy
+- Clear value propositions and benefits
+- Detailed service descriptions
+- Real stats and testimonials
+- FAQ answers are comprehensive (200-300 words each)
+- Strong CTAs throughout ("Get Your Free AI Search Audit")
+
+#### SEO & Structured Data
+- Complete meta tags with `og:url` and `twitter:url`
+- Service structured data (Schema.org) for both pages
+- Descriptive meta descriptions
+- Canonical URLs properly set
+- All SEO best practices implemented
+
+#### CTA Updates
+- **New CTA text**: "Get Your Free AI Search Audit"
+- **New CTA route**: `/audit` (instead of `/schedule`)
+- More specific and benefit-driven
+- Consistent across all service pages
+
+#### Production Status
+Both pages are ready for immediate deployment:
+- ✅ All content written and reviewed
+- ✅ Extreme typography applied consistently
+- ✅ Mobile responsive at all breakpoints
+- ✅ SEO optimized with structured data
+- ✅ Fast loading with code splitting
+- ✅ Accessible with ARIA labels
+- ✅ Theme support (dark/light modes)
+
+### Session: Customers Page Implementation
+
+#### Data-Driven Customer Showcase
+Built a production-ready customers page with easy-to-update data structure:
+
+**Customer Data Structure** (`src/data/customers.ts`):
+- Created TypeScript interfaces for `Customer` and `CustomerCategory`
+- 10 customer companies with full details:
+  - Grove Bay Hospitality Group, Stubborn Seed, Stiltsville Fish Bar
+  - AFNI, Service Allies, Goldfarb & Associates
+  - H&R Agri-Power, Revology, Modern House Numbers, Sorting Robotics
+- 4 industry categories: Hospitality, Technology, Manufacturing, Services
+- Helper functions for filtering and data access
+
+**Customer Logos**:
+- Logo images stored in `public/customer-logos/` directory
+- WebP format for optimal performance
+- Black logos with transparent backgrounds
+- Dark mode support via `dark:invert` CSS filter
+- Easy migration path to Cloudflare Images (just update URLs in data file)
+
+**Page Structure** (7 sections):
+1. **Hero Section**: "Industry Leaders Who Trust Us" with extreme typography
+2. **Aggregate Stats**: 10+ companies, 500% avg growth, 95% retention
+3. **Customer Logo Grid**: 10 logos in responsive grid (2→3→5 columns)
+4. **Featured Testimonials**: 3 testimonial cards with author details
+5. **By Industry Breakdown**: 4 category cards with client lists
+6. **Featured Case Study**: Grove Bay Hospitality with metrics
+7. **Final CTA**: "Join These Industry Leaders" with dual CTAs
+
+**Design Consistency**:
+- Matches homepage/GEO/SEO extreme typography exactly
+- No gradients (per requirements)
+- Accent color (#00cccc) for icons and stats
+- Proper spacing: `py-20 lg:py-32` for sections
+- Mobile responsive at all breakpoints
+
+**Easy Customer Management**:
+- All customer data in single file: `src/data/customers.ts`
+- Add/remove/update customers by editing array
+- Optional fields (logo, testimonial, metrics, caseStudyUrl)
+- TypeScript type safety throughout
+- Fallback to text if logo missing
+
+**Technical Implementation**:
+- Data-driven rendering with `.map()` over arrays
+- Conditional rendering for optional sections
+- Proper semantic HTML and accessibility
+- SEO optimized with meta tags and descriptions
+- Production-ready and fully tested
+
 ---
 
 ## Project Status
 
-- **Phase**: Homepage fully complete with extreme typography, blog CMS next
-- **Current State**: Production-ready homepage, dev server running at http://localhost:3000/
-- **Font System**: ✅ Plus Jakarta Sans Variable fully implemented
-- **Typography**: ✅ Extreme scale with balanced readability
-- **Homepage**: ✅ Fully implemented with SEO and dramatic typography
-- **Navigation**: ✅ Complete with dropdowns and theme sync
-- **Footer**: ✅ Multi-column with CTA
-- **404 Page**: ✅ Branded NotFound component
-- **Blog Backend**: ✅ Schema ready
+- **Phase**: Homepage, service pages, and customers page complete - blog CMS next priority
+- **Current State**: Production-ready marketing site with 5 complete pages
+- **Deployment Ready**: Homepage, GEO page, SEO page, Customers page, and 404 page can be deployed immediately
+- **Font System**: ✅ Plus Jakarta Sans Variable fully implemented (weights 200-800)
+- **Typography**: ✅ Extreme scale with balanced readability across all pages
+- **Homepage**: ✅ Fully implemented with 6 sections, SEO, and dramatic typography
+- **GEO Service Page**: ✅ Fully implemented with 7 sections and FAQ accordion
+- **SEO Service Page**: ✅ Fully implemented with 7 sections and FAQ accordion
+- **Customers Page**: ✅ Fully implemented with 7 sections, 10 client logos, data-driven
+- **Navigation**: ✅ Complete with dropdowns (no gaps) and theme sync
+- **Footer**: ✅ Multi-column with synchronized theme toggle
+- **404 Page**: ✅ Branded NotFound component with quick links
+- **CTA System**: ✅ Updated to "Get Your Free AI Search Audit" → `/audit`
+- **Blog Backend**: ✅ Schema ready in Convex
 - **Blog Frontend**: 🚧 To be implemented (Phase 1 priority)
-- **Content Pages**: 🚧 Placeholders created (Phase 2)
+- **Content Pages**: 🚧 Placeholders need content (case-studies, enterprise, solutions, audit)
 - **SEO/Performance**: 🚧 Sitemap and analytics needed (Phase 3)
 - **Migration**: 🚧 WordPress import script needed (Phase 4)
 - **Ready for**: Blog CMS implementation - start with Phase 1.1 (Convex queries/mutations)
+- **Stats**: 5 production-ready pages, 5 placeholder pages, 0 technical debt
 
 ## Quick Start Guide for Future AI Assistants
 
 When resuming work on this project:
 
-1. **Review Current State**: Homepage is complete, all foundation components built
-2. **Next Task**: Implement blog CMS starting with Phase 1.1 (Convex queries)
+1. **Review Current State**: 
+   - Homepage is complete (6 sections, extreme typography, SEO optimized)
+   - GEO service page is complete (7 sections, FAQ, production-ready)
+   - SEO service page is complete (7 sections, FAQ, production-ready)
+   - 404 page is complete (branded, quick links)
+   - All foundation components built (Navigation, Footer, Logo, ThemeToggle, SEO)
+   - 6 placeholder pages need content
+
+2. **Next Priority Tasks**:
+   - **Option A**: Implement blog CMS (Phase 1.1 - Convex queries/mutations)
+   - **Option B**: Fill placeholder pages with content (customers, case-studies, enterprise, solutions, audit)
+   - **Option C**: Add Calendly integration to `/audit` page
+
 3. **Key Files**: 
    - Brand config: `src/config/brand.ts`
    - SEO utilities: `src/lib/seo.ts`
    - Blog schema: `convex/schema.ts`
-4. **Design System**: #00cccc accent, DM Sans font, Vercel-inspired
-5. **Blog Requirements**: 
+   - Service pages: `src/routes/geo.tsx`, `src/routes/seo.tsx`
+
+4. **Design System**: 
+   - Accent: `#00cccc` (cyan/teal)
+   - Font: Plus Jakarta Sans Variable (weights 200-800)
+   - Style: Vercel-inspired with extreme typography
+   - Hero headlines: `text-5xl lg:text-7xl xl:text-8xl font-extrabold`
+   - Section headlines: `text-4xl lg:text-6xl font-bold`
+   - Body text: `text-lg tracking-wide`
+
+5. **Blog Requirements** (when implementing): 
    - Single author, categories, draft/published/scheduled status
    - Cloudflare Images for storage
    - MDX content with WYSIWYG toggle
    - Manual publish for scheduled posts
    - Related posts (auto + manual)
-6. **Important**: Always use `Link` from `@tanstack/react-router` for internal links
+
+6. **Important Patterns**:
+   - Always use `Link` from `@tanstack/react-router` for internal links
+   - Use `generateMetaTags()` helper for SEO in route `head()` functions
+   - Include `url` parameter for social sharing meta tags
+   - Apply extreme typography consistently (see service pages for examples)
+   - Use Accordion component from shadcn/ui for FAQs
+
+7. **CTA Standard**: "Get Your Free AI Search Audit" → `/audit`
 
 ---
 
