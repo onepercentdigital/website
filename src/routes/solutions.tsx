@@ -7,6 +7,7 @@ export const Route = createFileRoute('/solutions')({
     generateMetaTags({
       title: 'Solutions',
       description: 'Custom solutions for your business needs.',
+      url: 'https://onepercentseo.com/solutions',
     }),
 });
 
@@ -14,7 +15,7 @@ function SolutionsPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20">
       <h1 className="mb-8 font-bold text-4xl">Solutions</h1>
-      <p className="text-muted-foreground text-lg">Content coming soon...</p>
+      <p className="text-lg text-muted-foreground">Content coming soon...</p>
     </div>
   );
 }

@@ -1,377 +1,318 @@
-Welcome to your new TanStack app! 
+# One Percent SEO - Marketing Website
 
-# Getting Started
+Modern, high-performance marketing website built with TanStack Start for One Percent SEO/GEO services.
 
-To run this application:
+## 🚀 Overview
 
+Full-stack TypeScript marketing website featuring:
+- **Server-side rendering (SSR)** for optimal SEO/GEO performance
+- **Real-time blog CMS** powered by Convex (to be implemented)
+- **Dark/light theme** with system preference detection
+- **Vercel-inspired design** with Tailwind CSS v4
+- **Type-safe routing** and data fetching with TanStack ecosystem
+- **Flat URL structure** for better UX and SEO (`/seo`, `/geo`, `/customers`)
+
+## 🛠️ Tech Stack
+
+### Framework & Routing
+- **TanStack Start** - Full-stack React framework with SSR and streaming
+- **TanStack Router** - File-based, type-safe routing with built-in code splitting
+- **TanStack Query** - Powerful server state management and caching
+- **React 19.2.0** - Latest React with concurrent features
+
+### Backend & Database
+- **Convex 1.29.2** - Real-time database with TypeScript schema and reactive queries
+- **Clerk 5.55.0** - Authentication and user management
+
+### Styling & UI
+- **Tailwind CSS 4.1.17** - Utility-first CSS framework (latest v4)
+- **Plus Jakarta Sans Variable** - Primary font family (weights 200-800 via @fontsource-variable)
+- **Shadcn/ui** - High-quality, accessible component library on Radix UI
+- **Lucide React** - Beautiful, consistent icon system
+- **Design System**: `#00cccc` accent color, extreme typography scale, high-contrast themes
+
+### Developer Experience
+- **TypeScript 5.9.3** - Strict mode with comprehensive type safety
+- **Biome 2.3.6** - Ultra-fast linting and formatting (replaces ESLint/Prettier)
+- **Vitest 4.0.10** - Blazing fast unit testing framework
+- **Bun 1.3.2** - Fast package manager and JavaScript runtime
+
+### Deployment & Monitoring
+- **Cloudflare Workers** - Edge deployment with global CDN
+- **Cloudflare Images** - Image optimization and delivery (planned)
+- **Sentry 10.25.0** - Error tracking, performance monitoring, and instrumentation
+
+## 📋 Prerequisites
+
+- **Bun** 1.3.2 or later ([Install Bun](https://bun.sh))
+- **Node.js** 18 or later
+- **Convex account** ([Sign up](https://www.convex.dev))
+- **Clerk account** ([Sign up](https://clerk.com))
+
+## 🚦 Getting Started
+
+### 1. Install Dependencies
 ```bash
 bun install
-bun --bun run start
 ```
 
-# Building For Production
+### 2. Set Up Environment Variables
 
-To build this application for production:
-
-```bash
-bun --bun run build
-```
-
-## Testing
-
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
-
-```bash
-bun --bun run test
-```
-
-## Styling
-
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
-
-
-## Linting & Formatting
-
-This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
-
-
-```bash
-bun --bun run lint
-bun --bun run format
-bun --bun run check
-```
-
-
-## Setting up Clerk
-
-- Set the `VITE_CLERK_PUBLISHABLE_KEY` in your `.env.local`.
-
-
-## Setting up Convex
-
-- Set the `VITE_CONVEX_URL` and `CONVEX_DEPLOYMENT` environment variables in your `.env.local`. (Or run `npx convex init` to set them automatically.)
-- Run `npx convex dev` to start the Convex server.
-
-
-## Shadcn
-
-Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
-
-```bash
-pnpx shadcn@latest add button
-```
-
-
-## T3Env
-
-- You can use T3Env to add type safety to your environment variables.
-- Add Environment variables to the `src/env.mjs` file.
-- Use the environment variables in your code.
-
-### Usage
-
-```ts
-import { env } from "@/env";
-
-console.log(env.VITE_APP_TITLE);
-```
-
-
-
-
-
-# TanStack Chat Application
-
-Am example chat application built with TanStack Start, TanStack Store, and Claude AI.
-
-## .env Updates
+Create `.env.local` in the root directory:
 
 ```env
-ANTHROPIC_API_KEY=your_anthropic_api_key
+# Clerk Authentication
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_...
+
+# Convex Database
+VITE_CONVEX_URL=https://...convex.cloud
+CONVEX_DEPLOYMENT=prod:...
+
+# Sentry Monitoring (optional but recommended)
+VITE_SENTRY_DSN=https://...@sentry.io/...
+
+# AI Integration (optional, for chat features)
+ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-## ✨ Features
+### 3. Initialize Convex
 
-### AI Capabilities
-- 🤖 Powered by Claude 3.5 Sonnet 
-- 📝 Rich markdown formatting with syntax highlighting
-- 🎯 Customizable system prompts for tailored AI behavior
-- 🔄 Real-time message updates and streaming responses (coming soon)
-
-### User Experience
-- 🎨 Modern UI with Tailwind CSS and Lucide icons
-- 🔍 Conversation management and history
-- 🔐 Secure API key management
-- 📋 Markdown rendering with code highlighting
-
-### Technical Features
-- 📦 Centralized state management with TanStack Store
-- 🔌 Extensible architecture for multiple AI providers
-- 🛠️ TypeScript for type safety
-
-## Architecture
-
-### Tech Stack
-- **Frontend Framework**: TanStack Start
-- **Routing**: TanStack Router
-- **State Management**: TanStack Store
-- **Styling**: Tailwind CSS
-- **AI Integration**: Anthropic's Claude API
-
-
-## Routing
-This project uses [TanStack Router](https://tanstack.com/router). The initial setup is a file based router. Which means that the routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add another a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
+First time setup:
+```bash
+npx convex dev
 ```
 
-Then anywhere in your JSX you can use it like so:
+This will:
+- Create a new Convex project (if needed)
+- Generate environment variables
+- Set up the database schema
 
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { Outlet, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-
-import { Link } from "@tanstack/react-router";
-
-export const Route = createRootRoute({
-  component: () => (
-    <>
-      <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-        </nav>
-      </header>
-      <Outlet />
-      <TanStackRouterDevtools />
-    </>
-  ),
-})
-```
-
-The `<TanStackRouterDevtools />` component is not required so you can remove it if you don't want it in your layout.
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-const peopleRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: "/people",
-  loader: async () => {
-    const response = await fetch("https://swapi.dev/api/people");
-    return response.json() as Promise<{
-      results: {
-        name: string;
-      }[];
-    }>;
-  },
-  component: () => {
-    const data = peopleRoute.useLoaderData();
-    return (
-      <ul>
-        {data.results.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    );
-  },
-});
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-### React-Query
-
-React-Query is an excellent addition or alternative to route loading and integrating it into you application is a breeze.
-
-First add your dependencies:
+### 4. Start Development Server
 
 ```bash
-bun install @tanstack/react-query @tanstack/react-query-devtools
+bun run dev
 ```
 
-Next we'll need to create a query client and provider. We recommend putting those in `main.tsx`.
-
-```tsx
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-// ...
-
-const queryClient = new QueryClient();
-
-// ...
-
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
-
-  root.render(
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
-  );
-}
+**Keep Convex running in a separate terminal:**
+```bash
+npx convex dev
 ```
 
-You can also add TanStack Query Devtools to the root route (optional).
+Visit [http://localhost:3000](http://localhost:3000) 🎉
 
-```tsx
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+## 📁 Project Structure
 
-const rootRoute = createRootRoute({
-  component: () => (
-    <>
-      <Outlet />
-      <ReactQueryDevtools buttonPosition="top-right" />
-      <TanStackRouterDevtools />
-    </>
-  ),
-});
+```
+seo-website/
+├── src/
+│   ├── components/          # React components
+│   │   ├── ui/             # Shadcn components (button, input, etc.)
+│   │   ├── Navigation.tsx  # Header with dropdown menus
+│   │   ├── Footer.tsx      # Multi-column footer
+│   │   ├── Logo.tsx        # Theme-aware SVG logo
+│   │   ├── ThemeToggle.tsx # Dark/light mode switcher
+│   │   ├── NotFound.tsx    # Branded 404 page
+│   │   └── SEO.tsx         # Structured data injection
+│   │
+│   ├── routes/             # File-based routing (TanStack Router)
+│   │   ├── __root.tsx      # Root layout with providers
+│   │   ├── index.tsx       # Homepage
+│   │   ├── seo.tsx         # SEO service page (/seo)
+│   │   ├── geo.tsx         # GEO service page (/geo)
+│   │   ├── customers.tsx   # Customer showcase (/customers)
+│   │   ├── case-studies.tsx # Case studies (/case-studies)
+│   │   ├── enterprise.tsx  # Enterprise solutions
+│   │   ├── schedule.tsx    # Calendly integration
+│   │   └── blog/           # Blog pages (to be implemented)
+│   │
+│   ├── config/
+│   │   └── brand.ts        # Centralized brand configuration
+│   │
+│   ├── lib/
+│   │   ├── seo.ts          # SEO utilities and meta tag generators
+│   │   └── utils.ts        # Shared utility functions
+│   │
+│   ├── integrations/       # Third-party service wrappers
+│   │   ├── clerk/          # Authentication provider
+│   │   ├── convex/         # Database provider
+│   │   └── tanstack-query/ # Query client configuration
+│   │
+│   ├── env.ts              # Type-safe environment variables (T3 Env)
+│   ├── router.tsx          # Router configuration with Sentry
+│   ├── routeTree.gen.ts    # Auto-generated route tree (do not edit)
+│   └── styles.css          # Global styles with DM Sans imports
+│
+├── convex/                  # Convex backend
+│   ├── schema.ts           # Database schema (posts, categories)
+│   ├── posts.ts            # Post queries/mutations (to be implemented)
+│   ├── categories.ts       # Category queries/mutations (to be implemented)
+│   └── _generated/         # Auto-generated Convex types
+│
+├── public/                  # Static assets
+├── biome.json              # Biome linting and formatting config
+├── tsconfig.json           # TypeScript configuration
+├── vite.config.ts          # Vite build configuration
+├── wrangler.jsonc          # Cloudflare Workers deployment config
+└── package.json            # Dependencies and scripts
 ```
 
-Now you can use `useQuery` to fetch your data.
+## 🧪 Development Workflow
 
-```tsx
-import { useQuery } from "@tanstack/react-query";
-
-import "./App.css";
-
-function App() {
-  const { data } = useQuery({
-    queryKey: ["people"],
-    queryFn: () =>
-      fetch("https://swapi.dev/api/people")
-        .then((res) => res.json())
-        .then((data) => data.results as { name: string }[]),
-    initialData: [],
-  });
-
-  return (
-    <div>
-      <ul>
-        {data.map((person) => (
-          <li key={person.name}>{person.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default App;
-```
-
-You can find out everything you need to know on how to use React-Query in the [React-Query documentation](https://tanstack.com/query/latest/docs/framework/react/overview).
-
-## State Management
-
-Another common requirement for React applications is state management. There are many options for state management in React. TanStack Store provides a great starting point for your project.
-
-First you need to add TanStack Store as a dependency:
+### Code Quality Commands
 
 ```bash
-bun install @tanstack/store
+# Type checking
+bun run type
+
+# Linting
+bun run lint
+
+# Formatting
+bun run format
+
+# Run all checks at once
+bun run check-all
+
+# Run tests
+bun run test
 ```
 
-Now let's create a simple counter in the `src/App.tsx` file as a demonstration.
+### Development Tips
 
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store } from "@tanstack/store";
-import "./App.css";
+- **Hot reload**: Changes to routes, components, and styles reload instantly
+- **Type errors**: Check the terminal for TypeScript errors
+- **DevTools**: TanStack Router and Query DevTools available in bottom-right corner
+- **Theme testing**: Use the theme toggle to test dark/light modes
 
-const countStore = new Store(0);
+## 🏗️ Building for Production
 
-function App() {
-  const count = useStore(countStore);
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-    </div>
-  );
-}
+```bash
+# Production build
+bun run build
 
-export default App;
+# Preview production build locally
+bun run serve
+
+# Deploy to Cloudflare Workers
+bun run deploy
 ```
 
-One of the many nice features of TanStack Store is the ability to derive state from other state. That derived state will update when the base state updates.
+The build process:
+1. Type checks all TypeScript
+2. Generates optimized route tree
+3. Bundles and minifies code
+4. Outputs to `.output/` directory
 
-Let's check this out by doubling the count using derived state.
+## 🎨 Design System
 
-```tsx
-import { useStore } from "@tanstack/react-store";
-import { Store, Derived } from "@tanstack/store";
-import "./App.css";
+### Colors
+- **Accent**: `#00cccc` (cyan/teal) - Brand color for CTAs and highlights
+- **Background** (Dark): `#0a0a0a` (near black)
+- **Background** (Light): `#ffffff` (white)
+- **Foreground**: High contrast text colors
+- **Secondary**: Subtle background variations
 
-const countStore = new Store(0);
+### Typography
+- **Primary Font**: Plus Jakarta Sans Variable (Google Fonts via @fontsource-variable)
+- **Variable Weights**: 200-800 available, primarily using 400 (regular), 700 (bold), 800 (extrabold)
+- **Extreme Scale**: Up to `text-8xl` on desktop for hero headlines and stats
+- **Headings**: 
+  - Hero: `text-5xl lg:text-7xl xl:text-8xl` with `font-extrabold` and `tracking-tighter`
+  - Stats: `text-5xl lg:text-7xl xl:text-8xl` with `font-extrabold` and `tracking-tight`
+  - H2: `text-4xl lg:text-6xl` with `font-bold` and `tracking-tight`
+  - H3: `text-3xl lg:text-4xl xl:text-5xl` with `font-bold` and `leading-tight`
+- **Body Text**: Regular (400) with `tracking-wide` for generous letter spacing
+- **Labels/Badges**: `text-xs font-semibold uppercase tracking-widest`
+- **Philosophy**: Massive, dramatic headlines balanced with readable body text
 
-const doubledStore = new Derived({
-  fn: () => countStore.state * 2,
-  deps: [countStore],
-});
-doubledStore.mount();
+### Visual Style
+- Inspired by **Vercel.com** design language
+- Subtle gradient backgrounds
+- Smooth hover transitions with accent glow effects
+- Rounded corners (`rounded-2xl` for cards, `rounded-lg` for buttons)
+- High contrast for accessibility
 
-function App() {
-  const count = useStore(countStore);
-  const doubledCount = useStore(doubledStore);
+### Component Patterns
+- **Cards**: `rounded-2xl` with border and shadow on hover
+- **Buttons**: `rounded-lg` with accent color for primary actions
+- **Dropdowns**: Smooth animations with no hover gaps
+- **Icons**: Lucide React for consistency
 
-  return (
-    <div>
-      <button onClick={() => countStore.setState((n) => n + 1)}>
-        Increment - {count}
-      </button>
-      <div>Doubled - {doubledCount}</div>
-    </div>
-  );
-}
+## 🌐 URL Structure
 
-export default App;
-```
+This project uses **flat URLs** for better UX, SEO, and AI citations:
 
-We use the `Derived` class to create a new store that is derived from another store. The `Derived` class has a `mount` method that will start the derived store updating.
+- `/seo` - SEO service page
+- `/geo` - GEO service page
+- `/customers` - Customer showcase
+- `/case-studies` - Case studies
+- `/enterprise` - Enterprise solutions
+- `/solutions` - Solutions landing
+- `/schedule` - Schedule a call
+- `/blog` - Blog index
 
-Once we've created the derived store we can use it in the `App` component just like we would any other store using the `useStore` hook.
+**Note:** Services, Resources, and Solutions are visual navigation categories only. They don't appear in URLs.
 
-You can find out everything you need to know on how to use TanStack Store in the [TanStack Store documentation](https://tanstack.com/store/latest).
+## 📚 Key Features
 
-# Demo files
+### SEO Optimization
+- Server-side rendering for all pages
+- Structured data (JSON-LD) for Organization, LocalBusiness, Articles
+- Comprehensive meta tags (Open Graph, Twitter Cards)
+- `og:url` and `twitter:url` for better social sharing
+- Semantic HTML with proper heading hierarchy
+- Fast page loads with code splitting
 
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: `sm`, `md`, `lg`, `xl`, `2xl`
+- Hamburger menu on mobile
+- Touch-friendly tap targets
 
-# Learn More
+### Accessibility
+- WCAG 2.1 AA compliant components (via Radix UI)
+- Keyboard navigation support
+- ARIA labels on interactive elements
+- High contrast color ratios
+- Focus visible states
 
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
+### Theme System
+- Dark/light mode toggle
+- System preference detection
+- Synchronized toggles across navigation and footer
+- Persistent selection via localStorage
+- Smooth transitions
+
+## 📖 Documentation
+
+For comprehensive project documentation, including:
+- Detailed implementation roadmap
+- Code standards and conventions
+- SEO best practices
+- Common tasks and recipes
+- Recent updates and decisions
+
+See **[CLAUDE.md](./CLAUDE.md)**
+
+## 🔐 Environment Variables
+
+All environment variables are validated using **T3 Env**:
+
+- **Client variables** must be prefixed with `VITE_`
+- Type-safe access via `import { env } from '@/env'`
+- Empty strings treated as undefined
+- Runtime validation on app start
+
+## 🤝 Contributing
+
+This is a private project for One Percent Digital. For questions or issues:
+- Contact the development team
+- Review [CLAUDE.md](./CLAUDE.md) for architecture decisions
+
+## 📄 License
+
+Proprietary - © 2025 One Percent Digital. All rights reserved.
+
+---
+
+Built with ❤️ using [TanStack Start](https://tanstack.com/start)

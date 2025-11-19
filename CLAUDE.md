@@ -14,7 +14,6 @@ This is a **full-stack TypeScript web application** being developed as a replace
 ### Future Rebranding
 The site is designed for easy rebranding:
 - Current: **One Percent SEO** (onepercentseo.com)
-- Future: **One Percent GEO** (onepercentgeo.com)
 - Potential: **One Percent Digital** (multi-vertical agency site)
 
 All branding is centralized in `src/config/brand.ts` for quick updates.
@@ -59,7 +58,7 @@ All branding is centralized in `src/config/brand.ts` for quick updates.
 ### Authentication & Backend
 - **Clerk 5.55.0** - Complete authentication and user management
 - **User Roles**: Admin, Editor, Viewer
-- **App Domain**: app.onepercentgeo.com (for client/admin dashboard)
+- **App Domain**: app.onepercentseo.com (for client/admin dashboard)
 - **Convex** - Real-time backend with comprehensive blog schema
 
 ### Deployment & Monitoring
@@ -199,22 +198,25 @@ categories: {
 Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, by_author
 
 #### Navigation Structure
-- **Services** (dropdown): GEO, SEO
-- **Resources** (dropdown): Customers, Blog, Case Studies
-- **Solutions** (dropdown): Coming Soon
-- **Enterprise** (direct link)
-- **Schedule a Call** (CTA button)
+**Visual Categories (Dropdowns):**
+- **Services** → GEO (`/geo`), SEO (`/seo`)
+- **Resources** → Customers (`/customers`), Blog (`/blog`), Case Studies (`/case-studies`)
+- **Solutions** → Coming Soon (`/solutions`)
+- **Enterprise** (direct link) → `/enterprise`
+- **Schedule a Call** (CTA button) → `/schedule`
+
+**Note:** Services, Resources, and Solutions are visual navigation categories only. URLs use flat structure for better UX and SEO.
 
 #### Placeholder Routes
-All routes created with basic layouts:
+All routes created with basic layouts and SEO:
 - `/schedule` - Calendly integration (placeholder)
-- `/services/geo` - GEO service page
-- `/services/seo` - SEO service page
-- `/resources/customers` - Customer showcase
-- `/resources/case-studies` - Case studies
+- `/seo` - SEO service page
+- `/geo` - GEO service page
+- `/customers` - Customer showcase
+- `/case-studies` - Case studies
 - `/solutions` - Solutions landing
 - `/enterprise` - Enterprise solutions
-- `/blog/` - Blog index (placeholder)
+- `/blog` - Blog index (placeholder)
 
 ### 🚧 To Be Implemented
 
@@ -266,11 +268,10 @@ All routes created with basic layouts:
 - Open Graph image templates or upload system
 
 ### 🗑️ Cleanup Tasks
-- Remove demo routes (`src/routes/demo/*`)
-- Remove example routes (`src/routes/example.guitars/*`)
-- Remove legacy Header.tsx component
-- Remove demo store and example components
-- Clean up legacy todos/products schema (optional)
+- ✅ Remove demo routes (`src/routes/demo/*`) - **COMPLETED (18 files deleted)**
+- ✅ Remove example routes (`src/routes/example.guitars/*`) - **COMPLETED (2 files deleted)**
+- ✅ Remove StoreDevtools import from `__root.tsx` - **COMPLETED**
+- ⚠️ Consider removing unused Convex schemas (products, todos) - **OPTIONAL**
 
 ## Environment Variables
 
@@ -770,19 +771,169 @@ Run with: `bun run scripts/migrate-wordpress.ts /path/to/export.xml`
 #### 5.4 Deployment
 - Set up production environment variables
 - Configure Cloudflare Workers
-- Set up custom domain (onepercentgeo.com)
+- Set up custom domain (onepercentseo.com)
 - Configure SSL/TLS
 - Set up deployment pipeline (GitHub Actions)
 - Deploy to production
 - Monitor with Sentry
 
+## Recent Updates (2025-11-19)
+
+### Session: URL Structure Flattening & Homepage Refinements
+
+#### Logo Component Update
+- **Replaced custom percentage SVG** with actual brand logo
+- Implemented as **inline SVG with theme-aware styling** using `currentColor`
+- Automatically adapts colors to light/dark theme
+- Maintains all size variants (sm, md, lg) with optional wordmark
+- Clean, professional brand representation
+
+#### Router Configuration Fixed
+- **Fixed TanStack Router v1.136.x compatibility** issues
+- Added explicit `component: RootComponent` with `<Outlet />` to root route
+- Added `notFoundComponent: NotFound` to root route configuration  
+- Properly separated `shellComponent` (HTML structure + providers) from layout component
+- Resolved all "notFoundError" warnings on `__root__` route
+
+#### Custom 404 Page Created
+- **Branded NotFound component** (`src/components/NotFound.tsx`)
+- Features hero section with search icon and gradient background
+- Quick links grid to popular pages (GEO, SEO, Case Studies, Blog)
+- Consistent Vercel-inspired design with cyan accent color
+- Primary CTAs: "Back to Home" and "Schedule a Call"
+- Proper SEO handling with noindex
+
+#### URL Structure Flattened
+- **Simplified URLs for better UX and SEO**:
+  - `/services/seo` → `/seo`
+  - `/services/geo` → `/geo`
+  - `/resources/customers` → `/customers`
+  - `/resources/case-studies` → `/case-studies`
+- Services/Resources/Solutions remain as **visual navigation categories only**
+- Updated all navigation and footer links in `brand.ts`
+- Renamed 4 route files and updated their route definitions
+- Cleaner, more memorable URLs for users and AI citations
+
+#### Navigation Improvements
+- **Fixed dropdown hover gap issue** - removed `mt-1` dead zone
+- Wrapped dropdown content to eliminate gap between button and menu
+- Dropdowns no longer disappear when moving mouse to select options
+- Implemented **theme toggle synchronization** across all instances
+- Navigation and footer theme toggles now stay in perfect sync
+- Uses custom events (`themeChange`) to communicate between instances
+
+#### Hero Content Updated
+- **New headline**: "Dominate your Industry with AI and Search Optimization"
+- **New subheadline**: "Takeover Both AI and Traditional Search"
+- Simplified, more direct messaging with stronger impact
+- Better reflects aggressive, results-focused brand positioning
+
+#### SEO Enhancements
+- Added `url` parameter to `SEOConfig` interface in `seo.ts`
+- Added **`og:url`** meta tag for Open Graph social sharing
+- Added **`twitter:url`** meta tag for Twitter Cards
+- Updated all 9 route files to include canonical URLs:
+  - Homepage, SEO, GEO, Customers, Case Studies, Enterprise, Solutions, Schedule, Blog
+- Better social sharing support across all platforms
+- Improves link preview quality on social media
+
+#### Code Cleanup
+- **Removed demo routes directory** (18 files deleted from `src/routes/demo/`)
+- **Removed example.guitars routes** (2 files deleted)
+- Removed `StoreDevtools` import and usage from `__root.tsx`
+- Cleaner codebase focused exclusively on production features
+- No unused demonstration code remaining
+
+#### Technical Decisions Made
+- **Chose flat URL structure** for better UX, SEO, and AI citation
+- Shorter URLs are more memorable and easier to share
+- Visual categories in navigation don't need to match URL structure
+- Modern best practice (Stripe, Vercel, Linear all use flat URLs)
+- Breadcrumbs and sitemaps can still show hierarchy independently
+
+### Session: Font Migration & Extreme Typography Implementation
+
+#### Plus Jakarta Sans Migration
+- **Removed DM Sans** from package.json
+- **Installed Plus Jakarta Sans Variable** (`@fontsource-variable/plus-jakarta-sans@^5.2.8`)
+- Updated `src/styles.css` to import variable font (supports weights 200-800)
+- Set as global font family: `'Plus Jakarta Sans Variable'`
+- Modern, professional typeface with excellent variable font support
+
+#### Extreme Typography Scale Applied
+- **Hero Headline** (`src/routes/index.tsx:44`):
+  - Size: `text-5xl lg:text-7xl xl:text-8xl`
+  - Weight: `font-extrabold`
+  - Line height: `leading-[0.95]`
+  - Tracking: `tracking-tighter`
+  - Creates massive, impactful first impression
+
+- **Stats Numbers** (`src/routes/index.tsx:186, 197, 208`):
+  - Size: `text-5xl lg:text-7xl xl:text-8xl`
+  - Weight: `font-extrabold`
+  - Line height: `leading-none`
+  - Tracking: `tracking-tight`
+  - Prevents overlap while maintaining drama
+
+- **Service Card Headlines** (`src/routes/index.tsx:90, 135`):
+  - Size: `text-3xl lg:text-4xl xl:text-5xl`
+  - Weight: `font-bold`
+  - Line height: `leading-tight`
+  - Scales up to XL screens for more presence
+
+- **Section Headlines** (H2):
+  - Size: `text-4xl lg:text-6xl`
+  - Weight: `font-bold`
+  - Line height: `leading-[1.1]`
+  - Tracking: `tracking-tight`
+
+#### Typography Details
+- **Case Study Badge** (`src/routes/index.tsx:225`):
+  - Changed to: `text-xs font-semibold uppercase tracking-widest`
+  - More dramatic, professional label treatment
+
+- **Body Text Tracking**:
+  - Added `tracking-wide` to large body text and descriptions
+  - Added `tracking-wider` to small text for readability
+  - Stats descriptions: `tracking-wide`
+  - Case study metrics: `tracking-wide`
+
+#### Typography Philosophy Implemented
+**Headlines:**
+- Massive sizes (up to 8xl on desktop, down from initial 9xl to prevent overlap)
+- Extra bold weight (800)
+- Super tight line height (0.95-1.1)
+- Tight tracking for visual impact
+
+**Body Text:**
+- Generous letter spacing (`tracking-wide`)
+- Relaxed line height for readability
+- Normal weight (400)
+
+**Small Text/Labels:**
+- Widest letter spacing (`tracking-widest`)
+- Semibold weight for emphasis
+- Uppercase for labels/badges
+
+#### Design Rationale
+- Balances dramatic impact with practical readability
+- No text overlap at any breakpoint
+- Consistent with modern SaaS design (Vercel, Linear, Stripe)
+- Creates strong visual hierarchy
+- Professional yet aggressive brand positioning
+
+---
+
 ## Project Status
 
-- **Phase**: Homepage complete, blog CMS next
-- **Current State**: Clean build, dev server running at http://localhost:3000/
-- **Homepage**: ✅ Fully implemented with SEO
-- **Navigation**: ✅ Complete with dropdowns
+- **Phase**: Homepage fully complete with extreme typography, blog CMS next
+- **Current State**: Production-ready homepage, dev server running at http://localhost:3000/
+- **Font System**: ✅ Plus Jakarta Sans Variable fully implemented
+- **Typography**: ✅ Extreme scale with balanced readability
+- **Homepage**: ✅ Fully implemented with SEO and dramatic typography
+- **Navigation**: ✅ Complete with dropdowns and theme sync
 - **Footer**: ✅ Multi-column with CTA
+- **404 Page**: ✅ Branded NotFound component
 - **Blog Backend**: ✅ Schema ready
 - **Blog Frontend**: 🚧 To be implemented (Phase 1 priority)
 - **Content Pages**: 🚧 Placeholders created (Phase 2)
@@ -811,5 +962,5 @@ When resuming work on this project:
 
 ---
 
-*Last Updated: 2025-01-18*
+*Last Updated: 2025-11-19*
 *Maintained for: AI-assisted development with Claude and other AI tools*

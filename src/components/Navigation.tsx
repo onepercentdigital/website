@@ -19,6 +19,7 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-1 md:flex">
           {navigation.main.map((item) => (
+            // biome-ignore lint/a11y/noStaticElementInteractions: Dropdown menu wrapper requires mouse events for hover behavior
             <div
               key={item.label}
               className="relative"
@@ -31,7 +32,7 @@ export function Navigation() {
                 <>
                   <button
                     type="button"
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 text-foreground text-sm font-medium transition-colors hover:bg-secondary"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-secondary"
                   >
                     {item.label}
                     <ChevronDown className="h-4 w-4" />
@@ -39,23 +40,31 @@ export function Navigation() {
 
                   {/* Dropdown Menu */}
                   {activeDropdown === item.label && (
-                    <div className="absolute left-0 top-full mt-1 min-w-[200px] rounded-lg border border-border bg-background py-2 shadow-lg">
-                      {item.items.map((subItem) => (
-                        <Link
-                          key={subItem.href}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-foreground text-sm transition-colors hover:bg-secondary"
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
-                    </div>
+                    <>
+                      {/* Invisible bridge to prevent dropdown from closing when mouse moves through gap */}
+                      <div className="absolute top-full left-0 h-4 w-full" />
+
+                      {/* Dropdown menu with visual spacing */}
+                      <div className="absolute top-[calc(100%+1rem)] left-0 min-w-[200px]">
+                        <div className="rounded-lg border border-border bg-background py-2 shadow-lg">
+                          {item.items.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              to={subItem.href}
+                              className="block px-4 py-2 text-foreground text-sm transition-colors hover:bg-secondary"
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </>
                   )}
                 </>
               ) : (
                 <Link
                   to={item.href}
-                  className="rounded-lg px-3 py-2 text-foreground text-sm font-medium transition-colors hover:bg-secondary"
+                  className="rounded-lg px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-secondary"
                 >
                   {item.label}
                 </Link>
@@ -108,7 +117,7 @@ export function Navigation() {
                           activeDropdown === item.label ? null : item.label,
                         )
                       }
-                      className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-foreground text-sm font-medium transition-colors hover:bg-secondary"
+                      className="flex w-full items-center justify-between rounded-lg px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-secondary"
                     >
                       {item.label}
                       <ChevronDown
@@ -118,7 +127,7 @@ export function Navigation() {
                       />
                     </button>
                     {activeDropdown === item.label && (
-                      <div className="ml-4 mt-1 flex flex-col gap-1">
+                      <div className="mt-1 ml-4 flex flex-col gap-1">
                         {item.items.map((subItem) => (
                           <Link
                             key={subItem.href}
@@ -136,7 +145,7 @@ export function Navigation() {
                   <Link
                     to={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block rounded-lg px-3 py-2 text-foreground text-sm font-medium transition-colors hover:bg-secondary"
+                    className="block rounded-lg px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-secondary"
                   >
                     {item.label}
                   </Link>

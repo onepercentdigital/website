@@ -18,6 +18,7 @@ export function SEO({ structuredData }: SEOProps) {
     <>
       {dataArray.map((data, index) => (
         <script
+          // biome-ignore lint/suspicious/noArrayIndexKey: Structured data order is static and doesn't change
           key={index}
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for JSON-LD structured data

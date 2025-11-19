@@ -38,11 +38,27 @@ export function ThemeToggle() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
+  // Listen for theme changes from other toggle instances
+  useEffect(() => {
+    const handleThemeChange = (e: Event) => {
+      const customEvent = e as CustomEvent<'light' | 'dark'>;
+      const newTheme = customEvent.detail;
+      setTheme(newTheme);
+      document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    };
+
+    window.addEventListener('themeChange', handleThemeChange);
+    return () => window.removeEventListener('themeChange', handleThemeChange);
+  }, []);
+
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
+
+    // Dispatch custom event to sync all theme toggle instances
+    window.dispatchEvent(new CustomEvent('themeChange', { detail: newTheme }));
   };
 
   // Prevent hydration mismatch

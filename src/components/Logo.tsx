@@ -26,51 +26,33 @@ export function Logo({
 
   return (
     <Link to="/" className={`flex items-center gap-3 ${className}`}>
-      {/* SVG Logo Icon */}
+      {/* Logo Icon */}
       <svg
         className={sizeClasses[size]}
-        viewBox="0 0 400 400"
+        viewBox="0 0 300 178"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        role="img"
         aria-label="One Percent logo"
       >
-        {/* Left rounded rectangle */}
-        <rect
-          x="14"
-          y="116"
-          width="138"
-          height="168"
-          rx="69"
+        <title>One Percent logo</title>
+        <path
+          d="M157.015 85.7143C180.684 85.7143 199.872 66.5265 199.872 42.8571C199.872 19.1878 180.684 0 157.015 0C133.346 0 114.158 19.1878 114.158 42.8571C114.158 66.5265 133.346 85.7143 157.015 85.7143Z"
           fill="currentColor"
           className="text-foreground"
         />
-
-        {/* Dot (circle) */}
-        <circle
-          cx="267"
-          cy="180"
-          r="63"
+        <path
+          d="M257.143 177.119C280.812 177.119 300 157.931 300 134.261C300 110.592 280.812 91.4043 257.143 91.4043C233.473 91.4043 214.286 110.592 214.286 134.261C214.286 157.931 233.473 177.119 257.143 177.119Z"
           fill="currentColor"
           className="text-foreground"
         />
-
-        {/* Slash */}
-        <rect
-          x="234.5"
-          y="96.5"
-          width="223"
-          height="78"
-          rx="39"
-          transform="rotate(45 234.5 96.5)"
+        <path
+          d="M85.7143 174.463H0V88.7485C0 41.3401 38.3059 3.03418 85.7143 3.03418V174.463Z"
           fill="currentColor"
           className="text-foreground"
         />
-
-        {/* Percentage sign dot (smaller circle) */}
-        <circle
-          cx="429"
-          cy="320"
-          r="54"
+        <path
+          d="M266.248 3.03418L137.677 174.463H148.296L276.868 3.03418H266.248Z"
           fill="currentColor"
           className="text-foreground"
         />

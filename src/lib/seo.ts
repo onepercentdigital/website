@@ -3,6 +3,7 @@ import { brand } from '@/config/brand';
 export interface SEOConfig {
   title?: string;
   description?: string;
+  url?: string;
   ogImage?: string;
   ogType?: 'website' | 'article';
   article?: {
@@ -43,12 +44,14 @@ export function generateMetaTags(config: SEOConfig) {
       { property: 'og:image', content: ogImage },
       { property: 'og:type', content: config.ogType || 'website' },
       { property: 'og:site_name', content: brand.displayName },
+      ...(config.url ? [{ property: 'og:url', content: config.url }] : []),
 
       // Twitter Card
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: ogImage },
+      ...(config.url ? [{ name: 'twitter:url', content: config.url }] : []),
       ...(brand.seo.twitterHandle
         ? [{ name: 'twitter:site', content: brand.seo.twitterHandle }]
         : []),
@@ -115,7 +118,7 @@ export interface StructuredDataConfig {
     | 'FAQPage'
     | 'Service'
     | 'WebPage';
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }
 
 export function generateStructuredData(config: StructuredDataConfig) {

@@ -37,14 +37,14 @@ export interface BrandConfig {
 }
 
 /**
- * Current Brand: One Percent SEO (transitioning to One Percent GEO)
+ * Current Brand: One Percent SEO
  */
 export const brand: BrandConfig = {
   name: 'onepercentseo',
   displayName: 'One Percent SEO',
-  tagline: 'Capture total mind share through AI and search optimization',
-  domain: 'onepercentgeo.com', // Future domain
-  appDomain: 'app.onepercentgeo.com',
+  tagline: 'Dominate Your Industry With AI and Search Optimization',
+  domain: 'onepercentseo.com',
+  appDomain: 'app.onepercentseo.com',
 
   logo: {
     text: 'One Percent SEO',
@@ -82,17 +82,17 @@ export const navigation = {
       label: 'Services',
       type: 'dropdown' as const,
       items: [
-        { label: 'GEO', href: '/services/geo' },
-        { label: 'SEO', href: '/services/seo' },
+        { label: 'GEO', href: '/geo' },
+        { label: 'SEO', href: '/seo' },
       ],
     },
     {
       label: 'Resources',
       type: 'dropdown' as const,
       items: [
-        { label: 'Customers', href: '/resources/customers' },
+        { label: 'Customers', href: '/customers' },
         { label: 'Blog', href: '/blog' },
-        { label: 'Case Studies', href: '/resources/case-studies' },
+        { label: 'Case Studies', href: '/case-studies' },
       ],
     },
     {
@@ -107,8 +107,8 @@ export const navigation = {
     },
   ],
   cta: {
-    label: 'Schedule a Call',
-    href: '/schedule',
+    label: 'Get Your Free AI Search Audit',
+    href: '/audit',
   },
 };
 
@@ -120,16 +120,16 @@ export const footer = {
     {
       title: 'Services',
       links: [
-        { label: 'GEO', href: '/services/geo' },
-        { label: 'SEO', href: '/services/seo' },
+        { label: 'GEO', href: '/geo' },
+        { label: 'SEO', href: '/seo' },
       ],
     },
     {
       title: 'Resources',
       links: [
-        { label: 'Customers', href: '/resources/customers' },
+        { label: 'Customers', href: '/customers' },
         { label: 'Blog', href: '/blog' },
-        { label: 'Case Studies', href: '/resources/case-studies' },
+        { label: 'Case Studies', href: '/case-studies' },
       ],
     },
     {
@@ -137,7 +137,7 @@ export const footer = {
       links: [
         { label: 'About', href: '/about' },
         { label: 'Enterprise', href: '/enterprise' },
-        { label: 'Contact', href: '/schedule' },
+        { label: 'Contact', href: '/audit' },
       ],
     },
     {
@@ -149,7 +149,7 @@ export const footer = {
     },
   ],
   cta: {
-    label: 'Schedule a Call',
-    href: '/schedule',
+    label: 'Get Your Free AI Search Audit',
+    href: '/audit',
   },
 };
