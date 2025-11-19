@@ -20,9 +20,9 @@ export const Route = createFileRoute('/')({
   component: HomePage,
   head: () =>
     generateMetaTags({
-      title: 'Dominate Your Industry With AI and Search Optimization',
+      title: 'Takeover Your Industry With AI and Search Optimization',
       description:
-        'Takeover Both AI and Traditional Search with proven GEO and SEO strategies.',
+        'Dominate Both AI and Traditional Search with proven GEO and SEO strategies.',
       url: 'https://onepercentseo.com/',
     }),
 });
@@ -39,19 +39,16 @@ function HomePage() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-secondary/20 px-6 py-20 lg:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--accent-color)_0%,_transparent_50%)] opacity-10" />
+      <section className="relative overflow-hidden bg-linear-to-b from-background via-background to-secondary/20 px-6 py-12 lg:py-16">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent-color)_0%,transparent_50%)] opacity-10" />
         <div className="relative mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-bold text-5xl leading-tight tracking-tight lg:text-7xl">
-              Dominate Your Industry With{' '}
-              <span className="bg-gradient-to-r from-accent to-accent/70 bg-clip-text text-transparent">
-                AI and Search Optimization
-              </span>
+              Dominate Both AI and Traditional Search
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed lg:text-2xl">
-              Helping companies become the top 1% talked about brands in AI and
-              traditional search through GEO and SEO optimization.
+              Your customers search on Google, ask ChatGPT, and use AI
+              Overviews. We ensure you show up with authority in all three.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -59,8 +56,8 @@ function HomePage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/schedule">
-                  Schedule a Call
+                <Link to="/audit">
+                  Get Your Free AI Search Audit
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -77,11 +74,12 @@ function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-4xl lg:text-5xl">
-              Takeover Both AI and Traditional Search
+              Rank in Google. Get Cited by ChatGPT. Own Your Market.
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Our comprehensive approach ensures your brand is discovered
-              everywhere your customers are looking.
+              From Google's first page to ChatGPT, Claude, and Perplexity, we
+              position your brand as the authoritative answer across every
+              search channel.
             </p>
           </div>
 
@@ -369,8 +367,8 @@ function HomePage() {
                 size="lg"
                 className="bg-white text-accent hover:bg-white/90"
               >
-                <Link to="/schedule">
-                  Schedule Your Free Consultation
+                <Link to="/audit">
+                  Get Your Free AI Search Audit
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

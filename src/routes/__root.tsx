@@ -80,6 +80,21 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        {/* Blocking script to prevent FOUC - runs before any rendering */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const storedTheme = localStorage.getItem('theme');
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const theme = storedTheme || systemTheme;
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
       </head>
       <body>
         <ClerkProvider>

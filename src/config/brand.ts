@@ -107,8 +107,8 @@ export const navigation = {
     },
   ],
   cta: {
-    label: 'Schedule a Call',
-    href: '/schedule',
+    label: 'Get Your Free AI Search Audit',
+    href: '/audit',
   },
 };
 
@@ -137,7 +137,7 @@ export const footer = {
       links: [
         { label: 'About', href: '/about' },
         { label: 'Enterprise', href: '/enterprise' },
-        { label: 'Contact', href: '/schedule' },
+        { label: 'Contact', href: '/audit' },
       ],
     },
     {
@@ -149,7 +149,7 @@ export const footer = {
     },
   ],
   cta: {
-    label: 'Schedule a Call',
-    href: '/schedule',
+    label: 'Get Your Free AI Search Audit',
+    href: '/audit',
   },
 };

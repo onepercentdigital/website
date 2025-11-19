@@ -11,11 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as SeoRouteImport } from './routes/seo'
-import { Route as ScheduleRouteImport } from './routes/schedule'
 import { Route as GeoRouteImport } from './routes/geo'
 import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as CustomersRouteImport } from './routes/customers'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
+import { Route as AuditRouteImport } from './routes/audit'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 
@@ -27,11 +27,6 @@ const SolutionsRoute = SolutionsRouteImport.update({
 const SeoRoute = SeoRouteImport.update({
   id: '/seo',
   path: '/seo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ScheduleRoute = ScheduleRouteImport.update({
-  id: '/schedule',
-  path: '/schedule',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GeoRoute = GeoRouteImport.update({
@@ -54,6 +49,11 @@ const CaseStudiesRoute = CaseStudiesRouteImport.update({
   path: '/case-studies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuditRoute = AuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -67,22 +67,22 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
-  '/schedule': typeof ScheduleRoute
   '/seo': typeof SeoRoute
   '/solutions': typeof SolutionsRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
-  '/schedule': typeof ScheduleRoute
   '/seo': typeof SeoRoute
   '/solutions': typeof SolutionsRoute
   '/blog': typeof BlogIndexRoute
@@ -90,11 +90,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
-  '/schedule': typeof ScheduleRoute
   '/seo': typeof SeoRoute
   '/solutions': typeof SolutionsRoute
   '/blog/': typeof BlogIndexRoute
@@ -103,33 +103,33 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/audit'
     | '/case-studies'
     | '/customers'
     | '/enterprise'
     | '/geo'
-    | '/schedule'
     | '/seo'
     | '/solutions'
     | '/blog'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/audit'
     | '/case-studies'
     | '/customers'
     | '/enterprise'
     | '/geo'
-    | '/schedule'
     | '/seo'
     | '/solutions'
     | '/blog'
   id:
     | '__root__'
     | '/'
+    | '/audit'
     | '/case-studies'
     | '/customers'
     | '/enterprise'
     | '/geo'
-    | '/schedule'
     | '/seo'
     | '/solutions'
     | '/blog/'
@@ -137,11 +137,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuditRoute: typeof AuditRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
   CustomersRoute: typeof CustomersRoute
   EnterpriseRoute: typeof EnterpriseRoute
   GeoRoute: typeof GeoRoute
-  ScheduleRoute: typeof ScheduleRoute
   SeoRoute: typeof SeoRoute
   SolutionsRoute: typeof SolutionsRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -161,13 +161,6 @@ declare module '@tanstack/react-router' {
       path: '/seo'
       fullPath: '/seo'
       preLoaderRoute: typeof SeoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/schedule': {
-      id: '/schedule'
-      path: '/schedule'
-      fullPath: '/schedule'
-      preLoaderRoute: typeof ScheduleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/geo': {
@@ -198,6 +191,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/audit': {
+      id: '/audit'
+      path: '/audit'
+      fullPath: '/audit'
+      preLoaderRoute: typeof AuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -217,11 +217,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuditRoute: AuditRoute,
   CaseStudiesRoute: CaseStudiesRoute,
   CustomersRoute: CustomersRoute,
   EnterpriseRoute: EnterpriseRoute,
   GeoRoute: GeoRoute,
-  ScheduleRoute: ScheduleRoute,
   SeoRoute: SeoRoute,
   SolutionsRoute: SolutionsRoute,
   BlogIndexRoute: BlogIndexRoute,
