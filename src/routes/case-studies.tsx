@@ -133,7 +133,7 @@ function CaseStudiesPage() {
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
                 {featuredStudy.title}
               </h2>
-              <p className="mx-auto max-w-2xl text-muted-foreground text-lg tracking-wide">
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground tracking-wide">
                 {featuredStudy.client} · {featuredStudy.industry}
               </p>
             </div>
@@ -143,7 +143,7 @@ function CaseStudiesPage() {
               <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {featuredStudy.metrics.map((metric, index) => (
                   <div key={index} className="text-center">
-                    <div className="mb-2 font-extrabold text-accent text-3xl tracking-tight lg:text-4xl">
+                    <div className="mb-2 font-extrabold text-3xl text-accent tracking-tight lg:text-4xl">
                       {metric.value}
                     </div>
                     <div className="mb-1 font-semibold text-foreground text-sm">
@@ -226,7 +226,7 @@ function CaseStudiesPage() {
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
               More Success Stories
             </h2>
-            <p className="mx-auto max-w-2xl text-muted-foreground text-lg tracking-wide">
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground tracking-wide">
               Every client brings unique challenges. Here's how we deliver
               consistent, measurable results across industries.
             </p>
@@ -325,15 +325,15 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
       </div>
 
       {/* Challenge Preview */}
-      <p className="mb-6 text-muted-foreground text-sm leading-relaxed tracking-wide line-clamp-3">
+      <p className="mb-6 line-clamp-3 text-muted-foreground text-sm leading-relaxed tracking-wide">
         {study.challenge}
       </p>
 
       {/* Testimonial or Learn More */}
       {study.testimonial ? (
         <div className="border-border border-t pt-4">
-          <div className="mb-2 text-xl text-accent">"</div>
-          <p className="mb-3 text-foreground text-sm leading-relaxed italic line-clamp-2">
+          <div className="mb-2 text-accent text-xl">"</div>
+          <p className="mb-3 line-clamp-2 text-foreground text-sm italic leading-relaxed">
             {study.testimonial.quote}
           </p>
           <div className="flex items-center gap-2">
@@ -351,10 +351,10 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
           </div>
         </div>
       ) : (
-        <div className="flex items-center gap-2 font-semibold text-accent text-sm group-hover:gap-3 transition-all">
+        <div className="flex items-center gap-2 font-semibold text-accent text-sm transition-all group-hover:gap-3">
           <BarChart3 className="h-4 w-4" />
           <span>Read Full Case Study</span>
-          <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <ArrowRight className="h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
         </div>
       )}
     </div>

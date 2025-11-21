@@ -69,27 +69,21 @@ function TestUpload() {
 
   return (
     <div className="mx-auto max-w-4xl px-6 py-20">
-      <h1 className="text-4xl font-bold mb-8">Cloudflare Images Test Upload</h1>
+      <h1 className="mb-8 font-bold text-4xl">Cloudflare Images Test Upload</h1>
 
       <div className="space-y-8">
         {/* Upload Section */}
         <div className="rounded-lg border border-border bg-card p-6">
-          <h2 className="text-2xl font-semibold mb-4">Upload Image</h2>
+          <h2 className="mb-4 font-semibold text-2xl">Upload Image</h2>
           <input
             type="file"
             accept="image/*"
             onChange={handleFileChange}
             disabled={uploading}
-            className="block w-full text-sm text-foreground
-              file:mr-4 file:py-2 file:px-4
-              file:rounded-lg file:border-0
-              file:text-sm file:font-semibold
-              file:bg-accent file:text-accent-foreground
-              hover:file:bg-accent/90
-              disabled:opacity-50 disabled:cursor-not-allowed"
+            className="block w-full text-foreground text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-accent file:px-4 file:py-2 file:font-semibold file:text-accent-foreground file:text-sm hover:file:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-50"
           />
           {uploading && (
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-muted-foreground text-sm">
               Uploading to Cloudflare...
             </p>
           )}
@@ -98,10 +92,10 @@ function TestUpload() {
         {/* Error Display */}
         {error && (
           <div className="rounded-lg border border-destructive bg-destructive/10 p-6">
-            <h3 className="text-lg font-semibold text-destructive mb-2">
+            <h3 className="mb-2 font-semibold text-destructive text-lg">
               Upload Error
             </h3>
-            <pre className="text-sm text-destructive/90 whitespace-pre-wrap">
+            <pre className="whitespace-pre-wrap text-destructive/90 text-sm">
               {error}
             </pre>
           </div>
@@ -111,20 +105,20 @@ function TestUpload() {
         {imageId && (
           <div className="space-y-6">
             <div className="rounded-lg border border-green-500 bg-green-500/10 p-6">
-              <h3 className="text-lg font-semibold text-green-600 dark:text-green-400 mb-2">
+              <h3 className="mb-2 font-semibold text-green-600 text-lg dark:text-green-400">
                 Upload Successful! ✅
               </h3>
-              <p className="text-sm font-mono text-foreground break-all">
+              <p className="break-all font-mono text-foreground text-sm">
                 Image ID: {imageId}
               </p>
             </div>
 
             {/* Variant Selector */}
             <div className="rounded-lg border border-border bg-card p-6">
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 className="mb-4 font-semibold text-xl">
                 Select Variant to Preview
               </h3>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex flex-wrap gap-2">
                 {(Object.keys(IMAGE_VARIANTS) as ImageVariant[]).map(
                   (variant) => (
                     <Button
@@ -144,14 +138,14 @@ function TestUpload() {
 
             {/* Image Preview */}
             <div className="rounded-lg border border-border bg-card p-6">
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 className="mb-4 font-semibold text-xl">
                 Preview: {selectedVariant} variant
               </h3>
               <div className="space-y-4">
                 <img
                   src={getImageUrl(imageId, selectedVariant)}
                   alt="Uploaded to Cloudflare Images"
-                  className="max-w-full h-auto rounded-lg border border-border"
+                  className="h-auto max-w-full rounded-lg border border-border"
                   onError={(e) => {
                     console.error(
                       'Image failed to load:',
@@ -166,9 +160,9 @@ function TestUpload() {
                     );
                   }}
                 />
-                <div className="text-sm text-muted-foreground">
-                  <p className="font-semibold mb-1">Image URL:</p>
-                  <code className="block p-2 bg-muted rounded text-xs break-all">
+                <div className="text-muted-foreground text-sm">
+                  <p className="mb-1 font-semibold">Image URL:</p>
+                  <code className="block break-all rounded bg-muted p-2 text-xs">
                     {getImageUrl(imageId, selectedVariant)}
                   </code>
                 </div>
@@ -177,7 +171,7 @@ function TestUpload() {
 
             {/* All Variants Preview */}
             <div className="rounded-lg border border-border bg-card p-6">
-              <h3 className="text-xl font-semibold mb-4">All Variants</h3>
+              <h3 className="mb-4 font-semibold text-xl">All Variants</h3>
               <div className="grid gap-6 md:grid-cols-2">
                 {(Object.keys(IMAGE_VARIANTS) as ImageVariant[]).map(
                   (variant) => (
@@ -188,9 +182,9 @@ function TestUpload() {
                       <img
                         src={getImageUrl(imageId, variant)}
                         alt={`${variant} variant`}
-                        className="w-full h-auto rounded border border-border"
+                        className="h-auto w-full rounded border border-border"
                       />
-                      <p className="text-xs text-muted-foreground font-mono break-all">
+                      <p className="break-all font-mono text-muted-foreground text-xs">
                         {getImageUrl(imageId, variant)}
                       </p>
                     </div>
