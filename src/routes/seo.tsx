@@ -256,9 +256,9 @@ function SEOPage() {
                 description:
                   'Outrank competitors for valuable keywords and capture market share. The top 3 results get 75% of all clicks.',
               },
-            ].map((benefit, index) => (
+            ].map((benefit) => (
               <div
-                key={index}
+                key={benefit.title}
                 className="rounded-2xl border border-border bg-card p-8"
               >
                 <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3">
@@ -355,9 +355,9 @@ function SEOPage() {
                   'Monthly strategy reviews',
                 ],
               },
-            ].map((service, index) => (
+            ].map((service) => (
               <div
-                key={index}
+                key={service.title}
                 className="rounded-2xl border border-border bg-card p-8"
               >
                 <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3">
@@ -367,8 +367,8 @@ function SEOPage() {
                   {service.title}
                 </h3>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
                       <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-accent" />
                       <span className="text-muted-foreground text-sm tracking-wide">
                         {feature}

@@ -107,7 +107,7 @@ export const customers: Customer[] = [
   },
   {
     id: 'afni',
-    name: 'AFNI',
+    name: 'Afni Careers',
     industry: 'services',
     logo: '/customer-logos/afni-careers.webp',
     testimonial: {

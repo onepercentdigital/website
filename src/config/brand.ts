@@ -98,7 +98,27 @@ export const navigation = {
     {
       label: 'Solutions',
       type: 'dropdown' as const,
-      items: [{ label: 'Coming Soon', href: '/solutions' }],
+      items: [
+        { label: 'Agriculture & Equipment', href: '/solutions/agriculture' },
+        { label: 'Automotive', href: '/solutions/automotive' },
+        {
+          label: 'Consulting & Coaching',
+          href: '/solutions/consulting-coaching',
+        },
+        {
+          label: 'Construction & Contractors',
+          href: '/solutions/construction',
+        },
+        { label: 'E-commerce & Retail', href: '/solutions/ecommerce' },
+        { label: 'Health & Wellness', href: '/solutions/health-wellness' },
+        { label: 'Hospitality & Restaurants', href: '/solutions/hospitality' },
+        { label: 'Logistics & Transportation', href: '/solutions/logistics' },
+        {
+          label: 'Manufacturing & Industrial',
+          href: '/solutions/manufacturing',
+        },
+        { label: 'Technology & SaaS', href: '/solutions/technology' },
+      ],
     },
     {
       label: 'Enterprise',

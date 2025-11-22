@@ -9,8 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TestUploadRouteImport } from './routes/test-upload'
-import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as SeoRouteImport } from './routes/seo'
 import { Route as GeoRouteImport } from './routes/geo'
 import { Route as EnterpriseRouteImport } from './routes/enterprise'
@@ -18,18 +16,19 @@ import { Route as CustomersRouteImport } from './routes/customers'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as AuditRouteImport } from './routes/audit'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as SolutionsTechnologyRouteImport } from './routes/solutions.technology'
+import { Route as SolutionsManufacturingRouteImport } from './routes/solutions.manufacturing'
+import { Route as SolutionsLogisticsRouteImport } from './routes/solutions.logistics'
+import { Route as SolutionsHospitalityRouteImport } from './routes/solutions.hospitality'
+import { Route as SolutionsHealthWellnessRouteImport } from './routes/solutions.health-wellness'
+import { Route as SolutionsEcommerceRouteImport } from './routes/solutions.ecommerce'
+import { Route as SolutionsConsultingCoachingRouteImport } from './routes/solutions.consulting-coaching'
+import { Route as SolutionsConstructionRouteImport } from './routes/solutions.construction'
+import { Route as SolutionsAutomotiveRouteImport } from './routes/solutions.automotive'
+import { Route as SolutionsAgricultureRouteImport } from './routes/solutions.agriculture'
 
-const TestUploadRoute = TestUploadRouteImport.update({
-  id: '/test-upload',
-  path: '/test-upload',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SolutionsRoute = SolutionsRouteImport.update({
-  id: '/solutions',
-  path: '/solutions',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SeoRoute = SeoRouteImport.update({
   id: '/seo',
   path: '/seo',
@@ -65,9 +64,65 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
+  id: '/solutions/',
+  path: '/solutions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsTechnologyRoute = SolutionsTechnologyRouteImport.update({
+  id: '/solutions/technology',
+  path: '/solutions/technology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsManufacturingRoute = SolutionsManufacturingRouteImport.update({
+  id: '/solutions/manufacturing',
+  path: '/solutions/manufacturing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsLogisticsRoute = SolutionsLogisticsRouteImport.update({
+  id: '/solutions/logistics',
+  path: '/solutions/logistics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsHospitalityRoute = SolutionsHospitalityRouteImport.update({
+  id: '/solutions/hospitality',
+  path: '/solutions/hospitality',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsHealthWellnessRoute = SolutionsHealthWellnessRouteImport.update({
+  id: '/solutions/health-wellness',
+  path: '/solutions/health-wellness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsEcommerceRoute = SolutionsEcommerceRouteImport.update({
+  id: '/solutions/ecommerce',
+  path: '/solutions/ecommerce',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsConsultingCoachingRoute =
+  SolutionsConsultingCoachingRouteImport.update({
+    id: '/solutions/consulting-coaching',
+    path: '/solutions/consulting-coaching',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolutionsConstructionRoute = SolutionsConstructionRouteImport.update({
+  id: '/solutions/construction',
+  path: '/solutions/construction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsAutomotiveRoute = SolutionsAutomotiveRouteImport.update({
+  id: '/solutions/automotive',
+  path: '/solutions/automotive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsAgricultureRoute = SolutionsAgricultureRouteImport.update({
+  id: '/solutions/agriculture',
+  path: '/solutions/agriculture',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -79,9 +134,18 @@ export interface FileRoutesByFullPath {
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
   '/seo': typeof SeoRoute
-  '/solutions': typeof SolutionsRoute
-  '/test-upload': typeof TestUploadRoute
+  '/solutions/agriculture': typeof SolutionsAgricultureRoute
+  '/solutions/automotive': typeof SolutionsAutomotiveRoute
+  '/solutions/construction': typeof SolutionsConstructionRoute
+  '/solutions/consulting-coaching': typeof SolutionsConsultingCoachingRoute
+  '/solutions/ecommerce': typeof SolutionsEcommerceRoute
+  '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
+  '/solutions/hospitality': typeof SolutionsHospitalityRoute
+  '/solutions/logistics': typeof SolutionsLogisticsRoute
+  '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/technology': typeof SolutionsTechnologyRoute
   '/blog': typeof BlogIndexRoute
+  '/solutions': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -91,9 +155,18 @@ export interface FileRoutesByTo {
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
   '/seo': typeof SeoRoute
-  '/solutions': typeof SolutionsRoute
-  '/test-upload': typeof TestUploadRoute
+  '/solutions/agriculture': typeof SolutionsAgricultureRoute
+  '/solutions/automotive': typeof SolutionsAutomotiveRoute
+  '/solutions/construction': typeof SolutionsConstructionRoute
+  '/solutions/consulting-coaching': typeof SolutionsConsultingCoachingRoute
+  '/solutions/ecommerce': typeof SolutionsEcommerceRoute
+  '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
+  '/solutions/hospitality': typeof SolutionsHospitalityRoute
+  '/solutions/logistics': typeof SolutionsLogisticsRoute
+  '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/technology': typeof SolutionsTechnologyRoute
   '/blog': typeof BlogIndexRoute
+  '/solutions': typeof SolutionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -104,9 +177,18 @@ export interface FileRoutesById {
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
   '/seo': typeof SeoRoute
-  '/solutions': typeof SolutionsRoute
-  '/test-upload': typeof TestUploadRoute
+  '/solutions/agriculture': typeof SolutionsAgricultureRoute
+  '/solutions/automotive': typeof SolutionsAutomotiveRoute
+  '/solutions/construction': typeof SolutionsConstructionRoute
+  '/solutions/consulting-coaching': typeof SolutionsConsultingCoachingRoute
+  '/solutions/ecommerce': typeof SolutionsEcommerceRoute
+  '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
+  '/solutions/hospitality': typeof SolutionsHospitalityRoute
+  '/solutions/logistics': typeof SolutionsLogisticsRoute
+  '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/technology': typeof SolutionsTechnologyRoute
   '/blog/': typeof BlogIndexRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -118,9 +200,18 @@ export interface FileRouteTypes {
     | '/enterprise'
     | '/geo'
     | '/seo'
-    | '/solutions'
-    | '/test-upload'
+    | '/solutions/agriculture'
+    | '/solutions/automotive'
+    | '/solutions/construction'
+    | '/solutions/consulting-coaching'
+    | '/solutions/ecommerce'
+    | '/solutions/health-wellness'
+    | '/solutions/hospitality'
+    | '/solutions/logistics'
+    | '/solutions/manufacturing'
+    | '/solutions/technology'
     | '/blog'
+    | '/solutions'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -130,9 +221,18 @@ export interface FileRouteTypes {
     | '/enterprise'
     | '/geo'
     | '/seo'
-    | '/solutions'
-    | '/test-upload'
+    | '/solutions/agriculture'
+    | '/solutions/automotive'
+    | '/solutions/construction'
+    | '/solutions/consulting-coaching'
+    | '/solutions/ecommerce'
+    | '/solutions/health-wellness'
+    | '/solutions/hospitality'
+    | '/solutions/logistics'
+    | '/solutions/manufacturing'
+    | '/solutions/technology'
     | '/blog'
+    | '/solutions'
   id:
     | '__root__'
     | '/'
@@ -142,9 +242,18 @@ export interface FileRouteTypes {
     | '/enterprise'
     | '/geo'
     | '/seo'
-    | '/solutions'
-    | '/test-upload'
+    | '/solutions/agriculture'
+    | '/solutions/automotive'
+    | '/solutions/construction'
+    | '/solutions/consulting-coaching'
+    | '/solutions/ecommerce'
+    | '/solutions/health-wellness'
+    | '/solutions/hospitality'
+    | '/solutions/logistics'
+    | '/solutions/manufacturing'
+    | '/solutions/technology'
     | '/blog/'
+    | '/solutions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -155,27 +264,22 @@ export interface RootRouteChildren {
   EnterpriseRoute: typeof EnterpriseRoute
   GeoRoute: typeof GeoRoute
   SeoRoute: typeof SeoRoute
-  SolutionsRoute: typeof SolutionsRoute
-  TestUploadRoute: typeof TestUploadRoute
+  SolutionsAgricultureRoute: typeof SolutionsAgricultureRoute
+  SolutionsAutomotiveRoute: typeof SolutionsAutomotiveRoute
+  SolutionsConstructionRoute: typeof SolutionsConstructionRoute
+  SolutionsConsultingCoachingRoute: typeof SolutionsConsultingCoachingRoute
+  SolutionsEcommerceRoute: typeof SolutionsEcommerceRoute
+  SolutionsHealthWellnessRoute: typeof SolutionsHealthWellnessRoute
+  SolutionsHospitalityRoute: typeof SolutionsHospitalityRoute
+  SolutionsLogisticsRoute: typeof SolutionsLogisticsRoute
+  SolutionsManufacturingRoute: typeof SolutionsManufacturingRoute
+  SolutionsTechnologyRoute: typeof SolutionsTechnologyRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  SolutionsIndexRoute: typeof SolutionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/test-upload': {
-      id: '/test-upload'
-      path: '/test-upload'
-      fullPath: '/test-upload'
-      preLoaderRoute: typeof TestUploadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/solutions': {
-      id: '/solutions'
-      path: '/solutions'
-      fullPath: '/solutions'
-      preLoaderRoute: typeof SolutionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/seo': {
       id: '/seo'
       path: '/seo'
@@ -225,11 +329,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/': {
+      id: '/solutions/'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/technology': {
+      id: '/solutions/technology'
+      path: '/solutions/technology'
+      fullPath: '/solutions/technology'
+      preLoaderRoute: typeof SolutionsTechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/manufacturing': {
+      id: '/solutions/manufacturing'
+      path: '/solutions/manufacturing'
+      fullPath: '/solutions/manufacturing'
+      preLoaderRoute: typeof SolutionsManufacturingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/logistics': {
+      id: '/solutions/logistics'
+      path: '/solutions/logistics'
+      fullPath: '/solutions/logistics'
+      preLoaderRoute: typeof SolutionsLogisticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/hospitality': {
+      id: '/solutions/hospitality'
+      path: '/solutions/hospitality'
+      fullPath: '/solutions/hospitality'
+      preLoaderRoute: typeof SolutionsHospitalityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/health-wellness': {
+      id: '/solutions/health-wellness'
+      path: '/solutions/health-wellness'
+      fullPath: '/solutions/health-wellness'
+      preLoaderRoute: typeof SolutionsHealthWellnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/ecommerce': {
+      id: '/solutions/ecommerce'
+      path: '/solutions/ecommerce'
+      fullPath: '/solutions/ecommerce'
+      preLoaderRoute: typeof SolutionsEcommerceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/consulting-coaching': {
+      id: '/solutions/consulting-coaching'
+      path: '/solutions/consulting-coaching'
+      fullPath: '/solutions/consulting-coaching'
+      preLoaderRoute: typeof SolutionsConsultingCoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/construction': {
+      id: '/solutions/construction'
+      path: '/solutions/construction'
+      fullPath: '/solutions/construction'
+      preLoaderRoute: typeof SolutionsConstructionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/automotive': {
+      id: '/solutions/automotive'
+      path: '/solutions/automotive'
+      fullPath: '/solutions/automotive'
+      preLoaderRoute: typeof SolutionsAutomotiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/agriculture': {
+      id: '/solutions/agriculture'
+      path: '/solutions/agriculture'
+      fullPath: '/solutions/agriculture'
+      preLoaderRoute: typeof SolutionsAgricultureRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -243,9 +424,18 @@ const rootRouteChildren: RootRouteChildren = {
   EnterpriseRoute: EnterpriseRoute,
   GeoRoute: GeoRoute,
   SeoRoute: SeoRoute,
-  SolutionsRoute: SolutionsRoute,
-  TestUploadRoute: TestUploadRoute,
+  SolutionsAgricultureRoute: SolutionsAgricultureRoute,
+  SolutionsAutomotiveRoute: SolutionsAutomotiveRoute,
+  SolutionsConstructionRoute: SolutionsConstructionRoute,
+  SolutionsConsultingCoachingRoute: SolutionsConsultingCoachingRoute,
+  SolutionsEcommerceRoute: SolutionsEcommerceRoute,
+  SolutionsHealthWellnessRoute: SolutionsHealthWellnessRoute,
+  SolutionsHospitalityRoute: SolutionsHospitalityRoute,
+  SolutionsLogisticsRoute: SolutionsLogisticsRoute,
+  SolutionsManufacturingRoute: SolutionsManufacturingRoute,
+  SolutionsTechnologyRoute: SolutionsTechnologyRoute,
   BlogIndexRoute: BlogIndexRoute,
+  SolutionsIndexRoute: SolutionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

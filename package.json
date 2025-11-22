@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "NODE_OPTIONS='--import ./instrument.server.mjs' vite dev --port 3000",
-    "build": "vite build && cp instrument.server.mjs dist/server && tsc --noEmit",
+    "build": "bun run scripts/generate-sitemap.ts && vite build && cp instrument.server.mjs dist/server && tsc --noEmit",
     "serve": "vite preview",
     "test": "vitest run",
     "format": "biome format --write",

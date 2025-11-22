@@ -141,8 +141,8 @@ function CaseStudiesPage() {
             <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm lg:p-12">
               {/* Metrics Grid */}
               <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                {featuredStudy.metrics.map((metric, index) => (
-                  <div key={index} className="text-center">
+                {featuredStudy.metrics.map((metric) => (
+                  <div key={metric.label} className="text-center">
                     <div className="mb-2 font-extrabold text-3xl text-accent tracking-tight lg:text-4xl">
                       {metric.value}
                     </div>
@@ -158,9 +158,9 @@ function CaseStudiesPage() {
 
               {/* Services Used */}
               <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
-                {featuredStudy.services.map((service, index) => (
+                {featuredStudy.services.map((service) => (
                   <span
-                    key={index}
+                    key={service}
                     className="rounded-full bg-accent/10 px-3 py-1 font-medium text-accent text-xs uppercase tracking-wider"
                   >
                     {service}
@@ -298,7 +298,7 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
       <div className="mb-4 flex flex-wrap gap-1">
         {study.services.map((service, index) => (
           <span
-            key={index}
+            key={service}
             className="text-muted-foreground text-xs tracking-wide"
           >
             {service}
@@ -309,8 +309,8 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
 
       {/* Key Metrics (First 3) */}
       <div className="mb-6 flex-1 space-y-3">
-        {study.metrics.slice(0, 3).map((metric, index) => (
-          <div key={index} className="flex items-start gap-2">
+        {study.metrics.slice(0, 3).map((metric) => (
+          <div key={metric.label} className="flex items-start gap-2">
             <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-accent" />
             <div>
               <div className="font-semibold text-foreground text-sm">
