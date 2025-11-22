@@ -97,10 +97,10 @@ seo-website/
 │   │   ├── geo.tsx         # GEO service page ✅ COMPLETE
 │   │   ├── customers.tsx   # Customer showcase ✅ COMPLETE
 │   │   ├── case-studies.tsx # Case studies page ✅ COMPLETE
-│   │   ├── audit.tsx       # Free AI Search Audit booking (Calendly placeholder)
+│   │   ├── audit.tsx       # Free AI Search Audit with Calendly ✅ COMPLETE
+│   │   ├── blog.index.tsx  # Blog visual skeleton 🎨 SKELETON
 │   │   ├── enterprise.tsx  # Enterprise solutions page (placeholder)
-│   │   ├── solutions.tsx   # Solutions landing (placeholder)
-│   │   └── blog.index.tsx  # Blog listing (to be implemented)
+│   │   └── solutions.tsx   # Solutions landing (placeholder)
 │   │
 │   ├── config/             # Configuration files
 │   │   └── brand.ts        # Brand config (name, colors, nav, footer, SEO)
@@ -110,7 +110,8 @@ seo-website/
 │   │   └── utils.ts        # Shared utilities (cn, etc.)
 │   │
 │   ├── data/               # Data files and content
-│   │   └── customers.ts    # Customer data with TypeScript interfaces
+│   │   ├── customers.ts    # Customer data with TypeScript interfaces
+│   │   └── case-studies.ts # Case study data with TypeScript interfaces
 │   │
 │   ├── integrations/       # Third-party service wrappers
 │   │   ├── clerk/          # Authentication provider
@@ -239,13 +240,15 @@ Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, b
 - `/seo` - SEO service page with 7 comprehensive sections and FAQ
 - `/customers` - Customer showcase with 10 client logos, testimonials, and industry breakdown
 - `/case-studies` - Case studies page with 5 detailed case studies, featured study, aggregate stats
+- `/audit` - Free AI Search Audit with Calendly embed (above-fold booking, 30-min sessions)
 - `404` - Branded NotFound component with quick links
 
+**🎨 Visual Skeleton** (Styled placeholder showing final design):
+- `/blog` - Blog index skeleton with 6 placeholder posts, category filters, realistic layout
+
 **⚠️ Placeholder Routes** (Basic structure, needs content):
-- `/audit` - Free AI Search Audit booking (needs Calendly embed)
 - `/solutions` - Solutions landing (needs content strategy)
 - `/enterprise` - Enterprise solutions (needs enterprise-specific content)
-- `/blog` - Blog index (needs blog CMS implementation)
 
 ### 🚧 To Be Implemented
 
@@ -1075,9 +1078,9 @@ Built a production-ready customers page with easy-to-update data structure:
 
 ## Project Status
 
-- **Phase**: Case studies page complete - blog CMS implementation next
-- **Current State**: Production-ready marketing site with 6 complete pages + image infrastructure
-- **Deployment Ready**: Homepage, GEO page, SEO page, Customers page, Case Studies page, and 404 page can be deployed immediately
+- **Phase**: Marketing pages complete - blog CMS implementation next
+- **Current State**: Production-ready marketing site with 8 complete pages + 1 visual skeleton + image infrastructure
+- **Deployment Ready**: Homepage, GEO, SEO, Customers, Case Studies, Audit (Calendly), Blog Skeleton, and 404 can be deployed immediately
 - **Font System**: ✅ Plus Jakarta Sans Variable fully implemented (weights 200-800)
 - **Typography**: ✅ Extreme scale with balanced readability across all pages
 - **Homepage**: ✅ Fully implemented with 6 sections, SEO, and dramatic typography
@@ -1085,6 +1088,8 @@ Built a production-ready customers page with easy-to-update data structure:
 - **SEO Service Page**: ✅ Fully implemented with 7 sections and FAQ accordion
 - **Customers Page**: ✅ Fully implemented with 7 sections, 10 client logos, data-driven
 - **Case Studies Page**: ✅ Fully implemented with 5 case studies, featured study, aggregate stats, data-driven
+- **Audit Page**: ✅ Fully implemented with Calendly embed, above-fold booking, 30-min sessions, 6 sections
+- **Blog Skeleton**: ✅ Visual mockup with 6 placeholder posts, category filters, realistic design
 - **Navigation**: ✅ Complete with dropdowns (no gaps) and theme sync
 - **Footer**: ✅ Multi-column with synchronized theme toggle
 - **404 Page**: ✅ Branded NotFound component with quick links
@@ -1092,11 +1097,11 @@ Built a production-ready customers page with easy-to-update data structure:
 - **Cloudflare Images**: ✅ **COMPLETE** - Upload/delivery working, all variants configured
 - **Blog Backend**: ✅ Schema ready in Convex, ⏳ Queries/mutations needed
 - **Blog Frontend**: 🚧 To be implemented (Phase 1 priority)
-- **Content Pages**: 🚧 Placeholders need content (enterprise, solutions, audit)
+- **Content Pages**: 🚧 Placeholders need content (enterprise, solutions)
 - **SEO/Performance**: 🚧 Sitemap and analytics needed (Phase 3)
 - **WordPress Migration**: 🚧 Import script needed (Phase 4)
 - **Ready for**: Blog CMS implementation - start with Phase 1.1 (Convex queries/mutations)
-- **Stats**: 6 production-ready pages, 1 test route, 4 placeholder pages, 0 technical debt
+- **Stats**: 8 production-ready pages, 1 visual skeleton, 1 test route, 2 placeholder pages, 0 technical debt
 
 ### 📍 Current Session End Point (2025-11-20)
 
@@ -1635,5 +1640,118 @@ Created temporary test route at `/test-upload` to verify:
 
 ---
 
-*Last Updated: 2025-11-21*
+## Recent Updates (2025-11-22)
+
+### Session: Blog Skeleton, Audit Page, and Documentation Updates
+
+#### Blog Visual Skeleton - COMPLETED ✅
+
+**Status:** Styled placeholder showing final design (2025-11-22)
+
+##### What Was Implemented
+
+**Complete Visual Mockup** - Updated `src/routes/blog.index.tsx`:
+- **Hero Section**: "Latest Insights" with toned-down typography (`text-4xl lg:text-5xl`)
+- **Category Filter Tabs**: 5 non-functional tabs (All Posts, SEO, GEO, Case Studies, Industry News)
+- **Blog Post Grid**: 6 placeholder posts in responsive 3-column grid
+- **Placeholder Content**: Realistic titles, excerpts, dates, read times
+- **Coming Soon Notice**: Clear section explaining this is a visual skeleton
+- **Typography**: Follows CLAUDE.md blog guidelines exactly (toned down from extreme)
+
+##### Each Placeholder Post Includes:
+- Placeholder image (gray with document icon)
+- Category badge (SEO, GEO, Case Study)
+- Post title and 2-3 sentence excerpt
+- Metadata: Date, read time (5-12 min), author
+- Hover effects with accent border
+
+##### Design Purpose:
+- Shows site reviewers exactly what blog will look like
+- Production-ready styling that accepts real data later
+- Non-functional but professional appearance
+- Maintains Vercel-inspired design consistency
+
+---
+
+#### Audit Page with Calendly - COMPLETED ✅
+
+**Status:** Fully functional, conversion-optimized (2025-11-22)
+
+##### What Was Implemented
+
+**Above-the-Fold Booking** - Complete redesign of `src/routes/audit.tsx`:
+
+**1. Two-Column Hero Layout (Desktop)**
+- Left: Hero content with 5 inline benefits
+- Right: Calendly widget (sticky on scroll)
+- Mobile: Stacks vertically (hero → widget)
+
+**2. Calendly Integration**
+- React `useEffect` for script loading
+- Proper cleanup on unmount
+- Height: 700px (optimized for above-fold fit)
+- Brand colors configured: `#00cccc` primary, `#121212` text
+- URL: `https://calendly.com/onepercentseo/marketing-strategy-session`
+
+**3. Six Sections**
+- Hero with Calendly (above-fold)
+- What to Expect (4-step process)
+- Social Proof (95% retention, $200M+ revenue, 300%+ growth)
+- FAQ (3 questions matching SEO/GEO page styling)
+
+**4. Key Updates**
+- ✅ Session duration: 30 minutes (not 45)
+- ✅ FAQ styling fixed: Removed card containers to match other pages
+- ✅ Benefits condensed to inline format (icon + text)
+- ✅ Conversion-focused layout
+
+##### Conversion Optimization:
+- Booking form visible immediately on desktop
+- Sticky positioning keeps Calendly accessible
+- Clear value proposition before commitment
+- 5 inline benefits for quick scanning
+
+---
+
+#### Design System Clarifications
+
+**Typography Guideline Added:**
+- Explicitly documented: "Single-color headlines only - NO two-tone coloring with accent spans"
+- Removed `<span className="text-accent">` from case studies page headings
+- Maintains clean Vercel-inspired aesthetic
+
+**FAQ Styling Pattern:**
+- Confirmed standard: Clean accordion without card containers
+- Matches SEO/GEO service pages exactly
+- Simple `AccordionItem` with no extra styling
+- Bottom border issue resolved by removing card wrappers
+
+---
+
+##### Files Modified
+
+- ✅ `src/routes/blog.index.tsx` - Complete visual skeleton (from minimal placeholder)
+- ✅ `src/routes/audit.tsx` - Production-ready with Calendly integration
+- ✅ `src/routes/case-studies.tsx` - Removed two-tone headings
+- ✅ `CLAUDE.md` - Updated all stats, route statuses, design guidelines
+- ✅ `README.md` - Updated to reflect current state
+
+##### Project Status Update
+
+**Production-Ready Pages: 8** (was 6)
+- Homepage, GEO, SEO, Customers, Case Studies, Audit, Blog Skeleton, 404
+
+**Visual Skeletons: 1**
+- Blog index (showing final design, awaiting CMS implementation)
+
+**Placeholder Pages: 2** (was 5)
+- Enterprise, Solutions only
+
+**Next Priority:**
+- Blog CMS implementation (Convex queries/mutations + admin routes)
+- Fill remaining placeholders (enterprise, solutions) - optional
+
+---
+
+*Last Updated: 2025-11-22*
 *Maintained for: AI-assisted development with Claude and other AI tools*

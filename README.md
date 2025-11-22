@@ -5,7 +5,7 @@ Modern, high-performance marketing website built with TanStack Start for One Per
 ## 🚀 Overview
 
 Full-stack TypeScript marketing website featuring:
-- **Production-ready pages**: Homepage, GEO service page, SEO service page, and branded 404
+- **Production-ready pages**: Homepage, GEO, SEO, Customers, Case Studies, Audit (Calendly), Blog Skeleton, and branded 404
 - **Server-side rendering (SSR)** for optimal SEO/GEO performance
 - **Extreme typography scale** with Plus Jakarta Sans Variable font
 - **Real-time blog CMS** powered by Convex (to be implemented)
@@ -127,11 +127,11 @@ seo-website/
 │   │   ├── seo.tsx         # SEO service page ✅ COMPLETE
 │   │   ├── geo.tsx         # GEO service page ✅ COMPLETE
 │   │   ├── customers.tsx   # Customer showcase ✅ COMPLETE
-│   │   ├── audit.tsx       # Free AI Search Audit (placeholder)
-│   │   ├── case-studies.tsx # Case studies (placeholder)
+│   │   ├── case-studies.tsx # Case studies page ✅ COMPLETE
+│   │   ├── audit.tsx       # Free AI Search Audit with Calendly ✅ COMPLETE
+│   │   ├── blog.index.tsx  # Blog visual skeleton 🎨 SKELETON
 │   │   ├── enterprise.tsx  # Enterprise solutions (placeholder)
-│   │   ├── solutions.tsx   # Solutions landing (placeholder)
-│   │   └── blog.index.tsx  # Blog index (to be implemented)
+│   │   └── solutions.tsx   # Solutions landing (placeholder)
 │   │
 │   ├── config/
 │   │   └── brand.ts        # Centralized brand configuration
@@ -141,7 +141,8 @@ seo-website/
 │   │   └── utils.ts        # Shared utility functions
 │   │
 │   ├── data/               # Data files and content
-│   │   └── customers.ts    # Customer data with TypeScript interfaces
+│   │   ├── customers.ts    # Customer data with TypeScript interfaces
+│   │   └── case-studies.ts # Case study data with TypeScript interfaces
 │   │
 │   ├── integrations/       # Third-party service wrappers
 │   │   ├── clerk/          # Authentication provider
@@ -263,14 +264,16 @@ This project uses **flat URLs** for better UX, SEO, and AI citations:
 - `/seo` - SEO service page (7 sections with FAQ accordion)
 - `/geo` - GEO service page (7 sections with FAQ accordion)
 - `/customers` - Customer showcase (10 client logos, testimonials, industry breakdown)
+- `/case-studies` - Case studies page (5 detailed case studies, featured study, aggregate stats)
+- `/audit` - Free AI Search Audit with Calendly (above-fold booking, 30-min sessions)
 - `404` - Branded NotFound component with quick links
 
+**🎨 Visual Skeleton:**
+- `/blog` - Blog index skeleton (6 placeholder posts, category filters, realistic design)
+
 **⚠️ Placeholder Pages (Need Content):**
-- `/audit` - Free AI Search Audit booking (needs Calendly integration)
-- `/case-studies` - Case studies
 - `/enterprise` - Enterprise solutions
 - `/solutions` - Solutions landing
-- `/blog` - Blog index (needs CMS implementation)
 
 **Note:** Services, Resources, and Solutions are visual navigation categories only. They don't appear in URLs.
 
@@ -323,6 +326,9 @@ See **[CLAUDE.md](./CLAUDE.md)**
 - ✅ SEO service page (7 sections + FAQ)
 - ✅ GEO service page (7 sections + FAQ)
 - ✅ Customers page (10 client logos + testimonials)
+- ✅ Case studies page (5 case studies + featured layout)
+- ✅ Audit page with Calendly (above-fold booking, conversion-optimized)
+- ✅ Blog visual skeleton (styled placeholder for reviewers)
 - ✅ Branded 404 page
 - ✅ Navigation with dropdowns and theme toggle
 - ✅ **Cloudflare Images integration** (upload, delivery, 5 variants configured)
@@ -331,7 +337,7 @@ See **[CLAUDE.md](./CLAUDE.md)**
 - 🚧 Blog CMS (Convex queries/mutations next)
 - 🚧 Admin routes for blog management
 - 🚧 Blog editor with markdown preview
-- 🚧 Public blog routes (/blog, /blog/[slug])
+- 🚧 Public blog routes (/blog/[slug])
 - 🚧 WordPress migration script
 
 **Next Steps:**

@@ -329,6 +329,8 @@ function AuditPage() {
 /**
  * Calendly Embed Component
  * Loads the Calendly widget script and renders the inline booking widget
+ * Note: Calendly inline widgets don't support custom background colors,
+ * so we use CSS invert filter in dark mode to make the white background dark
  */
 function CalendlyEmbed() {
   useEffect(() => {
@@ -347,10 +349,12 @@ function CalendlyEmbed() {
   }, []);
 
   return (
-    <div
-      className="calendly-inline-widget rounded-2xl"
-      data-url="https://calendly.com/onepercentseo/marketing-strategy-session?hide_gdpr_banner=1&text_color=121212&primary_color=00cccc"
-      style={{ minWidth: '320px', height: '700px' }}
-    />
+    <div className="overflow-hidden rounded-2xl border border-border shadow-lg dark:shadow-accent/5 dark:[&_.calendly-inline-widget]:hue-rotate-180 dark:[&_.calendly-inline-widget]:invert">
+      <div
+        className="calendly-inline-widget"
+        data-url="https://calendly.com/onepercentseo/marketing-strategy-session?hide_gdpr_banner=1&text_color=121212&primary_color=00cccc"
+        style={{ minWidth: '320px', height: '700px' }}
+      />
+    </div>
   );
 }
