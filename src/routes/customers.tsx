@@ -19,6 +19,7 @@ import {
   getCustomersWithTestimonials,
   getFeaturedCustomer,
 } from '@/data/customers';
+import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/customers')({
@@ -151,7 +152,7 @@ function CustomersPage() {
               >
                 {customer.logo ? (
                   <img
-                    src={customer.logo}
+                    src={getImageUrl(customer.logo, 'thumbnail')}
                     alt={customer.name}
                     className="h-auto w-full max-w-[120px] object-contain dark:invert"
                   />

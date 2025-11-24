@@ -1,0 +1,68 @@
+{
+  "migratedAt": "2025-11-24T22:45:47.226Z",
+  "totalFiles": 10,
+  "successfulUploads": 10,
+  "failedUploads": 0,
+  "mappings": [
+    {
+      "filename": "revology-cars.webp",
+      "customerName": "Revology Cars",
+      "imageId": "7ab278bc-37c8-4d7e-21ee-ba2d463fa200",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/7ab278bc-37c8-4d7e-21ee-ba2d463fa200/thumbnail"
+    },
+    {
+      "filename": "afni-careers.webp",
+      "customerName": "Afni Careers",
+      "imageId": "5149085e-50ad-45b9-c670-9f0cc73c7800",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/5149085e-50ad-45b9-c670-9f0cc73c7800/thumbnail"
+    },
+    {
+      "filename": "grove-bay-hospitality-group.webp",
+      "customerName": "Grove Bay Hospitality Group",
+      "imageId": "9e0346f0-bc70-4d85-b6dc-c8400746ce00",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/9e0346f0-bc70-4d85-b6dc-c8400746ce00/thumbnail"
+    },
+    {
+      "filename": "sorting-robotics.webp",
+      "customerName": "Sorting Robotics",
+      "imageId": "f002aaf8-4eb2-44f9-5657-5eff64cf8500",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/f002aaf8-4eb2-44f9-5657-5eff64cf8500/thumbnail"
+    },
+    {
+      "filename": "modern-house-numbers.webp",
+      "customerName": "Modern House Numbers",
+      "imageId": "b1f89b63-89bd-4d15-adee-bcd4bb958c00",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/b1f89b63-89bd-4d15-adee-bcd4bb958c00/thumbnail"
+    },
+    {
+      "filename": "goldfarb-and-associates.webp",
+      "customerName": "Goldfarb & Associates",
+      "imageId": "51e5ac33-a0d2-4cdb-668e-581cba411a00",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/51e5ac33-a0d2-4cdb-668e-581cba411a00/thumbnail"
+    },
+    {
+      "filename": "service-allies.webp",
+      "customerName": "Service Allies",
+      "imageId": "20119f59-be9a-4233-101c-02bf4639cf00",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/20119f59-be9a-4233-101c-02bf4639cf00/thumbnail"
+    },
+    {
+      "filename": "stubborn-seed.webp",
+      "customerName": "Stubborn Seed",
+      "imageId": "c98add49-898a-4f13-b6b1-563939a50d00",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/c98add49-898a-4f13-b6b1-563939a50d00/thumbnail"
+    },
+    {
+      "filename": "h-and-r-agri-power.webp",
+      "customerName": "H&R Agri-Power",
+      "imageId": "a3ace45a-c036-4a4e-30e6-58fd8c9bcf00",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/a3ace45a-c036-4a4e-30e6-58fd8c9bcf00/thumbnail"
+    },
+    {
+      "filename": "stiltsville-fish-bar.webp",
+      "customerName": "Stiltsville Fish Bar",
+      "imageId": "9a913ac9-0c6c-4d5f-21b3-e6a722fa4300",
+      "cloudflareUrl": "https://imagedelivery.net/uIVQ6NXJhv6uJPgWapIyVQ/9a913ac9-0c6c-4d5f-21b3-e6a722fa4300/thumbnail"
+    }
+  ]
+}

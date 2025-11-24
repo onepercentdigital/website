@@ -60,7 +60,7 @@ export const customers: Customer[] = [
     id: 'grove-bay',
     name: 'Grove Bay Hospitality Group',
     industry: 'hospitality',
-    logo: '/customer-logos/grove-bay-hospitality-group.webp',
+    logo: '9e0346f0-bc70-4d85-b6dc-c8400746ce00',
     testimonial: {
       quote:
         "One Percent SEO transformed our entire restaurant group's online presence. We now dominate search results across all our locations, and our reservation rates have skyrocketed. They understand hospitality and know how to drive real revenue.",
@@ -90,7 +90,7 @@ export const customers: Customer[] = [
     id: 'stubborn-seed',
     name: 'Stubborn Seed',
     industry: 'hospitality',
-    logo: '/customer-logos/stubborn-seed.webp',
+    logo: 'c98add49-898a-4f13-b6b1-563939a50d00',
     testimonial: {
       quote:
         'As a Michelin-recognized restaurant, our online presence needed to match our culinary excellence. One Percent SEO delivered results that exceeded our expectations, dominating both traditional and AI search.',
@@ -103,13 +103,13 @@ export const customers: Customer[] = [
     id: 'stiltsville',
     name: 'Stiltsville Fish Bar',
     industry: 'hospitality',
-    logo: '/customer-logos/stiltsville-fish-bar.webp',
+    logo: '9a913ac9-0c6c-4d5f-21b3-e6a722fa4300',
   },
   {
     id: 'afni',
     name: 'Afni Careers',
     industry: 'services',
-    logo: '/customer-logos/afni-careers.webp',
+    logo: '5149085e-50ad-45b9-c670-9f0cc73c7800',
     testimonial: {
       quote:
         "Working with One Percent SEO has been game-changing for our business. Their strategic approach to both traditional SEO and generative engine optimization has positioned us as the go-to solution in our industry. We're capturing leads we never reached before.",
@@ -134,7 +134,7 @@ export const customers: Customer[] = [
     id: 'hr-agripower',
     name: 'H&R Agri-Power',
     industry: 'manufacturing',
-    logo: '/customer-logos/h-and-r-agri-power.webp',
+    logo: 'a3ace45a-c036-4a4e-30e6-58fd8c9bcf00',
     testimonial: {
       quote:
         'In the agricultural equipment industry, being found online is critical. One Percent SEO helped us dominate our category across multiple states. Our website now drives more qualified leads than any other marketing channel.',
@@ -147,13 +147,13 @@ export const customers: Customer[] = [
     id: 'service-allies',
     name: 'Service Allies',
     industry: 'services',
-    logo: '/customer-logos/service-allies.webp',
+    logo: '20119f59-be9a-4233-101c-02bf4639cf00',
   },
   {
     id: 'revology',
     name: 'Revology',
     industry: 'manufacturing',
-    logo: '/customer-logos/revology-cars.webp',
+    logo: '7ab278bc-37c8-4d7e-21ee-ba2d463fa200',
     testimonial: {
       quote:
         'Our custom Mustang builds are one-of-a-kind, and we needed a search strategy to match. One Percent SEO positioned us as the authority in resto-mod vehicles. We now get inquiries from customers worldwide who find us through search.',
@@ -166,7 +166,7 @@ export const customers: Customer[] = [
     id: 'sorting-robotics',
     name: 'Sorting Robotics',
     industry: 'technology',
-    logo: '/customer-logos/sorting-robotics.webp',
+    logo: 'f002aaf8-4eb2-44f9-5657-5eff64cf8500',
     testimonial: {
       quote:
         'As a robotics company in a highly technical space, we needed SEO that understood our industry and our buyers. One Percent SEO delivered a strategy that put us in front of decision-makers at exactly the right moment. Our demo requests have tripled.',
@@ -191,13 +191,13 @@ export const customers: Customer[] = [
     id: 'modern-house-numbers',
     name: 'Modern House Numbers',
     industry: 'manufacturing',
-    logo: '/customer-logos/modern-house-numbers.webp',
+    logo: 'b1f89b63-89bd-4d15-adee-bcd4bb958c00',
   },
   {
     id: 'goldfarb',
     name: 'Goldfarb & Associates',
     industry: 'services',
-    logo: '/customer-logos/goldfarb-and-associates.webp',
+    logo: '51e5ac33-a0d2-4cdb-668e-581cba411a00',
     testimonial: {
       quote:
         'In the competitive world of turbo and fuel injection systems, standing out online is crucial. One Percent SEO helped us capture the top positions for our most valuable keywords, resulting in a significant increase in qualified inquiries.',

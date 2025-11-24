@@ -1040,11 +1040,13 @@ Built a production-ready customers page with easy-to-update data structure:
 - Helper functions for filtering and data access
 
 **Customer Logos**:
-- Logo images stored in `public/customer-logos/` directory
-- WebP format for optimal performance
-- Black logos with transparent backgrounds
-- Dark mode support via `dark:invert` CSS filter
-- Easy migration path to Cloudflare Images (just update URLs in data file)
+- ✅ **Migrated to Cloudflare Images** (2025-11-24)
+- All 10 logos hosted on Cloudflare CDN for global delivery
+- Automatic WebP/AVIF conversion based on browser support
+- Uses `thumbnail` variant (400px) for optimal quality at 120px display size
+- Dark mode support via `dark:invert` CSS filter preserved
+- Cloudflare Image IDs stored in `src/data/customers.ts`
+- URLs generated via `getImageUrl()` helper function
 
 **Page Structure** (7 sections):
 1. **Hero Section**: "Industry Leaders Who Trust Us" with extreme typography
