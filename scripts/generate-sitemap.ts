@@ -23,6 +23,7 @@ const staticPages = [
   { url: '/customers', priority: '0.8', changefreq: 'monthly' },
   { url: '/case-studies', priority: '0.8', changefreq: 'weekly' },
   { url: '/audit', priority: '0.9', changefreq: 'monthly' },
+  { url: '/about', priority: '0.7', changefreq: 'monthly' },
   { url: '/solutions', priority: '0.8', changefreq: 'monthly' },
   { url: '/enterprise', priority: '0.7', changefreq: 'monthly' },
   { url: '/blog', priority: '0.7', changefreq: 'daily' },

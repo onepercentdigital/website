@@ -22,14 +22,15 @@ Production-ready full-stack TypeScript marketing website featuring:
 ## 🛠️ Tech Stack
 
 ### Framework & Routing
-- **TanStack Start** - Full-stack React framework with SSR and streaming
-- **TanStack Router** - File-based, type-safe routing with built-in code splitting
-- **TanStack Query** - Powerful server state management and caching
+- **TanStack Start 1.139.3** - Full-stack React framework with SSR and streaming
+- **TanStack Router 1.139.3** - File-based, type-safe routing with built-in code splitting
+- **TanStack Query 5.90.10** - Powerful server state management and caching
 - **React 19.2.0** - Latest React with concurrent features
 
 ### Backend & Database
-- **Convex 1.29.2** - Real-time database with TypeScript schema and reactive queries
-- **Clerk 5.55.0** - Authentication and user management
+- **Convex 1.29.3** - Real-time database with TypeScript schema and reactive queries
+- **Clerk 5.56.2** - Authentication and user management
+- **Zod 4.1.13** - TypeScript-first schema validation
 
 ### Styling & UI
 - **Tailwind CSS 4.1.17** - Utility-first CSS framework (latest v4)
@@ -40,18 +41,19 @@ Production-ready full-stack TypeScript marketing website featuring:
 
 ### Developer Experience
 - **TypeScript 5.9.3** - Strict mode with comprehensive type safety
-- **Biome 2.3.6** - Ultra-fast linting and formatting (replaces ESLint/Prettier)
-- **Vitest 4.0.10** - Blazing fast unit testing framework
-- **Bun 1.3.2** - Fast package manager and JavaScript runtime
+- **Biome 2.3.7** - Ultra-fast linting and formatting (replaces ESLint/Prettier)
+- **Vitest 4.0.13** - Blazing fast unit testing framework
+- **Bun 1.3.3** - Fast package manager and JavaScript runtime
 
 ### Deployment & Monitoring
 - **Cloudflare Workers** - Edge deployment with global CDN
 - **Cloudflare Images** - Image optimization and delivery ✅ **CONFIGURED**
-- **Sentry 10.25.0** - Error tracking, performance monitoring, and instrumentation
+- **Wrangler 4.50.0** - Cloudflare deployment tooling
+- **Sentry 10.26.0** - Error tracking, performance monitoring, and instrumentation
 
 ## 📋 Prerequisites
 
-- **Bun** 1.3.2 or later ([Install Bun](https://bun.sh))
+- **Bun** 1.3.3 or later ([Install Bun](https://bun.sh))
 - **Node.js** 18 or later
 - **Convex account** ([Sign up](https://www.convex.dev))
 - **Clerk account** ([Sign up](https://clerk.com))
@@ -385,9 +387,10 @@ See **[CLAUDE.md](./CLAUDE.md)**
 - ✅ Navigation with dropdowns (including Solutions dropdown) and theme toggle
 - ✅ **Cloudflare Images integration** (upload, delivery, 5 variants configured)
 - ✅ **Data-driven architecture** - 4 data files (team.ts, solutions.ts, customers.ts, case-studies.ts)
-- ✅ **SEO Infrastructure** - sitemap.xml (build-time generation), robots.txt configured
+- ✅ **SEO Infrastructure** - sitemap.xml with all 20 pages (build-time generation), robots.txt configured
 - ✅ **Code Quality** - 0 TypeScript errors, 0 linting errors, 0 linting warnings, 100% type-safe
 - ✅ **Suppression Hygiene** - All 9 code suppressions documented and legitimate
+- ✅ **Codebase Cleanup** - No legacy directories, no unused assets, 280KB space savings
 
 **🚧 Next Priority - Blog CMS:**
 - 🚧 Convex queries/mutations for blog posts
