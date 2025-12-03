@@ -11,7 +11,6 @@ import { Footer } from '../components/Footer';
 import { Navigation } from '../components/Navigation';
 import { NotFound } from '../components/NotFound';
 import { brand } from '../config/brand';
-import ClerkProvider from '../integrations/clerk/provider';
 import ConvexProvider from '../integrations/convex/provider';
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools';
 import appCss from '../styles.css?url';
@@ -98,9 +97,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
       </head>
       <body>
-        <ClerkProvider>
-          <ConvexProvider>{children}</ConvexProvider>
-        </ClerkProvider>
+        <ConvexProvider>{children}</ConvexProvider>
         <Scripts />
       </body>
     </html>

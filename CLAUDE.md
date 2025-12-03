@@ -58,18 +58,19 @@ All branding is centralized in `src/config/brand.ts` for quick updates.
 - **Vercel AI SDK 5.0.106** - Unified AI/ML interface
 - **MCP (Model Context Protocol) 1.24.2** - AI context management and tool use
 
-### Authentication & Backend
-- **Clerk 5.57.1** - Complete authentication and user management
-- **User Roles**: Admin, Editor, Viewer
-- **App Domain**: app.onepercentseo.com (for client/admin dashboard)
+### Backend
 - **Convex** - Real-time backend with comprehensive blog schema
 
 ### Deployment & Monitoring
 - **Cloudflare Workers** - Edge deployment with global CDN
 - **Cloudflare Images** - Image optimization and CDN delivery (fully configured)
 - **Wrangler 4.52.1** - Cloudflare deployment tooling
-- **Sentry 10.28.0** - Error tracking, performance monitoring, and instrumentation
 - **Plausible Analytics** - Privacy-focused web analytics (planned)
+
+### Temporarily Disabled (See Restoration Guide)
+- **Clerk** - Authentication (removed for launch, env vars preserved)
+- **Sentry** - Error tracking (removed for launch, env vars preserved)
+- **Admin CMS** - Blog management routes (removed for launch, code preserved in git)
 
 ### Developer Experience
 - **Biome 2.3.8** - Ultra-fast linting and formatting (ESLint/Prettier replacement)
@@ -259,7 +260,7 @@ Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, b
 **Note:** Services, Resources, and Solutions are visual navigation categories only. URLs use flat structure for better UX and SEO.
 
 #### Route Status Summary
-**✅ Production-Ready Routes (25 Total):**
+**✅ Production-Ready Routes (22 Total):**
 
 **Marketing Pages (20):**
 - `/` - Homepage with all 6 sections, extreme typography, SEO optimized
@@ -282,15 +283,16 @@ Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, b
 - `/solutions/health-wellness` - Health & Wellness SEO
 - `404` - Branded NotFound component with quick links
 
-**Blog CMS Routes (5):**
+**Public Blog Routes (2):**
 - `/blog` - Blog listing with real posts from Convex, category filters, responsive grid
 - `/blog/[slug]` - Individual post page with markdown rendering, Article schema, breadcrumbs
-- `/admin` - Admin redirect to posts listing
-- `/admin/posts` - Post management table with status filters, publish/delete actions
-- `/admin/posts/new` - Create new post with full editor
-- `/admin/posts/[id]/edit` - Edit existing post
 
-**⚠️ No Placeholder Routes** - All planned pages are complete!
+**🔒 Admin CMS Routes - TEMPORARILY DISABLED (See Restoration Guide)**
+The following routes have been removed for launch. Blog content can be managed via Convex dashboard.
+- `/admin` - Was: Admin redirect to posts listing
+- `/admin/posts` - Was: Post management table
+- `/admin/posts/new` - Was: Create new post with full editor
+- `/admin/posts/[id]/edit` - Was: Edit existing post
 
 ### ✅ Blog CMS (Complete MVP)
 
@@ -313,13 +315,13 @@ The blog CMS is **fully implemented** with the following features:
   - `update()` - Update category
   - `deleteCategory()` - Delete with safety checks
 
-#### Admin Routes - COMPLETE
-- `/admin` - Redirects to posts listing
-- `/admin/posts` - Post management table with status filters (draft/published/scheduled), publish/delete actions
-- `/admin/posts/new` - Create new post with full editor
-- `/admin/posts/[id]/edit` - Edit existing post
+#### Admin Routes - TEMPORARILY DISABLED
+Admin routes have been removed for launch security. See **Restoration Guide** below.
+- Blog content can be managed directly via Convex dashboard
+- Original route implementations preserved in git history
+- `BlogEditor.tsx` component kept for future restoration
 
-#### Blog Editor Component - COMPLETE
+#### Blog Editor Component - PRESERVED (Not Currently in Use)
 `src/components/BlogEditor.tsx` features:
 - Title with auto-slug generation
 - Markdown textarea with live preview toggle
@@ -356,10 +358,6 @@ The blog CMS is **fully implemented** with the following features:
 
 These are optional improvements, not blockers for production:
 
-#### Authentication & Permissions
-- Full Clerk integration in admin routes (currently placeholder)
-- Role-based permissions (Admin/Editor/Viewer)
-
 #### Blog Features
 - Auto-publish for scheduled posts (Convex cron job)
 - Related posts UI selection (schema ready, UI not implemented)
@@ -376,6 +374,219 @@ These are optional improvements, not blockers for production:
 - **Plausible Analytics**: Privacy-focused tracking (planned)
 - Dynamic meta tags for blog posts (currently static)
 
+---
+
+### 🔄 Restoration Guide: Admin CMS, Clerk & Sentry
+
+This section documents how to restore the admin CMS with proper authentication after launch.
+
+#### Prerequisites
+- Clerk account configured at clerk.com
+- Sentry project configured at sentry.io (optional)
+- Environment variables preserved in `.env.local`
+
+#### Step 1: Restore Clerk Integration
+
+**1.1 Install Clerk:**
+```bash
+bun add @clerk/clerk-react
+```
+
+**1.2 Create `src/integrations/clerk/provider.tsx`:**
+```typescript
+import { ClerkProvider } from '@clerk/clerk-react';
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+if (!PUBLISHABLE_KEY) {
+  throw new Error('Add your Clerk Publishable Key to the .env.local file');
+}
+
+export default function AppClerkProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+      {children}
+    </ClerkProvider>
+  );
+}
+```
+
+**1.3 Create `src/integrations/clerk/header-user.tsx`:**
+```typescript
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from '@clerk/clerk-react';
+
+export default function HeaderUser() {
+  return (
+    <>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+    </>
+  );
+}
+```
+
+**1.4 Update `src/routes/__root.tsx`:**
+```typescript
+// Add import
+import ClerkProvider from '../integrations/clerk/provider';
+
+// In RootDocument, wrap ConvexProvider:
+<body>
+  <ClerkProvider>
+    <ConvexProvider>{children}</ConvexProvider>
+  </ClerkProvider>
+  <Scripts />
+</body>
+```
+
+#### Step 2: Restore Admin Routes with Authentication
+
+**2.1 Create `src/lib/auth-guard.ts`:**
+```typescript
+import { useUser } from '@clerk/clerk-react';
+
+/**
+ * Hook to get current user info in components
+ */
+export function useCurrentUser() {
+  const { user, isLoaded } = useUser();
+  
+  if (!isLoaded) {
+    return { userId: null, name: null, email: null, isLoading: true };
+  }
+  
+  return {
+    userId: user?.id || null,
+    name: user?.fullName || user?.firstName || 'Admin',
+    email: user?.primaryEmailAddress?.emailAddress || null,
+    isLoading: false,
+  };
+}
+```
+
+**2.2 Restore admin routes from git:**
+```bash
+# View original implementations
+git log --all --full-history -- src/routes/admin.posts.index.tsx
+git show <commit-hash>:src/routes/admin.posts.index.tsx > src/routes/admin.posts.index.tsx
+
+# Files to restore:
+# - src/routes/admin.index.tsx
+# - src/routes/admin.posts.index.tsx
+# - src/routes/admin.posts.new.tsx
+# - src/routes/admin.posts.$id.edit.tsx
+```
+
+**2.3 Add route protection with Clerk:**
+Each admin route should check authentication. Example pattern:
+```typescript
+import { useUser } from '@clerk/clerk-react';
+import { Navigate } from '@tanstack/react-router';
+
+function AdminPage() {
+  const { isSignedIn, isLoaded } = useUser();
+  
+  if (!isLoaded) return <div>Loading...</div>;
+  if (!isSignedIn) return <Navigate to="/" />;
+  
+  return <div>Admin content...</div>;
+}
+```
+
+#### Step 3: Restore Sentry (Optional)
+
+**3.1 Install Sentry:**
+```bash
+bun add @sentry/tanstackstart-react
+```
+
+**3.2 Create `instrument.server.mjs`:**
+```javascript
+import * as Sentry from '@sentry/tanstackstart-react'
+
+const dsn = process.env.VITE_SENTRY_DSN
+
+if (dsn) {
+  Sentry.init({
+    dsn,
+    sendDefaultPii: true,
+  })
+}
+```
+
+**3.3 Update `src/router.tsx`:**
+```typescript
+import * as Sentry from '@sentry/tanstackstart-react';
+
+// In getRouter(), after router creation:
+if (!router.isServer) {
+  Sentry.init({
+    dsn: import.meta.env.VITE_SENTRY_DSN,
+    integrations: [],
+  });
+}
+```
+
+**3.4 Update `package.json` scripts:**
+```json
+"dev": "NODE_OPTIONS='--import ./instrument.server.mjs' vite dev --port 3000",
+"build": "bun run scripts/generate-sitemap.ts && vite build && cp instrument.server.mjs dist/server && tsc --noEmit",
+"start": "node --import ./dist/server/instrument.server.mjs dist/server/index.js"
+```
+
+#### Step 4: Update Configuration
+
+**4.1 Update `public/robots.txt`:**
+```
+Disallow: /admin/
+```
+
+**4.2 Update CLAUDE.md:**
+- Restore tech stack sections
+- Update route counts
+- Remove this restoration guide or mark as complete
+
+#### Key Files Reference
+
+| Component | File Path | Status |
+|-----------|-----------|--------|
+| BlogEditor | `src/components/BlogEditor.tsx` | Preserved |
+| Posts Backend | `convex/posts.ts` | Active |
+| Categories Backend | `convex/categories.ts` | Active |
+| Public Blog | `src/routes/blog.index.tsx` | Active |
+| Blog Post | `src/routes/blog.$slug.tsx` | Active |
+| Admin Routes | `src/routes/admin.*.tsx` | In Git History |
+| Clerk Provider | `src/integrations/clerk/` | In Git History |
+| Auth Guard | `src/lib/auth-guard.ts` | In Git History |
+
+#### Git History Reference
+
+All removed files are preserved in git. To view original implementations:
+```bash
+# List commits that touched admin files
+git log --all --full-history -- src/routes/admin.posts.index.tsx
+
+# Show file content at specific commit
+git show <commit-hash>:src/routes/admin.posts.index.tsx
+
+# Restore a file from history
+git checkout <commit-hash> -- src/routes/admin.posts.index.tsx
+```
+
+---
+
 ### 🗑️ Cleanup Tasks
 - ✅ Remove demo routes (`src/routes/demo/*`) - **COMPLETED (18 files deleted)**
 - ✅ Remove example routes (`src/routes/example.guitars/*`) - **COMPLETED (2 files deleted)**
@@ -390,22 +601,27 @@ These are optional improvements, not blockers for production:
 Configure these in `.env.local`:
 
 ```bash
-# Clerk Authentication
-VITE_CLERK_PUBLISHABLE_KEY=pk_test_...
-
 # Convex Database
 VITE_CONVEX_URL=https://...convex.cloud
 CONVEX_DEPLOYMENT=...
 
-# Sentry Monitoring
-VITE_SENTRY_DSN=https://...@sentry.io/...
+# Cloudflare Images
+CLOUDFLARE_ACCOUNT_ID=...
+CLOUDFLARE_API_TOKEN=...
 
 # AI Integration (if needed)
 ANTHROPIC_API_KEY=sk-ant-...
+```
 
-# Cloudflare Images (to be added)
-# CLOUDFLARE_ACCOUNT_ID=...
-# CLOUDFLARE_API_TOKEN=...
+### Disabled Environment Variables (Keep for Future Restoration)
+These are not currently used but should be preserved for when admin CMS is re-enabled:
+
+```bash
+# Clerk Authentication (disabled - see Restoration Guide)
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_...
+
+# Sentry Monitoring (disabled - see Restoration Guide)
+VITE_SENTRY_DSN=https://...@sentry.io/...
 ```
 
 ### Environment Variable Validation
@@ -1159,9 +1375,10 @@ Built a production-ready customers page with easy-to-update data structure:
 
 ## Project Status
 
-- **Phase**: ✅ **COMPLETE** - Full-stack marketing site with blog CMS ready for production
-- **Current State**: Production-ready site with 25 complete routes (20 marketing + 5 blog/admin)
-- **Deployment Ready**: Entire site including blog CMS can be deployed immediately
+- **Phase**: ✅ **LAUNCH READY** - Marketing site ready for production deployment
+- **Current State**: Production-ready site with 22 routes (20 marketing + 2 public blog)
+- **Deployment Ready**: Site can be deployed immediately
+- **Admin CMS**: 🔒 **TEMPORARILY DISABLED** - See Restoration Guide for re-enabling
 - **Font System**: ✅ Plus Jakarta Sans Variable fully implemented (weights 200-800)
 - **Typography**: ✅ Extreme scale with balanced readability across all pages
 - **Homepage**: ✅ Fully implemented with 6 sections, SEO, and dramatic typography
@@ -1173,11 +1390,9 @@ Built a production-ready customers page with easy-to-update data structure:
 - **Customers Page**: ✅ Fully implemented with 7 sections, 10 client logos, data-driven
 - **Case Studies Page**: ✅ Fully implemented with 3 case studies, featured study, aggregate stats
 - **Apply Page**: ✅ Fully implemented with Calendly embed, above-fold booking, 30-min sessions
-- **Blog CMS**: ✅ **FULLY IMPLEMENTED** - Public routes, admin panel, editor, Convex backend
-- **Blog Backend**: ✅ **COMPLETE** - 8 post mutations/queries + 5 category mutations/queries
-- **Blog Frontend**: ✅ **COMPLETE** - Listing page, individual posts with markdown rendering
-- **Blog Admin**: ✅ **COMPLETE** - Post management, create/edit forms, status filters
-- **Blog Editor**: ✅ **COMPLETE** - Markdown + preview, Cloudflare image upload, SEO fields
+- **Blog Frontend**: ✅ **COMPLETE** - Public listing page, individual posts with markdown rendering
+- **Blog Backend**: ✅ **COMPLETE** - Convex backend intact, manageable via dashboard
+- **Blog Admin**: 🔒 **DISABLED** - Routes removed for launch security (code in git history)
 - **WordPress Migration**: ✅ **COMPLETE** - Full migration script with image handling
 - **Navigation**: ✅ Complete with dropdowns (no gaps) and theme sync
 - **Footer**: ✅ Multi-column with synchronized theme toggle
@@ -1185,21 +1400,28 @@ Built a production-ready customers page with easy-to-update data structure:
 - **CTA System**: ✅ Updated to "Apply To Work With Us" → `/apply`
 - **Cloudflare Images**: ✅ **COMPLETE** - Upload/delivery working, all 5 variants configured
 - **Sitemap & SEO**: ✅ **COMPLETE** - sitemap.xml with 19 pages, robots.txt configured
-- **Code Quality**: ✅ **EXCELLENT** - 0 TypeScript errors, 0 linting errors, 9 legitimate suppressions
-- **Plausible Analytics**: 🚧 Integration planned (not a blocker)
-- **Stats**: 25 production-ready routes, 19 pages in sitemap, 0 placeholders, 0 technical debt
+- **Code Quality**: ✅ **EXCELLENT** - 0 TypeScript errors, 0 linting errors
+- **Clerk Auth**: 🔒 **DISABLED** - Removed for launch (env vars preserved)
+- **Sentry**: 🔒 **DISABLED** - Removed for launch (env vars preserved)
+- **Stats**: 22 production-ready routes, 19 pages in sitemap, 0 technical debt
 
-### 📍 Current Project State (2025-11-25)
+### 📍 Current Project State (2025-12-03)
 
 **What's Complete:**
 1. ✅ All 20 marketing pages production-ready
-2. ✅ Blog CMS fully functional (public + admin routes)
-3. ✅ Convex backend with posts and categories
-4. ✅ BlogEditor component with markdown + image upload
+2. ✅ Public blog routes functional (`/blog`, `/blog/[slug]`)
+3. ✅ Convex backend with posts and categories (manage via dashboard)
+4. ✅ BlogEditor component preserved for future use
 5. ✅ Cloudflare Images integration (upload, delivery, 5 variants)
 6. ✅ WordPress migration scripts ready
 7. ✅ Sitemap generation at build time
 8. ✅ 0 TypeScript errors, 0 linting errors
+
+**Temporarily Disabled (for launch security):**
+- Admin CMS routes (`/admin/*`)
+- Clerk authentication
+- Sentry error tracking
+- See **Restoration Guide** section for re-enabling
 
 **Optional Future Enhancements:**
 - Full Clerk authentication in admin routes (currently placeholder)
