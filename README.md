@@ -5,9 +5,9 @@ Modern, high-performance marketing website built with TanStack Start for One Per
 ## 🚀 Overview
 
 Production-ready full-stack TypeScript marketing website featuring:
-- **26 production-ready routes**: 21 marketing pages + 5 blog/admin routes
+- **25 production-ready routes**: 20 marketing pages + 5 blog/admin routes
 - **Complete Blog CMS**: Public blog, admin panel, markdown editor with image uploads
-- **Industry-specific solutions**: 10 tailored landing pages covering Hospitality, E-commerce, Manufacturing, Logistics, Automotive, Construction, Agriculture, Technology, Health & Wellness, and Consulting & Coaching
+- **Industry-specific solutions**: 9 tailored landing pages covering Hospitality, E-commerce, Manufacturing, Logistics, Automotive, Construction, Agriculture, Technology, and Health & Wellness
 - **Enterprise solutions**: Comprehensive page with pricing ($15K-$75K+/month), SLA guarantees, and white-glove service details
 - **Team showcase**: About page with full bios for all team members and company story
 - **Server-side rendering (SSR)** for optimal SEO/GEO performance
@@ -137,7 +137,7 @@ seo-website/
 │   │   ├── geo.tsx         # GEO service page ✅ COMPLETE
 │   │   ├── customers.tsx   # Customer showcase ✅ COMPLETE
 │   │   ├── case-studies.tsx # Case studies page ✅ COMPLETE
-│   │   ├── audit.tsx       # Free AI Search Audit with Calendly ✅ COMPLETE
+│   │   ├── apply.tsx       # Apply To Work With Us with Calendly ✅ COMPLETE
 │   │   ├── about.tsx       # About page with team bios ✅ COMPLETE
 │   │   ├── enterprise.tsx  # Enterprise solutions ✅ COMPLETE
 │   │   ├── blog.index.tsx  # Blog listing page ✅ COMPLETE
@@ -147,7 +147,7 @@ seo-website/
 │   │   ├── admin.posts.new.tsx      # Create new post ✅ COMPLETE
 │   │   ├── admin.posts.$id.edit.tsx # Edit existing post ✅ COMPLETE
 │   │   ├── solutions.index.tsx      # Solutions landing ✅ COMPLETE
-│   │   └── solutions.*.tsx          # 10 industry pages ✅ COMPLETE
+│   │   └── solutions.*.tsx          # 9 industry pages ✅ COMPLETE
 │   │
 │   ├── config/
 │   │   └── brand.ts        # Centralized brand configuration
@@ -187,7 +187,7 @@ seo-website/
 │   └── seed-categories.ts       # Initial category seeding
 │
 ├── public/                  # Static assets
-│   ├── sitemap.xml         # Auto-generated sitemap (20 pages)
+│   ├── sitemap.xml         # Auto-generated sitemap (19 pages)
 │   ├── robots.txt          # Search engine instructions
 │   ├── favicon.ico         # Site favicon
 │   └── logo.svg            # Brand logo
@@ -285,19 +285,19 @@ The build process:
 
 This project uses **flat URLs** for better UX, SEO, and AI citations:
 
-**✅ Production-Ready Routes (26 total):**
+**✅ Production-Ready Routes (25 total):**
 
-**Marketing Pages (21):**
+**Marketing Pages (20):**
 - `/` - Homepage (6 sections, extreme typography, fully optimized)
 - `/seo` - SEO service page (7 sections with FAQ accordion)
 - `/geo` - GEO service page (7 sections with FAQ accordion)
 - `/enterprise` - Enterprise solutions page (8 sections, 7-question FAQ, pricing $15K-$75K+/month)
 - `/about` - About page (team bios, company story, 6 sections)
 - `/customers` - Customer showcase (10 client logos, testimonials, industry breakdown)
-- `/case-studies` - Case studies page (5 detailed case studies, featured study, aggregate stats)
-- `/audit` - Free AI Search Audit with Calendly (above-fold booking, 30-min sessions)
+- `/case-studies` - Case studies page (3 detailed case studies, featured study, aggregate stats)
+- `/apply` - Apply To Work With Us with Calendly (above-fold booking, 30-min sessions)
 - `/solutions` - Solutions landing page (directory of all industries)
-- `/solutions/*` - 10 industry-specific pages (hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness, consulting-coaching)
+- `/solutions/*` - 9 industry-specific pages (hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness)
 - `404` - Branded NotFound component with quick links
 
 **Blog CMS Routes (5):**
@@ -316,7 +316,7 @@ This project uses **flat URLs** for better UX, SEO, and AI citations:
 
 ### SEO Optimization
 - Server-side rendering for all pages
-- **Sitemap.xml** - Auto-generated at build time, includes all 20 pages
+- **Sitemap.xml** - Auto-generated at build time, includes all 19 pages
 - **robots.txt** - Configured with sitemap reference and admin route blocking
 - Structured data (JSON-LD) for Organization, LocalBusiness, Articles
 - Comprehensive meta tags (Open Graph, Twitter Cards)
@@ -511,18 +511,18 @@ See **[CLAUDE.md](./CLAUDE.md)**
 
 ## ✅ Current Implementation Status
 
-**✅ COMPLETE - Full-stack marketing site with blog CMS (26 production-ready routes)**
+**✅ COMPLETE - Full-stack marketing site with blog CMS (25 production-ready routes)**
 
-**Marketing Pages (21):**
+**Marketing Pages (20):**
 - ✅ Homepage with 6 sections and extreme typography
 - ✅ SEO service page (7 sections + FAQ)
 - ✅ GEO service page (7 sections + FAQ)
 - ✅ Enterprise solutions page (8 sections + 7-question FAQ, pricing $15K-$75K+/month)
 - ✅ About page with team bios (6 sections)
 - ✅ Customers page (10 client logos + testimonials)
-- ✅ Case studies page (5 case studies + featured layout)
-- ✅ Audit page with Calendly (above-fold booking, conversion-optimized)
-- ✅ 11 industry-specific solutions pages (landing + 10 industries)
+- ✅ Case studies page (3 case studies + featured layout)
+- ✅ Apply page with Calendly (above-fold booking, conversion-optimized)
+- ✅ 10 industry-specific solutions pages (landing + 9 industries)
 - ✅ Branded 404 page
 
 **Blog CMS (5 routes):**
@@ -554,7 +554,7 @@ See **[CLAUDE.md](./CLAUDE.md)**
 - ✅ Navigation with dropdowns and theme toggle
 - ✅ Cloudflare Images integration (upload, delivery, 5 variants)
 - ✅ Data-driven architecture (4 data files)
-- ✅ SEO Infrastructure - sitemap.xml (20 pages), robots.txt
+- ✅ SEO Infrastructure - sitemap.xml (19 pages), robots.txt
 - ✅ Code Quality - 0 TypeScript errors, 0 linting errors
 
 **🎯 Optional Future Enhancements:**

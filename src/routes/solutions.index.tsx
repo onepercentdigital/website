@@ -46,7 +46,6 @@ function SolutionsLandingPage() {
     agriculture: Tractor,
     technology: Code,
     'health-wellness': Heart,
-    'consulting-coaching': Briefcase,
   };
 
   return (

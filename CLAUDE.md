@@ -100,7 +100,7 @@ seo-website/
 │   │   ├── geo.tsx         # GEO service page ✅ COMPLETE
 │   │   ├── customers.tsx   # Customer showcase ✅ COMPLETE
 │   │   ├── case-studies.tsx # Case studies page ✅ COMPLETE
-│   │   ├── audit.tsx       # Free AI Search Audit with Calendly ✅ COMPLETE
+│   │   ├── apply.tsx       # Apply To Work With Us with Calendly ✅ COMPLETE
 │   │   ├── about.tsx       # About page with team bios ✅ COMPLETE
 │   │   ├── enterprise.tsx  # Enterprise solutions page ✅ COMPLETE
 │   │   ├── blog.index.tsx  # Blog listing page ✅ COMPLETE
@@ -110,7 +110,7 @@ seo-website/
 │   │   ├── admin.posts.new.tsx      # Create new post ✅ COMPLETE
 │   │   ├── admin.posts.$id.edit.tsx # Edit existing post ✅ COMPLETE
 │   │   ├── solutions.index.tsx      # Solutions landing page ✅ COMPLETE
-│   │   └── solutions.*.tsx          # 10 industry-specific pages ✅ COMPLETE
+│   │   └── solutions.*.tsx          # 9 industry-specific pages ✅ COMPLETE
 │   │
 │   ├── config/             # Configuration files
 │   │   └── brand.ts        # Brand config (name, colors, nav, footer, SEO)
@@ -188,7 +188,7 @@ seo-website/
 #### Homepage (Complete)
 1. **Hero**: "Dominate your Industry with AI and Search Optimization" with extreme typography
 2. **Services**: GEO and SEO feature cards with checkmarks and detailed benefits
-3. **Social Proof**: Stats (95% retention, $200M+ revenue, 300% organic traffic growth)
+3. **Social Proof**: Stats (Industry Leading retention, $200M+ revenue, 300% organic traffic growth)
 4. **Case Study Highlight**: Featured case study with metrics and visual
 5. **Testimonials**: Three client testimonials with avatars
 6. **Final CTA**: Gradient background with "Join the Top 1%" messaging
@@ -254,23 +254,23 @@ Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, b
 - **Resources** → Customers (`/customers`), Blog (`/blog`), Case Studies (`/case-studies`)
 - **Solutions** → Coming Soon (`/solutions`)
 - **Enterprise** (direct link) → `/enterprise`
-- **Get Your Free AI Search Audit** (CTA button) → `/audit`
+- **Apply To Work With Us** (CTA button) → `/apply`
 
 **Note:** Services, Resources, and Solutions are visual navigation categories only. URLs use flat structure for better UX and SEO.
 
 #### Route Status Summary
-**✅ Production-Ready Routes (26 Total):**
+**✅ Production-Ready Routes (25 Total):**
 
-**Marketing Pages (21):**
+**Marketing Pages (20):**
 - `/` - Homepage with all 6 sections, extreme typography, SEO optimized
 - `/geo` - GEO service page with 7 comprehensive sections and FAQ
 - `/seo` - SEO service page with 7 comprehensive sections and FAQ
 - `/customers` - Customer showcase with 10 client logos, testimonials, and industry breakdown
-- `/case-studies` - Case studies page with 5 detailed case studies, featured study, aggregate stats
-- `/audit` - Free AI Search Audit with Calendly embed (above-fold booking, 30-min sessions)
+- `/case-studies` - Case studies page with 3 detailed case studies, featured study, aggregate stats
+- `/apply` - Apply To Work With Us with Calendly embed (above-fold booking, 30-min sessions)
 - `/enterprise` - Enterprise solutions page with 8 sections, 7-question FAQ, pricing details
 - `/about` - About page with team bios, company story, 6 sections
-- `/solutions` - Solutions landing page with directory of all 10 industries
+- `/solutions` - Solutions landing page with directory of all 9 industries
 - `/solutions/hospitality` - Hospitality & Restaurants SEO
 - `/solutions/ecommerce` - E-commerce & Retail SEO
 - `/solutions/manufacturing` - Manufacturing & Industrial SEO
@@ -280,7 +280,6 @@ Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, b
 - `/solutions/agriculture` - Agriculture & Equipment SEO
 - `/solutions/technology` - Technology & SaaS SEO
 - `/solutions/health-wellness` - Health & Wellness SEO
-- `/solutions/consulting-coaching` - Consulting & Coaching SEO
 - `404` - Branded NotFound component with quick links
 
 **Blog CMS Routes (5):**
@@ -809,11 +808,11 @@ Create `src/routes/blog.$slug.tsx`:
 - To be defined based on business strategy
 - Placeholder for now
 
-`src/routes/audit.tsx`:
-- Calendly embed for Free AI Search Audit booking
+`src/routes/apply.tsx`:
+- Calendly embed for consultative application booking
 - Contact information
 - What to expect section
-- Benefits of the free audit
+- Benefits of working with us
 
 ### Phase 3: SEO & Performance
 
@@ -1061,7 +1060,7 @@ Both service pages are now **production-ready** with full content and extreme ty
   3. 4-step process (Analyze, Optimize, Build, Monitor) with icons
   4. 6 key benefits grid (Qualified Traffic, Long-Term ROI, etc.)
   5. Service offerings (6 feature grids: Technical SEO, Content, Link Building, On-Page, Local SEO, Analytics)
-  6. Results section with stats (300% organic growth, $200M+ revenue, 95% retention)
+  6. Results section with stats (300% organic growth, $200M+ revenue, 300+ Businesses)
   7. FAQ accordion with 7 questions including pricing information ($2,500-$15,000/month)
 
 #### Typography Implementation
@@ -1088,9 +1087,9 @@ Both service pages are now **production-ready** with full content and extreme ty
 - All SEO best practices implemented
 
 #### CTA Updates
-- **New CTA text**: "Get Your Free AI Search Audit"
-- **New CTA route**: `/audit` (instead of `/schedule`)
-- More specific and benefit-driven
+- **New CTA text**: "Apply To Work With Us"
+- **New CTA route**: `/apply`
+- Consultative, selective positioning
 - Consistent across all service pages
 
 #### Production Status
@@ -1111,8 +1110,8 @@ Built a production-ready customers page with easy-to-update data structure:
 **Customer Data Structure** (`src/data/customers.ts`):
 - Created TypeScript interfaces for `Customer` and `CustomerCategory`
 - 10 customer companies with full details:
-  - Grove Bay Hospitality Group, Stubborn Seed, Stiltsville Fish Bar
-  - AFNI, Service Allies, Goldfarb & Associates
+  - Grove Bay Hospitality Group, Stubborn Seed, Royal Covers
+  - Afni Careers, Service Allies, Goldfarb & Associates
   - H&R Agri-Power, Revology, Modern House Numbers, Sorting Robotics
 - 4 industry categories: Hospitality, Technology, Manufacturing, Services
 - Helper functions for filtering and data access
@@ -1128,11 +1127,11 @@ Built a production-ready customers page with easy-to-update data structure:
 
 **Page Structure** (7 sections):
 1. **Hero Section**: "Industry Leaders Who Trust Us" with extreme typography
-2. **Aggregate Stats**: 10+ companies, 500% avg growth, 95% retention
+2. **Aggregate Stats**: 10+ companies, 500% avg growth, Industry Leading retention
 3. **Customer Logo Grid**: 10 logos in responsive grid (2→3→5 columns)
-4. **Featured Testimonials**: 3 testimonial cards with author details
+4. **Featured Testimonials**: 2 testimonial cards (Goldfarb, Royal Covers)
 5. **By Industry Breakdown**: 4 category cards with client lists
-6. **Featured Case Study**: Grove Bay Hospitality with metrics
+6. **Featured Case Study**: Revology with metrics
 7. **Final CTA**: "Join These Industry Leaders" with dual CTAs
 
 **Design Consistency**:
@@ -1161,7 +1160,7 @@ Built a production-ready customers page with easy-to-update data structure:
 ## Project Status
 
 - **Phase**: ✅ **COMPLETE** - Full-stack marketing site with blog CMS ready for production
-- **Current State**: Production-ready site with 26 complete routes (21 marketing + 5 blog/admin)
+- **Current State**: Production-ready site with 25 complete routes (20 marketing + 5 blog/admin)
 - **Deployment Ready**: Entire site including blog CMS can be deployed immediately
 - **Font System**: ✅ Plus Jakarta Sans Variable fully implemented (weights 200-800)
 - **Typography**: ✅ Extreme scale with balanced readability across all pages
@@ -1170,10 +1169,10 @@ Built a production-ready customers page with easy-to-update data structure:
 - **SEO Service Page**: ✅ Fully implemented with 7 sections and FAQ accordion
 - **Enterprise Page**: ✅ Fully implemented with 8 sections, 7-question FAQ, pricing details
 - **About Page**: ✅ Fully implemented with team bios, company story, 6 sections
-- **Solutions Pages**: ✅ **ALL 11 COMPLETE** - Landing page + 10 industry-specific pages
+- **Solutions Pages**: ✅ **ALL 10 COMPLETE** - Landing page + 9 industry-specific pages
 - **Customers Page**: ✅ Fully implemented with 7 sections, 10 client logos, data-driven
-- **Case Studies Page**: ✅ Fully implemented with 5 case studies, featured study, aggregate stats
-- **Audit Page**: ✅ Fully implemented with Calendly embed, above-fold booking, 30-min sessions
+- **Case Studies Page**: ✅ Fully implemented with 3 case studies, featured study, aggregate stats
+- **Apply Page**: ✅ Fully implemented with Calendly embed, above-fold booking, 30-min sessions
 - **Blog CMS**: ✅ **FULLY IMPLEMENTED** - Public routes, admin panel, editor, Convex backend
 - **Blog Backend**: ✅ **COMPLETE** - 8 post mutations/queries + 5 category mutations/queries
 - **Blog Frontend**: ✅ **COMPLETE** - Listing page, individual posts with markdown rendering
@@ -1183,17 +1182,17 @@ Built a production-ready customers page with easy-to-update data structure:
 - **Navigation**: ✅ Complete with dropdowns (no gaps) and theme sync
 - **Footer**: ✅ Multi-column with synchronized theme toggle
 - **404 Page**: ✅ Branded NotFound component with quick links
-- **CTA System**: ✅ Updated to "Get Your Free AI Search Audit" → `/audit`
+- **CTA System**: ✅ Updated to "Apply To Work With Us" → `/apply`
 - **Cloudflare Images**: ✅ **COMPLETE** - Upload/delivery working, all 5 variants configured
-- **Sitemap & SEO**: ✅ **COMPLETE** - sitemap.xml with 20 pages, robots.txt configured
+- **Sitemap & SEO**: ✅ **COMPLETE** - sitemap.xml with 19 pages, robots.txt configured
 - **Code Quality**: ✅ **EXCELLENT** - 0 TypeScript errors, 0 linting errors, 9 legitimate suppressions
 - **Plausible Analytics**: 🚧 Integration planned (not a blocker)
-- **Stats**: 26 production-ready routes, 20 pages in sitemap, 0 placeholders, 0 technical debt
+- **Stats**: 25 production-ready routes, 19 pages in sitemap, 0 placeholders, 0 technical debt
 
 ### 📍 Current Project State (2025-11-25)
 
 **What's Complete:**
-1. ✅ All 21 marketing pages production-ready
+1. ✅ All 20 marketing pages production-ready
 2. ✅ Blog CMS fully functional (public + admin routes)
 3. ✅ Convex backend with posts and categories
 4. ✅ BlogEditor component with markdown + image upload
@@ -1215,7 +1214,7 @@ Built a production-ready customers page with easy-to-update data structure:
 When resuming work on this project:
 
 1. **Review Current State**: 
-   - All 21 marketing pages are complete and production-ready
+   - All 20 marketing pages are complete and production-ready
    - Blog CMS is fully implemented (public + admin routes)
    - Convex backend has all queries/mutations for posts and categories
    - BlogEditor component is complete with markdown + image upload
@@ -1253,7 +1252,7 @@ When resuming work on this project:
    - Apply extreme typography consistently (see service pages for examples)
    - Use Accordion component from shadcn/ui for FAQs
 
-6. **CTA Standard**: "Get Your Free AI Search Audit" → `/audit`
+6. **CTA Standard**: "Apply To Work With Us" → `/apply`
 
 ---
 
@@ -2132,12 +2131,10 @@ bun run build           # Build for production
 
 1. **Data Structure** - Created `src/data/case-studies.ts` (550 lines):
    - TypeScript interfaces: `CaseStudy`, `CaseStudyMetric`, `CaseStudyTestimonial`
-   - 5 detailed case studies with real client data:
-     - Grove Bay Hospitality (Featured) - 425% traffic growth, $12M revenue impact
-     - Stubborn Seed - 92% AI search visibility, 70% organic reservations
-     - H&R Agri-Power - 200+ keyword rankings, 58% organic leads
-     - AFNI - $15M new business from search, 85% page-one rankings
-     - Revology Cars - $8M vehicle sales, 75% qualified leads from search
+   - 3 detailed case studies with real client data:
+     - Revology Cars (Featured) - Successful acquisition/exit, Page 1 rankings, ChatGPT citations
+     - Goldfarb & Associates - 10x revenue growth, Top ChatGPT recommendation
+     - Royal Covers - #1 in Arizona, Record-breaking revenue 3 years in a row
    - Helper functions: `getFeaturedCaseStudies()`, `getCaseStudiesByIndustry()`, `getCaseStudiesByService()`
    - Aggregate metrics calculator
 
@@ -2235,7 +2232,7 @@ bun run build           # Build for production
 
 ##### What Was Implemented
 
-**Above-the-Fold Booking** - Complete redesign of `src/routes/audit.tsx`:
+**Above-the-Fold Booking** - Complete redesign of `src/routes/apply.tsx`:
 
 **1. Two-Column Hero Layout (Desktop)**
 - Left: Hero content with 5 inline benefits
@@ -2252,7 +2249,7 @@ bun run build           # Build for production
 **3. Six Sections**
 - Hero with Calendly (above-fold)
 - What to Expect (4-step process)
-- Social Proof (95% retention, $200M+ revenue, 300%+ growth)
+- Social Proof (Industry Leading retention, $200M+ revenue, 300%+ growth)
 - FAQ (3 questions matching SEO/GEO page styling)
 
 **4. Key Updates**
@@ -2287,7 +2284,7 @@ bun run build           # Build for production
 ##### Files Modified
 
 - ✅ `src/routes/blog.index.tsx` - Complete visual skeleton (from minimal placeholder)
-- ✅ `src/routes/audit.tsx` - Production-ready with Calendly integration
+- ✅ `src/routes/apply.tsx` - Production-ready with Calendly integration
 - ✅ `src/routes/case-studies.tsx` - Removed two-tone headings
 - ✅ `CLAUDE.md` - Updated all stats, route statuses, design guidelines
 - ✅ `README.md` - Updated to reflect current state
@@ -2594,7 +2591,7 @@ A production-ready, fully optimized codebase with:
 
 8. **Final CTA**
    - "Ready to Scale Your Search Presence?"
-   - Primary CTA: "Schedule Enterprise Demo" → `/audit`
+   - Primary CTA: "Schedule Enterprise Demo" → `/apply`
 
 ##### Key Content Strategy
 
@@ -2767,8 +2764,8 @@ Helper functions:
 
 **Data Files: 4**
 - `src/data/customers.ts` - 10 customer companies
-- `src/data/case-studies.ts` - 5 detailed case studies
-- `src/data/solutions.ts` - 10 industry-specific solutions
+- `src/data/case-studies.ts` - 3 detailed case studies
+- `src/data/solutions.ts` - 9 industry-specific solutions
 - `src/data/team.ts` - 3 team member bios
 
 **Code Quality:**
@@ -2799,24 +2796,23 @@ Blog CMS implementation (Convex queries/mutations + admin routes + public blog r
 
 ##### What Was Implemented
 
-**Complete Solutions System** - Built 10 industry-specific solution pages plus landing page:
+**Complete Solutions System** - Built 9 industry-specific solution pages plus landing page:
 
 1. **Data Structure** - Created `src/data/solutions.ts` (~2000 lines):
    - TypeScript interfaces for IndustrySolution, challenges, approach steps, services, FAQs
-   - Complete data for 10 industries covering 23 client companies:
-     - Hospitality & Restaurants (Grove Bay, Stubborn Seed, Stiltsville Fish Bar)
+   - Complete data for 9 industries covering client companies:
+     - Hospitality & Restaurants (Grove Bay, Stubborn Seed)
      - E-commerce & Retail (Modern House Numbers, 2Accept)
      - Manufacturing & Industrial (H&R Agri-Power, Revology)
      - Logistics & Transportation (Service Allies)
      - Automotive (Goldfarb & Associates)
-     - Construction & Contractors (Pioneer Security)
+     - Construction & Contractors (Royal Covers)
      - Agriculture & Equipment (general industry focus)
      - Technology & SaaS (Sorting Robotics)
      - Health & Wellness (general industry focus)
-     - Consulting & Coaching (Desmond Speaks)
    - Helper functions for filtering and data access
 
-2. **Individual Industry Pages** - 10 production-ready pages:
+2. **Individual Industry Pages** - 9 production-ready pages:
    - `/solutions/hospitality` - Hospitality & Restaurants SEO
    - `/solutions/ecommerce` - E-commerce & Retail SEO
    - `/solutions/manufacturing` - Manufacturing & Industrial SEO
@@ -2826,10 +2822,9 @@ Blog CMS implementation (Convex queries/mutations + admin routes + public blog r
    - `/solutions/agriculture` - Agriculture & Equipment SEO
    - `/solutions/technology` - Technology & SaaS SEO
    - `/solutions/health-wellness` - Health & Wellness SEO
-   - `/solutions/consulting-coaching` - Consulting & Coaching SEO
 
 3. **Solutions Landing Page** - Created `/solutions/index.tsx`:
-   - Directory of all 10 industries in responsive grid
+   - Directory of all 9 industries in responsive grid
    - "Why Industry-Specific Matters" explanation section
    - Links to individual solution pages
    - Clean, professional layout
@@ -2897,7 +2892,7 @@ Updated `src/config/brand.ts` navigation:
 - Build failures due to TypeScript unused import errors
 
 **Resolution:**
-- Fixed all 8 broken pages (agriculture, automotive, construction, consulting-coaching, health-wellness, logistics, manufacturing, technology)
+- Fixed all 7 broken pages (agriculture, automotive, construction, health-wellness, logistics, manufacturing, technology)
 - Updated icon imports to match each industry's data
 - Corrected meta titles and service schema names
 - Updated hardcoded section text to be industry-specific
@@ -2914,7 +2909,6 @@ Updated `src/config/brand.ts` navigation:
 - ✅ `src/routes/solutions.agriculture.tsx` - Agriculture page
 - ✅ `src/routes/solutions.automotive.tsx` - Automotive page
 - ✅ `src/routes/solutions.construction.tsx` - Construction page
-- ✅ `src/routes/solutions.consulting-coaching.tsx` - Consulting & Coaching page
 - ✅ `src/routes/solutions.health-wellness.tsx` - Health & Wellness page
 - ✅ `src/routes/solutions.logistics.tsx` - Logistics page
 - ✅ `src/routes/solutions.manufacturing.tsx` - Manufacturing page
@@ -2926,20 +2920,18 @@ Updated `src/config/brand.ts` navigation:
 
 ##### Client Company Mapping
 
-All 23 clients mapped to industries:
-- **Hospitality (3)**: Grove Bay Hospitality Group, Stubborn Seed, Stiltsville Fish Bar
-- **E-commerce (2)**: Modern House Numbers, 2Accept
+Clients mapped to industries:
+- **Hospitality (2)**: Grove Bay Hospitality Group, Stubborn Seed
+- **E-commerce (2)**: Modern House Numbers, Goldfarb & Associates
 - **Manufacturing (2)**: H&R Agri-Power, Revology Cars
 - **Logistics (1)**: Service Allies
-- **Automotive (1)**: Goldfarb & Associates
-- **Construction (1)**: Pioneer Security
+- **Home Services (1)**: Royal Covers
 - **Technology (1)**: Sorting Robotics
-- **Consulting (1)**: Desmond Speaks
-- **BPO/Recruitment (1)**: Afni Careers (job platform)
+- **BPO/Recruitment (1)**: Afni Careers
 
 ##### Production Status
 
-All 11 solutions pages are production-ready:
+All 10 solutions pages are production-ready:
 - ✅ All content written and reviewed
 - ✅ Industry-specific meta tags and structured data
 - ✅ Mobile responsive at all breakpoints
@@ -3036,7 +3028,7 @@ The blog CMS is **fully implemented**, not "to be implemented":
 
 **2. Route Count Updated**
 - Previous: "21 production-ready routes + 1 visual skeleton"
-- Corrected: "26 production-ready routes (21 marketing + 5 blog/admin)"
+- Corrected: "25 production-ready routes (20 marketing + 5 blog/admin)"
 
 **3. Tech Stack Versions Updated**
 Updated to match current package.json:
@@ -3079,7 +3071,7 @@ Added to project structure:
 
 ##### Current State
 - **Phase**: ✅ COMPLETE - Full-stack marketing site with blog CMS
-- **Routes**: 26 production-ready (21 marketing + 5 blog/admin)
+- **Routes**: 25 production-ready (20 marketing + 5 blog/admin)
 - **Blog**: Fully functional with public routes, admin panel, editor, Convex backend
 - **Code Quality**: 0 TypeScript errors, 0 linting errors
 
