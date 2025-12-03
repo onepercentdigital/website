@@ -101,10 +101,7 @@ export const navigation = {
       items: [
         { label: 'Agriculture & Equipment', href: '/solutions/agriculture' },
         { label: 'Automotive', href: '/solutions/automotive' },
-        {
-          label: 'Consulting & Coaching',
-          href: '/solutions/consulting-coaching',
-        },
+
         {
           label: 'Construction & Contractors',
           href: '/solutions/construction',
@@ -127,8 +124,8 @@ export const navigation = {
     },
   ],
   cta: {
-    label: 'Get Your Free AI Search Audit',
-    href: '/audit',
+    label: 'Apply To Work With Us',
+    href: '/apply',
   },
 };
 
@@ -157,7 +154,7 @@ export const footer = {
       links: [
         { label: 'About', href: '/about' },
         { label: 'Enterprise', href: '/enterprise' },
-        { label: 'Contact', href: '/audit' },
+        { label: 'Contact', href: '/apply' },
       ],
     },
     {
@@ -169,7 +166,7 @@ export const footer = {
     },
   ],
   cta: {
-    label: 'Get Your Free AI Search Audit',
-    href: '/audit',
+    label: 'Apply To Work With Us',
+    href: '/apply',
   },
 };

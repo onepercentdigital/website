@@ -11,7 +11,6 @@ import {
   Settings,
   ShoppingCart,
   Sparkles,
-  Star,
   Target,
   TrendingDown,
   TrendingUp,
@@ -25,7 +24,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { getCaseStudyById } from '@/data/case-studies';
 import { getSolutionBySlug } from '@/data/solutions';
 import { generateMetaTags } from '@/lib/seo';
 
@@ -42,9 +40,6 @@ export const Route = createFileRoute('/solutions/hospitality')({
 
 function HospitalityPage() {
   const solution = getSolutionBySlug('hospitality');
-  const caseStudy = solution?.featuredClient
-    ? getCaseStudyById(solution.featuredClient.caseStudyId)
-    : undefined;
 
   if (!solution) {
     return <div>Solution not found</div>;
@@ -103,8 +98,8 @@ function HospitalityPage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
-                  Get Your Free AI Search Audit
+                <Link to="/apply">
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -231,100 +226,6 @@ function HospitalityPage() {
         </div>
       </section>
 
-      {/* Featured Case Study Section */}
-      {caseStudy && (
-        <section className="px-6 py-20 lg:py-32">
-          <div className="mx-auto max-w-7xl">
-            <div className="rounded-3xl border border-border bg-card p-8 lg:p-12">
-              <div className="mb-6 inline-flex items-center rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5">
-                <Star className="mr-2 h-4 w-4 text-accent" />
-                <span className="font-semibold text-accent text-xs uppercase tracking-widest">
-                  Featured Case Study
-                </span>
-              </div>
-              <h2 className="mb-4 font-bold text-3xl leading-tight tracking-tight lg:text-4xl">
-                {caseStudy.title}
-              </h2>
-              <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                {solution.featuredClient?.tagline}
-              </p>
-
-              <div className="grid gap-8 lg:grid-cols-3">
-                <div className="space-y-6 lg:col-span-2">
-                  <div>
-                    <h3 className="mb-3 font-bold text-xl">The Challenge</h3>
-                    <p className="text-muted-foreground leading-relaxed tracking-wide">
-                      {caseStudy.challenge}
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="mb-3 font-bold text-xl">Our Solution</h3>
-                    <p className="text-muted-foreground leading-relaxed tracking-wide">
-                      {caseStudy.solution}
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="mb-3 font-bold text-xl">The Results</h3>
-                    <p className="text-muted-foreground leading-relaxed tracking-wide">
-                      {caseStudy.results}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  {caseStudy.metrics.map((metric, _index) => (
-                    <div
-                      key={metric.label}
-                      className="rounded-xl border border-border bg-background p-4"
-                    >
-                      <div className="font-extrabold text-4xl text-accent tracking-tight lg:text-5xl">
-                        {metric.value}
-                      </div>
-                      <div className="mt-1 font-semibold text-sm">
-                        {metric.label}
-                      </div>
-                      <div className="mt-1 text-muted-foreground text-xs tracking-wide">
-                        {metric.description}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {caseStudy.testimonial && (
-                <div className="mt-8 border-accent/20 border-l-4 bg-accent/5 p-6">
-                  <blockquote className="text-lg italic leading-relaxed tracking-wide">
-                    "{caseStudy.testimonial.quote}"
-                  </blockquote>
-                  <div className="mt-4 flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent font-semibold text-accent-foreground">
-                      {caseStudy.testimonial.initials}
-                    </div>
-                    <div>
-                      <div className="font-semibold">
-                        {caseStudy.testimonial.author}
-                      </div>
-                      <div className="text-muted-foreground text-sm">
-                        {caseStudy.testimonial.role}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              <div className="mt-8">
-                <Button asChild size="lg" variant="outline">
-                  <Link to="/case-studies">
-                    View All Case Studies
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Results Section */}
       <section className="border-border border-y bg-muted/30 px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
@@ -388,8 +289,8 @@ function HospitalityPage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <Link to="/audit">
-                Get Your Free AI Search Audit
+              <Link to="/apply">
+                Apply To Work With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

@@ -28,7 +28,7 @@ export const Route = createFileRoute('/customers')({
     generateMetaTags({
       title: 'Our Customers - Industry Leaders Powered by One Percent SEO',
       description:
-        'Join industry-leading companies like Grove Bay Hospitality, AFNI, Sorting Robotics, and more who trust One Percent SEO to dominate search results and drive real revenue growth.',
+        'Join industry-leading companies like Grove Bay Hospitality, Afni Careers, Sorting Robotics, and more who trust One Percent SEO to dominate search results and drive real revenue growth.',
       url: 'https://onepercentseo.com/customers',
     }),
 });
@@ -65,9 +65,8 @@ function CustomersPage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
-                  Get Your Free AI Search Audit{' '}
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Link to="/apply">
+                  Apply To Work With Us <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -120,11 +119,11 @@ function CustomersPage() {
               <div className="mb-4 inline-flex rounded-full bg-accent/10 p-4">
                 <Award className="h-8 w-8 text-accent" />
               </div>
-              <div className="mb-2 font-extrabold text-5xl text-accent leading-none tracking-tight lg:text-7xl xl:text-8xl">
-                95%
+              <div className="mb-2 font-extrabold text-4xl text-accent leading-none tracking-tight lg:text-5xl xl:text-6xl">
+                Industry
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Client Retention Rate
+                Leading Retention
               </div>
             </div>
           </div>
@@ -343,9 +342,8 @@ function CustomersPage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
-                  Get Your Free AI Search Audit{' '}
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Link to="/apply">
+                  Apply To Work With Us <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">

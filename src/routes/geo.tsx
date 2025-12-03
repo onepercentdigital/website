@@ -76,7 +76,7 @@ function GEOPage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
+                <Link to="/apply">
                   Get Your Free GEO Audit
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -431,18 +431,18 @@ function GEOPage() {
               </div>
               <div className="mt-10 rounded-2xl border border-border bg-card p-6">
                 <p className="text-muted-foreground italic leading-relaxed tracking-wide">
-                  "Within 3 months of implementing GEO strategy, ChatGPT started
-                  recommending us as the top solution in our category. Our brand
-                  awareness has exploded."
+                  "One Percent SEO helped us become the go-to recommendation in
+                  ChatGPT for diesel injection pumps. When AI platforms
+                  recommend you by name, that's when you know you've made it."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="flex size-12 items-center justify-center rounded-full bg-accent/10">
                     <Users className="size-6 text-accent" />
                   </div>
                   <div>
-                    <div className="font-semibold">Sarah Chen</div>
+                    <div className="font-semibold">Scott Goldfarb</div>
                     <div className="text-muted-foreground text-sm">
-                      CEO, TechCorp
+                      Owner, Goldfarb & Associates
                     </div>
                   </div>
                 </div>
@@ -563,7 +563,7 @@ function GEOPage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <Link to="/audit">
+              <Link to="/apply">
                 Get Your Free GEO Audit
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

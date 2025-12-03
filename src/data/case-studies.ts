@@ -35,185 +35,133 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: 'grove-bay-hospitality',
-    title: 'From Local Restaurant to Hospitality Empire',
-    client: 'Grove Bay Hospitality Group',
-    industry: 'Hospitality',
+    id: 'revology-cars',
+    title: 'The Acquisition Story',
+    client: 'Revology Cars',
+    industry: 'Automotive',
     featured: true,
-    services: ['SEO', 'GEO', 'Local SEO'],
+    services: ['SEO', 'GEO', 'Content Strategy', 'Link Building'],
     challenge:
-      "Grove Bay Hospitality Group operated multiple high-end restaurants across Miami but struggled with online visibility. Despite exceptional food and service, they were losing customers to competitors with stronger digital presence. Local searches weren't surfacing their locations, and AI assistants rarely recommended their venues.",
+      'Revology manufactures brand-new reproduction 1967-1969 Mustangs and Shelby GTs - a highly specialized niche. They needed to educate a luxury market that their engineered reproductions were superior to traditional restorations, while competing against countless classic car shops for visibility.',
     solution:
-      'We implemented a comprehensive SEO and GEO strategy focusing on local search dominance and AI visibility. This included technical SEO optimization across all location pages, strategic content highlighting their unique dining experiences, and aggressive local citation building. We optimized for AI search engines, ensuring their restaurants appeared in conversational queries about Miami dining.',
+      'We built a comprehensive content and link building strategy targeting classic car enthusiasts and collectors. Through strategic content positioning and authority building, we established Revology as the definitive source for engineered classic Mustangs, while optimizing for AI visibility to ensure consistent citations in ChatGPT and other platforms.',
     results:
-      "Within 12 months, Grove Bay dominated local search results for high-value keywords like 'best restaurants Miami' and 'waterfront dining.' Their reservation volume increased 425% year-over-year, with 65% of new customers discovering them through search. AI assistants now consistently recommend their venues for Miami dining queries.",
+      'We helped take Revology to an exit, heavily relying on traditional search. The company that acquired them continued on with us - a testament to the sustainable value we built.',
     metrics: [
       {
-        label: 'Organic Traffic Growth',
-        value: '425%',
-        description: 'Year-over-year increase in website visitors',
+        label: 'Outcome',
+        value: 'Acquisition',
+        description: 'Successful company exit',
       },
       {
-        label: 'Reservation Increase',
-        value: '380%',
-        description: 'More online bookings from organic search',
+        label: 'Search Rankings',
+        value: 'Page 1',
+        description: 'Competitive classic car terms',
       },
       {
         label: 'AI Visibility',
-        value: '85%',
-        description: 'Appearance rate in AI search results',
+        value: 'ChatGPT',
+        description: 'Consistent platform citations',
       },
       {
-        label: 'ROI',
-        value: '12x',
-        description: 'Return on SEO/GEO investment',
+        label: 'Client Retention',
+        value: 'Acquirer',
+        description: 'New owner retained partnership',
       },
     ],
     testimonial: {
       quote:
-        'One Percent SEO transformed our digital presence. We went from invisible online to dominating search results. The AI search optimization alone has driven millions in new revenue.',
-      author: 'Ignacio Garcia-Menocal',
-      role: 'CEO, Grove Bay Hospitality Group',
-      initials: 'IG',
+        'The SEO strategy One Percent built for us was foundational to our success. When we were acquired, the new ownership immediately recognized the value and kept the partnership going.',
+      author: 'Revology Cars',
+      role: 'Restomod Manufacturer',
+      initials: 'RC',
     },
   },
   {
-    id: 'stubborn-seed',
-    title: "Michelin-Starred Restaurant's Digital Breakthrough",
-    client: 'Stubborn Seed',
-    industry: 'Fine Dining',
+    id: 'goldfarb-associates',
+    title: '10x Revenue Growth',
+    client: 'Goldfarb & Associates',
+    industry: 'E-commerce',
     featured: false,
-    services: ['GEO', 'Content Marketing', 'Local SEO'],
+    services: ['SEO', 'GEO', 'E-commerce Optimization'],
     challenge:
-      "Despite being a Michelin-starred restaurant, Stubborn Seed's online presence didn't reflect their culinary excellence. They were invisible in AI-powered search assistants and struggling to reach affluent diners searching for fine dining experiences in Miami.",
+      'Goldfarb sells new, used, and remanufactured diesel parts to buyers worldwide - managing tens of thousands of SKUs with complex part compatibility requirements. They struggled to stand out in a crowded e-commerce space where technical specifications matter more than brand recognition.',
     solution:
-      "We focused on GEO optimization to ensure AI assistants understood and recommended Stubborn Seed for premium dining queries. Combined with rich content showcasing their culinary artistry, seasonal menus, and chef profiles, we positioned them as Miami's premier fine dining destination in both traditional and AI search.",
+      'Our e-commerce optimization strategy focused on product visibility, technical SEO for their massive catalog, and content that addressed buyer questions at every stage. We optimized for both traditional search and AI platforms, positioning Goldfarb as the go-to source for diesel parts information.',
     results:
-      "Stubborn Seed now appears in 92% of AI-powered searches for 'Michelin restaurants Miami' and 'fine dining South Florida.' Organic search drives 70% of their new reservations, with an average check size 35% higher than walk-in customers.",
+      'Goldfarb became one of the most recommended injection pump online stores in ChatGPT, along with dominating traditional search. They increased revenue by 10x while moving tens of thousands of SKUs to buyers around the world.',
     metrics: [
       {
-        label: 'AI Search Visibility',
-        value: '92%',
-        description: 'Appearance in AI-powered dining recommendations',
+        label: 'Revenue Growth',
+        value: '10x',
+        description: 'Overall business growth',
       },
       {
-        label: 'Organic Reservations',
-        value: '70%',
-        description: 'Bookings from search traffic',
+        label: 'AI Recognition',
+        value: '#1',
+        description: 'Top ChatGPT recommendation for injection pumps',
       },
       {
-        label: 'Average Check Increase',
-        value: '35%',
-        description: 'Higher spend from search customers',
+        label: 'SKUs Sold',
+        value: '10,000s',
+        description: 'Products sold globally',
+      },
+      {
+        label: 'Market Position',
+        value: 'Authority',
+        description: 'E-commerce category leader',
       },
     ],
     testimonial: {
       quote:
-        'The GEO optimization changed everything. AI assistants now recommend us to the exact customers we want to serve - food enthusiasts willing to invest in exceptional dining.',
-      author: 'Jeremy Ford',
-      role: 'Chef & Owner, Stubborn Seed',
-      initials: 'JF',
+        'Working with One Percent SEO transformed our online presence. We went from being invisible to dominating our market. The team understands e-commerce and delivers real results.',
+      author: 'Scott Goldfarb',
+      role: 'Owner, Goldfarb & Associates',
+      initials: 'SG',
     },
   },
   {
-    id: 'hr-agripower',
-    title: 'Agricultural Equipment Dealer Conquers Regional Market',
-    client: 'H&R Agri-Power',
-    industry: 'Manufacturing',
+    id: 'royal-covers',
+    title: 'Record-Breaking Success',
+    client: 'Royal Covers',
+    industry: 'Home Services',
     featured: false,
-    services: ['SEO', 'Technical SEO', 'Link Building'],
+    services: ['SEO', 'GEO', 'Local SEO', 'Maps Optimization'],
     challenge:
-      "H&R Agri-Power, a John Deere dealer serving multiple states, was losing market share to national competitors with larger marketing budgets. Their website wasn't ranking for crucial equipment searches, and farmers couldn't find them when researching machinery purchases online.",
+      "Royal Covers, established in 1979, faced fierce local competition in the Phoenix patio cover market. Despite 40+ years of experience, they weren't appearing where Arizona homeowners were searching - neither in organic results nor local maps.",
     solution:
-      "We rebuilt their technical SEO foundation, optimized product pages for specific equipment models, and created authoritative content answering farmers' questions. Strategic link building from agricultural publications and industry associations established their expertise. We targeted high-intent keywords like 'John Deere dealer [location]' and specific equipment model searches.",
+      "We implemented a comprehensive local SEO and GEO strategy, optimizing their presence across all Arizona service areas. We dominated local maps for patio cover searches throughout the state while building content authority that positioned them as Arizona's premier installer.",
     results:
-      "H&R Agri-Power now ranks #1 for over 200 equipment-related keywords across their service areas. Organic search drives 58% of their sales leads, with a 45% close rate on search-driven inquiries. They've become the go-to dealer for farmers researching equipment online.",
+      "Royal Covers became the #1 patio cover company in Arizona, achieving top local maps rankings across the entire state. They've now had record-breaking revenue 3 years in a row.",
     metrics: [
       {
-        label: 'Keyword Rankings',
-        value: '200+',
-        description: 'First-page rankings for equipment searches',
+        label: 'Market Position',
+        value: '#1',
+        description: 'Top patio cover company in Arizona',
       },
       {
-        label: 'Organic Leads',
-        value: '58%',
-        description: 'Sales inquiries from search traffic',
+        label: 'Local Maps',
+        value: 'Top 3',
+        description: 'Rankings across all Arizona service areas',
       },
       {
-        label: 'Lead Close Rate',
-        value: '45%',
-        description: 'Conversion rate on organic leads',
-      },
-    ],
-  },
-  {
-    id: 'afni',
-    title: 'BPO Provider Scales Through Search Dominance',
-    client: 'AFNI',
-    industry: 'Technology',
-    featured: false,
-    services: ['SEO', 'GEO', 'Content Marketing', 'Link Building'],
-    challenge:
-      "AFNI, a business process outsourcing provider, operated in a crowded market with fierce competition. Decision-makers researching BPO solutions couldn't find them online, and AI assistants never recommended their services despite their superior capabilities and track record.",
-    solution:
-      'We executed a comprehensive SEO and GEO strategy targeting enterprise decision-makers. This included thought leadership content positioning AFNI experts as industry authorities, technical optimization for B2B search patterns, and strategic link acquisition from business publications. We optimized for AI visibility, ensuring AFNI appeared in conversational queries about outsourcing solutions.',
-    results:
-      "AFNI now dominates search results for high-value BPO keywords, appearing on page one for 85% of their target terms. Organic search generates 40% of their qualified leads, with an average contract value of $500K+. They've closed $15M in new business directly attributed to search visibility.",
-    metrics: [
-      {
-        label: 'Page One Rankings',
-        value: '85%',
-        description: 'Target keywords ranking on first page',
+        label: 'Revenue Records',
+        value: '3 Years',
+        description: 'Consecutive record-breaking revenue',
       },
       {
-        label: 'Qualified Leads',
-        value: '40%',
-        description: 'Enterprise leads from organic search',
-      },
-      {
-        label: 'New Business',
-        value: '$15M',
-        description: 'Revenue from search-driven contracts',
+        label: 'Legacy Amplified',
+        value: '40+',
+        description: 'Years of experience now visible online',
       },
     ],
     testimonial: {
       quote:
-        'Search visibility has become our most valuable sales channel. Enterprise prospects find us, research us, and come to conversations already convinced of our expertise.',
-      author: 'Mark Titus',
-      role: 'VP of Marketing, AFNI',
-      initials: 'MT',
+        "After 40+ years in business, One Percent SEO helped us finally dominate online. We're now the #1 patio cover company in Arizona with three straight years of record revenue.",
+      author: 'Tanner Bishop',
+      role: 'Owner, Royal Covers',
+      initials: 'TB',
     },
-  },
-  {
-    id: 'revology',
-    title: 'Luxury Automotive Brand Accelerates Sales',
-    client: 'Revology Cars',
-    industry: 'Manufacturing',
-    featured: false,
-    services: ['SEO', 'GEO', 'Content Marketing'],
-    challenge:
-      'Revology Cars creates hand-built, modern interpretations of classic Mustangs, selling for $250K+. Their niche market made traditional advertising inefficient, and they struggled to reach affluent car enthusiasts actively searching for unique vehicles. Zero AI visibility meant missing conversations about custom luxury cars.',
-    solution:
-      "We developed a content-rich SEO strategy showcasing their craftsmanship, customization options, and restoration expertise. Combined with GEO optimization for luxury automotive queries, we positioned Revology as the answer to searches for 'custom classic cars' and 'restomod Mustangs.' Technical SEO ensured fast, flawless mobile experience for browsing their portfolio.",
-    results:
-      "Organic search now drives 75% of Revology's qualified leads, with prospects arriving educated and ready to purchase. They've sold $8M in vehicles directly attributed to search visibility. AI assistants consistently recommend Revology when asked about high-end classic car builders.",
-    metrics: [
-      {
-        label: 'Organic Leads',
-        value: '75%',
-        description: 'Qualified buyers from search',
-      },
-      {
-        label: 'Vehicle Sales',
-        value: '$8M',
-        description: 'Revenue from search-driven customers',
-      },
-      {
-        label: 'Average Sale',
-        value: '$285K',
-        description: 'Value per search-attributed vehicle',
-      },
-    ],
   },
 ];
 
@@ -221,11 +169,9 @@ export const caseStudies: CaseStudy[] = [
  * Industry categories for filtering
  */
 export const industries = [
-  'Hospitality',
-  'Fine Dining',
-  'Technology',
-  'Manufacturing',
-  'Services',
+  'Automotive',
+  'E-commerce',
+  'Home Services',
 ] as const;
 
 export type Industry = (typeof industries)[number];
@@ -237,9 +183,10 @@ export const services = [
   'SEO',
   'GEO',
   'Local SEO',
-  'Technical SEO',
-  'Content Marketing',
+  'E-commerce Optimization',
+  'Content Strategy',
   'Link Building',
+  'Maps Optimization',
 ] as const;
 
 export type Service = (typeof services)[number];
@@ -289,7 +236,7 @@ export function getCaseStudyById(id: string): CaseStudy | undefined {
 export function getAggregateMetrics() {
   return {
     totalClients: caseStudies.length,
-    averageGrowth: '350%',
+    averageGrowth: '10x',
     industriesServed: new Set(caseStudies.map((s) => s.industry)).size,
   };
 }

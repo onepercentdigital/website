@@ -55,8 +55,8 @@ function HomePage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
-                  Get Your Free AI Search Audit
+                <Link to="/apply">
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -185,10 +185,10 @@ function HomePage() {
                 <Award className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
-                95%
+                300+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Client retention rate year-over-year
+                Businesses served since 2012
               </div>
             </div>
             <div className="text-center">
@@ -224,33 +224,35 @@ function HomePage() {
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="p-8 lg:p-12">
                 <div className="mb-4 inline-block rounded-full bg-accent/10 px-4 py-1 font-semibold text-accent text-xs uppercase tracking-widest">
-                  Case Study
+                  Featured Case Study
                 </div>
                 <h2 className="mb-4 font-bold text-3xl lg:text-4xl">
-                  From Invisible to Industry Leader
+                  Revology Cars: The Acquisition Story
                 </h2>
                 <p className="mb-6 text-lg text-muted-foreground leading-relaxed">
-                  See how we helped a B2B SaaS company achieve 1444% organic
-                  traffic growth and dominate their market through our combined
-                  GEO and SEO strategy.
+                  See how we helped a luxury restomod manufacturer dominate
+                  search for classic Mustangs, get cited by ChatGPT, and
+                  ultimately achieve a successful exit.
                 </p>
                 <div className="mb-8 space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="font-bold text-3xl text-accent">1444%</div>
+                    <div className="font-bold text-3xl text-accent">Exit</div>
                     <div className="text-muted-foreground tracking-wide">
-                      Organic traffic growth
+                      Successful company acquisition
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="font-bold text-3xl text-accent">320%</div>
+                    <div className="font-bold text-3xl text-accent">Page 1</div>
                     <div className="text-muted-foreground tracking-wide">
-                      Increase in qualified leads
+                      Rankings for competitive classic car terms
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="font-bold text-3xl text-accent">$8.2M</div>
+                    <div className="font-bold text-3xl text-accent">
+                      ChatGPT
+                    </div>
                     <div className="text-muted-foreground tracking-wide">
-                      Revenue attributed to organic search
+                      Consistent AI platform citations
                     </div>
                   </div>
                 </div>
@@ -265,10 +267,17 @@ function HomePage() {
                 </Button>
               </div>
               <div className="relative min-h-[300px] bg-secondary lg:min-h-[400px]">
-                {/* Placeholder for case study image or chart */}
                 <div className="flex h-full items-center justify-center p-8">
-                  <div className="text-center text-muted-foreground">
-                    [Case Study Visual / Chart]
+                  <div className="text-center">
+                    <div className="mb-4 font-bold text-6xl text-accent">
+                      RC
+                    </div>
+                    <div className="font-semibold text-foreground text-xl">
+                      Revology Cars
+                    </div>
+                    <div className="text-muted-foreground">
+                      Automotive · Restomod
+                    </div>
                   </div>
                 </div>
               </div>
@@ -290,66 +299,50 @@ function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
-            {/* Testimonial 1 */}
+          <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2">
+            {/* Testimonial 1 - Goldfarb */}
             <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm">
               <div className="mb-6 text-2xl text-accent">"</div>
               <p className="mb-6 text-foreground leading-relaxed">
-                One Percent SEO transformed our online presence. We went from
-                barely ranking to dominating our industry keywords in just 6
-                months.
+                Working with One Percent SEO transformed our online presence. We
+                went from being invisible to dominating our market. They
+                understand e-commerce and deliver real results. We're now one of
+                the top recommendations in ChatGPT for diesel injection pumps.
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
-                  JD
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground">John Doe</div>
-                  <div className="text-muted-foreground text-sm">
-                    CEO, TechCorp
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm">
-              <div className="mb-6 text-2xl text-accent">"</div>
-              <p className="mb-6 text-foreground leading-relaxed">
-                The ROI from our SEO investment has been incredible. We're now
-                the go-to solution when our customers search for answers.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
-                  SK
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground">Sarah Kim</div>
-                  <div className="text-muted-foreground text-sm">
-                    VP Marketing, GrowthCo
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm">
-              <div className="mb-6 text-2xl text-accent">"</div>
-              <p className="mb-6 text-foreground leading-relaxed">
-                Their GEO strategy has positioned us perfectly for the AI-first
-                future. We're already seeing traffic from AI-powered search
-                tools.
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
-                  MP
+                  SG
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">
-                    Michael Park
+                    Scott Goldfarb
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Founder, InnovateAI
+                    Owner, Goldfarb & Associates
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 - Royal Covers */}
+            <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm">
+              <div className="mb-6 text-2xl text-accent">"</div>
+              <p className="mb-6 text-foreground leading-relaxed">
+                After 40+ years in business, One Percent SEO helped us finally
+                dominate online. We're now the #1 patio cover company in Arizona
+                with three straight years of record-breaking revenue. Their
+                local SEO strategy changed everything for us.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
+                  TB
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">
+                    Tanner Bishop
+                  </div>
+                  <div className="text-muted-foreground text-sm">
+                    Owner, Royal Covers
                   </div>
                 </div>
               </div>
@@ -374,8 +367,8 @@ function HomePage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <Link to="/audit">
-                Get Your Free AI Search Audit
+              <Link to="/apply">
+                Apply To Work With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

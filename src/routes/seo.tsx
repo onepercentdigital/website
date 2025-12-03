@@ -76,7 +76,7 @@ function SEOPage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
+                <Link to="/apply">
                   Get Your Free SEO Audit
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -112,10 +112,10 @@ function SEOPage() {
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 <div className="rounded-xl border border-border bg-card p-4">
                   <div className="font-extrabold text-3xl text-accent tracking-tight">
-                    95%
+                    300+
                   </div>
                   <div className="mt-1 text-muted-foreground text-sm tracking-wide">
-                    Client Retention
+                    Businesses Served
                   </div>
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4">
@@ -128,7 +128,7 @@ function SEOPage() {
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4">
                   <div className="font-extrabold text-3xl text-accent tracking-tight">
-                    1444%
+                    $200M+
                   </div>
                   <div className="mt-1 text-muted-foreground text-sm tracking-wide">
                     Client Revenue Impact
@@ -398,10 +398,10 @@ function SEOPage() {
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    1444%
+                    $200M+
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
-                    Revenue Growth Impact
+                    Client Revenue Generated
                   </div>
                 </div>
                 <div>
@@ -414,35 +414,35 @@ function SEOPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    $150M+
+                    300+
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
-                    Client Revenue Generated
+                    Businesses Served
                   </div>
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    95%
+                    12+
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
-                    Client Retention Rate
+                    Years of Experience
                   </div>
                 </div>
               </div>
               <div className="mt-10 rounded-2xl border border-border bg-card p-6">
                 <p className="text-muted-foreground italic leading-relaxed tracking-wide">
-                  "Our organic traffic grew 420% in the first year. SEO went
-                  from a cost center to our highest-ROI channel. The compound
-                  growth effect is incredible."
+                  "Working with One Percent SEO transformed our online presence.
+                  We went from being invisible to dominating our market. The
+                  team understands e-commerce and delivers real results."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="flex size-12 items-center justify-center rounded-full bg-accent/10">
                     <Users className="size-6 text-accent" />
                   </div>
                   <div>
-                    <div className="font-semibold">Michael Rodriguez</div>
+                    <div className="font-semibold">Scott Goldfarb</div>
                     <div className="text-muted-foreground text-sm">
-                      VP Marketing, SaaS Company
+                      Owner, Goldfarb & Associates
                     </div>
                   </div>
                 </div>
@@ -487,8 +487,8 @@ function SEOPage() {
                 We don't make ranking guarantees because Google's algorithm is
                 constantly evolving and no agency can control it. Instead, we
                 focus on the metrics that matter: qualified traffic, lead
-                generation, and revenue growth. Our 95% client retention rate
-                speaks to the consistent results we deliver.
+                generation, and revenue growth. Our industry-leading client
+                retention speaks to the consistent results we deliver.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -574,7 +574,7 @@ function SEOPage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <Link to="/audit">
+              <Link to="/apply">
                 Get Your Free SEO Audit
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

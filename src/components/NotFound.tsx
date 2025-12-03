@@ -31,11 +31,11 @@ export function NotFound() {
                 Back to Home
               </Link>
               <Link
-                to="/audit"
+                to="/apply"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-8 py-4 transition-colors hover:border-accent/50"
               >
                 <Calendar className="h-5 w-5" />
-                Get Your Free AI Search Audit
+                Apply To Work With Us
               </Link>
             </div>
 

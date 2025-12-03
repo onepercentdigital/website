@@ -18,18 +18,18 @@ import {
 } from '@/components/ui/accordion';
 import { generateMetaTags } from '@/lib/seo';
 
-export const Route = createFileRoute('/audit')({
-  component: AuditPage,
+export const Route = createFileRoute('/apply')({
+  component: ApplyPage,
   head: () =>
     generateMetaTags({
-      title: 'Free AI Search Audit | One Percent SEO',
+      title: 'Apply To Work With Us | One Percent SEO',
       description:
-        "Discover how you're performing in AI search engines like ChatGPT, Perplexity, and Claude. Get a free 30-minute strategy session and custom roadmap.",
-      url: 'https://onepercentseo.com/audit',
+        'Schedule a consultation to discuss how we can help your business dominate AI and traditional search. We work with serious brands ready to invest in growth.',
+      url: 'https://onepercentseo.com/apply',
     }),
 });
 
-function AuditPage() {
+function ApplyPage() {
   return (
     <>
       {/* Hero Section with Calendly Embed */}
@@ -39,12 +39,12 @@ function AuditPage() {
             {/* Left: Hero Content */}
             <div className="lg:py-12">
               <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl">
-                Get Your Free AI Search Audit
+                Apply To Work With Us
               </h1>
               <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
-                Discover exactly how you're performing in AI search engines like
-                ChatGPT, Perplexity, and Claude. Get a personalized 30-minute
-                strategy session and actionable roadmap — completely free.
+                We partner with serious brands ready to dominate both AI and
+                traditional search. Schedule a consultation to discuss your
+                goals and see if we're the right fit for each other.
               </p>
 
               {/* Key Benefits List */}
@@ -55,10 +55,11 @@ function AuditPage() {
                   </div>
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
-                      AI Search Visibility Analysis
+                      Strategic Assessment
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      See where you're losing traffic to AI engines
+                      We'll evaluate your current search presence and growth
+                      potential
                     </p>
                   </div>
                 </div>
@@ -69,10 +70,11 @@ function AuditPage() {
                   </div>
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
-                      Competitive Intelligence
+                      Competitive Analysis
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Learn how competitors rank in AI vs traditional search
+                      Understand where you stand against competitors in AI and
+                      traditional search
                     </p>
                   </div>
                 </div>
@@ -83,10 +85,11 @@ function AuditPage() {
                   </div>
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
-                      Actionable Roadmap
+                      Partnership Discussion
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Prioritized strategy for SEO + GEO optimization
+                      Explore how our SEO and GEO expertise can accelerate your
+                      growth
                     </p>
                   </div>
                 </div>
@@ -97,10 +100,11 @@ function AuditPage() {
                   </div>
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
-                      Revenue Projections
+                      Custom Recommendations
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Understand the ROI potential of AI visibility
+                      Receive tailored insights specific to your industry and
+                      goals
                     </p>
                   </div>
                 </div>
@@ -111,10 +115,10 @@ function AuditPage() {
                   </div>
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
-                      Zero Risk, Zero Obligation
+                      No Pressure, Just Value
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Completely free with no credit card required
+                      A consultative conversation focused on your success
                     </p>
                   </div>
                 </div>
@@ -139,8 +143,7 @@ function AuditPage() {
               What to Expect
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground tracking-wide">
-              Here's exactly how the process works from booking to
-              implementation.
+              Here's how our consultation process works.
             </p>
           </div>
 
@@ -155,7 +158,7 @@ function AuditPage() {
                   01
                 </div>
               </div>
-              <h3 className="mb-3 font-bold text-2xl">Book Your Call</h3>
+              <h3 className="mb-3 font-bold text-2xl">Schedule a Call</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
                 Choose a convenient time using the scheduler above. Takes less
                 than 2 minutes.
@@ -172,10 +175,10 @@ function AuditPage() {
                   02
                 </div>
               </div>
-              <h3 className="mb-3 font-bold text-2xl">We Do the Research</h3>
+              <h3 className="mb-3 font-bold text-2xl">We Do Our Homework</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                Within 24 hours, we analyze your current search presence across
-                Google and AI engines.
+                Before our call, we research your business, industry, and
+                current search presence.
               </p>
             </div>
 
@@ -189,10 +192,10 @@ function AuditPage() {
                   03
                 </div>
               </div>
-              <h3 className="mb-3 font-bold text-2xl">Strategy Session</h3>
+              <h3 className="mb-3 font-bold text-2xl">Consultation Call</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                30-minute video call where we walk through findings,
-                opportunities, and competitive insights.
+                A 30-minute video call to discuss your goals, challenges, and
+                how we can help.
               </p>
             </div>
 
@@ -206,10 +209,10 @@ function AuditPage() {
                   04
                 </div>
               </div>
-              <h3 className="mb-3 font-bold text-2xl">Custom Roadmap</h3>
+              <h3 className="mb-3 font-bold text-2xl">Next Steps</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                Receive your personalized action plan with prioritized tactics
-                you can implement immediately.
+                If we're a good fit, we'll outline a custom strategy and
+                partnership proposal.
               </p>
             </div>
           </div>
@@ -225,10 +228,10 @@ function AuditPage() {
                 <TrendingUp className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
-                95%
+                300+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Client Retention Rate
+                Businesses Served Since 2012
               </div>
             </div>
 
@@ -267,56 +270,51 @@ function AuditPage() {
               Frequently Asked Questions
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground tracking-wide">
-              Everything you need to know about your free audit
+              Common questions about working with us
             </p>
           </div>
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left font-semibold text-lg">
-                What happens during the audit?
+                What happens during the consultation?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Before our call, we analyze your current search visibility
-                across Google, ChatGPT, Perplexity, Claude, and other AI search
-                engines. We research your competitors, identify ranking gaps,
-                and assess your content's AI visibility. During our 30-minute
-                video consultation, we walk through these findings, explain the
-                opportunities we've identified, and answer all your questions.
-                After the call, you'll receive a custom roadmap with prioritized
-                action items specific to your business.
+                Before our call, we research your business and current search
+                presence. During our 30-minute video consultation, we discuss
+                your goals, challenges, and growth opportunities. We'll share
+                insights about your competitive landscape in both traditional
+                and AI search. If we're a good fit, we'll outline potential next
+                steps for a partnership.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-left font-semibold text-lg">
-                Is this really free? What's the catch?
+                Who is a good fit for your services?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Yes, it's completely free. No credit card required, no hidden
-                fees, no obligations. We offer these audits because we're
-                confident in the value we provide — most businesses are shocked
-                by how much opportunity they're missing in AI search. If you
-                decide you want help implementing the strategy, we'd love to
-                work together. But there's zero pressure. Many companies use our
-                audit to improve their search presence on their own, and we're
-                happy to help either way.
+                We work with serious brands ready to invest in long-term growth
+                through search. Ideal clients include established businesses
+                with proven products or services, companies with realistic
+                expectations about SEO timelines, and organizations committed to
+                building sustainable competitive advantages. We're selective
+                about partnerships because we're invested in delivering real
+                results.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-left font-semibold text-lg">
-                Who should book this audit?
+                What industries do you work with?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                This audit is perfect for businesses that depend on search
-                traffic and want to stay ahead of the AI search revolution.
-                Ideal candidates include B2B companies, professional services,
-                e-commerce brands, multi-location businesses, and anyone who's
-                noticed their organic traffic declining or plateauing. If you're
-                investing in SEO but not seeing results, or if you're curious
-                about AI search but don't know where to start, this audit will
-                give you clarity and direction.
+                Since 2012, we've helped over 300 businesses across North
+                America in diverse industries — from hospitality and e-commerce
+                to manufacturing and professional services. We're frequently
+                approached by multinational companies, digital marketing
+                agencies, and other SEO agencies for consulting. Our strategies
+                adapt to your specific market and competitive landscape.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

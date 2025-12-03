@@ -14,7 +14,7 @@ import { Route as GeoRouteImport } from './routes/geo'
 import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as CustomersRouteImport } from './routes/customers'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
-import { Route as AuditRouteImport } from './routes/audit'
+import { Route as ApplyRouteImport } from './routes/apply'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
@@ -26,7 +26,6 @@ import { Route as SolutionsLogisticsRouteImport } from './routes/solutions.logis
 import { Route as SolutionsHospitalityRouteImport } from './routes/solutions.hospitality'
 import { Route as SolutionsHealthWellnessRouteImport } from './routes/solutions.health-wellness'
 import { Route as SolutionsEcommerceRouteImport } from './routes/solutions.ecommerce'
-import { Route as SolutionsConsultingCoachingRouteImport } from './routes/solutions.consulting-coaching'
 import { Route as SolutionsConstructionRouteImport } from './routes/solutions.construction'
 import { Route as SolutionsAutomotiveRouteImport } from './routes/solutions.automotive'
 import { Route as SolutionsAgricultureRouteImport } from './routes/solutions.agriculture'
@@ -60,9 +59,9 @@ const CaseStudiesRoute = CaseStudiesRouteImport.update({
   path: '/case-studies',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuditRoute = AuditRouteImport.update({
-  id: '/audit',
-  path: '/audit',
+const ApplyRoute = ApplyRouteImport.update({
+  id: '/apply',
+  path: '/apply',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -120,12 +119,6 @@ const SolutionsEcommerceRoute = SolutionsEcommerceRouteImport.update({
   path: '/solutions/ecommerce',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SolutionsConsultingCoachingRoute =
-  SolutionsConsultingCoachingRouteImport.update({
-    id: '/solutions/consulting-coaching',
-    path: '/solutions/consulting-coaching',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const SolutionsConstructionRoute = SolutionsConstructionRouteImport.update({
   id: '/solutions/construction',
   path: '/solutions/construction',
@@ -165,7 +158,7 @@ const AdminPostsIdEditRoute = AdminPostsIdEditRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/audit': typeof AuditRoute
+  '/apply': typeof ApplyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
@@ -175,7 +168,6 @@ export interface FileRoutesByFullPath {
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
   '/solutions/construction': typeof SolutionsConstructionRoute
-  '/solutions/consulting-coaching': typeof SolutionsConsultingCoachingRoute
   '/solutions/ecommerce': typeof SolutionsEcommerceRoute
   '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
   '/solutions/hospitality': typeof SolutionsHospitalityRoute
@@ -192,7 +184,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/audit': typeof AuditRoute
+  '/apply': typeof ApplyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
@@ -202,7 +194,6 @@ export interface FileRoutesByTo {
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
   '/solutions/construction': typeof SolutionsConstructionRoute
-  '/solutions/consulting-coaching': typeof SolutionsConsultingCoachingRoute
   '/solutions/ecommerce': typeof SolutionsEcommerceRoute
   '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
   '/solutions/hospitality': typeof SolutionsHospitalityRoute
@@ -220,7 +211,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/audit': typeof AuditRoute
+  '/apply': typeof ApplyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
@@ -230,7 +221,6 @@ export interface FileRoutesById {
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
   '/solutions/construction': typeof SolutionsConstructionRoute
-  '/solutions/consulting-coaching': typeof SolutionsConsultingCoachingRoute
   '/solutions/ecommerce': typeof SolutionsEcommerceRoute
   '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
   '/solutions/hospitality': typeof SolutionsHospitalityRoute
@@ -249,7 +239,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
-    | '/audit'
+    | '/apply'
     | '/case-studies'
     | '/customers'
     | '/enterprise'
@@ -259,7 +249,6 @@ export interface FileRouteTypes {
     | '/solutions/agriculture'
     | '/solutions/automotive'
     | '/solutions/construction'
-    | '/solutions/consulting-coaching'
     | '/solutions/ecommerce'
     | '/solutions/health-wellness'
     | '/solutions/hospitality'
@@ -276,7 +265,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
-    | '/audit'
+    | '/apply'
     | '/case-studies'
     | '/customers'
     | '/enterprise'
@@ -286,7 +275,6 @@ export interface FileRouteTypes {
     | '/solutions/agriculture'
     | '/solutions/automotive'
     | '/solutions/construction'
-    | '/solutions/consulting-coaching'
     | '/solutions/ecommerce'
     | '/solutions/health-wellness'
     | '/solutions/hospitality'
@@ -303,7 +291,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
-    | '/audit'
+    | '/apply'
     | '/case-studies'
     | '/customers'
     | '/enterprise'
@@ -313,7 +301,6 @@ export interface FileRouteTypes {
     | '/solutions/agriculture'
     | '/solutions/automotive'
     | '/solutions/construction'
-    | '/solutions/consulting-coaching'
     | '/solutions/ecommerce'
     | '/solutions/health-wellness'
     | '/solutions/hospitality'
@@ -331,7 +318,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  AuditRoute: typeof AuditRoute
+  ApplyRoute: typeof ApplyRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
   CustomersRoute: typeof CustomersRoute
   EnterpriseRoute: typeof EnterpriseRoute
@@ -341,7 +328,6 @@ export interface RootRouteChildren {
   SolutionsAgricultureRoute: typeof SolutionsAgricultureRoute
   SolutionsAutomotiveRoute: typeof SolutionsAutomotiveRoute
   SolutionsConstructionRoute: typeof SolutionsConstructionRoute
-  SolutionsConsultingCoachingRoute: typeof SolutionsConsultingCoachingRoute
   SolutionsEcommerceRoute: typeof SolutionsEcommerceRoute
   SolutionsHealthWellnessRoute: typeof SolutionsHealthWellnessRoute
   SolutionsHospitalityRoute: typeof SolutionsHospitalityRoute
@@ -393,11 +379,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/audit': {
-      id: '/audit'
-      path: '/audit'
-      fullPath: '/audit'
-      preLoaderRoute: typeof AuditRouteImport
+    '/apply': {
+      id: '/apply'
+      path: '/apply'
+      fullPath: '/apply'
+      preLoaderRoute: typeof ApplyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -477,13 +463,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsEcommerceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/solutions/consulting-coaching': {
-      id: '/solutions/consulting-coaching'
-      path: '/solutions/consulting-coaching'
-      fullPath: '/solutions/consulting-coaching'
-      preLoaderRoute: typeof SolutionsConsultingCoachingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/solutions/construction': {
       id: '/solutions/construction'
       path: '/solutions/construction'
@@ -539,7 +518,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  AuditRoute: AuditRoute,
+  ApplyRoute: ApplyRoute,
   CaseStudiesRoute: CaseStudiesRoute,
   CustomersRoute: CustomersRoute,
   EnterpriseRoute: EnterpriseRoute,
@@ -549,7 +528,6 @@ const rootRouteChildren: RootRouteChildren = {
   SolutionsAgricultureRoute: SolutionsAgricultureRoute,
   SolutionsAutomotiveRoute: SolutionsAutomotiveRoute,
   SolutionsConstructionRoute: SolutionsConstructionRoute,
-  SolutionsConsultingCoachingRoute: SolutionsConsultingCoachingRoute,
   SolutionsEcommerceRoute: SolutionsEcommerceRoute,
   SolutionsHealthWellnessRoute: SolutionsHealthWellnessRoute,
   SolutionsHospitalityRoute: SolutionsHospitalityRoute,

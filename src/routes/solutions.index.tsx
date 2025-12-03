@@ -71,8 +71,8 @@ function SolutionsLandingPage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
-                  Get Your Free AI Search Audit
+                <Link to="/apply">
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -200,8 +200,8 @@ function SolutionsLandingPage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <Link to="/audit">
-                Get Your Free AI Search Audit
+              <Link to="/apply">
+                Apply To Work With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

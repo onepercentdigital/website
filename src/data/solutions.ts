@@ -203,12 +203,6 @@ export const solutions: IndustrySolution[] = [
         description: 'Growth in non-OTA reservations',
       },
     ],
-    featuredClient: {
-      caseStudyId: 'grove-bay-hospitality',
-      name: 'Grove Bay Hospitality Group',
-      tagline:
-        'From local restaurants to hospitality empire with 425% traffic growth',
-    },
     faqs: [
       {
         question: 'How long does SEO take for restaurants?',
@@ -234,7 +228,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'Can you help with multiple restaurant locations?',
         answer:
-          "Absolutely. Multi-location hospitality groups are actually our specialty. We've worked with Grove Bay Hospitality Group and other restaurant groups with multiple locations. Each location gets its own optimized Google Business Profile, location-specific landing pages, and localized content strategy. We implement enterprise-level tracking so you can see performance by location, and our strategies scale efficiently across your entire portfolio. The more locations you have, the more we can leverage shared content and authority across your brand.",
+          "Absolutely. Multi-location hospitality groups are actually our specialty. We've worked with restaurant groups managing multiple locations across different markets. Each location gets its own optimized Google Business Profile, location-specific landing pages, and localized content strategy. We implement enterprise-level tracking so you can see performance by location, and our strategies scale efficiently across your entire portfolio. The more locations you have, the more we can leverage shared content and authority across your brand.",
       },
       {
         question: 'How much does hospitality SEO cost?',
@@ -938,12 +932,6 @@ export const solutions: IndustrySolution[] = [
         description: 'Leads to closed sales from organic search',
       },
     ],
-    featuredClient: {
-      caseStudyId: 'revology',
-      name: 'Revology Cars',
-      tagline:
-        '$8M in vehicle sales from search visibility and AI recommendations',
-    },
     faqs: [
       {
         question: 'How do we compete with large dealer groups and AutoTrader?',
@@ -959,7 +947,7 @@ export const solutions: IndustrySolution[] = [
         question:
           'Can SEO work for specialty automotive businesses like classic cars?',
         answer:
-          "Absolutely. In fact, specialty automotive often sees exceptional SEO results because there's less competition and higher buyer intent. Whether you're selling custom builds, classic restorations, exotic rentals, or performance parts, there's a passionate audience searching for exactly what you offer. We helped Revology Cars (classic Mustang reproductions) generate $8M in sales from search. The key is understanding the enthusiast mindset, creating content that serves their research process, and building authority in your specific niche.",
+          "Absolutely. In fact, specialty automotive often sees exceptional SEO results because there's less competition and higher buyer intent. Whether you're selling custom builds, classic restorations, exotic rentals, or performance parts, there's a passionate audience searching for exactly what you offer. The key is understanding the enthusiast mindset, creating content that serves their research process, and building authority in your specific niche.",
       },
       {
         question: 'How long does automotive SEO take to generate sales?',
@@ -1309,12 +1297,6 @@ export const solutions: IndustrySolution[] = [
         description: 'Leads to completed equipment sales',
       },
     ],
-    featuredClient: {
-      caseStudyId: 'hr-agripower',
-      name: 'H&R Agri-Power',
-      tagline:
-        '200+ keyword rankings and 58% of sales leads from organic search',
-    },
     faqs: [
       {
         question: 'How do we compete with John Deere and other manufacturers?',
@@ -1499,12 +1481,6 @@ export const solutions: IndustrySolution[] = [
         description: 'Revenue from search-influenced customers',
       },
     ],
-    featuredClient: {
-      caseStudyId: 'afni',
-      name: 'AFNI',
-      tagline:
-        '$15M in new business from search visibility and 85% page-one rankings',
-    },
     faqs: [
       {
         question: 'How do we compete in expensive, competitive SaaS markets?',
@@ -1722,192 +1698,9 @@ export const solutions: IndustrySolution[] = [
       },
     ],
   },
-
-  // 10. CONSULTING & COACHING
-  {
-    id: 'consulting-coaching',
-    name: 'Consulting & Coaching',
-    slug: 'consulting-coaching',
-    description:
-      'Build your personal brand and attract high-value clients. Dominate thought leadership searches and establish yourself as the go-to expert.',
-    heroHeadline: 'Dominate Search and Build Your Consulting Authority',
-    heroSubheadline:
-      'Attract high-value clients and speaking opportunities with SEO and GEO built for consultants, coaches, and thought leaders.',
-    challenges: [
-      {
-        title: 'Personal Brand vs. Generic Services',
-        description:
-          'Standing out in crowded coaching and consulting markets requires strong personal brand differentiation through SEO.',
-        icon: 'User',
-      },
-      {
-        title: 'High-Value Client Acquisition',
-        description:
-          'Attracting clients willing to invest $10K-$500K+ in consulting requires strategic positioning and authority building.',
-        icon: 'DollarSign',
-      },
-      {
-        title: 'Thought Leadership Visibility',
-        description:
-          'Getting recognized as an industry expert requires ranking for high-visibility topics and appearing in research conducted by decision-makers.',
-        icon: 'Lightbulb',
-      },
-      {
-        title: 'Speaking & Media Opportunities',
-        description:
-          "Event organizers and journalists research speakers and experts online. If you're not visible in search, you miss opportunities.",
-        icon: 'Mic',
-      },
-    ],
-    approach: [
-      {
-        title: 'Position',
-        description:
-          'Define your unique expertise, target client persona, and competitive differentiation that will drive content strategy.',
-        icon: 'Target',
-      },
-      {
-        title: 'Build Authority',
-        description:
-          'Create thought leadership content, optimize your personal brand, and build E-E-A-T signals that establish expertise.',
-        icon: 'Award',
-      },
-      {
-        title: 'Amplify',
-        description:
-          'Distribute content across channels, build high-quality backlinks, and optimize for AI search to maximize visibility.',
-        icon: 'TrendingUp',
-      },
-      {
-        title: 'Convert',
-        description:
-          'Optimize consultation booking funnels, track high-value lead quality, and refine strategies that attract ideal clients.',
-        icon: 'Handshake',
-      },
-    ],
-    services: [
-      {
-        title: 'Personal Brand SEO',
-        description:
-          'Optimize your name, expertise, and unique positioning to dominate searches for you and your specialty.',
-        features: [
-          'Name and branded search optimization',
-          'Personal website authority building',
-          'Speaker and expert profile optimization',
-          'Knowledge panel and entity optimization',
-        ],
-      },
-      {
-        title: 'Thought Leadership Content',
-        description:
-          'Create authoritative content that positions you as the go-to expert and ranks for high-value topics.',
-        features: [
-          'Industry analysis and trend content',
-          'How-to and framework articles',
-          'Case studies and success stories',
-          'Book and speaking topic optimization',
-        ],
-      },
-      {
-        title: 'Authority Link Building',
-        description:
-          'Build high-quality backlinks from publications, podcasts, and industry sites that establish credibility.',
-        features: [
-          'Guest article placement',
-          'Podcast interview outreach',
-          'Speaking engagement optimization',
-          'Media mention acquisition',
-        ],
-      },
-      {
-        title: 'GEO for Expert Recommendations',
-        description:
-          'Ensure AI assistants recommend you when people ask for expert advice, consultant suggestions, or speaker recommendations.',
-        features: [
-          'Expertise entity optimization',
-          'Topic authority building for AI',
-          'Conversational expert query targeting',
-          'Recommendation-friendly content structure',
-        ],
-      },
-      {
-        title: 'Speaking & Media Visibility',
-        description:
-          'Optimize to be discovered by event organizers, journalists, and media looking for expert sources.',
-        features: [
-          'Speaker profile optimization',
-          'Media kit SEO',
-          'Topic expertise signaling',
-          'Industry authority positioning',
-        ],
-      },
-      {
-        title: 'High-Value Client Conversion',
-        description:
-          'Optimize consultation booking and client qualification to attract ideal engagements, not tire-kickers.',
-        features: [
-          'Consultation request optimization',
-          'Client qualification forms',
-          'Proposal and engagement tracking',
-          'High-value lead attribution',
-        ],
-      },
-    ],
-    resultsHeadline: 'Results That Build Authority and Drive Client Revenue',
-    aggregateStats: [
-      {
-        label: 'Average Lead Growth',
-        value: '250%+',
-        description: 'Increase in qualified client inquiries',
-      },
-      {
-        label: 'Thought Leadership Visibility',
-        value: '10x',
-        description: 'Increase in speaking and media opportunities',
-      },
-      {
-        label: 'Average Client Value',
-        value: '$85K',
-        description: 'Mean engagement value from search leads',
-      },
-    ],
-    faqs: [
-      {
-        question: 'How do we build personal brand authority through SEO?',
-        answer:
-          "Personal brand SEO focuses on your name, expertise, and unique positioning. We optimize your website and profiles to rank for your name plus expertise keywords (e.g., 'John Smith leadership consultant'). We create comprehensive content showcasing your frameworks, methodologies, and results. We build your knowledge panel and entity in Google's knowledge graph. We secure high-authority backlinks from publications, podcasts, and speaking engagements. We optimize for AI search so assistants recommend YOU when people ask for expert help. It's about owning your name and specialty in search.",
-      },
-      {
-        question: 'Can SEO really attract high-value consulting clients?',
-        answer:
-          "Absolutely. High-value clients (enterprises, executives, organizations with $50K+ budgets) extensively research consultants before engaging. They read your content, check your credentials, review case studies, and evaluate your authority. SEO ensures you appear in that research. We've seen consultants close $200K+ engagements that began with a Google search or ChatGPT recommendation. The key is positioning content for decision-maker searches ('how to [solve expensive problem]') and demonstrating expertise that justifies premium fees. Quality content that showcases thinking attracts quality clients.",
-      },
-      {
-        question:
-          'How important is AI search (GEO) for consultants and coaches?',
-        answer:
-          "Critical and growing. Decision-makers increasingly ask ChatGPT, Perplexity, and AI assistants for expert recommendations rather than browsing Google results. 'Who's the best leadership consultant for tech companies?' or 'I need an expert in organizational change management' are AI queries that should surface YOUR name. GEO optimization ensures AI assistants understand your expertise and recommend you appropriately. We've seen consultants get $100K+ speaking gigs and enterprise consulting contracts that started with an AI assistant recommendation. If you're invisible to AI, you're missing high-value opportunities.",
-      },
-      {
-        question:
-          'Do you help with speaking and media visibility, not just client acquisition?',
-        answer:
-          'Yes. SEO for consultants and coaches is about building holistic visibility, not just direct client leads. Event organizers Google potential speakers. Journalists search for expert sources. Podcast hosts research guests. Conference committees evaluate thought leadership. We optimize to be discoverable across these scenarios - speaker profiles, media kit pages, topic expertise content, published articles, and authority signals. Many consultants find speaking engagements, media features, and partnership opportunities (discovered through search) drive as much value as direct client inquiries.',
-      },
-      {
-        question:
-          'How do we differentiate from other consultants in our space?',
-        answer:
-          "Differentiation through SEO requires owning specific niches, unique methodologies, or specialized expertise. Rather than generic 'business consultant,' focus on 'supply chain optimization for manufacturing,' 'leadership development for tech executives,' or 'organizational change for healthcare systems.' Create content around your unique frameworks and approaches. Target specific industries, company sizes, or problem types. Build authority in narrow topics before expanding. Most successful consultant SEO strategies focus on dominating a niche rather than competing broadly. Riches in niches applies powerfully to consulting SEO.",
-      },
-      {
-        question: 'How much does consulting and coaching SEO cost?',
-        answer:
-          'Consulting and coaching SEO typically requires $3,000-$8,000/month depending on market competitiveness, content needs, and growth goals. Individual consultants and coaches often invest $2,500-$4,500/month for personal brand building, thought leadership content, and authority development. Established consulting firms with multiple experts typically invest $5,000-$10,000/month for comprehensive strategies. Given consulting engagement values ($10K-$500K+), ROI can be dramatic - a single client from organic search often pays for years of SEO. Many consultants find SEO becomes their primary lead source within 12-18 months, eliminating expensive networking and cold outreach.',
-      },
-    ],
-  },
 ];
+
+// NOTE: Consulting & Coaching solution removed - not targeting that market
 
 /**
  * Helper Functions

@@ -18,7 +18,7 @@ export const Route = createFileRoute('/about')({
     generateMetaTags({
       title: 'About One Percent SEO | Meet the Team Behind Your Success',
       description:
-        'Meet the entrepreneurs behind One Percent SEO. With 14+ years of combined experience and multiple successful eCommerce brands, we understand what it takes to grow your business.',
+        'Meet the entrepreneurs behind One Percent SEO. With 12+ years of combined experience and multiple successful eCommerce brands, we understand what it takes to grow your business.',
       url: 'https://onepercentseo.com/about',
     }),
 });
@@ -71,8 +71,8 @@ function AboutPage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
-                  Get Your Free AI Search Audit
+                <Link to="/apply">
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -93,7 +93,7 @@ function AboutPage() {
                 <Clock className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl text-accent leading-none tracking-tight lg:text-7xl">
-                14+
+                12+
               </div>
               <div className="text-muted-foreground tracking-wide">
                 Years Combined Experience
@@ -107,7 +107,7 @@ function AboutPage() {
                 300+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Brands Served Since 2011
+                Brands Served Since 2012
               </div>
             </div>
             <div className="text-center">
@@ -141,7 +141,7 @@ function AboutPage() {
                 understand the real challenges of growing a business online.
               </p>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                Since 2011, our team has worked with over 300 brands across
+                Since 2012, our team has worked with over 300 brands across
                 every industry imaginable. We've navigated countless Google
                 algorithm updates, scaled businesses through multiple economic
                 cycles, and helped our clients capture maximum market share in
@@ -262,7 +262,7 @@ function AboutPage() {
                 Proven at Scale
               </h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                With over 300 brands served since 2011 and multiple co-founded
+                With over 300 brands served since 2012 and multiple co-founded
                 eCommerce ventures, our strategies aren't theoretical—they're
                 battle-tested. We've scaled businesses through algorithm
                 updates, market changes, and competitive pressures. We know what
@@ -289,8 +289,8 @@ function AboutPage() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <Link to="/audit">
-                Schedule Your Free Audit
+              <Link to="/apply">
+                Schedule a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

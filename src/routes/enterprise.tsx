@@ -77,7 +77,7 @@ function EnterprisePage() {
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <Link to="/audit">
+                <Link to="/apply">
                   Schedule Enterprise Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -847,7 +847,7 @@ function EnterprisePage() {
             size="lg"
             className="bg-accent text-accent-foreground hover:bg-accent/90"
           >
-            <Link to="/audit">
+            <Link to="/apply">
               Schedule Enterprise Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
