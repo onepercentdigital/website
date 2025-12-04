@@ -37,39 +37,36 @@ export interface BrandConfig {
 }
 
 /**
- * Current Brand: One Percent SEO
+ * Current Brand: One Percent Digital
  */
 export const brand: BrandConfig = {
-  name: 'onepercentseo',
-  displayName: 'One Percent SEO',
+  name: 'onepercentdigital',
+  displayName: 'One Percent Digital',
   tagline: 'Dominate Your Industry With AI and Search Optimization',
-  domain: 'onepercentseo.com',
-  appDomain: 'app.onepercentseo.com',
+  domain: 'op.digital',
+  appDomain: 'app.op.digital',
 
   logo: {
-    text: 'One Percent SEO',
+    text: 'One Percent Digital',
     iconColor: '#00cccc',
   },
 
   social: {
-    twitter: '@onepercentseo',
-    linkedin: 'company/onepercentseo',
-    // Add other social handles as needed
+    // Social handles not set up yet
   },
 
   contact: {
-    email: 'hello@onepercentseo.com',
+    email: 'hello@op.digital',
     phone: '+1 (555) 123-4567', // Update with real number
     address: 'Gilbert, AZ',
   },
 
   seo: {
-    defaultTitle: 'One Percent SEO',
-    titleTemplate: '%s | One Percent SEO',
+    defaultTitle: 'One Percent Digital',
+    titleTemplate: '%s | One Percent Digital',
     defaultDescription:
       'Helping companies become the top 1% talked about brands in AI and traditional search through GEO and SEO optimization.',
     defaultOgImage: '/og-image.png', // We'll create this
-    twitterHandle: '@onepercentseo',
   },
 };
 
@@ -160,8 +157,8 @@ export const footer = {
     {
       title: 'Social',
       links: [
-        { label: 'Twitter', href: '#' }, // Update with real links
-        { label: 'LinkedIn', href: '#' },
+        { label: 'X', href: 'https://x.com', external: true },
+        { label: 'LinkedIn', href: 'https://linkedin.com', external: true },
       ],
     },
   ],
