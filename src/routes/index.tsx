@@ -43,12 +43,35 @@ function HomePage() {
       <section className="relative overflow-hidden bg-background px-6 py-12 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-5xl text-center">
-            <h1 className="mb-12 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
+            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
               Dominate Your Industry
             </h1>
 
+            {/* Supporting Text */}
+            <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
+              Authority with ChatGPT. Visibility on Google. Qualified leads on
+              demand. This is what market dominance looks like.
+            </p>
+
+            {/* CTAs */}
+            <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <Link to="/apply">
+                  Apply To Work With Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link to="/case-studies">View Case Studies</Link>
+              </Button>
+            </div>
+
             {/* Three Service Columns */}
-            <div className="mb-12 grid grid-cols-3 gap-4 lg:gap-8">
+            <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-8">
               {/* GEO */}
               <div className="group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center transition-all hover:border-accent/50 lg:p-8">
                 <h2 className="mb-2 font-bold text-2xl tracking-tight lg:mb-4 lg:text-4xl">
@@ -113,29 +136,6 @@ function HomePage() {
                   </Link>
                 </Button>
               </div>
-            </div>
-
-            {/* Supporting Text */}
-            <p className="mx-auto mb-10 max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
-              Authority with ChatGPT. Visibility on Google. Qualified leads on
-              demand. This is what market dominance looks like.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button
-                asChild
-                size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
-              >
-                <Link to="/apply">
-                  Apply To Work With Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link to="/case-studies">View Case Studies</Link>
-              </Button>
             </div>
           </div>
         </div>
