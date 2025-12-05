@@ -18,7 +18,7 @@ export const Route = createFileRoute('/about')({
     generateMetaTags({
       title: 'About One Percent SEO | Meet the Team Behind Your Success',
       description:
-        'Meet the entrepreneurs behind One Percent SEO. With 12+ years of combined experience and multiple successful eCommerce brands, we understand what it takes to grow your business.',
+        'Meet the entrepreneurs behind One Percent SEO. With 12+ years of combined experience and multiple successful E-commerce brands, we understand what it takes to grow your business.',
       url: 'https://onepercentseo.com/about',
     }),
 });
@@ -62,8 +62,8 @@ function AboutPage() {
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
               We're not just SEO experts—we're entrepreneurs who run our own
-              successful eCommerce brands. We understand the challenges you face
-              because we face them too.
+              successful E-commerce brands. We understand the challenges you
+              face because we face them too.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -118,7 +118,7 @@ function AboutPage() {
                 10+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                eCommerce Brands Co-Founded
+                E-commerce Brands Co-Founded
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ function AboutPage() {
                 One Percent SEO was founded on a simple principle: the best SEO
                 experts are the ones who run their own businesses. We're not
                 consultants who learned SEO from textbooks—we're entrepreneurs
-                who've scaled multiple eCommerce brands from the ground up and
+                who've scaled multiple E-commerce brands from the ground up and
                 understand the real challenges of growing a business online.
               </p>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
@@ -232,8 +232,8 @@ function AboutPage() {
                 Entrepreneur-First Mindset
               </h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                We run our own successful eCommerce brands, so we understand the
-                challenges you face. We're not consultants reading from a
+                We run our own successful E-commerce brands, so we understand
+                the challenges you face. We're not consultants reading from a
                 playbook—we're business owners who live and breathe the same
                 struggles and victories you experience every day.
               </p>
@@ -263,7 +263,7 @@ function AboutPage() {
               </h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
                 With over 300 brands served since 2012 and multiple co-founded
-                eCommerce ventures, our strategies aren't theoretical—they're
+                E-commerce ventures, our strategies aren't theoretical—they're
                 battle-tested. We've scaled businesses through algorithm
                 updates, market changes, and competitive pressures. We know what
                 works.

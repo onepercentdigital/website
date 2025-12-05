@@ -306,7 +306,7 @@ function HomePage() {
               <p className="mb-6 text-foreground leading-relaxed">
                 Working with One Percent SEO transformed our online presence. We
                 went from being invisible to dominating our market. They
-                understand e-commerce and deliver real results. We're now one of
+                understand E-commerce and deliver real results. We're now one of
                 the top recommendations in ChatGPT for diesel injection pumps.
               </p>
               <div className="flex items-center gap-3">

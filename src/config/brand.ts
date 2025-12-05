@@ -98,19 +98,21 @@ export const navigation = {
       items: [
         { label: 'Agriculture & Equipment', href: '/solutions/agriculture' },
         { label: 'Automotive', href: '/solutions/automotive' },
-
         {
           label: 'Construction & Contractors',
           href: '/solutions/construction',
         },
         { label: 'E-commerce & Retail', href: '/solutions/ecommerce' },
+        { label: 'Finance & Insurance', href: '/solutions/finance-insurance' },
         { label: 'Health & Wellness', href: '/solutions/health-wellness' },
         { label: 'Hospitality & Restaurants', href: '/solutions/hospitality' },
+        { label: 'Law Firms & Legal', href: '/solutions/legal' },
         { label: 'Logistics & Transportation', href: '/solutions/logistics' },
         {
           label: 'Manufacturing & Industrial',
           href: '/solutions/manufacturing',
         },
+        { label: 'Real Estate & Development', href: '/solutions/real-estate' },
         { label: 'Technology & SaaS', href: '/solutions/technology' },
       ],
     },

@@ -215,30 +215,6 @@ function LogisticsPage() {
         </div>
       </section>
 
-      {/* Results Section */}
-      <section className="border-border border-y bg-muted/30 px-6 py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
-              {solution.resultsHeadline}
-            </h2>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            {solution.aggregateStats.map((stat, _index) => (
-              <div key={stat.label} className="text-center">
-                <div className="font-extrabold text-5xl tracking-tight lg:text-7xl xl:text-8xl">
-                  {stat.value}
-                </div>
-                <div className="mt-2 font-semibold text-xl">{stat.label}</div>
-                <div className="mt-2 text-muted-foreground text-sm tracking-wide">
-                  {stat.description}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl">

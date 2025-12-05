@@ -20,10 +20,13 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as SolutionsTechnologyRouteImport } from './routes/solutions.technology'
+import { Route as SolutionsRealEstateRouteImport } from './routes/solutions.real-estate'
 import { Route as SolutionsManufacturingRouteImport } from './routes/solutions.manufacturing'
 import { Route as SolutionsLogisticsRouteImport } from './routes/solutions.logistics'
+import { Route as SolutionsLegalRouteImport } from './routes/solutions.legal'
 import { Route as SolutionsHospitalityRouteImport } from './routes/solutions.hospitality'
 import { Route as SolutionsHealthWellnessRouteImport } from './routes/solutions.health-wellness'
+import { Route as SolutionsFinanceInsuranceRouteImport } from './routes/solutions.finance-insurance'
 import { Route as SolutionsEcommerceRouteImport } from './routes/solutions.ecommerce'
 import { Route as SolutionsConstructionRouteImport } from './routes/solutions.construction'
 import { Route as SolutionsAutomotiveRouteImport } from './routes/solutions.automotive'
@@ -85,6 +88,11 @@ const SolutionsTechnologyRoute = SolutionsTechnologyRouteImport.update({
   path: '/solutions/technology',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsRealEstateRoute = SolutionsRealEstateRouteImport.update({
+  id: '/solutions/real-estate',
+  path: '/solutions/real-estate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SolutionsManufacturingRoute = SolutionsManufacturingRouteImport.update({
   id: '/solutions/manufacturing',
   path: '/solutions/manufacturing',
@@ -93,6 +101,11 @@ const SolutionsManufacturingRoute = SolutionsManufacturingRouteImport.update({
 const SolutionsLogisticsRoute = SolutionsLogisticsRouteImport.update({
   id: '/solutions/logistics',
   path: '/solutions/logistics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsLegalRoute = SolutionsLegalRouteImport.update({
+  id: '/solutions/legal',
+  path: '/solutions/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolutionsHospitalityRoute = SolutionsHospitalityRouteImport.update({
@@ -105,6 +118,12 @@ const SolutionsHealthWellnessRoute = SolutionsHealthWellnessRouteImport.update({
   path: '/solutions/health-wellness',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsFinanceInsuranceRoute =
+  SolutionsFinanceInsuranceRouteImport.update({
+    id: '/solutions/finance-insurance',
+    path: '/solutions/finance-insurance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SolutionsEcommerceRoute = SolutionsEcommerceRouteImport.update({
   id: '/solutions/ecommerce',
   path: '/solutions/ecommerce',
@@ -145,10 +164,13 @@ export interface FileRoutesByFullPath {
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
   '/solutions/construction': typeof SolutionsConstructionRoute
   '/solutions/ecommerce': typeof SolutionsEcommerceRoute
+  '/solutions/finance-insurance': typeof SolutionsFinanceInsuranceRoute
   '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
   '/solutions/hospitality': typeof SolutionsHospitalityRoute
+  '/solutions/legal': typeof SolutionsLegalRoute
   '/solutions/logistics': typeof SolutionsLogisticsRoute
   '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/real-estate': typeof SolutionsRealEstateRoute
   '/solutions/technology': typeof SolutionsTechnologyRoute
   '/blog': typeof BlogIndexRoute
   '/solutions': typeof SolutionsIndexRoute
@@ -167,10 +189,13 @@ export interface FileRoutesByTo {
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
   '/solutions/construction': typeof SolutionsConstructionRoute
   '/solutions/ecommerce': typeof SolutionsEcommerceRoute
+  '/solutions/finance-insurance': typeof SolutionsFinanceInsuranceRoute
   '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
   '/solutions/hospitality': typeof SolutionsHospitalityRoute
+  '/solutions/legal': typeof SolutionsLegalRoute
   '/solutions/logistics': typeof SolutionsLogisticsRoute
   '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/real-estate': typeof SolutionsRealEstateRoute
   '/solutions/technology': typeof SolutionsTechnologyRoute
   '/blog': typeof BlogIndexRoute
   '/solutions': typeof SolutionsIndexRoute
@@ -190,10 +215,13 @@ export interface FileRoutesById {
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
   '/solutions/construction': typeof SolutionsConstructionRoute
   '/solutions/ecommerce': typeof SolutionsEcommerceRoute
+  '/solutions/finance-insurance': typeof SolutionsFinanceInsuranceRoute
   '/solutions/health-wellness': typeof SolutionsHealthWellnessRoute
   '/solutions/hospitality': typeof SolutionsHospitalityRoute
+  '/solutions/legal': typeof SolutionsLegalRoute
   '/solutions/logistics': typeof SolutionsLogisticsRoute
   '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/real-estate': typeof SolutionsRealEstateRoute
   '/solutions/technology': typeof SolutionsTechnologyRoute
   '/blog/': typeof BlogIndexRoute
   '/solutions/': typeof SolutionsIndexRoute
@@ -214,10 +242,13 @@ export interface FileRouteTypes {
     | '/solutions/automotive'
     | '/solutions/construction'
     | '/solutions/ecommerce'
+    | '/solutions/finance-insurance'
     | '/solutions/health-wellness'
     | '/solutions/hospitality'
+    | '/solutions/legal'
     | '/solutions/logistics'
     | '/solutions/manufacturing'
+    | '/solutions/real-estate'
     | '/solutions/technology'
     | '/blog'
     | '/solutions'
@@ -236,10 +267,13 @@ export interface FileRouteTypes {
     | '/solutions/automotive'
     | '/solutions/construction'
     | '/solutions/ecommerce'
+    | '/solutions/finance-insurance'
     | '/solutions/health-wellness'
     | '/solutions/hospitality'
+    | '/solutions/legal'
     | '/solutions/logistics'
     | '/solutions/manufacturing'
+    | '/solutions/real-estate'
     | '/solutions/technology'
     | '/blog'
     | '/solutions'
@@ -258,10 +292,13 @@ export interface FileRouteTypes {
     | '/solutions/automotive'
     | '/solutions/construction'
     | '/solutions/ecommerce'
+    | '/solutions/finance-insurance'
     | '/solutions/health-wellness'
     | '/solutions/hospitality'
+    | '/solutions/legal'
     | '/solutions/logistics'
     | '/solutions/manufacturing'
+    | '/solutions/real-estate'
     | '/solutions/technology'
     | '/blog/'
     | '/solutions/'
@@ -281,10 +318,13 @@ export interface RootRouteChildren {
   SolutionsAutomotiveRoute: typeof SolutionsAutomotiveRoute
   SolutionsConstructionRoute: typeof SolutionsConstructionRoute
   SolutionsEcommerceRoute: typeof SolutionsEcommerceRoute
+  SolutionsFinanceInsuranceRoute: typeof SolutionsFinanceInsuranceRoute
   SolutionsHealthWellnessRoute: typeof SolutionsHealthWellnessRoute
   SolutionsHospitalityRoute: typeof SolutionsHospitalityRoute
+  SolutionsLegalRoute: typeof SolutionsLegalRoute
   SolutionsLogisticsRoute: typeof SolutionsLogisticsRoute
   SolutionsManufacturingRoute: typeof SolutionsManufacturingRoute
+  SolutionsRealEstateRoute: typeof SolutionsRealEstateRoute
   SolutionsTechnologyRoute: typeof SolutionsTechnologyRoute
   BlogIndexRoute: typeof BlogIndexRoute
   SolutionsIndexRoute: typeof SolutionsIndexRoute
@@ -369,6 +409,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsTechnologyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/real-estate': {
+      id: '/solutions/real-estate'
+      path: '/solutions/real-estate'
+      fullPath: '/solutions/real-estate'
+      preLoaderRoute: typeof SolutionsRealEstateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solutions/manufacturing': {
       id: '/solutions/manufacturing'
       path: '/solutions/manufacturing'
@@ -383,6 +430,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsLogisticsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/legal': {
+      id: '/solutions/legal'
+      path: '/solutions/legal'
+      fullPath: '/solutions/legal'
+      preLoaderRoute: typeof SolutionsLegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solutions/hospitality': {
       id: '/solutions/hospitality'
       path: '/solutions/hospitality'
@@ -395,6 +449,13 @@ declare module '@tanstack/react-router' {
       path: '/solutions/health-wellness'
       fullPath: '/solutions/health-wellness'
       preLoaderRoute: typeof SolutionsHealthWellnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/finance-insurance': {
+      id: '/solutions/finance-insurance'
+      path: '/solutions/finance-insurance'
+      fullPath: '/solutions/finance-insurance'
+      preLoaderRoute: typeof SolutionsFinanceInsuranceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solutions/ecommerce': {
@@ -449,10 +510,13 @@ const rootRouteChildren: RootRouteChildren = {
   SolutionsAutomotiveRoute: SolutionsAutomotiveRoute,
   SolutionsConstructionRoute: SolutionsConstructionRoute,
   SolutionsEcommerceRoute: SolutionsEcommerceRoute,
+  SolutionsFinanceInsuranceRoute: SolutionsFinanceInsuranceRoute,
   SolutionsHealthWellnessRoute: SolutionsHealthWellnessRoute,
   SolutionsHospitalityRoute: SolutionsHospitalityRoute,
+  SolutionsLegalRoute: SolutionsLegalRoute,
   SolutionsLogisticsRoute: SolutionsLogisticsRoute,
   SolutionsManufacturingRoute: SolutionsManufacturingRoute,
+  SolutionsRealEstateRoute: SolutionsRealEstateRoute,
   SolutionsTechnologyRoute: SolutionsTechnologyRoute,
   BlogIndexRoute: BlogIndexRoute,
   SolutionsIndexRoute: SolutionsIndexRoute,

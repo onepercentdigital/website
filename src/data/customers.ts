@@ -111,7 +111,7 @@ export const customers: Customer[] = [
     logo: '51e5ac33-a0d2-4cdb-668e-581cba411a00',
     testimonial: {
       quote:
-        "Working with One Percent SEO transformed our online presence. We went from being invisible to dominating our market. They understand e-commerce and deliver real results. We're now one of the top recommendations in ChatGPT for diesel injection pumps.",
+        "Working with One Percent SEO transformed our online presence. We went from being invisible to dominating our market. They understand E-commerce and deliver real results. We're now one of the top recommendations in ChatGPT for diesel injection pumps.",
       author: 'Scott Goldfarb',
       role: 'Owner, Goldfarb & Associates',
       initials: 'SG',

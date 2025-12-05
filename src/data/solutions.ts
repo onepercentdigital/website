@@ -186,23 +186,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Fill Tables and Drive Revenue',
-    aggregateStats: [
-      {
-        label: 'Average Traffic Growth',
-        value: '300%+',
-        description: 'Increase in organic website visitors',
-      },
-      {
-        label: 'Local Search Visibility',
-        value: '85%+',
-        description: 'Appearance in local pack results',
-      },
-      {
-        label: 'Direct Bookings Increase',
-        value: '60%+',
-        description: 'Growth in non-OTA reservations',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How long does SEO take for restaurants?',
@@ -369,23 +353,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Drive Revenue and Market Share',
-    aggregateStats: [
-      {
-        label: 'Average Revenue Growth',
-        value: '250%+',
-        description: 'Increase in organic e-commerce revenue',
-      },
-      {
-        label: 'Product Page Rankings',
-        value: '500+',
-        description: 'Product pages ranking on page one',
-      },
-      {
-        label: 'Traffic Increase',
-        value: '180%+',
-        description: 'Growth in organic search traffic',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How do we compete with Amazon in search results?',
@@ -551,23 +519,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Drive High-Value B2B Leads',
-    aggregateStats: [
-      {
-        label: 'Average Lead Growth',
-        value: '200%+',
-        description: 'Increase in qualified B2B inquiries',
-      },
-      {
-        label: 'Technical Keyword Rankings',
-        value: '300+',
-        description: 'Industry-specific terms on page one',
-      },
-      {
-        label: 'Lead Quality Score',
-        value: '8.5/10',
-        description: 'Average sales-qualified lead rating',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How do you handle low search volume industrial keywords?',
@@ -733,23 +685,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Drive Profitable Freight Contracts',
-    aggregateStats: [
-      {
-        label: 'Average Lead Growth',
-        value: '220%+',
-        description: 'Increase in qualified shipper inquiries',
-      },
-      {
-        label: 'Lane Coverage Rankings',
-        value: '400+',
-        description: 'Shipping lane keywords on page one',
-      },
-      {
-        label: 'Cost-Per-Lead Reduction',
-        value: '65%',
-        description: 'Decrease compared to load boards/ads',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How do we compete with load boards like DAT and Freightos?',
@@ -915,23 +851,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Fill Lots and Drive Sales',
-    aggregateStats: [
-      {
-        label: 'Average Lead Growth',
-        value: '280%+',
-        description: 'Increase in qualified buyer inquiries',
-      },
-      {
-        label: 'Local Search Visibility',
-        value: '90%+',
-        description: 'Appearance in local automotive searches',
-      },
-      {
-        label: 'Sales Conversion Rate',
-        value: '24%',
-        description: 'Leads to closed sales from organic search',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How do we compete with large dealer groups and AutoTrader?',
@@ -1098,23 +1018,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Fill Your Project Pipeline',
-    aggregateStats: [
-      {
-        label: 'Average Lead Growth',
-        value: '240%+',
-        description: 'Increase in qualified project inquiries',
-      },
-      {
-        label: 'Local Pack Visibility',
-        value: '85%+',
-        description: 'Appearance in Google local results',
-      },
-      {
-        label: 'Project Close Rate',
-        value: '32%',
-        description: 'Leads to signed contracts',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How do we compete with HomeAdvisor and Thumbtack?',
@@ -1280,23 +1184,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Drive Equipment Sales and Service Revenue',
-    aggregateStats: [
-      {
-        label: 'Average Lead Growth',
-        value: '210%+',
-        description: 'Increase in qualified farmer inquiries',
-      },
-      {
-        label: 'Equipment Keyword Rankings',
-        value: '350+',
-        description: 'Make/model searches on page one',
-      },
-      {
-        label: 'Sales Close Rate',
-        value: '38%',
-        description: 'Leads to completed equipment sales',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How do we compete with John Deere and other manufacturers?',
@@ -1464,23 +1352,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Drive Product Growth and Enterprise Deals',
-    aggregateStats: [
-      {
-        label: 'Average Lead Growth',
-        value: '190%+',
-        description: 'Increase in qualified demo requests',
-      },
-      {
-        label: 'Competitive Keyword Rankings',
-        value: '250+',
-        description: 'High-value tech terms on page one',
-      },
-      {
-        label: 'Enterprise Deal Attribution',
-        value: '35%',
-        description: 'Revenue from search-influenced customers',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question: 'How do we compete in expensive, competitive SaaS markets?',
@@ -1646,23 +1518,7 @@ export const solutions: IndustrySolution[] = [
       },
     ],
     resultsHeadline: 'Results That Fill Your Calendar and Grow Your Practice',
-    aggregateStats: [
-      {
-        label: 'Average Client Growth',
-        value: '180%+',
-        description: 'Increase in new client appointments',
-      },
-      {
-        label: 'Local Pack Visibility',
-        value: '80%+',
-        description: 'Appearance in local wellness searches',
-      },
-      {
-        label: 'Booking Conversion Rate',
-        value: '28%',
-        description: 'Visitors to scheduled appointments',
-      },
-    ],
+    aggregateStats: [],
     faqs: [
       {
         question:
@@ -1698,9 +1554,507 @@ export const solutions: IndustrySolution[] = [
       },
     ],
   },
-];
 
-// NOTE: Consulting & Coaching solution removed - not targeting that market
+  // 10. FINANCE & INSURANCE
+  {
+    id: 'finance-insurance',
+    name: 'Finance & Insurance',
+    slug: 'finance-insurance',
+    description:
+      'Drive qualified leads for financial services and insurance providers. Dominate high-value searches and reach clients seeking financial guidance.',
+    heroHeadline: 'Dominate Financial Services Search Results',
+    heroSubheadline:
+      'Generate qualified leads for financial advisors, insurance agents, and financial services firms. Reach clients actively searching for financial guidance.',
+    challenges: [
+      {
+        title: 'YMYL Algorithm Scrutiny',
+        description:
+          'Google applies strict "Your Money Your Life" standards to financial content. Ranking requires exceptional expertise, authority, and trustworthiness.',
+        icon: 'Shield',
+      },
+      {
+        title: 'Regulatory Compliance',
+        description:
+          'SEC, FINRA, and state insurance regulations limit marketing claims. Balancing persuasive content with compliance is critical.',
+        icon: 'Scale',
+      },
+      {
+        title: 'Competing with National Firms',
+        description:
+          'Large banks, insurance companies, and national RIAs dominate search results with massive budgets and established authority.',
+        icon: 'Building2',
+      },
+      {
+        title: 'Trust and Credibility',
+        description:
+          'Financial decisions require high trust. Converting searchers into clients means demonstrating credentials, experience, and fiduciary commitment.',
+        icon: 'BadgeCheck',
+      },
+    ],
+    approach: [
+      {
+        title: 'Establish Authority',
+        description:
+          'Build E-E-A-T signals through credential highlighting, professional certifications, regulatory compliance, and industry expertise.',
+        icon: 'Award',
+      },
+      {
+        title: 'Optimize Locally',
+        description:
+          'Dominate local searches for financial advisors, insurance agents, and wealth managers in your target markets.',
+        icon: 'MapPin',
+      },
+      {
+        title: 'Educate',
+        description:
+          'Create compliant educational content that demonstrates expertise, answers financial questions, and builds trust.',
+        icon: 'BookOpen',
+      },
+      {
+        title: 'Convert',
+        description:
+          'Optimize consultation booking, track lead quality, and scale strategies that drive high-value client relationships.',
+        icon: 'Target',
+      },
+    ],
+    services: [
+      {
+        title: 'Local Financial Services SEO',
+        description:
+          'Dominate local searches for financial advisors, insurance agents, and wealth managers in your service area.',
+        features: [
+          'Google Business Profile optimization',
+          'Local citation building',
+          'Service area targeting',
+          'Near me search optimization',
+        ],
+      },
+      {
+        title: 'E-E-A-T Authority Building',
+        description:
+          'Build the expertise and trust signals Google requires for financial content to rank.',
+        features: [
+          'Credential and certification display',
+          'Fiduciary and regulatory compliance',
+          'Professional bio optimization',
+          'Trust signal implementation',
+        ],
+      },
+      {
+        title: 'Compliant Content Marketing',
+        description:
+          'Create educational financial content that ranks, converts, and meets regulatory requirements.',
+        features: [
+          'Retirement planning guides',
+          'Insurance comparison content',
+          'Tax strategy resources',
+          'Investment education content',
+        ],
+      },
+      {
+        title: 'GEO for Financial Searches',
+        description:
+          'Ensure AI assistants recommend your firm when people ask for financial advisor or insurance agent suggestions.',
+        features: [
+          'Conversational financial query targeting',
+          'Service recommendation optimization',
+          'Advisor authority signals',
+          'Local financial expertise positioning',
+        ],
+      },
+      {
+        title: 'Review & Reputation Management',
+        description:
+          'Generate authentic reviews that boost rankings and build trust with prospective clients.',
+        features: [
+          'Client review generation campaigns',
+          'Multi-platform monitoring',
+          'Compliant review response',
+          'Reputation schema markup',
+        ],
+      },
+      {
+        title: 'Consultation Conversion Optimization',
+        description:
+          'Turn searchers into booked consultations with optimized scheduling and lead capture.',
+        features: [
+          'Consultation booking optimization',
+          'Lead qualification forms',
+          'Follow-up sequence optimization',
+          'Conversion tracking and analysis',
+        ],
+      },
+    ],
+    resultsHeadline: 'Results That Grow Your Client Base and AUM',
+    aggregateStats: [],
+    faqs: [
+      {
+        question:
+          "How do we rank for financial content with Google's strict standards?",
+        answer:
+          'Google applies YMYL (Your Money Your Life) standards to financial content, requiring exceptional E-E-A-T. We build this through comprehensive advisor profiles showcasing credentials (CFP, CFA, Series licenses), regulatory compliance documentation, citation of reputable financial sources, detailed firm about pages, authentic client testimonials, and consistent professional information. Financial advisors who invest in proper E-E-A-T signals can absolutely dominate local searches for wealth management and financial planning.',
+      },
+      {
+        question: 'How do we balance marketing with SEC/FINRA compliance?',
+        answer:
+          'All our financial services content strategies are built with compliance in mind. We focus on educational content rather than performance claims, avoid testimonials where prohibited (or follow ADV disclosure requirements), include necessary disclaimers, and avoid guarantees of results. We work with your compliance team to ensure all content meets regulatory requirements while remaining effective for SEO. Many financial advisors are surprised how much great content they CAN create within compliance frameworks.',
+      },
+      {
+        question: 'How do we compete with large banks and national RIAs?',
+        answer:
+          "National firms have brand recognition but are weak where independent advisors excel: personalized service, local expertise, fiduciary commitment, and specialized planning for specific situations. Focus on your differentiators - whether that's fee-only fiduciary service, expertise with specific professionals (doctors, business owners), or deep local knowledge. Create content around specific planning scenarios where you have expertise. Own your local market through superior local SEO.",
+      },
+      {
+        question: 'What keywords should financial advisors target?',
+        answer:
+          'Focus on local intent keywords ("financial advisor [city]", "wealth management [location]"), life event keywords ("retirement planning", "selling a business"), and niche specialization keywords (if applicable). Avoid ultra-competitive generic terms. Long-tail keywords with clear intent often convert better than high-volume generic searches. We research your specific market, competition, and ideal client profile to build a targeted keyword strategy.',
+      },
+      {
+        question: 'How important are reviews for financial services SEO?',
+        answer:
+          'Reviews are critical for both rankings and trust. Google reviews are a major local ranking factor, and prospective clients heavily rely on reviews when choosing advisors. We implement compliant review generation strategies - some broker-dealers restrict soliciting reviews, so we work within your compliance framework. Even firms with restrictions can encourage organic reviews and respond professionally to build credibility.',
+      },
+      {
+        question: 'How much does financial services SEO cost?',
+        answer:
+          'Financial services SEO typically requires $3,500-$8,000/month depending on market competitiveness, service offerings, and firm size. Single-advisor practices often invest $3,500-$5,000/month for local SEO, compliant content marketing, and review management. Multi-advisor firms typically invest $6,000-$12,000/month for enterprise strategies. Given client lifetime values in financial services ($20,000-$500,000+ in fees over a relationship), ROI can be exceptional.',
+      },
+    ],
+  },
+
+  // 11. LAW FIRMS & LEGAL
+  {
+    id: 'legal',
+    name: 'Law Firms & Legal',
+    slug: 'legal',
+    description:
+      'Drive qualified client inquiries for law firms. Dominate local legal searches and reach potential clients actively seeking legal representation.',
+    heroHeadline: 'Dominate Legal Search and Generate Qualified Cases',
+    heroSubheadline:
+      'Fill your caseload with qualified client inquiries. Get found by people searching for legal representation in your practice areas.',
+    challenges: [
+      {
+        title: 'YMYL Search Scrutiny',
+        description:
+          'Google applies strict standards to legal content. Ranking requires demonstrating expertise, credentials, and trustworthiness.',
+        icon: 'Shield',
+      },
+      {
+        title: 'Extreme Local Competition',
+        description:
+          'Personal injury, family law, and criminal defense are among the most competitive local search markets. Standing out requires strategic SEO.',
+        icon: 'Users',
+      },
+      {
+        title: 'Expensive Paid Alternatives',
+        description:
+          'Legal keywords are among the most expensive in paid search ($50-$500+ per click). Without SEO, client acquisition costs are unsustainable.',
+        icon: 'DollarSign',
+      },
+      {
+        title: 'Bar Association Regulations',
+        description:
+          'State bar advertising rules limit claims and require disclaimers. Balancing persuasive marketing with compliance is essential.',
+        icon: 'Scale',
+      },
+    ],
+    approach: [
+      {
+        title: 'Establish Authority',
+        description:
+          'Build E-E-A-T through attorney profiles, case results, credentials, bar memberships, and legal expertise signals.',
+        icon: 'Award',
+      },
+      {
+        title: 'Dominate Locally',
+        description:
+          'Own local search results for your practice areas. Rank for "[practice area] lawyer [city]" searches in your market.',
+        icon: 'MapPin',
+      },
+      {
+        title: 'Educate',
+        description:
+          'Create compliant legal content that answers questions, demonstrates expertise, and guides potential clients to contact you.',
+        icon: 'BookOpen',
+      },
+      {
+        title: 'Convert',
+        description:
+          'Optimize case inquiry forms, track lead quality, qualify leads effectively, and scale strategies that generate signed retainers.',
+        icon: 'FileSignature',
+      },
+    ],
+    services: [
+      {
+        title: 'Local Law Firm SEO',
+        description:
+          'Dominate local searches for attorneys in your practice areas and service area.',
+        features: [
+          'Google Business Profile optimization',
+          'Local citation building',
+          'Practice area landing pages',
+          'Multi-location firm strategy',
+        ],
+      },
+      {
+        title: 'Practice Area Content',
+        description:
+          'Create comprehensive content for each practice area that ranks and converts.',
+        features: [
+          'Practice area pillar pages',
+          'Legal FAQ content',
+          'Process and procedure guides',
+          'State-specific legal information',
+        ],
+      },
+      {
+        title: 'Attorney Authority Building',
+        description:
+          'Build the expertise and trust signals Google requires for legal content.',
+        features: [
+          'Attorney profile optimization',
+          'Case results showcasing',
+          'Bar and credential display',
+          'Speaking and publication features',
+        ],
+      },
+      {
+        title: 'GEO for Legal Searches',
+        description:
+          'Ensure AI assistants recommend your firm when people ask for lawyer recommendations.',
+        features: [
+          'Conversational legal query targeting',
+          'Practice area AI optimization',
+          'Attorney authority signals',
+          'Local legal expertise positioning',
+        ],
+      },
+      {
+        title: 'Review & Reputation Management',
+        description:
+          'Generate authentic reviews that boost rankings and build trust with potential clients.',
+        features: [
+          'Compliant review generation',
+          'Multi-platform monitoring',
+          'Professional review response',
+          'Attorney rating optimization',
+        ],
+      },
+      {
+        title: 'Case Inquiry Optimization',
+        description:
+          'Turn searchers into qualified case inquiries with optimized intake and conversion.',
+        features: [
+          'Intake form optimization',
+          'Live chat implementation',
+          'Call tracking and recording',
+          'Lead qualification automation',
+        ],
+      },
+    ],
+    resultsHeadline: 'Results That Fill Your Caseload with Qualified Clients',
+    aggregateStats: [],
+    faqs: [
+      {
+        question: 'How competitive is legal SEO?',
+        answer:
+          'Legal SEO is among the most competitive industries, particularly for personal injury, criminal defense, and family law. However, this competition makes SEO MORE valuable, not less. Paid legal keywords cost $50-$500+ per click - a single page one ranking can save tens of thousands in ad spend monthly. The firms that invest in sustained SEO dominate their markets and reduce client acquisition costs dramatically.',
+      },
+      {
+        question:
+          "How do we rank with Google's strict standards for legal content?",
+        answer:
+          'Google applies YMYL standards to legal content, requiring strong E-E-A-T signals. We build authority through comprehensive attorney profiles (education, bar admissions, case results), detailed practice area content demonstrating expertise, consistent NAP information, authentic client reviews, and professional credentials display. Law firms that invest in proper authority signals can absolutely dominate local legal searches.',
+      },
+      {
+        question: 'What about bar advertising rules and compliance?',
+        answer:
+          "All our legal content strategies account for state bar advertising rules. We include required disclaimers, avoid prohibited claims, handle testimonials appropriately, and ensure all content meets your bar's requirements. We work with many law firms and understand the compliance landscape. Effective legal SEO and bar compliance are absolutely compatible - you just need strategies designed with regulations in mind.",
+      },
+      {
+        question: 'Which practice areas benefit most from SEO?',
+        answer:
+          'All practice areas benefit, but ROI varies. High-value, locally-searched practice areas (personal injury, family law, criminal defense, estate planning) see dramatic ROI because case values justify SEO investment and clients actively search. B2B practice areas (business law, IP, employment) benefit from content marketing and GEO that captures longer research cycles. We tailor strategies to your specific practice mix.',
+      },
+      {
+        question: 'How long does law firm SEO take?',
+        answer:
+          "Legal SEO typically shows meaningful results in 4-8 months due to high competition. You'll see initial improvements within 60-90 days from technical fixes and local optimization. Significant case inquiry increases typically arrive around month 6 as content gains authority. Law firms that commit to 12-18 months of strategic SEO often see organic search become their primary client source, dramatically reducing dependence on expensive paid advertising and referral fees.",
+      },
+      {
+        question: 'How much does law firm SEO cost?',
+        answer:
+          'Law firm SEO typically requires $4,000-$12,000/month depending on practice areas, market competitiveness, and firm size. Solo practitioners and small firms often invest $4,000-$6,000/month for local SEO and core practice area content. Mid-size firms typically invest $7,000-$12,000/month for comprehensive strategies across multiple practice areas. Given case values ($5,000-$500,000+), ROI can be exceptional. Most firms find SEO delivers lower cost-per-case than paid advertising within 12 months.',
+      },
+    ],
+  },
+
+  // 12. REAL ESTATE & DEVELOPMENT
+  {
+    id: 'real-estate',
+    name: 'Real Estate & Development',
+    slug: 'real-estate',
+    description:
+      'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Dominate property searches in your market.',
+    heroHeadline: 'Dominate Real Estate Search in Your Market',
+    heroSubheadline:
+      'Generate qualified buyer and seller leads. Get found by people searching for real estate agents, properties, and development services.',
+    challenges: [
+      {
+        title: 'Portal Dominance',
+        description:
+          'Zillow, Realtor.com, and Redfin dominate property searches. Individual agents and brokerages struggle for visibility against platforms.',
+        icon: 'Building2',
+      },
+      {
+        title: 'Hyperlocal Competition',
+        description:
+          'Every real estate market has dozens of agents competing for the same searches. Standing out requires strategic differentiation.',
+        icon: 'Users',
+      },
+      {
+        title: 'Market Fluctuations',
+        description:
+          'Real estate markets shift between buyer and seller markets. SEO strategies must adapt to changing search behavior and inventory.',
+        icon: 'TrendingDown',
+      },
+      {
+        title: 'Long Decision Cycles',
+        description:
+          'Buyers and sellers research for months before acting. SEO must capture and nurture leads through extended decision processes.',
+        icon: 'Clock',
+      },
+    ],
+    approach: [
+      {
+        title: 'Analyze',
+        description:
+          'Research local market, competitor strategies, search behavior patterns, and identify opportunities for differentiation.',
+        icon: 'Search',
+      },
+      {
+        title: 'Optimize',
+        description:
+          'Fix technical SEO, optimize Google Business Profile, create neighborhood content, and build local market authority.',
+        icon: 'Settings',
+      },
+      {
+        title: 'Localize',
+        description:
+          'Create hyperlocal content that positions you as THE expert in specific neighborhoods, developments, and market segments.',
+        icon: 'MapPin',
+      },
+      {
+        title: 'Convert',
+        description:
+          'Track lead quality, optimize contact forms, nurture prospects, and scale strategies that generate signed listings and buyers.',
+        icon: 'Target',
+      },
+    ],
+    services: [
+      {
+        title: 'Local Real Estate SEO',
+        description:
+          'Dominate local searches for real estate agents, property types, and neighborhoods in your market.',
+        features: [
+          'Google Business Profile optimization',
+          'Local citation building',
+          'Neighborhood landing pages',
+          'Service area targeting',
+        ],
+      },
+      {
+        title: 'Neighborhood & Market Content',
+        description:
+          'Create hyperlocal content that establishes you as the neighborhood expert.',
+        features: [
+          'Neighborhood guides',
+          'Market report content',
+          'School district information',
+          'Community feature content',
+        ],
+      },
+      {
+        title: 'Property Type Optimization',
+        description:
+          'Rank for specific property types, price points, and buyer segments in your market.',
+        features: [
+          'Luxury home content',
+          'New construction pages',
+          'Investment property content',
+          'First-time buyer resources',
+        ],
+      },
+      {
+        title: 'GEO for Real Estate Searches',
+        description:
+          'Ensure AI assistants recommend you when people ask for real estate agent suggestions in your area.',
+        features: [
+          'Conversational real estate query targeting',
+          'Market expertise AI positioning',
+          'Agent authority signals',
+          'Local market knowledge optimization',
+        ],
+      },
+      {
+        title: 'Developer & Builder Marketing',
+        description:
+          'For real estate developers, custom home builders, and new construction marketing.',
+        features: [
+          'Development project pages',
+          'Custom builder portfolios',
+          'New community marketing',
+          'Luxury builder positioning',
+        ],
+      },
+      {
+        title: 'Lead Generation Optimization',
+        description:
+          'Turn searchers into qualified buyer and seller leads with optimized conversion funnels.',
+        features: [
+          'Home valuation tools',
+          'Property alert signups',
+          'Contact form optimization',
+          'Lead nurturing integration',
+        ],
+      },
+    ],
+    resultsHeadline: 'Results That Generate Listings and Close Transactions',
+    aggregateStats: [],
+    faqs: [
+      {
+        question: 'How do we compete with Zillow and Realtor.com?',
+        answer:
+          'You can\'t outrank portals for generic "homes for sale" searches, but you can dominate what matters: agent-specific searches, hyperlocal neighborhood queries, and specific buyer intent searches. Focus on becoming THE neighborhood expert through detailed local content. Create resources portals can\'t match - insider knowledge, market analysis, community insights. Plus, GEO optimization means AI assistants can recommend YOU directly when people ask for agent recommendations, bypassing portals entirely.',
+      },
+      {
+        question: 'What makes real estate SEO different from other industries?',
+        answer:
+          'Real estate SEO is hyperlocal and relationship-driven. Success comes from dominating specific neighborhoods, zip codes, and market segments rather than broad geographic areas. The content strategy focuses on demonstrating local expertise through neighborhood guides, market reports, and community knowledge. Unlike transactional industries, real estate SEO builds long-term brand awareness since buyers and sellers research for months before choosing an agent.',
+      },
+      {
+        question: 'How do we rank for neighborhood searches?',
+        answer:
+          'Create comprehensive neighborhood landing pages that cover everything a buyer would want to know: housing inventory overview, price trends, school information, amenities, lifestyle factors, and market dynamics. Add regularly updated market reports, new listing highlights, and community news. Use structured data for local business and real estate. The agents who invest in deep neighborhood content become the default experts that both Google and AI assistants reference.',
+      },
+      {
+        question: 'Can SEO help luxury real estate and custom builders?',
+        answer:
+          'Absolutely. Luxury buyers do extensive online research before engaging agents. They search for specific neighborhoods, property features, architects, and builders. Creating premium content around luxury market expertise, showcasing high-end listings and projects, and building authority through quality signals all drive qualified luxury leads. Custom home builders benefit from portfolio showcasing, process content, and local builder authority building.',
+      },
+      {
+        question: 'How long does real estate SEO take?',
+        answer:
+          'Real estate SEO typically shows initial results in 3-4 months for local searches and neighborhood content. Building true market authority takes 6-12 months of consistent content and optimization. The compounding nature of SEO means year two delivers dramatically better results than year one. Agents who commit to sustained SEO often see it become their primary lead source, reducing dependence on purchased leads and expensive portal advertising.',
+      },
+      {
+        question: 'How much does real estate SEO cost?',
+        answer:
+          'Real estate SEO typically requires $2,500-$6,000/month for individual agents and small teams, $5,000-$12,000/month for brokerages and larger teams. Custom home builders and developers often invest $4,000-$10,000/month for project marketing and portfolio SEO. Given commission values ($10,000-$100,000+ per transaction), ROI can be exceptional. Most agents find SEO delivers lower cost-per-lead than portal advertising within 12 months, with leads that are more qualified and exclusive.',
+      },
+    ],
+  },
+];
 
 /**
  * Helper Functions

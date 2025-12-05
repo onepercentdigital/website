@@ -5,8 +5,11 @@ import {
   Building2,
   Code,
   Factory,
+  Gavel,
   Handshake,
   Heart,
+  Home,
+  Landmark,
   Package,
   ShoppingCart,
   Tractor,
@@ -24,7 +27,7 @@ export const Route = createFileRoute('/solutions/')({
     generateMetaTags({
       title: 'Industry-Specific SEO Solutions | Tailored Strategies',
       description:
-        'Discover SEO and GEO strategies tailored to your industry. From hospitality to technology, we drive results for businesses in 10 key verticals.',
+        'Discover SEO and GEO strategies tailored to your industry. From hospitality to technology, we drive results for businesses in 12 key verticals.',
       url: 'https://onepercentseo.com/solutions',
     }),
 });
@@ -46,6 +49,9 @@ function SolutionsLandingPage() {
     agriculture: Tractor,
     technology: Code,
     'health-wellness': Heart,
+    'finance-insurance': Landmark,
+    legal: Gavel,
+    'real-estate': Home,
   };
 
   return (
@@ -118,7 +124,7 @@ function SolutionsLandingPage() {
                 Proven Industry Results
               </h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                We've driven results across 10 industries with strategies
+                We've driven results across 12 industries with strategies
                 tailored to each vertical's unique challenges and opportunities.
               </p>
             </div>

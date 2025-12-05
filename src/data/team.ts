@@ -19,7 +19,7 @@ export const team: TeamMember[] = [
     title: 'Co-Founder & SEO Lead Architect',
     bio: [
       "Having worked with over 300 brands since 2012, Luke is a seasoned expert in top ranking SEO engineering and scaling strategies. His unique talent lies in effortlessly navigating Google algorithm updates while continuously boosting each client's online presence and securing maximum market share in their industry.",
-      "In addition to his SEO expertise, Luke co-owns multiple thriving eCommerce brands. This hands-on experience equips him with the insights needed to manage various marketing channels effectively at scale. All this skill and knowledge make him an SEO expert you can't afford to miss.",
+      "In addition to his SEO expertise, Luke co-owns multiple thriving E-commerce brands. This hands-on experience equips him with the insights needed to manage various marketing channels effectively at scale. All this skill and knowledge make him an SEO expert you can't afford to miss.",
     ],
   },
   {
@@ -28,7 +28,7 @@ export const team: TeamMember[] = [
     title: 'Co-Founder & SEO Lead Architect',
     bio: [
       "Best defined as the bright mind behind 1% SEO's flawless operational procedures and execution, Mackey possesses a laser focus and attention to detail second to none. From onboarding to the end goal of any project, he treats each business like his own, delves deep into their unique needs and adds significant value to every SEO strategy.",
-      'Over the past decade, he has co-founded several successful eCommerce brands, which explains why he is so fluent in entrepreneurship. He is a businessman before an SEO expert and understands the ropes behind running a successful business – a quality many SEO agencies often lack.',
+      'Over the past decade, he has co-founded several successful E-commerce brands, which explains why he is so fluent in entrepreneurship. He is a businessman before an SEO expert and understands the ropes behind running a successful business – a quality many SEO agencies often lack.',
     ],
   },
   {

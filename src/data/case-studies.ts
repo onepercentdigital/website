@@ -85,9 +85,9 @@ export const caseStudies: CaseStudy[] = [
     featured: false,
     services: ['SEO', 'GEO', 'E-commerce Optimization'],
     challenge:
-      'Goldfarb sells new, used, and remanufactured diesel parts to buyers worldwide - managing tens of thousands of SKUs with complex part compatibility requirements. They struggled to stand out in a crowded e-commerce space where technical specifications matter more than brand recognition.',
+      'Goldfarb sells new, used, and remanufactured diesel parts to buyers worldwide - managing tens of thousands of SKUs with complex part compatibility requirements. They struggled to stand out in a crowded E-commerce space where technical specifications matter more than brand recognition.',
     solution:
-      'Our e-commerce optimization strategy focused on product visibility, technical SEO for their massive catalog, and content that addressed buyer questions at every stage. We optimized for both traditional search and AI platforms, positioning Goldfarb as the go-to source for diesel parts information.',
+      'Our E-commerce optimization strategy focused on product visibility, technical SEO for their massive catalog, and content that addressed buyer questions at every stage. We optimized for both traditional search and AI platforms, positioning Goldfarb as the go-to source for diesel parts information.',
     results:
       'Goldfarb became one of the most recommended injection pump online stores in ChatGPT, along with dominating traditional search. They increased revenue by 10x while moving tens of thousands of SKUs to buyers around the world.',
     metrics: [
@@ -114,7 +114,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     testimonial: {
       quote:
-        'Working with One Percent SEO transformed our online presence. We went from being invisible to dominating our market. The team understands e-commerce and delivers real results.',
+        'Working with One Percent SEO transformed our online presence. We went from being invisible to dominating our market. The team understands E-commerce and delivers real results.',
       author: 'Scott Goldfarb',
       role: 'Owner, Goldfarb & Associates',
       initials: 'SG',

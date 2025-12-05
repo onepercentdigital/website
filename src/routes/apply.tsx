@@ -310,7 +310,7 @@ function ApplyPage() {
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Since 2012, we've helped over 300 businesses across North
-                America in diverse industries — from hospitality and e-commerce
+                America in diverse industries — from hospitality and E-commerce
                 to manufacturing and professional services. We're frequently
                 approached by multinational companies, digital marketing
                 agencies, and other SEO agencies for consulting. Our strategies

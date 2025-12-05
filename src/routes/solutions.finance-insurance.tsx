@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import {
   ArrowRight,
+  Award,
+  BadgeCheck,
   BookOpen,
   Building2,
   CheckCircle2,
-  Clock,
-  Search,
-  Settings,
+  MapPin,
+  Scale,
+  Shield,
   Target,
-  TrendingDown,
-  Wrench,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import {
@@ -22,19 +22,19 @@ import { Button } from '@/components/ui/button';
 import { getSolutionBySlug } from '@/data/solutions';
 import { generateMetaTags } from '@/lib/seo';
 
-export const Route = createFileRoute('/solutions/manufacturing')({
-  component: ManufacturingPage,
+export const Route = createFileRoute('/solutions/finance-insurance')({
+  component: FinanceInsurancePage,
   head: () =>
     generateMetaTags({
-      title: 'Manufacturing & Industrial SEO | Drive B2B Leads',
+      title: 'Finance & Insurance SEO | Generate Qualified Client Leads',
       description:
-        'Drive qualified B2B leads for manufacturers and industrial companies. Dominate high-value searches and reach decision-makers.',
-      url: 'https://onepercentseo.com/solutions/manufacturing',
+        'Drive qualified leads for financial advisors, insurance agents, and financial services firms. Dominate high-value searches with proven SEO and GEO strategies.',
+      url: 'https://onepercentseo.com/solutions/finance-insurance',
     }),
 });
 
-function ManufacturingPage() {
-  const solution = getSolutionBySlug('manufacturing');
+function FinanceInsurancePage() {
+  const solution = getSolutionBySlug('finance-insurance');
 
   if (!solution) {
     return <div>Solution not found</div>;
@@ -43,9 +43,9 @@ function ManufacturingPage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'Manufacturing & Industrial SEO',
+      name: 'Finance & Insurance SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/manufacturing',
+      url: 'https://onepercentseo.com/solutions/finance-insurance',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
@@ -57,12 +57,12 @@ function ManufacturingPage() {
   };
 
   const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-    Clock,
-    Wrench,
-    TrendingDown,
+    Shield,
+    Scale,
     Building2,
-    Search,
-    Settings,
+    BadgeCheck,
+    Award,
+    MapPin,
     BookOpen,
     Target,
   };
@@ -105,15 +105,15 @@ function ManufacturingPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
-              Challenges Facing Manufacturing Businesses
+              Challenges Facing Financial Services
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Manufacturers and industrial companies face unique B2B challenges.
-              Here's what we help you overcome.
+              Financial advisors and insurance agents face unique marketing
+              challenges. Here's what we help you overcome.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {solution.challenges.map((challenge, _index) => {
+            {solution.challenges.map((challenge) => {
               const Icon = iconMap[challenge.icon];
               return (
                 <div
@@ -121,7 +121,7 @@ function ManufacturingPage() {
                   className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-accent/50 hover:shadow-lg"
                 >
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 p-3">
-                    <Icon className="h-6 w-6 text-accent" />
+                    {Icon && <Icon className="h-6 w-6 text-accent" />}
                   </div>
                   <h3 className="mb-3 font-bold text-xl leading-tight">
                     {challenge.title}
@@ -144,8 +144,8 @@ function ManufacturingPage() {
               Our Proven 4-Step Approach
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              A systematic process designed specifically for manufacturing and
-              industrial companies to drive B2B leads.
+              A systematic process designed specifically for financial services
+              to generate qualified client leads.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -155,7 +155,7 @@ function ManufacturingPage() {
                 <div key={step.title} className="relative">
                   <div className="flex flex-col rounded-2xl border border-border bg-card p-6">
                     <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 p-3">
-                      <Icon className="h-6 w-6 text-accent" />
+                      {Icon && <Icon className="h-6 w-6 text-accent" />}
                     </div>
                     <div className="mb-2 font-semibold text-accent text-sm uppercase tracking-widest">
                       Step {index + 1}
@@ -182,12 +182,12 @@ function ManufacturingPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO and GEO solutions tailored for manufacturing and
-              industrial companies.
+              Comprehensive SEO and GEO solutions tailored for financial
+              advisors, insurance agents, and wealth managers.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {solution.services.map((service, _index) => (
+            {solution.services.map((service) => (
               <div
                 key={service.title}
                 className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-accent/50 hover:shadow-lg"
@@ -242,11 +242,11 @@ function ManufacturingPage() {
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
-            Ready to Dominate Industrial Search?
+            Ready to Grow Your Financial Services Practice?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Let's generate qualified B2B leads and grow your manufacturing
-            business with proven SEO and GEO strategies.
+            Let's generate qualified client leads with proven SEO and GEO
+            strategies built for financial advisors and insurance professionals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

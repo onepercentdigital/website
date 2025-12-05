@@ -433,7 +433,7 @@ function SEOPage() {
                 <p className="text-muted-foreground italic leading-relaxed tracking-wide">
                   "Working with One Percent SEO transformed our online presence.
                   We went from being invisible to dominating our market. The
-                  team understands e-commerce and delivers real results."
+                  team understands E-commerce and delivers real results."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="flex size-12 items-center justify-center rounded-full bg-accent/10">
@@ -535,7 +535,7 @@ function SEOPage() {
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Yes. We've successfully implemented SEO strategies across B2B
-                SaaS, e-commerce, professional services, healthcare, finance,
+                SaaS, E-commerce, professional services, healthcare, finance,
                 and more. Every industry has people searching for solutions. Our
                 approach adapts to your specific market dynamics, competition
                 level, and business model to deliver results.
