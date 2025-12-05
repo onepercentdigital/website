@@ -434,25 +434,6 @@ function PerformanceMarketingPage() {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 rounded-2xl border border-border bg-card p-6">
-                <p className="text-muted-foreground italic leading-relaxed tracking-wide">
-                  "We tried agencies, we tried hiring in-house, we tried doing
-                  it ourselves. Nothing worked until we switched to a pay per
-                  lead model. Now we know exactly what we spend per customer and
-                  can scale predictably."
-                </p>
-                <div className="mt-4 flex items-center gap-3">
-                  <div className="flex size-12 items-center justify-center rounded-full bg-accent/10">
-                    <Users className="size-6 text-accent" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Performance Marketing Client</div>
-                    <div className="text-muted-foreground text-sm">
-                      B2B Services Company
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="flex items-center justify-center">
               {/* Placeholder for future chart/visualization */}

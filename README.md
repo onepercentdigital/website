@@ -1,6 +1,6 @@
 # One Percent Digital - Marketing Website
 
-Modern, high-performance marketing website built with TanStack Start for One Percent Digital's GEO, SEO, and Performance Marketing services. Production-ready with 22 routes, 12 industry-specific solution pages, and a Convex-powered blog CMS.
+Modern, high-performance marketing website built with TanStack Start for One Percent Digital's GEO, SEO, and Performance Marketing services. Production-ready with 23 routes, 12 industry-specific solution pages, and a Convex-powered blog CMS.
 
 ## Quick Start
 
@@ -66,8 +66,8 @@ website/
 
 ## Routes
 
-**Marketing (20 pages):**
-- `/` `/seo` `/geo` `/enterprise` `/about` `/customers` `/case-studies` `/apply`
+**Marketing (21 pages):**
+- `/` `/seo` `/geo` `/performance-marketing` `/enterprise` `/about` `/customers` `/case-studies` `/apply`
 - `/solutions` + 12 industries (hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness, finance-insurance, legal, real-estate)
 
 **Blog (2 pages):**

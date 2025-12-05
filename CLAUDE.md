@@ -46,7 +46,7 @@
 - **Images**: Cloudflare Images CDN
 
 ### Current State
-- **22 routes** (20 marketing + 2 public blog)
+- **23 routes** (21 marketing + 2 public blog)
 - **Admin CMS**: Disabled for launch (manage via Convex dashboard)
 - **Code quality**: 0 TypeScript errors, 0 linting errors
 
@@ -109,6 +109,7 @@ website/
 │   │   ├── index.tsx        # Homepage
 │   │   ├── seo.tsx          # SEO service page
 │   │   ├── geo.tsx          # GEO service page
+│   │   ├── performance-marketing.tsx # Performance Marketing service page
 │   │   ├── customers.tsx    # Customer showcase
 │   │   ├── case-studies.tsx # Case studies
 │   │   ├── apply.tsx        # Calendly booking
