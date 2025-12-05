@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SeoRouteImport } from './routes/seo'
+import { Route as PerformanceMarketingRouteImport } from './routes/performance-marketing'
 import { Route as GeoRouteImport } from './routes/geo'
 import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as CustomersRouteImport } from './routes/customers'
@@ -36,6 +37,11 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 const SeoRoute = SeoRouteImport.update({
   id: '/seo',
   path: '/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerformanceMarketingRoute = PerformanceMarketingRouteImport.update({
+  id: '/performance-marketing',
+  path: '/performance-marketing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GeoRoute = GeoRouteImport.update({
@@ -158,6 +164,7 @@ export interface FileRoutesByFullPath {
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
+  '/performance-marketing': typeof PerformanceMarketingRoute
   '/seo': typeof SeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
@@ -183,6 +190,7 @@ export interface FileRoutesByTo {
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
+  '/performance-marketing': typeof PerformanceMarketingRoute
   '/seo': typeof SeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
@@ -209,6 +217,7 @@ export interface FileRoutesById {
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
+  '/performance-marketing': typeof PerformanceMarketingRoute
   '/seo': typeof SeoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
@@ -236,6 +245,7 @@ export interface FileRouteTypes {
     | '/customers'
     | '/enterprise'
     | '/geo'
+    | '/performance-marketing'
     | '/seo'
     | '/blog/$slug'
     | '/solutions/agriculture'
@@ -261,6 +271,7 @@ export interface FileRouteTypes {
     | '/customers'
     | '/enterprise'
     | '/geo'
+    | '/performance-marketing'
     | '/seo'
     | '/blog/$slug'
     | '/solutions/agriculture'
@@ -286,6 +297,7 @@ export interface FileRouteTypes {
     | '/customers'
     | '/enterprise'
     | '/geo'
+    | '/performance-marketing'
     | '/seo'
     | '/blog/$slug'
     | '/solutions/agriculture'
@@ -312,6 +324,7 @@ export interface RootRouteChildren {
   CustomersRoute: typeof CustomersRoute
   EnterpriseRoute: typeof EnterpriseRoute
   GeoRoute: typeof GeoRoute
+  PerformanceMarketingRoute: typeof PerformanceMarketingRoute
   SeoRoute: typeof SeoRoute
   BlogSlugRoute: typeof BlogSlugRoute
   SolutionsAgricultureRoute: typeof SolutionsAgricultureRoute
@@ -337,6 +350,13 @@ declare module '@tanstack/react-router' {
       path: '/seo'
       fullPath: '/seo'
       preLoaderRoute: typeof SeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/performance-marketing': {
+      id: '/performance-marketing'
+      path: '/performance-marketing'
+      fullPath: '/performance-marketing'
+      preLoaderRoute: typeof PerformanceMarketingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/geo': {
@@ -504,6 +524,7 @@ const rootRouteChildren: RootRouteChildren = {
   CustomersRoute: CustomersRoute,
   EnterpriseRoute: EnterpriseRoute,
   GeoRoute: GeoRoute,
+  PerformanceMarketingRoute: PerformanceMarketingRoute,
   SeoRoute: SeoRoute,
   BlogSlugRoute: BlogSlugRoute,
   SolutionsAgricultureRoute: SolutionsAgricultureRoute,

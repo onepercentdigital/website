@@ -81,6 +81,7 @@ export const navigation = {
       items: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
+        { label: 'Performance Marketing', href: '/performance-marketing' },
       ],
     },
     {
@@ -138,6 +139,7 @@ export const footer = {
       links: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
+        { label: 'Performance Marketing', href: '/performance-marketing' },
       ],
     },
     {

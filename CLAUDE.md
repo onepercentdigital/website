@@ -38,7 +38,7 @@
 
 ## Project Overview
 
-**One Percent SEO** - Full-stack TypeScript marketing website with blog CMS.
+**One Percent Digital** - Full-stack TypeScript marketing website with blog CMS.
 
 - **Framework**: TanStack Start + React 19
 - **Database**: Convex (real-time)
@@ -46,7 +46,7 @@
 - **Images**: Cloudflare Images CDN
 
 ### Current State
-- **22 routes** (20 marketing + 2 public blog)
+- **23 routes** (21 marketing + 2 public blog)
 - **Admin CMS**: Disabled for launch (manage via Convex dashboard)
 - **Code quality**: 0 TypeScript errors, 0 linting errors
 
@@ -92,7 +92,7 @@
 ## Project Structure
 
 ```
-seo-website/
+website/
 ├── src/
 │   ├── components/
 │   │   ├── ui/              # Shadcn components
@@ -109,6 +109,7 @@ seo-website/
 │   │   ├── index.tsx        # Homepage
 │   │   ├── seo.tsx          # SEO service page
 │   │   ├── geo.tsx          # GEO service page
+│   │   ├── performance-marketing.tsx # Performance Marketing service page
 │   │   ├── customers.tsx    # Customer showcase
 │   │   ├── case-studies.tsx # Case studies
 │   │   ├── apply.tsx        # Calendly booking
@@ -116,7 +117,7 @@ seo-website/
 │   │   ├── enterprise.tsx   # Enterprise solutions
 │   │   ├── blog.index.tsx   # Blog listing
 │   │   ├── blog.$slug.tsx   # Blog post
-│   │   └── solutions.*.tsx  # 10 industry pages
+│   │   └── solutions.*.tsx  # 12 industry pages
 │   │
 │   ├── config/
 │   │   └── brand.ts         # Brand config (nav, footer, SEO)
@@ -369,6 +370,7 @@ Detailed guides for specific features:
 - **[docs/BLOG-CMS.md](docs/BLOG-CMS.md)** - Blog system architecture and features
 - **[docs/CLOUDFLARE-IMAGES.md](docs/CLOUDFLARE-IMAGES.md)** - Image upload setup guide
 - **[docs/WORDPRESS-MIGRATION.md](docs/WORDPRESS-MIGRATION.md)** - WordPress import instructions
+- **[docs/SOLUTIONS-NAMING.md](docs/SOLUTIONS-NAMING.md)** - Why "Solutions" vs "Industries" naming
 
 ---
 
