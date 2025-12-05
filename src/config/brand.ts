@@ -47,7 +47,7 @@ export const brand: BrandConfig = {
   appDomain: 'app.op.digital',
 
   logo: {
-    text: 'One Percent Digital',
+    text: 'One Percent SEO',
     iconColor: '#00cccc',
   },
 
