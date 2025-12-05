@@ -142,7 +142,7 @@ function HomePage() {
       </section>
 
       {/* Services Overview Section */}
-      <section className="border-t border-border px-6 py-12 lg:py-20">
+      <section className="border-border border-t px-6 py-12 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
