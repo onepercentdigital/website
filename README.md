@@ -5,10 +5,10 @@ Modern, high-performance marketing website built with TanStack Start for One Per
 ## 🚀 Overview
 
 Production-ready full-stack TypeScript marketing website featuring:
-- **25 production-ready routes**: 20 marketing pages + 5 blog/admin routes
-- **Complete Blog CMS**: Public blog, admin panel, markdown editor with image uploads
+- **22 production-ready routes**: 20 marketing pages + 2 public blog routes
+- **Blog CMS Backend**: Convex-powered with public blog routes (admin routes disabled for launch)
 - **Industry-specific solutions**: 9 tailored landing pages covering Hospitality, E-commerce, Manufacturing, Logistics, Automotive, Construction, Agriculture, Technology, and Health & Wellness
-- **Enterprise solutions**: Comprehensive page with pricing ($15K-$75K+/month), SLA guarantees, and white-glove service details
+- **Enterprise solutions**: Comprehensive page with pricing ($15K-$75K+/month) and white-glove service details
 - **Team showcase**: About page with full bios for all team members and company story
 - **Server-side rendering (SSR)** for optimal SEO/GEO performance
 - **Extreme typography scale** with Plus Jakarta Sans Variable font
@@ -142,10 +142,6 @@ seo-website/
 │   │   ├── enterprise.tsx  # Enterprise solutions ✅ COMPLETE
 │   │   ├── blog.index.tsx  # Blog listing page ✅ COMPLETE
 │   │   ├── blog.$slug.tsx  # Individual blog post ✅ COMPLETE
-│   │   ├── admin.index.tsx # Admin redirect ✅ COMPLETE
-│   │   ├── admin.posts.index.tsx    # Post management ✅ COMPLETE
-│   │   ├── admin.posts.new.tsx      # Create new post ✅ COMPLETE
-│   │   ├── admin.posts.$id.edit.tsx # Edit existing post ✅ COMPLETE
 │   │   ├── solutions.index.tsx      # Solutions landing ✅ COMPLETE
 │   │   └── solutions.*.tsx          # 9 industry pages ✅ COMPLETE
 │   │
@@ -187,7 +183,7 @@ seo-website/
 │   └── seed-categories.ts       # Initial category seeding
 │
 ├── public/                  # Static assets
-│   ├── sitemap.xml         # Auto-generated sitemap (19 pages)
+│   ├── sitemap.xml         # Auto-generated sitemap (20 pages)
 │   ├── robots.txt          # Search engine instructions
 │   ├── favicon.ico         # Site favicon
 │   └── logo.svg            # Brand logo
@@ -285,28 +281,28 @@ The build process:
 
 This project uses **flat URLs** for better UX, SEO, and AI citations:
 
-**✅ Production-Ready Routes (25 total):**
+**✅ Production-Ready Routes (22 total):**
 
 **Marketing Pages (20):**
 - `/` - Homepage (6 sections, extreme typography, fully optimized)
 - `/seo` - SEO service page (7 sections with FAQ accordion)
 - `/geo` - GEO service page (7 sections with FAQ accordion)
-- `/enterprise` - Enterprise solutions page (8 sections, 7-question FAQ, pricing $15K-$75K+/month)
+- `/enterprise` - Enterprise solutions page (8 sections, 7-question FAQ, white-glove service)
 - `/about` - About page (team bios, company story, 6 sections)
-- `/customers` - Customer showcase (10 client logos, testimonials, industry breakdown)
-- `/case-studies` - Case studies page (3 detailed case studies, featured study, aggregate stats)
+- `/customers` - Customer showcase (300+ companies, 8X growth, $200M+ revenue)
+- `/case-studies` - Case studies page (3 detailed case studies, 300+ success stories, 8X avg growth)
 - `/apply` - Apply To Work With Us with Calendly (above-fold booking, 30-min sessions)
 - `/solutions` - Solutions landing page (directory of all industries)
 - `/solutions/*` - 9 industry-specific pages (hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness)
 - `404` - Branded NotFound component with quick links
 
-**Blog CMS Routes (5):**
+**Public Blog Routes (2):**
 - `/blog` - Blog listing with real posts from Convex
 - `/blog/[slug]` - Individual post page with markdown rendering
-- `/admin` - Admin redirect to posts listing
-- `/admin/posts` - Post management table with status filters
-- `/admin/posts/new` - Create new post with full editor
-- `/admin/posts/[id]/edit` - Edit existing post
+
+**🔒 Admin CMS Routes - TEMPORARILY DISABLED**
+Admin routes have been removed for launch security. Blog content can be managed via Convex dashboard.
+See CLAUDE.md Restoration Guide for re-enabling admin routes with Clerk authentication.
 
 **⚠️ No Placeholder Pages** - All planned pages are complete!
 
@@ -316,7 +312,7 @@ This project uses **flat URLs** for better UX, SEO, and AI citations:
 
 ### SEO Optimization
 - Server-side rendering for all pages
-- **Sitemap.xml** - Auto-generated at build time, includes all 19 pages
+- **Sitemap.xml** - Auto-generated at build time, includes all 20 pages
 - **robots.txt** - Configured with sitemap reference and admin route blocking
 - Structured data (JSON-LD) for Organization, LocalBusiness, Articles
 - Comprehensive meta tags (Open Graph, Twitter Cards)
@@ -346,47 +342,32 @@ This project uses **flat URLs** for better UX, SEO, and AI citations:
 
 ## 📝 Blog CMS
 
-This project includes a production-ready blog CMS built with Convex and Cloudflare Images.
+This project includes a blog CMS backend built with Convex and Cloudflare Images.
+
+**Current Status:** Admin routes are temporarily disabled for launch security. Blog content can be managed directly via the Convex dashboard.
 
 ### Quick Start
 
 **1. Create Categories:**
 ```bash
-# Create initial blog categories
+# Create initial blog categories via Convex dashboard or script
 bun run scripts/seed-categories.ts
 ```
 
-**2. Create Your First Post:**
-1. Navigate to http://localhost:3000/admin/posts/new
-2. Fill in the title (slug auto-generates)
-3. Write content in Markdown
-4. Upload a featured image
-5. Select category and set status
-6. Click "Create Post"
+**2. Managing Posts:**
+- Use the **Convex dashboard** to create, edit, and delete posts
+- Or restore admin routes following the guide in CLAUDE.md
 
 **3. View Your Blog:**
 - **Blog index**: http://localhost:3000/blog
 - **Individual posts**: http://localhost:3000/blog/{slug}
-- **Admin panel**: http://localhost:3000/admin/posts
 
 ### Blog Workflow
 
-**Writing Posts:**
-- Use Markdown syntax for formatting
-- Upload images via the featured image uploader (Cloudflare Images)
-- Preview your content in real-time
-- Save as draft or publish immediately
-
-**Publishing Posts:**
+**Publishing Posts (via Convex Dashboard):**
 - **Draft**: Work-in-progress, not visible on public site
 - **Published**: Live on the blog immediately
 - **Scheduled**: Set a future publish date (manual trigger for now)
-
-**Managing Posts:**
-- Edit existing posts at `/admin/posts/{id}/edit`
-- Delete posts from the post listing page
-- Filter posts by status (draft, published, scheduled)
-- Posts display by most recently modified
 
 ### WordPress Migration
 
@@ -511,39 +492,37 @@ See **[CLAUDE.md](./CLAUDE.md)**
 
 ## ✅ Current Implementation Status
 
-**✅ COMPLETE - Full-stack marketing site with blog CMS (25 production-ready routes)**
+**✅ COMPLETE - Full-stack marketing site (22 production-ready routes)**
 
 **Marketing Pages (20):**
 - ✅ Homepage with 6 sections and extreme typography
 - ✅ SEO service page (7 sections + FAQ)
 - ✅ GEO service page (7 sections + FAQ)
-- ✅ Enterprise solutions page (8 sections + 7-question FAQ, pricing $15K-$75K+/month)
+- ✅ Enterprise solutions page (8 sections + 7-question FAQ, white-glove service)
 - ✅ About page with team bios (6 sections)
-- ✅ Customers page (10 client logos + testimonials)
-- ✅ Case studies page (3 case studies + featured layout)
+- ✅ Customers page (300+ companies, 8X growth, $200M+ revenue)
+- ✅ Case studies page (3 case studies, 300+ success stories, 8X avg growth)
 - ✅ Apply page with Calendly (above-fold booking, conversion-optimized)
 - ✅ 10 industry-specific solutions pages (landing + 9 industries)
 - ✅ Branded 404 page
 
-**Blog CMS (5 routes):**
+**Public Blog Routes (2):**
 - ✅ `/blog` - Blog listing with real posts from Convex
 - ✅ `/blog/[slug]` - Individual post pages with markdown rendering, Article schema
-- ✅ `/admin/posts` - Post management table with status filters
-- ✅ `/admin/posts/new` - Create new post with full editor
-- ✅ `/admin/posts/[id]/edit` - Edit existing post
 
-**Blog Backend (Convex):**
+**🔒 Admin CMS Routes - TEMPORARILY DISABLED:**
+- Admin routes removed for launch security
+- Blog content manageable via Convex dashboard
+- See CLAUDE.md Restoration Guide for re-enabling
+
+**Blog Backend (Convex) - ACTIVE:**
 - ✅ `convex/posts.ts` - 8 queries/mutations (list, getBySlug, getById, create, update, deletePost, publish, updateFeaturedImage)
 - ✅ `convex/categories.ts` - 5 queries/mutations (list, getBySlug, create, update, deleteCategory)
 
-**Blog Editor Features:**
-- ✅ Markdown textarea with live preview toggle
+**Blog Editor Component - PRESERVED (for future restoration):**
+- ✅ `src/components/BlogEditor.tsx` - Complete markdown editor
 - ✅ Featured image upload to Cloudflare Images
-- ✅ Inline image upload (inserts markdown syntax)
-- ✅ Category selector
-- ✅ Status selector (draft/published/scheduled)
-- ✅ SEO fields (meta title, description, OG image, noindex)
-- ✅ Auto-slug generation from title
+- ✅ Category selector, status selector, SEO fields
 
 **WordPress Migration:**
 - ✅ `scripts/migrate-wordpress.ts` - Full migration script with image handling
@@ -554,11 +533,11 @@ See **[CLAUDE.md](./CLAUDE.md)**
 - ✅ Navigation with dropdowns and theme toggle
 - ✅ Cloudflare Images integration (upload, delivery, 5 variants)
 - ✅ Data-driven architecture (4 data files)
-- ✅ SEO Infrastructure - sitemap.xml (19 pages), robots.txt
+- ✅ SEO Infrastructure - sitemap.xml (20 pages), robots.txt
 - ✅ Code Quality - 0 TypeScript errors, 0 linting errors
 
 **🎯 Optional Future Enhancements:**
-- Full Clerk authentication in admin routes (currently placeholder)
+- Restore admin routes with Clerk authentication
 - Role-based permissions (Admin/Editor/Viewer)
 - Auto-publish for scheduled posts (Convex cron)
 - Blog search and category filtering

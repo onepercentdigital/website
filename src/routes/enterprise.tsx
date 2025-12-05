@@ -107,9 +107,9 @@ function EnterprisePage() {
               </p>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
                 Our enterprise solutions provide dedicated account management,
-                custom reporting dashboards, SLA guarantees, and white-glove
-                service designed for Fortune 1000 companies, multi-location
-                businesses, and organizations with complex compliance needs.
+                custom reporting dashboards, and white-glove service designed
+                for enterprise companies, multi-location businesses, and
+                organizations with complex compliance needs.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed tracking-wide">
                 From stakeholder training to enterprise tool integration, we
@@ -125,21 +125,13 @@ function EnterprisePage() {
           </div>
 
           {/* Mini Stats */}
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+          <div className="mt-16 grid gap-8 sm:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="mb-2 font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                50+
+              <div className="mb-2 font-extrabold text-4xl text-accent tracking-tight lg:text-6xl">
+                Worldwide
               </div>
               <div className="text-muted-foreground text-sm tracking-wide">
-                Average Locations Managed
-              </div>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-8 text-center">
-              <div className="mb-2 font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                99.9%
-              </div>
-              <div className="text-muted-foreground text-sm tracking-wide">
-                SLA Uptime Guarantee
+                Brand Visibility
               </div>
             </div>
             <div className="rounded-2xl border border-border bg-card p-8 text-center">
@@ -305,12 +297,12 @@ function EnterprisePage() {
                 <Headphones className="h-8 w-8 text-accent" />
               </div>
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                Priority Support & SLAs
+                White-Glove Support
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
-                24/7 priority support with guaranteed response times.
-                Performance SLAs backed by contracts and quarterly business
-                reviews.
+                24/7 priority support with dedicated account management.
+                Personalized service and quarterly business reviews tailored to
+                your needs.
               </p>
             </div>
 
@@ -610,63 +602,34 @@ function EnterprisePage() {
               <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide">
                 Our enterprise clients don't just see incremental
                 improvements—they achieve transformational results that impact
-                every location, brand, and market they serve. From Fortune 1000
+                every location, brand, and market they serve. From enterprise
                 companies to rapidly scaling multi-location businesses, we
-                deliver measurable ROI backed by contractual SLAs.
+                deliver measurable ROI with white-glove service.
               </p>
 
-              <div className="mb-8 grid gap-6 sm:grid-cols-2">
+              <div className="grid gap-6 sm:grid-cols-3">
                 <div className="rounded-2xl border border-border bg-card p-6">
-                  <div className="mb-2 font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    $200M+
+                  <div className="mb-2 font-extrabold text-3xl text-accent tracking-tight sm:text-4xl">
+                    $200M
                   </div>
                   <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
-                    Revenue Impact for Enterprise Clients
+                    Revenue Generated
                   </div>
                 </div>
                 <div className="rounded-2xl border border-border bg-card p-6">
-                  <div className="mb-2 font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    98%
-                  </div>
-                  <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
-                    Client Retention Rate
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-border bg-card p-6">
-                  <div className="mb-2 font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    450%
+                  <div className="mb-2 font-extrabold text-3xl text-accent tracking-tight sm:text-4xl">
+                    8X
                   </div>
                   <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
                     Average Organic Traffic Growth
                   </div>
                 </div>
                 <div className="rounded-2xl border border-border bg-card p-6">
-                  <div className="mb-2 font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    15x
+                  <div className="mb-2 font-extrabold text-3xl text-accent tracking-tight sm:text-4xl">
+                    1000%
                   </div>
                   <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
-                    Average ROI on SEO Investment
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-8">
-                <p className="mb-6 text-lg italic leading-relaxed">
-                  "Working with One Percent SEO transformed how we approach
-                  search across our entire portfolio. Their enterprise-grade
-                  systems, dedicated support, and strategic guidance delivered
-                  results we couldn't achieve with our previous agency. They're
-                  true partners in our growth."
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10">
-                    <Building2 className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">VP of Marketing</div>
-                    <div className="text-muted-foreground text-sm">
-                      Multi-Location Hospitality Group
-                    </div>
+                    Brand Visibility Growth
                   </div>
                 </div>
               </div>
@@ -756,33 +719,33 @@ function EnterprisePage() {
                 Enterprise SEO isn't just "more SEO"—it's a fundamentally
                 different approach. You get a dedicated account team (not shared
                 resources), custom reporting dashboards tailored to your KPIs,
-                contractual SLAs with guaranteed response times, 24/7 priority
-                support, enterprise-grade security and compliance (SOC 2, GDPR),
-                and integration with your existing enterprise tools (Salesforce,
+                white-glove support with priority response times, 24/7 access,
+                enterprise-grade security and compliance (SOC 2, GDPR), and
+                integration with your existing enterprise tools (Salesforce,
                 HubSpot, etc.). We become an extension of your team with
                 quarterly business reviews, executive reporting, stakeholder
                 training, and strategic planning. Our systems are built to
-                manage complexity at scale—whether that's 50 locations, multiple
+                manage complexity at scale—whether that's multiple locations,
                 brands, or international markets.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5">
               <AccordionTrigger className="text-left font-semibold text-lg">
-                Do you provide SLA guarantees?
+                What kind of support do enterprise clients receive?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Yes. Enterprise clients receive contractual SLAs covering
-                response times, uptime guarantees, and performance commitments.
-                Our standard enterprise SLA includes: 1-hour response time for
-                critical issues, 4-hour response for high-priority requests,
-                99.9% monitoring uptime, quarterly business reviews with
-                executive stakeholders, and monthly performance reporting
-                against agreed KPIs. We also provide performance guarantees in
-                our contracts, with success metrics defined during the strategy
-                phase. SLA terms are customizable based on your organization's
-                specific needs and can include custom reporting schedules,
-                dedicated Slack channels, and escalation procedures.
+                Enterprise clients receive white-glove support with dedicated
+                account management and priority response times. Our standard
+                enterprise support includes: rapid response for critical issues,
+                priority handling for high-priority requests, quarterly business
+                reviews with executive stakeholders, and monthly performance
+                reporting against agreed KPIs. We also provide performance
+                commitments in our contracts, with success metrics defined
+                during the strategy phase. Support terms are customizable based
+                on your organization's specific needs and can include custom
+                reporting schedules, dedicated Slack channels, and escalation
+                procedures.
               </AccordionContent>
             </AccordionItem>
 
@@ -837,8 +800,8 @@ function EnterprisePage() {
             Ready to Scale Your Search Presence?
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Join the Fortune 1000 companies and multi-location businesses that
-            trust One Percent SEO for enterprise-grade search optimization.
+            Join the enterprise companies and multi-location businesses that
+            trust One Percent Digital for enterprise-grade search optimization.
             Schedule a personalized demo to see how we can transform your search
             presence at scale.
           </p>
