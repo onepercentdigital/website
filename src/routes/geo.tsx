@@ -112,18 +112,18 @@ function GEOPage() {
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 <div className="rounded-xl border border-border bg-card p-4">
                   <div className="font-extrabold text-3xl text-accent tracking-tight">
-                    95%
+                    400%
                   </div>
                   <div className="mt-1 text-muted-foreground text-sm tracking-wide">
-                    AI Citation Rate
+                    Increase in AI Searches Monthly
                   </div>
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4">
                   <div className="font-extrabold text-3xl text-accent tracking-tight">
-                    10x
+                    1000%
                   </div>
                   <div className="mt-1 text-muted-foreground text-sm tracking-wide">
-                    Brand Visibility
+                    Brand Visibility Growth
                   </div>
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4">
@@ -398,31 +398,15 @@ function GEOPage() {
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    10x
+                    400%
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
-                    Increase in AI Citations
+                    Increase in AI Searches Monthly
                   </div>
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    95%
-                  </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
-                    Recommendation Rate
-                  </div>
-                </div>
-                <div>
-                  <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    4+
-                  </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
-                    AI Platforms Dominated
-                  </div>
-                </div>
-                <div>
-                  <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    300%
+                    1000%
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
                     Brand Visibility Growth

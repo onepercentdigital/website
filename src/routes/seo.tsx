@@ -120,7 +120,7 @@ function SEOPage() {
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4">
                   <div className="font-extrabold text-3xl text-accent tracking-tight">
-                    300%
+                    8X
                   </div>
                   <div className="mt-1 text-muted-foreground text-sm tracking-wide">
                     Avg Traffic Growth
@@ -406,7 +406,7 @@ function SEOPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    300%
+                    8X
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
                     Average Traffic Increase
@@ -422,7 +422,7 @@ function SEOPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    12+
+                    13+
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
                     Years of Experience

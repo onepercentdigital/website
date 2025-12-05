@@ -4,7 +4,6 @@ import {
   Award,
   Briefcase,
   Building2,
-  CheckCircle2,
   Factory,
   Laptop,
   TrendingUp,
@@ -15,7 +14,6 @@ import { Button } from '@/components/ui/button';
 import {
   customerCategories,
   customers,
-  getCustomersByIndustry,
   getCustomersWithTestimonials,
   getFeaturedCustomer,
 } from '@/data/customers';
@@ -96,7 +94,7 @@ function CustomersPage() {
                 <Building2 className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl text-accent leading-none tracking-tight lg:text-7xl xl:text-8xl">
-                10+
+                300+
               </div>
               <div className="text-muted-foreground tracking-wide">
                 Industry-Leading Companies
@@ -108,7 +106,7 @@ function CustomersPage() {
                 <TrendingUp className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl text-accent leading-none tracking-tight lg:text-7xl xl:text-8xl">
-                500%
+                8X
               </div>
               <div className="text-muted-foreground tracking-wide">
                 Average Traffic Growth
@@ -119,11 +117,11 @@ function CustomersPage() {
               <div className="mb-4 inline-flex rounded-full bg-accent/10 p-4">
                 <Award className="h-8 w-8 text-accent" />
               </div>
-              <div className="mb-2 font-extrabold text-4xl text-accent leading-none tracking-tight lg:text-5xl xl:text-6xl">
-                Industry
+              <div className="mb-2 font-extrabold text-5xl text-accent leading-none tracking-tight lg:text-7xl xl:text-8xl">
+                $200M+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Leading Retention
+                SEO-driven revenue generated for clients
               </div>
             </div>
           </div>
@@ -226,7 +224,6 @@ function CustomersPage() {
           <div className="grid gap-8 md:grid-cols-2">
             {customerCategories.map((category) => {
               const Icon = iconMap[category.icon] || Briefcase;
-              const categoryCustomers = getCustomersByIndustry(category.id);
 
               return (
                 <div
@@ -239,25 +236,9 @@ function CustomersPage() {
                   <h3 className="mb-3 font-bold text-2xl lg:text-3xl">
                     {category.name}
                   </h3>
-                  <p className="mb-6 text-muted-foreground leading-relaxed tracking-wide">
+                  <p className="text-muted-foreground leading-relaxed tracking-wide">
                     {category.description}
                   </p>
-                  {categoryCustomers.length > 0 && (
-                    <div className="space-y-2">
-                      <div className="mb-3 font-semibold text-foreground text-sm uppercase tracking-wider">
-                        Featured Clients:
-                      </div>
-                      {categoryCustomers.map((customer) => (
-                        <div
-                          key={customer.id}
-                          className="flex items-center gap-2 text-foreground"
-                        >
-                          <CheckCircle2 className="h-4 w-4 shrink-0 text-accent" />
-                          <span>{customer.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
               );
             })}

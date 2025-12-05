@@ -103,7 +103,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         label: 'SKUs Sold',
-        value: '10,000s',
+        value: 'Millions',
         description: 'Products sold globally',
       },
       {
@@ -235,8 +235,8 @@ export function getCaseStudyById(id: string): CaseStudy | undefined {
  */
 export function getAggregateMetrics() {
   return {
-    totalClients: caseStudies.length,
-    averageGrowth: '10x',
-    industriesServed: new Set(caseStudies.map((s) => s.industry)).size,
+    totalClients: 300,
+    averageGrowth: '8X',
+    industriesServed: 'All',
   };
 }

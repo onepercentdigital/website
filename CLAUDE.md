@@ -8,7 +8,7 @@ This is a **full-stack TypeScript web application** being developed as a replace
 - **Name**: seo-website
 - **Organization**: onepercentdigital
 - **Git Repository**: https://github.com/onepercentdigital/seo-website.git
-- **Current Branch**: fix/content
+- **Current Branch**: fix/prep
 - **Package Manager**: Bun 1.3.3
 
 ### Future Rebranding
@@ -266,10 +266,10 @@ Indexes: by_slug, by_status, by_published_date, by_modified_date, by_category, b
 - `/` - Homepage with all 6 sections, extreme typography, SEO optimized
 - `/geo` - GEO service page with 7 comprehensive sections and FAQ
 - `/seo` - SEO service page with 7 comprehensive sections and FAQ
-- `/customers` - Customer showcase with 10 client logos, testimonials, and industry breakdown
-- `/case-studies` - Case studies page with 3 detailed case studies, featured study, aggregate stats
+- `/customers` - Customer showcase with 300+ companies, 8X growth, $200M+ revenue stats
+- `/case-studies` - Case studies page with 3 detailed case studies, 300+ success stories, 8X avg growth
 - `/apply` - Apply To Work With Us with Calendly embed (above-fold booking, 30-min sessions)
-- `/enterprise` - Enterprise solutions page with 8 sections, 7-question FAQ, pricing details
+- `/enterprise` - Enterprise solutions page with 8 sections, 7-question FAQ, white-glove service focus
 - `/about` - About page with team bios, company story, 6 sections
 - `/solutions` - Solutions landing page with directory of all 9 industries
 - `/solutions/hospitality` - Hospitality & Restaurants SEO
@@ -1403,7 +1403,7 @@ Built a production-ready customers page with easy-to-update data structure:
 - **Code Quality**: ✅ **EXCELLENT** - 0 TypeScript errors, 0 linting errors
 - **Clerk Auth**: 🔒 **DISABLED** - Removed for launch (env vars preserved)
 - **Sentry**: 🔒 **DISABLED** - Removed for launch (env vars preserved)
-- **Stats**: 22 production-ready routes, 19 pages in sitemap, 0 technical debt
+- **Stats**: 22 production-ready routes (20 marketing + 2 public blog), 20 pages in sitemap, 0 technical debt
 
 ### 📍 Current Project State (2025-12-03)
 
@@ -1437,9 +1437,10 @@ When resuming work on this project:
 
 1. **Review Current State**: 
    - All 20 marketing pages are complete and production-ready
-   - Blog CMS is fully implemented (public + admin routes)
+   - Public blog routes functional (`/blog`, `/blog/[slug]`)
+   - Admin CMS routes disabled for launch (manage content via Convex dashboard)
    - Convex backend has all queries/mutations for posts and categories
-   - BlogEditor component is complete with markdown + image upload
+   - BlogEditor component preserved for future restoration
    - WordPress migration scripts are ready to use
    - 0 TypeScript errors, 0 linting errors
 
@@ -3233,69 +3234,18 @@ All 10 solutions pages are production-ready:
 
 ## Recent Updates (2025-11-25)
 
-### Session: Documentation Accuracy Audit
+### Session: Blog CMS Backend Complete
 
 #### What Was Updated
 
-The documentation was significantly out of date - it described the blog as a "skeleton" and listed blog CMS features as "To Be Implemented" when in fact the blog CMS was fully complete. This session corrected all inaccuracies.
-
-**1. Blog CMS Status - CORRECTED**
-The blog CMS is **fully implemented**, not "to be implemented":
+The blog CMS backend was fully implemented:
 - ✅ `convex/posts.ts` - 8 queries/mutations (list, getBySlug, getById, create, update, deletePost, publish, updateFeaturedImage)
 - ✅ `convex/categories.ts` - 5 queries/mutations (list, getBySlug, create, update, deleteCategory)
-- ✅ Admin routes complete (`/admin`, `/admin/posts`, `/admin/posts/new`, `/admin/posts/$id/edit`)
 - ✅ Public blog routes complete (`/blog`, `/blog/$slug`)
 - ✅ BlogEditor component complete with markdown + image upload
 - ✅ WordPress migration scripts ready (`migrate-wordpress.ts`, `fix-featured-images.ts`)
 
-**2. Route Count Updated**
-- Previous: "21 production-ready routes + 1 visual skeleton"
-- Corrected: "25 production-ready routes (20 marketing + 5 blog/admin)"
-
-**3. Tech Stack Versions Updated**
-Updated to match current package.json:
-- TanStack Start/Router/Plugin: 1.139.3 → 1.139.6
-- TanStack Query: 5.90.10 → 5.90.11
-- TanStack Form: 1.25.0 → 1.26.0
-- Anthropic AI SDK: 2.0.45 → 2.0.49
-- Vercel AI SDK: 5.0.101 → 5.0.102
-- MCP: 1.22.0 → 1.23.0
-- Clerk: 5.56.2 → 5.57.0
-- Sentry: 10.26.0 → 10.27.0
-- Vitest: 4.0.13 → 4.0.14
-
-**4. Project Structure Updated**
-Added to project structure:
-- `src/components/BlogEditor.tsx`
-- `src/lib/cloudflare-images.ts`
-- `src/lib/auth-guard.ts`
-- `src/data/solutions.ts`
-- `src/data/team.ts`
-- `convex/posts.ts`
-- `convex/categories.ts`
-- `scripts/` directory with migration scripts
-- All admin and blog routes
-
-**5. Removed Outdated Sections**
-- Removed "🚧 To Be Implemented" section for Blog CMS (now complete)
-- Removed outdated "Phase 0-4" implementation plan (all phases complete)
-- Removed "Current Session End Point (2025-11-20)" (obsolete)
-- Cleaned up duplicate Quick Start Guide content
-
-**6. Added New Sections**
-- "✅ Blog CMS (Complete MVP)" section documenting all implemented features
-- "🚧 Future Enhancements" section for optional improvements
-- Updated Project Status to reflect complete state
-
-##### Files Modified
-- ✅ `CLAUDE.md` - Comprehensive update to reflect actual codebase state
-- ✅ `README.md` - Updated to match (pending)
-
-##### Current State
-- **Phase**: ✅ COMPLETE - Full-stack marketing site with blog CMS
-- **Routes**: 25 production-ready (20 marketing + 5 blog/admin)
-- **Blog**: Fully functional with public routes, admin panel, editor, Convex backend
-- **Code Quality**: 0 TypeScript errors, 0 linting errors
+**Note:** Admin routes were later disabled for launch security. See Restoration Guide.
 
 ---
 
@@ -3338,5 +3288,38 @@ Updated all dependency versions in CLAUDE.md to match current package.json:
 
 ---
 
-*Last Updated: 2025-12-03*
+## Recent Updates (2025-12-05)
+
+### Session: Documentation Accuracy & Statistics Update
+
+#### What Was Updated
+
+**1. Route Count Corrections**
+- Corrected route count throughout documentation
+- Actual: 22 production-ready routes (20 marketing + 2 public blog)
+- Admin CMS routes are DISABLED (not active) - this was already correctly documented
+
+**2. Statistics Updates**
+Updated page descriptions to match actual content:
+- **Customers page**: Now shows "300+ companies, 8X growth, $200M+ revenue"
+- **Case Studies page**: Now shows "300+ success stories, 8X avg growth"
+- **Enterprise page**: Updated to "white-glove service focus" (removed SLA specifics)
+
+**3. Quick Start Guide Clarification**
+- Clarified that admin routes are disabled for launch
+- Updated to note BlogEditor is "preserved for future restoration"
+- Added note about managing content via Convex dashboard
+
+##### Files Modified
+- ✅ `CLAUDE.md` - Route counts, statistics, Quick Start Guide updates
+- ✅ `README.md` - Route counts, admin routes status, statistics updates
+
+##### Current State
+- **Routes**: 22 production-ready (20 marketing + 2 public blog)
+- **Admin CMS**: Disabled for launch (Convex backend active, manage via dashboard)
+- **Code Quality**: 0 TypeScript errors, 0 linting errors
+
+---
+
+*Last Updated: 2025-12-05*
 *Maintained for: AI-assisted development with Claude and other AI tools*
