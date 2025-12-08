@@ -27,6 +27,7 @@ const staticPages = [
   { url: '', priority: '1.0', changefreq: 'weekly' }, // Homepage
   { url: '/seo', priority: '0.9', changefreq: 'monthly' },
   { url: '/geo', priority: '0.9', changefreq: 'monthly' },
+  { url: '/pm', priority: '0.9', changefreq: 'monthly' },
   { url: '/customers', priority: '0.8', changefreq: 'monthly' },
   { url: '/case-studies', priority: '0.8', changefreq: 'weekly' },
   { url: '/apply', priority: '0.9', changefreq: 'monthly' },
