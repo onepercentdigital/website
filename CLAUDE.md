@@ -46,7 +46,7 @@
 - **Images**: Cloudflare Images CDN
 
 ### Current State
-- **23 routes** (21 marketing + 2 public blog)
+- **25 routes** (23 marketing + 2 public blog)
 - **Admin CMS**: Disabled for launch (manage via Convex dashboard)
 - **Code quality**: 0 TypeScript errors, 0 linting errors
 
@@ -55,20 +55,20 @@
 ## Tech Stack
 
 ### Core Framework
-- **TanStack Start 1.139.14** - Full-stack React framework with SSR
-- **TanStack Router 1.139.14** - File-based routing with type-safe navigation
-- **React 19.2.1** - Latest React with concurrent features
-- **TypeScript 5.9.3** - Strict mode enabled
-- **Vite 7.2.6** - Build tool and dev server
+- **TanStack Start 1** - Full-stack React framework with SSR
+- **TanStack Router 1** - File-based routing with type-safe navigation
+- **React 19** - Latest React with concurrent features
+- **TypeScript 5** - Strict mode enabled
+- **Vite 7** - Build tool and dev server
 
 ### State & Data
-- **TanStack Query 5.90.11** - Async state management
-- **TanStack Form 1.27.0** - Type-safe form handling
-- **Convex 1.30.0** - Real-time backend database
-- **Zod 4.1.13** - Schema validation (v4 breaking changes from v3)
+- **TanStack Query 5** - Async state management
+- **TanStack Form 1** - Type-safe form handling
+- **Convex 1** - Real-time backend database
+- **Zod 4** - Schema validation (v4 breaking changes from v3)
 
 ### UI & Styling
-- **Tailwind CSS 4.1.17** - Utility-first CSS (v4)
+- **Tailwind CSS 4** - Utility-first CSS
 - **Shadcn/ui** - Component library on Radix UI
 - **Lucide React** - Icon system
 - **Plus Jakarta Sans Variable** - Primary font
@@ -76,11 +76,11 @@
 ### Deployment
 - **Cloudflare Workers** - Edge deployment
 - **Cloudflare Images** - Image CDN (5 variants configured)
-- **Wrangler 4.52.1** - Deployment tooling
+- **Wrangler 4** - Deployment tooling
 
 ### Dev Tools
-- **Biome 2.3.8** - Linting and formatting
-- **Vitest 4.0.15** - Unit testing
+- **Biome 2** - Linting and formatting
+- **Vitest 4** - Unit testing
 
 ### Temporarily Disabled
 - **Clerk** - Authentication (see `docs/RESTORE-ADMIN-CMS.md`)
@@ -109,7 +109,7 @@ website/
 │   │   ├── index.tsx        # Homepage
 │   │   ├── seo.tsx          # SEO service page
 │   │   ├── geo.tsx          # GEO service page
-│   │   ├── performance-marketing.tsx # Performance Marketing service page
+│   │   ├── pm.tsx           # PM (Performance Marketing) service page
 │   │   ├── customers.tsx    # Customer showcase
 │   │   ├── case-studies.tsx # Case studies
 │   │   ├── apply.tsx        # Calendly booking
@@ -117,7 +117,7 @@ website/
 │   │   ├── enterprise.tsx   # Enterprise solutions
 │   │   ├── blog.index.tsx   # Blog listing
 │   │   ├── blog.$slug.tsx   # Blog post
-│   │   └── solutions.*.tsx  # 12 industry pages
+│   │   └── solutions.*.tsx  # 13 industry pages
 │   │
 │   ├── config/
 │   │   └── brand.ts         # Brand config (nav, footer, SEO)
@@ -370,7 +370,7 @@ Detailed guides for specific features:
 - **[docs/BLOG-CMS.md](docs/BLOG-CMS.md)** - Blog system architecture and features
 - **[docs/CLOUDFLARE-IMAGES.md](docs/CLOUDFLARE-IMAGES.md)** - Image upload setup guide
 - **[docs/WORDPRESS-MIGRATION.md](docs/WORDPRESS-MIGRATION.md)** - WordPress import instructions
-- **[docs/SOLUTIONS-NAMING.md](docs/SOLUTIONS-NAMING.md)** - Why "Solutions" vs "Industries" naming
+- **[docs/STRUCTURE-REASONING.md](docs/STRUCTURE-REASONING.md)** - Navigation structure and naming rationale
 
 ---
 

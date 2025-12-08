@@ -114,15 +114,13 @@ function HomePage() {
                 </Button>
               </div>
 
-              {/* Performance Marketing */}
+              {/* PM */}
               <div className="group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center transition-all hover:border-accent/50 lg:p-8">
-                <h2 className="mb-2 font-bold text-xl tracking-tight lg:mb-4 lg:text-3xl">
-                  Performance
-                  <br />
-                  Marketing
+                <h2 className="mb-2 font-bold text-2xl tracking-tight lg:mb-4 lg:text-4xl">
+                  PM
                 </h2>
                 <p className="mb-4 text-muted-foreground text-xs leading-relaxed tracking-wide lg:mb-6 lg:text-base">
-                  Receive Qualified Leads at no monthly cost
+                  Pay Per Exclusive Pre-Qualified Lead
                 </p>
                 <Button
                   asChild
@@ -130,8 +128,8 @@ function HomePage() {
                   size="sm"
                   className="group-hover:border-accent lg:size-default"
                 >
-                  <Link to="/performance-marketing">
-                    More about Performance Marketing
+                  <Link to="/pm">
+                    More about PM
                     <ArrowRight className="ml-1 h-3 w-3 lg:ml-2 lg:h-4 lg:w-4" />
                   </Link>
                 </Button>
@@ -266,7 +264,7 @@ function HomePage() {
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-foreground text-sm">
-                    Pre-qualified leads delivered in real-time
+                    Live exclusive pre-qualified leads
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -281,7 +279,7 @@ function HomePage() {
                 variant="outline"
                 className="group-hover:border-accent"
               >
-                <Link to="/performance-marketing">
+                <Link to="/pm">
                   More about Performance Marketing
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router';
+import { Logo } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import { brand, footer } from '@/config/brand';
@@ -41,20 +42,17 @@ export function Footer() {
               </ul>
             </div>
           ))}
+          {/* Logo Column */}
+          <div className="flex items-center justify-center md:justify-end">
+            <Logo size="xxl" showWordmark={false} />
+          </div>
         </div>
 
         {/* Bottom Section */}
         <div className="mt-12 flex flex-col items-center justify-between gap-6 border-border border-t pt-8 md:flex-row">
-          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
-            <p className="text-muted-foreground text-sm">
-              © {currentYear} {brand.displayName}. All rights reserved.
-            </p>
-            {brand.contact.address && (
-              <p className="text-muted-foreground text-sm">
-                {brand.contact.address}
-              </p>
-            )}
-          </div>
+          <p className="text-muted-foreground text-sm">
+            © {currentYear} {brand.displayName}. All rights reserved.
+          </p>
 
           <div className="flex items-center gap-4">
             <Button

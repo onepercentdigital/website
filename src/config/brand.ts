@@ -58,7 +58,6 @@ export const brand: BrandConfig = {
   contact: {
     email: 'hello@op.digital',
     phone: '+1 (555) 123-4567', // Update with real number
-    address: 'Gilbert, AZ',
   },
 
   seo: {
@@ -81,7 +80,7 @@ export const navigation = {
       items: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'Performance Marketing', href: '/performance-marketing' },
+        { label: 'PM', href: '/pm' },
       ],
     },
     {
@@ -89,7 +88,6 @@ export const navigation = {
       type: 'dropdown' as const,
       items: [
         { label: 'Customers', href: '/customers' },
-        { label: 'Blog', href: '/blog' },
         { label: 'Case Studies', href: '/case-studies' },
       ],
     },
@@ -139,14 +137,13 @@ export const footer = {
       links: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'Performance Marketing', href: '/performance-marketing' },
+        { label: 'PM', href: '/pm' },
       ],
     },
     {
       title: 'Resources',
       links: [
         { label: 'Customers', href: '/customers' },
-        { label: 'Blog', href: '/blog' },
         { label: 'Case Studies', href: '/case-studies' },
       ],
     },
@@ -156,13 +153,6 @@ export const footer = {
         { label: 'About', href: '/about' },
         { label: 'Enterprise', href: '/enterprise' },
         { label: 'Contact', href: '/apply' },
-      ],
-    },
-    {
-      title: 'Social',
-      links: [
-        { label: 'X', href: 'https://x.com', external: true },
-        { label: 'LinkedIn', href: 'https://linkedin.com', external: true },
       ],
     },
   ],
