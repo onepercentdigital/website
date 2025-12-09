@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { useQuery } from 'convex/react';
-import { Calendar, Clock, FileText, User } from 'lucide-react';
+import { ArrowRight, Calendar, Clock, FileText, User } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { generateMetaTags } from '@/lib/seo';
 import { api } from '../../convex/_generated/api';
 
@@ -10,7 +11,7 @@ export const Route = createFileRoute('/blog/')({
     generateMetaTags({
       title: 'Blog | SEO & GEO Insights',
       description:
-        'Expert insights, strategies, and case studies on SEO, GEO, and search optimization. Learn how to dominate traditional and AI-powered search.',
+        'Expert insights, strategies, and case studies on SEO, GEO, and search optimization. Learn how to excel in traditional and AI-powered search.',
       url: 'https://onepercentseo.com/blog',
     }),
 });
@@ -31,8 +32,8 @@ function BlogIndexPage() {
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
               Expert strategies, case studies, and insights on SEO, GEO, and
-              search optimization. Learn how to dominate both traditional and
-              AI-powered search.
+              search optimization. Learn how to lead in traditional search, AI
+              discovery, and performance marketing.
             </p>
           </div>
         </div>
@@ -70,6 +71,34 @@ function BlogIndexPage() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="border-border border-t px-6 py-20 lg:py-32">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
+            Ready to Put These Insights Into Action?
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+            From SEO and GEO to Performance Marketing, we turn strategy into
+            leads. Let's discuss how to scale your business.
+          </p>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <Link to="/apply">
+                Apply To Work With Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link to="/case-studies">View Case Studies</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>

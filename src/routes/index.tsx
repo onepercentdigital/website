@@ -49,8 +49,8 @@ function HomePage() {
 
             {/* Supporting Text */}
             <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
-              Authority with ChatGPT. Visibility on Google. Qualified leads on
-              demand. This is what market dominance looks like.
+              Recommended by ChatGPT. Page 1 on Google. Exclusive pre-qualified
+              leads on demand. This is what market dominance looks like.
             </p>
 
             {/* CTAs */}
@@ -144,7 +144,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
-              How We Help You Dominate
+              How We Help You Scale
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground tracking-wide">
               From AI citations to search rankings to qualified leads, we
@@ -280,7 +280,7 @@ function HomePage() {
                 className="group-hover:border-accent"
               >
                 <Link to="/pm">
-                  More about Performance Marketing
+                  More about PM
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -417,10 +417,11 @@ function HomePage() {
             <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm">
               <div className="mb-6 text-2xl text-accent">"</div>
               <p className="mb-6 text-foreground leading-relaxed">
-                Working with One Percent SEO transformed our online presence. We
-                went from being invisible to dominating our market. They
-                understand E-commerce and deliver real results. We're now one of
-                the top recommendations in ChatGPT for diesel injection pumps.
+                Working with One Percent Digital transformed our online
+                presence. We went from being invisible to showing up everywhere
+                our customers search. They understand E-commerce and deliver
+                real results. We're now one of the top recommendations in
+                ChatGPT for diesel injection pumps.
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
@@ -441,10 +442,10 @@ function HomePage() {
             <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm">
               <div className="mb-6 text-2xl text-accent">"</div>
               <p className="mb-6 text-foreground leading-relaxed">
-                After 40+ years in business, One Percent SEO helped us finally
-                dominate online. We're now the #1 patio cover company in Arizona
-                with three straight years of record-breaking revenue. Their
-                local SEO strategy changed everything for us.
+                After 40+ years in business, One Percent Digital helped us
+                finally break through online. We're now the #1 patio cover
+                company in Arizona with three straight years of record-breaking
+                revenue. Their local SEO strategy changed everything for us.
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
@@ -468,11 +469,12 @@ function HomePage() {
       <section className="border-border border-t px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-5xl">
-            Ready to Join the Top 1%?
+            Ready to Scale Your Business?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
-            Let's discuss how we'll position your brand to dominate both
-            traditional and AI search.
+            Whether through SEO, GEO, or Performance Marketing, we help you
+            generate the leads you need to grow. Choose one service or combine
+            all three for maximum impact.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

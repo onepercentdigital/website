@@ -31,7 +31,7 @@ export const Route = createFileRoute('/geo')({
     generateMetaTags({
       title: 'GEO - Generative Engine Optimization',
       description:
-        'Dominate AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
+        'Lead AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
       url: 'https://onepercentseo.com/geo',
     }),
 });
@@ -42,12 +42,12 @@ function GEOPage() {
     data: {
       name: 'Generative Engine Optimization (GEO)',
       description:
-        'Dominate AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
+        'Lead AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
       url: 'https://onepercentseo.com/geo',
       serviceType: 'Generative Engine Optimization',
       provider: {
         '@type': 'Organization',
-        name: 'One Percent SEO',
+        name: 'One Percent Digital',
         url: 'https://onepercentseo.com',
       },
       areaServed: 'Worldwide',
@@ -63,7 +63,7 @@ function GEOPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Dominate AI Search Results and Capture Mind Share
+              Lead AI Search Results and Capture Mind Share
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               Position your brand at the forefront of ChatGPT, Claude,
@@ -151,7 +151,7 @@ function GEOPage() {
               Our GEO Process
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
-              A systematic approach to dominating AI-powered search results
+              A systematic approach to leading AI-powered search results
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -224,7 +224,7 @@ function GEOPage() {
                 icon: Zap,
                 title: 'First-Mover Advantage',
                 description:
-                  "Most brands haven't optimized for AI search yet. Establish dominance before your competitors catch on.",
+                  "Most brands haven't optimized for AI search yet. Establish leadership before your competitors catch on.",
               },
               {
                 icon: TrendingUp,
@@ -284,7 +284,7 @@ function GEOPage() {
               What's Included
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
-              Comprehensive GEO services to dominate AI search
+              Comprehensive GEO services to lead AI search
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -392,7 +392,7 @@ function GEOPage() {
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
                 Our clients are being cited and recommended by AI engines daily,
-                establishing category dominance before their competitors even
+                establishing category leadership before their competitors even
                 understand what GEO means.
               </p>
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -415,8 +415,8 @@ function GEOPage() {
               </div>
               <div className="mt-10 rounded-2xl border border-border bg-card p-6">
                 <p className="text-muted-foreground italic leading-relaxed tracking-wide">
-                  "One Percent SEO helped us become the go-to recommendation in
-                  ChatGPT for diesel injection pumps. When AI platforms
+                  "One Percent Digital helped us become the go-to recommendation
+                  in ChatGPT for diesel injection pumps. When AI platforms
                   recommend you by name, that's when you know you've made it."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
@@ -483,7 +483,7 @@ function GEOPage() {
               <AccordionContent className="text-muted-foreground">
                 Initial AI citations typically appear within 6-8 weeks. However,
                 GEO is an ongoing strategy. The first-mover advantage means
-                early adopters establish dominance that becomes increasingly
+                early adopters establish leadership that becomes increasingly
                 difficult for competitors to overcome. Most clients see
                 significant improvements in AI visibility within 3-4 months.
               </AccordionContent>
@@ -534,11 +534,11 @@ function GEOPage() {
       <section className="relative overflow-hidden bg-background px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
-            Dominate AI Search Before Your Competitors Do
+            Lead AI Search Before Your Competitors Do
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             The window of opportunity is closing. Early movers in GEO are
-            establishing category dominance that will compound for years. Don't
+            establishing category leadership that will compound for years. Don't
             let your competitors define your category to AI.
           </p>
           <div className="mt-10">

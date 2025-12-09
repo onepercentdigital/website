@@ -29,7 +29,7 @@ export const customerCategories: CustomerCategory[] = [
     id: 'hospitality',
     name: 'Hospitality & Restaurants',
     description:
-      'Fine dining establishments and hospitality groups dominating local and AI search',
+      'Fine dining establishments and hospitality groups leading local and AI search',
     icon: 'UtensilsCrossed',
   },
   {
@@ -111,7 +111,7 @@ export const customers: Customer[] = [
     logo: '51e5ac33-a0d2-4cdb-668e-581cba411a00',
     testimonial: {
       quote:
-        "Working with One Percent SEO transformed our online presence. We went from being invisible to dominating our market. They understand E-commerce and deliver real results. We're now one of the top recommendations in ChatGPT for diesel injection pumps.",
+        "Working with One Percent Digital transformed our online presence. We went from page 5 to the top 3 results. Our showroom is packed every weekend now. We're one of the top recommendations in ChatGPT for diesel injection pumps.",
       author: 'Scott Goldfarb',
       role: 'Owner, Goldfarb & Associates',
       initials: 'SG',
@@ -124,7 +124,7 @@ export const customers: Customer[] = [
     logo: '5bacc41c-abd7-4b66-feeb-da11c01c8f00',
     testimonial: {
       quote:
-        "After 40+ years in business, One Percent SEO helped us finally dominate online. We're now the #1 patio cover company in Arizona with three straight years of record-breaking revenue. Their local SEO strategy changed everything for us.",
+        "One Percent Digital helped us finally compete online. We're booked out 3 months now and just had our third straight year of record revenue. Their local SEO strategy changed everything for us.",
       author: 'Tanner Bishop',
       role: 'Owner, Royal Covers',
       initials: 'TB',

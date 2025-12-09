@@ -29,7 +29,6 @@
 - **Route**: `/apply`
 
 ### Do Not
-- Create documentation files unless explicitly requested
 - Add emojis unless user requests them
 - Use `<a>` tags for internal navigation (use `Link`)
 - Add two-tone coloring to headlines with `<span className="text-accent">`
@@ -46,7 +45,7 @@
 - **Images**: Cloudflare Images CDN
 
 ### Current State
-- **25 routes** (23 marketing + 2 public blog)
+- **25 routes** (10 marketing + 2 blog + 12 industry solutions)
 - **Admin CMS**: Disabled for launch (manage via Convex dashboard)
 - **Code quality**: 0 TypeScript errors, 0 linting errors
 
@@ -82,9 +81,9 @@
 - **Biome 2** - Linting and formatting
 - **Vitest 4** - Unit testing
 
-### Temporarily Disabled
-- **Clerk** - Authentication (see `docs/RESTORE-ADMIN-CMS.md`)
-- **Sentry** - Error tracking (see `docs/RESTORE-ADMIN-CMS.md`)
+### Removed (Restorable)
+- **Clerk** - Authentication, removed from dependencies (see `docs/RESTORE-ADMIN-CMS.md`)
+- **Sentry** - Error tracking, removed from dependencies (see `docs/RESTORE-ADMIN-CMS.md`)
 - **Admin CMS routes** - Blog management (code in git history)
 
 ---
@@ -117,7 +116,8 @@ website/
 │   │   ├── enterprise.tsx   # Enterprise solutions
 │   │   ├── blog.index.tsx   # Blog listing
 │   │   ├── blog.$slug.tsx   # Blog post
-│   │   └── solutions.*.tsx  # 13 industry pages
+│   │   ├── solutions.index.tsx # Solutions hub
+│   │   └── solutions.*.tsx  # 12 industry pages
 │   │
 │   ├── config/
 │   │   └── brand.ts         # Brand config (nav, footer, SEO)
@@ -145,12 +145,16 @@ website/
 ├── scripts/
 │   ├── generate-sitemap.ts  # Sitemap generation
 │   ├── migrate-wordpress.ts # WordPress import
-│   └── fix-featured-images.ts
+│   ├── fix-featured-images.ts
+│   ├── migrate-customer-logos.ts
+│   └── seed-categories.ts
 │
 ├── docs/                    # Extended documentation
 │   ├── RESTORE-ADMIN-CMS.md
 │   ├── BLOG-CMS.md
+│   ├── BLOG-REDIRECTS.md
 │   ├── CLOUDFLARE-IMAGES.md
+│   ├── STRUCTURE-REASONING.md
 │   └── WORDPRESS-MIGRATION.md
 │
 └── public/
@@ -189,18 +193,18 @@ bun install
 bun run dev
 
 # Start Convex backend (separate terminal)
-npx convex dev
+bunx convex dev
 
 # Type check
 bun run type
 
-# Lint
-bun run lint
+# Lint + format check
+bun run check
 
-# Format
-bun run format
+# Auto-fix issues
+bun run fix
 
-# Run all checks
+# Run all checks (types + lint)
 bun run check-all
 
 # Build for production
@@ -275,8 +279,7 @@ function PricingPage() {
 
 ### Adding a Shadcn Component
 
-```bash
-pnpx shadcn@latest add button
+bunx shadcn@latest add button
 ```
 
 ### Adding SEO Structured Data
@@ -344,6 +347,7 @@ Available schema helpers in `src/lib/seo.ts`:
 posts: {
   title, slug, content, excerpt, featuredImage,
   categoryId, authorId, authorName,
+  relatedPostIds,
   status: 'draft' | 'published' | 'scheduled',
   publishedAt, scheduledFor, modifiedAt,
   seo: { metaTitle, metaDescription, ogImage, noindex }
@@ -368,6 +372,7 @@ Detailed guides for specific features:
 
 - **[docs/RESTORE-ADMIN-CMS.md](docs/RESTORE-ADMIN-CMS.md)** - Re-enable admin routes with Clerk auth
 - **[docs/BLOG-CMS.md](docs/BLOG-CMS.md)** - Blog system architecture and features
+- **[docs/BLOG-REDIRECTS.md](docs/BLOG-REDIRECTS.md)** - Blog URL redirect handling
 - **[docs/CLOUDFLARE-IMAGES.md](docs/CLOUDFLARE-IMAGES.md)** - Image upload setup guide
 - **[docs/WORDPRESS-MIGRATION.md](docs/WORDPRESS-MIGRATION.md)** - WordPress import instructions
 - **[docs/STRUCTURE-REASONING.md](docs/STRUCTURE-REASONING.md)** - Navigation structure and naming rationale

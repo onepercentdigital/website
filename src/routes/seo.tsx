@@ -31,7 +31,7 @@ export const Route = createFileRoute('/seo')({
     generateMetaTags({
       title: 'SEO - Search Engine Optimization',
       description:
-        'Drive sustainable growth through search dominance. Proven SEO strategies that deliver qualified traffic, higher rankings, and measurable ROI.',
+        'Drive sustainable growth through search excellence. Proven SEO strategies that deliver qualified traffic, higher rankings, and measurable ROI.',
       url: 'https://onepercentseo.com/seo',
     }),
 });
@@ -42,12 +42,12 @@ function SEOPage() {
     data: {
       name: 'Search Engine Optimization (SEO)',
       description:
-        'Drive sustainable growth through search dominance. Proven SEO strategies that deliver qualified traffic, higher rankings, and measurable ROI.',
+        'Drive sustainable growth through search excellence. Proven SEO strategies that deliver qualified traffic, higher rankings, and measurable ROI.',
       url: 'https://onepercentseo.com/seo',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
-        name: 'One Percent SEO',
+        name: 'One Percent Digital',
         url: 'https://onepercentseo.com',
       },
       areaServed: 'Worldwide',
@@ -63,7 +63,7 @@ function SEOPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Drive Sustainable Growth Through Search Dominance
+              Drive Sustainable Growth Through Search Excellence
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               Proven SEO strategies that deliver qualified traffic, higher
@@ -284,7 +284,7 @@ function SEOPage() {
               Comprehensive SEO Services
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
-              Everything you need to dominate search results
+              Everything you need to lead search results
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -431,9 +431,9 @@ function SEOPage() {
               </div>
               <div className="mt-10 rounded-2xl border border-border bg-card p-6">
                 <p className="text-muted-foreground italic leading-relaxed tracking-wide">
-                  "Working with One Percent SEO transformed our online presence.
-                  We went from being invisible to dominating our market. The
-                  team understands E-commerce and delivers real results."
+                  "Working with One Percent Digital transformed our online
+                  presence. We went from page 5 to the top 3 results for our key
+                  terms. The leads just keep coming."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="flex size-12 items-center justify-center rounded-full bg-accent/10">

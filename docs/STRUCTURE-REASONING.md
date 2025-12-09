@@ -217,7 +217,3 @@ Our site structure decisions are intentional:
 4. **Clean URL patterns** support both human navigation and search engine crawling
 
 These choices create a cohesive user experience while maximizing discoverability in both traditional and AI-powered search.
-
----
-
-*Last updated: December 2024*

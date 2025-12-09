@@ -89,7 +89,7 @@ export const caseStudies: CaseStudy[] = [
     solution:
       'Our E-commerce optimization strategy focused on product visibility, technical SEO for their massive catalog, and content that addressed buyer questions at every stage. We optimized for both traditional search and AI platforms, positioning Goldfarb as the go-to source for diesel parts information.',
     results:
-      'Goldfarb became one of the most recommended injection pump online stores in ChatGPT, along with dominating traditional search. They increased revenue by 10x while moving tens of thousands of SKUs to buyers around the world.',
+      'Goldfarb became one of the most recommended injection pump online stores in ChatGPT, along with leading traditional search results. They increased revenue by 10x while moving tens of thousands of SKUs to buyers around the world.',
     metrics: [
       {
         label: 'Revenue Growth',
@@ -114,7 +114,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     testimonial: {
       quote:
-        'Working with One Percent SEO transformed our online presence. We went from being invisible to dominating our market. The team understands E-commerce and delivers real results.',
+        'Working with One Percent Digital transformed our online presence. We went from page 5 to the top 3 results. Our showroom is packed every weekend now.',
       author: 'Scott Goldfarb',
       role: 'Owner, Goldfarb & Associates',
       initials: 'SG',
@@ -130,7 +130,7 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "Royal Covers, established in 1979, faced fierce local competition in the Phoenix patio cover market. Despite 40+ years of experience, they weren't appearing where Arizona homeowners were searching - neither in organic results nor local maps.",
     solution:
-      "We implemented a comprehensive local SEO and GEO strategy, optimizing their presence across all Arizona service areas. We dominated local maps for patio cover searches throughout the state while building content authority that positioned them as Arizona's premier installer.",
+      "We implemented a comprehensive local SEO and GEO strategy, optimizing their presence across all Arizona service areas. We achieved top 3 map rankings for patio cover searches throughout the state while building content authority that positioned them as Arizona's premier installer.",
     results:
       "Royal Covers became the #1 patio cover company in Arizona, achieving top local maps rankings across the entire state. They've now had record-breaking revenue 3 years in a row.",
     metrics: [
@@ -157,7 +157,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     testimonial: {
       quote:
-        "After 40+ years in business, One Percent SEO helped us finally dominate online. We're now the #1 patio cover company in Arizona with three straight years of record revenue.",
+        "One Percent Digital helped us finally compete online. We're booked out 3 months now and just had our third straight year of record revenue.",
       author: 'Tanner Bishop',
       role: 'Owner, Royal Covers',
       initials: 'TB',

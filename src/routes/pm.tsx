@@ -52,7 +52,7 @@ function PerformanceMarketingPage() {
       serviceType: 'Lead Generation',
       provider: {
         '@type': 'Organization',
-        name: 'One Percent SEO',
+        name: 'One Percent Digital',
         url: 'https://onepercentseo.com',
       },
       areaServed: 'Worldwide',
@@ -405,7 +405,7 @@ function PerformanceMarketingPage() {
                   'Lead quality tracking',
                   'Conversion analysis',
                   'Cost per acquisition metrics',
-                  'ROI reporting',
+                  'Scalability insights',
                   'Competitive benchmarks',
                 ],
               },

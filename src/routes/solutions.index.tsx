@@ -27,7 +27,7 @@ export const Route = createFileRoute('/solutions/')({
     generateMetaTags({
       title: 'Industry-Specific SEO Solutions | Tailored Strategies',
       description:
-        'Discover SEO and GEO strategies tailored to your industry. From hospitality to technology, we drive results for businesses in 12 key verticals.',
+        'Discover SEO, GEO, and Performance Marketing strategies tailored to your industry. From hospitality to technology, we drive results for businesses in 12 key verticals.',
       url: 'https://onepercentseo.com/solutions',
     }),
 });
@@ -66,9 +66,9 @@ function SolutionsLandingPage() {
               Industry-Specific Search Solutions
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
-              Tailored SEO and GEO strategies for your industry. We understand
-              your market, your customers, and what it takes to dominate search
-              in your vertical.
+              Tailored SEO, GEO, and Performance Marketing strategies for your
+              industry. We understand your market, your customers, and what it
+              takes to win search in your vertical.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -152,8 +152,8 @@ function SolutionsLandingPage() {
               Find Your Industry
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Explore our industry-specific SEO and GEO solutions tailored to
-              your vertical.
+              Explore our industry-specific SEO, GEO, and Performance Marketing
+              solutions tailored to your vertical.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -192,12 +192,12 @@ function SolutionsLandingPage() {
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
-            Don't See Your Industry?
+            Ready to Generate More Leads?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            We work with businesses across all verticals. Our industry-specific
-            approach applies to any market. Let's discuss your unique
-            challenges.
+            No matter your industry, we help you scale with qualified leads
+            through SEO, GEO, and Performance Marketing. Let's discuss which
+            approach fits your goals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

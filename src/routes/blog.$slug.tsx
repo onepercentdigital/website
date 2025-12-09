@@ -17,7 +17,7 @@ export const Route = createFileRoute('/blog/$slug')({
     // Static meta tags for SSR
     // Dynamic meta tags would require server-side data fetching
     return generateMetaTags({
-      title: 'Blog Post | One Percent SEO',
+      title: 'Blog Post | One Percent Digital',
       description:
         'Expert insights on SEO, GEO, and search optimization strategies.',
       url: 'https://onepercentseo.com/blog',

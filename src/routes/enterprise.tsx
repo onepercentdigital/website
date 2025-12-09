@@ -30,9 +30,9 @@ export const Route = createFileRoute('/enterprise')({
   component: EnterprisePage,
   head: () =>
     generateMetaTags({
-      title: 'Enterprise SEO Solutions | Custom Search Strategies at Scale',
+      title: 'Enterprise Solutions | SEO, GEO & Performance Marketing at Scale',
       description:
-        'Enterprise-grade SEO for multi-location businesses and brands. Dedicated support, custom reporting, SLA guarantees, and white-glove service for organizations that demand results at scale.',
+        'Enterprise-grade SEO, GEO, and Performance Marketing for multi-location businesses. Dedicated support, custom reporting, and white-glove service for organizations that demand results.',
       url: 'https://onepercentseo.com/enterprise',
     }),
 });
@@ -41,14 +41,14 @@ function EnterprisePage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'Enterprise SEO Solutions',
+      name: 'Enterprise SEO, GEO & Performance Marketing Solutions',
       description:
-        'Enterprise-grade search engine optimization services for large organizations with multiple locations, brands, or complex needs.',
+        'Enterprise-grade SEO, GEO, and Performance Marketing services for large organizations with multiple locations, brands, or complex needs.',
       url: 'https://onepercentseo.com/enterprise',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
-        name: 'One Percent SEO',
+        name: 'One Percent Digital',
         url: 'https://onepercentseo.com',
       },
       areaServed: 'Worldwide',
@@ -64,7 +64,7 @@ function EnterprisePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Enterprise-Grade Search Optimization at Scale
+              Enterprise-Grade SEO, GEO & Performance Marketing at Scale
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
               Custom solutions for multi-location businesses, enterprise brands,
@@ -99,11 +99,11 @@ function EnterprisePage() {
                 What Makes Enterprise Different
               </h2>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                Enterprise SEO isn't just about doing more—it's about doing
-                things differently. When you're managing multiple locations,
-                brands, or complex organizational structures, you need
-                strategies that scale, systems that integrate, and support that
-                understands your unique challenges.
+                Enterprise marketing isn't just about doing more—it's about
+                doing things differently. When you're managing multiple
+                locations, brands, or complex organizational structures, you
+                need strategies that scale, systems that integrate, and support
+                that understands your unique challenges.
               </p>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
                 Our enterprise solutions provide dedicated account management,
@@ -331,7 +331,7 @@ function EnterprisePage() {
               Comprehensive Services Included
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Everything you need to dominate search at enterprise scale.
+              Everything you need to lead search at enterprise scale.
             </p>
           </div>
 

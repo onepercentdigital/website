@@ -1,6 +1,6 @@
 # One Percent Digital - Marketing Website
 
-Modern, high-performance marketing website built with TanStack Start for One Percent Digital's GEO, SEO, and Performance Marketing services. Production-ready with 23 routes, 12 industry-specific solution pages, and a Convex-powered blog CMS.
+Modern, high-performance marketing website built with TanStack Start for One Percent Digital's GEO, SEO, and Performance Marketing services. Production-ready with 25 routes, 13 solution pages total (12 industries + index), and a Convex-powered blog CMS.
 
 ## Quick Start
 
@@ -16,10 +16,10 @@ Modern, high-performance marketing website built with TanStack Start for One Per
 bun install
 
 # Create .env.local with required variables:
-# VITE_CONVEX_URL, VITE_CLERK_PUBLISHABLE_KEY, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN
+# VITE_CONVEX_URL, CONVEX_DEPLOYMENT, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN
 
 # Start Convex (terminal 1)
-npx convex dev
+bunx convex dev
 
 # Start dev server (terminal 2)
 bun run dev
@@ -35,7 +35,6 @@ Visit [http://localhost:3000](http://localhost:3000)
 - **Styling**: Tailwind CSS v4 + Shadcn/ui + Plus Jakarta Sans
 - **Images**: Cloudflare Images (CDN delivery)
 - **Deployment**: Cloudflare Workers
-- **Auth**: Clerk (disabled for launch)
 - **Linting**: Biome
 
 ## Project Structure
@@ -60,19 +59,21 @@ website/
 | `bun run dev` | Start development server |
 | `bun run build` | Production build |
 | `bun run type` | TypeScript check |
-| `bun run lint` | Biome linting |
-| `bun run check-all` | Run all checks |
+| `bun run check` | Lint + format check |
+| `bun run fix` | Auto-fix issues |
+| `bun run check-all` | Full check (types + lint) |
 | `bun run deploy` | Deploy to Cloudflare |
 
 ## Routes
 
-**Marketing (21 pages):**
-- `/` `/seo` `/geo` `/performance-marketing` `/enterprise` `/about` `/customers` `/case-studies` `/apply`
-- `/solutions` + 12 industries (hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness, finance-insurance, legal, real-estate)
+**Marketing (10 pages):**
+`/` `/seo` `/geo` `/pm` `/enterprise` `/about` `/customers` `/case-studies` `/apply`
+
+**Solutions (13 pages):**
+`/solutions` + 12 industries: hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness, finance-insurance, legal, real-estate
 
 **Blog (2 pages):**
-- `/blog` - Post listing
-- `/blog/[slug]` - Individual posts
+`/blog` `/blog/[slug]`
 
 ## Documentation
 

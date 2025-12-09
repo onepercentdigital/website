@@ -22,9 +22,9 @@ export const Route = createFileRoute('/apply')({
   component: ApplyPage,
   head: () =>
     generateMetaTags({
-      title: 'Apply To Work With Us | One Percent SEO',
+      title: 'Apply To Work With Us | One Percent Digital',
       description:
-        'Schedule a consultation to discuss how we can help your business dominate AI and traditional search. We work with serious brands ready to invest in growth.',
+        'Apply to see if you qualify to work with us. We help serious brands grow through SEO, GEO, and Performance Marketing.',
       url: 'https://onepercentseo.com/apply',
     }),
 });
@@ -42,9 +42,9 @@ function ApplyPage() {
                 Apply To Work With Us
               </h1>
               <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
-                We partner with serious brands ready to dominate both AI and
-                traditional search. Schedule a consultation to discuss your
-                goals and see if we're the right fit for each other.
+                We partner with serious brands ready to grow through SEO, GEO,
+                and Performance Marketing. Apply to see if you qualify—we'll
+                evaluate your business and determine if we're the right fit.
               </p>
 
               {/* Key Benefits List */}
@@ -85,11 +85,11 @@ function ApplyPage() {
                   </div>
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
-                      Partnership Discussion
+                      Growth Strategy Discussion
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Explore how our SEO and GEO expertise can accelerate your
-                      growth
+                      Explore how SEO, GEO, and pay-per-lead campaigns can
+                      accelerate your growth
                     </p>
                   </div>
                 </div>
@@ -115,10 +115,10 @@ function ApplyPage() {
                   </div>
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
-                      No Pressure, Just Value
+                      Selective Partnership
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      A consultative conversation focused on your success
+                      We only work with brands we can genuinely help succeed
                     </p>
                   </div>
                 </div>
@@ -192,10 +192,10 @@ function ApplyPage() {
                   03
                 </div>
               </div>
-              <h3 className="mb-3 font-bold text-2xl">Consultation Call</h3>
+              <h3 className="mb-3 font-bold text-2xl">Qualification Call</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                A 30-minute video call to discuss your goals, challenges, and
-                how we can help.
+                A 30-minute video call to discuss your goals and determine if
+                we're the right fit.
               </p>
             </div>
 
@@ -277,15 +277,15 @@ function ApplyPage() {
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left font-semibold text-lg">
-                What happens during the consultation?
+                What happens during the qualification call?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Before our call, we research your business and current search
-                presence. During our 30-minute video consultation, we discuss
-                your goals, challenges, and growth opportunities. We'll share
-                insights about your competitive landscape in both traditional
-                and AI search. If we're a good fit, we'll outline potential next
-                steps for a partnership.
+                presence. During our 30-minute video call, we discuss your
+                goals, challenges, and growth opportunities. We'll share
+                insights about your competitive landscape and determine if our
+                SEO, GEO, or Performance Marketing services are a fit. If you
+                qualify, we'll outline next steps for a partnership.
               </AccordionContent>
             </AccordionItem>
 
