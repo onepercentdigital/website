@@ -69,8 +69,8 @@ website/
 **Marketing (10 pages):**
 `/` `/seo` `/geo` `/pm` `/enterprise` `/about` `/customers` `/case-studies` `/apply`
 
-**Solutions (14 pages):**
-`/solutions` + 13 industries: hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness, finance-insurance, legal, real-estate
+**Solutions (13 pages):**
+`/solutions` + 12 industries: hospitality, ecommerce, manufacturing, logistics, automotive, construction, agriculture, technology, health-wellness, finance-insurance, legal, real-estate
 
 **Blog (2 pages):**
 `/blog` `/blog/[slug]`
