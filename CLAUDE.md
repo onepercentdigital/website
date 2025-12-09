@@ -29,7 +29,6 @@
 - **Route**: `/apply`
 
 ### Do Not
-- Create documentation files unless explicitly requested
 - Add emojis unless user requests them
 - Use `<a>` tags for internal navigation (use `Link`)
 - Add two-tone coloring to headlines with `<span className="text-accent">`
@@ -194,7 +193,7 @@ bun install
 bun run dev
 
 # Start Convex backend (separate terminal)
-npx convex dev
+bunx convex dev
 
 # Type check
 bun run type
@@ -280,8 +279,7 @@ function PricingPage() {
 
 ### Adding a Shadcn Component
 
-```bash
-pnpx shadcn@latest add button
+bunx shadcn@latest add button
 ```
 
 ### Adding SEO Structured Data

@@ -19,7 +19,7 @@ bun install
 # VITE_CONVEX_URL, CONVEX_DEPLOYMENT, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN
 
 # Start Convex (terminal 1)
-npx convex dev
+bunx convex dev
 
 # Start dev server (terminal 2)
 bun run dev
