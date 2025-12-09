@@ -45,7 +45,7 @@
 - **Images**: Cloudflare Images CDN
 
 ### Current State
-- **25 routes** (10 marketing + 2 blog + 13 industry solutions)
+- **25 routes** (10 marketing + 2 blog + 12 industry solutions)
 - **Admin CMS**: Disabled for launch (manage via Convex dashboard)
 - **Code quality**: 0 TypeScript errors, 0 linting errors
 
