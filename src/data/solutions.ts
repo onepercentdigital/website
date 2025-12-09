@@ -1,8 +1,8 @@
 /**
  * Solutions Data
  *
- * Industry-specific solutions showcasing SEO and GEO expertise across different verticals.
- * Each industry has tailored challenges, approach, services, and FAQs.
+ * Industry-specific solutions showcasing SEO, GEO, and Performance Marketing expertise
+ * across different verticals. Each industry has tailored challenges, approach, services, and FAQs.
  */
 
 export interface IndustryChallenge {
@@ -61,13 +61,13 @@ export const solutions: IndustrySolution[] = [
     name: 'Hospitality & Restaurants',
     slug: 'hospitality',
     description:
-      'Dominate local search and AI recommendations for restaurants, hotels, and hospitality venues. Fill every table and room with search-driven customers.',
-    heroHeadline: 'Dominate Search Results in Hospitality & Restaurants',
+      'Own local search and AI recommendations for restaurants, hotels, and hospitality venues. Fill every table and room with search-driven customers.',
+    heroHeadline: 'Own Your Market in Hospitality & Restaurants',
     heroSubheadline:
-      'Fill tables and drive reservations with SEO and GEO strategies built for the hospitality industry. Beat OTAs, outrank chains, and own your local market.',
+      'Fill tables and drive reservations with SEO, GEO, and Performance Marketing strategies built for hospitality. Beat OTAs, outrank chains, and capture your local market.',
     challenges: [
       {
-        title: 'OTAs Dominating Search Results',
+        title: 'OTAs Controlling Search Results',
         description:
           'Third-party platforms like OpenTable and Resy rank above your website, taking commissions on every booking and owning the customer relationship.',
         icon: 'TrendingDown',
@@ -95,7 +95,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Analyze',
         description:
-          'Audit local search landscape, competitor strategies, and AI visibility. Identify quick wins and long-term opportunities for dominance.',
+          'Audit local search landscape, competitor strategies, and AI visibility. Identify quick wins and long-term opportunities for growth.',
         icon: 'Search',
       },
       {
@@ -111,9 +111,9 @@ export const solutions: IndustrySolution[] = [
         icon: 'TrendingUp',
       },
       {
-        title: 'Dominate',
+        title: 'Scale',
         description:
-          'Track rankings, refine strategy based on data, scale what works, and maintain position one dominance for high-value local keywords.',
+          'Track rankings, refine strategy based on data, scale what works, and maintain top positions for high-value local keywords.',
         icon: 'Trophy',
       },
     ],
@@ -184,6 +184,17 @@ export const solutions: IndustrySolution[] = [
           'Competitive benchmarking',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver pre-qualified customers ready to book. No retainers, no risk.',
+        features: [
+          'Pay only for qualified leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable customer acquisition',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Fill Tables and Drive Revenue',
     aggregateStats: [],
@@ -197,12 +208,12 @@ export const solutions: IndustrySolution[] = [
         question:
           'How do we compete with OpenTable and Resy in search results?',
         answer:
-          "You can't outrank OTAs for generic terms like 'restaurant reservations,' but you can dominate for what matters: your restaurant name, local searches, and specific cuisine or experience queries. Focus on owning branded searches, appearing in the local pack for 'best Italian restaurant [city]' type queries, and capturing long-tail searches where OTAs don't rank. Plus, optimizing for GEO (Generative Engine Optimization) means AI assistants recommend YOUR restaurant directly, bypassing OTAs entirely.",
+          "You can't outrank OTAs for generic terms like 'restaurant reservations,' but you can win where it matters: your restaurant name, local searches, and specific cuisine or experience queries. Focus on owning branded searches, appearing in the local pack for 'best Italian restaurant [city]' type queries, and capturing long-tail searches where OTAs don't rank. Plus, optimizing for GEO (Generative Engine Optimization) means AI assistants recommend YOUR restaurant directly, bypassing OTAs entirely.",
       },
       {
         question: 'What is the difference between SEO and GEO for hospitality?',
         answer:
-          "SEO (Search Engine Optimization) focuses on ranking in traditional search engines like Google and Bing. GEO (Generative Engine Optimization) focuses on appearing in AI-powered search assistants like ChatGPT, Perplexity, Google SGE, and voice assistants. When someone asks 'What's the best seafood restaurant in Miami,' GEO ensures your restaurant is recommended. Both are critical - SEO captures people browsing Google, GEO captures people asking AI for recommendations. Combined, you dominate how people discover restaurants in 2025.",
+          "SEO (Search Engine Optimization) focuses on ranking in traditional search engines like Google and Bing. GEO (Generative Engine Optimization) focuses on appearing in AI-powered search assistants like ChatGPT, Perplexity, Google SGE, and voice assistants. When someone asks 'What's the best seafood restaurant in Miami,' GEO ensures your restaurant is recommended. Both are critical - SEO captures people browsing Google, GEO captures people asking AI for recommendations. Combined, you control how people discover restaurants in 2025.",
       },
       {
         question: 'Do you handle review management and responses?',
@@ -228,10 +239,10 @@ export const solutions: IndustrySolution[] = [
     name: 'E-commerce & Retail',
     slug: 'ecommerce',
     description:
-      'Drive qualified traffic and sales for online retailers. Compete with Amazon and dominate product searches with SEO and GEO strategies.',
-    heroHeadline: 'Dominate Product Search and Drive E-commerce Sales',
+      'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with SEO, GEO, and Performance Marketing.',
+    heroHeadline: 'Win Product Search and Drive E-commerce Sales',
     heroSubheadline:
-      'Compete with Amazon, outrank competitors, and capture high-intent buyers with SEO and GEO built for e-commerce. Turn search traffic into revenue.',
+      'Compete with Amazon, outrank competitors, and capture high-intent buyers with SEO, GEO, and Performance Marketing built for e-commerce. Turn search traffic into revenue.',
     challenges: [
       {
         title: 'Competing with Amazon and Marketplaces',
@@ -351,6 +362,17 @@ export const solutions: IndustrySolution[] = [
           'Conversion tracking and analysis',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-sale campaigns that deliver ready-to-buy customers. No retainers, pay only for results.',
+        features: [
+          'Pay only for conversions',
+          'Real-time customer acquisition',
+          'Exclusive leads (not shared)',
+          'Scalable revenue growth',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Drive Revenue and Market Share',
     aggregateStats: [],
@@ -358,7 +380,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How do we compete with Amazon in search results?',
         answer:
-          "You can't beat Amazon for ultra-generic terms like 'buy headphones,' but you can dominate profitable long-tail searches where Amazon doesn't have advantage. Focus on specific product variations, niche categories, comparison keywords, and informational queries that capture buyers early in their journey. Amazon is weak at educational content, buying guides, and specific use-case searches. Target 'best [product] for [specific use case]' and capture buyers with helpful content before they reach Amazon. Plus, GEO optimization means AI assistants can recommend YOUR products when shoppers ask specific questions.",
+          "You can't beat Amazon for ultra-generic terms like 'buy headphones,' but you can win profitable long-tail searches where Amazon doesn't have advantage. Focus on specific product variations, niche categories, comparison keywords, and informational queries that capture buyers early in their journey. Amazon is weak at educational content, buying guides, and specific use-case searches. Target 'best [product] for [specific use case]' and capture buyers with helpful content before they reach Amazon. Plus, GEO optimization means AI assistants can recommend YOUR products when shoppers ask specific questions.",
       },
       {
         question: 'How long does e-commerce SEO take to show results?',
@@ -394,10 +416,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Manufacturing & Industrial',
     slug: 'manufacturing',
     description:
-      'Drive qualified B2B leads for manufacturers and industrial companies. Dominate high-value searches and reach decision-makers.',
-    heroHeadline: 'Dominate B2B Search for Manufacturing & Industrial',
+      'Drive qualified B2B leads for manufacturers and industrial companies. Lead high-value searches and reach decision-makers.',
+    heroHeadline: 'Lead B2B Search for Manufacturing & Industrial',
     heroSubheadline:
-      'Generate qualified leads and reach procurement decision-makers with SEO and GEO strategies built for complex B2B sales cycles.',
+      'Generate qualified leads and reach procurement decision-makers with SEO, GEO, and Performance Marketing strategies built for complex B2B sales cycles.',
     challenges: [
       {
         title: 'Long, Complex Sales Cycles',
@@ -517,6 +539,17 @@ export const solutions: IndustrySolution[] = [
           'Competitive intelligence tracking',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver pre-qualified procurement contacts. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable pipeline growth',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Drive High-Value B2B Leads',
     aggregateStats: [],
@@ -534,7 +567,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How long does B2B manufacturing SEO take?',
         answer:
-          "B2B SEO typically takes longer than consumer SEO (6-12 months for significant results) but delivers much higher per-lead value. Industrial buyers have long research cycles, so early content investments pay dividends for years. You'll see initial ranking improvements within 90 days, qualified lead increases around month 6, and compounding returns after month 12. Manufacturing SEO is a long-term strategic investment, not a quick-win tactic. The manufacturers who commit to multi-year SEO strategies dominate their niches and reduce dependence on expensive trade shows and cold outreach.",
+          "B2B SEO typically takes longer than consumer SEO (6-12 months for significant results) but delivers much higher per-lead value. Industrial buyers have long research cycles, so early content investments pay dividends for years. You'll see initial ranking improvements within 90 days, qualified lead increases around month 6, and compounding returns after month 12. Manufacturing SEO is a long-term strategic investment, not a quick-win tactic. The manufacturers who commit to multi-year SEO strategies lead their niches and reduce dependence on expensive trade shows and cold outreach.",
       },
       {
         question: 'Do you have experience with our specific industry?',
@@ -560,10 +593,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Logistics & Transportation',
     slug: 'logistics',
     description:
-      'Generate qualified shipping and logistics leads through search. Dominate industry keywords and reach shippers searching for reliable partners.',
-    heroHeadline: 'Dominate Search for Logistics & Transportation Services',
+      'Generate qualified shipping and logistics leads through search. Capture industry keywords and reach shippers searching for reliable partners.',
+    heroHeadline: 'Capture Logistics & Transportation Search Results',
     heroSubheadline:
-      'Generate high-value shipping contracts and freight leads with SEO and GEO built for the logistics industry. Get found by shippers who need you.',
+      'Generate high-value shipping contracts and freight leads with SEO, GEO, and Performance Marketing built for logistics. Get found by shippers who need you.',
     challenges: [
       {
         title: 'Competing with Load Boards',
@@ -620,7 +653,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Location & Lane-Specific SEO',
         description:
-          'Rank for shipping searches in every lane and region you serve. Dominate "freight from [city] to [city]" searches.',
+          'Rank for shipping searches in every lane and region you serve. Win "freight from [city] to [city]" searches.',
         features: [
           'Lane-specific landing pages',
           'Geographic coverage optimization',
@@ -683,6 +716,17 @@ export const solutions: IndustrySolution[] = [
           'Competitive lane analysis',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver shippers ready to book freight. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified shipper leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable freight acquisition',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Drive Profitable Freight Contracts',
     aggregateStats: [],
@@ -726,10 +770,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Automotive',
     slug: 'automotive',
     description:
-      'Drive qualified leads for automotive businesses. Dominate local and specialty vehicle searches with proven SEO and GEO strategies.',
-    heroHeadline: 'Dominate Automotive Search and Drive Qualified Leads',
+      'Drive qualified leads for automotive businesses. Excel in local and specialty vehicle searches with proven SEO, GEO, and Performance Marketing.',
+    heroHeadline: 'Excel in Automotive Search and Drive Qualified Leads',
     heroSubheadline:
-      'Fill your lot, book, and drive revenue with SEO and GEO built for automotive businesses. From classic cars to luxury rentals.',
+      'Fill your lot and drive revenue with SEO, GEO, and Performance Marketing built for automotive businesses. From classic cars to luxury rentals.',
     challenges: [
       {
         title: 'Competing with National Dealer Groups',
@@ -797,7 +841,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Local Automotive SEO',
         description:
-          'Dominate local searches for car dealerships, auto services, and specialty automotive businesses in your area.',
+          'Win local searches for car dealerships, auto services, and specialty automotive businesses in your area.',
         features: [
           'Google Business Profile optimization',
           'Local dealership content',
@@ -849,6 +893,17 @@ export const solutions: IndustrySolution[] = [
           'ROI reporting by vehicle type',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver buyers ready to purchase. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified buyer leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable inventory turnover',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Fill Lots and Drive Sales',
     aggregateStats: [],
@@ -856,7 +911,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How do we compete with large dealer groups and AutoTrader?',
         answer:
-          "You can't outrank AutoTrader for generic 'used cars' searches, but you can dominate what matters: branded searches, specific make/model searches, local searches, and specialty vehicle queries. Focus on your differentiators - whether that's customer service, specialty inventory, or local expertise. Create content around specific vehicles, buyer guides, and local automotive topics where marketplaces are weak. Plus, GEO optimization means AI assistants can recommend YOUR dealership directly when people ask for vehicle suggestions, bypassing AutoTrader entirely.",
+          "You can't outrank AutoTrader for generic 'used cars' searches, but you can win where it matters: branded searches, specific make/model searches, local searches, and specialty vehicle queries. Focus on your differentiators - whether that's customer service, specialty inventory, or local expertise. Create content around specific vehicles, buyer guides, and local automotive topics where marketplaces are weak. Plus, GEO optimization means AI assistants can recommend YOUR dealership directly when people ask for vehicle suggestions, bypassing AutoTrader entirely.",
       },
       {
         question: 'How do you handle constantly changing vehicle inventory?',
@@ -893,10 +948,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Construction & Contractors',
     slug: 'construction',
     description:
-      'Generate qualified project leads for construction and contracting businesses. Dominate local searches and reach property owners who need you.',
-    heroHeadline: 'Dominate Local Search for Construction & Contractors',
+      'Generate qualified project leads for construction and contracting businesses. Win local searches and reach property owners who need you.',
+    heroHeadline: 'Win Local Search for Construction & Contractors',
     heroSubheadline:
-      'Fill your pipeline with qualified project leads. Get found by property owners searching for trusted contractors in your area.',
+      'Fill your pipeline with qualified project leads through SEO, GEO, and Performance Marketing. Get found by property owners searching for trusted contractors.',
     challenges: [
       {
         title: 'Intense Local Competition',
@@ -953,7 +1008,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Local Contractor SEO',
         description:
-          'Dominate local searches for your services in your service area. Get found by property owners searching nearby.',
+          'Win local searches for your services in your service area. Get found by property owners searching nearby.',
         features: [
           'Google Business Profile optimization',
           'Local citation building and cleanup',
@@ -1016,6 +1071,17 @@ export const solutions: IndustrySolution[] = [
           'Lead scoring and tracking',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver property owners with real projects. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified project leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable project pipeline',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Fill Your Project Pipeline',
     aggregateStats: [],
@@ -1060,9 +1126,9 @@ export const solutions: IndustrySolution[] = [
     slug: 'agriculture',
     description:
       'Drive qualified leads for agricultural equipment dealers and agribusinesses. Reach farmers and ranchers searching for machinery and solutions.',
-    heroHeadline: 'Dominate Agricultural Search and Drive Equipment Sales',
+    heroHeadline: 'Succeed in Agricultural Search and Drive Equipment Sales',
     heroSubheadline:
-      'Reach farmers researching equipment purchases. Generate qualified leads for tractors, implements, and agricultural services with proven SEO and GEO.',
+      'Reach farmers researching equipment purchases. Generate qualified leads for tractors, implements, and agricultural services with SEO, GEO, and Performance Marketing.',
     challenges: [
       {
         title: 'Competing with National Brands',
@@ -1182,6 +1248,17 @@ export const solutions: IndustrySolution[] = [
           'ROI reporting by equipment type',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver farmers ready to buy equipment. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified equipment leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable equipment sales pipeline',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Drive Equipment Sales and Service Revenue',
     aggregateStats: [],
@@ -1189,7 +1266,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How do we compete with John Deere and other manufacturers?',
         answer:
-          "You can't outrank manufacturers for ultra-generic 'buy tractor' searches, but you can dominate what matters: local dealer searches, specific equipment models, used equipment, parts and service, and regional agricultural content. Manufacturers are weak at local relevance, personalized service content, and farmer education. Focus on 'John Deere dealer [location],' equipment comparison content, and local agricultural topics where corporate sites can't compete. Plus, AI assistants can recommend YOUR dealership when farmers ask for local equipment help.",
+          "You can't outrank manufacturers for ultra-generic 'buy tractor' searches, but you can win where it matters: local dealer searches, specific equipment models, used equipment, parts and service, and regional agricultural content. Manufacturers are weak at local relevance, personalized service content, and farmer education. Focus on 'John Deere dealer [location],' equipment comparison content, and local agricultural topics where corporate sites can't compete. Plus, AI assistants can recommend YOUR dealership when farmers ask for local equipment help.",
       },
       {
         question:
@@ -1227,10 +1304,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Technology & SaaS',
     slug: 'technology',
     description:
-      'Drive qualified leads for technology companies and SaaS products. Dominate competitive tech searches and reach decision-makers.',
-    heroHeadline: 'Dominate Tech Search and Drive SaaS Growth',
+      'Drive qualified leads for technology companies and SaaS products. Command competitive tech searches and reach decision-makers.',
+    heroHeadline: 'Command Tech Search and Drive SaaS Growth',
     heroSubheadline:
-      'Generate qualified enterprise leads and product signups with SEO and GEO built for technology companies. Reach decision-makers searching for solutions.',
+      'Generate qualified enterprise leads and product signups with SEO, GEO, and Performance Marketing built for technology companies. Reach decision-makers searching for solutions.',
     challenges: [
       {
         title: 'Highly Competitive Keywords',
@@ -1350,6 +1427,17 @@ export const solutions: IndustrySolution[] = [
           'Product-led growth SEO',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver demo requests and qualified trials. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified demos',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable customer acquisition',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Drive Product Growth and Enterprise Deals',
     aggregateStats: [],
@@ -1357,7 +1445,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How do we compete in expensive, competitive SaaS markets?',
         answer:
-          "You compete by being smarter, not just spending more. Focus on long-tail keywords, alternative and comparison pages (capturing competitor traffic), use case content for specific industries or roles, and educational content that ranks for problem-aware searches. AI search (GEO) is a massive opportunity because most SaaS companies haven't optimized yet - you can dominate AI recommendations while competitors focus only on traditional Google SEO. We also leverage content depth and expertise over pure domain authority - well-researched, helpful content often outranks bigger competitors.",
+          "You compete by being smarter, not just spending more. Focus on long-tail keywords, alternative and comparison pages (capturing competitor traffic), use case content for specific industries or roles, and educational content that ranks for problem-aware searches. AI search (GEO) is a massive opportunity because most SaaS companies haven't optimized yet - you can lead AI recommendations while competitors focus only on traditional Google SEO. We also leverage content depth and expertise over pure domain authority - well-researched, helpful content often outranks bigger competitors.",
       },
       {
         question: 'How long does SaaS SEO take to generate qualified leads?',
@@ -1372,7 +1460,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How important is AI search (GEO) for technology companies?',
         answer:
-          "Absolutely critical. More tech buyers are asking ChatGPT, Perplexity, and AI assistants for software recommendations instead of Googling comparison lists. If your product doesn't appear in AI-generated recommendations, you're invisible to a growing segment of buyers. GEO optimization ensures AI assistants understand your product, recommend it for relevant queries, and cite your content. We've seen tech companies double their organic visibility by optimizing for both traditional SEO and GEO. It's not either/or - you need both to dominate modern search.",
+          "Absolutely critical. More tech buyers are asking ChatGPT, Perplexity, and AI assistants for software recommendations instead of Googling comparison lists. If your product doesn't appear in AI-generated recommendations, you're invisible to a growing segment of buyers. GEO optimization ensures AI assistants understand your product, recommend it for relevant queries, and cite your content. We've seen tech companies double their organic visibility by optimizing for both traditional SEO and GEO. It's not either/or - you need both to succeed in modern search.",
       },
       {
         question: 'How do you measure ROI for SaaS SEO?',
@@ -1393,10 +1481,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Health & Wellness',
     slug: 'health-wellness',
     description:
-      'Drive qualified clients for health and wellness businesses. Dominate local searches and reach people seeking health solutions.',
-    heroHeadline: 'Dominate Health & Wellness Search Results',
+      'Drive qualified clients for health and wellness businesses. Lead local searches and reach people seeking health solutions.',
+    heroHeadline: 'Lead Health & Wellness Search Results',
     heroSubheadline:
-      'Fill your calendar with qualified clients searching for health and wellness services. Get found by people ready to invest in their wellbeing.',
+      'Fill your calendar with qualified clients through SEO, GEO, and Performance Marketing. Get found by people ready to invest in their wellbeing.',
     challenges: [
       {
         title: 'YMYL Search Algorithms',
@@ -1433,7 +1521,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Optimize Locally',
         description:
-          'Dominate local searches with Google Business Profile optimization, local citations, and location-specific content.',
+          'Lead local searches with Google Business Profile optimization, local citations, and location-specific content.',
         icon: 'MapPin',
       },
       {
@@ -1453,7 +1541,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Local Health & Wellness SEO',
         description:
-          'Dominate local searches for your services. Get found by people nearby searching for wellness solutions.',
+          'Lead local searches for your services. Get found by people nearby searching for wellness solutions.',
         features: [
           'Google Business Profile optimization',
           'Local citation building',
@@ -1516,6 +1604,17 @@ export const solutions: IndustrySolution[] = [
           'Conversion tracking and analysis',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver clients ready to book. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified client leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable appointment booking',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Fill Your Calendar and Grow Your Practice',
     aggregateStats: [],
@@ -1524,7 +1623,7 @@ export const solutions: IndustrySolution[] = [
         question:
           "How do we rank for health content with Google's strict standards?",
         answer:
-          'Google applies YMYL (Your Money Your Life) standards to health content, requiring exceptional E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness). We build this through comprehensive provider profiles showcasing credentials, medical reviews of content by qualified professionals, citation of reputable sources, detailed about pages, authentic patient testimonials, and consistent NAP (name, address, phone) information. It takes more effort than other industries, but health businesses that invest in proper E-E-A-T signals can absolutely rank and dominate local searches.',
+          'Google applies YMYL (Your Money Your Life) standards to health content, requiring exceptional E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness). We build this through comprehensive provider profiles showcasing credentials, medical reviews of content by qualified professionals, citation of reputable sources, detailed about pages, authentic patient testimonials, and consistent NAP (name, address, phone) information. It takes more effort than other industries, but health businesses that invest in proper E-E-A-T signals can absolutely rank and lead local searches.',
       },
       {
         question: 'Can we make outcome claims in our SEO content?',
@@ -1561,10 +1660,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Finance & Insurance',
     slug: 'finance-insurance',
     description:
-      'Drive qualified leads for financial services and insurance providers. Dominate high-value searches and reach clients seeking financial guidance.',
-    heroHeadline: 'Dominate Financial Services Search Results',
+      'Drive qualified leads for financial services and insurance providers. Capture high-value searches and reach clients seeking financial guidance.',
+    heroHeadline: 'Capture Financial Services Search Results',
     heroSubheadline:
-      'Generate qualified leads for financial advisors, insurance agents, and financial services firms. Reach clients actively searching for financial guidance.',
+      'Generate qualified leads for financial advisors, insurance agents, and financial services firms through SEO, GEO, and Performance Marketing. Reach clients actively searching for guidance.',
     challenges: [
       {
         title: 'YMYL Algorithm Scrutiny',
@@ -1601,7 +1700,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Optimize Locally',
         description:
-          'Dominate local searches for financial advisors, insurance agents, and wealth managers in your target markets.',
+          'Capture local searches for financial advisors, insurance agents, and wealth managers in your target markets.',
         icon: 'MapPin',
       },
       {
@@ -1621,7 +1720,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Local Financial Services SEO',
         description:
-          'Dominate local searches for financial advisors, insurance agents, and wealth managers in your service area.',
+          'Capture local searches for financial advisors, insurance agents, and wealth managers in your service area.',
         features: [
           'Google Business Profile optimization',
           'Local citation building',
@@ -1684,6 +1783,17 @@ export const solutions: IndustrySolution[] = [
           'Conversion tracking and analysis',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver clients ready to invest. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified client leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable AUM growth',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Grow Your Client Base and AUM',
     aggregateStats: [],
@@ -1692,7 +1802,7 @@ export const solutions: IndustrySolution[] = [
         question:
           "How do we rank for financial content with Google's strict standards?",
         answer:
-          'Google applies YMYL (Your Money Your Life) standards to financial content, requiring exceptional E-E-A-T. We build this through comprehensive advisor profiles showcasing credentials (CFP, CFA, Series licenses), regulatory compliance documentation, citation of reputable financial sources, detailed firm about pages, authentic client testimonials, and consistent professional information. Financial advisors who invest in proper E-E-A-T signals can absolutely dominate local searches for wealth management and financial planning.',
+          'Google applies YMYL (Your Money Your Life) standards to financial content, requiring exceptional E-E-A-T. We build this through comprehensive advisor profiles showcasing credentials (CFP, CFA, Series licenses), regulatory compliance documentation, citation of reputable financial sources, detailed firm about pages, authentic client testimonials, and consistent professional information. Financial advisors who invest in proper E-E-A-T signals can absolutely lead local searches for wealth management and financial planning.',
       },
       {
         question: 'How do we balance marketing with SEC/FINRA compliance?',
@@ -1728,10 +1838,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Law Firms & Legal',
     slug: 'legal',
     description:
-      'Drive qualified client inquiries for law firms. Dominate local legal searches and reach potential clients actively seeking legal representation.',
-    heroHeadline: 'Dominate Legal Search and Generate Qualified Cases',
+      'Drive qualified client inquiries for law firms. Own local legal searches and reach potential clients actively seeking legal representation.',
+    heroHeadline: 'Own Legal Search and Generate Qualified Cases',
     heroSubheadline:
-      'Fill your caseload with qualified client inquiries. Get found by people searching for legal representation in your practice areas.',
+      'Fill your caseload with qualified client inquiries through SEO, GEO, and Performance Marketing. Get found by people searching for legal representation.',
     challenges: [
       {
         title: 'YMYL Search Scrutiny',
@@ -1766,7 +1876,7 @@ export const solutions: IndustrySolution[] = [
         icon: 'Award',
       },
       {
-        title: 'Dominate Locally',
+        title: 'Own Locally',
         description:
           'Own local search results for your practice areas. Rank for "[practice area] lawyer [city]" searches in your market.',
         icon: 'MapPin',
@@ -1788,7 +1898,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Local Law Firm SEO',
         description:
-          'Dominate local searches for attorneys in your practice areas and service area.',
+          'Own local searches for attorneys in your practice areas and service area.',
         features: [
           'Google Business Profile optimization',
           'Local citation building',
@@ -1851,6 +1961,17 @@ export const solutions: IndustrySolution[] = [
           'Lead qualification automation',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver clients with real cases. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified case leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable caseload growth',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Fill Your Caseload with Qualified Clients',
     aggregateStats: [],
@@ -1858,13 +1979,13 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How competitive is legal SEO?',
         answer:
-          'Legal SEO is among the most competitive industries, particularly for personal injury, criminal defense, and family law. However, this competition makes SEO MORE valuable, not less. Paid legal keywords cost $50-$500+ per click - a single page one ranking can save tens of thousands in ad spend monthly. The firms that invest in sustained SEO dominate their markets and reduce client acquisition costs dramatically.',
+          'Legal SEO is among the most competitive industries, particularly for personal injury, criminal defense, and family law. However, this competition makes SEO MORE valuable, not less. Paid legal keywords cost $50-$500+ per click - a single page one ranking can save tens of thousands in ad spend monthly. The firms that invest in sustained SEO own their markets and reduce client acquisition costs dramatically.',
       },
       {
         question:
           "How do we rank with Google's strict standards for legal content?",
         answer:
-          'Google applies YMYL standards to legal content, requiring strong E-E-A-T signals. We build authority through comprehensive attorney profiles (education, bar admissions, case results), detailed practice area content demonstrating expertise, consistent NAP information, authentic client reviews, and professional credentials display. Law firms that invest in proper authority signals can absolutely dominate local legal searches.',
+          'Google applies YMYL standards to legal content, requiring strong E-E-A-T signals. We build authority through comprehensive attorney profiles (education, bar admissions, case results), detailed practice area content demonstrating expertise, consistent NAP information, authentic client reviews, and professional credentials display. Law firms that invest in proper authority signals can absolutely own local legal searches.',
       },
       {
         question: 'What about bar advertising rules and compliance?',
@@ -1895,10 +2016,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Real Estate & Development',
     slug: 'real-estate',
     description:
-      'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Dominate property searches in your market.',
-    heroHeadline: 'Dominate Real Estate Search in Your Market',
+      'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Control property searches in your market.',
+    heroHeadline: 'Control Real Estate Search in Your Market',
     heroSubheadline:
-      'Generate qualified buyer and seller leads. Get found by people searching for real estate agents, properties, and development services.',
+      'Generate qualified buyer and seller leads through SEO, GEO, and Performance Marketing. Get found by people searching for real estate agents and properties.',
     challenges: [
       {
         title: 'Portal Dominance',
@@ -1955,7 +2076,7 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Local Real Estate SEO',
         description:
-          'Dominate local searches for real estate agents, property types, and neighborhoods in your market.',
+          'Control local searches for real estate agents, property types, and neighborhoods in your market.',
         features: [
           'Google Business Profile optimization',
           'Local citation building',
@@ -2018,6 +2139,17 @@ export const solutions: IndustrySolution[] = [
           'Lead nurturing integration',
         ],
       },
+      {
+        title: 'Performance Marketing',
+        description:
+          'Pay-per-lead campaigns that deliver buyers and sellers ready to transact. No retainers, pay only for results.',
+        features: [
+          'Pay only for qualified leads',
+          'Real-time lead delivery',
+          'Exclusive leads (not shared)',
+          'Scalable transaction pipeline',
+        ],
+      },
     ],
     resultsHeadline: 'Results That Generate Listings and Close Transactions',
     aggregateStats: [],
@@ -2025,7 +2157,7 @@ export const solutions: IndustrySolution[] = [
       {
         question: 'How do we compete with Zillow and Realtor.com?',
         answer:
-          'You can\'t outrank portals for generic "homes for sale" searches, but you can dominate what matters: agent-specific searches, hyperlocal neighborhood queries, and specific buyer intent searches. Focus on becoming THE neighborhood expert through detailed local content. Create resources portals can\'t match - insider knowledge, market analysis, community insights. Plus, GEO optimization means AI assistants can recommend YOU directly when people ask for agent recommendations, bypassing portals entirely.',
+          'You can\'t outrank portals for generic "homes for sale" searches, but you can win where it matters: agent-specific searches, hyperlocal neighborhood queries, and specific buyer intent searches. Focus on becoming THE neighborhood expert through detailed local content. Create resources portals can\'t match - insider knowledge, market analysis, community insights. Plus, GEO optimization means AI assistants can recommend YOU directly when people ask for agent recommendations, bypassing portals entirely.',
       },
       {
         question: 'What makes real estate SEO different from other industries?',

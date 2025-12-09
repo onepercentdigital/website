@@ -31,7 +31,7 @@ export const Route = createFileRoute('/geo')({
     generateMetaTags({
       title: 'GEO - Generative Engine Optimization',
       description:
-        'Dominate AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
+        'Lead AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
       url: 'https://onepercentseo.com/geo',
     }),
 });
@@ -42,7 +42,7 @@ function GEOPage() {
     data: {
       name: 'Generative Engine Optimization (GEO)',
       description:
-        'Dominate AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
+        'Lead AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
       url: 'https://onepercentseo.com/geo',
       serviceType: 'Generative Engine Optimization',
       provider: {
@@ -63,7 +63,7 @@ function GEOPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Dominate AI Search Results and Capture Mind Share
+              Lead AI Search Results and Capture Mind Share
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               Position your brand at the forefront of ChatGPT, Claude,

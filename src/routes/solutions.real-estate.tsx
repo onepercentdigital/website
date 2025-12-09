@@ -28,7 +28,7 @@ export const Route = createFileRoute('/solutions/real-estate')({
     generateMetaTags({
       title: 'Real Estate SEO | Generate Buyer & Seller Leads',
       description:
-        'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Dominate property searches in your market.',
+        'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Own property searches in your market with SEO, GEO, and Performance Marketing.',
       url: 'https://onepercentseo.com/solutions/real-estate',
     }),
 });
@@ -182,8 +182,8 @@ function RealEstatePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO and GEO solutions tailored for real estate
-              agents, brokerages, and developers.
+              Comprehensive SEO, GEO, and Performance Marketing solutions
+              tailored for real estate agents, brokerages, and developers.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -242,11 +242,12 @@ function RealEstatePage() {
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
-            Ready to Dominate Your Real Estate Market?
+            Ready to Own Your Real Estate Market?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Let's generate qualified buyer and seller leads with proven SEO and
-            GEO strategies built for real estate professionals.
+            Let's generate qualified buyer and seller leads with proven SEO,
+            GEO, and Performance Marketing strategies built for real estate
+            professionals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

@@ -33,7 +33,7 @@ function AboutPage() {
       name: 'One Percent SEO',
       url: 'https://onepercentseo.com',
       description:
-        'Enterprise-grade SEO and GEO services for businesses that demand results at scale.',
+        'Enterprise-grade SEO, GEO, and Performance Marketing services for businesses that demand results at scale.',
       founder: [
         {
           '@type': 'Person',
@@ -61,9 +61,10 @@ function AboutPage() {
               Meet the Team Behind Your Success
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
-              We're not just SEO experts—we're entrepreneurs who run our own
-              successful E-commerce brands. We understand the challenges you
-              face because we face them too.
+              We're not just marketing experts—we're entrepreneurs who run our
+              own successful E-commerce brands. From SEO and GEO to Performance
+              Marketing, we understand the challenges you face because we face
+              them too.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -173,8 +174,8 @@ function AboutPage() {
               Meet the Team
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Entrepreneurs first, SEO experts second. Meet the people who will
-              become your partners in growth.
+              Entrepreneurs first, marketing experts second. Meet the people who
+              will become your partners in growth.
             </p>
           </div>
 
@@ -281,7 +282,8 @@ function AboutPage() {
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Join the 300+ brands that have partnered with entrepreneurs who
-            understand both SEO and business. Let's grow your company together.
+            understand SEO, GEO, and Performance Marketing. Let's grow your
+            company together.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

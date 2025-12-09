@@ -28,7 +28,7 @@ export const Route = createFileRoute('/solutions/legal')({
     generateMetaTags({
       title: 'Law Firm SEO | Generate Qualified Case Inquiries',
       description:
-        'Drive qualified client inquiries for law firms. Dominate local legal searches and reach potential clients actively seeking legal representation.',
+        'Drive qualified client inquiries for law firms. Own local legal searches and reach potential clients actively seeking legal representation.',
       url: 'https://onepercentseo.com/solutions/legal',
     }),
 });
@@ -182,8 +182,8 @@ function LegalPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO and GEO solutions tailored for law firms and
-              legal practices.
+              Comprehensive SEO, GEO, and Performance Marketing solutions
+              tailored for law firms and legal practices.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -245,8 +245,8 @@ function LegalPage() {
             Ready to Fill Your Caseload?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Let's generate qualified case inquiries with proven SEO and GEO
-            strategies built for law firms.
+            Let's generate qualified case inquiries with proven SEO, GEO, and
+            Performance Marketing strategies built for law firms.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

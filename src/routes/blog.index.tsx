@@ -10,7 +10,7 @@ export const Route = createFileRoute('/blog/')({
     generateMetaTags({
       title: 'Blog | SEO & GEO Insights',
       description:
-        'Expert insights, strategies, and case studies on SEO, GEO, and search optimization. Learn how to dominate traditional and AI-powered search.',
+        'Expert insights, strategies, and case studies on SEO, GEO, and search optimization. Learn how to excel in traditional and AI-powered search.',
       url: 'https://onepercentseo.com/blog',
     }),
 });

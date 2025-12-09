@@ -28,7 +28,7 @@ export const Route = createFileRoute('/solutions/automotive')({
     generateMetaTags({
       title: 'Automotive SEO | Drive Qualified Leads',
       description:
-        'Drive qualified leads for automotive businesses. Dominate local and specialty vehicle searches with proven SEO and GEO strategies.',
+        'Drive qualified leads for automotive businesses. Win local and specialty vehicle searches with proven SEO, GEO, and Performance Marketing strategies.',
       url: 'https://onepercentseo.com/solutions/automotive',
     }),
 });
@@ -182,8 +182,8 @@ function AutomotivePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO and GEO solutions tailored for automotive
-              businesses.
+              Comprehensive SEO, GEO, and Performance Marketing solutions
+              tailored for automotive businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -242,11 +242,11 @@ function AutomotivePage() {
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
-            Ready to Dominate Automotive Search?
+            Ready to Win Automotive Search?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's drive qualified leads and grow your automotive business with
-            proven SEO and GEO strategies.
+            proven SEO, GEO, and Performance Marketing strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

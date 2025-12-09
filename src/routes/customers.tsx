@@ -26,7 +26,7 @@ export const Route = createFileRoute('/customers')({
     generateMetaTags({
       title: 'Our Customers - Industry Leaders Powered by One Percent SEO',
       description:
-        'Join industry-leading companies like Grove Bay Hospitality, Afni Careers, Sorting Robotics, and more who trust One Percent SEO to dominate search results and drive real revenue growth.',
+        'Join industry-leading companies like Grove Bay Hospitality, Afni Careers, Sorting Robotics, and more who trust One Percent SEO to lead search results and drive real revenue growth.',
       url: 'https://onepercentseo.com/customers',
     }),
 });
@@ -54,8 +54,8 @@ function CustomersPage() {
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               From Michelin-recognized restaurants to cutting-edge robotics
-              companies, we help ambitious businesses dominate search and
-              capture total mind share in their industries.
+              companies, we help ambitious businesses win search and capture
+              total mind share in their industries.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -83,8 +83,8 @@ function CustomersPage() {
               Proven Results Across Industries
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Our clients don't just rank well—they dominate their categories
-              and drive measurable revenue growth.
+              Our clients don't just rank well—they own their categories and
+              drive measurable revenue growth.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ function CustomersPage() {
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
               Companies across diverse industries choose us to power their
-              search domination strategy.
+              search success strategy.
             </p>
           </div>
 
@@ -213,7 +213,7 @@ function CustomersPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
-              Dominating Across Industries
+              Winning Across Industries
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
               Deep expertise in diverse verticals means we understand your
@@ -314,8 +314,8 @@ function CustomersPage() {
             </h2>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
               Whether you're in hospitality, technology, manufacturing, or
-              professional services, we have the expertise to help you dominate
-              search and drive revenue growth. Let's talk about your goals.
+              professional services, we have the expertise to help you succeed
+              in search and drive revenue growth. Let's talk about your goals.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button

@@ -28,7 +28,7 @@ export const Route = createFileRoute('/solutions/health-wellness')({
     generateMetaTags({
       title: 'Health & Wellness SEO | Drive Qualified Clients',
       description:
-        'Drive qualified clients for health and wellness businesses. Dominate local searches and reach people seeking health solutions.',
+        'Drive qualified clients for health and wellness businesses. Lead local searches and reach people seeking health solutions with SEO, GEO, and Performance Marketing.',
       url: 'https://onepercentseo.com/solutions/health-wellness',
     }),
 });
@@ -182,8 +182,8 @@ function HealthWellnessPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO and GEO solutions tailored for health and
-              wellness businesses.
+              Comprehensive SEO, GEO, and Performance Marketing solutions
+              tailored for health and wellness businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -242,11 +242,11 @@ function HealthWellnessPage() {
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
-            Ready to Dominate Health & Wellness Search?
+            Ready to Lead Health & Wellness Search?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's attract qualified clients and grow your wellness business with
-            proven SEO and GEO strategies.
+            proven SEO, GEO, and Performance Marketing strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button

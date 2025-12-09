@@ -418,9 +418,10 @@ function HomePage() {
               <div className="mb-6 text-2xl text-accent">"</div>
               <p className="mb-6 text-foreground leading-relaxed">
                 Working with One Percent SEO transformed our online presence. We
-                went from being invisible to dominating our market. They
-                understand E-commerce and deliver real results. We're now one of
-                the top recommendations in ChatGPT for diesel injection pumps.
+                went from being invisible to showing up everywhere our customers
+                search. They understand E-commerce and deliver real results.
+                We're now one of the top recommendations in ChatGPT for diesel
+                injection pumps.
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">
@@ -442,9 +443,9 @@ function HomePage() {
               <div className="mb-6 text-2xl text-accent">"</div>
               <p className="mb-6 text-foreground leading-relaxed">
                 After 40+ years in business, One Percent SEO helped us finally
-                dominate online. We're now the #1 patio cover company in Arizona
-                with three straight years of record-breaking revenue. Their
-                local SEO strategy changed everything for us.
+                break through online. We're now the #1 patio cover company in
+                Arizona with three straight years of record-breaking revenue.
+                Their local SEO strategy changed everything for us.
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 font-bold text-accent">

@@ -45,8 +45,8 @@ function CaseStudiesPage() {
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               Don't just take our word for it. See how we've helped businesses
-              across industries dominate search results, capture AI visibility,
-              and drive measurable revenue growth.
+              across industries lead search results, capture AI visibility, and
+              drive measurable revenue growth.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
@@ -249,7 +249,7 @@ function CaseStudiesPage() {
             </h2>
             <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               Your success story could be next. Schedule a consultation to
-              discover how we can help you dominate search.
+              discover how we can help you win in search.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
