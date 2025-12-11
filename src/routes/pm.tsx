@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BarChart3,
   Bell,
+  Brain,
   CheckCircle2,
   Clock,
   DollarSign,
@@ -13,7 +14,6 @@ import {
   Megaphone,
   Palette,
   Phone,
-  PieChart,
   Shield,
   Target,
   TrendingUp,
@@ -82,7 +82,7 @@ function PerformanceMarketingPage() {
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
                 <Link to="/apply">
-                  Start Getting Qualified Leads
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -399,14 +399,14 @@ function PerformanceMarketingPage() {
                 ],
               },
               {
-                icon: PieChart,
-                title: 'Performance Analytics',
+                icon: Brain,
+                title: 'AI Integration',
                 features: [
-                  'Lead quality tracking',
-                  'Conversion analysis',
-                  'Cost per acquisition metrics',
-                  'Scalability insights',
-                  'Competitive benchmarks',
+                  'AI-powered lead qualification',
+                  'Automated follow-up sequences',
+                  'Intelligent lead scoring',
+                  'Predictive conversion modeling',
+                  'Smart routing optimization',
                 ],
               },
               {
@@ -621,13 +621,13 @@ function PerformanceMarketingPage() {
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
               <Link to="/apply">
-                Start Getting Qualified Leads
+                Apply To Work With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
           <p className="mt-6 text-muted-foreground text-sm tracking-wide">
-            No setup fees • No contracts • Pay only for results
+            No obligation • No sales pressure • Just a conversation
           </p>
         </div>
       </section>

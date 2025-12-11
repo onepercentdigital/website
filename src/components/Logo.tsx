@@ -4,7 +4,7 @@ import { brand } from '@/config/brand';
 interface LogoProps {
   className?: string;
   showWordmark?: boolean;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'footer';
 }
 
 export function Logo({
@@ -18,6 +18,7 @@ export function Logo({
     lg: 'h-12 w-12',
     xl: 'h-20 w-20',
     xxl: 'h-28 w-28',
+    footer: 'h-40 w-40',
   };
 
   const textSizeClasses = {
@@ -26,6 +27,7 @@ export function Logo({
     lg: 'text-3xl',
     xl: 'text-4xl',
     xxl: 'text-5xl',
+    footer: 'text-6xl',
   };
 
   return (

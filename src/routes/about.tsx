@@ -97,7 +97,7 @@ function AboutPage() {
                 12+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Years Combined Experience
+                Years Experience
               </div>
             </div>
             <div className="text-center">
