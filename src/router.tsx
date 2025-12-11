@@ -18,6 +18,9 @@ export const getRouter = () => {
     // - Restores scroll position on back/forward buttons
     // - Handles hash links (#section) automatically
     scrollRestoration: true,
+    // Use instant scroll to prevent iOS Safari from removing sticky elements
+    // during scroll animations (causes navigation bar to briefly disappear)
+    scrollRestorationBehavior: 'instant',
     Wrap: (props: { children: React.ReactNode }) => {
       return (
         <TanstackQuery.Provider {...rqContext}>
