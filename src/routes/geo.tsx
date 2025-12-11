@@ -77,7 +77,7 @@ function GEOPage() {
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
                 <Link to="/apply">
-                  Get Your Free GEO Audit
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -120,10 +120,10 @@ function GEOPage() {
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4">
                   <div className="font-extrabold text-3xl text-accent tracking-tight">
-                    1000%
+                    10%
                   </div>
                   <div className="mt-1 text-muted-foreground text-sm tracking-wide">
-                    Brand Visibility Growth
+                    Increase in AI Usage Monthly
                   </div>
                 </div>
                 <div className="rounded-xl border border-border bg-card p-4">
@@ -406,10 +406,10 @@ function GEOPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-accent tracking-tight lg:text-7xl">
-                    1000%
+                    10%
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
-                    Brand Visibility Growth
+                    Increase in AI Usage Monthly
                   </div>
                 </div>
               </div>
@@ -548,13 +548,13 @@ function GEOPage() {
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
               <Link to="/apply">
-                Get Your Free GEO Audit
+                Apply To Work With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
           <p className="mt-6 text-muted-foreground text-sm tracking-wide">
-            Free comprehensive audit • No obligation • Custom strategy preview
+            No obligation • No sales pressure • Just a conversation
           </p>
         </div>
       </section>

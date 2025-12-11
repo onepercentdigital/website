@@ -44,7 +44,7 @@ export function Footer() {
           ))}
           {/* Logo Column */}
           <div className="flex items-center justify-center md:justify-end">
-            <Logo size="xxl" showWordmark={false} />
+            <Logo size="footer" showWordmark={false} />
           </div>
         </div>
 

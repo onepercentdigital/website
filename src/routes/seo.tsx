@@ -77,7 +77,7 @@ function SEOPage() {
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
                 <Link to="/apply">
-                  Get Your Free SEO Audit
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -575,13 +575,13 @@ function SEOPage() {
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
               <Link to="/apply">
-                Get Your Free SEO Audit
+                Apply To Work With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
           <p className="mt-6 text-muted-foreground text-sm tracking-wide">
-            Free comprehensive audit • Custom growth roadmap • No obligation
+            No obligation • No sales pressure • Just a conversation
           </p>
         </div>
       </section>

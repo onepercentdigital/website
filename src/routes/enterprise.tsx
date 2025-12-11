@@ -2,14 +2,15 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import {
   ArrowRight,
   BarChart3,
-  Building2,
+  Brain,
   CheckCircle2,
+  DollarSign,
   FileText,
   Globe2,
   GraduationCap,
   Headphones,
-  Lock,
   Network,
+  Search,
   Shield,
   Target,
   TrendingUp,
@@ -78,7 +79,7 @@ function EnterprisePage() {
                 className="bg-accent text-accent-foreground hover:bg-accent/90"
               >
                 <Link to="/apply">
-                  Schedule Enterprise Demo
+                  Apply To Work With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -99,11 +100,11 @@ function EnterprisePage() {
                 What Makes Enterprise Different
               </h2>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                Enterprise marketing isn't just about doing more—it's about
-                doing things differently. When you're managing multiple
-                locations, brands, or complex organizational structures, you
-                need strategies that scale, systems that integrate, and support
-                that understands your unique challenges.
+                Enterprise marketing requires more than just scale, it demands a
+                tailored approach. When you're managing multiple locations,
+                brands, or complex organizational structures, you need
+                strategies that scale, systems that integrate, and support that
+                understands your unique challenges.
               </p>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
                 Our enterprise solutions provide dedicated account management,
@@ -331,7 +332,8 @@ function EnterprisePage() {
               Comprehensive Services Included
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Everything you need to lead search at enterprise scale.
+              SEO, GEO, and Performance Marketing capabilities designed for
+              enterprise scale.
             </p>
           </div>
 
@@ -379,10 +381,10 @@ function EnterprisePage() {
 
             <div className="rounded-2xl border border-border bg-card p-8">
               <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3">
-                <Building2 className="h-8 w-8 text-accent" />
+                <Search className="h-8 w-8 text-accent" />
               </div>
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Technical SEO at Scale
+                Enterprise SEO
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -412,7 +414,7 @@ function EnterprisePage() {
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Mobile-first indexing compliance
+                    Multi-location search presence
                   </span>
                 </li>
               </ul>
@@ -420,40 +422,40 @@ function EnterprisePage() {
 
             <div className="rounded-2xl border border-border bg-card p-8">
               <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3">
-                <FileText className="h-8 w-8 text-accent" />
+                <Brain className="h-8 w-8 text-accent" />
               </div>
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Content Operations & Governance
+                Enterprise GEO
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Content governance framework
+                    Multi-brand AI visibility strategy
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Scalable content production systems
+                    ChatGPT, Claude & Perplexity optimization
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Multi-location content coordination
+                    Enterprise knowledge graph development
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Quality assurance & compliance checks
+                    AI citation monitoring at scale
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Brand consistency across properties
+                    Competitive AI positioning
                   </span>
                 </li>
               </ul>
@@ -543,40 +545,40 @@ function EnterprisePage() {
 
             <div className="rounded-2xl border border-border bg-card p-8">
               <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3">
-                <Lock className="h-8 w-8 text-accent" />
+                <DollarSign className="h-8 w-8 text-accent" />
               </div>
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Custom Tools & Automation
+                Enterprise Lead Generation
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    API access for custom integrations
+                    Scalable pay-per-lead programs
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Automated reporting dashboards
+                    Multi-location campaign management
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    CRM & marketing automation integration
+                    Enterprise CRM integration
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Custom workflow automation
+                    Volume-based pricing tiers
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
                   <span className="text-muted-foreground text-sm tracking-wide">
-                    Enterprise analytics platform access
+                    Dedicated lead quality management
                   </span>
                 </li>
               </ul>
@@ -621,7 +623,7 @@ function EnterprisePage() {
                     8X
                   </div>
                   <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
-                    Average Organic Traffic Growth
+                    Average Growth Rate
                   </div>
                 </div>
                 <div className="rounded-2xl border border-border bg-card p-6">
@@ -712,16 +714,17 @@ function EnterprisePage() {
 
             <AccordionItem value="item-4">
               <AccordionTrigger className="text-left font-semibold text-lg">
-                What makes your enterprise solution different from standard SEO
-                services?
+                What makes your enterprise solution different from standard
+                marketing services?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Enterprise SEO isn't just "more SEO"—it's a fundamentally
-                different approach. You get a dedicated account team (not shared
-                resources), custom reporting dashboards tailored to your KPIs,
-                white-glove support with priority response times, 24/7 access,
-                enterprise-grade security and compliance (SOC 2, GDPR), and
-                integration with your existing enterprise tools (Salesforce,
+                Enterprise marketing isn't just "more marketing"—it's a
+                fundamentally different approach across SEO, GEO, and
+                Performance Marketing. You get a dedicated account team (not
+                shared resources), custom reporting dashboards tailored to your
+                KPIs, white-glove support with priority response times, 24/7
+                access, enterprise-grade security and compliance (SOC 2, GDPR),
+                and integration with your existing enterprise tools (Salesforce,
                 HubSpot, etc.). We become an extension of your team with
                 quarterly business reviews, executive reporting, stakeholder
                 training, and strategic planning. Our systems are built to
@@ -797,13 +800,13 @@ function EnterprisePage() {
       <section className="border-border border-t px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-bold text-4xl tracking-tight lg:text-6xl">
-            Ready to Scale Your Search Presence?
+            Ready to Scale Your Growth?
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Join the enterprise companies and multi-location businesses that
-            trust One Percent Digital for enterprise-grade search optimization.
-            Schedule a personalized demo to see how we can transform your search
-            presence at scale.
+            trust One Percent Digital for enterprise-grade SEO, GEO, and
+            Performance Marketing. See how we can transform your visibility and
+            lead generation at scale.
           </p>
           <Button
             asChild
@@ -811,13 +814,12 @@ function EnterprisePage() {
             className="bg-accent text-accent-foreground hover:bg-accent/90"
           >
             <Link to="/apply">
-              Schedule Enterprise Demo
+              Apply To Work With Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
           <p className="mt-6 text-muted-foreground text-sm">
-            Enterprise consultations typically take 45-60 minutes and include a
-            customized assessment of your current search presence.
+            No obligation • No sales pressure • Just a conversation
           </p>
         </div>
       </section>
