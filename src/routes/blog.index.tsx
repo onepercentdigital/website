@@ -43,7 +43,7 @@ function BlogIndexPage() {
       <section className="bg-background px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           {isLoading ? (
-            <div className="flex min-h-[400px] items-center justify-center">
+            <div className="flex min-h-100 items-center justify-center">
               <div className="text-center">
                 <div className="mb-4 inline-flex rounded-full bg-accent/10 p-4">
                   <FileText className="h-8 w-8 animate-pulse text-accent" />
@@ -52,7 +52,7 @@ function BlogIndexPage() {
               </div>
             </div>
           ) : !posts || posts.length === 0 ? (
-            <div className="flex min-h-[400px] items-center justify-center">
+            <div className="flex min-h-100 items-center justify-center">
               <div className="text-center">
                 <div className="mb-4 inline-flex rounded-full bg-accent/10 p-4">
                   <FileText className="h-8 w-8 text-accent" />
