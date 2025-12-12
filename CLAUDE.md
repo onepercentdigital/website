@@ -45,7 +45,7 @@
 - **Images**: Cloudflare Images CDN
 
 ### Current State
-- **25 routes** (10 marketing + 2 blog + 12 industry solutions)
+- **25 routes** (9 marketing + 2 blog + 13 solutions + 1 root layout)
 - **Admin CMS**: Disabled for launch (manage via Convex dashboard)
 - **Code quality**: 0 TypeScript errors, 0 linting errors
 
@@ -154,6 +154,7 @@ website/
 │   ├── BLOG-CMS.md
 │   ├── BLOG-REDIRECTS.md
 │   ├── CLOUDFLARE-IMAGES.md
+│   ├── KNOWN-ISSUES.md
 │   ├── STRUCTURE-REASONING.md
 │   └── WORDPRESS-MIGRATION.md
 │
@@ -374,6 +375,7 @@ Detailed guides for specific features:
 - **[docs/BLOG-CMS.md](docs/BLOG-CMS.md)** - Blog system architecture and features
 - **[docs/BLOG-REDIRECTS.md](docs/BLOG-REDIRECTS.md)** - Blog URL redirect handling
 - **[docs/CLOUDFLARE-IMAGES.md](docs/CLOUDFLARE-IMAGES.md)** - Image upload setup guide
+- **[docs/KNOWN-ISSUES.md](docs/KNOWN-ISSUES.md)** - Known browser limitations and bugs
 - **[docs/WORDPRESS-MIGRATION.md](docs/WORDPRESS-MIGRATION.md)** - WordPress import instructions
 - **[docs/STRUCTURE-REASONING.md](docs/STRUCTURE-REASONING.md)** - Navigation structure and naming rationale
 
