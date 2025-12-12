@@ -252,7 +252,7 @@ function ApplyPage() {
                 <BarChart3 className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
-                300%+
+                8X
               </div>
               <div className="text-muted-foreground tracking-wide">
                 Average Organic Growth

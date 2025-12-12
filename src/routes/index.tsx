@@ -379,7 +379,7 @@ function HomePage() {
                   </Link>
                 </Button>
               </div>
-              <div className="relative min-h-[300px] bg-secondary lg:min-h-[400px]">
+              <div className="relative min-h-75 bg-secondary lg:min-h-100">
                 <div className="flex h-full items-center justify-center p-8">
                   <div className="text-center">
                     <div className="mb-4 font-bold text-6xl text-accent">

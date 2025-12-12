@@ -116,10 +116,10 @@ function AboutPage() {
                 <TrendingUp className="h-8 w-8 text-accent" />
               </div>
               <div className="mb-2 font-extrabold text-5xl text-accent leading-none tracking-tight lg:text-7xl">
-                10+
+                $200M
               </div>
               <div className="text-muted-foreground tracking-wide">
-                E-commerce Brands Co-Founded
+                Total Traffic Generated
               </div>
             </div>
           </div>
