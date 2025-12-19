@@ -1,14 +1,15 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
 import {
-  ArrowRight,
-  Award,
-  Brain,
-  CheckCircle2,
-  DollarSign,
-  Target,
-  TrendingUp,
-  Users,
-} from 'lucide-react';
+  AnalyticsUpIcon,
+  ArrowRight01Icon,
+  Award01Icon,
+  Brain01Icon,
+  CheckmarkCircle02Icon,
+  Dollar01Icon,
+  Target01Icon,
+  UserGroupIcon,
+} from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import {
@@ -56,17 +57,23 @@ function HomePage() {
             {/* CTAs */}
             <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
-                asChild
+                render={<Link to="/apply" />}
                 size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
+                className="bg-primary text-primary-foreground hover:bg-primary/80"
               >
-                <Link to="/apply">
-                  Apply To Work With Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                Apply To Work With Us
+                <HugeiconsIcon
+                  icon={ArrowRight01Icon}
+                  size={20}
+                  strokeWidth={2}
+                />
               </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link to="/case-studies">View Case Studies</Link>
+              <Button
+                render={<Link to="/case-studies" />}
+                size="lg"
+                variant="outline"
+              >
+                View Case Studies
               </Button>
             </div>
 
@@ -81,15 +88,18 @@ function HomePage() {
                   Get Cited by ChatGPT and other AI models
                 </p>
                 <Button
-                  asChild
+                  render={<Link to="/geo" />}
                   variant="outline"
                   size="sm"
-                  className="group-hover:border-accent lg:size-default"
+                  className="group-hover:border-primary lg:size-default"
                 >
-                  <Link to="/geo">
-                    More about GEO
-                    <ArrowRight className="ml-1 h-3 w-3 lg:ml-2 lg:h-4 lg:w-4" />
-                  </Link>
+                  More about GEO
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={12}
+                    strokeWidth={2}
+                    className="lg:size-4"
+                  />
                 </Button>
               </div>
 
@@ -102,15 +112,18 @@ function HomePage() {
                   Rank in Google and other search engines
                 </p>
                 <Button
-                  asChild
+                  render={<Link to="/seo" />}
                   variant="outline"
                   size="sm"
-                  className="group-hover:border-accent lg:size-default"
+                  className="group-hover:border-primary lg:size-default"
                 >
-                  <Link to="/seo">
-                    More about SEO
-                    <ArrowRight className="ml-1 h-3 w-3 lg:ml-2 lg:h-4 lg:w-4" />
-                  </Link>
+                  More about SEO
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={12}
+                    strokeWidth={2}
+                    className="lg:size-4"
+                  />
                 </Button>
               </div>
 
@@ -123,15 +136,18 @@ function HomePage() {
                   Pay Per Exclusive Pre-Qualified Lead
                 </p>
                 <Button
-                  asChild
+                  render={<Link to="/pm" />}
                   variant="outline"
                   size="sm"
-                  className="group-hover:border-accent lg:size-default"
+                  className="group-hover:border-primary lg:size-default"
                 >
-                  <Link to="/pm">
-                    More about PM
-                    <ArrowRight className="ml-1 h-3 w-3 lg:ml-2 lg:h-4 lg:w-4" />
-                  </Link>
+                  More about PM
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={12}
+                    strokeWidth={2}
+                    className="lg:size-4"
+                  />
                 </Button>
               </div>
             </div>
@@ -156,7 +172,12 @@ function HomePage() {
             {/* GEO Service */}
             <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:border-accent/50 hover:shadow-accent/10 hover:shadow-lg">
               <div className="mb-6 inline-flex rounded-lg bg-accent/10 p-3">
-                <Brain className="h-8 w-8 text-accent" />
+                <HugeiconsIcon
+                  icon={Brain01Icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-primary"
+                />
               </div>
               <h3 className="mb-4 font-bold text-2xl leading-tight lg:text-3xl">
                 Generative Engine Optimization
@@ -168,40 +189,62 @@ function HomePage() {
               </p>
               <ul className="mb-6 space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     AI model optimization and prompt engineering
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Strategic content structuring for LLM comprehension
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Voice and conversational search optimization
                   </span>
                 </li>
               </ul>
               <Button
-                asChild
+                render={<Link to="/geo" />}
                 variant="outline"
-                className="group-hover:border-accent"
+                className="group-hover:border-primary"
               >
-                <Link to="/geo">
-                  More about GEO
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                More about GEO
+                <HugeiconsIcon
+                  icon={ArrowRight01Icon}
+                  size={16}
+                  strokeWidth={2}
+                />
               </Button>
             </div>
 
             {/* SEO Service */}
             <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:border-accent/50 hover:shadow-accent/10 hover:shadow-lg">
               <div className="mb-6 inline-flex rounded-lg bg-accent/10 p-3">
-                <TrendingUp className="h-8 w-8 text-accent" />
+                <HugeiconsIcon
+                  icon={AnalyticsUpIcon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-primary"
+                />
               </div>
               <h3 className="mb-4 font-bold text-2xl leading-tight lg:text-3xl">
                 Search Engine Optimization
@@ -212,40 +255,62 @@ function HomePage() {
               </p>
               <ul className="mb-6 space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Technical SEO and site architecture optimization
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Content strategy and authority building
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Local and national search domination
                   </span>
                 </li>
               </ul>
               <Button
-                asChild
+                render={<Link to="/seo" />}
                 variant="outline"
-                className="group-hover:border-accent"
+                className="group-hover:border-primary"
               >
-                <Link to="/seo">
-                  More about SEO
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                More about SEO
+                <HugeiconsIcon
+                  icon={ArrowRight01Icon}
+                  size={16}
+                  strokeWidth={2}
+                />
               </Button>
             </div>
 
             {/* Performance Marketing Service */}
             <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:border-accent/50 hover:shadow-accent/10 hover:shadow-lg">
               <div className="mb-6 inline-flex rounded-lg bg-accent/10 p-3">
-                <DollarSign className="h-8 w-8 text-accent" />
+                <HugeiconsIcon
+                  icon={Dollar01Icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-primary"
+                />
               </div>
               <h3 className="mb-4 font-bold text-2xl leading-tight lg:text-3xl">
                 Performance Marketing
@@ -256,33 +321,50 @@ function HomePage() {
               </p>
               <ul className="mb-6 space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Zero upfront investment or retainers
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Live exclusive pre-qualified leads
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-accent" />
+                  <HugeiconsIcon
+                    icon={CheckmarkCircle02Icon}
+                    size={20}
+                    strokeWidth={1.5}
+                    className="mt-1 shrink-0 text-primary"
+                  />
                   <span className="text-foreground text-sm">
                     Scale volume based on your capacity
                   </span>
                 </li>
               </ul>
               <Button
-                asChild
+                render={<Link to="/pm" />}
                 variant="outline"
-                className="group-hover:border-accent"
+                className="group-hover:border-primary"
               >
-                <Link to="/pm">
-                  More about PM
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                More about PM
+                <HugeiconsIcon
+                  icon={ArrowRight01Icon}
+                  size={16}
+                  strokeWidth={2}
+                />
               </Button>
             </div>
           </div>
@@ -295,7 +377,12 @@ function HomePage() {
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="text-center">
               <div className="mb-4 inline-flex rounded-full bg-accent/10 p-4">
-                <Award className="h-8 w-8 text-accent" />
+                <HugeiconsIcon
+                  icon={Award01Icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-primary"
+                />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 300+
@@ -306,7 +393,12 @@ function HomePage() {
             </div>
             <div className="text-center">
               <div className="mb-4 inline-flex rounded-full bg-accent/10 p-4">
-                <Target className="h-8 w-8 text-accent" />
+                <HugeiconsIcon
+                  icon={Target01Icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-primary"
+                />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 $200M+
@@ -317,7 +409,12 @@ function HomePage() {
             </div>
             <div className="text-center">
               <div className="mb-4 inline-flex rounded-full bg-accent/10 p-4">
-                <Users className="h-8 w-8 text-accent" />
+                <HugeiconsIcon
+                  icon={UserGroupIcon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-primary"
+                />
               </div>
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 8X
@@ -370,13 +467,15 @@ function HomePage() {
                   </div>
                 </div>
                 <Button
-                  asChild
-                  className="bg-accent text-accent-foreground hover:bg-accent/90"
+                  render={<Link to="/case-studies" />}
+                  className="bg-primary text-primary-foreground hover:bg-primary/80"
                 >
-                  <Link to="/case-studies">
-                    Read Full Case Study
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  Read Full Case Study
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={16}
+                    strokeWidth={2}
+                  />
                 </Button>
               </div>
               <div className="relative min-h-75 bg-secondary lg:min-h-100">
@@ -478,17 +577,23 @@ function HomePage() {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
-              asChild
+              render={<Link to="/apply" />}
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
+              className="bg-primary text-primary-foreground hover:bg-primary/80"
             >
-              <Link to="/apply">
-                Apply To Work With Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              Apply To Work With Us
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                size={20}
+                strokeWidth={2}
+              />
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/case-studies">View Case Studies</Link>
+            <Button
+              render={<Link to="/case-studies" />}
+              size="lg"
+              variant="outline"
+            >
+              View Case Studies
             </Button>
           </div>
         </div>
