@@ -95,14 +95,12 @@ function CustomersPage() {
 
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={Building01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Building01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 300+
               </div>
@@ -112,14 +110,12 @@ function CustomersPage() {
             </div>
 
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={ChartIncreaseIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={ChartIncreaseIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 8X
               </div>
@@ -129,14 +125,12 @@ function CustomersPage() {
             </div>
 
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={Award01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Award01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 $200M+
               </div>
@@ -209,9 +203,13 @@ function CustomersPage() {
                     {customer.testimonial?.quote}
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 font-bold text-primary">
-                      {customer.testimonial?.initials}
-                    </div>
+                    {customer.logo && (
+                      <img
+                        src={getImageUrl(customer.logo, 'thumbnail')}
+                        alt={customer.name}
+                        className="h-10 w-auto object-contain dark:invert"
+                      />
+                    )}
                     <div>
                       <div className="font-semibold text-foreground">
                         {customer.testimonial?.author}
@@ -250,14 +248,12 @@ function CustomersPage() {
                   key={category.id}
                   className="rounded-2xl border border-border bg-card p-8"
                 >
-                  <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                    <HugeiconsIcon
-                      icon={IconComponent}
-                      size={24}
-                      strokeWidth={1.5}
-                      className="text-primary"
-                    />
-                  </div>
+                  <HugeiconsIcon
+                    icon={IconComponent}
+                    size={32}
+                    strokeWidth={1.5}
+                    className="mb-4 text-primary"
+                  />
                   <h3 className="mb-3 font-bold text-2xl lg:text-3xl">
                     {category.name}
                   </h3>

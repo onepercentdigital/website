@@ -52,28 +52,24 @@ function BlogIndexPage() {
           {isLoading ? (
             <div className="flex min-h-100 items-center justify-center">
               <div className="text-center">
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                  <HugeiconsIcon
-                    icon={File01Icon}
-                    size={32}
-                    strokeWidth={1.5}
-                    className="animate-pulse text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={File01Icon}
+                  size={48}
+                  strokeWidth={1.5}
+                  className="mx-auto mb-4 animate-pulse text-primary"
+                />
                 <p className="text-muted-foreground">Loading posts...</p>
               </div>
             </div>
           ) : !posts || posts.length === 0 ? (
             <div className="flex min-h-100 items-center justify-center">
               <div className="text-center">
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                  <HugeiconsIcon
-                    icon={File01Icon}
-                    size={32}
-                    strokeWidth={1.5}
-                    className="text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={File01Icon}
+                  size={48}
+                  strokeWidth={1.5}
+                  className="mx-auto mb-4 text-primary"
+                />
                 <h2 className="mb-3 font-bold text-2xl">No Posts Yet</h2>
                 <p className="text-muted-foreground leading-relaxed tracking-wide">
                   Blog posts will appear here once they're published. Check back

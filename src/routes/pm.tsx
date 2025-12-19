@@ -350,8 +350,13 @@ function PerformanceMarketingPage() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              {/* Placeholder for future visualization */}
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+              <img
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop"
+                alt="Business meeting and lead generation"
+                className="relative z-20 h-full w-full object-cover brightness-[0.6] grayscale"
+              />
             </div>
           </div>
         </div>
@@ -376,17 +381,15 @@ function PerformanceMarketingPage() {
                 className="group rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
               >
                 <div className="mb-4 flex items-start justify-between">
-                  <div className="rounded-xl bg-primary/10 p-3">
-                    <HugeiconsIcon
-                      icon={step.icon}
-                      size={24}
-                      strokeWidth={2}
-                      className="text-primary"
-                    />
-                  </div>
-                  <div className="font-bold text-3xl text-primary/30 tracking-tight">
+                  <div className="font-bold text-4xl text-primary">
                     {step.number}
                   </div>
+                  <HugeiconsIcon
+                    icon={step.icon}
+                    size={24}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
                 </div>
                 <h3 className="mb-3 font-bold text-2xl">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed tracking-wide">
@@ -415,14 +418,12 @@ function PerformanceMarketingPage() {
                 key={benefit.title}
                 className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={benefit.icon}
-                    size={24}
-                    strokeWidth={2}
-                    className="text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={benefit.icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="mb-4 text-primary"
+                />
                 <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                   {benefit.title}
                 </h3>
@@ -453,14 +454,12 @@ function PerformanceMarketingPage() {
                 key={item.title}
                 className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={item.icon}
-                    size={24}
-                    strokeWidth={2}
-                    className="text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={item.icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="mb-4 text-primary"
+                />
                 <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                   {item.title}
                 </h3>
@@ -490,14 +489,12 @@ function PerformanceMarketingPage() {
                 key={service.title}
                 className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={service.icon}
-                    size={24}
-                    strokeWidth={2}
-                    className="text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={service.icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="mb-4 text-primary"
+                />
                 <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                   {service.title}
                 </h3>
@@ -571,8 +568,13 @@ function PerformanceMarketingPage() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              {/* Placeholder for future chart/visualization */}
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop"
+                alt="Team collaboration and lead pipeline"
+                className="relative z-20 h-full w-full object-cover brightness-[0.6] grayscale"
+              />
             </div>
           </div>
         </div>

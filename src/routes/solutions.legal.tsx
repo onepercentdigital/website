@@ -125,16 +125,14 @@ function LegalPage() {
                   key={challenge.title}
                   className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg"
                 >
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 p-3">
-                    {icon && (
-                      <HugeiconsIcon
-                        icon={icon}
-                        size={24}
-                        strokeWidth={1.5}
-                        className="text-primary"
-                      />
-                    )}
-                  </div>
+                  {icon && (
+                    <HugeiconsIcon
+                      icon={icon}
+                      size={32}
+                      strokeWidth={1.5}
+                      className="mb-4 text-primary"
+                    />
+                  )}
                   <h3 className="mb-3 font-bold text-xl leading-tight">
                     {challenge.title}
                   </h3>
@@ -166,18 +164,18 @@ function LegalPage() {
               return (
                 <div key={step.title} className="relative">
                   <div className="flex flex-col rounded-2xl border border-border bg-card p-6">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 p-3">
+                    <div className="mb-4 flex items-start justify-between">
+                      <div className="font-bold text-4xl text-primary">
+                        0{index + 1}
+                      </div>
                       {icon && (
                         <HugeiconsIcon
                           icon={icon}
                           size={24}
                           strokeWidth={1.5}
-                          className="text-primary"
+                          className="text-muted-foreground"
                         />
                       )}
-                    </div>
-                    <div className="mb-2 font-semibold text-primary text-sm uppercase tracking-widest">
-                      Step {index + 1}
                     </div>
                     <h3 className="mb-3 font-bold text-2xl leading-tight">
                       {step.title}

@@ -106,14 +106,12 @@ function SolutionsLandingPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Agreement01Icon}
-                  size={24}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Agreement01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-2xl leading-tight">
                 We Speak Your Language
               </h3>
@@ -123,14 +121,12 @@ function SolutionsLandingPage() {
               </p>
             </div>
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Building06Icon}
-                  size={24}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Building06Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-2xl leading-tight">
                 Proven Industry Results
               </h3>
@@ -140,14 +136,12 @@ function SolutionsLandingPage() {
               </p>
             </div>
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={ArrowRight01Icon}
-                  size={24}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-2xl leading-tight">
                 Faster Time to Results
               </h3>
@@ -182,14 +176,12 @@ function SolutionsLandingPage() {
                   to={`/solutions/${solution.slug}` as any}
                   className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg"
                 >
-                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 p-3 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <HugeiconsIcon
-                      icon={icon}
-                      size={28}
-                      strokeWidth={1.5}
-                      className="text-primary transition-colors group-hover:text-primary-foreground"
-                    />
-                  </div>
+                  <HugeiconsIcon
+                    icon={icon}
+                    size={32}
+                    strokeWidth={1.5}
+                    className="mb-4 text-primary"
+                  />
                   <h3 className="mb-3 font-bold text-2xl leading-tight">
                     {solution.name}
                   </h3>

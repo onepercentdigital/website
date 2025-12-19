@@ -1,10 +1,7 @@
 import {
-  AnalyticsUpIcon,
   ArrowRight01Icon,
   Award01Icon,
-  Brain01Icon,
   CheckmarkCircle02Icon,
-  Dollar01Icon,
   Target01Icon,
   UserGroupIcon,
 } from '@hugeicons/core-free-icons';
@@ -22,6 +19,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { getImageUrl } from '@/lib/cloudflare-images';
 import {
   generateMetaTags,
   getLocalBusinessSchema,
@@ -147,7 +145,6 @@ function HomePage() {
           <div className="grid gap-6 lg:grid-cols-3">
             {[
               {
-                icon: Brain01Icon,
                 title: 'Generative Engine Optimization',
                 description:
                   'Position your brand at the forefront of AI-powered search. Be the answer when AI assistants recommend solutions.',
@@ -158,9 +155,10 @@ function HomePage() {
                 ],
                 href: '/geo',
                 cta: 'More about GEO',
+                image:
+                  'https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?w=800&h=450&fit=crop',
               },
               {
-                icon: AnalyticsUpIcon,
                 title: 'Search Engine Optimization',
                 description:
                   'Sustainable organic growth through proven strategies that drive qualified traffic and convert visitors.',
@@ -171,9 +169,10 @@ function HomePage() {
                 ],
                 href: '/seo',
                 cta: 'More about SEO',
+                image:
+                  'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
               },
               {
-                icon: Dollar01Icon,
                 title: 'Performance Marketing',
                 description:
                   'We fund your campaigns and deliver pre-qualified leads directly to your pipeline. Pay only for results.',
@@ -184,18 +183,23 @@ function HomePage() {
                 ],
                 href: '/pm',
                 cta: 'More about PM',
+                image:
+                  'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop',
               },
             ].map((service) => (
-              <Card key={service.title} className="group flex flex-col">
+              <Card
+                key={service.title}
+                className="group flex flex-col overflow-hidden pt-0"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="relative z-20 aspect-video w-full object-cover brightness-[0.6] grayscale transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
                 <CardHeader>
-                  <div className="mb-2 inline-flex size-10 items-center justify-center rounded-xl bg-primary/10">
-                    <HugeiconsIcon
-                      icon={service.icon}
-                      size={20}
-                      strokeWidth={1.5}
-                      className="text-primary"
-                    />
-                  </div>
                   <CardTitle>{service.title}</CardTitle>
                   <CardDescription className="leading-relaxed">
                     {service.description}
@@ -261,14 +265,12 @@ function HomePage() {
               },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="mb-3 inline-flex size-12 items-center justify-center rounded-xl bg-primary/10">
-                  <HugeiconsIcon
-                    icon={stat.icon}
-                    size={24}
-                    strokeWidth={1.5}
-                    className="text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={stat.icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="mx-auto mb-3 text-primary"
+                />
                 <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                   {stat.value}
                 </div>
@@ -338,16 +340,16 @@ function HomePage() {
                   </Button>
                 </div>
               </div>
-              <div className="flex min-h-48 items-center justify-center bg-muted/50 p-8 lg:min-h-0">
-                <div className="text-center">
-                  <div className="mb-2 font-bold text-5xl text-primary">RC</div>
-                  <div className="font-medium text-foreground">
-                    Revology Cars
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    Automotive · Restomod
-                  </div>
-                </div>
+              <div className="relative min-h-48 overflow-hidden lg:min-h-0">
+                <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+                <img
+                  src={getImageUrl(
+                    '7ab278bc-37c8-4d7e-21ee-ba2d463fa200',
+                    'large',
+                  )}
+                  alt="Revology Cars"
+                  className="relative z-20 h-full w-full object-contain p-8 dark:invert"
+                />
               </div>
             </div>
           </Card>
@@ -373,14 +375,14 @@ function HomePage() {
                   "Working with One Percent Digital transformed our online presence. We went from being invisible to showing up everywhere our customers search. We're now one of the top recommendations in ChatGPT for diesel injection pumps.",
                 name: 'Scott Goldfarb',
                 title: 'Owner, Goldfarb & Associates',
-                initials: 'SG',
+                logo: '51e5ac33-a0d2-4cdb-668e-581cba411a00',
               },
               {
                 quote:
                   "After 40+ years in business, One Percent Digital helped us finally break through online. We're now the #1 patio cover company in Arizona with three straight years of record-breaking revenue.",
                 name: 'Tanner Bishop',
                 title: 'Owner, Royal Covers',
-                initials: 'TB',
+                logo: '5bacc41c-abd7-4b66-feeb-da11c01c8f00',
               },
             ].map((testimonial) => (
               <Card key={testimonial.name}>
@@ -389,9 +391,11 @@ function HomePage() {
                     "{testimonial.quote}"
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="flex size-9 items-center justify-center rounded-full bg-primary/10 font-medium text-primary text-sm">
-                      {testimonial.initials}
-                    </div>
+                    <img
+                      src={getImageUrl(testimonial.logo, 'thumbnail')}
+                      alt={testimonial.name}
+                      className="h-10 w-auto object-contain dark:invert"
+                    />
                     <div>
                       <div className="font-medium text-foreground text-sm">
                         {testimonial.name}

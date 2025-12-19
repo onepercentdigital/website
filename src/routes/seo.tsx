@@ -24,6 +24,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/seo')({
@@ -317,8 +318,13 @@ function SEOPage() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              {/* Placeholder for future visualization */}
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
+                alt="Search analytics and data visualization"
+                className="relative z-20 h-full w-full object-cover brightness-[0.6] grayscale"
+              />
             </div>
           </div>
         </div>
@@ -342,17 +348,15 @@ function SEOPage() {
                 className="group rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
               >
                 <div className="mb-4 flex items-start justify-between">
-                  <div className="rounded-xl bg-primary/10 p-3">
-                    <HugeiconsIcon
-                      icon={step.icon}
-                      size={24}
-                      strokeWidth={2}
-                      className="text-primary"
-                    />
-                  </div>
-                  <div className="font-bold text-3xl text-primary/30 tracking-tight">
+                  <div className="font-bold text-4xl text-primary">
                     {step.number}
                   </div>
+                  <HugeiconsIcon
+                    icon={step.icon}
+                    size={24}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
                 </div>
                 <h3 className="mb-3 font-bold text-2xl">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed tracking-wide">
@@ -381,14 +385,12 @@ function SEOPage() {
                 key={benefit.title}
                 className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={benefit.icon}
-                    size={24}
-                    strokeWidth={2}
-                    className="text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={benefit.icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="mb-4 text-primary"
+                />
                 <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                   {benefit.title}
                 </h3>
@@ -418,14 +420,12 @@ function SEOPage() {
                 key={service.title}
                 className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
-                <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={service.icon}
-                    size={24}
-                    strokeWidth={2}
-                    className="text-primary"
-                  />
-                </div>
+                <HugeiconsIcon
+                  icon={service.icon}
+                  size={32}
+                  strokeWidth={1.5}
+                  className="mb-4 text-primary"
+                />
                 <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                   {service.title}
                 </h3>
@@ -504,14 +504,14 @@ function SEOPage() {
                   terms. The leads just keep coming."
                 </p>
                 <div className="mt-4 flex items-center gap-3">
-                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10">
-                    <HugeiconsIcon
-                      icon={UserGroupIcon}
-                      size={24}
-                      strokeWidth={2}
-                      className="text-primary"
-                    />
-                  </div>
+                  <img
+                    src={getImageUrl(
+                      '51e5ac33-a0d2-4cdb-668e-581cba411a00',
+                      'thumbnail',
+                    )}
+                    alt="Goldfarb & Associates"
+                    className="h-10 w-auto object-contain dark:invert"
+                  />
                   <div>
                     <div className="font-semibold">Scott Goldfarb</div>
                     <div className="text-muted-foreground text-sm">
@@ -521,8 +521,13 @@ function SEOPage() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              {/* Placeholder for future chart/visualization */}
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
+                alt="Growth charts and analytics dashboard"
+                className="relative z-20 h-full w-full object-cover brightness-[0.6] grayscale"
+              />
             </div>
           </div>
         </div>

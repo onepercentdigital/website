@@ -63,12 +63,51 @@ import { ArrowRight01Icon, Brain01Icon } from '@hugeicons/core-free-icons';
 // In buttons - add data-icon attribute
 <HugeiconsIcon icon={ArrowRight01Icon} size={18} strokeWidth={2} data-icon="inline-end" />
 
-// Standalone icons
-<HugeiconsIcon icon={Brain01Icon} size={24} strokeWidth={1.5} className="text-primary" />
+// Bare icons (preferred - no containers)
+<HugeiconsIcon icon={Brain01Icon} size={32} strokeWidth={1.5} className="text-primary" />
 
-// Icon containers
-<div className="inline-flex size-10 items-center justify-center rounded-xl bg-primary/10">
-  <HugeiconsIcon icon={Brain01Icon} size={20} strokeWidth={1.5} className="text-primary" />
+// Stats icons (centered, bare)
+<HugeiconsIcon icon={Brain01Icon} size={32} strokeWidth={1.5} className="mx-auto mb-3 text-primary" />
+```
+
+### Image Cards with Color Overlay
+```tsx
+<Card className="group flex flex-col overflow-hidden pt-0">
+  <div className="relative aspect-video overflow-hidden">
+    <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+    <img 
+      src="https://images.unsplash.com/photo-xxx?w=800&h=450&fit=crop" 
+      alt="Description"
+      className="relative z-20 aspect-video w-full object-cover brightness-[0.6] grayscale transition-transform duration-300 group-hover:scale-105" 
+    />
+  </div>
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+    <CardDescription>Description</CardDescription>
+  </CardHeader>
+</Card>
+```
+
+### Grayscale Avatar Images
+```tsx
+// For testimonials and team members
+<img 
+  src="https://images.unsplash.com/photo-xxx?w=96&h=96&fit=crop&crop=face" 
+  alt="Person Name"
+  className="size-12 rounded-full object-cover grayscale"
+/>
+```
+
+### Process Steps Pattern
+```tsx
+// Step number as primary visual, icon as secondary
+<div className="rounded-2xl bg-card p-8">
+  <div className="mb-4 flex items-start justify-between">
+    <div className="font-bold text-4xl text-primary">01</div>
+    <HugeiconsIcon icon={StepIcon} size={24} strokeWidth={1.5} className="text-muted-foreground" />
+  </div>
+  <h3 className="mb-2 font-semibold text-xl">Step Title</h3>
+  <p className="text-muted-foreground">Step description.</p>
 </div>
 ```
 
@@ -123,6 +162,8 @@ import { ArrowRight01Icon, Brain01Icon } from '@hugeicons/core-free-icons';
 - Add emojis unless user requests them
 - Use `<a>` tags for internal navigation (use `Link`)
 - Add two-tone coloring to headlines with `<span className="text-primary">`
+- Use `bg-primary/10` icon containers (use bare icons instead)
+- Use initials in colored circles for avatars (use grayscale images)
 
 ---
 
@@ -367,29 +408,45 @@ function ExamplePage() {
 }
 ```
 
-### Creating a Card Grid
+### Creating Image Card Grids
 
 ```tsx
 <div className="grid gap-6 lg:grid-cols-3">
   {items.map((item) => (
-    <Card key={item.id} className="group">
+    <Card key={item.id} className="group flex flex-col overflow-hidden pt-0">
+      <div className="relative aspect-video overflow-hidden">
+        <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+        <img 
+          src={item.image} 
+          alt={item.title}
+          className="relative z-20 aspect-video w-full object-cover brightness-[0.6] grayscale transition-transform duration-300 group-hover:scale-105" 
+        />
+      </div>
       <CardHeader>
-        <div className="mb-2 inline-flex size-10 items-center justify-center rounded-xl bg-primary/10">
-          <HugeiconsIcon icon={item.icon} size={20} strokeWidth={1.5} className="text-primary" />
-        </div>
         <CardTitle>{item.title}</CardTitle>
         <CardDescription>{item.description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        {/* Content */}
-      </CardContent>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Button render={<Link to={item.href} />} variant="outline" size="sm">
           Learn more
           <HugeiconsIcon icon={ArrowRight01Icon} size={14} strokeWidth={2} data-icon="inline-end" />
         </Button>
       </CardFooter>
     </Card>
+  ))}
+</div>
+```
+
+### Creating Stats Sections
+
+```tsx
+<div className="grid gap-8 lg:grid-cols-4">
+  {stats.map((stat) => (
+    <div key={stat.label} className="text-center">
+      <HugeiconsIcon icon={stat.icon} size={32} strokeWidth={1.5} className="mx-auto mb-3 text-primary" />
+      <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">{stat.value}</div>
+      <div className="text-muted-foreground text-sm">{stat.label}</div>
+    </div>
   ))}
 </div>
 ```
@@ -434,7 +491,7 @@ const posts = useQuery(api.posts.list, {})
 
 ## External Documentation
 
-- **[docs/MAIA-MIGRATION-CONVERSATION.md](docs/MAIA-MIGRATION-CONVERSATION.md)** - Design system migration notes
+- **[docs/MAIA-STYLE-GUIDE.md](docs/MAIA-STYLE-GUIDE.md)** - Comprehensive visual style guide
 - **[docs/RESTORE-ADMIN-CMS.md](docs/RESTORE-ADMIN-CMS.md)** - Re-enable admin routes
 - **[docs/BLOG-CMS.md](docs/BLOG-CMS.md)** - Blog system architecture
 - **[docs/CLOUDFLARE-IMAGES.md](docs/CLOUDFLARE-IMAGES.md)** - Image upload setup

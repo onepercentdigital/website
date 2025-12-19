@@ -15,7 +15,15 @@ import {
   getAllCaseStudies,
   getFeaturedCaseStudies,
 } from '@/data/case-studies';
+import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
+
+// Map case study IDs to their logo image IDs
+const caseStudyLogos: Record<string, string> = {
+  'revology-cars': '7ab278bc-37c8-4d7e-21ee-ba2d463fa200',
+  'goldfarb-associates': '51e5ac33-a0d2-4cdb-668e-581cba411a00',
+  'royal-covers': '5bacc41c-abd7-4b66-feeb-da11c01c8f00',
+};
 
 export const Route = createFileRoute('/case-studies')({
   component: CaseStudiesPage,
@@ -77,14 +85,12 @@ function CaseStudiesPage() {
           <div className="grid gap-8 lg:grid-cols-3">
             {/* Stat 1 */}
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={ChartIncreaseIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={ChartIncreaseIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 {metrics.averageGrowth}
               </div>
@@ -98,14 +104,12 @@ function CaseStudiesPage() {
 
             {/* Stat 2 */}
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={UserGroupIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={UserGroupIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 {metrics.totalClients}+
               </div>
@@ -119,14 +123,12 @@ function CaseStudiesPage() {
 
             {/* Stat 3 */}
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={Building01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Building01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl xl:text-8xl">
                 {metrics.industriesServed}
               </div>
@@ -219,9 +221,16 @@ function CaseStudiesPage() {
                     {featuredStudy.testimonial.quote}
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 font-bold text-primary">
-                      {featuredStudy.testimonial.initials}
-                    </div>
+                    {caseStudyLogos[featuredStudy.id] && (
+                      <img
+                        src={getImageUrl(
+                          caseStudyLogos[featuredStudy.id],
+                          'thumbnail',
+                        )}
+                        alt={featuredStudy.client}
+                        className="h-10 w-auto object-contain dark:invert"
+                      />
+                    )}
                     <div>
                       <div className="font-semibold text-foreground">
                         {featuredStudy.testimonial.author}
@@ -361,9 +370,13 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
             {study.testimonial.quote}
           </p>
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-semibold text-primary text-xs">
-              {study.testimonial.initials}
-            </div>
+            {caseStudyLogos[study.id] && (
+              <img
+                src={getImageUrl(caseStudyLogos[study.id], 'thumbnail')}
+                alt={study.client}
+                className="h-8 w-auto object-contain dark:invert"
+              />
+            )}
             <div className="text-xs">
               <div className="font-semibold text-foreground">
                 {study.testimonial.author}

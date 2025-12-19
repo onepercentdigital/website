@@ -123,9 +123,13 @@ function EnterprisePage() {
                 drives success.
               </p>
             </div>
-            <div className="flex items-center justify-center">
-              {/* Placeholder for future visualization */}
-              <div className="h-full w-full" />
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+              <img
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=450&fit=crop"
+                alt="Corporate strategy session"
+                className="relative z-20 h-full w-full object-cover brightness-[0.6] grayscale"
+              />
             </div>
           </div>
 
@@ -165,14 +169,14 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-4">
-            <div className="rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div className="mb-4 font-bold text-3xl text-primary/30">01</div>
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">01</div>
                 <HugeiconsIcon
                   icon={Target01Icon}
-                  size={32}
+                  size={24}
                   strokeWidth={1.5}
-                  className="text-primary"
+                  className="text-muted-foreground"
                 />
               </div>
               <h3 className="mb-3 font-bold text-2xl">
@@ -185,14 +189,14 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div className="mb-4 font-bold text-3xl text-primary/30">02</div>
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">02</div>
                 <HugeiconsIcon
                   icon={File01Icon}
-                  size={32}
+                  size={24}
                   strokeWidth={1.5}
-                  className="text-primary"
+                  className="text-muted-foreground"
                 />
               </div>
               <h3 className="mb-3 font-bold text-2xl">
@@ -205,14 +209,14 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div className="mb-4 font-bold text-3xl text-primary/30">03</div>
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">03</div>
                 <HugeiconsIcon
                   icon={HierarchySquare01Icon}
-                  size={32}
+                  size={24}
                   strokeWidth={1.5}
-                  className="text-primary"
+                  className="text-muted-foreground"
                 />
               </div>
               <h3 className="mb-3 font-bold text-2xl">
@@ -225,14 +229,14 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg">
-              <div className="mb-4 font-bold text-3xl text-primary/30">04</div>
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">04</div>
                 <HugeiconsIcon
                   icon={ChartIncreaseIcon}
-                  size={32}
+                  size={24}
                   strokeWidth={1.5}
-                  className="text-primary"
+                  className="text-muted-foreground"
                 />
               </div>
               <h3 className="mb-3 font-bold text-2xl">
@@ -263,14 +267,12 @@ function EnterprisePage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={UserGroupIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={UserGroupIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Dedicated Account Management
               </h3>
@@ -282,14 +284,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={ChartLineData01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={ChartLineData01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Custom Reporting & Analytics
               </h3>
@@ -301,14 +301,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Shield01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Shield01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Enterprise Security & Compliance
               </h3>
@@ -319,14 +317,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Globe02Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Globe02Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Multi-Location/Brand Coordination
               </h3>
@@ -338,14 +334,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={HeadphonesIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={HeadphonesIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 White-Glove Support
               </h3>
@@ -357,14 +351,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={FlashIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={FlashIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Advanced Integration Capabilities
               </h3>
@@ -393,14 +385,12 @@ function EnterprisePage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Target01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Target01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                 Strategic Consulting & Planning
               </h3>
@@ -464,14 +454,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Search01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Search01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                 Enterprise SEO
               </h3>
@@ -535,14 +523,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Brain01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Brain01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                 Enterprise GEO
               </h3>
@@ -606,14 +592,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Globe02Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Globe02Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                 Multi-Location Management
               </h3>
@@ -677,14 +661,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={GraduationScrollIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={GraduationScrollIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                 Enterprise Training & Onboarding
               </h3>
@@ -748,14 +730,12 @@ function EnterprisePage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={DollarCircleIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={DollarCircleIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-4 font-bold text-xl lg:text-2xl">
                 Enterprise Lead Generation
               </h3>
@@ -870,9 +850,13 @@ function EnterprisePage() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              {/* Placeholder for future visualization */}
-              <div className="h-full w-full" />
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+              <img
+                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=450&fit=crop"
+                alt="Executive business presentation"
+                className="relative z-20 h-full w-full object-cover brightness-[0.6] grayscale"
+              />
             </div>
           </div>
         </div>
@@ -920,10 +904,8 @@ function EnterprisePage() {
                 $15,000-$75,000+ per month on annual contracts. Pricing includes
                 dedicated account management, unlimited stakeholder support,
                 custom reporting dashboards, SLA guarantees, and access to all
-                enterprise features. We provide transparent ROI projections and
-                work within your budget to maximize impact. Volume discounts and
-                multi-year agreements are available for qualifying
-                organizations.
+                enterprise features. Volume discounts and multi-year agreements
+                are available for qualifying organizations.
               </AccordionContent>
             </AccordionItem>
 

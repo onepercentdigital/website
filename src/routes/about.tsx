@@ -94,14 +94,12 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 sm:grid-cols-3">
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={Clock01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Clock01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl">
                 12+
               </div>
@@ -110,14 +108,12 @@ function AboutPage() {
               </div>
             </div>
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={Briefcase01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Briefcase01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl">
                 300+
               </div>
@@ -126,14 +122,12 @@ function AboutPage() {
               </div>
             </div>
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={ChartIncreaseIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={ChartIncreaseIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl">
                 $200M
               </div>
@@ -179,8 +173,36 @@ function AboutPage() {
               </p>
             </div>
             <div className="flex items-center justify-center">
-              {/* Placeholder for future visualization */}
-              <div className="h-full w-full" />
+              <svg
+                className="h-48 w-48 lg:h-64 lg:w-64"
+                viewBox="0 0 300 178"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="One Percent logo"
+              >
+                <title>One Percent logo</title>
+                <path
+                  d="M157.015 85.7143C180.684 85.7143 199.872 66.5265 199.872 42.8571C199.872 19.1878 180.684 0 157.015 0C133.346 0 114.158 19.1878 114.158 42.8571C114.158 66.5265 133.346 85.7143 157.015 85.7143Z"
+                  fill="currentColor"
+                  className="text-primary"
+                />
+                <path
+                  d="M257.143 177.119C280.812 177.119 300 157.931 300 134.261C300 110.592 280.812 91.4043 257.143 91.4043C233.473 91.4043 214.286 110.592 214.286 134.261C214.286 157.931 233.473 177.119 257.143 177.119Z"
+                  fill="currentColor"
+                  className="text-primary"
+                />
+                <path
+                  d="M85.7143 174.463H0V88.7485C0 41.3401 38.3059 3.03418 85.7143 3.03418V174.463Z"
+                  fill="currentColor"
+                  className="text-primary"
+                />
+                <path
+                  d="M266.248 3.03418L137.677 174.463H148.296L276.868 3.03418H266.248Z"
+                  fill="currentColor"
+                  className="text-primary"
+                />
+              </svg>
             </div>
           </div>
         </div>
@@ -206,7 +228,7 @@ function AboutPage() {
                 className="rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg"
               >
                 <div className="mb-6 flex justify-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 font-bold text-2xl text-primary">
+                  <div className="flex size-20 items-center justify-center rounded-full bg-primary/10 font-bold text-2xl text-primary">
                     {member.initials}
                   </div>
                 </div>
@@ -246,14 +268,12 @@ function AboutPage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Briefcase01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Briefcase01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-2xl lg:text-3xl">
                 Entrepreneur-First Mindset
               </h3>
@@ -266,14 +286,12 @@ function AboutPage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={UserGroupIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={UserGroupIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-2xl lg:text-3xl">
                 Hands-On Partnership
               </h3>
@@ -286,14 +304,12 @@ function AboutPage() {
             </div>
 
             <div className="rounded-2xl border border-border bg-card p-8">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
-                <HugeiconsIcon
-                  icon={Award01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={Award01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mb-4 text-primary"
+              />
               <h3 className="mb-3 font-bold text-2xl lg:text-3xl">
                 Proven at Scale
               </h3>

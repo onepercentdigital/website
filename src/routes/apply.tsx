@@ -51,14 +51,12 @@ function ApplyPage() {
               {/* Key Benefits List */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-xl bg-primary/10 p-2">
-                    <HugeiconsIcon
-                      icon={Target01Icon}
-                      size={20}
-                      strokeWidth={1.5}
-                      className="text-primary"
-                    />
-                  </div>
+                  <HugeiconsIcon
+                    icon={Target01Icon}
+                    size={24}
+                    strokeWidth={1.5}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
                       Strategic Assessment
@@ -71,14 +69,12 @@ function ApplyPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-xl bg-primary/10 p-2">
-                    <HugeiconsIcon
-                      icon={ChartIncreaseIcon}
-                      size={20}
-                      strokeWidth={1.5}
-                      className="text-primary"
-                    />
-                  </div>
+                  <HugeiconsIcon
+                    icon={ChartIncreaseIcon}
+                    size={24}
+                    strokeWidth={1.5}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
                       Competitive Analysis
@@ -91,14 +87,12 @@ function ApplyPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-xl bg-primary/10 p-2">
-                    <HugeiconsIcon
-                      icon={Idea01Icon}
-                      size={20}
-                      strokeWidth={1.5}
-                      className="text-primary"
-                    />
-                  </div>
+                  <HugeiconsIcon
+                    icon={Idea01Icon}
+                    size={24}
+                    strokeWidth={1.5}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
                       Growth Strategy Discussion
@@ -111,14 +105,12 @@ function ApplyPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-xl bg-primary/10 p-2">
-                    <HugeiconsIcon
-                      icon={DollarCircleIcon}
-                      size={20}
-                      strokeWidth={1.5}
-                      className="text-primary"
-                    />
-                  </div>
+                  <HugeiconsIcon
+                    icon={DollarCircleIcon}
+                    size={24}
+                    strokeWidth={1.5}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
                       Custom Recommendations
@@ -131,14 +123,12 @@ function ApplyPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="mt-1 rounded-xl bg-primary/10 p-2">
-                    <HugeiconsIcon
-                      icon={Shield01Icon}
-                      size={20}
-                      strokeWidth={1.5}
-                      className="text-primary"
-                    />
-                  </div>
+                  <HugeiconsIcon
+                    icon={Shield01Icon}
+                    size={24}
+                    strokeWidth={1.5}
+                    className="mt-0.5 shrink-0 text-primary"
+                  />
                   <div>
                     <h3 className="mb-1 font-semibold text-foreground">
                       Selective Partnership
@@ -175,19 +165,15 @@ function ApplyPage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Step 1 */}
-            <div className="text-center">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={ArrowRight01Icon}
-                    size={24}
-                    strokeWidth={1.5}
-                    className="text-primary"
-                  />
-                </div>
-                <div className="font-bold text-3xl text-primary/30 tracking-tight">
-                  01
-                </div>
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">01</div>
+                <HugeiconsIcon
+                  icon={ArrowRight01Icon}
+                  size={24}
+                  strokeWidth={1.5}
+                  className="text-muted-foreground"
+                />
               </div>
               <h3 className="mb-3 font-bold text-2xl">Schedule a Call</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
@@ -197,19 +183,15 @@ function ApplyPage() {
             </div>
 
             {/* Step 2 */}
-            <div className="text-center">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={Target01Icon}
-                    size={24}
-                    strokeWidth={1.5}
-                    className="text-primary"
-                  />
-                </div>
-                <div className="font-bold text-3xl text-primary/30 tracking-tight">
-                  02
-                </div>
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">02</div>
+                <HugeiconsIcon
+                  icon={Target01Icon}
+                  size={24}
+                  strokeWidth={1.5}
+                  className="text-muted-foreground"
+                />
               </div>
               <h3 className="mb-3 font-bold text-2xl">We Do Our Homework</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
@@ -219,19 +201,15 @@ function ApplyPage() {
             </div>
 
             {/* Step 3 */}
-            <div className="text-center">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={UserGroupIcon}
-                    size={24}
-                    strokeWidth={1.5}
-                    className="text-primary"
-                  />
-                </div>
-                <div className="font-bold text-3xl text-primary/30 tracking-tight">
-                  03
-                </div>
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">03</div>
+                <HugeiconsIcon
+                  icon={UserGroupIcon}
+                  size={24}
+                  strokeWidth={1.5}
+                  className="text-muted-foreground"
+                />
               </div>
               <h3 className="mb-3 font-bold text-2xl">Qualification Call</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
@@ -241,19 +219,15 @@ function ApplyPage() {
             </div>
 
             {/* Step 4 */}
-            <div className="text-center">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="rounded-xl bg-primary/10 p-3">
-                  <HugeiconsIcon
-                    icon={Idea01Icon}
-                    size={24}
-                    strokeWidth={1.5}
-                    className="text-primary"
-                  />
-                </div>
-                <div className="font-bold text-3xl text-primary/30 tracking-tight">
-                  04
-                </div>
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+              <div className="mb-4 flex items-start justify-between">
+                <div className="font-bold text-4xl text-primary">04</div>
+                <HugeiconsIcon
+                  icon={Idea01Icon}
+                  size={24}
+                  strokeWidth={1.5}
+                  className="text-muted-foreground"
+                />
               </div>
               <h3 className="mb-3 font-bold text-2xl">Next Steps</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
@@ -270,14 +244,12 @@ function ApplyPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={ChartIncreaseIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={ChartIncreaseIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
                 300+
               </div>
@@ -287,14 +259,12 @@ function ApplyPage() {
             </div>
 
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={DollarCircleIcon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={DollarCircleIcon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
                 $200M+
               </div>
@@ -304,14 +274,12 @@ function ApplyPage() {
             </div>
 
             <div className="text-center">
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-4">
-                <HugeiconsIcon
-                  icon={ChartLineData01Icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="text-primary"
-                />
-              </div>
+              <HugeiconsIcon
+                icon={ChartLineData01Icon}
+                size={32}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
                 8X
               </div>
