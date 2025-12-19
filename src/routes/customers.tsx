@@ -165,7 +165,7 @@ function CustomersPage() {
             {customers.map((customer) => (
               <div
                 key={customer.id}
-                className="group flex items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-primary/10 hover:shadow-lg"
+                className="group flex items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
               >
                 {customer.logo ? (
                   <img

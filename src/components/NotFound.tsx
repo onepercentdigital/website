@@ -86,7 +86,7 @@ export function NotFound() {
                   <Link
                     key={page.to}
                     to={page.to}
-                    className="group rounded-2xl ring-1 ring-foreground/10 bg-card p-6 text-left transition-all hover:ring-primary/50 hover:shadow-primary/10 hover:shadow-lg"
+                    className="group rounded-2xl bg-card p-6 text-left ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
                   >
                     <div className="mb-2 flex items-center justify-between">
                       <h4 className="font-medium text-lg">{page.title}</h4>

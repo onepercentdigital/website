@@ -364,7 +364,7 @@ export function BlogEditor({
 
           {/* Preview */}
           {showPreview && (
-            <div className="rounded-lg ring-1 ring-foreground/10 bg-card p-6">
+            <div className="rounded-lg bg-card p-6 ring-1 ring-foreground/10">
               <div className="prose prose-sm dark:prose-invert max-w-none">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
@@ -430,7 +430,7 @@ export function BlogEditor({
                 <img
                   src={featuredImage}
                   alt="Featured"
-                  className="w-full rounded-lg ring-1 ring-foreground/10 object-cover"
+                  className="w-full rounded-lg object-cover ring-1 ring-foreground/10"
                 />
                 <Button
                   type="button"
@@ -470,7 +470,7 @@ export function BlogEditor({
       </div>
 
       {/* Publishing Options */}
-      <div className="space-y-4 rounded-lg ring-1 ring-foreground/10 bg-card p-6">
+      <div className="space-y-4 rounded-lg bg-card p-6 ring-1 ring-foreground/10">
         <h3 className="font-semibold text-lg">Publishing</h3>
         <div className="grid gap-6 lg:grid-cols-2">
           <div>
@@ -565,7 +565,7 @@ export function BlogEditor({
       </Accordion>
 
       {/* Submit Buttons */}
-      <div className="flex items-center justify-end gap-3 ring-1 ring-foreground/10 border-t pt-6">
+      <div className="flex items-center justify-end gap-3 border-t pt-6 ring-1 ring-foreground/10">
         <Button
           type="submit"
           size="lg"

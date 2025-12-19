@@ -286,7 +286,7 @@ function GEOPage() {
                 trust and reference.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl ring-1 ring-foreground/10 bg-card p-4">
+                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     400%
                   </div>
@@ -294,7 +294,7 @@ function GEOPage() {
                     Increase in AI Searches Monthly
                   </div>
                 </div>
-                <div className="rounded-xl ring-1 ring-foreground/10 bg-card p-4">
+                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     10%
                   </div>
@@ -302,7 +302,7 @@ function GEOPage() {
                     Increase in AI Usage Monthly
                   </div>
                 </div>
-                <div className="rounded-xl ring-1 ring-foreground/10 bg-card p-4">
+                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     First
                   </div>
@@ -334,7 +334,7 @@ function GEOPage() {
             {processSteps.map((step) => (
               <div
                 key={step.number}
-                className="group rounded-2xl ring-1 ring-foreground/10 bg-card p-8 transition-all hover:ring-primary/50 hover:shadow-primary/10 hover:shadow-lg"
+                className="group rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
               >
                 <div className="mb-4 flex items-start justify-between">
                   <div className="rounded-xl bg-primary/10 p-3">
@@ -374,7 +374,7 @@ function GEOPage() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="rounded-2xl ring-1 ring-foreground/10 bg-card p-8"
+                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <HugeiconsIcon
@@ -411,7 +411,7 @@ function GEOPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl ring-1 ring-foreground/10 bg-card p-8"
+                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <HugeiconsIcon
@@ -476,7 +476,7 @@ function GEOPage() {
                   </div>
                 </div>
               </div>
-              <div className="mt-10 rounded-2xl ring-1 ring-foreground/10 bg-card p-6">
+              <div className="mt-10 rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
                 <p className="text-muted-foreground italic leading-relaxed tracking-wide">
                   "One Percent Digital helped us become the go-to recommendation
                   in ChatGPT for diesel injection pumps. When AI platforms

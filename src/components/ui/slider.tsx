@@ -25,7 +25,7 @@ function Slider({
 
   return (
     <SliderPrimitive.Root
-      className="data-horizontal:w-full data-vertical:h-full"
+      className="data-vertical:h-full data-horizontal:w-full"
       data-slot="slider"
       defaultValue={defaultValue}
       value={value}
@@ -36,24 +36,25 @@ function Slider({
     >
       <SliderPrimitive.Control
         className={cn(
-          'data-vertical:min-h-40 relative flex w-full touch-none items-center select-none data-disabled:opacity-50 data-vertical:h-full data-vertical:w-auto data-vertical:flex-col',
+          'relative flex w-full touch-none select-none items-center data-vertical:h-full data-vertical:min-h-40 data-vertical:w-auto data-vertical:flex-col data-disabled:opacity-50',
           className,
         )}
       >
         <SliderPrimitive.Track
           data-slot="slider-track"
-          className="bg-muted rounded-4xl data-horizontal:h-3 data-horizontal:w-full data-vertical:h-full data-vertical:w-3 relative overflow-hidden select-none"
+          className="relative select-none overflow-hidden rounded-4xl bg-muted data-horizontal:h-3 data-vertical:h-full data-horizontal:w-full data-vertical:w-3"
         >
           <SliderPrimitive.Indicator
             data-slot="slider-range"
-            className="bg-primary select-none data-horizontal:h-full data-vertical:w-full"
+            className="select-none bg-primary data-horizontal:h-full data-vertical:w-full"
           />
         </SliderPrimitive.Track>
         {Array.from({ length: _values.length }, (_, index) => (
           <SliderPrimitive.Thumb
             data-slot="slider-thumb"
-            key={index}
-            className="border-primary ring-ring/50 size-4 rounded-4xl border bg-white shadow-sm transition-colors hover:ring-4 focus-visible:ring-4 focus-visible:outline-hidden block shrink-0 select-none disabled:pointer-events-none disabled:opacity-50"
+            // biome-ignore lint/suspicious/noArrayIndexKey: Slider thumbs have stable order
+            key={`thumb-${index}`}
+            className="block size-4 shrink-0 select-none rounded-4xl border border-primary bg-white shadow-sm ring-ring/50 transition-colors hover:ring-4 focus-visible:outline-hidden focus-visible:ring-4 disabled:pointer-events-none disabled:opacity-50"
           />
         ))}
       </SliderPrimitive.Control>

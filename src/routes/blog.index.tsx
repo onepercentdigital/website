@@ -167,8 +167,12 @@ function BlogPostCard({ post }: BlogPostCardProps) {
       .substring(0, 160)}...`;
 
   return (
-    <Link to={`/blog/${post.slug}` as any} className="block h-full">
-      <article className="flex h-full flex-col rounded-2xl border border-border bg-card transition-all hover:border-primary/50 hover:shadow-primary/10 hover:shadow-lg">
+    <Link
+      to="/blog/$slug"
+      params={{ slug: post.slug }}
+      className="block h-full"
+    >
+      <article className="flex h-full flex-col rounded-2xl border border-border bg-card transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
         {/* Featured Image */}
         {post.featuredImage ? (
           <img

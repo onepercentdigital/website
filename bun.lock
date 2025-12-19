@@ -80,6 +80,7 @@
   },
   "trustedDependencies": [
     "esbuild",
+    "msw",
     "sharp",
     "workerd",
   ],

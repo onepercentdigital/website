@@ -178,10 +178,8 @@ function SolutionsLandingPage() {
               return (
                 <Link
                   key={solution.id}
-                  to={
-                    // biome-ignore lint/suspicious/noExplicitAny: TanStack Router requires exact route paths, but solution.slug is dynamic from data - all slugs are valid routes
-                    `/solutions/${solution.slug}` as any
-                  }
+                  // biome-ignore lint/suspicious/noExplicitAny: Solutions use static routes, slug from data maps to valid routes
+                  to={`/solutions/${solution.slug}` as any}
                   className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg"
                 >
                   <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 p-3 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">

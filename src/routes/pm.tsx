@@ -324,7 +324,7 @@ function PerformanceMarketingPage() {
                 performance-based marketing.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl ring-1 ring-foreground/10 bg-card p-4">
+                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     100+
                   </div>
@@ -332,7 +332,7 @@ function PerformanceMarketingPage() {
                     Businesses Served
                   </div>
                 </div>
-                <div className="rounded-xl ring-1 ring-foreground/10 bg-card p-4">
+                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     100%
                   </div>
@@ -340,7 +340,7 @@ function PerformanceMarketingPage() {
                     Exclusive Leads
                   </div>
                 </div>
-                <div className="rounded-xl ring-1 ring-foreground/10 bg-card p-4">
+                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     $0
                   </div>
@@ -373,7 +373,7 @@ function PerformanceMarketingPage() {
             {processSteps.map((step) => (
               <div
                 key={step.number}
-                className="group rounded-2xl ring-1 ring-foreground/10 bg-card p-8 transition-all hover:ring-primary/50 hover:shadow-primary/10 hover:shadow-lg"
+                className="group rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
               >
                 <div className="mb-4 flex items-start justify-between">
                   <div className="rounded-xl bg-primary/10 p-3">
@@ -413,7 +413,7 @@ function PerformanceMarketingPage() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="rounded-2xl ring-1 ring-foreground/10 bg-card p-8"
+                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <HugeiconsIcon
@@ -451,7 +451,7 @@ function PerformanceMarketingPage() {
             {leadQualityItems.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl ring-1 ring-foreground/10 bg-card p-8"
+                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <HugeiconsIcon
@@ -488,7 +488,7 @@ function PerformanceMarketingPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-2xl ring-1 ring-foreground/10 bg-card p-8"
+                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
                   <HugeiconsIcon
