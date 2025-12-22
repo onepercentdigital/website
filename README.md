@@ -32,7 +32,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 - **Framework**: TanStack Start + React 19 + TypeScript
 - **Routing**: TanStack Router (file-based, type-safe)
 - **Database**: Convex (real-time, TypeScript schema)
-- **Styling**: Tailwind CSS v4 + Shadcn/ui + Plus Jakarta Sans
+- **Styling**: Tailwind CSS v4 + Shadcn/ui (Maia style) + DM Sans
 - **Images**: Cloudflare Images (CDN delivery)
 - **Deployment**: Cloudflare Workers
 - **Linting**: Biome

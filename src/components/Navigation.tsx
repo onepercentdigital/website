@@ -83,21 +83,21 @@ export function Navigation() {
             >
               <HugeiconsIcon icon={Menu01Icon} size={24} strokeWidth={2} />
             </SheetTrigger>
-            <SheetContent side="right" showCloseButton>
-              <nav className="flex flex-col gap-4 pt-8">
-                <Accordion className="rounded-none border-0">
+            <SheetContent side="right" showCloseButton className="px-6">
+              <nav className="flex h-full flex-col gap-2 pt-16">
+                <Accordion className="gap-2 rounded-none border-0">
                   {navigation.main
                     .filter((item) => item.type === 'dropdown')
                     .map((item) => (
                       <AccordionItem
                         key={item.label}
                         value={item.label}
-                        className="border-b-0"
+                        className="border-none data-open:bg-transparent"
                       >
-                        <AccordionTrigger className="py-2">
+                        <AccordionTrigger className="py-2 hover:no-underline">
                           {item.label}
                         </AccordionTrigger>
-                        <AccordionContent>
+                        <AccordionContent className="[&_a]:no-underline">
                           <div className="flex flex-col gap-1">
                             {item.items.map((subItem) => (
                               <SheetClose
@@ -140,12 +140,17 @@ export function Navigation() {
                   render={
                     <Button
                       render={<Link to={navigation.cta.href} />}
-                      className="mt-4 w-full"
+                      className="mt-4"
                     />
                   }
                 >
                   {navigation.cta.label}
                 </SheetClose>
+
+                {/* Logo at bottom */}
+                <div className="mt-auto flex items-center justify-center pt-12 pb-8">
+                  <Logo size="footer" showWordmark={false} />
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
