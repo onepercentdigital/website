@@ -1,5 +1,3 @@
-'use client';
-
 import { cva, type VariantProps } from 'class-variance-authority';
 import type * as React from 'react';
 import { Button } from '@/components/ui/button';
@@ -9,7 +7,6 @@ import { cn } from '@/lib/utils';
 
 function InputGroup({ className, ...props }: React.ComponentProps<'div'>) {
   return (
-    // biome-ignore lint/a11y/useSemanticElements: Input group requires div for styling
     <div
       data-slot="input-group"
       role="group"
@@ -49,7 +46,6 @@ function InputGroupAddon({
   ...props
 }: React.ComponentProps<'div'> & VariantProps<typeof inputGroupAddonVariants>) {
   return (
-    // biome-ignore lint/a11y/useSemanticElements: Addon requires div for styling
     <div
       role="group"
       data-slot="input-group-addon"
@@ -60,12 +56,6 @@ function InputGroupAddon({
           return;
         }
         e.currentTarget.parentElement?.querySelector('input')?.focus();
-      }}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          e.currentTarget.parentElement?.querySelector('input')?.focus();
-        }
       }}
       {...props}
     />

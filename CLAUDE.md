@@ -6,14 +6,14 @@
 
 This project uses the **shadcn/ui Maia style** - a soft, rounded aesthetic with OKLCH colors.
 
-- **Primary color**: `#00cccc` cyan (OKLCH: `oklch(0.75 0.12 195)`)
+- **Primary color**: Blue (OKLCH: `oklch(0.61 0.11 222)` light mode / `oklch(0.71 0.13 215)` dark mode)
 - **Font**: DM Sans Variable
 - **Style**: `base-maia` with aggressive rounding
 - **Icons**: HugeIcons (not Lucide)
 - **Color format**: OKLCH in CSS variables
 
 ### Color Usage
-- `primary` = Brand/action color (cyan) - use for CTAs, links, accents
+- `primary` = Brand/action color (blue) - use for CTAs, links, accents
 - `accent` = Neutral gray for subtle backgrounds (Maia convention)
 - `muted` = Subdued backgrounds and text
 - `secondary` = Alternative button style
