@@ -14,7 +14,7 @@ import { ConvexHttpClient } from 'convex/browser'
 import { getAllSolutions } from '../src/data/solutions'
 import { api } from '../convex/_generated/api'
 
-const baseUrl = 'https://onepercentseo.com'
+const baseUrl = 'https://op.digital'
 const currentDate = new Date().toISOString().split('T')[0]
 
 // Initialize Convex client
@@ -27,7 +27,7 @@ const staticPages = [
   { url: '', priority: '1.0', changefreq: 'weekly' }, // Homepage
   { url: '/seo', priority: '0.9', changefreq: 'monthly' },
   { url: '/geo', priority: '0.9', changefreq: 'monthly' },
-  { url: '/pm', priority: '0.9', changefreq: 'monthly' },
+  { url: '/ppl', priority: '0.9', changefreq: 'monthly' },
   { url: '/customers', priority: '0.8', changefreq: 'monthly' },
   { url: '/case-studies', priority: '0.8', changefreq: 'weekly' },
   { url: '/apply', priority: '0.9', changefreq: 'monthly' },

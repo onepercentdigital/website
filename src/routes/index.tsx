@@ -33,7 +33,7 @@ export const Route = createFileRoute('/')({
       title: 'Takeover Your Industry With AI and Search Optimization',
       description:
         'Dominate Both AI and Traditional Search with proven GEO and SEO strategies.',
-      url: 'https://onepercentseo.com/',
+      url: 'https://op.digital/',
     }),
 });
 
@@ -88,16 +88,20 @@ function HomePage() {
                   title: 'GEO',
                   description: 'Get Cited by ChatGPT and other AI models',
                   href: '/geo',
+                  cta: 'More about GEO',
                 },
                 {
                   title: 'SEO',
                   description: 'Rank in Google and other search engines',
                   href: '/seo',
+                  cta: 'More about SEO',
                 },
                 {
-                  title: 'PM',
-                  description: 'Pay Per Exclusive Pre-Qualified Lead',
-                  href: '/pm',
+                  title: 'PPL',
+                  description:
+                    'Exclusive Pre-Qualified Pay Per Lead Generation',
+                  href: '/ppl',
+                  cta: 'More about PPL',
                 },
               ].map((service) => (
                 <Card key={service.title} className="group text-center">
@@ -113,7 +117,7 @@ function HomePage() {
                       variant="outline"
                       size="sm"
                     >
-                      Learn more
+                      {service.cta}
                       <HugeiconsIcon
                         icon={ArrowRight01Icon}
                         size={14}
@@ -173,7 +177,7 @@ function HomePage() {
                   'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
               },
               {
-                title: 'Performance Marketing',
+                title: 'Pay Per Lead Generation',
                 description:
                   'We fund your campaigns and deliver pre-qualified leads directly to your pipeline. Pay only for results.',
                 features: [
@@ -181,8 +185,8 @@ function HomePage() {
                   'Live exclusive pre-qualified leads',
                   'Scale volume based on your capacity',
                 ],
-                href: '/pm',
-                cta: 'More about PM',
+                href: '/ppl',
+                cta: 'More about PPL',
                 image:
                   'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop',
               },
@@ -251,17 +255,17 @@ function HomePage() {
               {
                 icon: Award01Icon,
                 value: '300+',
-                label: 'Businesses served since 2012',
+                label: 'Businesses Served Since 2012',
               },
               {
                 icon: Target01Icon,
                 value: '$200M+',
-                label: 'SEO-driven revenue generated',
+                label: 'Revenue Generated',
               },
               {
                 icon: UserGroupIcon,
                 value: '8X',
-                label: 'Average organic traffic growth',
+                label: 'Average Organic Traffic Growth',
               },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
@@ -419,8 +423,8 @@ function HomePage() {
             Ready to Scale Your Business?
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
-            Whether through SEO, GEO, or Performance Marketing, we help you
-            generate the leads you need to grow.
+            Whether through GEO, SEO, or PPL, we help you generate the leads you
+            need to grow.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

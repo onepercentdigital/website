@@ -33,8 +33,8 @@ export const Route = createFileRoute('/solutions/ecommerce')({
     generateMetaTags({
       title: 'E-commerce & Retail SEO | Drive Online Sales',
       description:
-        'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with proven SEO, GEO, and Performance Marketing strategies.',
-      url: 'https://onepercentseo.com/solutions/ecommerce',
+        'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with proven GEO, SEO, and PPL strategies.',
+      url: 'https://op.digital/solutions/ecommerce',
     }),
 });
 
@@ -50,12 +50,12 @@ function EcommercePage() {
     data: {
       name: 'E-commerce & Retail SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/ecommerce',
+      url: 'https://op.digital/solutions/ecommerce',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -201,8 +201,8 @@ function EcommercePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for e-commerce and retail businesses.
+              Comprehensive GEO, SEO, and PPL solutions tailored for e-commerce
+              and retail businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -269,8 +269,8 @@ function EcommercePage() {
             Turn Browsers Into Buyers
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Let's drive revenue and capture market share with proven SEO, GEO,
-            and Performance Marketing strategies built for online retailers.
+            Let's drive revenue and capture market share with proven GEO, SEO,
+            and PPL strategies built for online retailers.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

@@ -36,7 +36,7 @@ export const Route = createFileRoute('/solutions/hospitality')({
       title: 'Hospitality & Restaurant SEO | Fill Tables with Search',
       description:
         'Own local search and AI recommendations for restaurants, hotels, and hospitality venues. Beat OTAs, outrank chains, and fill every table with search-driven customers.',
-      url: 'https://onepercentseo.com/solutions/hospitality',
+      url: 'https://op.digital/solutions/hospitality',
     }),
 });
 
@@ -52,12 +52,12 @@ function HospitalityPage() {
     data: {
       name: 'Hospitality & Restaurant SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/hospitality',
+      url: 'https://op.digital/solutions/hospitality',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -206,8 +206,8 @@ function HospitalityPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for hospitality and restaurant businesses.
+              Comprehensive GEO, SEO, and PPL solutions tailored for hospitality
+              and restaurant businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -274,9 +274,8 @@ function HospitalityPage() {
             Fill More Tables, Book More Rooms
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Let's fill your tables and drive reservations with proven SEO, GEO,
-            and Performance Marketing strategies built for restaurants and
-            hospitality businesses.
+            Let's fill your tables and drive reservations with proven GEO, SEO,
+            and PPL strategies built for restaurants and hospitality businesses.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

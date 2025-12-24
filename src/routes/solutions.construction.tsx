@@ -31,7 +31,7 @@ export const Route = createFileRoute('/solutions/construction')({
       title: 'Construction & Contractors SEO | Generate Project Leads',
       description:
         'Generate qualified project leads for construction and contracting businesses. Win local searches and reach property owners who need you.',
-      url: 'https://onepercentseo.com/solutions/construction',
+      url: 'https://op.digital/solutions/construction',
     }),
 });
 
@@ -47,12 +47,12 @@ function ConstructionPage() {
     data: {
       name: 'Construction & Contractors SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/construction',
+      url: 'https://op.digital/solutions/construction',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -195,8 +195,8 @@ function ConstructionPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for construction and contracting businesses.
+              Comprehensive GEO, SEO, and PPL solutions tailored for
+              construction and contracting businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,7 +264,7 @@ function ConstructionPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's generate qualified project leads and grow your construction
-            business with proven SEO, GEO, and Performance Marketing strategies.
+            business with proven GEO, SEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

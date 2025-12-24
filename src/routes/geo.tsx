@@ -33,7 +33,7 @@ export const Route = createFileRoute('/geo')({
       title: 'GEO - Generative Engine Optimization',
       description:
         'Lead AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
-      url: 'https://onepercentseo.com/geo',
+      url: 'https://op.digital/geo',
     }),
 });
 
@@ -205,7 +205,7 @@ const faqs = [
   {
     question: 'Is GEO worth it if AI search is still emerging?',
     answer:
-      'This is precisely why GEO is critical now. AI search is growing 400% year-over-year, and early adopters are establishing category authority that will be difficult to displace. By the time AI search becomes mainstream, you want to already be the default recommendation—not fighting for visibility against established competitors.',
+      'This is precisely why GEO is critical now. AI search is growing 400% year-over-year, and early adopters are establishing category authority that will be difficult to displace. By the time AI search becomes mainstream, you want to already be the default recommendation, not fighting for visibility against established competitors.',
   },
 ];
 
@@ -216,12 +216,12 @@ function GEOPage() {
       name: 'Generative Engine Optimization (GEO)',
       description:
         'Lead AI search results and capture mind share. Position your brand at the forefront of ChatGPT, Claude, Perplexity, and other generative AI platforms.',
-      url: 'https://onepercentseo.com/geo',
+      url: 'https://op.digital/geo',
       serviceType: 'Generative Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },

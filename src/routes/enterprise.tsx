@@ -32,10 +32,10 @@ export const Route = createFileRoute('/enterprise')({
   component: EnterprisePage,
   head: () =>
     generateMetaTags({
-      title: 'Enterprise Solutions | SEO, GEO & Performance Marketing at Scale',
+      title: 'Enterprise Solutions | GEO, SEO & PPL at Scale',
       description:
-        'Enterprise-grade SEO, GEO, and Performance Marketing for multi-location businesses. Dedicated support, custom reporting, and white-glove service for organizations that demand results.',
-      url: 'https://onepercentseo.com/enterprise',
+        'Enterprise-grade GEO, SEO, and PPL for multi-location businesses. Dedicated support, custom reporting, and white-glove service for organizations that demand results.',
+      url: 'https://op.digital/enterprise',
     }),
 });
 
@@ -43,15 +43,15 @@ function EnterprisePage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'Enterprise SEO, GEO & Performance Marketing Solutions',
+      name: 'Enterprise GEO, SEO & PPL Solutions',
       description:
-        'Enterprise-grade SEO, GEO, and Performance Marketing services for large organizations with multiple locations, brands, or complex needs.',
-      url: 'https://onepercentseo.com/enterprise',
+        'Enterprise-grade GEO, SEO, and PPL services for large organizations with multiple locations, brands, or complex needs.',
+      url: 'https://op.digital/enterprise',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -66,7 +66,7 @@ function EnterprisePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Enterprise-Grade SEO, GEO & Performance Marketing at Scale
+              Enterprise-Grade GEO, SEO & PPL at Scale
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
               Custom solutions for multi-location businesses, enterprise brands,
@@ -118,7 +118,7 @@ function EnterprisePage() {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed tracking-wide">
                 From stakeholder training to enterprise tool integration, we
-                become an extension of your team—delivering results at scale
+                become an extension of your team, delivering results at scale
                 while maintaining the precision and attention to detail that
                 drives success.
               </p>
@@ -378,8 +378,7 @@ function EnterprisePage() {
               Comprehensive Services Included
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              SEO, GEO, and Performance Marketing capabilities designed for
-              enterprise scale.
+              GEO, SEO, and PPL capabilities designed for enterprise scale.
             </p>
           </div>
 
@@ -816,9 +815,9 @@ function EnterprisePage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
               <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                Our enterprise clients don't just see incremental
-                improvements—they achieve transformational results that impact
-                every location, brand, and market they serve. From enterprise
+                Our enterprise clients don't just see incremental improvements.
+                They achieve transformational results that impact every
+                location, brand, and market they serve. From enterprise
                 companies to rapidly scaling multi-location businesses, we
                 deliver measurable ROI with white-glove service.
               </p>
@@ -877,40 +876,6 @@ function EnterprisePage() {
           <Accordion className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left font-semibold text-lg">
-                What's the minimum engagement for enterprise services?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Our enterprise solutions are designed for organizations with
-                significant search presence and complex needs. Typically, this
-                means businesses with 10+ locations, multiple brands, or
-                enterprise-level complexity. Minimum engagement is an annual
-                contract starting at $15,000/month. This includes dedicated
-                account management, custom reporting, SLA guarantees, and access
-                to our full suite of enterprise services. We customize each
-                engagement based on your specific needs, number of locations,
-                and strategic objectives.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                How does enterprise pricing work?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Enterprise pricing is customized based on several factors:
-                number of locations/brands, complexity of your digital
-                ecosystem, scope of services required, and your strategic
-                objectives. Most enterprise clients invest between
-                $15,000-$75,000+ per month on annual contracts. Pricing includes
-                dedicated account management, unlimited stakeholder support,
-                custom reporting dashboards, SLA guarantees, and access to all
-                enterprise features. Volume discounts and multi-year agreements
-                are available for qualifying organizations.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-semibold text-lg">
                 What's the typical onboarding timeline?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
@@ -928,28 +893,28 @@ function EnterprisePage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4">
+            <AccordionItem value="item-2">
               <AccordionTrigger className="text-left font-semibold text-lg">
                 What makes your enterprise solution different from standard
                 marketing services?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Enterprise marketing isn't just "more marketing"—it's a
-                fundamentally different approach across SEO, GEO, and
-                Performance Marketing. You get a dedicated account team (not
-                shared resources), custom reporting dashboards tailored to your
-                KPIs, white-glove support with priority response times, 24/7
-                access, enterprise-grade security and compliance (SOC 2, GDPR),
-                and integration with your existing enterprise tools (Salesforce,
+                Enterprise marketing isn't just "more marketing." It's a
+                fundamentally different approach across GEO, SEO, and Pay Per
+                Lead Generation. You get a dedicated account team (not shared
+                resources), custom reporting dashboards tailored to your KPIs,
+                white-glove support with priority response times, 24/7 access,
+                enterprise-grade security and compliance (SOC 2, GDPR), and
+                integration with your existing enterprise tools (Salesforce,
                 HubSpot, etc.). We become an extension of your team with
                 quarterly business reviews, executive reporting, stakeholder
                 training, and strategic planning. Our systems are built to
-                manage complexity at scale—whether that's multiple locations,
+                manage complexity at scale, whether that's multiple locations,
                 brands, or international markets.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5">
+            <AccordionItem value="item-3">
               <AccordionTrigger className="text-left font-semibold text-lg">
                 What kind of support do enterprise clients receive?
               </AccordionTrigger>
@@ -968,7 +933,7 @@ function EnterprisePage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-6">
+            <AccordionItem value="item-4">
               <AccordionTrigger className="text-left font-semibold text-lg">
                 Can you integrate with our existing enterprise tools and
                 systems?
@@ -989,13 +954,13 @@ function EnterprisePage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-7">
+            <AccordionItem value="item-5">
               <AccordionTrigger className="text-left font-semibold text-lg">
                 How do you handle multi-location or franchise networks?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
                 Multi-location management is one of our core competencies. We
-                provide centralized strategy with local execution—meaning
+                provide centralized strategy with local execution, meaning
                 consistent brand governance while optimizing for each location's
                 unique market. Our systems manage everything from local listings
                 and review monitoring to location-specific landing pages and
@@ -1020,9 +985,9 @@ function EnterprisePage() {
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Join the enterprise companies and multi-location businesses that
-            trust One Percent Digital for enterprise-grade SEO, GEO, and
-            Performance Marketing. See how we can transform your visibility and
-            lead generation at scale.
+            trust One Percent Digital for enterprise-grade GEO, SEO, and PPL.
+            See how we can transform your visibility and lead generation at
+            scale.
           </p>
           <Button render={<Link to="/apply" />} size="lg">
             Apply To Work With Us

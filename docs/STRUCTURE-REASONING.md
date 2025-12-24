@@ -11,7 +11,7 @@ This document explains the strategic decisions behind our site architecture, nav
 Our navigation uses abbreviated service names in the Services dropdown:
 - **GEO** (Generative Engine Optimization)
 - **SEO** (Search Engine Optimization)  
-- **PM** (Performance Marketing)
+- **PPL** (Pay Per Lead Generation)
 
 #### Benefits for User Experience
 
@@ -22,7 +22,7 @@ Our navigation uses abbreviated service names in the Services dropdown:
 
 #### Benefits for SEO & Crawling
 
-1. **Clean URL structure** - `/geo`, `/seo`, `/pm` are concise and memorable
+1. **Clean URL structure** - `/geo`, `/seo`, `/ppl` are concise and memorable
 2. **Keyword-rich page content** - Full names appear in H1s, meta titles, and body content
 3. **Internal linking clarity** - Short slugs are easier to reference across the site
 4. **Breadcrumb efficiency** - Abbreviated names create cleaner breadcrumb trails
@@ -38,7 +38,7 @@ This mirrors how the industry itself uses these terms:
 
 While navigation uses abbreviations, we use full names where context helps:
 - **Meta titles**: "GEO - Generative Engine Optimization" 
-- **"What is" sections**: "What is PM (Performance Marketing)?"
+- **"What is" sections**: "What is PPL (Pay Per Lead Generation)?"
 - **Service overview cards**: Full names for educational context
 
 This pattern—abbreviated in navigation, expanded in content—optimizes for both usability and SEO.
@@ -211,7 +211,7 @@ This structure is inherently "solutions-oriented" - we're showing how we solve p
 
 Our site structure decisions are intentional:
 
-1. **Abbreviated service names** (GEO, SEO, PM) optimize for usability and visual consistency
+1. **Abbreviated service names** (GEO, SEO, PPL) optimize for usability and visual consistency
 2. **Full names in content** provide educational context and SEO value
 3. **"Solutions" naming** targets high-intent users and follows B2B best practices
 4. **Clean URL patterns** support both human navigation and search engine crawling

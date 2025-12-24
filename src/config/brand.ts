@@ -42,13 +42,13 @@ export interface BrandConfig {
 export const brand: BrandConfig = {
   name: 'onepercentdigital',
   displayName: 'One Percent Digital',
-  tagline: 'Dominate Your Industry With AI and Search Optimization',
+  tagline: 'Dominate Your Industry With GEO, SEO, and PPL',
   domain: 'op.digital',
   appDomain: 'app.op.digital',
 
   logo: {
-    text: 'One Percent SEO',
-    iconColor: '#00cccc',
+    text: 'One Percent Digital',
+    iconColor: 'oklch(0.75 0.13 195)',
   },
 
   social: {
@@ -57,14 +57,14 @@ export const brand: BrandConfig = {
 
   contact: {
     email: 'hello@op.digital',
-    phone: '+1 (555) 123-4567', // Update with real number
+    phone: '', // Update with real number
   },
 
   seo: {
     defaultTitle: 'One Percent Digital',
     titleTemplate: '%s | One Percent Digital',
     defaultDescription:
-      'Helping companies become the top 1% talked about brands in AI and traditional search through GEO and SEO optimization.',
+      'Recommended by ChatGPT. Page 1 on Google. Exclusive pre-qualified leads on demand. This is what market dominance looks like.',
     defaultOgImage: '/og-image.png', // We'll create this
   },
 };
@@ -80,7 +80,7 @@ export const navigation = {
       items: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'PM', href: '/pm' },
+        { label: 'PPL', href: '/ppl' },
       ],
     },
     {
@@ -137,7 +137,7 @@ export const footer = {
       links: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'PM', href: '/pm' },
+        { label: 'PPL', href: '/ppl' },
       ],
     },
     {

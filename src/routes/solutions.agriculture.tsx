@@ -31,7 +31,7 @@ export const Route = createFileRoute('/solutions/agriculture')({
       title: 'Agriculture & Equipment SEO | Drive Equipment Sales',
       description:
         'Drive qualified leads for agricultural equipment dealers and agribusinesses. Reach farmers and ranchers searching for machinery and solutions.',
-      url: 'https://onepercentseo.com/solutions/agriculture',
+      url: 'https://op.digital/solutions/agriculture',
     }),
 });
 
@@ -47,12 +47,12 @@ function AgriculturePage() {
     data: {
       name: 'Agriculture & Equipment SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/agriculture',
+      url: 'https://op.digital/solutions/agriculture',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -195,8 +195,8 @@ function AgriculturePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for agricultural equipment dealers and agribusinesses.
+              Comprehensive GEO, SEO, and PPL solutions tailored for
+              agricultural equipment dealers and agribusinesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,7 +264,7 @@ function AgriculturePage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's drive qualified leads and grow your agricultural business with
-            proven SEO, GEO, and Performance Marketing strategies.
+            proven GEO, SEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

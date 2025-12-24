@@ -30,8 +30,8 @@ export const Route = createFileRoute('/solutions/health-wellness')({
     generateMetaTags({
       title: 'Health & Wellness SEO | Drive Qualified Clients',
       description:
-        'Drive qualified clients for health and wellness businesses. Lead local searches and reach people seeking health solutions with SEO, GEO, and Performance Marketing.',
-      url: 'https://onepercentseo.com/solutions/health-wellness',
+        'Drive qualified clients for health and wellness businesses. Lead local searches and reach people seeking health solutions with GEO, SEO, and PPL.',
+      url: 'https://op.digital/solutions/health-wellness',
     }),
 });
 
@@ -47,12 +47,12 @@ function HealthWellnessPage() {
     data: {
       name: 'Health & Wellness SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/health-wellness',
+      url: 'https://op.digital/solutions/health-wellness',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -195,8 +195,8 @@ function HealthWellnessPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for health and wellness businesses.
+              Comprehensive GEO, SEO, and PPL solutions tailored for health and
+              wellness businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,7 +264,7 @@ function HealthWellnessPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's attract qualified clients and grow your wellness business with
-            proven SEO, GEO, and Performance Marketing strategies.
+            proven GEO, SEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://onepercentseo.com/sitemap.xml
+Sitemap: https://op.digital/sitemap.xml

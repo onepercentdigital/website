@@ -31,14 +31,14 @@ import {
 import { Button } from '@/components/ui/button';
 import { generateMetaTags } from '@/lib/seo';
 
-export const Route = createFileRoute('/pm')({
-  component: PerformanceMarketingPage,
+export const Route = createFileRoute('/ppl')({
+  component: PayPerLeadPage,
   head: () =>
     generateMetaTags({
-      title: 'PM - Performance Marketing | Pay Per Lead',
+      title: 'PPL - Pay Per Lead Generation',
       description:
-        'Exclusive pre-qualified leads delivered on demand. No retainers, no contracts, no set-up fees. We fund your marketing—you only pay for results.',
-      url: 'https://onepercentseo.com/pm',
+        'Exclusive pre-qualified leads delivered on demand. No retainers, no contracts, no set-up fees. We fund your marketing. You only pay for results.',
+      url: 'https://op.digital/ppl',
     }),
 });
 
@@ -69,7 +69,7 @@ const processSteps = [
     icon: UserGroupIcon,
     title: 'Receive Exclusive Pre-Qualified Leads',
     description:
-      'Pre-qualified prospects are delivered to you in real-time via your preferred method—CRM, email, webhook, or custom integration.',
+      'Pre-qualified prospects are delivered to you in real-time via your preferred method: CRM, email, webhook, or custom integration.',
   },
 ];
 
@@ -108,7 +108,7 @@ const benefits = [
     icon: LockIcon,
     title: 'Exclusive To You',
     description:
-      'Your leads are never shared or resold. Every prospect goes directly to you—you are the first and only stop. No competing with other buyers for the same lead.',
+      'Your leads are never shared or resold. Every prospect goes directly to you. You are the first and only stop. No competing with other buyers for the same lead.',
   },
 ];
 
@@ -123,7 +123,7 @@ const leadQualityItems = [
     icon: CheckmarkCircle02Icon,
     title: 'Validated Qualifications',
     description:
-      'We verify stated information—credit scores, asset sizes, budget ranges—before delivery. What prospects tell us is confirmed, not guessed.',
+      'We verify stated information like credit scores, asset sizes, and budget ranges before delivery. What prospects tell us is confirmed, not guessed.',
   },
   {
     icon: LockIcon,
@@ -210,19 +210,14 @@ const services = [
 
 const faqs = [
   {
-    question: 'How much does it cost per lead?',
-    answer:
-      'Lead pricing varies based on your industry, target audience, and qualification criteria. More specific targeting and higher-value leads command premium pricing. We will provide transparent pricing during our initial consultation based on your exact requirements.',
-  },
-  {
     question: 'How do you ensure leads are actually qualified?',
     answer:
-      'Unlike platforms that share leads or deliver unverified information, we validate everything before delivery. Phone numbers are verified through one-time passcode confirmation—every number you receive is contactable. Stated qualifications like credit scores, 401k sizes, and budget ranges are validated against our criteria. Our longer intake quizzes filter out casual browsers, ensuring prospects are invested before they reach you. AI-assisted qualification and follow-up systems further increase lead quality and conversion rates.',
+      'Unlike platforms that share leads or deliver unverified information, we validate everything before delivery. Phone numbers are verified through one-time passcode confirmation, so every number you receive is contactable. Stated qualifications like credit scores, 401k sizes, and budget ranges are validated against our criteria. Our longer intake quizzes filter out casual browsers, ensuring prospects are invested before they reach you. AI-assisted qualification and follow-up systems further increase lead quality and conversion rates.',
   },
   {
     question: 'How quickly can I start receiving leads?',
     answer:
-      'Most clients start receiving qualified leads within 24 hours of campaign launch. The setup process—defining criteria, building landing pages, creating ads—typically takes 3-5 business days. Once live, leads flow immediately.',
+      'Most clients start receiving qualified leads within 24 hours of campaign launch. The setup process (defining criteria, building landing pages, creating ads) typically takes 3-5 business days. Once live, leads flow immediately.',
   },
   {
     question: 'What industries do you work with?',
@@ -242,23 +237,23 @@ const faqs = [
   {
     question: 'What if lead quality is unsatisfactory?',
     answer:
-      'We stand behind our qualification process. If a lead does not meet the agreed-upon criteria, we replace it at no charge. Our model only works when you succeed—we are invested in delivering leads that actually convert for your business.',
+      'We stand behind our qualification process. If a lead does not meet the agreed-upon criteria, we replace it at no charge. Our model only works when you succeed, so we are invested in delivering leads that actually convert for your business.',
   },
 ];
 
-function PerformanceMarketingPage() {
+function PayPerLeadPage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'PM (Performance Marketing) - Pay Per Lead',
+      name: 'PPL (Pay Per Lead Generation)',
       description:
-        'Exclusive pre-qualified leads delivered on demand. No retainers, no contracts, no set-up fees. We fund your marketing—you only pay for results.',
-      url: 'https://onepercentseo.com/pm',
+        'Exclusive pre-qualified leads delivered on demand. No retainers, no contracts, no set-up fees. We fund your marketing. You only pay for results.',
+      url: 'https://op.digital/ppl',
       serviceType: 'Lead Generation',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -277,7 +272,7 @@ function PerformanceMarketingPage() {
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               No retainers. No long-term contracts. No upfront fees. We fund
-              your marketing and deliver pre-qualified leads in real-time—you
+              your marketing and deliver pre-qualified leads in real-time. You
               only pay for prospects ready to buy.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -302,20 +297,20 @@ function PerformanceMarketingPage() {
         </div>
       </section>
 
-      {/* What is Performance Marketing Section */}
+      {/* What is Pay Per Lead Generation Section */}
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
-                What is PM (Performance Marketing)?
+                What is Pay Per Lead Generation?
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                Performance marketing is a results-based model where you only
-                pay for qualified leads delivered to your business. We invest in
-                your marketing campaigns—creating ads, landing pages, and
-                conversion funnels—while you pay exclusively for prospects that
-                meet your criteria.
+                PPL (Pay Per Lead Generation) is a results-based model where you
+                only pay for qualified leads delivered to your business. We
+                invest in your marketing campaigns (creating ads, landing pages,
+                and conversion funnels) while you pay exclusively for prospects
+                that meet your criteria.
               </p>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed tracking-wide">
                 Unlike traditional agencies that charge monthly retainers
@@ -370,7 +365,7 @@ function PerformanceMarketingPage() {
               How It Works
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
-              From setup to qualified leads in your pipeline—we handle
+              From setup to qualified leads in your pipeline, we handle
               everything
             </p>
           </div>
@@ -406,7 +401,7 @@ function PerformanceMarketingPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
-              Why Performance Marketing
+              Why Pay Per Lead Generation
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
               Eliminate risk and only pay for results that matter
@@ -588,7 +583,7 @@ function PerformanceMarketingPage() {
               Frequently Asked Questions
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground tracking-wide">
-              Everything you need to know about performance marketing
+              Everything you need to know about pay per lead generation
             </p>
           </div>
           <Accordion className="w-full">
@@ -614,7 +609,7 @@ function PerformanceMarketingPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Your competitors are wasting budget on agencies with no
-            accountability. With performance marketing, every dollar you spend
+            accountability. With pay per lead generation, every dollar you spend
             delivers a qualified prospect ready to become a customer.
           </p>
           <div className="mt-10">

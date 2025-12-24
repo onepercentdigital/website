@@ -29,10 +29,10 @@ export const Route = createFileRoute('/case-studies')({
   component: CaseStudiesPage,
   head: () =>
     generateMetaTags({
-      title: 'Case Studies | Proven SEO & GEO Results',
+      title: 'Case Studies | Proven GEO & SEO Results',
       description:
-        'Real results from real businesses. See how our SEO and GEO strategies helped Revology Cars exit, grew Goldfarb 10x, and made Royal Covers #1 in Arizona.',
-      url: 'https://onepercentseo.com/case-studies',
+        'Real results from real businesses. See how our GEO and SEO strategies helped Revology Cars exit, grew Goldfarb 10x, and made Royal Covers #1 in Arizona.',
+      url: 'https://op.digital/case-studies',
     }),
 });
 
@@ -277,8 +277,7 @@ function CaseStudiesPage() {
             </h2>
             <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               Every case study started with a conversation. Let's talk about how
-              SEO, GEO, and Performance Marketing can drive the leads you need
-              to scale.
+              GEO, SEO, and PPL can drive the leads you need to scale.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">

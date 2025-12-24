@@ -30,8 +30,8 @@ export const Route = createFileRoute('/solutions/finance-insurance')({
     generateMetaTags({
       title: 'Finance & Insurance SEO | Generate Qualified Client Leads',
       description:
-        'Drive qualified leads for financial advisors, insurance agents, and financial services firms. Capture high-value searches with proven SEO, GEO, and Performance Marketing strategies.',
-      url: 'https://onepercentseo.com/solutions/finance-insurance',
+        'Drive qualified leads for financial advisors, insurance agents, and financial services firms. Capture high-value searches with proven GEO, SEO, and PPL strategies.',
+      url: 'https://op.digital/solutions/finance-insurance',
     }),
 });
 
@@ -47,12 +47,12 @@ function FinanceInsurancePage() {
     data: {
       name: 'Finance & Insurance SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/finance-insurance',
+      url: 'https://op.digital/solutions/finance-insurance',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -199,9 +199,8 @@ function FinanceInsurancePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for financial advisors, insurance agents, and wealth
-              managers.
+              Comprehensive GEO, SEO, and PPL solutions tailored for financial
+              advisors, insurance agents, and wealth managers.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -268,8 +267,8 @@ function FinanceInsurancePage() {
             Acquire More Clients
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Let's generate qualified client leads with proven SEO, GEO, and
-            Performance Marketing strategies built for financial advisors and
+            Let's generate qualified client leads with proven GEO, SEO, and Pay
+            Per Lead Generation strategies built for financial advisors and
             insurance professionals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

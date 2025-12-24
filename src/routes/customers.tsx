@@ -28,7 +28,7 @@ export const Route = createFileRoute('/customers')({
       title: 'Our Customers - Industry Leaders Powered by One Percent Digital',
       description:
         'Join industry-leading companies like Grove Bay Hospitality, Afni Careers, Sorting Robotics, and more who trust One Percent Digital to lead search results and drive real revenue growth.',
-      url: 'https://onepercentseo.com/customers',
+      url: 'https://op.digital/customers',
     }),
 });
 
@@ -88,7 +88,7 @@ function CustomersPage() {
               Proven Results Across Industries
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Our clients don't just rank well—they own their categories and
+              Our clients don't just rank well. They own their categories and
               drive measurable revenue growth.
             </p>
           </div>
@@ -135,7 +135,7 @@ function CustomersPage() {
                 $200M+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                SEO-driven revenue generated for clients
+                Revenue Generated for Clients
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@ function CustomersPage() {
                   <img
                     src={getImageUrl(customer.logo, 'thumbnail')}
                     alt={customer.name}
-                    className="h-auto w-full max-w-[120px] object-contain dark:invert"
+                    className="h-auto w-full max-w-30 object-contain dark:invert"
                   />
                 ) : (
                   <div className="text-center font-bold text-foreground text-sm transition-colors group-hover:text-primary lg:text-base">
@@ -312,7 +312,7 @@ function CustomersPage() {
                     </Button>
                   )}
                 </div>
-                <div className="relative min-h-[300px] bg-secondary/50 lg:min-h-[400px]">
+                <div className="relative min-h-75 bg-secondary/50 lg:min-h-100">
                   <div className="flex h-full items-center justify-center p-8">
                     <div className="text-center">
                       <HugeiconsIcon
@@ -341,9 +341,9 @@ function CustomersPage() {
               Your Growth Story Starts Here
             </h2>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
-              SEO for organic visibility. GEO for AI discovery. Performance
-              Marketing for immediate leads. Pick one or combine all three—we
-              help you scale with the right leads for your business.
+              SEO for organic visibility. GEO for AI discovery. PPL for
+              immediate leads. Pick one or combine all three. We help you scale
+              with the right leads for your business.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">

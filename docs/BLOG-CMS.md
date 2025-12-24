@@ -195,7 +195,7 @@ for (const category of categories) {
 head: () => generateMetaTags({
   title: 'Blog | SEO & GEO Insights',
   description: 'Expert insights on search optimization...',
-  url: 'https://onepercentseo.com/blog',
+  url: 'https://op.digital/blog',
 })
 ```
 
@@ -204,7 +204,7 @@ head: () => generateMetaTags({
 const articleSchema = getArticleSchema({
   headline: post.title,
   description: post.excerpt || '',
-  url: `https://onepercentseo.com/blog/${post.slug}`,
+  url: `https://op.digital/blog/${post.slug}`,
   image: post.featuredImage || '',
   datePublished: new Date(post.publishedAt!).toISOString(),
   dateModified: new Date(post.modifiedAt).toISOString(),

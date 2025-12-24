@@ -30,8 +30,8 @@ export const Route = createFileRoute('/solutions/technology')({
     generateMetaTags({
       title: 'Technology & SaaS SEO | Drive SaaS Growth',
       description:
-        'Drive qualified leads for technology companies and SaaS products. Lead competitive tech searches and reach decision-makers with SEO, GEO, and Performance Marketing.',
-      url: 'https://onepercentseo.com/solutions/technology',
+        'Drive qualified leads for technology companies and SaaS products. Lead competitive tech searches and reach decision-makers with GEO, SEO, and PPL.',
+      url: 'https://op.digital/solutions/technology',
     }),
 });
 
@@ -47,12 +47,12 @@ function TechnologyPage() {
     data: {
       name: 'Technology & SaaS SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/technology',
+      url: 'https://op.digital/solutions/technology',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -195,8 +195,8 @@ function TechnologyPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for technology and SaaS companies.
+              Comprehensive GEO, SEO, and PPL solutions tailored for technology
+              and SaaS companies.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,7 +264,7 @@ function TechnologyPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's accelerate your SaaS growth and reach decision-makers with
-            proven SEO, GEO, and Performance Marketing strategies.
+            proven GEO, SEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

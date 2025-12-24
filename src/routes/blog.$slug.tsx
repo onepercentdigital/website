@@ -25,8 +25,8 @@ export const Route = createFileRoute('/blog/$slug')({
     return generateMetaTags({
       title: 'Blog Post | One Percent Digital',
       description:
-        'Expert insights on SEO, GEO, and search optimization strategies.',
-      url: 'https://onepercentseo.com/blog',
+        'Expert insights on GEO, SEO, and search optimization strategies.',
+      url: 'https://op.digital/blog',
     });
   },
 });
@@ -77,7 +77,7 @@ function BlogPostPage() {
   const articleSchema = getArticleSchema({
     headline: post.title,
     description: post.excerpt || '',
-    url: `https://onepercentseo.com/blog/${post.slug}`,
+    url: `https://op.digital/blog/${post.slug}`,
     image: post.featuredImage || '',
     datePublished: post.publishedAt
       ? new Date(post.publishedAt).toISOString()

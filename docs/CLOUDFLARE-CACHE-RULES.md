@@ -101,7 +101,7 @@ Rules are evaluated top-to-bottom. The first matching rule applies.
 
 **Matches:**
 - Homepage: `/`
-- Service pages: `/seo`, `/geo`, `/pm`
+- Service pages: `/seo`, `/geo`, `/ppl`
 - Blog pages: `/blog`, `/blog/[slug]`
 - Solutions pages: `/solutions`, `/solutions/[industry]`
 - All other HTML routes
@@ -136,13 +136,13 @@ This significantly reduces Worker invocations for popular pages.
 Check cache status via response headers:
 
 ```bash
-curl -I https://onepercentseo.com/assets/main-Ln-9Q-Up.js
+curl -I https://op.digital/assets/main-Ln-9Q-Up.js
 # Look for: cf-cache-status: HIT
 
-curl -I https://onepercentseo.com/
+curl -I https://op.digital/
 # Look for: cf-cache-status: HIT (after first request)
 
-curl -I https://onepercentseo.com/_server/...
+curl -I https://op.digital/_server/...
 # Look for: cf-cache-status: BYPASS
 ```
 

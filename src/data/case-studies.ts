@@ -1,7 +1,7 @@
 /**
  * Case Studies Data
  *
- * Real client success stories showcasing measurable results from SEO and GEO services.
+ * Real client success stories showcasing measurable results from GEO and SEO services.
  * This data structure follows the same pattern as customers.ts for consistency.
  */
 
@@ -25,7 +25,7 @@ export interface CaseStudy {
   industry: string;
   featured?: boolean;
   thumbnail?: string;
-  services: string[]; // ['SEO', 'GEO', 'Link Building', etc.]
+  services: string[]; // ['GEO', 'SEO', 'Link Building', etc.]
   challenge: string;
   solution: string;
   results: string;
@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
     client: 'Revology Cars',
     industry: 'Automotive',
     featured: true,
-    services: ['SEO', 'GEO', 'Content Strategy', 'Link Building'],
+    services: ['GEO', 'SEO', 'Content Strategy', 'Link Building'],
     challenge:
       'Revology manufactures brand-new reproduction 1967-1969 Mustangs and Shelby GTs - a highly specialized niche. They needed to educate a luxury market that their engineered reproductions were superior to traditional restorations, while competing against countless classic car shops for visibility.',
     solution:
@@ -83,7 +83,7 @@ export const caseStudies: CaseStudy[] = [
     client: 'Goldfarb & Associates',
     industry: 'E-commerce',
     featured: false,
-    services: ['SEO', 'GEO', 'E-commerce Optimization'],
+    services: ['GEO', 'SEO', 'E-commerce Optimization'],
     challenge:
       'Goldfarb sells new, used, and remanufactured diesel parts to buyers worldwide - managing tens of thousands of SKUs with complex part compatibility requirements. They struggled to stand out in a crowded E-commerce space where technical specifications matter more than brand recognition.',
     solution:
@@ -126,11 +126,11 @@ export const caseStudies: CaseStudy[] = [
     client: 'Royal Covers',
     industry: 'Home Services',
     featured: false,
-    services: ['SEO', 'GEO', 'Local SEO', 'Maps Optimization'],
+    services: ['GEO', 'SEO', 'Local SEO', 'Maps Optimization'],
     challenge:
       "Royal Covers, established in 1979, faced fierce local competition in the Phoenix patio cover market. Despite 40+ years of experience, they weren't appearing where Arizona homeowners were searching - neither in organic results nor local maps.",
     solution:
-      "We implemented a comprehensive local SEO and GEO strategy, optimizing their presence across all Arizona service areas. We achieved top 3 map rankings for patio cover searches throughout the state while building content authority that positioned them as Arizona's premier installer.",
+      "We implemented a comprehensive local GEO and SEO strategy, optimizing their presence across all Arizona service areas. We achieved top 3 map rankings for patio cover searches throughout the state while building content authority that positioned them as Arizona's premier installer.",
     results:
       "Royal Covers became the #1 patio cover company in Arizona, achieving top local maps rankings across the entire state. They've now had record-breaking revenue 3 years in a row.",
     metrics: [

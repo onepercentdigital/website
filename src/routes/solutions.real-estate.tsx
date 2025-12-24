@@ -30,8 +30,8 @@ export const Route = createFileRoute('/solutions/real-estate')({
     generateMetaTags({
       title: 'Real Estate SEO | Generate Buyer & Seller Leads',
       description:
-        'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Own property searches in your market with SEO, GEO, and Performance Marketing.',
-      url: 'https://onepercentseo.com/solutions/real-estate',
+        'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Own property searches in your market with GEO, SEO, and PPL.',
+      url: 'https://op.digital/solutions/real-estate',
     }),
 });
 
@@ -47,12 +47,12 @@ function RealEstatePage() {
     data: {
       name: 'Real Estate SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/real-estate',
+      url: 'https://op.digital/solutions/real-estate',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -199,8 +199,8 @@ function RealEstatePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for real estate agents, brokerages, and developers.
+              Comprehensive GEO, SEO, and PPL solutions tailored for real estate
+              agents, brokerages, and developers.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -268,8 +268,7 @@ function RealEstatePage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's generate qualified buyer and seller leads with proven SEO,
-            GEO, and Performance Marketing strategies built for real estate
-            professionals.
+            GEO, and PPL strategies built for real estate professionals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

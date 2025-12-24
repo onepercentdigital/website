@@ -30,8 +30,8 @@ export const Route = createFileRoute('/solutions/automotive')({
     generateMetaTags({
       title: 'Automotive SEO | Drive Qualified Leads',
       description:
-        'Drive qualified leads for automotive businesses. Win local and specialty vehicle searches with proven SEO, GEO, and Performance Marketing strategies.',
-      url: 'https://onepercentseo.com/solutions/automotive',
+        'Drive qualified leads for automotive businesses. Win local and specialty vehicle searches with proven GEO, SEO, and PPL strategies.',
+      url: 'https://op.digital/solutions/automotive',
     }),
 });
 
@@ -47,12 +47,12 @@ function AutomotivePage() {
     data: {
       name: 'Automotive SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/automotive',
+      url: 'https://op.digital/solutions/automotive',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -195,8 +195,8 @@ function AutomotivePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for automotive businesses.
+              Comprehensive GEO, SEO, and PPL solutions tailored for automotive
+              businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,7 +264,7 @@ function AutomotivePage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's drive qualified leads and grow your automotive business with
-            proven SEO, GEO, and Performance Marketing strategies.
+            proven GEO, SEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

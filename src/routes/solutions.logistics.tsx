@@ -31,7 +31,7 @@ export const Route = createFileRoute('/solutions/logistics')({
       title: 'Logistics & Transportation SEO | Generate Shipping Leads',
       description:
         'Generate qualified shipping and logistics leads through search. Capture industry keywords and reach shippers searching for reliable partners.',
-      url: 'https://onepercentseo.com/solutions/logistics',
+      url: 'https://op.digital/solutions/logistics',
     }),
 });
 
@@ -47,12 +47,12 @@ function LogisticsPage() {
     data: {
       name: 'Logistics & Transportation SEO',
       description: solution.description,
-      url: 'https://onepercentseo.com/solutions/logistics',
+      url: 'https://op.digital/solutions/logistics',
       serviceType: 'Search Engine Optimization',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
-        url: 'https://onepercentseo.com',
+        url: 'https://op.digital',
       },
       areaServed: 'Worldwide',
     },
@@ -195,8 +195,8 @@ function LogisticsPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
-              tailored for logistics and transportation companies.
+              Comprehensive GEO, SEO, and PPL solutions tailored for logistics
+              and transportation companies.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,7 +264,7 @@ function LogisticsPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's generate qualified shipping leads and grow your logistics
-            business with proven SEO, GEO, and Performance Marketing strategies.
+            business with proven GEO, SEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

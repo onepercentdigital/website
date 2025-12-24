@@ -25,8 +25,8 @@ export const Route = createFileRoute('/apply')({
     generateMetaTags({
       title: 'Apply To Work With Us | One Percent Digital',
       description:
-        'Apply to see if you qualify to work with us. We help serious brands grow through SEO, GEO, and Performance Marketing.',
-      url: 'https://onepercentseo.com/apply',
+        'Apply to see if you qualify to work with us. We help serious brands grow through GEO, SEO, and PPL.',
+      url: 'https://op.digital/apply',
     }),
 });
 
@@ -43,9 +43,9 @@ function ApplyPage() {
                 Apply To Work With Us
               </h1>
               <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
-                We partner with serious brands ready to grow through SEO, GEO,
-                and Performance Marketing. Apply to see if you qualify—we'll
-                evaluate your business and determine if we're the right fit.
+                We partner with serious brands ready to grow through GEO, SEO,
+                and PPL. Apply to see if you qualify. We'll evaluate your
+                business and determine if we're the right fit.
               </p>
 
               {/* Key Benefits List */}
@@ -98,7 +98,7 @@ function ApplyPage() {
                       Growth Strategy Discussion
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Explore how SEO, GEO, and pay-per-lead campaigns can
+                      Explore how GEO, SEO, and pay-per-lead campaigns can
                       accelerate your growth
                     </p>
                   </div>
@@ -213,8 +213,8 @@ function ApplyPage() {
               </div>
               <h3 className="mb-3 font-bold text-2xl">Qualification Call</h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                A 30-minute video call to discuss your goals and determine if
-                we're the right fit.
+                A quick video call to discuss your goals and determine if we're
+                the right fit.
               </p>
             </div>
 
@@ -310,11 +310,11 @@ function ApplyPage() {
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Before our call, we research your business and current search
-                presence. During our 30-minute video call, we discuss your
-                goals, challenges, and growth opportunities. We'll share
-                insights about your competitive landscape and determine if our
-                SEO, GEO, or Performance Marketing services are a fit. If you
-                qualify, we'll outline next steps for a partnership.
+                presence. During our call, we discuss your goals, challenges,
+                and growth opportunities. We'll share insights about your
+                competitive landscape and determine if our GEO, SEO, or PPL
+                services are a fit. If you qualify, we'll outline next steps for
+                a partnership.
               </AccordionContent>
             </AccordionItem>
 
@@ -323,13 +323,14 @@ function ApplyPage() {
                 Who is a good fit for your services?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                We work with serious brands ready to invest in long-term growth
-                through search. Ideal clients include established businesses
-                with proven products or services, companies with realistic
-                expectations about SEO timelines, and organizations committed to
-                building sustainable competitive advantages. We're selective
-                about partnerships because we're invested in delivering real
-                results.
+                We work with serious brands ready to invest in growth through AI
+                and traditional search. Ideal clients vary by service: GEO
+                clients want to appear in AI-powered search results, SEO clients
+                seek sustainable organic growth, and PPL clients need qualified
+                leads immediately. Whether you're building long-term visibility
+                or generating leads now, we tailor our approach to your timeline
+                and goals. We're selective because we're invested in delivering
+                real results.
               </AccordionContent>
             </AccordionItem>
 
@@ -339,7 +340,7 @@ function ApplyPage() {
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 Since 2012, we've helped over 300 businesses across North
-                America in diverse industries — from hospitality and E-commerce
+                America in diverse industries, from hospitality and E-commerce
                 to manufacturing and professional services. We're frequently
                 approached by multinational companies, digital marketing
                 agencies, and other SEO agencies for consulting. Our strategies
