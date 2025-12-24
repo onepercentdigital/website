@@ -32,10 +32,9 @@ export const Route = createFileRoute('/enterprise')({
   component: EnterprisePage,
   head: () =>
     generateMetaTags({
-      title:
-        'Enterprise Solutions | SEO, GEO & Pay Per Lead Generation at Scale',
+      title: 'Enterprise Solutions | SEO, GEO & PPL at Scale',
       description:
-        'Enterprise-grade SEO, GEO, and Pay Per Lead Generation for multi-location businesses. Dedicated support, custom reporting, and white-glove service for organizations that demand results.',
+        'Enterprise-grade SEO, GEO, and PPL for multi-location businesses. Dedicated support, custom reporting, and white-glove service for organizations that demand results.',
       url: 'https://onepercentseo.com/enterprise',
     }),
 });
@@ -44,9 +43,9 @@ function EnterprisePage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'Enterprise SEO, GEO & Pay Per Lead Generation Solutions',
+      name: 'Enterprise SEO, GEO & PPL Solutions',
       description:
-        'Enterprise-grade SEO, GEO, and Pay Per Lead Generation services for large organizations with multiple locations, brands, or complex needs.',
+        'Enterprise-grade SEO, GEO, and PPL services for large organizations with multiple locations, brands, or complex needs.',
       url: 'https://onepercentseo.com/enterprise',
       serviceType: 'Search Engine Optimization',
       provider: {
@@ -67,7 +66,7 @@ function EnterprisePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Enterprise-Grade SEO, GEO & Pay Per Lead Generation at Scale
+              Enterprise-Grade SEO, GEO & PPL at Scale
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
               Custom solutions for multi-location businesses, enterprise brands,
@@ -379,8 +378,7 @@ function EnterprisePage() {
               Comprehensive Services Included
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              SEO, GEO, and Pay Per Lead Generation capabilities designed for
-              enterprise scale.
+              SEO, GEO, and PPL capabilities designed for enterprise scale.
             </p>
           </div>
 

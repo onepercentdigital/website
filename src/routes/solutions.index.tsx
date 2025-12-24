@@ -28,7 +28,7 @@ export const Route = createFileRoute('/solutions/')({
     generateMetaTags({
       title: 'Industry-Specific SEO Solutions | Tailored Strategies',
       description:
-        'Discover SEO, GEO, and Pay Per Lead Generation strategies tailored to your industry. From hospitality to technology, we drive results for businesses in 12 key verticals.',
+        'Discover SEO, GEO, and PPL strategies tailored to your industry. From hospitality to technology, we drive results for businesses in 12 key verticals.',
       url: 'https://onepercentseo.com/solutions',
     }),
 });
@@ -64,9 +64,9 @@ function SolutionsLandingPage() {
               Industry-Specific Search Solutions
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
-              Tailored SEO, GEO, and Pay Per Lead Generation strategies for your
-              industry. We understand your market, your customers, and what it
-              takes to win search in your vertical.
+              Tailored SEO, GEO, and PPL strategies for your industry. We
+              understand your market, your customers, and what it takes to win
+              search in your vertical.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">
@@ -162,8 +162,8 @@ function SolutionsLandingPage() {
               Find Your Industry
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Explore our industry-specific SEO, GEO, and Pay Per Lead
-              Generation solutions tailored to your vertical.
+              Explore our industry-specific SEO, GEO, and PPL solutions tailored
+              to your vertical.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -212,8 +212,8 @@ function SolutionsLandingPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             No matter your industry, we help you scale with qualified leads
-            through SEO, GEO, and Pay Per Lead Generation. Let's discuss which
-            approach fits your goals.
+            through SEO, GEO, and PPL. Let's discuss which approach fits your
+            goals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

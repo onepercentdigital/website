@@ -195,8 +195,8 @@ function LogisticsPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
-              tailored for logistics and transportation companies.
+              Comprehensive SEO, GEO, and PPL solutions tailored for logistics
+              and transportation companies.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,8 +264,7 @@ function LogisticsPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's generate qualified shipping leads and grow your logistics
-            business with proven SEO, GEO, and Pay Per Lead Generation
-            strategies.
+            business with proven SEO, GEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

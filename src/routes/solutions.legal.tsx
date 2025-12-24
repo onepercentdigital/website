@@ -199,8 +199,8 @@ function LegalPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
-              tailored for law firms and legal practices.
+              Comprehensive SEO, GEO, and PPL solutions tailored for law firms
+              and legal practices.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -268,7 +268,7 @@ function LegalPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's generate qualified case inquiries with proven SEO, GEO, and
-            Pay Per Lead Generation strategies built for law firms.
+            PPL strategies built for law firms.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

@@ -1,7 +1,7 @@
 /**
  * Solutions Data
  *
- * Industry-specific solutions showcasing SEO, GEO, and Pay Per Lead Generation expertise
+ * Industry-specific solutions showcasing SEO, GEO, and PPL expertise
  * across different verticals. Each industry has tailored challenges, approach, services, and FAQs.
  */
 
@@ -64,7 +64,7 @@ export const solutions: IndustrySolution[] = [
       'Own local search and AI recommendations for restaurants, hotels, and hospitality venues. Fill every table and room with search-driven customers.',
     heroHeadline: 'Pack Your Restaurant, Fill Your Rooms',
     heroSubheadline:
-      'Fill tables and drive reservations with SEO, GEO, and Pay Per Lead Generation strategies built for hospitality. Beat OTAs, outrank chains, and capture your local market.',
+      'Fill tables and drive reservations with SEO, GEO, and PPL strategies built for hospitality. Beat OTAs, outrank chains, and capture your local market.',
     challenges: [
       {
         title: 'OTAs Controlling Search Results',
@@ -239,10 +239,10 @@ export const solutions: IndustrySolution[] = [
     name: 'E-commerce & Retail',
     slug: 'ecommerce',
     description:
-      'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with SEO, GEO, and Pay Per Lead Generation.',
+      'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with SEO, GEO, and PPL.',
     heroHeadline: 'Convert More Shoppers Into Customers',
     heroSubheadline:
-      'Compete with Amazon, outrank competitors, and capture high-intent buyers with SEO, GEO, and Pay Per Lead Generation built for e-commerce. Turn search traffic into revenue.',
+      'Compete with Amazon, outrank competitors, and capture high-intent buyers with SEO, GEO, and PPL built for e-commerce. Turn search traffic into revenue.',
     challenges: [
       {
         title: 'Competing with Amazon and Marketplaces',
@@ -419,7 +419,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified B2B leads for manufacturers and industrial companies. Lead high-value searches and reach decision-makers.',
     heroHeadline: 'Close More Contracts, Grow Your Pipeline',
     heroSubheadline:
-      'Generate qualified leads and reach procurement decision-makers with SEO, GEO, and Pay Per Lead Generation strategies built for complex B2B sales cycles.',
+      'Generate qualified leads and reach procurement decision-makers with SEO, GEO, and PPL strategies built for complex B2B sales cycles.',
     challenges: [
       {
         title: 'Long, Complex Sales Cycles',
@@ -596,7 +596,7 @@ export const solutions: IndustrySolution[] = [
       'Generate qualified shipping and logistics leads through search. Capture industry keywords and reach shippers searching for reliable partners.',
     heroHeadline: 'Book More Freight, Grow Your Fleet',
     heroSubheadline:
-      'Generate high-value shipping contracts and freight leads with SEO, GEO, and Pay Per Lead Generation built for logistics. Get found by shippers who need you.',
+      'Generate high-value shipping contracts and freight leads with SEO, GEO, and PPL built for logistics. Get found by shippers who need you.',
     challenges: [
       {
         title: 'Competing with Load Boards',
@@ -770,10 +770,10 @@ export const solutions: IndustrySolution[] = [
     name: 'Automotive',
     slug: 'automotive',
     description:
-      'Drive qualified leads for automotive businesses. Excel in local and specialty vehicle searches with proven SEO, GEO, and Pay Per Lead Generation.',
+      'Drive qualified leads for automotive businesses. Excel in local and specialty vehicle searches with proven SEO, GEO, and PPL.',
     heroHeadline: 'Move More Inventory, Grow Your Business',
     heroSubheadline:
-      'Fill your lot and drive revenue with SEO, GEO, and Pay Per Lead Generation built for automotive businesses. From classic cars to luxury rentals.',
+      'Fill your lot and drive revenue with SEO, GEO, and PPL built for automotive businesses. From classic cars to luxury rentals.',
     challenges: [
       {
         title: 'Competing with National Dealer Groups',
@@ -951,7 +951,7 @@ export const solutions: IndustrySolution[] = [
       'Generate qualified project leads for construction and contracting businesses. Win local searches and reach property owners who need you.',
     heroHeadline: 'Win More Bids, Book More Projects',
     heroSubheadline:
-      'Fill your pipeline with qualified project leads through SEO, GEO, and Pay Per Lead Generation. Get found by property owners searching for trusted contractors.',
+      'Fill your pipeline with qualified project leads through SEO, GEO, and PPL. Get found by property owners searching for trusted contractors.',
     challenges: [
       {
         title: 'Intense Local Competition',
@@ -1128,7 +1128,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified leads for agricultural equipment dealers and agribusinesses. Reach farmers and ranchers searching for machinery and solutions.',
     heroHeadline: 'Sell More Equipment, Grow Your Territory',
     heroSubheadline:
-      'Reach farmers researching equipment purchases. Generate qualified leads for tractors, implements, and agricultural services with SEO, GEO, and Pay Per Lead Generation.',
+      'Reach farmers researching equipment purchases. Generate qualified leads for tractors, implements, and agricultural services with SEO, GEO, and PPL.',
     challenges: [
       {
         title: 'Competing with National Brands',
@@ -1307,7 +1307,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified leads for technology companies and SaaS products. Command competitive tech searches and reach decision-makers.',
     heroHeadline: 'Acquire More Users, Scale Your SaaS',
     heroSubheadline:
-      'Generate qualified enterprise leads and product signups with SEO, GEO, and Pay Per Lead Generation built for technology companies. Reach decision-makers searching for solutions.',
+      'Generate qualified enterprise leads and product signups with SEO, GEO, and PPL built for technology companies. Reach decision-makers searching for solutions.',
     challenges: [
       {
         title: 'Highly Competitive Keywords',
@@ -1484,7 +1484,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified clients for health and wellness businesses. Lead local searches and reach people seeking health solutions.',
     heroHeadline: 'Attract More Clients, Grow Your Practice',
     heroSubheadline:
-      'Fill your calendar with qualified clients through SEO, GEO, and Pay Per Lead Generation. Get found by people ready to invest in their wellbeing.',
+      'Fill your calendar with qualified clients through SEO, GEO, and PPL. Get found by people ready to invest in their wellbeing.',
     challenges: [
       {
         title: 'YMYL Search Algorithms',
@@ -1663,7 +1663,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified leads for financial services and insurance providers. Capture high-value searches and reach clients seeking financial guidance.',
     heroHeadline: 'Grow Your Book of Business',
     heroSubheadline:
-      'Generate qualified leads for financial advisors, insurance agents, and financial services firms through SEO, GEO, and Pay Per Lead Generation. Reach clients actively searching for guidance.',
+      'Generate qualified leads for financial advisors, insurance agents, and financial services firms through SEO, GEO, and PPL. Reach clients actively searching for guidance.',
     challenges: [
       {
         title: 'YMYL Algorithm Scrutiny',
@@ -1841,7 +1841,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified client inquiries for law firms. Own local legal searches and reach potential clients actively seeking legal representation.',
     heroHeadline: 'Build Your Caseload, Grow Your Firm',
     heroSubheadline:
-      'Fill your caseload with qualified client inquiries through SEO, GEO, and Pay Per Lead Generation. Get found by people searching for legal representation.',
+      'Fill your caseload with qualified client inquiries through SEO, GEO, and PPL. Get found by people searching for legal representation.',
     challenges: [
       {
         title: 'YMYL Search Scrutiny',
@@ -2019,7 +2019,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Control property searches in your market.',
     heroHeadline: 'Close More Deals, Dominate Your Market',
     heroSubheadline:
-      'Generate qualified buyer and seller leads through SEO, GEO, and Pay Per Lead Generation. Get found by people searching for real estate agents and properties.',
+      'Generate qualified buyer and seller leads through SEO, GEO, and PPL. Get found by people searching for real estate agents and properties.',
     challenges: [
       {
         title: 'Portal Dominance',

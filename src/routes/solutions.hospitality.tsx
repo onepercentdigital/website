@@ -206,8 +206,8 @@ function HospitalityPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
-              tailored for hospitality and restaurant businesses.
+              Comprehensive SEO, GEO, and PPL solutions tailored for hospitality
+              and restaurant businesses.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -275,8 +275,7 @@ function HospitalityPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's fill your tables and drive reservations with proven SEO, GEO,
-            and Pay Per Lead Generation strategies built for restaurants and
-            hospitality businesses.
+            and PPL strategies built for restaurants and hospitality businesses.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

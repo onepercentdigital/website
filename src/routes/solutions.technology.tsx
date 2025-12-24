@@ -30,7 +30,7 @@ export const Route = createFileRoute('/solutions/technology')({
     generateMetaTags({
       title: 'Technology & SaaS SEO | Drive SaaS Growth',
       description:
-        'Drive qualified leads for technology companies and SaaS products. Lead competitive tech searches and reach decision-makers with SEO, GEO, and Pay Per Lead Generation.',
+        'Drive qualified leads for technology companies and SaaS products. Lead competitive tech searches and reach decision-makers with SEO, GEO, and PPL.',
       url: 'https://onepercentseo.com/solutions/technology',
     }),
 });
@@ -195,8 +195,8 @@ function TechnologyPage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
-              tailored for technology and SaaS companies.
+              Comprehensive SEO, GEO, and PPL solutions tailored for technology
+              and SaaS companies.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -264,7 +264,7 @@ function TechnologyPage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's accelerate your SaaS growth and reach decision-makers with
-            proven SEO, GEO, and Pay Per Lead Generation strategies.
+            proven SEO, GEO, and PPL strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

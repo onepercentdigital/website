@@ -88,16 +88,19 @@ function HomePage() {
                   title: 'GEO',
                   description: 'Get Cited by ChatGPT and other AI models',
                   href: '/geo',
+                  cta: 'More about GEO',
                 },
                 {
                   title: 'SEO',
                   description: 'Rank in Google and other search engines',
                   href: '/seo',
+                  cta: 'More about SEO',
                 },
                 {
                   title: 'PPL',
                   description: 'Pay Per Exclusive Pre-Qualified Lead',
                   href: '/ppl',
+                  cta: 'More about PPL',
                 },
               ].map((service) => (
                 <Card key={service.title} className="group text-center">
@@ -113,7 +116,7 @@ function HomePage() {
                       variant="outline"
                       size="sm"
                     >
-                      Learn more
+                      {service.cta}
                       <HugeiconsIcon
                         icon={ArrowRight01Icon}
                         size={14}
@@ -419,8 +422,8 @@ function HomePage() {
             Ready to Scale Your Business?
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
-            Whether through SEO, GEO, or Pay Per Lead Generation, we help you
-            generate the leads you need to grow.
+            Whether through SEO, GEO, or PPL, we help you generate the leads you
+            need to grow.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

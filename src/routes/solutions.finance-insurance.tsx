@@ -30,7 +30,7 @@ export const Route = createFileRoute('/solutions/finance-insurance')({
     generateMetaTags({
       title: 'Finance & Insurance SEO | Generate Qualified Client Leads',
       description:
-        'Drive qualified leads for financial advisors, insurance agents, and financial services firms. Capture high-value searches with proven SEO, GEO, and Pay Per Lead Generation strategies.',
+        'Drive qualified leads for financial advisors, insurance agents, and financial services firms. Capture high-value searches with proven SEO, GEO, and PPL strategies.',
       url: 'https://onepercentseo.com/solutions/finance-insurance',
     }),
 });
@@ -199,9 +199,8 @@ function FinanceInsurancePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
-              tailored for financial advisors, insurance agents, and wealth
-              managers.
+              Comprehensive SEO, GEO, and PPL solutions tailored for financial
+              advisors, insurance agents, and wealth managers.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
