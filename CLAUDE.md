@@ -240,7 +240,7 @@ website/
 │   │   ├── index.tsx        # Homepage (reference implementation)
 │   │   ├── seo.tsx          # SEO service page
 │   │   ├── geo.tsx          # GEO service page
-│   │   ├── pm.tsx           # Performance Marketing page
+│   │   ├── ppl.tsx          # Pay Per Lead Generation page
 │   │   ├── customers.tsx    # Customer showcase
 │   │   ├── case-studies.tsx # Case studies
 │   │   ├── apply.tsx        # Calendly booking

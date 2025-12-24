@@ -25,7 +25,7 @@ export const Route = createFileRoute('/apply')({
     generateMetaTags({
       title: 'Apply To Work With Us | One Percent Digital',
       description:
-        'Apply to see if you qualify to work with us. We help serious brands grow through SEO, GEO, and Performance Marketing.',
+        'Apply to see if you qualify to work with us. We help serious brands grow through SEO, GEO, and Pay Per Lead Generation.',
       url: 'https://onepercentseo.com/apply',
     }),
 });
@@ -44,7 +44,7 @@ function ApplyPage() {
               </h1>
               <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
                 We partner with serious brands ready to grow through SEO, GEO,
-                and Performance Marketing. Apply to see if you qualify—we'll
+                and Pay Per Lead Generation. Apply to see if you qualify—we'll
                 evaluate your business and determine if we're the right fit.
               </p>
 
@@ -313,7 +313,7 @@ function ApplyPage() {
                 presence. During our 30-minute video call, we discuss your
                 goals, challenges, and growth opportunities. We'll share
                 insights about your competitive landscape and determine if our
-                SEO, GEO, or Performance Marketing services are a fit. If you
+                SEO, GEO, or Pay Per Lead Generation services are a fit. If you
                 qualify, we'll outline next steps for a partnership.
               </AccordionContent>
             </AccordionItem>

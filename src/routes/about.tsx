@@ -34,7 +34,7 @@ function AboutPage() {
       name: 'One Percent Digital',
       url: 'https://onepercentseo.com',
       description:
-        'Enterprise-grade SEO, GEO, and Performance Marketing services for businesses that demand results at scale.',
+        'Enterprise-grade SEO, GEO, and Pay Per Lead Generation services for businesses that demand results at scale.',
       founder: [
         {
           '@type': 'Person',
@@ -333,7 +333,7 @@ function AboutPage() {
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Join the 300+ brands that have partnered with entrepreneurs who
-            understand SEO, GEO, and Performance Marketing. Let's grow your
+            understand SEO, GEO, and Pay Per Lead Generation. Let's grow your
             company together.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

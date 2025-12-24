@@ -30,7 +30,7 @@ export const Route = createFileRoute('/solutions/real-estate')({
     generateMetaTags({
       title: 'Real Estate SEO | Generate Buyer & Seller Leads',
       description:
-        'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Own property searches in your market with SEO, GEO, and Performance Marketing.',
+        'Drive qualified leads for real estate agents, brokerages, developers, and luxury home builders. Own property searches in your market with SEO, GEO, and Pay Per Lead Generation.',
       url: 'https://onepercentseo.com/solutions/real-estate',
     }),
 });
@@ -199,7 +199,7 @@ function RealEstatePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
+              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
               tailored for real estate agents, brokerages, and developers.
             </p>
           </div>
@@ -268,7 +268,7 @@ function RealEstatePage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's generate qualified buyer and seller leads with proven SEO,
-            GEO, and Performance Marketing strategies built for real estate
+            GEO, and Pay Per Lead Generation strategies built for real estate
             professionals.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

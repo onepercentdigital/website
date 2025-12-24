@@ -95,9 +95,9 @@ function HomePage() {
                   href: '/seo',
                 },
                 {
-                  title: 'PM',
+                  title: 'PPL',
                   description: 'Pay Per Exclusive Pre-Qualified Lead',
-                  href: '/pm',
+                  href: '/ppl',
                 },
               ].map((service) => (
                 <Card key={service.title} className="group text-center">
@@ -173,7 +173,7 @@ function HomePage() {
                   'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
               },
               {
-                title: 'Performance Marketing',
+                title: 'Pay Per Lead Generation',
                 description:
                   'We fund your campaigns and deliver pre-qualified leads directly to your pipeline. Pay only for results.',
                 features: [
@@ -181,8 +181,8 @@ function HomePage() {
                   'Live exclusive pre-qualified leads',
                   'Scale volume based on your capacity',
                 ],
-                href: '/pm',
-                cta: 'More about PM',
+                href: '/ppl',
+                cta: 'More about PPL',
                 image:
                   'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop',
               },
@@ -419,7 +419,7 @@ function HomePage() {
             Ready to Scale Your Business?
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
-            Whether through SEO, GEO, or Performance Marketing, we help you
+            Whether through SEO, GEO, or Pay Per Lead Generation, we help you
             generate the leads you need to grow.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">

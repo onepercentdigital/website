@@ -94,7 +94,7 @@ function BlogIndexPage() {
             Ready to Put These Insights Into Action?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            From SEO and GEO to Performance Marketing, we turn strategy into
+            From SEO and GEO to Pay Per Lead Generation, we turn strategy into
             leads. Let's discuss how to scale your business.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

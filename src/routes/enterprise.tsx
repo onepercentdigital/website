@@ -32,9 +32,10 @@ export const Route = createFileRoute('/enterprise')({
   component: EnterprisePage,
   head: () =>
     generateMetaTags({
-      title: 'Enterprise Solutions | SEO, GEO & Performance Marketing at Scale',
+      title:
+        'Enterprise Solutions | SEO, GEO & Pay Per Lead Generation at Scale',
       description:
-        'Enterprise-grade SEO, GEO, and Performance Marketing for multi-location businesses. Dedicated support, custom reporting, and white-glove service for organizations that demand results.',
+        'Enterprise-grade SEO, GEO, and Pay Per Lead Generation for multi-location businesses. Dedicated support, custom reporting, and white-glove service for organizations that demand results.',
       url: 'https://onepercentseo.com/enterprise',
     }),
 });
@@ -43,9 +44,9 @@ function EnterprisePage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'Enterprise SEO, GEO & Performance Marketing Solutions',
+      name: 'Enterprise SEO, GEO & Pay Per Lead Generation Solutions',
       description:
-        'Enterprise-grade SEO, GEO, and Performance Marketing services for large organizations with multiple locations, brands, or complex needs.',
+        'Enterprise-grade SEO, GEO, and Pay Per Lead Generation services for large organizations with multiple locations, brands, or complex needs.',
       url: 'https://onepercentseo.com/enterprise',
       serviceType: 'Search Engine Optimization',
       provider: {
@@ -66,7 +67,7 @@ function EnterprisePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Enterprise-Grade SEO, GEO & Performance Marketing at Scale
+              Enterprise-Grade SEO, GEO & Pay Per Lead Generation at Scale
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
               Custom solutions for multi-location businesses, enterprise brands,
@@ -378,7 +379,7 @@ function EnterprisePage() {
               Comprehensive Services Included
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              SEO, GEO, and Performance Marketing capabilities designed for
+              SEO, GEO, and Pay Per Lead Generation capabilities designed for
               enterprise scale.
             </p>
           </div>
@@ -935,12 +936,12 @@ function EnterprisePage() {
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
                 Enterprise marketing isn't just "more marketing"—it's a
-                fundamentally different approach across SEO, GEO, and
-                Performance Marketing. You get a dedicated account team (not
-                shared resources), custom reporting dashboards tailored to your
-                KPIs, white-glove support with priority response times, 24/7
-                access, enterprise-grade security and compliance (SOC 2, GDPR),
-                and integration with your existing enterprise tools (Salesforce,
+                fundamentally different approach across SEO, GEO, and Pay Per
+                Lead Generation. You get a dedicated account team (not shared
+                resources), custom reporting dashboards tailored to your KPIs,
+                white-glove support with priority response times, 24/7 access,
+                enterprise-grade security and compliance (SOC 2, GDPR), and
+                integration with your existing enterprise tools (Salesforce,
                 HubSpot, etc.). We become an extension of your team with
                 quarterly business reviews, executive reporting, stakeholder
                 training, and strategic planning. Our systems are built to
@@ -1020,9 +1021,9 @@ function EnterprisePage() {
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Join the enterprise companies and multi-location businesses that
-            trust One Percent Digital for enterprise-grade SEO, GEO, and
-            Performance Marketing. See how we can transform your visibility and
-            lead generation at scale.
+            trust One Percent Digital for enterprise-grade SEO, GEO, and Pay Per
+            Lead Generation. See how we can transform your visibility and lead
+            generation at scale.
           </p>
           <Button render={<Link to="/apply" />} size="lg">
             Apply To Work With Us

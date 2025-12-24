@@ -277,7 +277,7 @@ function CaseStudiesPage() {
             </h2>
             <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
               Every case study started with a conversation. Let's talk about how
-              SEO, GEO, and Performance Marketing can drive the leads you need
+              SEO, GEO, and Pay Per Lead Generation can drive the leads you need
               to scale.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

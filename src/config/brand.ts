@@ -80,7 +80,7 @@ export const navigation = {
       items: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'PM', href: '/pm' },
+        { label: 'PPL', href: '/ppl' },
       ],
     },
     {
@@ -137,7 +137,7 @@ export const footer = {
       links: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'PM', href: '/pm' },
+        { label: 'PPL', href: '/ppl' },
       ],
     },
     {

@@ -195,7 +195,7 @@ function AgriculturePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
+              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
               tailored for agricultural equipment dealers and agribusinesses.
             </p>
           </div>
@@ -264,7 +264,7 @@ function AgriculturePage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's drive qualified leads and grow your agricultural business with
-            proven SEO, GEO, and Performance Marketing strategies.
+            proven SEO, GEO, and Pay Per Lead Generation strategies.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">

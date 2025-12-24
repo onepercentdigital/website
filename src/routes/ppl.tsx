@@ -31,14 +31,14 @@ import {
 import { Button } from '@/components/ui/button';
 import { generateMetaTags } from '@/lib/seo';
 
-export const Route = createFileRoute('/pm')({
-  component: PerformanceMarketingPage,
+export const Route = createFileRoute('/ppl')({
+  component: PayPerLeadPage,
   head: () =>
     generateMetaTags({
-      title: 'PM - Performance Marketing | Pay Per Lead',
+      title: 'PPL - Pay Per Lead Generation',
       description:
         'Exclusive pre-qualified leads delivered on demand. No retainers, no contracts, no set-up fees. We fund your marketing—you only pay for results.',
-      url: 'https://onepercentseo.com/pm',
+      url: 'https://onepercentseo.com/ppl',
     }),
 });
 
@@ -246,14 +246,14 @@ const faqs = [
   },
 ];
 
-function PerformanceMarketingPage() {
+function PayPerLeadPage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'PM (Performance Marketing) - Pay Per Lead',
+      name: 'PPL (Pay Per Lead Generation)',
       description:
         'Exclusive pre-qualified leads delivered on demand. No retainers, no contracts, no set-up fees. We fund your marketing—you only pay for results.',
-      url: 'https://onepercentseo.com/pm',
+      url: 'https://onepercentseo.com/ppl',
       serviceType: 'Lead Generation',
       provider: {
         '@type': 'Organization',
@@ -302,16 +302,16 @@ function PerformanceMarketingPage() {
         </div>
       </section>
 
-      {/* What is Performance Marketing Section */}
+      {/* What is Pay Per Lead Generation Section */}
       <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
-                What is PM (Performance Marketing)?
+                What is PPL (Pay Per Lead Generation)?
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                Performance marketing is a results-based model where you only
+                Pay per lead generation is a results-based model where you only
                 pay for qualified leads delivered to your business. We invest in
                 your marketing campaigns—creating ads, landing pages, and
                 conversion funnels—while you pay exclusively for prospects that
@@ -406,7 +406,7 @@ function PerformanceMarketingPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
-              Why Performance Marketing
+              Why Pay Per Lead Generation
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
               Eliminate risk and only pay for results that matter
@@ -588,7 +588,7 @@ function PerformanceMarketingPage() {
               Frequently Asked Questions
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground tracking-wide">
-              Everything you need to know about performance marketing
+              Everything you need to know about pay per lead generation
             </p>
           </div>
           <Accordion className="w-full">
@@ -614,7 +614,7 @@ function PerformanceMarketingPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Your competitors are wasting budget on agencies with no
-            accountability. With performance marketing, every dollar you spend
+            accountability. With pay per lead generation, every dollar you spend
             delivers a qualified prospect ready to become a customer.
           </p>
           <div className="mt-10">

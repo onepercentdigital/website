@@ -33,7 +33,7 @@ export const Route = createFileRoute('/solutions/ecommerce')({
     generateMetaTags({
       title: 'E-commerce & Retail SEO | Drive Online Sales',
       description:
-        'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with proven SEO, GEO, and Performance Marketing strategies.',
+        'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with proven SEO, GEO, and Pay Per Lead Generation strategies.',
       url: 'https://onepercentseo.com/solutions/ecommerce',
     }),
 });
@@ -201,7 +201,7 @@ function EcommercePage() {
               Services We Provide
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Comprehensive SEO, GEO, and Performance Marketing solutions
+              Comprehensive SEO, GEO, and Pay Per Lead Generation solutions
               tailored for e-commerce and retail businesses.
             </p>
           </div>
@@ -270,7 +270,7 @@ function EcommercePage() {
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
             Let's drive revenue and capture market share with proven SEO, GEO,
-            and Performance Marketing strategies built for online retailers.
+            and Pay Per Lead Generation strategies built for online retailers.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">
