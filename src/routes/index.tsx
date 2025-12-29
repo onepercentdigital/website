@@ -96,18 +96,43 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Client Logo Strip */}
-      <section className="border-border border-y bg-muted/30 px-6 py-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
-            {clientLogos.map((client) => (
-              <img
-                key={client.name}
-                src={getImageUrl(client.logo, 'thumbnail')}
-                alt={client.name}
-                className="h-8 w-auto object-contain opacity-60 grayscale transition-opacity hover:opacity-100 lg:h-10 dark:invert"
-              />
-            ))}
+      {/* Client Logo Strip - Ticker Style */}
+      <section className="border-border border-y bg-muted/30 py-8">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="group relative overflow-hidden">
+            {/* Fade edges */}
+            <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-20 bg-gradient-to-r from-[color-mix(in_oklab,var(--color-muted)_30%,var(--color-background))] to-transparent" />
+            <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-20 bg-gradient-to-l from-[color-mix(in_oklab,var(--color-muted)_30%,var(--color-background))] to-transparent" />
+
+            {/* Scrolling track */}
+            <div className="flex w-fit animate-marquee group-hover:[animation-play-state:paused]">
+              {/* First set of logos */}
+              {clientLogos.map((client) => (
+                <div
+                  key={client.name}
+                  className="flex h-12 w-40 shrink-0 items-center justify-center px-6"
+                >
+                  <img
+                    src={getImageUrl(client.logo, 'thumbnail')}
+                    alt={client.name}
+                    className="h-8 max-w-full object-contain opacity-60 grayscale transition-opacity hover:opacity-100 lg:h-10 dark:invert"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {clientLogos.map((client) => (
+                <div
+                  key={`${client.name}-dup`}
+                  className="flex h-12 w-40 shrink-0 items-center justify-center px-6"
+                >
+                  <img
+                    src={getImageUrl(client.logo, 'thumbnail')}
+                    alt={client.name}
+                    className="h-8 max-w-full object-contain opacity-60 grayscale transition-opacity hover:opacity-100 lg:h-10 dark:invert"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

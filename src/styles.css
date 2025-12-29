@@ -141,4 +141,17 @@
       linear-gradient(to right, oklch(1 0 0 / 0.03) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(1 0 0 / 0.03) 1px, transparent 1px);
   }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
 }
