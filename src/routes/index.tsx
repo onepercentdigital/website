@@ -51,7 +51,7 @@ function HomePage() {
         ]}
       />
       {/* Hero Section */}
-      <section className="px-6 pt-16 pb-8 lg:pt-24 lg:pb-12">
+      <section className="px-6 pt-16 pb-8 lg:pt-20 lg:pb-10">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
@@ -87,7 +87,7 @@ function HomePage() {
       </section>
 
       {/* Three Service Cards */}
-      <section className="px-6 py-8 lg:py-12">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
@@ -135,7 +135,7 @@ function HomePage() {
         </div>
       </section>
       {/* Metrics Block */}
-      <section className="border-border border-y px-6 py-12 lg:py-16">
+      <section className="border-border border-y px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -178,7 +178,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-12 lg:py-16">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Left column - Content */}
@@ -212,7 +212,7 @@ function HomePage() {
                 ].map((item) => (
                   <Card key={item.title}>
                     <CardHeader>
-                      <CardTitle className="text-lg">{item.title}</CardTitle>
+                      <CardTitle>{item.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="leading-relaxed">
@@ -226,9 +226,9 @@ function HomePage() {
 
             {/* Right column - Chat Demo */}
             <div className="flex items-center">
-              <Card className="w-full overflow-hidden">
+              <Card className="w-full gap-0 overflow-hidden py-0">
                 {/* Header bar */}
-                <div className="flex items-center gap-2 border-border border-b px-4 py-2">
+                <div className="flex items-center gap-2 px-4 py-2">
                   <HugeiconsIcon
                     icon={BubbleChatIcon}
                     size={18}
@@ -236,8 +236,9 @@ function HomePage() {
                   />
                   <span className="font-medium text-sm">AI Chat</span>
                 </div>
+                <Separator />
 
-                <CardContent className="space-y-3 p-3">
+                <div className="space-y-3 p-3">
                   {/* User message */}
                   <div className="flex justify-end">
                     <div className="max-w-[85%] rounded-2xl bg-primary px-3 py-2 text-primary-foreground">
@@ -257,10 +258,11 @@ function HomePage() {
                       </p>
                     </div>
                   </div>
-                </CardContent>
+                </div>
 
                 {/* Input area (decorative) */}
-                <div className="border-border border-t p-3">
+                <Separator />
+                <div className="px-3 py-2">
                   <div className="flex items-center gap-2 rounded-4xl bg-muted/50 px-3 py-1.5 ring-1 ring-foreground/10">
                     <span className="flex-1 text-muted-foreground text-sm">
                       Ask anything...
@@ -269,6 +271,7 @@ function HomePage() {
                       size="icon"
                       variant="ghost"
                       disabled
+                      aria-label="Send message"
                       className="size-7 rounded-full"
                     >
                       <HugeiconsIcon icon={ArrowUp02Icon} size={14} />
@@ -280,7 +283,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-12 lg:py-16">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 text-center lg:mb-12">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
@@ -295,7 +298,7 @@ function HomePage() {
           <Tabs defaultValue="geo" className="mx-auto max-w-5xl">
             {/* GEO Tab Content */}
             <TabsContent value="geo">
-              <div className="rounded-2xl p-8 ring-1 ring-foreground/10 lg:p-10">
+              <Card className="p-8 lg:p-10">
                 <div className="mb-8 grid gap-8 lg:grid-cols-5 lg:gap-12">
                   {/* Left: Stats + Copy (3/5 width) */}
                   <div className="flex flex-col justify-center lg:col-span-3">
@@ -340,12 +343,12 @@ function HomePage() {
                     />
                   </Button>
                 </div>
-              </div>
+              </Card>
             </TabsContent>
 
             {/* SEO Tab Content */}
             <TabsContent value="seo">
-              <div className="rounded-2xl p-8 ring-1 ring-foreground/10 lg:p-10">
+              <Card className="p-8 lg:p-10">
                 <div className="mb-8 grid gap-8 lg:grid-cols-5 lg:gap-12">
                   {/* Left: Stats + Copy (3/5 width) */}
                   <div className="flex flex-col justify-center lg:col-span-3">
@@ -390,12 +393,12 @@ function HomePage() {
                     />
                   </Button>
                 </div>
-              </div>
+              </Card>
             </TabsContent>
 
             {/* PPL Tab Content */}
             <TabsContent value="ppl">
-              <div className="rounded-2xl p-8 ring-1 ring-foreground/10 lg:p-10">
+              <Card className="p-8 lg:p-10">
                 <div className="mb-8 grid gap-8 lg:grid-cols-5 lg:gap-12">
                   {/* Left: Stats + Copy (3/5 width) */}
                   <div className="flex flex-col justify-center lg:col-span-3">
@@ -439,16 +442,16 @@ function HomePage() {
                     />
                   </Button>
                 </div>
-              </div>
+              </Card>
             </TabsContent>
           </Tabs>
         </div>
       </section>
-      <section className="px-6 py-12 lg:py-16">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-right">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-              Real Results, Real Exits
+              Real Growth, Real Results
             </h2>
             <p className="ml-auto max-w-2xl text-muted-foreground">
               See how we've helped businesses dominate search and achieve
@@ -587,7 +590,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-12 lg:py-16">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
@@ -617,7 +620,7 @@ function HomePage() {
                 icon: Brain01Icon,
                 title: 'Full-Stack Approach',
                 description:
-                  'GEO + SEO + PPL = complete funnel coverage. We own your entire discovery journey.',
+                  'Complete funnel coverage. We own your entire discovery journey.',
               },
               {
                 icon: Award01Icon,
@@ -634,7 +637,7 @@ function HomePage() {
                     strokeWidth={1.5}
                     className="mb-2 text-primary"
                   />
-                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <CardTitle>{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="leading-relaxed">
@@ -646,7 +649,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-12 lg:py-16">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
@@ -721,7 +724,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="border-border border-y px-6 py-12 lg:py-16">
+      <section className="border-border border-y px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
             Ready to Dominate Your Industry?

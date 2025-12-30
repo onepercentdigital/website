@@ -8,6 +8,7 @@
 export interface TeamMember {
   name: string;
   initials: string;
+  imageId: string;
   title: string;
   bio: string[];
 }
@@ -16,7 +17,8 @@ export const team: TeamMember[] = [
   {
     name: 'Luke Jordon',
     initials: 'LJ',
-    title: 'Co-Founder & SEO Lead Architect',
+    imageId: '5de21c0f-6df1-46dc-9a58-541429cc9500',
+    title: 'Co-Founder & Lead Optimization Architect',
     bio: [
       "Having worked with over 100 brands since 2015, Luke is a seasoned expert in top ranking SEO engineering and scaling strategies. His unique talent lies in effortlessly navigating Google algorithm updates while continuously boosting each client's online presence and securing maximum market share in their industry.",
       "In addition to his SEO expertise, Luke co-owns multiple thriving E-commerce brands. This hands-on experience equips him with the insights needed to manage various marketing channels effectively at scale. All this skill and knowledge make him an SEO expert you can't afford to miss.",
@@ -25,7 +27,8 @@ export const team: TeamMember[] = [
   {
     name: 'Mackey Martin',
     initials: 'MM',
-    title: 'Co-Founder & SEO Lead Architect',
+    imageId: '81748d2d-b7ed-492d-dfbf-c6b486e16d00',
+    title: 'Co-Founder & Lead Optimization Architect',
     bio: [
       "Best defined as the bright mind behind One Percent Digital's flawless operational procedures and execution, Mackey possesses a laser focus and attention to detail second to none. From onboarding to the end goal of any project, he treats each business like his own, delves deep into their unique needs and adds significant value to every SEO strategy.",
       'Over the past decade, he has co-founded several successful E-commerce brands, which explains why he is so fluent in entrepreneurship. He is a businessman before an SEO expert and understands the ropes behind running a successful business – a quality many SEO agencies often lack.',
@@ -34,7 +37,8 @@ export const team: TeamMember[] = [
   {
     name: 'Austin Falk',
     initials: 'AF',
-    title: 'Account Manager & SEO Architect',
+    imageId: 'ac9f6908-abc3-4fa6-4ae9-d81591555500',
+    title: 'Account Manager & Optimization Architect',
     bio: [
       "An advocate for sharing the stories of individuals and their passion projects, Austin develops strategic technical visions for One Percent Digital's clients with recommendations and roadmaps for proposed solutions. With a knack for efficiency and long-term adaptability, he helps clients traverse the ever-changing digital landscape.",
       'A storyteller with public-facing experience in various industries, and an advocate for truth, Austin is constantly learning. He strives to leave a positive mark on this world through the power of storytelling, relentless effort, and camaraderie with fellow creatives and developers. His curious spirit delivers innovation and performant results consistently.',
