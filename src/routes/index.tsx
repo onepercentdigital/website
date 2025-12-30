@@ -166,7 +166,7 @@ function HomePage() {
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="flex items-center lg:order-1">
+            <div className="order-2 flex items-center lg:order-1">
               <Card className="w-full gap-0 overflow-hidden py-0">
                 <div className="flex items-center gap-2 px-4 py-2">
                   <HugeiconsIcon
@@ -217,7 +217,7 @@ function HomePage() {
                 </div>
               </Card>
             </div>
-            <div className="flex flex-col justify-center lg:order-2">
+            <div className="order-1 flex flex-col justify-center lg:order-2">
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 Rank on Page 1
               </h2>

@@ -26,6 +26,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/enterprise')({
@@ -62,23 +63,23 @@ function EnterprisePage() {
       <SEO structuredData={[serviceSchema]} />
 
       {/* Hero Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
+            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
               Enterprise-Grade GEO, SEO & PPL at Scale
             </h1>
-            <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
+            <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Custom solutions for multi-location businesses, enterprise brands,
               and organizations that demand white-glove service, dedicated
               support, and guaranteed results.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">
                 Apply To Work With Us
                 <HugeiconsIcon
                   icon={ArrowRight01Icon}
-                  size={20}
+                  size={18}
                   strokeWidth={2}
                   data-icon="inline-end"
                 />
@@ -96,27 +97,27 @@ function EnterprisePage() {
       </section>
 
       {/* What Makes Enterprise Different */}
-      <section className="border-border border-y px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="mb-6 font-bold text-4xl tracking-tight lg:text-6xl">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What Makes Enterprise Different
               </h2>
-              <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-6 text-muted-foreground leading-relaxed">
                 Enterprise marketing requires more than just scale, it demands a
                 tailored approach. When you're managing multiple locations,
                 brands, or complex organizational structures, you need
                 strategies that scale, systems that integrate, and support that
                 understands your unique challenges.
               </p>
-              <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-6 text-muted-foreground leading-relaxed">
                 Our enterprise solutions provide dedicated account management,
                 custom reporting dashboards, and white-glove service designed
                 for enterprise companies, multi-location businesses, and
                 organizations with complex compliance needs.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="text-muted-foreground leading-relaxed">
                 From stakeholder training to enterprise tool integration, we
                 become an extension of your team, delivering results at scale
                 while maintaining the precision and attention to detail that
@@ -135,46 +136,46 @@ function EnterprisePage() {
 
           {/* Mini Stats */}
           <div className="mt-16 grid gap-8 sm:grid-cols-2">
-            <div className="rounded-2xl bg-card p-8 text-center ring-1 ring-foreground/10">
-              <div className="mb-2 font-extrabold text-4xl text-primary tracking-tight lg:text-6xl">
+            <Card className="p-8 text-center">
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                 Worldwide
               </div>
-              <div className="text-muted-foreground text-sm tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Brand Visibility
               </div>
-            </div>
-            <div className="rounded-2xl bg-card p-8 text-center ring-1 ring-foreground/10">
-              <div className="mb-2 font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+            </Card>
+            <Card className="p-8 text-center">
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                 24/7
               </div>
-              <div className="text-muted-foreground text-sm tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Priority Support Access
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Our Enterprise Process */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Our Enterprise Process
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <p className="mx-auto max-w-2xl text-muted-foreground">
               A systematic approach designed for organizations with complex
               needs and multiple stakeholders.
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-4">
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <Card className="p-8">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">01</div>
                 <HugeiconsIcon
                   icon={Target01Icon}
-                  size={24}
+                  size={28}
                   strokeWidth={1.5}
                   className="text-muted-foreground"
                 />
@@ -182,19 +183,19 @@ function EnterprisePage() {
               <h3 className="mb-3 font-bold text-2xl">
                 Discovery & Enterprise Audit
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Multi-stakeholder assessment across all locations, brands, and
                 digital properties. We analyze your enterprise tech stack,
                 compliance requirements, and organizational structure.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <Card className="p-8">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">02</div>
                 <HugeiconsIcon
                   icon={File01Icon}
-                  size={24}
+                  size={28}
                   strokeWidth={1.5}
                   className="text-muted-foreground"
                 />
@@ -202,19 +203,19 @@ function EnterprisePage() {
               <h3 className="mb-3 font-bold text-2xl">
                 Custom Strategy Development
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Scalable frameworks tailored to your organization. Custom
                 reporting dashboards, governance models, and strategies that
                 work across multiple markets and stakeholders.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <Card className="p-8">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">03</div>
                 <HugeiconsIcon
                   icon={HierarchySquare01Icon}
-                  size={24}
+                  size={28}
                   strokeWidth={1.5}
                   className="text-muted-foreground"
                 />
@@ -222,19 +223,19 @@ function EnterprisePage() {
               <h3 className="mb-3 font-bold text-2xl">
                 Implementation & Integration
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Seamless integration with your enterprise tools (Salesforce,
                 HubSpot, analytics platforms). White-glove onboarding with
                 dedicated training for all stakeholder groups.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <Card className="p-8">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">04</div>
                 <HugeiconsIcon
                   icon={ChartIncreaseIcon}
-                  size={24}
+                  size={28}
                   strokeWidth={1.5}
                   className="text-muted-foreground"
                 />
@@ -242,151 +243,151 @@ function EnterprisePage() {
               <h3 className="mb-3 font-bold text-2xl">
                 Ongoing Optimization & Support
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Dedicated account team with priority support. Regular executive
                 reporting, quarterly business reviews, and continuous
                 optimization across all properties.
               </p>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Enterprise Features */}
-      <section className="border-border border-y px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-right">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Enterprise Features
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <p className="ml-auto max-w-2xl text-muted-foreground">
               Premium capabilities designed for organizations that demand the
               highest standards.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={UserGroupIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Dedicated Account Management
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Your own dedicated account team who understands your business,
                 industry, and goals. Direct access to senior strategists and
                 technical specialists.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={ChartLineData01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Custom Reporting & Analytics
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Executive dashboards tailored to your KPIs. Automated reporting,
                 competitive intelligence, and insights that align with your
                 business objectives.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={Shield01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Enterprise Security & Compliance
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 SOC 2 compliance, GDPR adherence, and enterprise-grade security
                 protocols. Custom NDAs and security requirements accommodated.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={Globe02Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Multi-Location/Brand Coordination
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 Centralized strategy with local execution. Manage hundreds of
                 locations or multiple brands with consistent governance and
                 scalable processes.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={HeadphonesIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 White-Glove Support
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 24/7 priority support with dedicated account management.
                 Personalized service and quarterly business reviews tailored to
                 your needs.
               </p>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={FlashIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
               <h3 className="mb-3 font-bold text-xl lg:text-2xl">
                 Advanced Integration Capabilities
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 API access for custom integrations. Seamless connections to
                 Salesforce, HubSpot, analytics platforms, and proprietary
                 enterprise systems.
               </p>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Comprehensive Services Included */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Comprehensive Services Included
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <p className="max-w-2xl text-muted-foreground">
               GEO, SEO, and PPL capabilities designed for enterprise scale.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={Target01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
@@ -401,7 +402,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Quarterly strategic planning sessions
                   </span>
                 </li>
@@ -412,7 +413,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Executive stakeholder reporting
                   </span>
                 </li>
@@ -423,7 +424,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Competitive intelligence & market analysis
                   </span>
                 </li>
@@ -434,7 +435,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Multi-year roadmap development
                   </span>
                 </li>
@@ -445,17 +446,17 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Budget planning & ROI forecasting
                   </span>
                 </li>
               </ul>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={Search01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
@@ -470,7 +471,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Enterprise site architecture optimization
                   </span>
                 </li>
@@ -481,7 +482,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     International SEO & hreflang management
                   </span>
                 </li>
@@ -492,7 +493,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Advanced schema markup & structured data
                   </span>
                 </li>
@@ -503,7 +504,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Core Web Vitals optimization at scale
                   </span>
                 </li>
@@ -514,17 +515,17 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Multi-location search presence
                   </span>
                 </li>
               </ul>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={Brain01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
@@ -539,7 +540,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Multi-brand AI visibility strategy
                   </span>
                 </li>
@@ -550,7 +551,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     ChatGPT, Claude & Perplexity optimization
                   </span>
                 </li>
@@ -561,7 +562,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Enterprise knowledge graph development
                   </span>
                 </li>
@@ -572,7 +573,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     AI citation monitoring at scale
                   </span>
                 </li>
@@ -583,17 +584,17 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Competitive AI positioning
                   </span>
                 </li>
               </ul>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={Globe02Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
@@ -608,7 +609,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Centralized local listings management
                   </span>
                 </li>
@@ -619,7 +620,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Multi-location review management
                   </span>
                 </li>
@@ -630,7 +631,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Location-specific landing pages
                   </span>
                 </li>
@@ -641,7 +642,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Regional performance tracking
                   </span>
                 </li>
@@ -652,17 +653,17 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Franchise/dealer network optimization
                   </span>
                 </li>
               </ul>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={GraduationScrollIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
@@ -677,7 +678,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Custom training programs for stakeholders
                   </span>
                 </li>
@@ -688,7 +689,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     White-glove onboarding process
                   </span>
                 </li>
@@ -699,7 +700,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Documentation & playbook development
                   </span>
                 </li>
@@ -710,7 +711,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Ongoing education & certification
                   </span>
                 </li>
@@ -721,17 +722,17 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Change management support
                   </span>
                 </li>
               </ul>
-            </div>
+            </Card>
 
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
+            <Card className="p-8">
               <HugeiconsIcon
                 icon={DollarCircleIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mb-4 text-primary"
               />
@@ -746,7 +747,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Scalable pay-per-lead programs
                   </span>
                 </li>
@@ -757,7 +758,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Multi-location campaign management
                   </span>
                 </li>
@@ -768,7 +769,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Enterprise CRM integration
                   </span>
                 </li>
@@ -779,7 +780,7 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Volume-based pricing tiers
                   </span>
                 </li>
@@ -790,31 +791,39 @@ function EnterprisePage() {
                     strokeWidth={1.5}
                     className="mt-1 shrink-0 text-primary"
                   />
-                  <span className="text-muted-foreground text-sm tracking-wide">
+                  <span className="text-muted-foreground text-sm">
                     Dedicated lead quality management
                   </span>
                 </li>
               </ul>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Enterprise Client Results */}
-      <section className="border-border border-y px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-right">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Enterprise Client Results
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <p className="ml-auto max-w-2xl text-muted-foreground">
               Results that matter to organizations at scale.
             </p>
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <div className="relative aspect-video overflow-hidden rounded-2xl lg:order-1">
+              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
+              <img
+                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=450&fit=crop"
+                alt="Executive business presentation"
+                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
+              />
+            </div>
+            <div className="lg:order-2">
+              <p className="mb-8 text-muted-foreground leading-relaxed">
                 Our enterprise clients don't just see incremental improvements.
                 They achieve transformational results that impact every
                 location, brand, and market they serve. From enterprise
@@ -823,52 +832,44 @@ function EnterprisePage() {
               </p>
 
               <div className="grid gap-6 sm:grid-cols-3">
-                <div className="rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
-                  <div className="mb-2 font-extrabold text-3xl text-primary tracking-tight sm:text-4xl">
+                <Card className="p-6">
+                  <div className="mb-1 font-extrabold text-3xl tracking-tight sm:text-4xl">
                     $200M
                   </div>
-                  <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Revenue Generated
                   </div>
-                </div>
-                <div className="rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
-                  <div className="mb-2 font-extrabold text-3xl text-primary tracking-tight sm:text-4xl">
+                </Card>
+                <Card className="p-6">
+                  <div className="mb-1 font-extrabold text-3xl tracking-tight sm:text-4xl">
                     8X
                   </div>
-                  <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Average Growth Rate
                   </div>
-                </div>
-                <div className="rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
-                  <div className="mb-2 font-extrabold text-3xl text-primary tracking-tight sm:text-4xl">
+                </Card>
+                <Card className="p-6">
+                  <div className="mb-1 font-extrabold text-3xl tracking-tight sm:text-4xl">
                     1000%
                   </div>
-                  <div className="text-muted-foreground text-sm leading-relaxed tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Brand Visibility Growth
                   </div>
-                </div>
+                </Card>
               </div>
-            </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=450&fit=crop"
-                alt="Executive business presentation"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-6xl">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <p className="text-muted-foreground leading-relaxed">
               Everything you need to know about our enterprise solutions.
             </p>
           </div>
@@ -978,29 +979,33 @@ function EnterprisePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="border-border border-t px-6 py-20 lg:py-32">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 font-bold text-4xl tracking-tight lg:text-6xl">
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
             Ready to Scale Your Growth?
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
             Join the enterprise companies and multi-location businesses that
             trust One Percent Digital for enterprise-grade GEO, SEO, and PPL.
-            See how we can transform your visibility and lead generation at
-            scale.
           </p>
-          <Button render={<Link to="/apply" />} size="lg">
-            Apply To Work With Us
-            <HugeiconsIcon
-              icon={ArrowRight01Icon}
-              size={20}
-              strokeWidth={2}
-              data-icon="inline-end"
-            />
-          </Button>
-          <p className="mt-6 text-muted-foreground text-sm">
-            No obligation • No sales pressure • Just a conversation
-          </p>
+          <div className="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button render={<Link to="/apply" />} size="lg">
+              Apply To Work With Us
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                size={18}
+                strokeWidth={2}
+                data-icon="inline-end"
+              />
+            </Button>
+            <Button
+              render={<Link to="/case-studies" />}
+              size="lg"
+              variant="outline"
+            >
+              View Case Studies
+            </Button>
+          </div>
         </div>
       </section>
     </>
