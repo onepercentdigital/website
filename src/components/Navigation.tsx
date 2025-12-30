@@ -32,7 +32,10 @@ import { useTheme } from '@/hooks/useTheme';
 export function Navigation() {
   return (
     <header className="sticky top-0 z-50 border-border border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
+      <nav
+        aria-label="Main"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8"
+      >
         {/* Logo */}
         <Logo />
 
@@ -96,7 +99,7 @@ function MobileMenu() {
           showCloseButton
           className="overflow-y-auto px-6 pt-16 pb-[env(safe-area-inset-bottom)]"
         >
-          <nav className="flex flex-col gap-2">
+          <nav aria-label="Mobile menu" className="flex flex-col gap-2">
             {/* CTA at top */}
             <SheetClose
               render={

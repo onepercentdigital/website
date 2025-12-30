@@ -307,7 +307,11 @@ function HomePage() {
                           {lead.company}
                         </div>
                       </div>
-                      <div className="size-2 rounded-full bg-green-500" />
+                      <div
+                        className="size-2 rounded-full bg-green-500"
+                        aria-hidden="true"
+                      />
+                      <span className="sr-only">Active lead</span>
                     </div>
                   ))}
                 </div>
