@@ -96,62 +96,12 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Company Stats */}
-      <section className="border-border border-y px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 sm:grid-cols-3">
-            <div className="text-center">
-              <HugeiconsIcon
-                icon={Clock01Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mx-auto mb-3 text-primary"
-              />
-              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                10+
-              </div>
-              <div className="text-muted-foreground text-sm">
-                Years Experience
-              </div>
-            </div>
-            <div className="text-center">
-              <HugeiconsIcon
-                icon={Briefcase01Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mx-auto mb-3 text-primary"
-              />
-              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                100+
-              </div>
-              <div className="text-muted-foreground text-sm">
-                Brands Served Since 2015
-              </div>
-            </div>
-            <div className="text-center">
-              <HugeiconsIcon
-                icon={ChartIncreaseIcon}
-                size={28}
-                strokeWidth={1.5}
-                className="mx-auto mb-3 text-primary"
-              />
-              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                $200M
-              </div>
-              <div className="text-muted-foreground text-sm">
-                Total Traffic Generated
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Story Section */}
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="mb-6 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 Our Story
               </h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
@@ -210,6 +160,56 @@ function AboutPage() {
                   className="text-primary"
                 />
               </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Stats */}
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 sm:grid-cols-3">
+            <div className="text-center">
+              <HugeiconsIcon
+                icon={Clock01Icon}
+                size={28}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
+                10+
+              </div>
+              <div className="text-muted-foreground text-sm">
+                Years Experience
+              </div>
+            </div>
+            <div className="text-center">
+              <HugeiconsIcon
+                icon={Briefcase01Icon}
+                size={28}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
+                100+
+              </div>
+              <div className="text-muted-foreground text-sm">
+                Brands Served Since 2015
+              </div>
+            </div>
+            <div className="text-center">
+              <HugeiconsIcon
+                icon={ChartIncreaseIcon}
+                size={28}
+                strokeWidth={1.5}
+                className="mx-auto mb-3 text-primary"
+              />
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
+                $200M
+              </div>
+              <div className="text-muted-foreground text-sm">
+                Total Traffic Generated
+              </div>
             </div>
           </div>
         </div>

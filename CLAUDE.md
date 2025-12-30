@@ -15,7 +15,7 @@ When auditing a page against homepage standards, check **every** element:
 
 ### Hero Section
 - [ ] H1: `mb-6 lg:mb-8` (responsive margin)
-- [ ] Paragraph: `text-muted-foreground leading-relaxed lg:text-lg` (no `text-lg` or `tracking-wide`)
+- [ ] Paragraph: `text-muted-foreground leading-relaxed lg:text-lg` (responsive size ok, no base `text-lg`)
 - [ ] CTA container: `gap-3` (not `gap-4`)
 - [ ] Button icon: `size={18}` (not `size={20}`)
 
@@ -31,8 +31,8 @@ When auditing a page against homepage standards, check **every** element:
 
 ### Cards
 - [ ] Use Card component (not manual `ring-1 ring-foreground/10`)
-- [ ] CardTitle: no className override
-- [ ] CardDescription: no className override (except `leading-relaxed` if needed)
+- [ ] CardTitle: no className override (exception: team cards use `text-xl`)
+- [ ] CardDescription: no className override (exceptions: `leading-relaxed`, team cards use `text-primary`)
 
 ### Final CTA Section
 - [ ] Border: `border-y` (both top and bottom)
@@ -116,6 +116,37 @@ import { ArrowRight01Icon } from '@hugeicons/core-free-icons'
 </Card>
 ```
 
+### Two-Column Service Sections
+Used for GEO/SEO/PPL sections with faux visual demos. Alternate visual position for variety.
+```tsx
+<section className="px-6 py-16 lg:py-20">
+  <div className="mx-auto max-w-7xl">
+    <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+      {/* Content column */}
+      <div className="flex flex-col justify-center">
+        <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
+          Section Title
+        </h2>
+        <p className="mb-6 text-muted-foreground leading-relaxed">
+          Description text.
+        </p>
+        <div>
+          <Button render={<Link to="/page" />} size="lg">
+            CTA Text
+            <HugeiconsIcon icon={ArrowRight01Icon} size={18} strokeWidth={2} data-icon="inline-end" />
+          </Button>
+        </div>
+      </div>
+      {/* Visual demo column */}
+      <div className="flex items-center">
+        <Card className="w-full">...</Card>
+      </div>
+    </div>
+  </div>
+</section>
+```
+To alternate layout, add `lg:order-1` and `lg:order-2` to swap columns on desktop.
+
 ---
 
 ## Typography
@@ -131,8 +162,6 @@ import { ArrowRight01Icon } from '@hugeicons/core-free-icons'
 | CardTitle | Component default (`font-medium text-base`) |
 | CardDescription | Component default (`text-muted-foreground text-sm`) |
 
-**Exception:** Homepage GEO/SEO/PPL cards use `text-2xl lg:text-3xl` on CardTitle as sub-hero elements.
-
 ---
 
 ## Spacing
@@ -140,7 +169,7 @@ import { ArrowRight01Icon } from '@hugeicons/core-free-icons'
 | Context | Classes |
 |---------|---------|
 | Standard section | `py-16 lg:py-20` |
-| Hero section | `pt-16 pb-8 lg:pt-20 lg:pb-10` |
+| Hero section | `py-16 lg:py-20` (same as standard) |
 | Bordered section | `border-border border-y px-6 py-16 lg:py-20` |
 | Section container | `px-6` with `mx-auto max-w-7xl` |
 
@@ -274,7 +303,7 @@ convex/                # Backend (schema, queries, mutations)
 
 ## Extended Docs
 
-- `docs/MAIA-STYLE-GUIDE.md` - Visual design patterns
 - `docs/RESTORE-ADMIN-CMS.md` - Re-enable admin routes
 - `docs/BLOG-CMS.md` - Blog architecture
 - `docs/CLOUDFLARE-IMAGES.md` - Image CDN setup
+- `docs/KNOWN-ISSUES.md` - Platform limitations (iOS Safari)
