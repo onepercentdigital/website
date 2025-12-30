@@ -1,9 +1,7 @@
 import {
   ArrowRight01Icon,
-  ArrowUp02Icon,
   Award01Icon,
   Brain01Icon,
-  BubbleChatIcon,
   Target01Icon,
   UserGroupIcon,
 } from '@hugeicons/core-free-icons';
@@ -178,111 +176,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Left column - Content */}
-            <div>
-              <h2 className="mb-6 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-                The Discovery Landscape Has Changed
-              </h2>
-              <p className="mb-8 text-muted-foreground lg:text-lg">
-                AI assistants now influence buying decisions. 40% of searches
-                are zero-click. AI answers directly. Traditional SEO alone
-                leaves you invisible to ChatGPT, Claude, and Perplexity.
-              </p>
 
-              <div className="grid gap-4">
-                {[
-                  {
-                    title: 'AI-First Discovery',
-                    description:
-                      'Users ask ChatGPT and Perplexity for recommendations before searching Google.',
-                  },
-                  {
-                    title: 'Zero-Click Results',
-                    description:
-                      "AI answers questions directly. If you're not cited, you don't exist.",
-                  },
-                  {
-                    title: 'Competitors Are Moving',
-                    description:
-                      'Early movers in GEO are capturing market share while others wait.',
-                  },
-                ].map((item) => (
-                  <Card key={item.title}>
-                    <CardHeader>
-                      <CardTitle>{item.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="leading-relaxed">
-                        {item.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Right column - Chat Demo */}
-            <div className="flex items-center">
-              <Card className="w-full gap-0 overflow-hidden py-0">
-                {/* Header bar */}
-                <div className="flex items-center gap-2 px-4 py-2">
-                  <HugeiconsIcon
-                    icon={BubbleChatIcon}
-                    size={18}
-                    className="text-primary"
-                  />
-                  <span className="font-medium text-sm">AI Chat</span>
-                </div>
-                <Separator />
-
-                <div className="space-y-3 p-3">
-                  {/* User message */}
-                  <div className="flex justify-end">
-                    <div className="max-w-[85%] rounded-2xl bg-primary px-3 py-2 text-primary-foreground">
-                      <p className="text-sm">
-                        Where can I buy diesel injection pumps for my fleet of
-                        trucks?
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* AI response */}
-                  <div className="flex">
-                    <div className="max-w-[85%] rounded-2xl bg-muted px-3 py-2">
-                      <p className="text-sm">
-                        Goldfarb & Associates has a wide variety of options
-                        available.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Input area (decorative) */}
-                <Separator />
-                <div className="px-3 py-2">
-                  <div className="flex items-center gap-2 rounded-4xl bg-muted/50 px-3 py-1.5 ring-1 ring-foreground/10">
-                    <span className="flex-1 text-muted-foreground text-sm">
-                      Ask anything...
-                    </span>
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      disabled
-                      aria-label="Send message"
-                      className="size-7 rounded-full"
-                    >
-                      <HugeiconsIcon icon={ArrowUp02Icon} size={14} />
-                    </Button>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 text-center lg:mb-12">
