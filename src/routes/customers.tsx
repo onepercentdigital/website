@@ -102,7 +102,7 @@ function CustomersPage() {
                 className="mx-auto mb-3 text-primary"
               />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl xl:text-8xl">
-                300+
+                100+
               </div>
               <div className="text-muted-foreground tracking-wide">
                 Industry-Leading Companies
@@ -159,7 +159,7 @@ function CustomersPage() {
             {customers.map((customer) => (
               <div
                 key={customer.id}
-                className="group flex items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+                className="group flex items-center justify-center rounded-2xl bg-card p-6 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
               >
                 {customer.logo ? (
                   <img
@@ -196,7 +196,7 @@ function CustomersPage() {
               {testimonialsCustomers.map((customer) => (
                 <div
                   key={customer.id}
-                  className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm"
+                  className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
                 >
                   <div className="mb-6 text-2xl text-primary">"</div>
                   <p className="mb-6 text-foreground leading-relaxed">
@@ -246,7 +246,7 @@ function CustomersPage() {
               return (
                 <div
                   key={category.id}
-                  className="rounded-2xl border border-border bg-card p-8"
+                  className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
                 >
                   <HugeiconsIcon
                     icon={IconComponent}
@@ -271,7 +271,7 @@ function CustomersPage() {
       {featuredCustomer?.metrics && (
         <section className="border-border border-y bg-background px-6 py-20 lg:py-32">
           <div className="mx-auto max-w-7xl">
-            <div className="overflow-hidden rounded-2xl border-2 border-border bg-card">
+            <div className="overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
                   <div className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1 font-semibold text-primary text-xs uppercase tracking-widest">

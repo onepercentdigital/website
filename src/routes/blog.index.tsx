@@ -88,7 +88,7 @@ function BlogIndexPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="border-border border-t px-6 py-20 lg:py-32">
+      <section className="px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
             Ready to Put These Insights Into Action?
@@ -168,7 +168,7 @@ function BlogPostCard({ post }: BlogPostCardProps) {
       params={{ slug: post.slug }}
       className="block h-full"
     >
-      <article className="flex h-full flex-col rounded-2xl border border-border bg-card transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+      <article className="flex h-full flex-col rounded-2xl bg-card ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
         {/* Featured Image */}
         {post.featuredImage ? (
           <img
@@ -200,7 +200,7 @@ function BlogPostCard({ post }: BlogPostCardProps) {
           </p>
 
           {/* Metadata */}
-          <div className="flex flex-wrap items-center gap-4 border-border border-t pt-4 text-muted-foreground text-xs tracking-wide">
+          <div className="flex flex-wrap items-center gap-4 pt-4 text-muted-foreground text-xs tracking-wide">
             <div className="flex items-center gap-1">
               <HugeiconsIcon
                 icon={Calendar01Icon}

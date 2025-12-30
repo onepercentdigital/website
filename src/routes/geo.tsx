@@ -286,7 +286,7 @@ function GEOPage() {
                 trust and reference.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     400%
                   </div>
@@ -294,7 +294,7 @@ function GEOPage() {
                     Increase in AI Searches Monthly
                   </div>
                 </div>
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     10%
                   </div>
@@ -302,7 +302,7 @@ function GEOPage() {
                     Increase in AI Usage Monthly
                   </div>
                 </div>
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     First
                   </div>

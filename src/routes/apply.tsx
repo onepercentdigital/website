@@ -251,10 +251,10 @@ function ApplyPage() {
                 className="mx-auto mb-3 text-primary"
               />
               <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
-                300+
+                100+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Businesses Served Since 2012
+                Businesses Served Since 2015
               </div>
             </div>
 
@@ -339,7 +339,7 @@ function ApplyPage() {
                 What industries do you work with?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
-                Since 2012, we've helped over 300 businesses across North
+                Since 2015, we've helped over 100 businesses across North
                 America in diverse industries, from hospitality and E-commerce
                 to manufacturing and professional services. We're frequently
                 approached by multinational companies, digital marketing

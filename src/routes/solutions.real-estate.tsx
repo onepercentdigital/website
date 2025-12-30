@@ -123,7 +123,7 @@ function RealEstatePage() {
               return (
                 <div
                   key={challenge.title}
-                  className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg"
+                  className="flex flex-col rounded-2xl bg-card p-6 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
                 >
                   {icon && (
                     <HugeiconsIcon
@@ -163,7 +163,7 @@ function RealEstatePage() {
               const icon = iconMap[step.icon];
               return (
                 <div key={step.title} className="relative">
-                  <div className="flex flex-col rounded-2xl border border-border bg-card p-6">
+                  <div className="flex flex-col rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
                     <div className="mb-4 flex items-start justify-between">
                       <div className="font-bold text-4xl text-primary">
                         0{index + 1}
@@ -207,7 +207,7 @@ function RealEstatePage() {
             {solution.services.map((service) => (
               <div
                 key={service.title}
-                className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg"
+                className="flex flex-col rounded-2xl bg-card p-6 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
               >
                 <h3 className="mb-3 font-bold text-xl leading-tight">
                   {service.title}

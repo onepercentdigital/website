@@ -91,7 +91,7 @@ function BlogPostPage() {
       <SEO structuredData={[{ type: 'Article', data: articleSchema }]} />
 
       {/* Breadcrumbs */}
-      <nav className="border-border border-b bg-muted/30 px-6 py-4">
+      <nav className="px-6 py-4">
         <div className="mx-auto max-w-4xl">
           <div className="flex items-center gap-2 text-sm">
             <Link
@@ -205,11 +205,11 @@ function BlogPostPage() {
       </article>
 
       {/* Back to Blog CTA */}
-      <section className="border-border border-t bg-muted/30 px-6 py-12">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 font-semibold text-foreground transition-colors hover:border-primary hover:bg-primary/5"
+            className="inline-flex items-center gap-2 rounded-2xl bg-card px-6 py-3 font-semibold text-foreground ring-1 ring-foreground/10 transition-colors hover:ring-primary/50"
           >
             ← Back to All Posts
           </Link>

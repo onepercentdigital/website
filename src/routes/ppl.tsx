@@ -319,7 +319,7 @@ function PayPerLeadPage() {
                 performance-based marketing.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     100+
                   </div>
@@ -327,7 +327,7 @@ function PayPerLeadPage() {
                     Businesses Served
                   </div>
                 </div>
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     100%
                   </div>
@@ -335,7 +335,7 @@ function PayPerLeadPage() {
                     Exclusive Leads
                   </div>
                 </div>
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     $0
                   </div>

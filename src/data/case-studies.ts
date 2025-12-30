@@ -235,7 +235,7 @@ export function getCaseStudyById(id: string): CaseStudy | undefined {
  */
 export function getAggregateMetrics() {
   return {
-    totalClients: 300,
+    totalClients: 100,
     averageGrowth: '8X',
     industriesServed: 'All',
   };

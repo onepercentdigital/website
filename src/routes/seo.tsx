@@ -287,15 +287,15 @@ function SEOPage() {
                 revenue month after month.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
-                    300+
+                    100+
                   </div>
                   <div className="mt-1 text-muted-foreground text-sm tracking-wide">
                     Businesses Served
                   </div>
                 </div>
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     8X
                   </div>
@@ -303,7 +303,7 @@ function SEOPage() {
                     Avg Traffic Growth
                   </div>
                 </div>
-                <div className="rounded-xl bg-card p-4 ring-1 ring-foreground/10">
+                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     $200M+
                   </div>
@@ -477,7 +477,7 @@ function SEOPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
-                    300+
+                    100+
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
                     Businesses Served
@@ -485,7 +485,7 @@ function SEOPage() {
                 </div>
                 <div>
                   <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
-                    13+
+                    10+
                   </div>
                   <div className="mt-2 text-muted-foreground tracking-wide">
                     Years of Experience

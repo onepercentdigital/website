@@ -159,7 +159,7 @@ function CaseStudiesPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-2 border-border bg-card p-8 shadow-sm lg:p-12">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 lg:p-12">
               {/* Metrics Grid */}
               <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {featuredStudy.metrics.map((metric) => (
@@ -312,7 +312,7 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
   // For now, cards are non-clickable but styled to indicate future interactivity
 
   return (
-    <div className="group flex h-full cursor-pointer flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+    <div className="group flex h-full cursor-pointer flex-col rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
       {/* Industry Badge */}
       <div className="mb-4 inline-block self-start rounded-full bg-primary/10 px-3 py-1 font-medium text-primary text-xs uppercase tracking-wider">
         {study.industry}

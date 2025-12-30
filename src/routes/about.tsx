@@ -19,7 +19,7 @@ export const Route = createFileRoute('/about')({
     generateMetaTags({
       title: 'About One Percent Digital | Meet the Team Behind Your Success',
       description:
-        'Meet the entrepreneurs behind One Percent Digital. With 12+ years of combined experience and multiple successful E-commerce brands, we understand what it takes to grow your business.',
+        'Meet the entrepreneurs behind One Percent Digital. With 10+ years of combined experience and multiple successful E-commerce brands, we understand what it takes to grow your business.',
       url: 'https://op.digital/about',
     }),
 });
@@ -89,7 +89,7 @@ function AboutPage() {
       </section>
 
       {/* Company Stats */}
-      <section className="border-border border-y bg-muted/30 px-6 py-20 lg:py-32">
+      <section className="border-border border-y px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 sm:grid-cols-3">
             <div className="text-center">
@@ -100,7 +100,7 @@ function AboutPage() {
                 className="mx-auto mb-3 text-primary"
               />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl">
-                12+
+                10+
               </div>
               <div className="text-muted-foreground tracking-wide">
                 Years Experience
@@ -114,10 +114,10 @@ function AboutPage() {
                 className="mx-auto mb-3 text-primary"
               />
               <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl">
-                300+
+                100+
               </div>
               <div className="text-muted-foreground tracking-wide">
-                Brands Served Since 2012
+                Brands Served Since 2015
               </div>
             </div>
             <div className="text-center">
@@ -155,7 +155,7 @@ function AboutPage() {
                 business online.
               </p>
               <p className="mb-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
-                Since 2012, our team has worked with over 300 brands across
+                Since 2015, our team has worked with over 100 brands across
                 every industry imaginable. We've navigated countless Google
                 algorithm updates, scaled businesses through multiple economic
                 cycles, and helped our clients capture maximum market share in
@@ -208,7 +208,7 @@ function AboutPage() {
       </section>
 
       {/* Meet the Team Section */}
-      <section className="border-border border-y bg-muted/30 px-6 py-20 lg:py-32">
+      <section className="border-border border-y px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
@@ -224,7 +224,7 @@ function AboutPage() {
             {teamMembers.map((member) => (
               <div
                 key={member.name}
-                className="rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg"
+                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
               >
                 <div className="mb-6 flex justify-center">
                   <div className="flex size-20 items-center justify-center rounded-full bg-primary/10 font-bold text-2xl text-primary">
@@ -266,7 +266,7 @@ function AboutPage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Briefcase01Icon}
                 size={32}
@@ -284,7 +284,7 @@ function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={UserGroupIcon}
                 size={32}
@@ -302,7 +302,7 @@ function AboutPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Award01Icon}
                 size={32}
@@ -313,7 +313,7 @@ function AboutPage() {
                 Proven at Scale
               </h3>
               <p className="text-muted-foreground leading-relaxed tracking-wide">
-                With over 300 brands served since 2012 and multiple co-founded
+                With over 100 brands served since 2015 and multiple co-founded
                 E-commerce ventures, our strategies aren't theoretical. They're
                 battle-tested. We've scaled businesses through algorithm
                 updates, market changes, and competitive pressures. We know what
@@ -331,7 +331,7 @@ function AboutPage() {
             Ready to Work with a Team That Gets It?
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-            Join the 300+ brands that have partnered with entrepreneurs who
+            Join the 100+ brands that have partnered with entrepreneurs who
             understand GEO, SEO, and PPL. Let's grow your company together.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

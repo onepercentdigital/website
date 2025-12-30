@@ -96,7 +96,7 @@ function EnterprisePage() {
       </section>
 
       {/* What Makes Enterprise Different */}
-      <section className="border-border border-y bg-muted/30 px-6 py-20 lg:py-32">
+      <section className="border-border border-y px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
@@ -135,7 +135,7 @@ function EnterprisePage() {
 
           {/* Mini Stats */}
           <div className="mt-16 grid gap-8 sm:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-8 text-center">
+            <div className="rounded-2xl bg-card p-8 text-center ring-1 ring-foreground/10">
               <div className="mb-2 font-extrabold text-4xl text-primary tracking-tight lg:text-6xl">
                 Worldwide
               </div>
@@ -143,7 +143,7 @@ function EnterprisePage() {
                 Brand Visibility
               </div>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-8 text-center">
+            <div className="rounded-2xl bg-card p-8 text-center ring-1 ring-foreground/10">
               <div className="mb-2 font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
                 24/7
               </div>
@@ -169,7 +169,7 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-4">
-            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">01</div>
                 <HugeiconsIcon
@@ -189,7 +189,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">02</div>
                 <HugeiconsIcon
@@ -209,7 +209,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">03</div>
                 <HugeiconsIcon
@@ -229,7 +229,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
               <div className="mb-4 flex items-start justify-between">
                 <div className="font-bold text-4xl text-primary">04</div>
                 <HugeiconsIcon
@@ -253,7 +253,7 @@ function EnterprisePage() {
       </section>
 
       {/* Enterprise Features */}
-      <section className="border-border border-y bg-muted/30 px-6 py-20 lg:py-32">
+      <section className="border-border border-y px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-6xl">
@@ -266,7 +266,7 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={UserGroupIcon}
                 size={32}
@@ -283,7 +283,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={ChartLineData01Icon}
                 size={32}
@@ -300,7 +300,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Shield01Icon}
                 size={32}
@@ -316,7 +316,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Globe02Icon}
                 size={32}
@@ -333,7 +333,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={HeadphonesIcon}
                 size={32}
@@ -350,7 +350,7 @@ function EnterprisePage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={FlashIcon}
                 size={32}
@@ -383,7 +383,7 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Target01Icon}
                 size={32}
@@ -452,7 +452,7 @@ function EnterprisePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Search01Icon}
                 size={32}
@@ -521,7 +521,7 @@ function EnterprisePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Brain01Icon}
                 size={32}
@@ -590,7 +590,7 @@ function EnterprisePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Globe02Icon}
                 size={32}
@@ -659,7 +659,7 @@ function EnterprisePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={GraduationScrollIcon}
                 size={32}
@@ -728,7 +728,7 @@ function EnterprisePage() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={DollarCircleIcon}
                 size={32}
@@ -801,7 +801,7 @@ function EnterprisePage() {
       </section>
 
       {/* Enterprise Client Results */}
-      <section className="border-border border-y bg-muted/30 px-6 py-20 lg:py-32">
+      <section className="border-border border-y px-6 py-20 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-4xl tracking-tight lg:text-6xl">
@@ -823,7 +823,7 @@ function EnterprisePage() {
               </p>
 
               <div className="grid gap-6 sm:grid-cols-3">
-                <div className="rounded-2xl border border-border bg-card p-6">
+                <div className="rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
                   <div className="mb-2 font-extrabold text-3xl text-primary tracking-tight sm:text-4xl">
                     $200M
                   </div>
@@ -831,7 +831,7 @@ function EnterprisePage() {
                     Revenue Generated
                   </div>
                 </div>
-                <div className="rounded-2xl border border-border bg-card p-6">
+                <div className="rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
                   <div className="mb-2 font-extrabold text-3xl text-primary tracking-tight sm:text-4xl">
                     8X
                   </div>
@@ -839,7 +839,7 @@ function EnterprisePage() {
                     Average Growth Rate
                   </div>
                 </div>
-                <div className="rounded-2xl border border-border bg-card p-6">
+                <div className="rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
                   <div className="mb-2 font-extrabold text-3xl text-primary tracking-tight sm:text-4xl">
                     1000%
                   </div>

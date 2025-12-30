@@ -105,7 +105,7 @@ function SolutionsLandingPage() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Agreement01Icon}
                 size={32}
@@ -120,7 +120,7 @@ function SolutionsLandingPage() {
                 understand the nuances of how customers search in your industry.
               </p>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={Building06Icon}
                 size={32}
@@ -135,7 +135,7 @@ function SolutionsLandingPage() {
                 tailored to each vertical's unique challenges and opportunities.
               </p>
             </div>
-            <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
               <HugeiconsIcon
                 icon={ArrowRight01Icon}
                 size={32}
@@ -174,7 +174,7 @@ function SolutionsLandingPage() {
                   key={solution.id}
                   // biome-ignore lint/suspicious/noExplicitAny: Solutions use static routes, slug from data maps to valid routes
                   to={`/solutions/${solution.slug}` as any}
-                  className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/50 hover:shadow-lg"
+                  className="group flex flex-col rounded-2xl bg-card p-6 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
                 >
                   <HugeiconsIcon
                     icon={icon}

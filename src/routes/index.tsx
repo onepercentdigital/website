@@ -40,27 +40,6 @@ export const Route = createFileRoute('/')({
     }),
 });
 
-// Client logos for the logo strip
-const clientLogos = [
-  {
-    name: 'Grove Bay Hospitality Group',
-    logo: '9e0346f0-bc70-4d85-b6dc-c8400746ce00',
-  },
-  { name: 'Stubborn Seed', logo: 'c98add49-898a-4f13-b6b1-563939a50d00' },
-  { name: 'Afni Careers', logo: '5149085e-50ad-45b9-c670-9f0cc73c7800' },
-  { name: 'H&R Agri-Power', logo: 'a3ace45a-c036-4a4e-30e6-58fd8c9bcf00' },
-  { name: 'Revology', logo: '7ab278bc-37c8-4d7e-21ee-ba2d463fa200' },
-  {
-    name: 'Goldfarb & Associates',
-    logo: '51e5ac33-a0d2-4cdb-668e-581cba411a00',
-  },
-  { name: 'Royal Covers', logo: '5bacc41c-abd7-4b66-feeb-da11c01c8f00' },
-  {
-    name: 'Modern House Numbers',
-    logo: 'b1f89b63-89bd-4d15-adee-bcd4bb958c00',
-  },
-];
-
 function HomePage() {
   return (
     <>
@@ -106,46 +85,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      {/* Client Logo Strip - Ticker Style */}
-      <section className="overflow-hidden py-8">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="group relative overflow-hidden">
-            {/* Fade edges */}
-            <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-20 bg-linear-to-r from-background to-transparent" />
-            <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-20 bg-linear-to-l from-background to-transparent" />
 
-            {/* Scrolling track */}
-            <div className="group-hover:paused flex w-fit animate-marquee">
-              {/* First set of logos */}
-              {clientLogos.map((client) => (
-                <div
-                  key={client.name}
-                  className="flex h-12 w-40 shrink-0 items-center justify-center px-6"
-                >
-                  <img
-                    src={getImageUrl(client.logo, 'thumbnail')}
-                    alt={client.name}
-                    className="h-8 max-w-full object-contain opacity-60 grayscale transition-opacity hover:opacity-100 lg:h-10 dark:invert"
-                  />
-                </div>
-              ))}
-              {/* Duplicate set for seamless loop */}
-              {clientLogos.map((client) => (
-                <div
-                  key={`${client.name}-dup`}
-                  className="flex h-12 w-40 shrink-0 items-center justify-center px-6"
-                >
-                  <img
-                    src={getImageUrl(client.logo, 'thumbnail')}
-                    alt={client.name}
-                    className="h-8 max-w-full object-contain opacity-60 grayscale transition-opacity hover:opacity-100 lg:h-10 dark:invert"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Three Service Cards */}
       <section className="px-6 py-8 lg:py-12">
         <div className="mx-auto max-w-4xl">
@@ -201,8 +141,8 @@ function HomePage() {
             {[
               {
                 icon: Award01Icon,
-                value: '300+',
-                label: 'Brands Served Since 2012',
+                value: '100+',
+                label: 'Brands Served Since 2015',
               },
               {
                 icon: Target01Icon,
@@ -216,7 +156,7 @@ function HomePage() {
               },
               {
                 icon: Brain01Icon,
-                value: '12+',
+                value: '10+',
                 label: 'Years of Experience',
               },
             ].map((stat) => (
@@ -411,10 +351,10 @@ function HomePage() {
                   <div className="flex flex-col justify-center lg:col-span-3">
                     <div className="mb-6">
                       <span className="font-extrabold text-5xl text-primary tracking-tight lg:text-6xl">
-                        300+
+                        100+
                       </span>
                       <span className="ml-3 text-muted-foreground">
-                        Businesses Served Since 2012
+                        Businesses Served Since 2015
                       </span>
                     </div>
                     <p className="text-foreground leading-relaxed">
@@ -683,7 +623,7 @@ function HomePage() {
                 icon: Award01Icon,
                 title: 'Proven Scale',
                 description:
-                  "300+ brands across every industry. We've seen what works and what doesn't.",
+                  "100+ brands across every industry. We've seen what works and what doesn't.",
               },
             ].map((item) => (
               <Card key={item.title}>

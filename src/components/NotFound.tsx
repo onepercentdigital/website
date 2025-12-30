@@ -33,7 +33,7 @@ const popularPages = [
 
 export function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-secondary/20">
+    <div className="min-h-screen bg-linear-to-b from-background via-background to-secondary/20">
       {/* Hero Section */}
       <div className="relative overflow-hidden py-20 md:py-32">
         <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-50" />

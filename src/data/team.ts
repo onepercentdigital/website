@@ -18,7 +18,7 @@ export const team: TeamMember[] = [
     initials: 'LJ',
     title: 'Co-Founder & SEO Lead Architect',
     bio: [
-      "Having worked with over 300 brands since 2012, Luke is a seasoned expert in top ranking SEO engineering and scaling strategies. His unique talent lies in effortlessly navigating Google algorithm updates while continuously boosting each client's online presence and securing maximum market share in their industry.",
+      "Having worked with over 100 brands since 2015, Luke is a seasoned expert in top ranking SEO engineering and scaling strategies. His unique talent lies in effortlessly navigating Google algorithm updates while continuously boosting each client's online presence and securing maximum market share in their industry.",
       "In addition to his SEO expertise, Luke co-owns multiple thriving E-commerce brands. This hands-on experience equips him with the insights needed to manage various marketing channels effectively at scale. All this skill and knowledge make him an SEO expert you can't afford to miss.",
     ],
   },
