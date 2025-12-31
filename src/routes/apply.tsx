@@ -17,6 +17,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/apply')({
@@ -34,7 +41,7 @@ function ApplyPage() {
   return (
     <>
       {/* Hero Section with Calendly Embed */}
-      <section className="bg-background px-6 py-12 lg:py-16">
+      <section className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-start gap-12 lg:grid-cols-2">
             {/* Left: Hero Content */}
@@ -42,7 +49,7 @@ function ApplyPage() {
               <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl">
                 Apply To Work With Us
               </h1>
-              <p className="mb-8 text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
+              <p className="mb-10 text-muted-foreground leading-relaxed lg:text-lg">
                 We partner with serious brands ready to grow through GEO, SEO,
                 and PPL. Apply to see if you qualify. We'll evaluate your
                 business and determine if we're the right fit.
@@ -53,7 +60,7 @@ function ApplyPage() {
                 <div className="flex items-start gap-3">
                   <HugeiconsIcon
                     icon={Target01Icon}
-                    size={24}
+                    size={28}
                     strokeWidth={1.5}
                     className="mt-0.5 shrink-0 text-primary"
                   />
@@ -71,7 +78,7 @@ function ApplyPage() {
                 <div className="flex items-start gap-3">
                   <HugeiconsIcon
                     icon={ChartIncreaseIcon}
-                    size={24}
+                    size={28}
                     strokeWidth={1.5}
                     className="mt-0.5 shrink-0 text-primary"
                   />
@@ -89,7 +96,7 @@ function ApplyPage() {
                 <div className="flex items-start gap-3">
                   <HugeiconsIcon
                     icon={Idea01Icon}
-                    size={24}
+                    size={28}
                     strokeWidth={1.5}
                     className="mt-0.5 shrink-0 text-primary"
                   />
@@ -98,8 +105,8 @@ function ApplyPage() {
                       Growth Strategy Discussion
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Explore how GEO, SEO, and pay-per-lead campaigns can
-                      accelerate your growth
+                      Explore how GEO, SEO, and PPL campaigns can accelerate
+                      your growth
                     </p>
                   </div>
                 </div>
@@ -107,7 +114,7 @@ function ApplyPage() {
                 <div className="flex items-start gap-3">
                   <HugeiconsIcon
                     icon={DollarCircleIcon}
-                    size={24}
+                    size={28}
                     strokeWidth={1.5}
                     className="mt-0.5 shrink-0 text-primary"
                   />
@@ -125,7 +132,7 @@ function ApplyPage() {
                 <div className="flex items-start gap-3">
                   <HugeiconsIcon
                     icon={Shield01Icon}
-                    size={24}
+                    size={28}
                     strokeWidth={1.5}
                     className="mt-0.5 shrink-0 text-primary"
                   />
@@ -152,108 +159,124 @@ function ApplyPage() {
       </section>
 
       {/* What to Expect Section */}
-      <section className="border-border border-y bg-background px-6 py-20 lg:py-32">
+      <section className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               What to Expect
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-2xl text-muted-foreground">
               Here's how our consultation process works.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Step 1 */}
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">01</div>
-                <HugeiconsIcon
-                  icon={ArrowRight01Icon}
-                  size={24}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">Schedule a Call</h3>
-              <p className="text-muted-foreground leading-relaxed tracking-wide">
-                Choose a convenient time using the scheduler above. Takes less
-                than 2 minutes.
-              </p>
-            </div>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">01</div>
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle className="text-xl">Schedule a Call</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Choose a convenient time using the scheduler above. Takes less
+                  than 2 minutes.
+                </CardDescription>
+              </CardContent>
+            </Card>
 
             {/* Step 2 */}
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">02</div>
-                <HugeiconsIcon
-                  icon={Target01Icon}
-                  size={24}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">We Do Our Homework</h3>
-              <p className="text-muted-foreground leading-relaxed tracking-wide">
-                Before our call, we research your business, industry, and
-                current search presence.
-              </p>
-            </div>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">02</div>
+                  <HugeiconsIcon
+                    icon={Target01Icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle className="text-xl">We Do Our Homework</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Before our call, we research your business, industry, and
+                  current search presence.
+                </CardDescription>
+              </CardContent>
+            </Card>
 
             {/* Step 3 */}
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">03</div>
-                <HugeiconsIcon
-                  icon={UserGroupIcon}
-                  size={24}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">Qualification Call</h3>
-              <p className="text-muted-foreground leading-relaxed tracking-wide">
-                A quick video call to discuss your goals and determine if we're
-                the right fit.
-              </p>
-            </div>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">03</div>
+                  <HugeiconsIcon
+                    icon={UserGroupIcon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle className="text-xl">Qualification Call</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  A quick video call to discuss your goals and determine if
+                  we're the right fit.
+                </CardDescription>
+              </CardContent>
+            </Card>
 
             {/* Step 4 */}
-            <div className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">04</div>
-                <HugeiconsIcon
-                  icon={Idea01Icon}
-                  size={24}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">Next Steps</h3>
-              <p className="text-muted-foreground leading-relaxed tracking-wide">
-                If we're a good fit, we'll outline a custom strategy and
-                partnership proposal.
-              </p>
-            </div>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">04</div>
+                  <HugeiconsIcon
+                    icon={Idea01Icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle className="text-xl">Next Steps</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  If we're a good fit, we'll outline a custom strategy and
+                  partnership proposal.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Social Proof Section */}
-      <section className="border-border border-b bg-background px-6 py-20">
+      <section className="border-border border-y bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="text-center">
               <HugeiconsIcon
                 icon={ChartIncreaseIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mx-auto mb-3 text-primary"
               />
-              <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                 100+
               </div>
-              <div className="text-muted-foreground tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Businesses Served Since 2015
               </div>
             </div>
@@ -261,14 +284,14 @@ function ApplyPage() {
             <div className="text-center">
               <HugeiconsIcon
                 icon={DollarCircleIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mx-auto mb-3 text-primary"
               />
-              <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                 $200M+
               </div>
-              <div className="text-muted-foreground tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Revenue Driven for Clients
               </div>
             </div>
@@ -276,14 +299,14 @@ function ApplyPage() {
             <div className="text-center">
               <HugeiconsIcon
                 icon={ChartLineData01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mx-auto mb-3 text-primary"
               />
-              <div className="mb-2 font-extrabold text-5xl leading-none tracking-tight lg:text-7xl">
+              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                 8X
               </div>
-              <div className="text-muted-foreground tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Average Organic Growth
               </div>
             </div>
@@ -292,13 +315,13 @@ function ApplyPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Frequently Asked Questions
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-2xl text-muted-foreground">
               Common questions about working with us
             </p>
           </div>

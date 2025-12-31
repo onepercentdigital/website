@@ -12,6 +12,7 @@ import {
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   customerCategories,
   customers,
@@ -47,23 +48,23 @@ function CustomersPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background px-6 py-12 lg:py-16">
+      <section className="relative overflow-hidden bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
               Industry Leaders Who Trust Us
             </h1>
-            <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
+            <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               From Michelin-recognized restaurants to cutting-edge robotics
               companies, we help ambitious businesses win search and capture
               total mind share in their industries.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">
                 Apply To Work With Us
                 <HugeiconsIcon
                   icon={ArrowRight01Icon}
-                  size={20}
+                  size={18}
                   strokeWidth={2}
                   data-icon="inline-end"
                 />
@@ -80,14 +81,52 @@ function CustomersPage() {
         </div>
       </section>
 
-      {/* Aggregate Stats Section */}
-      <section className="border-border border-y bg-background px-6 py-20">
+      {/* Customer Logo Grid */}
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
+              Trusted by the Best
+            </h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground">
+              Companies across diverse industries choose us to power their
+              search success strategy.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
+            {customers.map((customer) => (
+              <Card
+                key={customer.id}
+                className="group transition-all hover:shadow-lg hover:shadow-primary/10"
+              >
+                <CardContent className="flex items-center justify-center">
+                  {customer.logo ? (
+                    <img
+                      src={getImageUrl(customer.logo, 'thumbnail')}
+                      alt={customer.name}
+                      className="h-auto w-full max-w-30 object-contain dark:invert"
+                    />
+                  ) : (
+                    <div className="text-center font-bold text-foreground text-sm transition-colors group-hover:text-primary lg:text-base">
+                      {customer.name}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Aggregate Stats Section */}
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Proven Results Across Industries
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <p className="mx-auto max-w-2xl text-muted-foreground">
               Our clients don't just rank well. They own their categories and
               drive measurable revenue growth.
             </p>
@@ -97,14 +136,14 @@ function CustomersPage() {
             <div className="text-center">
               <HugeiconsIcon
                 icon={Building01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mx-auto mb-3 text-primary"
               />
-              <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl xl:text-8xl">
+              <div className="mb-1 font-extrabold text-4xl text-primary tracking-tight lg:text-5xl">
                 100+
               </div>
-              <div className="text-muted-foreground tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Industry-Leading Companies
               </div>
             </div>
@@ -112,14 +151,14 @@ function CustomersPage() {
             <div className="text-center">
               <HugeiconsIcon
                 icon={ChartIncreaseIcon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mx-auto mb-3 text-primary"
               />
-              <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl xl:text-8xl">
+              <div className="mb-1 font-extrabold text-4xl text-primary tracking-tight lg:text-5xl">
                 8X
               </div>
-              <div className="text-muted-foreground tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Average Traffic Growth
               </div>
             </div>
@@ -127,14 +166,14 @@ function CustomersPage() {
             <div className="text-center">
               <HugeiconsIcon
                 icon={Award01Icon}
-                size={32}
+                size={28}
                 strokeWidth={1.5}
                 className="mx-auto mb-3 text-primary"
               />
-              <div className="mb-2 font-extrabold text-5xl text-primary leading-none tracking-tight lg:text-7xl xl:text-8xl">
+              <div className="mb-1 font-extrabold text-4xl text-primary tracking-tight lg:text-5xl">
                 $200M+
               </div>
-              <div className="text-muted-foreground tracking-wide">
+              <div className="text-muted-foreground text-sm">
                 Revenue Generated for Clients
               </div>
             </div>
@@ -142,84 +181,46 @@ function CustomersPage() {
         </div>
       </section>
 
-      {/* Customer Logo Grid */}
-      <section className="px-6 py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
-              Trusted by the Best
-            </h2>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
-              Companies across diverse industries choose us to power their
-              search success strategy.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
-            {customers.map((customer) => (
-              <div
-                key={customer.id}
-                className="group flex items-center justify-center rounded-2xl bg-card p-6 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
-              >
-                {customer.logo ? (
-                  <img
-                    src={getImageUrl(customer.logo, 'thumbnail')}
-                    alt={customer.name}
-                    className="h-auto w-full max-w-30 object-contain dark:invert"
-                  />
-                ) : (
-                  <div className="text-center font-bold text-foreground text-sm transition-colors group-hover:text-primary lg:text-base">
-                    {customer.name}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Featured Testimonials */}
       {testimonialsCustomers.length > 0 && (
-        <section className="border-border border-y bg-background px-6 py-20 lg:py-32">
+        <section className="px-6 py-16 lg:py-20">
           <div className="mx-auto max-w-7xl">
-            <div className="mb-16 text-center">
-              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What Our Clients Say
               </h2>
-              <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mx-auto max-w-2xl text-muted-foreground">
                 Real results from real businesses that trust us to drive their
                 growth.
               </p>
             </div>
 
-            <div className="grid gap-8 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-4xl justify-center gap-8 lg:grid-cols-2">
               {testimonialsCustomers.map((customer) => (
-                <div
-                  key={customer.id}
-                  className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
-                >
-                  <div className="mb-6 text-2xl text-primary">"</div>
-                  <p className="mb-6 text-foreground leading-relaxed">
-                    {customer.testimonial?.quote}
-                  </p>
-                  <div className="flex items-center gap-3">
-                    {customer.logo && (
-                      <img
-                        src={getImageUrl(customer.logo, 'thumbnail')}
-                        alt={customer.name}
-                        className="h-10 w-auto object-contain dark:invert"
-                      />
-                    )}
-                    <div>
-                      <div className="font-semibold text-foreground">
-                        {customer.testimonial?.author}
-                      </div>
-                      <div className="text-muted-foreground text-sm">
-                        {customer.testimonial?.role}
+                <Card key={customer.id}>
+                  <CardContent>
+                    <p className="mb-6 text-foreground leading-relaxed italic">
+                      "{customer.testimonial?.quote}"
+                    </p>
+                    <div className="flex items-center gap-3">
+                      {customer.logo && (
+                        <img
+                          src={getImageUrl(customer.logo, 'thumbnail')}
+                          alt={customer.name}
+                          className="h-10 w-auto object-contain dark:invert"
+                        />
+                      )}
+                      <div>
+                        <div className="font-semibold text-foreground">
+                          {customer.testimonial?.author}
+                        </div>
+                        <div className="text-muted-foreground text-sm">
+                          {customer.testimonial?.role}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
@@ -227,13 +228,13 @@ function CustomersPage() {
       )}
 
       {/* By Industry Breakdown */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Winning Across Industries
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+            <p className="mx-auto max-w-2xl text-muted-foreground">
               Deep expertise in diverse verticals means we understand your
               market and know how to win.
             </p>
@@ -244,23 +245,22 @@ function CustomersPage() {
               const IconComponent = iconMap[category.icon] || Briefcase01Icon;
 
               return (
-                <div
-                  key={category.id}
-                  className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
-                >
-                  <HugeiconsIcon
-                    icon={IconComponent}
-                    size={32}
-                    strokeWidth={1.5}
-                    className="mb-4 text-primary"
-                  />
-                  <h3 className="mb-3 font-bold text-2xl lg:text-3xl">
-                    {category.name}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed tracking-wide">
-                    {category.description}
-                  </p>
-                </div>
+                <Card key={category.id}>
+                  <CardHeader>
+                    <HugeiconsIcon
+                      icon={IconComponent}
+                      size={28}
+                      strokeWidth={1.5}
+                      className="mb-2 text-primary"
+                    />
+                    <CardTitle className="text-xl">{category.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {category.description}
+                    </p>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>
@@ -269,18 +269,18 @@ function CustomersPage() {
 
       {/* Featured Case Study */}
       {featuredCustomer?.metrics && (
-        <section className="border-border border-y bg-background px-6 py-20 lg:py-32">
+        <section className="border-border border-y bg-background px-6 py-16 lg:py-20">
           <div className="mx-auto max-w-7xl">
-            <div className="overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
+            <Card className="overflow-hidden">
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
-                  <div className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1 font-semibold text-primary text-xs uppercase tracking-widest">
+                  <div className="mb-4 inline-block rounded-full bg-accent px-4 py-1 font-semibold text-primary text-xs uppercase">
                     Featured Success Story
                   </div>
                   <h2 className="mb-4 font-bold text-3xl leading-tight lg:text-4xl xl:text-5xl">
                     {featuredCustomer.name}
                   </h2>
-                  <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide">
+                  <p className="mb-8 text-muted-foreground leading-relaxed">
                     {featuredCustomer.testimonial?.quote}
                   </p>
                   <div className="mb-8 space-y-4">
@@ -292,7 +292,7 @@ function CustomersPage() {
                         <div className="font-bold text-3xl text-primary tracking-tight lg:text-4xl">
                           {metric.value}
                         </div>
-                        <div className="text-muted-foreground tracking-wide">
+                        <div className="text-muted-foreground">
                           {metric.description}
                         </div>
                       </div>
@@ -305,7 +305,7 @@ function CustomersPage() {
                       Read Full Case Study
                       <HugeiconsIcon
                         icon={ArrowRight01Icon}
-                        size={16}
+                        size={18}
                         strokeWidth={2}
                         data-icon="inline-end"
                       />
@@ -328,29 +328,29 @@ function CustomersPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
         </section>
       )}
 
       {/* Final CTA Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="border-border border-y px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-6 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+            <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
               Your Growth Story Starts Here
             </h2>
-            <p className="mb-8 text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
+            <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
               SEO for organic visibility. GEO for AI discovery. PPL for
               immediate leads. Pick one or combine all three. We help you scale
               with the right leads for your business.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">
                 Apply To Work With Us
                 <HugeiconsIcon
                   icon={ArrowRight01Icon}
-                  size={20}
+                  size={18}
                   strokeWidth={2}
                   data-icon="inline-end"
                 />

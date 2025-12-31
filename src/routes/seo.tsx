@@ -24,6 +24,13 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
@@ -233,18 +240,18 @@ function SEOPage() {
       <SEO structuredData={[serviceSchema]} />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background px-6 py-12 lg:py-16">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
+            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
               Drive Sustainable Growth Through Search Excellence
             </h1>
-            <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
+            <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Proven SEO strategies that deliver qualified traffic, higher
               rankings, and measurable ROI. Turn search engines into your most
               reliable growth channel.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">
                 Apply To Work With Us
                 <HugeiconsIcon
@@ -267,50 +274,50 @@ function SEOPage() {
       </section>
 
       {/* What is SEO Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What is Search Engine Optimization?
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-4 text-muted-foreground leading-relaxed">
                 SEO (Search Engine Optimization) is the practice of improving
                 your website's visibility in organic search results. When
                 potential customers search for solutions you provide, strategic
                 SEO ensures you appear at the top.
               </p>
-              <p className="mt-4 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-6 text-muted-foreground leading-relaxed">
                 Unlike paid advertising that stops when the budget runs out, SEO
                 builds compounding value. Every optimization creates lasting
                 improvements that continue driving qualified traffic, leads, and
                 revenue month after month.
               </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+              <div className="grid gap-4 sm:grid-cols-3">
+                <Card className="p-4">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     100+
                   </div>
-                  <div className="mt-1 text-muted-foreground text-sm tracking-wide">
+                  <div className="mt-1 text-muted-foreground text-sm">
                     Businesses Served
                   </div>
-                </div>
-                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+                </Card>
+                <Card className="p-4">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     8X
                   </div>
-                  <div className="mt-1 text-muted-foreground text-sm tracking-wide">
+                  <div className="mt-1 text-muted-foreground text-sm">
                     Avg Traffic Growth
                   </div>
-                </div>
-                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+                </Card>
+                <Card className="p-4">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     $200M+
                   </div>
-                  <div className="mt-1 text-muted-foreground text-sm tracking-wide">
+                  <div className="mt-1 text-muted-foreground text-sm">
                     Client Revenue Impact
                   </div>
-                </div>
+                </Card>
               </div>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-2xl">
@@ -326,179 +333,178 @@ function SEOPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Our SEO Process
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-3xl text-muted-foreground">
               A proven methodology that delivers consistent, measurable results
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step) => (
-              <div
-                key={step.number}
-                className="group rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
-              >
-                <div className="mb-4 flex items-start justify-between">
-                  <div className="font-bold text-4xl text-primary">
-                    {step.number}
+              <Card key={step.number}>
+                <CardHeader>
+                  <div className="mb-2 flex items-start justify-between">
+                    <div className="font-bold text-4xl text-primary">
+                      {step.number}
+                    </div>
+                    <HugeiconsIcon
+                      icon={step.icon}
+                      size={28}
+                      strokeWidth={1.5}
+                      className="text-muted-foreground"
+                    />
                   </div>
-                  <HugeiconsIcon
-                    icon={step.icon}
-                    size={24}
-                    strokeWidth={1.5}
-                    className="text-muted-foreground"
-                  />
-                </div>
-                <h3 className="mb-3 font-bold text-2xl">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed tracking-wide">
-                  {step.description}
-                </p>
-              </div>
+                  <CardTitle className="text-xl">{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="leading-relaxed">
+                    {step.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Key Benefits Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Why SEO Drives Business Growth
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-3xl text-muted-foreground">
               The most cost-effective, sustainable marketing channel
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
-              >
-                <HugeiconsIcon
-                  icon={benefit.icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="mb-4 text-primary"
-                />
-                <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed tracking-wide">
-                  {benefit.description}
-                </p>
-              </div>
+              <Card key={benefit.title}>
+                <CardHeader>
+                  <HugeiconsIcon
+                    icon={benefit.icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="mb-2 text-primary"
+                  />
+                  <CardTitle>{benefit.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="leading-relaxed">
+                    {benefit.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Service Offerings Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Comprehensive SEO Services
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-3xl text-muted-foreground">
               Everything you need to lead search results
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
-              >
-                <HugeiconsIcon
-                  icon={service.icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="mb-4 text-primary"
-                />
-                <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                  {service.title}
-                </h3>
-                <ul className="space-y-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <HugeiconsIcon
-                        icon={CheckmarkCircle02Icon}
-                        size={20}
-                        strokeWidth={2}
-                        className="mt-0.5 shrink-0 text-primary"
-                      />
-                      <span className="text-muted-foreground text-sm tracking-wide">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Card key={service.title}>
+                <CardHeader>
+                  <HugeiconsIcon
+                    icon={service.icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="mb-2 text-primary"
+                  />
+                  <CardTitle>{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2">
+                        <HugeiconsIcon
+                          icon={CheckmarkCircle02Icon}
+                          size={20}
+                          strokeWidth={2}
+                          className="mt-0.5 shrink-0 text-primary"
+                        />
+                        <span className="text-muted-foreground text-sm">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Results Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 Real Growth from Real Clients
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-6 text-muted-foreground leading-relaxed">
                 Our clients don't just see incremental improvements. They
                 experience transformative growth that fundamentally changes
                 their business trajectory.
               </p>
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              <div className="mb-8 grid gap-6 sm:grid-cols-2">
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     $200M+
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Client Revenue Generated
                   </div>
                 </div>
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     8X
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Average Traffic Increase
                   </div>
                 </div>
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     100+
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Businesses Served
                   </div>
                 </div>
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     10+
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Years of Experience
                   </div>
                 </div>
               </div>
-              <div className="mt-10 rounded-2xl bg-card p-6 ring-1 ring-foreground/10">
-                <p className="text-muted-foreground italic leading-relaxed tracking-wide">
+              <Card className="p-6">
+                <p className="mb-6 text-foreground leading-relaxed">
                   "Working with One Percent Digital transformed our online
                   presence. We went from page 5 to the top 3 results for our key
                   terms. The leads just keep coming."
                 </p>
-                <div className="mt-4 flex items-center gap-3">
+                <div className="flex items-center gap-4">
                   <img
                     src={getImageUrl(
                       '51e5ac33-a0d2-4cdb-668e-581cba411a00',
@@ -508,13 +514,15 @@ function SEOPage() {
                     className="h-10 w-auto object-contain dark:invert"
                   />
                   <div>
-                    <div className="font-semibold">Scott Goldfarb</div>
+                    <div className="font-medium text-foreground text-sm">
+                      Scott Goldfarb
+                    </div>
                     <div className="text-muted-foreground text-sm">
                       Owner, Goldfarb & Associates
                     </div>
                   </div>
                 </div>
-              </div>
+              </Card>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-2xl">
               <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
@@ -529,13 +537,13 @@ function SEOPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Frequently Asked Questions
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-2xl text-muted-foreground">
               Everything you need to know about SEO
             </p>
           </div>
@@ -555,17 +563,17 @@ function SEOPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative overflow-hidden bg-background px-6 py-20 lg:py-32">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
             Turn Search Into Your Most Profitable Channel
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
             Stop leaving money on the table. Your competitors are already
             investing in SEO. The question isn't whether to start, it's whether
             you can afford to wait any longer.
           </p>
-          <div className="mt-10">
+          <div className="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">
               Apply To Work With Us
               <HugeiconsIcon
@@ -575,10 +583,14 @@ function SEOPage() {
                 data-icon="inline-end"
               />
             </Button>
+            <Button
+              render={<Link to="/case-studies" />}
+              size="lg"
+              variant="outline"
+            >
+              View Case Studies
+            </Button>
           </div>
-          <p className="mt-6 text-muted-foreground text-sm tracking-wide">
-            No obligation • No sales pressure • Just a conversation
-          </p>
         </div>
       </section>
     </div>
