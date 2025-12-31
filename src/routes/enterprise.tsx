@@ -26,7 +26,13 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/enterprise')({
@@ -170,84 +176,92 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-4">
-            <Card className="p-8">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">01</div>
-                <HugeiconsIcon
-                  icon={Target01Icon}
-                  size={28}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">
-                Discovery & Enterprise Audit
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Multi-stakeholder assessment across all locations, brands, and
-                digital properties. We analyze your enterprise tech stack,
-                compliance requirements, and organizational structure.
-              </p>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">01</div>
+                  <HugeiconsIcon
+                    icon={Target01Icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle>Discovery & Enterprise Audit</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Multi-stakeholder assessment across all locations, brands, and
+                  digital properties. We analyze your enterprise tech stack,
+                  compliance requirements, and organizational structure.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">02</div>
-                <HugeiconsIcon
-                  icon={File01Icon}
-                  size={28}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">
-                Custom Strategy Development
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Scalable frameworks tailored to your organization. Custom
-                reporting dashboards, governance models, and strategies that
-                work across multiple markets and stakeholders.
-              </p>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">02</div>
+                  <HugeiconsIcon
+                    icon={File01Icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle>Custom Strategy Development</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Scalable frameworks tailored to your organization. Custom
+                  reporting dashboards, governance models, and strategies that
+                  work across multiple markets and stakeholders.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">03</div>
-                <HugeiconsIcon
-                  icon={HierarchySquare01Icon}
-                  size={28}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">
-                Implementation & Integration
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Seamless integration with your enterprise tools (Salesforce,
-                HubSpot, analytics platforms). White-glove onboarding with
-                dedicated training for all stakeholder groups.
-              </p>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">03</div>
+                  <HugeiconsIcon
+                    icon={HierarchySquare01Icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle>Implementation & Integration</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Seamless integration with your enterprise tools (Salesforce,
+                  HubSpot, analytics platforms). White-glove onboarding with
+                  dedicated training for all stakeholder groups.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <div className="mb-4 flex items-start justify-between">
-                <div className="font-bold text-4xl text-primary">04</div>
-                <HugeiconsIcon
-                  icon={ChartIncreaseIcon}
-                  size={28}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground"
-                />
-              </div>
-              <h3 className="mb-3 font-bold text-2xl">
-                Ongoing Optimization & Support
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Dedicated account team with priority support. Regular executive
-                reporting, quarterly business reviews, and continuous
-                optimization across all properties.
-              </p>
+            <Card>
+              <CardHeader>
+                <div className="mb-2 flex items-start justify-between">
+                  <div className="font-bold text-4xl text-primary">04</div>
+                  <HugeiconsIcon
+                    icon={ChartIncreaseIcon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="text-muted-foreground"
+                  />
+                </div>
+                <CardTitle>Ongoing Optimization & Support</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Dedicated account team with priority support. Regular
+                  executive reporting, quarterly business reviews, and
+                  continuous optimization across all properties.
+                </CardDescription>
+              </CardContent>
             </Card>
           </div>
         </div>
@@ -267,105 +281,118 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={UserGroupIcon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                Dedicated Account Management
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Your own dedicated account team who understands your business,
-                industry, and goals. Direct access to senior strategists and
-                technical specialists.
-              </p>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={UserGroupIcon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Dedicated Account Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Your own dedicated account team who understands your business,
+                  industry, and goals. Direct access to senior strategists and
+                  technical specialists.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={ChartLineData01Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                Custom Reporting & Analytics
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Executive dashboards tailored to your KPIs. Automated reporting,
-                competitive intelligence, and insights that align with your
-                business objectives.
-              </p>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={ChartLineData01Icon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Custom Reporting & Analytics</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Executive dashboards tailored to your KPIs. Automated
+                  reporting, competitive intelligence, and insights that align
+                  with your business objectives.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={Shield01Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                Enterprise Security & Compliance
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                SOC 2 compliance, GDPR adherence, and enterprise-grade security
-                protocols. Custom NDAs and security requirements accommodated.
-              </p>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={Shield01Icon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Enterprise Security & Compliance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  SOC 2 compliance, GDPR adherence, and enterprise-grade
+                  security protocols. Custom NDAs and security requirements
+                  accommodated.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={Globe02Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                Multi-Location/Brand Coordination
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Centralized strategy with local execution. Manage hundreds of
-                locations or multiple brands with consistent governance and
-                scalable processes.
-              </p>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={Globe02Icon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Multi-Location/Brand Coordination</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  Centralized strategy with local execution. Manage hundreds of
+                  locations or multiple brands with consistent governance and
+                  scalable processes.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={HeadphonesIcon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                White-Glove Support
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                24/7 priority support with dedicated account management.
-                Personalized service and quarterly business reviews tailored to
-                your needs.
-              </p>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={HeadphonesIcon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>White-Glove Support</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  24/7 priority support with dedicated account management.
+                  Personalized service and quarterly business reviews tailored
+                  to your needs.
+                </CardDescription>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={FlashIcon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                Advanced Integration Capabilities
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                API access for custom integrations. Seamless connections to
-                Salesforce, HubSpot, analytics platforms, and proprietary
-                enterprise systems.
-              </p>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={FlashIcon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Advanced Integration Capabilities</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="leading-relaxed">
+                  API access for custom integrations. Seamless connections to
+                  Salesforce, HubSpot, analytics platforms, and proprietary
+                  enterprise systems.
+                </CardDescription>
+              </CardContent>
             </Card>
           </div>
         </div>
@@ -384,418 +411,430 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={Target01Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Strategic Consulting & Planning
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Quarterly strategic planning sessions
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Executive stakeholder reporting
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Competitive intelligence & market analysis
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Multi-year roadmap development
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Budget planning & ROI forecasting
-                  </span>
-                </li>
-              </ul>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={Target01Icon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Strategic Consulting & Planning</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Quarterly strategic planning sessions
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Executive stakeholder reporting
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Competitive intelligence & market analysis
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Multi-year roadmap development
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Budget planning & ROI forecasting
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={Search01Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Enterprise SEO
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Enterprise site architecture optimization
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    International SEO & hreflang management
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Advanced schema markup & structured data
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Core Web Vitals optimization at scale
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Multi-location search presence
-                  </span>
-                </li>
-              </ul>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={Search01Icon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Enterprise SEO</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Enterprise site architecture optimization
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      International SEO & hreflang management
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Advanced schema markup & structured data
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Core Web Vitals optimization at scale
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Multi-location search presence
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={Brain01Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Enterprise GEO
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Multi-brand AI visibility strategy
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    ChatGPT, Claude & Perplexity optimization
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Enterprise knowledge graph development
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    AI citation monitoring at scale
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Competitive AI positioning
-                  </span>
-                </li>
-              </ul>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={Brain01Icon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Enterprise GEO</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Multi-brand AI visibility strategy
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      ChatGPT, Claude & Perplexity optimization
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Enterprise knowledge graph development
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      AI citation monitoring at scale
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Competitive AI positioning
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={Globe02Icon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Multi-Location Management
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Centralized local listings management
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Multi-location review management
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Location-specific landing pages
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Regional performance tracking
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Franchise/dealer network optimization
-                  </span>
-                </li>
-              </ul>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={Globe02Icon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Multi-Location Management</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Centralized local listings management
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Multi-location review management
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Location-specific landing pages
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Regional performance tracking
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Franchise/dealer network optimization
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={GraduationScrollIcon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Enterprise Training & Onboarding
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Custom training programs for stakeholders
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    White-glove onboarding process
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Documentation & playbook development
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Ongoing education & certification
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Change management support
-                  </span>
-                </li>
-              </ul>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={GraduationScrollIcon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Enterprise Training & Onboarding</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Custom training programs for stakeholders
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      White-glove onboarding process
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Documentation & playbook development
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Ongoing education & certification
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Change management support
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <HugeiconsIcon
-                icon={DollarCircleIcon}
-                size={28}
-                strokeWidth={1.5}
-                className="mb-4 text-primary"
-              />
-              <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                Enterprise Lead Generation
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Scalable pay-per-lead programs
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Multi-location campaign management
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Enterprise CRM integration
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Volume-based pricing tiers
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <HugeiconsIcon
-                    icon={CheckmarkCircle02Icon}
-                    size={20}
-                    strokeWidth={1.5}
-                    className="mt-1 shrink-0 text-primary"
-                  />
-                  <span className="text-muted-foreground text-sm">
-                    Dedicated lead quality management
-                  </span>
-                </li>
-              </ul>
+            <Card>
+              <CardHeader>
+                <HugeiconsIcon
+                  icon={DollarCircleIcon}
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-2 text-primary"
+                />
+                <CardTitle>Enterprise Lead Generation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Scalable pay-per-lead programs
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Multi-location campaign management
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Enterprise CRM integration
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Volume-based pricing tiers
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HugeiconsIcon
+                      icon={CheckmarkCircle02Icon}
+                      size={20}
+                      strokeWidth={1.5}
+                      className="mt-1 shrink-0 text-primary"
+                    />
+                    <span className="text-muted-foreground text-sm">
+                      Dedicated lead quality management
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
             </Card>
           </div>
         </div>

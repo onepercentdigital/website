@@ -13,6 +13,7 @@ import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkGfm from 'remark-gfm';
 import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
 import { generateMetaTags, getArticleSchema } from '@/lib/seo';
 import { api } from '../../convex/_generated/api';
 import 'highlight.js/styles/github-dark.css';
@@ -123,24 +124,24 @@ function BlogPostPage() {
         </div>
       </nav>
 
-      <article className="bg-background px-6 py-12 lg:py-20">
+      <article className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
           {/* Header */}
           <header className="mb-12">
             {/* Category Badge */}
             {category && (
-              <div className="mb-4 inline-block rounded-full bg-primary/10 px-3 py-1 font-medium text-primary text-xs uppercase tracking-wider">
+              <div className="mb-4 inline-block rounded-full bg-muted px-3 py-1 font-medium text-primary text-xs uppercase">
                 {category.name}
               </div>
             )}
 
             {/* Title */}
-            <h1 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl xl:text-6xl">
+            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
               {post.title}
             </h1>
 
             {/* Metadata */}
-            <div className="flex flex-wrap items-center gap-4 border-border border-y py-4 text-muted-foreground text-sm tracking-wide">
+            <div className="flex flex-wrap items-center gap-4 border-border border-y py-4 text-muted-foreground text-sm">
               <div className="flex items-center gap-2">
                 <HugeiconsIcon icon={UserIcon} size={16} strokeWidth={1.5} />
                 <span>{post.authorName}</span>
@@ -163,7 +164,7 @@ function BlogPostPage() {
 
             {/* Last Modified */}
             {post.publishedAt && post.modifiedAt > post.publishedAt + 60000 && (
-              <p className="mt-3 text-muted-foreground text-xs tracking-wide">
+              <p className="mt-3 text-muted-foreground text-xs">
                 Last updated: {modifiedDate}
               </p>
             )}
@@ -205,14 +206,11 @@ function BlogPostPage() {
       </article>
 
       {/* Back to Blog CTA */}
-      <section className="px-6 py-12">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 rounded-2xl bg-card px-6 py-3 font-semibold text-foreground ring-1 ring-foreground/10 transition-colors hover:ring-primary/50"
-          >
+          <Button render={<Link to="/blog" />} variant="outline" size="lg">
             ← Back to All Posts
-          </Link>
+          </Button>
         </div>
       </section>
     </>

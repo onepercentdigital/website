@@ -29,6 +29,13 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/ppl')({
@@ -264,18 +271,18 @@ function PayPerLeadPage() {
       <SEO structuredData={[serviceSchema]} />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background px-6 py-12 lg:py-16">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
+            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
               Exclusive Pre-Qualified Leads. Pay Only for Results.
             </h1>
-            <p className="mx-auto mb-8 max-w-2xl text-muted-foreground text-xl leading-relaxed tracking-wide lg:text-2xl">
+            <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               No retainers. No long-term contracts. No upfront fees. We fund
               your marketing and deliver pre-qualified leads in real-time. You
               only pay for prospects ready to buy.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button render={<Link to="/apply" />} size="lg">
                 Apply To Work With Us
                 <HugeiconsIcon
@@ -298,51 +305,51 @@ function PayPerLeadPage() {
       </section>
 
       {/* What is Pay Per Lead Generation Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What is Pay Per Lead Generation?
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-4 text-muted-foreground leading-relaxed">
                 PPL (Pay Per Lead Generation) is a results-based model where you
                 only pay for qualified leads delivered to your business. We
                 invest in your marketing campaigns (creating ads, landing pages,
                 and conversion funnels) while you pay exclusively for prospects
                 that meet your criteria.
               </p>
-              <p className="mt-4 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-6 text-muted-foreground leading-relaxed">
                 Unlike traditional agencies that charge monthly retainers
                 regardless of results, our model aligns our success with yours.
                 No qualified lead, no cost. It is the purest form of
                 performance-based marketing.
               </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+              <div className="grid gap-4 sm:grid-cols-3">
+                <Card className="p-4">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     100+
                   </div>
-                  <div className="mt-1 text-muted-foreground text-sm tracking-wide">
+                  <div className="mt-1 text-muted-foreground text-sm">
                     Businesses Served
                   </div>
-                </div>
-                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+                </Card>
+                <Card className="p-4">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     100%
                   </div>
-                  <div className="mt-1 text-muted-foreground text-sm tracking-wide">
+                  <div className="mt-1 text-muted-foreground text-sm">
                     Exclusive Leads
                   </div>
-                </div>
-                <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+                </Card>
+                <Card className="p-4">
                   <div className="font-extrabold text-3xl text-primary tracking-tight">
                     $0
                   </div>
-                  <div className="mt-1 text-muted-foreground text-sm tracking-wide">
+                  <div className="mt-1 text-muted-foreground text-sm">
                     Set-Up Fees
                   </div>
-                </div>
+                </Card>
               </div>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-2xl">
@@ -358,206 +365,204 @@ function PayPerLeadPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               How It Works
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-3xl text-muted-foreground">
               From setup to qualified leads in your pipeline, we handle
               everything
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step) => (
-              <div
-                key={step.number}
-                className="group rounded-2xl bg-card p-8 ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50"
-              >
-                <div className="mb-4 flex items-start justify-between">
-                  <div className="font-bold text-4xl text-primary">
-                    {step.number}
+              <Card key={step.number}>
+                <CardHeader>
+                  <div className="mb-2 flex items-start justify-between">
+                    <div className="font-bold text-4xl text-primary">
+                      {step.number}
+                    </div>
+                    <HugeiconsIcon
+                      icon={step.icon}
+                      size={28}
+                      strokeWidth={1.5}
+                      className="text-muted-foreground"
+                    />
                   </div>
-                  <HugeiconsIcon
-                    icon={step.icon}
-                    size={24}
-                    strokeWidth={1.5}
-                    className="text-muted-foreground"
-                  />
-                </div>
-                <h3 className="mb-3 font-bold text-2xl">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed tracking-wide">
-                  {step.description}
-                </p>
-              </div>
+                  <CardTitle className="text-xl">{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="leading-relaxed">
+                    {step.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Key Benefits Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Why Pay Per Lead Generation
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-3xl text-muted-foreground">
               Eliminate risk and only pay for results that matter
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
-              >
-                <HugeiconsIcon
-                  icon={benefit.icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="mb-4 text-primary"
-                />
-                <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed tracking-wide">
-                  {benefit.description}
-                </p>
-              </div>
+              <Card key={benefit.title}>
+                <CardHeader>
+                  <HugeiconsIcon
+                    icon={benefit.icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="mb-2 text-primary"
+                  />
+                  <CardTitle>{benefit.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="leading-relaxed">
+                    {benefit.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Lead Quality Guarantee Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Lead Quality Guarantee
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-3xl text-muted-foreground">
               Unlike platforms that share leads or deliver unverified prospects,
               we validate everything before delivery
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {leadQualityItems.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
-              >
-                <HugeiconsIcon
-                  icon={item.icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="mb-4 text-primary"
-                />
-                <h3 className="mb-3 font-bold text-xl lg:text-2xl">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed tracking-wide">
-                  {item.description}
-                </p>
-              </div>
+              <Card key={item.title}>
+                <CardHeader>
+                  <HugeiconsIcon
+                    icon={item.icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="mb-2 text-primary"
+                  />
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="leading-relaxed">
+                    {item.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Service Offerings Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               What We Handle
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-3xl text-muted-foreground">
               End-to-end lead generation managed by our team
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-2xl bg-card p-8 ring-1 ring-foreground/10"
-              >
-                <HugeiconsIcon
-                  icon={service.icon}
-                  size={32}
-                  strokeWidth={1.5}
-                  className="mb-4 text-primary"
-                />
-                <h3 className="mb-4 font-bold text-xl lg:text-2xl">
-                  {service.title}
-                </h3>
-                <ul className="space-y-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <HugeiconsIcon
-                        icon={CheckmarkCircle02Icon}
-                        size={20}
-                        strokeWidth={2}
-                        className="mt-0.5 shrink-0 text-primary"
-                      />
-                      <span className="text-muted-foreground text-sm tracking-wide">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Card key={service.title}>
+                <CardHeader>
+                  <HugeiconsIcon
+                    icon={service.icon}
+                    size={28}
+                    strokeWidth={1.5}
+                    className="mb-2 text-primary"
+                  />
+                  <CardTitle>{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2">
+                        <HugeiconsIcon
+                          icon={CheckmarkCircle02Icon}
+                          size={20}
+                          strokeWidth={2}
+                          className="mt-0.5 shrink-0 text-primary"
+                        />
+                        <span className="text-muted-foreground text-sm">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Results Section */}
-      <section className="px-6 py-20 lg:py-32">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-6xl">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 Reliable Revenue, On Demand
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed tracking-wide">
+              <p className="mb-6 text-muted-foreground leading-relaxed">
                 Our clients have built predictable, scalable revenue streams by
                 removing the uncertainty from lead generation. When you know
                 exactly what each customer costs to acquire, growth becomes a
                 simple equation.
               </p>
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              <div className="grid gap-6 sm:grid-cols-2">
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     100+
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Businesses Served
                   </div>
                 </div>
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     100%
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Exclusive Leads
                   </div>
                 </div>
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     $0
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Set-Up Fees
                   </div>
                 </div>
                 <div>
-                  <div className="font-extrabold text-5xl text-primary tracking-tight lg:text-7xl">
+                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     ∞
                   </div>
-                  <div className="mt-2 text-muted-foreground tracking-wide">
+                  <div className="text-muted-foreground text-sm">
                     Scaling Potential
                   </div>
                 </div>
@@ -576,13 +581,13 @@ function PayPerLeadPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="px-6 py-24">
+      <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Frequently Asked Questions
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground tracking-wide">
+            <p className="mx-auto max-w-2xl text-muted-foreground">
               Everything you need to know about pay per lead generation
             </p>
           </div>
@@ -602,17 +607,17 @@ function PayPerLeadPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative overflow-hidden bg-background px-6 py-20 lg:py-32">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-bold text-4xl tracking-tight lg:text-6xl">
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
             Stop Paying for Marketing That Does Not Convert
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
             Your competitors are wasting budget on agencies with no
             accountability. With pay per lead generation, every dollar you spend
             delivers a qualified prospect ready to become a customer.
           </p>
-          <div className="mt-10">
+          <div className="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">
               Apply To Work With Us
               <HugeiconsIcon
@@ -622,10 +627,14 @@ function PayPerLeadPage() {
                 data-icon="inline-end"
               />
             </Button>
+            <Button
+              render={<Link to="/case-studies" />}
+              size="lg"
+              variant="outline"
+            >
+              View Case Studies
+            </Button>
           </div>
-          <p className="mt-6 text-muted-foreground text-sm tracking-wide">
-            No obligation • No sales pressure • Just a conversation
-          </p>
         </div>
       </section>
     </div>

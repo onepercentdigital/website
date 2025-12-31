@@ -9,6 +9,7 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { useQuery } from 'convex/react';
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { generateMetaTags } from '@/lib/seo';
 import { api } from '../../convex/_generated/api';
 
@@ -31,13 +32,13 @@ function BlogIndexPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-background px-6 py-12 lg:py-16">
+      <section className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-4 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
+            <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
               Latest Insights
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed tracking-wide lg:text-xl">
+            <p className="text-muted-foreground leading-relaxed lg:text-lg">
               Expert strategies, case studies, and insights on GEO, SEO, and
               PPL. Learn how to lead in traditional search, AI discovery, and
               lead generation.
@@ -47,7 +48,7 @@ function BlogIndexPage() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="bg-background px-6 py-20 lg:py-32">
+      <section className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           {isLoading ? (
             <div className="flex min-h-100 items-center justify-center">
@@ -71,7 +72,7 @@ function BlogIndexPage() {
                   className="mx-auto mb-4 text-primary"
                 />
                 <h2 className="mb-3 font-bold text-2xl">No Posts Yet</h2>
-                <p className="text-muted-foreground leading-relaxed tracking-wide">
+                <p className="text-muted-foreground leading-relaxed">
                   Blog posts will appear here once they're published. Check back
                   soon for expert insights on GEO and SEO.
                 </p>
@@ -88,21 +89,21 @@ function BlogIndexPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="px-6 py-20 lg:py-32">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 font-bold text-4xl leading-tight tracking-tight lg:text-5xl">
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
             Ready to Put These Insights Into Action?
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed tracking-wide">
+          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
             From GEO and SEO to PPL, we turn strategy into leads. Let's discuss
             how to scale your business.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">
               Apply To Work With Us
               <HugeiconsIcon
                 icon={ArrowRight01Icon}
-                size={20}
+                size={18}
                 strokeWidth={2}
                 data-icon="inline-end"
               />
@@ -168,16 +169,16 @@ function BlogPostCard({ post }: BlogPostCardProps) {
       params={{ slug: post.slug }}
       className="block h-full"
     >
-      <article className="flex h-full flex-col rounded-2xl bg-card ring-1 ring-foreground/10 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
+      <Card className="flex h-full flex-col overflow-hidden pt-0 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
         {/* Featured Image */}
         {post.featuredImage ? (
           <img
             src={post.featuredImage}
             alt={post.title}
-            className="aspect-video w-full rounded-t-2xl object-cover"
+            className="aspect-video w-full object-cover"
           />
         ) : (
-          <div className="flex aspect-video items-center justify-center rounded-t-2xl bg-muted">
+          <div className="flex aspect-video items-center justify-center bg-muted">
             <HugeiconsIcon
               icon={File01Icon}
               size={48}
@@ -195,12 +196,12 @@ function BlogPostCard({ post }: BlogPostCardProps) {
           </h3>
 
           {/* Excerpt */}
-          <p className="mb-4 flex-1 text-muted-foreground text-sm leading-relaxed tracking-wide">
+          <p className="mb-4 flex-1 text-muted-foreground text-sm leading-relaxed">
             {excerpt}
           </p>
 
           {/* Metadata */}
-          <div className="flex flex-wrap items-center gap-4 pt-4 text-muted-foreground text-xs tracking-wide">
+          <div className="flex flex-wrap items-center gap-4 pt-4 text-muted-foreground text-xs">
             <div className="flex items-center gap-1">
               <HugeiconsIcon
                 icon={Calendar01Icon}
@@ -219,7 +220,7 @@ function BlogPostCard({ post }: BlogPostCardProps) {
             </div>
           </div>
         </div>
-      </article>
+      </Card>
     </Link>
   );
 }

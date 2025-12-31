@@ -8,13 +8,13 @@
 export interface IndustryChallenge {
   title: string;
   description: string;
-  icon: string; // Lucide icon name
+  icon: string; // HugeIcons key from solution-icons.ts
 }
 
 export interface ApproachStep {
   title: string;
   description: string;
-  icon: string; // Lucide icon name
+  icon: string; // HugeIcons key from solution-icons.ts
 }
 
 export interface IndustryService {
@@ -52,6 +52,8 @@ export interface IndustrySolution {
   }[];
   featuredClient?: FeaturedClient;
   faqs: IndustryFAQ[];
+  ctaHeadline: string;
+  ctaDescription: string;
 }
 
 export const solutions: IndustrySolution[] = [
@@ -67,54 +69,54 @@ export const solutions: IndustrySolution[] = [
       'Fill tables and drive reservations with GEO, SEO, and PPL strategies built for hospitality. Beat OTAs, outrank chains, and capture your local market.',
     challenges: [
       {
-        title: 'OTAs Controlling Search Results',
+        title: 'OTAs Controlling Discovery',
         description:
-          'Third-party platforms like OpenTable and Resy rank above your website, taking commissions on every booking and owning the customer relationship.',
-        icon: 'TrendingDown',
+          'Third-party platforms like OpenTable and Resy appear above your website in search and AI recommendations, taking commissions and owning customer relationships.',
+        icon: 'ChartDecreaseIcon',
       },
       {
         title: 'Competing with National Chains',
         description:
-          'Chain restaurants and hotels have massive marketing budgets and SEO teams. Independent venues struggle to compete for local visibility.',
-        icon: 'Building2',
+          'Chain restaurants and hotels have massive marketing budgets. Independent venues struggle to compete for visibility across search and AI platforms.',
+        icon: 'Building06Icon',
       },
       {
         title: 'Review Management Across Platforms',
         description:
           'Managing reviews across Google, Yelp, TripAdvisor, and social media is overwhelming. Negative reviews hurt visibility and bookings.',
-        icon: 'MessageSquare',
+        icon: 'Comment01Icon',
       },
       {
-        title: 'Converting Searches to Reservations',
+        title: 'Converting Interest to Reservations',
         description:
           'Visitors find your site but bounce without booking. Poor mobile experience, slow load times, and confusing reservation flows kill conversions.',
-        icon: 'MousePointerClick',
+        icon: 'Touch01Icon',
       },
     ],
     approach: [
       {
         title: 'Analyze',
         description:
-          'Audit local search landscape, competitor strategies, and AI visibility. Identify quick wins and long-term opportunities for growth.',
-        icon: 'Search',
+          'Audit your visibility across search engines, AI assistants, and lead channels. Identify quick wins and long-term growth opportunities.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO issues, optimize Google Business Profile, implement schema markup, and ensure fast mobile experience for searchers.',
-        icon: 'Settings',
+          'Improve your Google Business Profile, website performance, and content structure for both traditional search and AI recommendations.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Amplify',
         description:
-          'Create compelling content, generate authentic reviews, build local citations, and optimize for AI-powered search assistants.',
-        icon: 'TrendingUp',
+          'Build visibility through SEO, GEO optimization for AI assistants, review generation, and targeted lead generation campaigns.',
+        icon: 'ChartIncreaseIcon',
       },
       {
         title: 'Scale',
         description:
-          'Track rankings, refine strategy based on data, scale what works, and maintain top positions for high-value local keywords.',
-        icon: 'Trophy',
+          'Track performance across all channels, refine strategy based on data, and scale what drives reservations and revenue.',
+        icon: 'Award01Icon',
       },
     ],
     services: [
@@ -200,32 +202,35 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
-        question: 'How long does SEO take for restaurants?',
+        question: 'What is GEO and why does it matter for restaurants?',
         answer:
-          "You'll see initial improvements within 30-60 days, but significant results typically appear around the 3-6 month mark. Local SEO moves faster than traditional SEO because you're competing in a specific geographic area rather than nationally. Quick wins include Google Business Profile optimization and citation cleanup, while content marketing and link building deliver compounding returns over time. The key is consistent execution - restaurants that commit to 12+ months of SEO see the most dramatic results.",
+          "GEO (Generative Engine Optimization) ensures AI assistants like ChatGPT, Perplexity, and voice assistants recommend your restaurant when people ask for dining suggestions. When someone asks 'What's the best Italian restaurant near me?' or 'Where should I eat in downtown Miami?', GEO optimization determines whether your venue appears in that recommendation. As more diners use AI to discover restaurants, GEO is becoming as important as traditional search visibility.",
+      },
+      {
+        question: 'How does Pay Per Lead work for hospitality businesses?',
+        answer:
+          "With PPL, you only pay for qualified customer inquiries, not clicks or impressions. We generate reservation requests, event inquiries, and catering leads through targeted campaigns, and you pay a fixed amount per verified lead. There are no retainers or monthly minimums. Leads are exclusive to you, not shared with competitors. It's a risk-free way to fill tables and book events because you're only paying for actual potential customers.",
       },
       {
         question:
           'How do we compete with OpenTable and Resy in search results?',
         answer:
-          "You can't outrank OTAs for generic terms like 'restaurant reservations,' but you can win where it matters: your restaurant name, local searches, and specific cuisine or experience queries. Focus on owning branded searches, appearing in the local pack for 'best Italian restaurant [city]' type queries, and capturing long-tail searches where OTAs don't rank. Plus, optimizing for GEO (Generative Engine Optimization) means AI assistants recommend YOUR restaurant directly, bypassing OTAs entirely.",
+          "You can't outrank OTAs for generic terms like 'restaurant reservations,' but you can win where it matters: your restaurant name, local searches, and specific cuisine or experience queries. Focus on owning branded searches, appearing in the local pack for 'best Italian restaurant [city]' type queries, and capturing long-tail searches where OTAs don't rank. GEO optimization means AI assistants recommend YOUR restaurant directly, bypassing OTAs entirely.",
       },
       {
-        question: 'What is the difference between GEO and SEO for hospitality?',
+        question: 'How long until we see results from SEO?',
         answer:
-          "SEO (Search Engine Optimization) focuses on ranking in traditional search engines like Google and Bing. GEO (Generative Engine Optimization) focuses on appearing in AI-powered search assistants like ChatGPT, Perplexity, Google SGE, and voice assistants. When someone asks 'What's the best seafood restaurant in Miami,' GEO ensures your restaurant is recommended. Both are critical - SEO captures people browsing Google, GEO captures people asking AI for recommendations. Combined, you control how people discover restaurants in 2025.",
-      },
-      {
-        question: 'Do you handle review management and responses?',
-        answer:
-          'Yes. Our review generation system helps you collect more 5-star reviews from happy customers through automated, personalized requests. We monitor reviews across Google, Yelp, TripAdvisor, and other platforms, alerting you to new reviews. We also provide response templates and strategy for handling negative reviews professionally. Many clients opt for our full reputation management service where we handle all review responses on your behalf, maintaining your brand voice while saving you hours every week.',
+          "You'll see initial improvements within 30-60 days from quick wins like Google Business Profile optimization and citation cleanup. Significant results typically appear around the 3-6 month mark. Local SEO moves faster than national SEO because you're competing in a specific geographic area. Restaurants that commit to 12+ months see the most dramatic results as content marketing and authority building compound over time.",
       },
       {
         question: 'Can you help with multiple restaurant locations?',
         answer:
-          "Absolutely. Multi-location hospitality groups are actually our specialty. We've worked with restaurant groups managing multiple locations across different markets. Each location gets its own optimized Google Business Profile, location-specific landing pages, and localized content strategy. We implement enterprise-level tracking so you can see performance by location, and our strategies scale efficiently across your entire portfolio. The more locations you have, the more we can leverage shared content and authority across your brand.",
+          'Absolutely. Multi-location hospitality groups are our specialty. Each location gets its own optimized Google Business Profile, location-specific landing pages, GEO optimization for local AI recommendations, and PPL campaigns targeting its specific market. We implement enterprise-level tracking so you can see performance by location, and our strategies scale efficiently across your entire portfolio.',
       },
     ],
+    ctaHeadline: 'Fill More Tables, Book More Rooms',
+    ctaDescription:
+      "Let's fill your tables and drive reservations with proven GEO, SEO, and PPL strategies built for restaurants and hospitality businesses.",
   },
 
   // 2. E-COMMERCE & RETAIL
@@ -242,52 +247,52 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Competing with Amazon and Marketplaces',
         description:
-          'Amazon dominates product searches, capturing customers before they ever consider independent retailers. Breaking through requires strategic SEO.',
-        icon: 'ShoppingCart',
+          'Amazon dominates product discovery across search and AI. Independent retailers need strategic visibility to capture customers before they default to marketplaces.',
+        icon: 'ShoppingCart01Icon',
       },
       {
-        title: 'Product Page Optimization',
+        title: 'Product Discoverability',
         description:
-          'Thin content, duplicate descriptions, and poor technical SEO prevent product pages from ranking. Your inventory is invisible to searchers.',
-        icon: 'Package',
+          'Thin content and poor optimization prevent product pages from appearing in search results and AI recommendations. Your inventory stays invisible.',
+        icon: 'DeliveryBox01Icon',
       },
       {
         title: 'Low Conversion Rates',
         description:
           "Traffic arrives but doesn't convert. Slow load times, poor mobile experience, and unclear value propositions kill sales.",
-        icon: 'MousePointerClick',
+        icon: 'Touch01Icon',
       },
       {
-        title: 'AI Search Invisibility',
+        title: 'Fragmented Customer Acquisition',
         description:
-          'ChatGPT and AI assistants never recommend your products. When customers ask for product suggestions, your brand is absent from the conversation.',
-        icon: 'Sparkles',
+          'Relying solely on paid ads is expensive and unsustainable. You need diversified channels including organic search, AI recommendations, and direct lead generation.',
+        icon: 'SparklesIcon',
       },
     ],
     approach: [
       {
         title: 'Audit',
         description:
-          'Analyze site architecture, product page SEO, technical issues, and competitive landscape. Identify quick wins and revenue opportunities.',
-        icon: 'Search',
+          'Analyze your visibility across search engines, AI assistants, and customer acquisition channels. Identify quick wins and revenue opportunities.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, improve site speed, optimize product pages for keywords, implement schema markup, and enhance mobile experience.',
-        icon: 'Settings',
+          'Improve site speed, product pages, and content structure for both traditional search and AI recommendations.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Expand',
         description:
-          'Create category content, buying guides, comparison pages, and helpful resources that capture buyers at every funnel stage.',
-        icon: 'TrendingUp',
+          'Build visibility through SEO, GEO optimization, buying guides, and targeted lead generation that captures buyers at every stage.',
+        icon: 'ChartIncreaseIcon',
       },
       {
         title: 'Convert',
         description:
-          'Track performance, refine conversion funnels, scale winning strategies, and continuously improve ROI from search traffic.',
-        icon: 'Target',
+          'Track performance across all channels, refine conversion funnels, and scale strategies that drive revenue.',
+        icon: 'Target01Icon',
       },
     ],
     services: [
@@ -373,31 +378,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
-        question: 'How do we compete with Amazon in search results?',
+        question: 'How does GEO help e-commerce stores compete with Amazon?',
         answer:
-          "You can't beat Amazon for ultra-generic terms like 'buy headphones,' but you can win profitable long-tail searches where Amazon doesn't have advantage. Focus on specific product variations, niche categories, comparison keywords, and informational queries that capture buyers early in their journey. Amazon is weak at educational content, buying guides, and specific use-case searches. Target 'best [product] for [specific use case]' and capture buyers with helpful content before they reach Amazon. Plus, GEO optimization means AI assistants can recommend YOUR products when shoppers ask specific questions.",
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your products when shoppers ask for suggestions. When someone asks ChatGPT 'What's the best running shoe for flat feet?' or 'Recommend a coffee grinder under $100,' GEO optimization determines whether your products appear. Amazon dominates traditional search, but AI recommendations are a new battlefield where specialized retailers can win by having better, more helpful product information.",
+      },
+      {
+        question: 'What is Pay Per Lead for e-commerce?',
+        answer:
+          "For e-commerce, PPL typically means pay-per-sale or pay-per-qualified-inquiry campaigns. You only pay when we deliver an actual customer or high-intent lead, not for clicks or traffic. This is ideal for high-value products where each sale justifies the lead cost. We handle the customer acquisition, you handle fulfillment. It's a risk-free way to scale revenue because you're only paying for results.",
+      },
+      {
+        question: 'How do we compete with Amazon in traditional search?',
+        answer:
+          "You can't beat Amazon for ultra-generic terms like 'buy headphones,' but you can win profitable long-tail searches where Amazon lacks advantage. Focus on specific product variations, niche categories, comparison keywords, and informational queries that capture buyers early in their journey. Amazon is weak at educational content, buying guides, and specific use-case searches. Target 'best [product] for [specific use case]' and capture buyers with helpful content before they reach Amazon.",
       },
       {
         question: 'How long does e-commerce SEO take to show results?',
         answer:
-          'Quick wins like technical SEO fixes and product page optimization can show results in 30-60 days. Significant traffic and revenue growth typically appears around the 4-6 month mark as content gains traction and authority builds. E-commerce SEO is a compounding investment - month 12 delivers far better results than month 6. The stores that commit to 12+ months of consistent SEO see the most dramatic results, often replacing paid ads as their primary customer acquisition channel.',
+          'Quick wins like technical SEO fixes and product page optimization can show results in 30-60 days. Significant traffic and revenue growth typically appears around the 4-6 month mark as content gains traction and authority builds. E-commerce SEO is a compounding investment - stores that commit to 12+ months see the most dramatic results, often replacing paid ads as their primary customer acquisition channel.',
       },
       {
-        question: 'Do you handle product description writing?',
+        question: 'How do you handle constantly changing inventory?',
         answer:
-          'Yes. We can write unique, SEO-optimized product descriptions for your entire catalog. Many e-commerce stores use manufacturer descriptions (duplicate content) which prevents pages from ranking. We create original, keyword-optimized descriptions that sell while improving search visibility. For stores with large inventories (500+ products), we prioritize high-value products first, then scale to the full catalog. We can also create templates and guidelines if you prefer to handle descriptions in-house while we focus on technical and content marketing SEO.',
-      },
-      {
-        question: 'What about seasonal products and inventory changes?',
-        answer:
-          "We handle seasonal inventory strategically. For out-of-stock items, we implement proper schema markup indicating availability, maintain the page for SEO value, and can redirect discontinued products to similar alternatives. For seasonal products, we optimize pages year-round to maintain authority, then push aggressive promotion when in-season. We also create evergreen content around seasonal themes that ranks year-round. Our e-commerce SEO strategies account for inventory fluidity - we're not just optimizing static content, but building systems that adapt to your catalog changes.",
-      },
-      {
-        question: 'Can you help with marketplace SEO like Amazon and Etsy?',
-        answer:
-          'While our primary focus is driving traffic to YOUR website (where you own the customer relationship and avoid marketplace fees), we can provide strategic guidance on marketplace optimization. Many clients use a hybrid approach: optimize their owned site for organic search while maintaining marketplace presence for discovery. We focus on making your website the best buying experience so you can reduce reliance on marketplaces long-term. The goal is building a sustainable, owned channel rather than renting visibility on platforms that take 15-30% of every sale.',
+          "We build SEO and GEO strategies that maintain rankings even as individual products sell out. This includes optimizing category pages that remain stable, creating evergreen content around product types you consistently stock, and using structured data that updates automatically with inventory feeds. For seasonal products, we optimize pages year-round to maintain authority, ensuring you're already ranking when demand peaks.",
       },
     ],
+    ctaHeadline: 'Turn Browsers Into Buyers',
+    ctaDescription:
+      "Let's drive revenue and capture market share with proven GEO, SEO, and PPL strategies built for online retailers.",
   },
 
   // 3. MANUFACTURING & INDUSTRIAL
@@ -414,52 +422,52 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Long, Complex Sales Cycles',
         description:
-          'Manufacturing sales involve multiple stakeholders, long research phases, and high-value contracts. SEO must support the entire buyer journey.',
-        icon: 'Clock',
+          'Manufacturing sales involve multiple stakeholders, long research phases, and high-value contracts. Your visibility strategy must support the entire buyer journey.',
+        icon: 'Clock01Icon',
       },
       {
         title: 'Technical Product Complexity',
         description:
-          'Explaining complex products, specifications, and applications in SEO-friendly ways is challenging. Technical jargon confuses searchers.',
-        icon: 'Wrench',
+          'Explaining complex products and specifications in ways that resonate with both search engines and AI assistants is challenging.',
+        icon: 'Wrench01Icon',
       },
       {
-        title: 'Low Search Volume Keywords',
+        title: 'Niche Market Visibility',
         description:
-          'Niche industrial products have low search volumes but high value. Traditional SEO strategies fail for specialized manufacturing.',
-        icon: 'TrendingDown',
+          'Niche industrial products have low search volumes but high value. You need strategies that reach buyers across search, AI, and direct outreach.',
+        icon: 'ChartDecreaseIcon',
       },
       {
         title: 'Competing with Industry Giants',
         description:
-          'Large manufacturers dominate search results with massive content operations and established authority. Smaller players struggle for visibility.',
-        icon: 'Building2',
+          'Large manufacturers dominate online visibility with massive content operations. Smaller players need smarter, more targeted approaches.',
+        icon: 'Building06Icon',
       },
     ],
     approach: [
       {
         title: 'Research',
         description:
-          'Understand buyer personas, research keywords buyers use, map content to sales funnel stages, and identify competitive gaps.',
-        icon: 'Search',
+          'Understand buyer personas, map the decision journey, and identify opportunities across search, AI recommendations, and direct lead generation.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, optimize product pages for buyer keywords, implement schema for industrial products, and improve site architecture.',
-        icon: 'Settings',
+          'Improve product pages and technical content for visibility across search engines and AI assistants.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Educate',
         description:
-          'Create technical content, application guides, case studies, and resources that position you as the industry expert buyers trust.',
-        icon: 'BookOpen',
+          'Create technical content, application guides, and case studies that position you as the industry expert across all discovery channels.',
+        icon: 'Book02Icon',
       },
       {
         title: 'Convert',
         description:
-          'Track lead quality, optimize conversion paths, nurture prospects with content, and refine strategy based on closed deals.',
-        icon: 'Target',
+          'Track lead quality across SEO, GEO, and PPL channels. Optimize conversion paths and refine strategy based on closed deals.',
+        icon: 'Target01Icon',
       },
     ],
     services: [
@@ -545,31 +553,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
+        question: 'How does GEO help manufacturers reach procurement teams?',
+        answer:
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your company when procurement professionals research suppliers. When a buyer asks ChatGPT 'Who manufactures custom aluminum enclosures?' or 'Best suppliers for industrial automation components,' GEO optimization determines whether your company appears. As more B2B buyers use AI for supplier research, being optimized for these recommendations is becoming critical for lead generation.",
+      },
+      {
+        question: 'What is Pay Per Lead for manufacturing?',
+        answer:
+          'PPL for manufacturing delivers pre-qualified procurement contacts and RFQ submissions. You only pay for verified leads from companies actively seeking your products or services, not for website traffic or ad impressions. Leads are exclusive to you and delivered in real-time. This model is particularly effective for manufacturers because each qualified lead can represent significant contract value.',
+      },
+      {
         question: 'How do you handle low search volume industrial keywords?',
         answer:
-          "Low volume doesn't mean low value in manufacturing. A keyword with only 50 monthly searches might represent millions in potential contracts. We use a portfolio approach: target a large number of niche, high-intent keywords rather than chasing high-volume generic terms. We also focus on informational queries in the research phase, capturing buyers early. Plus, GEO optimization ensures AI assistants recommend you even when search volumes are minimal. One qualified procurement lead can justify years of SEO investment.",
+          "Low volume doesn't mean low value in manufacturing. A keyword with only 50 monthly searches might represent significant contract potential. We use a portfolio approach: target a large number of niche, high-intent keywords rather than chasing high-volume generic terms. We also focus on informational queries in the research phase, capturing buyers early. One qualified procurement lead can justify the entire investment.",
       },
       {
         question: 'Can SEO work for highly technical or niche products?',
         answer:
-          "Absolutely. In fact, technical and niche products often see BETTER SEO results because there's less competition and higher buyer intent. The key is understanding how buyers search (they rarely use technical jargon initially) and creating content that bridges the gap between problem and solution. We help manufacturers create content hierarchies: problem-aware content for top-of-funnel, technical specifications for bottom-of-funnel, and everything in between. AI search is particularly powerful for technical products because buyers ask detailed questions ChatGPT can answer by referencing your optimized content.",
+          "Technical and niche products often see BETTER results because there's less competition and higher buyer intent. The key is understanding how buyers search (they rarely use technical jargon initially) and creating content that bridges the gap between problem and solution. We create content hierarchies: problem-aware content for top-of-funnel, technical specifications for bottom-of-funnel, and everything in between.",
       },
       {
         question: 'How long does B2B manufacturing SEO take?',
         answer:
-          "B2B SEO typically takes longer than consumer SEO (6-12 months for significant results) but delivers much higher per-lead value. Industrial buyers have long research cycles, so early content investments pay dividends for years. You'll see initial ranking improvements within 90 days, qualified lead increases around month 6, and compounding returns after month 12. Manufacturing SEO is a long-term strategic investment, not a quick-win tactic. The manufacturers who commit to multi-year SEO strategies lead their niches and reduce dependence on expensive trade shows and cold outreach.",
-      },
-      {
-        question: 'Do you have experience with our specific industry?',
-        answer:
-          "We've worked with diverse manufacturers: industrial fabrication (Craftsmen Industries), warehouse automation (Sorting Robotics), wholesale apparel (Thrive Screen Printing), rigging equipment (Tway Lifting), and agricultural machinery (H&R Agri-Power). While we may not know your exact niche initially, our research-first approach ensures we quickly understand your industry, buyers, and competitive landscape. We partner with your technical team to learn product details, then translate that expertise into content that ranks and converts. Our B2B SEO framework applies across manufacturing verticals.",
-      },
-      {
-        question: 'How do you measure ROI for manufacturing SEO?',
-        answer:
-          'We track the entire funnel: keyword rankings, organic traffic, form submissions, quote requests, sales-qualified leads, closed deals, and revenue attributed to organic search. For manufacturers with long sales cycles, we implement multi-touch attribution to credit SEO appropriately when a prospect researches for months before converting. We also track cost-per-lead compared to trade shows, paid ads, and other channels. Most manufacturing clients see SEO become their lowest cost-per-lead channel within 12-18 months, with leads often pre-qualified and further along in the buying journey.',
+          "B2B SEO typically takes 6-12 months for significant results but delivers much higher per-lead value than consumer SEO. Industrial buyers have long research cycles, so early content investments pay dividends for years. You'll see initial ranking improvements within 90 days, qualified lead increases around month 6, and compounding returns after month 12. Manufacturers who commit to multi-year strategies lead their niches.",
       },
     ],
+    ctaHeadline: 'Fill Your Pipeline With Qualified Leads',
+    ctaDescription:
+      "Let's generate qualified B2B leads and grow your manufacturing business with proven GEO, SEO, and PPL strategies.",
   },
 
   // 4. LOGISTICS & TRANSPORTATION
@@ -586,52 +597,52 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Competing with Load Boards',
         description:
-          'Load boards and marketplaces dominate freight searches. Independent logistics providers struggle to reach shippers searching for partners.',
-        icon: 'Truck',
+          'Load boards and marketplaces dominate shipper discovery. Independent logistics providers need direct channels to reach shippers.',
+        icon: 'DeliveryTruck01Icon',
       },
       {
         title: 'Low Brand Differentiation',
         description:
-          'Logistics companies all sound similar online. Differentiating your services, coverage, and expertise is difficult in search results.',
-        icon: 'Fingerprint',
+          'Logistics companies all sound similar online. Differentiating your services and expertise across search and AI is difficult.',
+        icon: 'FingerPrintIcon',
       },
       {
         title: 'Geographic Coverage Complexity',
         description:
-          'Operating across multiple regions, lanes, and service areas creates SEO challenges. How do you rank for hundreds of location combinations?',
-        icon: 'Map',
+          'Operating across multiple regions, lanes, and service areas creates visibility challenges. How do you reach shippers for hundreds of location combinations?',
+        icon: 'MapsLocation01Icon',
       },
       {
         title: 'High Customer Acquisition Costs',
         description:
-          'Relying on brokers, cold calling, and paid ads is expensive. You need a sustainable, scalable way to reach shippers searching for logistics.',
-        icon: 'DollarSign',
+          'Relying on brokers, cold calling, and paid ads is expensive. You need sustainable channels including organic visibility and direct lead generation.',
+        icon: 'DollarCircleIcon',
       },
     ],
     approach: [
       {
         title: 'Map',
         description:
-          'Identify high-value shipping lanes, service area opportunities, shipper search behavior, and competitive gaps in your markets.',
-        icon: 'MapPin',
+          'Identify high-value shipping lanes, service area opportunities, and competitive gaps across search, AI, and lead generation channels.',
+        icon: 'Location01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, create location-specific landing pages, optimize service pages, and implement logistics schema markup.',
-        icon: 'Settings',
+          'Build location-specific pages and service content optimized for both traditional search and AI recommendations.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Build Authority',
         description:
-          'Create industry content, build links from logistics publications, showcase expertise, and earn trust signals that rank and convert.',
-        icon: 'Award',
+          'Create industry content and earn trust signals that drive visibility across search engines, AI assistants, and shipper communities.',
+        icon: 'Award01Icon',
       },
       {
         title: 'Scale',
         description:
-          'Expand to new lanes and services, track lead quality, optimize conversion paths, and continuously improve cost-per-acquisition.',
-        icon: 'TrendingUp',
+          'Expand to new lanes and services. Track lead quality across SEO, GEO, and PPL channels. Optimize what drives booked freight.',
+        icon: 'ChartIncreaseIcon',
       },
     ],
     services: [
@@ -717,31 +728,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
+        question: 'How does GEO help logistics companies reach shippers?',
+        answer:
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your company when shippers ask for freight solutions. When someone asks ChatGPT 'Who handles refrigerated freight from Florida to Texas?' or 'Best logistics companies for e-commerce fulfillment,' GEO optimization determines whether you appear in that recommendation. As more shippers use AI to research logistics partners, being optimized for these queries is becoming essential.",
+      },
+      {
+        question: 'What is Pay Per Lead for logistics?',
+        answer:
+          'PPL for logistics delivers shippers actively seeking freight services. You only pay for verified quote requests from companies with real shipping needs, not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model works especially well for logistics because each new shipper relationship can represent significant ongoing revenue.',
+      },
+      {
         question: 'How do we compete with load boards like DAT and Freightos?',
         answer:
-          "Load boards are transactional platforms, not service providers. You compete by targeting different parts of the buyer journey. Focus on educational content ('how to choose a freight broker'), service-specific searches ('refrigerated freight Florida to Texas'), and building direct relationships through content marketing. Many shippers prefer working directly with logistics providers rather than bidding on load boards. SEO helps you reach shippers early in their research, before they resort to load boards. Plus, AI assistants can recommend YOUR company directly when shippers ask for logistics help.",
+          "Load boards are transactional platforms, not service providers. You compete by targeting different parts of the buyer journey. Focus on educational content ('how to choose a freight broker'), service-specific searches ('refrigerated freight Florida to Texas'), and building direct relationships through content marketing. Many shippers prefer working directly with logistics providers rather than bidding on load boards.",
       },
       {
         question: 'How do you handle SEO for hundreds of shipping lanes?',
         answer:
-          "We use scalable, template-based approaches for lane-specific pages while ensuring each page has unique, valuable content. We prioritize your highest-volume and highest-margin lanes first, then expand systematically. The strategy includes programmatic SEO for lane combinations, location-specific schema markup, and content that serves shippers searching for specific routes. We're not creating thin doorway pages - we're building comprehensive resources for each lane that include pricing insights, transit times, common freight types, and shipper questions. It's a balance of scale and quality.",
+          "We use scalable, template-based approaches for lane-specific pages while ensuring each page has unique, valuable content. We prioritize your highest-volume and highest-margin lanes first, then expand systematically. The strategy includes programmatic SEO for lane combinations, location-specific schema markup, and comprehensive resources for each lane. It's a balance of scale and quality.",
       },
       {
         question: 'Can SEO help us reduce dependence on freight brokers?',
         answer:
-          "Absolutely. That's the primary goal for many logistics clients - building a direct shipper customer base rather than relying on brokered freight with thin margins. SEO generates direct shipper relationships by capturing searches when they need freight services. Over 12-24 months, you can build a sustainable pipeline of direct customers who find you through search rather than brokers. While you may still use brokers for capacity management, SEO reduces dependence and improves margins by filling trucks with direct customer freight.",
-      },
-      {
-        question: 'What about seasonality in freight demand?',
-        answer:
-          "We build SEO strategies that account for freight seasonality. Content is optimized year-round to maintain authority, with promotional pushes timed to peak seasons. We create evergreen content around seasonal themes (holiday shipping, harvest season logistics, etc.) that ranks months before peak demand. Analytics track seasonal patterns in your lanes so we can optimize aggressively before busy periods. The beauty of SEO is that you're building long-term visibility, not paying per click during expensive peak seasons. When demand surges, you're already ranking.",
-      },
-      {
-        question: 'How do you track ROI for logistics SEO?',
-        answer:
-          'We track keyword rankings, organic traffic, quote requests, qualified leads, booked loads, and revenue from search-attributed customers. For logistics companies, we often implement CRM integration to track the full lifecycle: initial quote, win rate, load volume, and lifetime customer value. We calculate cost-per-acquisition from SEO versus brokers, load boards, and paid ads. Most logistics clients see SEO become their lowest-cost channel within 12 months, with customers from search often being higher-value, longer-term relationships than transactional load board shippers.',
+          "Absolutely. That's the primary goal for many logistics clients - building a direct shipper customer base rather than relying on brokered freight. SEO generates direct shipper relationships by capturing searches when they need freight services. Over 12-24 months, you can build a sustainable pipeline of direct customers who find you through search rather than brokers.",
       },
     ],
+    ctaHeadline: 'Move More Freight',
+    ctaDescription:
+      "Let's generate qualified shipping leads and grow your logistics business with proven GEO, SEO, and PPL strategies.",
   },
 
   // 5. AUTOMOTIVE
@@ -758,52 +772,52 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Competing with National Dealer Groups',
         description:
-          'Large dealer networks and automotive marketplaces dominate search results with massive budgets and established authority.',
-        icon: 'Building2',
+          'Large dealer networks and automotive marketplaces dominate online visibility with massive budgets and established authority.',
+        icon: 'Building06Icon',
       },
       {
         title: 'Inventory Turnover and Listings',
         description:
-          'Vehicle inventory changes constantly. Maintaining SEO for hundreds of listings while vehicles come and go is challenging.',
-        icon: 'RefreshCw',
+          'Vehicle inventory changes constantly. Maintaining visibility for hundreds of listings while vehicles come and go is challenging.',
+        icon: 'RecycleIcon',
       },
       {
         title: 'Lead Quality vs. Quantity',
         description:
           'Generating traffic is easy. Attracting qualified buyers ready to purchase rather than tire-kickers is the real challenge.',
-        icon: 'UserCheck',
+        icon: 'UserCheck01Icon',
       },
       {
-        title: 'Local Search Competition',
+        title: 'Local Market Competition',
         description:
-          'Multiple dealers and automotive businesses compete for the same local searches. Standing out requires strategic differentiation.',
-        icon: 'MapPin',
+          'Multiple dealers compete for the same buyers. Standing out across search, AI recommendations, and lead channels requires strategic differentiation.',
+        icon: 'Location01Icon',
       },
     ],
     approach: [
       {
         title: 'Analyze',
         description:
-          'Audit local market, competitor strategies, inventory SEO, and identify high-value opportunities for qualified traffic.',
-        icon: 'Search',
+          'Audit your visibility across search engines, AI assistants, and lead channels. Identify high-value opportunities for qualified buyers.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, optimize vehicle listings, improve local presence, and ensure mobile-friendly browsing experience.',
-        icon: 'Settings',
+          'Improve vehicle listings and local presence for visibility across traditional search and AI recommendations.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Attract',
         description:
-          'Create compelling content, build automotive authority, generate reviews, and capture high-intent buyer searches.',
-        icon: 'Magnet',
+          'Build visibility through SEO, GEO optimization, review generation, and targeted lead generation campaigns.',
+        icon: 'Magnet01Icon',
       },
       {
         title: 'Convert',
         description:
-          'Track lead quality, optimize conversion funnels, refine targeting, and scale what drives actual sales.',
-        icon: 'Target',
+          'Track lead quality across all channels, optimize conversion funnels, and scale what drives actual sales.',
+        icon: 'Target01Icon',
       },
     ],
     services: [
@@ -889,32 +903,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
-        question: 'How do we compete with large dealer groups and AutoTrader?',
+        question: 'How does GEO help automotive businesses get found?',
         answer:
-          "You can't outrank AutoTrader for generic 'used cars' searches, but you can win where it matters: branded searches, specific make/model searches, local searches, and specialty vehicle queries. Focus on your differentiators - whether that's customer service, specialty inventory, or local expertise. Create content around specific vehicles, buyer guides, and local automotive topics where marketplaces are weak. Plus, GEO optimization means AI assistants can recommend YOUR dealership directly when people ask for vehicle suggestions, bypassing AutoTrader entirely.",
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your dealership or service when people ask for automotive suggestions. When someone asks ChatGPT 'Where can I find a classic Mustang restoration shop?' or 'Best exotic car rental in Miami,' GEO optimization determines whether you appear. As more car buyers use AI to research vehicles and services, being optimized for these recommendations is essential.",
+      },
+      {
+        question: 'What is Pay Per Lead for automotive?',
+        answer:
+          'PPL for automotive delivers buyers and service customers actively seeking what you offer. You only pay for verified leads - test drive requests, service appointments, or purchase inquiries - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model is ideal for high-value automotive sales where each qualified buyer represents significant revenue potential.',
+      },
+      {
+        question: 'How do we compete with AutoTrader and large dealer groups?',
+        answer:
+          "You can't outrank AutoTrader for generic 'used cars' searches, but you can win where it matters: branded searches, specific make/model searches, local searches, and specialty vehicle queries. Focus on your differentiators - customer service, specialty inventory, or local expertise. Create content around specific vehicles, buyer guides, and local automotive topics where marketplaces are weak.",
       },
       {
         question: 'How do you handle constantly changing vehicle inventory?',
         answer:
-          'We implement dynamic SEO strategies that maintain rankings even as individual vehicles sell. This includes optimizing category pages (all sedans, all trucks, etc.) that remain stable, creating evergreen content around makes/models you consistently stock, and using structured data that updates automatically with inventory feeds. We also optimize sold vehicle pages to redirect to similar available vehicles rather than creating dead ends. The goal is sustainable traffic to your inventory system, not just individual vehicle listings.',
+          'We implement dynamic SEO and GEO strategies that maintain visibility even as individual vehicles sell. This includes optimizing category pages that remain stable, creating evergreen content around makes/models you consistently stock, and using structured data that updates automatically with inventory feeds. The goal is sustainable traffic to your inventory system, not just individual vehicle listings.',
       },
       {
-        question:
-          'Can SEO work for specialty automotive businesses like classic cars?',
+        question: 'Can this work for specialty automotive businesses?',
         answer:
-          "Absolutely. In fact, specialty automotive often sees exceptional SEO results because there's less competition and higher buyer intent. Whether you're selling custom builds, classic restorations, exotic rentals, or performance parts, there's a passionate audience searching for exactly what you offer. The key is understanding the enthusiast mindset, creating content that serves their research process, and building authority in your specific niche.",
-      },
-      {
-        question: 'How long does automotive SEO take to generate sales?',
-        answer:
-          "You'll see initial traffic improvements within 30-60 days from quick wins like local SEO and inventory optimization. Meaningful sales impact typically appears around the 3-6 month mark as content gains traction and authority builds. Automotive SEO is particularly fast-moving compared to other industries because buyer intent is high - when someone searches for a vehicle, they're often ready to purchase. Most dealerships see positive ROI within 6 months, with compounding returns as search becomes a primary sales channel.",
-      },
-      {
-        question: 'Do you work with auto parts sellers and service businesses?',
-        answer:
-          "Yes. Our automotive SEO expertise extends beyond dealerships to parts retailers, auto repair shops, detailing services, performance shops, and any automotive-related business. The strategies differ - parts retailers need e-commerce SEO, service businesses need local SEO, performance shops need enthusiast content - but the fundamentals apply across automotive verticals. We've worked with auto parts sellers (Goldfarb & Associates) and understand the unique challenges of automotive aftermarket.",
+          "Specialty automotive often sees exceptional results because there's less competition and higher buyer intent. Whether you're selling custom builds, classic restorations, exotic rentals, or performance parts, there's a passionate audience searching for exactly what you offer. The key is understanding the enthusiast mindset and building authority in your specific niche through SEO, GEO, and targeted lead generation.",
       },
     ],
+    ctaHeadline: 'Sell More Vehicles',
+    ctaDescription:
+      "Let's drive qualified leads and grow your automotive business with proven GEO, SEO, and PPL strategies.",
   },
 
   // 6. CONSTRUCTION & CONTRACTORS
@@ -931,52 +947,52 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Intense Local Competition',
         description:
-          'Dozens of contractors compete for the same local searches. Standing out requires more than just a website and Google listing.',
-        icon: 'Users',
+          'Dozens of contractors compete for the same property owners. Standing out across search, AI, and lead channels requires more than a website.',
+        icon: 'UserGroupIcon',
       },
       {
         title: 'Lead Quality Issues',
         description:
           'Generating leads is easy. Attracting serious property owners with real projects and budgets is the challenge.',
-        icon: 'Target',
+        icon: 'Target01Icon',
       },
       {
         title: 'Seasonal Demand Fluctuations',
         description:
-          'Construction and contracting demand varies by season. Maintaining visibility and pipeline during slow periods is difficult.',
-        icon: 'CloudRain',
+          'Construction demand varies by season. Maintaining visibility and pipeline during slow periods requires year-round strategy.',
+        icon: 'CloudIcon',
       },
       {
         title: 'Review and Reputation Challenges',
         description:
-          'Online reviews heavily influence contractor selection. One bad review can cost you thousands in lost projects.',
-        icon: 'Star',
+          'Online reviews heavily influence contractor selection. Reviews impact both search rankings and AI recommendations.',
+        icon: 'StarIcon',
       },
     ],
     approach: [
       {
         title: 'Research',
         description:
-          'Analyze local market, competitor strategies, service area opportunities, and identify high-value project types to target.',
-        icon: 'Search',
+          'Analyze your visibility across search, AI, and lead channels. Identify high-value project types and service area opportunities.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, optimize Google Business Profile, create service-specific pages, and ensure mobile-friendly experience.',
-        icon: 'Settings',
+          'Improve your Google Business Profile and service pages for visibility across search engines and AI recommendations.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Build Trust',
         description:
-          'Generate reviews, create portfolio content, showcase expertise, and build local citations that establish credibility.',
-        icon: 'Shield',
+          'Generate reviews, create portfolio content, and build credibility signals that boost rankings and AI recommendations.',
+        icon: 'Shield01Icon',
       },
       {
         title: 'Convert',
         description:
-          'Track lead quality, optimize quote request forms, refine targeting, and scale strategies that drive profitable projects.',
-        icon: 'CheckCircle',
+          'Track lead quality across SEO, GEO, and PPL channels. Optimize quote forms and scale what drives profitable projects.',
+        icon: 'Tick02Icon',
       },
     ],
     services: [
@@ -1062,31 +1078,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
-        question: 'How do we compete with HomeAdvisor and Thumbtack?',
+        question: 'How does GEO help contractors get found by property owners?',
         answer:
-          "Lead generation platforms charge per lead (whether they convert or not) and often send the same lead to multiple contractors. SEO builds YOUR owned channel where you don't pay per lead or compete with 5 other contractors for the same project. Focus on ranking for your company name, specific services, and local searches where platforms are weak. Many property owners prefer hiring contractors directly rather than through lead gen services. Plus, AI assistants can recommend YOUR company when asked for contractor suggestions, completely bypassing platforms.",
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your company when property owners ask for contractor suggestions. When someone asks ChatGPT 'Who's the best roofer in Austin?' or 'Recommend a kitchen remodeler near me,' GEO optimization determines whether you appear. As more homeowners use AI to find contractors, being optimized for these recommendations gives you an edge over competitors.",
+      },
+      {
+        question: 'How is Pay Per Lead different from HomeAdvisor?',
+        answer:
+          "Unlike platforms that send the same lead to multiple contractors, our PPL delivers exclusive leads directly to you. You only pay for verified project inquiries from property owners with real needs, not for shared leads where you're competing against five other bids. Leads are delivered in real-time, and there are no monthly fees or retainers. You control your volume and only pay for results.",
       },
       {
         question: 'How long does local contractor SEO take?',
         answer:
-          "Local SEO moves faster than traditional SEO because you're competing in a specific geographic area rather than nationally. You'll see initial improvements within 30-45 days from Google Business Profile optimization and citation cleanup. Significant lead increases typically appear around month 3-6 as content gains traction and authority builds. The contractors who commit to 12+ months of consistent SEO often replace lead gen platforms entirely, building sustainable pipelines with better lead quality and lower cost-per-acquisition.",
+          "Local SEO moves faster than national SEO because you're competing in a specific geographic area. You'll see initial improvements within 30-45 days from Google Business Profile optimization and citation cleanup. Significant lead increases typically appear around month 3-6 as content gains traction. Contractors who commit to 12+ months build sustainable pipelines with better lead quality.",
       },
       {
-        question: 'What about seasonal fluctuations in construction demand?',
+        question: 'How important are reviews for contractor visibility?',
         answer:
-          'We build SEO strategies that account for seasonality. Content is optimized year-round to maintain authority, with aggressive promotion timed to peak seasons. We create evergreen content around seasonal themes (winter preparation, spring renovation, etc.) that ranks months before busy periods. During slow seasons, we focus on building authority that pays off when demand surges. Unlike paid ads where you compete at highest costs during peak season, SEO maintains visibility year-round at a fixed monthly investment.',
-      },
-      {
-        question: 'How important are reviews for contractor SEO?',
-        answer:
-          'Absolutely critical. Reviews directly impact local search rankings and heavily influence whether property owners contact you. We implement systematic review generation - requesting reviews from happy customers immediately after project completion. Most contractors leave reviews to chance; we make it a process. We also monitor and respond to all reviews (positive and negative) professionally. Our review strategies typically increase review volume by 300-500% within 6 months, which compounds SEO benefits and conversion rates.',
+          'Critical. Reviews directly impact local search rankings and heavily influence whether property owners contact you. We implement systematic review generation - requesting reviews from happy customers immediately after project completion. We also monitor and respond to all reviews professionally. Strong reviews boost both your SEO rankings and your GEO visibility in AI recommendations.',
       },
       {
         question: 'Can you help if we serve multiple trade specialties?',
         answer:
-          "Yes. Many general contractors offer multiple services (roofing, remodeling, additions, etc.) or multi-trade businesses. We create service-specific content and optimization for each offering, ensuring you rank for all your capabilities. The strategy balances broad 'general contractor' visibility with specific service rankings. We often find specialized services (like commercial roofing or historic restoration) drive higher-quality leads than generic contractor searches, so we identify and prioritize your most profitable service areas.",
+          "Yes. We create service-specific content and optimization for each offering, ensuring you rank for all your capabilities across SEO and GEO. The strategy balances broad 'general contractor' visibility with specific service rankings. We often find specialized services drive higher-quality leads, so we identify and prioritize your most profitable service areas for both search and lead generation.",
       },
     ],
+    ctaHeadline: 'Book More Projects',
+    ctaDescription:
+      "Let's generate qualified project leads and grow your construction business with proven GEO, SEO, and PPL strategies.",
   },
 
   // 7. AGRICULTURE & EQUIPMENT
@@ -1103,52 +1122,52 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Competing with National Brands',
         description:
-          'Manufacturers like John Deere and Case IH dominate equipment searches. Independent dealers struggle for visibility against corporate budgets.',
-        icon: 'Building2',
+          'Manufacturers like John Deere and Case IH dominate online visibility. Independent dealers need targeted strategies to reach local farmers.',
+        icon: 'Building06Icon',
       },
       {
         title: 'Complex Product Catalogs',
         description:
-          'Hundreds of equipment models, implements, and parts create SEO challenges. Organizing and optimizing massive inventories is complex.',
-        icon: 'PackageSearch',
+          'Hundreds of equipment models, implements, and parts create visibility challenges. Organizing and optimizing massive inventories is complex.',
+        icon: 'PackageSearchIcon',
       },
       {
         title: 'Geographic Coverage',
         description:
-          'Serving multiple locations across rural areas requires optimizing for dispersed markets with varying equipment needs.',
-        icon: 'MapPin',
+          'Serving multiple locations across rural areas requires visibility strategies for dispersed markets with varying equipment needs.',
+        icon: 'Location01Icon',
       },
       {
         title: 'Long Research Cycles',
         description:
-          'Farmers research equipment for months before purchasing. SEO must support the entire buyer journey from awareness to decision.',
-        icon: 'Clock',
+          'Farmers research equipment for months before purchasing. Your visibility strategy must support the entire buyer journey.',
+        icon: 'Clock01Icon',
       },
     ],
     approach: [
       {
         title: 'Research',
         description:
-          'Understand farmer search behavior, equipment research patterns, seasonal demand, and competitive landscape across your markets.',
-        icon: 'Search',
+          'Understand farmer research patterns and identify opportunities across search, AI recommendations, and direct lead generation.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, optimize equipment pages, create location-specific content, and implement agricultural schema markup.',
-        icon: 'Settings',
+          'Improve equipment pages and location content for visibility across search engines and AI assistants.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Educate',
         description:
-          'Create helpful content that answers farmer questions, compares equipment, and positions you as the trusted local expert.',
-        icon: 'BookOpen',
+          'Create helpful content that answers farmer questions and positions you as the trusted local expert across all discovery channels.',
+        icon: 'Book02Icon',
       },
       {
         title: 'Convert',
         description:
-          'Track lead quality, optimize quote forms, refine targeting, and scale strategies that drive equipment sales and service revenue.',
-        icon: 'Target',
+          'Track lead quality across SEO, GEO, and PPL channels. Optimize quote forms and scale what drives equipment sales.',
+        icon: 'Target01Icon',
       },
     ],
     services: [
@@ -1234,33 +1253,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
+        question: 'How does GEO help equipment dealers reach farmers?',
+        answer:
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your dealership when farmers research equipment. When someone asks ChatGPT 'Where can I find a John Deere dealer near Springfield?' or 'Best place to buy used tractors in Iowa,' GEO optimization determines whether you appear. As more farmers use AI for equipment research, being optimized for these recommendations gives you an advantage over competitors.",
+      },
+      {
+        question: 'What is Pay Per Lead for agricultural equipment?',
+        answer:
+          'PPL for agriculture delivers farmers actively seeking equipment purchases or service. You only pay for verified leads - quote requests, service appointments, or purchase inquiries - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model works well for equipment dealers because each qualified lead can represent significant sales value.',
+      },
+      {
         question: 'How do we compete with John Deere and other manufacturers?',
         answer:
-          "You can't outrank manufacturers for ultra-generic 'buy tractor' searches, but you can win where it matters: local dealer searches, specific equipment models, used equipment, parts and service, and regional agricultural content. Manufacturers are weak at local relevance, personalized service content, and farmer education. Focus on 'John Deere dealer [location],' equipment comparison content, and local agricultural topics where corporate sites can't compete. Plus, AI assistants can recommend YOUR dealership when farmers ask for local equipment help.",
+          "You can't outrank manufacturers for ultra-generic 'buy tractor' searches, but you can win where it matters: local dealer searches, specific equipment models, used equipment, parts and service, and regional agricultural content. Manufacturers are weak at local relevance and farmer education. Focus on local dealer content and equipment comparisons where corporate sites can't compete.",
       },
       {
-        question:
-          'How do you handle large equipment inventories and multiple locations?',
+        question: 'Can SEO help with parts and service revenue?',
         answer:
-          'We implement scalable SEO strategies that work across large inventories and dealer networks. This includes template-based equipment pages with unique content, location-specific landing pages for each dealership, and centralized agricultural content that benefits all locations. We use inventory feeds to keep listings current, implement multi-location schema, and create content hierarchies that organize hundreds of equipment models logically. Our approach balances scale (handling large catalogs efficiently) with quality (ensuring each page provides value).',
-      },
-      {
-        question:
-          'Can SEO help with parts and service revenue, not just equipment sales?',
-        answer:
-          'Absolutely. Parts and service often provide more consistent revenue than equipment sales. We optimize for parts searches (both OEM part numbers and common names), maintenance content (oil change intervals, filter replacements), seasonal service needs, and emergency repair queries. Many farmers search for parts and service online even if they purchased equipment elsewhere. Capturing this search traffic builds relationships that lead to future equipment sales while driving immediate parts and service revenue.',
-      },
-      {
-        question: 'What about seasonal agricultural demand?',
-        answer:
-          "Agricultural SEO strategies must account for planting, harvest, and off-season cycles. We create content that ranks year-round while timing promotional pushes to peak seasons. Planting season content ranks months before spring, harvest equipment content appears before fall, and off-season focuses on maintenance and planning. The advantage of SEO versus paid ads is you're building authority that pays off season after season, not competing for expensive clicks during peak demand. When farmers start researching, you're already ranking.",
+          'Absolutely. Parts and service often provide more consistent revenue than equipment sales. We optimize for parts searches (both OEM part numbers and common names), maintenance content, seasonal service needs, and emergency repair queries. Many farmers search for parts online even if they purchased equipment elsewhere. Capturing this search traffic builds relationships that lead to future equipment sales.',
       },
       {
         question: 'How long does agricultural equipment SEO take?',
         answer:
-          'Agricultural SEO typically shows results faster than general B2B because farmers actively research equipment purchases online. Initial improvements appear within 60-90 days from technical fixes and inventory optimization. Significant lead increases typically arrive around month 4-6 as content gains traction. The long research cycles mean early SEO investments pay dividends for months - a farmer who discovers you in January may purchase in March. Dealers who commit to 12+ months of SEO often replace expensive manufacturer co-op advertising and third-party leads entirely.',
+          'Agricultural SEO typically shows results faster than general B2B because farmers actively research equipment purchases online. Initial improvements appear within 60-90 days from technical fixes and inventory optimization. Significant lead increases typically arrive around month 4-6. The long research cycles mean early investments pay dividends for months - a farmer who discovers you in January may purchase in March.',
       },
     ],
+    ctaHeadline: 'Grow Your Customer Base',
+    ctaDescription:
+      "Let's drive qualified leads and grow your agricultural business with proven GEO, SEO, and PPL strategies.",
   },
 
   // 8. TECHNOLOGY & SAAS
@@ -1275,54 +1295,54 @@ export const solutions: IndustrySolution[] = [
       'Generate qualified enterprise leads and product signups with GEO, SEO, and PPL built for technology companies. Reach decision-makers searching for solutions.',
     challenges: [
       {
-        title: 'Highly Competitive Keywords',
+        title: 'Highly Competitive Markets',
         description:
-          'Tech and SaaS keywords are among the most competitive and expensive. Breaking through requires strategic, sustained SEO investment.',
-        icon: 'TrendingUp',
+          'Tech and SaaS markets are extremely competitive. Breaking through requires strategic visibility across search, AI, and direct channels.',
+        icon: 'ChartIncreaseIcon',
       },
       {
         title: 'Complex Product Positioning',
         description:
-          'Explaining technical products in SEO-friendly ways is challenging. Balancing technical accuracy with searchability requires expertise.',
-        icon: 'Code',
+          'Explaining technical products in ways that resonate with both search engines and AI assistants requires expertise.',
+        icon: 'CodeIcon',
       },
       {
         title: 'Long B2B Sales Cycles',
         description:
-          'Enterprise tech sales involve multiple stakeholders, long evaluation periods, and complex buying processes. SEO must support the entire journey.',
-        icon: 'Clock',
+          'Enterprise tech sales involve multiple stakeholders and long evaluation periods. Your visibility strategy must support the entire journey.',
+        icon: 'Clock01Icon',
       },
       {
-        title: 'AI Search Disruption',
+        title: 'Evolving Discovery Channels',
         description:
-          "ChatGPT and AI assistants are changing how people research software. If you're not optimized for AI search, you're invisible to modern buyers.",
-        icon: 'Sparkles',
+          'Buyers increasingly use AI assistants to research software. You need visibility across traditional search, AI recommendations, and direct outreach.',
+        icon: 'SparklesIcon',
       },
     ],
     approach: [
       {
         title: 'Research',
         description:
-          'Analyze buyer personas, map the customer journey, research competitor strategies, and identify content gaps you can exploit.',
-        icon: 'Search',
+          'Analyze buyer personas, map the customer journey, and identify opportunities across search, AI recommendations, and direct lead generation.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, optimize product pages, implement SaaS-specific schema, and ensure fast, conversion-focused user experience.',
-        icon: 'Settings',
+          'Improve product pages and content structure for visibility across search engines and AI assistants.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Educate',
         description:
-          'Create authoritative content that answers buyer questions, positions your product as the solution, and builds domain authority.',
-        icon: 'BookOpen',
+          'Create authoritative content that positions your product as the solution across all discovery channels.',
+        icon: 'Book02Icon',
       },
       {
         title: 'Convert',
         description:
-          'Track signup and demo quality, optimize conversion funnels, attribute revenue to SEO, and scale what drives actual customers.',
-        icon: 'Target',
+          'Track demo and signup quality across SEO, GEO, and PPL channels. Optimize funnels and scale what drives customers.',
+        icon: 'Target01Icon',
       },
     ],
     services: [
@@ -1408,31 +1428,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
+        question: 'Why is GEO critical for SaaS and technology companies?',
+        answer:
+          "More tech buyers are asking ChatGPT, Perplexity, and AI assistants for software recommendations instead of Googling comparison lists. If your product doesn't appear in AI-generated recommendations, you're invisible to a growing segment of buyers. GEO optimization ensures AI assistants understand your product, recommend it for relevant queries, and cite your content. Most SaaS companies haven't optimized for GEO yet, so early movers have a significant advantage.",
+      },
+      {
+        question: 'What is Pay Per Lead for SaaS?',
+        answer:
+          'PPL for SaaS delivers demo requests and trial signups from companies actively evaluating solutions. You only pay for verified leads - qualified demo requests or high-intent trial signups - not for website traffic or ad impressions. Leads are exclusive to you and delivered in real-time. This model is ideal for SaaS with higher contract values where each qualified demo represents significant potential revenue.',
+      },
+      {
         question: 'How do we compete in expensive, competitive SaaS markets?',
         answer:
-          "You compete by being smarter, not just spending more. Focus on long-tail keywords, alternative and comparison pages (capturing competitor traffic), use case content for specific industries or roles, and educational content that ranks for problem-aware searches. AI search (GEO) is a massive opportunity because most SaaS companies haven't optimized yet - you can lead AI recommendations while competitors focus only on traditional Google SEO. We also leverage content depth and expertise over pure domain authority - well-researched, helpful content often outranks bigger competitors.",
+          'You compete by being smarter, not just spending more. Focus on long-tail keywords, alternative and comparison pages (capturing competitor traffic), use case content for specific industries or roles, and educational content for problem-aware searches. Well-researched, helpful content often outranks bigger competitors. Combine SEO with GEO to capture buyers across both traditional search and AI recommendations.',
       },
       {
         question: 'How long does SaaS SEO take to generate qualified leads?',
         answer:
-          'SaaS SEO typically takes 4-8 months to generate meaningful lead volume. Tech markets are competitive, requiring sustained effort to build authority. However, quick wins like alternative pages and comparison content can drive leads within 60-90 days. The key is understanding that SaaS SEO is a compounding investment - month 12 delivers dramatically better results than month 6. Companies that commit to 18-24 months of strategic SEO often see organic search become their primary enterprise lead source, reducing dependence on expensive paid ads.',
+          'SaaS SEO typically takes 4-8 months to generate meaningful lead volume. Tech markets are competitive, requiring sustained effort to build authority. However, quick wins like alternative pages and comparison content can drive leads within 60-90 days. SaaS SEO is a compounding investment - companies that commit to 18-24 months often see organic search become their primary enterprise lead source.',
       },
       {
         question: 'Should we focus on product keywords or educational content?',
         answer:
-          'Both, strategically. Product keywords (high-intent, bottom-of-funnel) drive demos and trials but are highly competitive. Educational content (top and middle funnel) is easier to rank for and captures buyers early in their research. The optimal strategy: create educational content to build authority and capture early-stage traffic, then use internal linking to guide visitors to product pages. Most successful SaaS SEO programs use a 70/30 mix: 70% educational/problem-solving content, 30% product/feature content. This builds authority while converting ready buyers.',
-      },
-      {
-        question: 'How important is AI search (GEO) for technology companies?',
-        answer:
-          "Absolutely critical. More tech buyers are asking ChatGPT, Perplexity, and AI assistants for software recommendations instead of Googling comparison lists. If your product doesn't appear in AI-generated recommendations, you're invisible to a growing segment of buyers. GEO optimization ensures AI assistants understand your product, recommend it for relevant queries, and cite your content. We've seen tech companies double their organic visibility by optimizing for both GEO and traditional SEO. It's not either/or - you need both to succeed in modern search.",
-      },
-      {
-        question: 'How do you measure ROI for SaaS SEO?',
-        answer:
-          'We track the full funnel: keyword rankings, organic traffic, demo requests, trial signups, product-qualified leads (PQLs), closed deals, and revenue attributed to organic search. For SaaS with long sales cycles, we implement multi-touch attribution to properly credit SEO when prospects research for months before converting. We also track cost-per-acquisition compared to paid channels. Most SaaS companies see SEO become their lowest-cost acquisition channel within 12-18 months, with customers from search often having higher LTV due to stronger product-fit from research-driven discovery.',
+          'Both, strategically. Product keywords drive demos and trials but are highly competitive. Educational content is easier to rank for and captures buyers early in their research. The optimal strategy: create educational content to build authority, then use internal linking to guide visitors to product pages. This builds authority for both SEO and GEO while converting ready buyers.',
       },
     ],
+    ctaHeadline: 'Reach More Decision-Makers',
+    ctaDescription:
+      "Let's accelerate your SaaS growth and reach decision-makers with proven GEO, SEO, and PPL strategies.",
   },
 
   // 9. HEALTH & WELLNESS
@@ -1447,54 +1470,54 @@ export const solutions: IndustrySolution[] = [
       'Fill your calendar with qualified clients through GEO, SEO, and PPL. Get found by people ready to invest in their wellbeing.',
     challenges: [
       {
-        title: 'YMYL Search Algorithms',
+        title: 'Strict Content Standards',
         description:
-          'Google applies strict "Your Money Your Life" standards to health content. Ranking requires exceptional expertise, authority, and trustworthiness.',
-        icon: 'Shield',
+          'Google and AI assistants apply strict standards to health content. Visibility requires exceptional expertise, authority, and trustworthiness.',
+        icon: 'Shield01Icon',
       },
       {
         title: 'Local Service Competition',
         description:
-          'Multiple wellness providers compete for the same local searches. Differentiating your services and expertise is critical.',
-        icon: 'Users',
+          'Multiple wellness providers compete for the same clients. Differentiating across search, AI, and lead channels is critical.',
+        icon: 'UserGroupIcon',
       },
       {
         title: 'Building Trust Online',
         description:
-          'Health and wellness require high trust. Converting searchers into clients means demonstrating credibility, expertise, and results.',
-        icon: 'Heart',
+          'Health and wellness require high trust. Converting interest into clients means demonstrating credibility and expertise.',
+        icon: 'FavouriteIcon',
       },
       {
         title: 'Compliance and Regulations',
         description:
-          'Healthcare marketing regulations limit claims you can make. Balancing persuasive content with compliance is challenging.',
-        icon: 'FileText',
+          'Healthcare marketing regulations limit claims you can make. Balancing effective visibility with compliance is challenging.',
+        icon: 'File01Icon',
       },
     ],
     approach: [
       {
         title: 'Establish Authority',
         description:
-          'Build E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) signals that Google requires for health content.',
-        icon: 'Award',
+          'Build E-E-A-T signals that search engines and AI assistants require for health content recommendations.',
+        icon: 'Award01Icon',
       },
       {
         title: 'Optimize Locally',
         description:
-          'Lead local searches with Google Business Profile optimization, local citations, and location-specific content.',
-        icon: 'MapPin',
+          'Build local visibility through Google Business Profile, location content, and AI recommendation optimization.',
+        icon: 'Location01Icon',
       },
       {
         title: 'Educate & Engage',
         description:
-          'Create helpful, compliant content that answers health questions, showcases expertise, and builds trust with potential clients.',
-        icon: 'BookOpen',
+          'Create helpful, compliant content that builds trust and positions you as the expert across all discovery channels.',
+        icon: 'Book02Icon',
       },
       {
         title: 'Convert',
         description:
-          'Optimize booking funnels, track lead quality, refine targeting, and scale strategies that fill your calendar with ideal clients.',
-        icon: 'Calendar',
+          'Track lead quality across SEO, GEO, and PPL channels. Optimize booking funnels and scale what fills your calendar.',
+        icon: 'Calendar01Icon',
       },
     ],
     services: [
@@ -1580,33 +1603,36 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
+        question: 'How does GEO help health and wellness practices get found?',
+        answer:
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your practice when people ask for health provider suggestions. When someone asks ChatGPT 'Best chiropractor near me' or 'Recommend a wellness clinic in Denver,' GEO optimization determines whether you appear. As more people use AI for health research, being optimized for these recommendations helps you reach clients your competitors miss.",
+      },
+      {
+        question: 'What is Pay Per Lead for health and wellness?',
+        answer:
+          'PPL for health and wellness delivers clients actively seeking your services. You only pay for verified leads - appointment requests or consultation inquiries - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model works well for practices because each new client represents ongoing revenue potential through repeat visits and referrals.',
+      },
+      {
         question:
-          "How do we rank for health content with Google's strict standards?",
+          "How do we rank with Google's strict health content standards?",
         answer:
-          'Google applies YMYL (Your Money Your Life) standards to health content, requiring exceptional E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness). We build this through comprehensive provider profiles showcasing credentials, medical reviews of content by qualified professionals, citation of reputable sources, detailed about pages, authentic patient testimonials, and consistent NAP (name, address, phone) information. It takes more effort than other industries, but health businesses that invest in proper E-E-A-T signals can absolutely rank and lead local searches.',
-      },
-      {
-        question: 'Can we make outcome claims in our SEO content?',
-        answer:
-          "Healthcare marketing regulations (FTC, state medical boards, etc.) limit outcome claims, particularly guarantees. We create compliant content that educates without promising specific results. This includes discussing typical outcomes with appropriate disclaimers, featuring patient testimonials with clear 'results may vary' language, focusing on process and approach rather than guaranteed outcomes, and using condition-specific educational content that helps patients understand options. Our health and wellness content strategies are built on compliance-first principles while remaining persuasive and effective.",
+          'Google applies YMYL (Your Money Your Life) standards to health content, requiring strong E-E-A-T signals. We build authority through comprehensive provider profiles showcasing credentials, content reviewed by qualified professionals, citation of reputable sources, and authentic client testimonials. Health businesses that invest in proper authority signals can absolutely lead local searches.',
       },
       {
         question:
-          'How do we compete with larger health systems and hospital networks?',
+          'How important are reviews for health and wellness visibility?',
         answer:
-          "Large health systems have brand recognition and budgets, but they're weak where independent practices excel: personalized care, faster appointments, specialized expertise, and local community connection. Focus on what differentiates you - whether that's specific treatment approaches, faster appointment availability, concierge-level service, or niche specialization. Create content around specific conditions or treatments where you have deep expertise. Own your local market through superior local SEO. Many patients prefer independent practitioners and actively search for alternatives to large systems.",
+          'Critical. Reviews are a major ranking factor for local SEO, a key signal for GEO recommendations, and the primary trust factor potential clients use to evaluate providers. We implement systematic review generation and professional response strategies. Practices with strong reviews typically outrank competitors across both traditional search and AI recommendations.',
       },
       {
-        question: 'How important are reviews for health and wellness SEO?',
+        question: 'What about HIPAA and healthcare compliance?',
         answer:
-          "Absolutely critical. Reviews serve dual purposes: they're a major ranking factor for local SEO, and they're the primary trust signal potential patients use to evaluate providers. We implement systematic review generation (requesting reviews from satisfied patients), monitoring across Google, Healthgrades, and other platforms, and professional response strategies for all reviews. Health and wellness businesses with consistent 4.5+ star ratings and fresh reviews typically outrank competitors with better technical SEO but poor reviews. Reviews are non-negotiable.",
-      },
-      {
-        question: 'What about privacy regulations like HIPAA?',
-        answer:
-          "We build all health and wellness SEO strategies with HIPAA compliance in mind. This means no patient information in testimonials without proper authorization, compliant review request processes that don't disclose protected health information, secure form handling for appointment requests, proper consent mechanisms for marketing communications, and guidance on what patient information can appear on your website. We work within healthcare privacy regulations while maximizing SEO impact. Compliance and effective marketing aren't mutually exclusive.",
+          "All our health and wellness strategies are built with compliance in mind. This means proper authorization for testimonials, compliant review request processes, secure form handling, and proper consent mechanisms for marketing. We work within healthcare privacy regulations while maximizing visibility across SEO, GEO, and lead generation. Compliance and effective marketing aren't mutually exclusive.",
       },
     ],
+    ctaHeadline: 'Attract More Clients',
+    ctaDescription:
+      "Let's attract qualified clients and grow your wellness business with proven GEO, SEO, and PPL strategies.",
   },
 
   // 10. FINANCE & INSURANCE
@@ -1621,54 +1647,54 @@ export const solutions: IndustrySolution[] = [
       'Generate qualified leads for financial advisors, insurance agents, and financial services firms through GEO, SEO, and PPL. Reach clients actively searching for guidance.',
     challenges: [
       {
-        title: 'YMYL Algorithm Scrutiny',
+        title: 'Strict Content Standards',
         description:
-          'Google applies strict "Your Money Your Life" standards to financial content. Ranking requires exceptional expertise, authority, and trustworthiness.',
-        icon: 'Shield',
+          'Google and AI assistants apply strict standards to financial content. Visibility requires exceptional expertise, authority, and trustworthiness.',
+        icon: 'Shield01Icon',
       },
       {
         title: 'Regulatory Compliance',
         description:
-          'SEC, FINRA, and state insurance regulations limit marketing claims. Balancing persuasive content with compliance is critical.',
-        icon: 'Scale',
+          'SEC, FINRA, and state insurance regulations limit marketing claims. Balancing effective visibility with compliance is critical.',
+        icon: 'JusticeScale01Icon',
       },
       {
         title: 'Competing with National Firms',
         description:
-          'Large banks, insurance companies, and national RIAs dominate search results with massive budgets and established authority.',
-        icon: 'Building2',
+          'Large banks and national RIAs dominate online visibility. Independent advisors need targeted strategies to reach local clients.',
+        icon: 'Building06Icon',
       },
       {
         title: 'Trust and Credibility',
         description:
-          'Financial decisions require high trust. Converting searchers into clients means demonstrating credentials, experience, and fiduciary commitment.',
-        icon: 'BadgeCheck',
+          'Financial decisions require high trust. Converting interest into clients means demonstrating credentials and fiduciary commitment.',
+        icon: 'CheckmarkBadge01Icon',
       },
     ],
     approach: [
       {
         title: 'Establish Authority',
         description:
-          'Build E-E-A-T signals through credential highlighting, professional certifications, regulatory compliance, and industry expertise.',
-        icon: 'Award',
+          'Build E-E-A-T signals that search engines and AI assistants require for financial content recommendations.',
+        icon: 'Award01Icon',
       },
       {
         title: 'Optimize Locally',
         description:
-          'Capture local searches for financial advisors, insurance agents, and wealth managers in your target markets.',
-        icon: 'MapPin',
+          'Build local visibility through Google Business Profile, location content, and AI recommendation optimization.',
+        icon: 'Location01Icon',
       },
       {
         title: 'Educate',
         description:
-          'Create compliant educational content that demonstrates expertise, answers financial questions, and builds trust.',
-        icon: 'BookOpen',
+          'Create compliant educational content that builds trust and positions you as the expert across all discovery channels.',
+        icon: 'Book02Icon',
       },
       {
         title: 'Convert',
         description:
-          'Optimize consultation booking, track lead quality, and scale strategies that drive high-value client relationships.',
-        icon: 'Target',
+          'Track lead quality across SEO, GEO, and PPL channels. Optimize consultation booking and scale what drives clients.',
+        icon: 'Target01Icon',
       },
     ],
     services: [
@@ -1754,32 +1780,35 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
-        question:
-          "How do we rank for financial content with Google's strict standards?",
+        question: 'How does GEO help financial advisors get found?',
         answer:
-          'Google applies YMYL (Your Money Your Life) standards to financial content, requiring exceptional E-E-A-T. We build this through comprehensive advisor profiles showcasing credentials (CFP, CFA, Series licenses), regulatory compliance documentation, citation of reputable financial sources, detailed firm about pages, authentic client testimonials, and consistent professional information. Financial advisors who invest in proper E-E-A-T signals can absolutely lead local searches for wealth management and financial planning.',
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your firm when people ask for financial advisor suggestions. When someone asks ChatGPT 'Best financial advisor in Phoenix' or 'Recommend a fee-only wealth manager,' GEO optimization determines whether you appear. As more people use AI for financial research, being optimized for these recommendations gives you an edge over competitors who only focus on traditional search.",
+      },
+      {
+        question: 'What is Pay Per Lead for financial services?',
+        answer:
+          'PPL for financial services delivers clients actively seeking advisory relationships. You only pay for verified leads - consultation requests from qualified prospects - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model is ideal for financial advisors because each new client relationship represents significant lifetime value.',
+      },
+      {
+        question:
+          "How do we rank with Google's strict financial content standards?",
+        answer:
+          'Google applies YMYL (Your Money Your Life) standards to financial content, requiring strong E-E-A-T signals. We build authority through comprehensive advisor profiles showcasing credentials (CFP, CFA, Series licenses), regulatory compliance documentation, and authentic client testimonials. Financial advisors who invest in proper authority signals can lead local searches for wealth management and financial planning.',
       },
       {
         question: 'How do we balance marketing with SEC/FINRA compliance?',
         answer:
-          'All our financial services content strategies are built with compliance in mind. We focus on educational content rather than performance claims, avoid testimonials where prohibited (or follow ADV disclosure requirements), include necessary disclaimers, and avoid guarantees of results. We work with your compliance team to ensure all content meets regulatory requirements while remaining effective for SEO. Many financial advisors are surprised how much great content they CAN create within compliance frameworks.',
+          'All our financial services strategies are built with compliance in mind. We focus on educational content rather than performance claims, handle testimonials according to ADV disclosure requirements, include necessary disclaimers, and avoid guarantees. We work within your compliance framework while maximizing visibility across SEO, GEO, and lead generation.',
       },
       {
         question: 'How do we compete with large banks and national RIAs?',
         answer:
-          "National firms have brand recognition but are weak where independent advisors excel: personalized service, local expertise, fiduciary commitment, and specialized planning for specific situations. Focus on your differentiators - whether that's fee-only fiduciary service, expertise with specific professionals (doctors, business owners), or deep local knowledge. Create content around specific planning scenarios where you have expertise. Own your local market through superior local SEO.",
-      },
-      {
-        question: 'What keywords should financial advisors target?',
-        answer:
-          'Focus on local intent keywords ("financial advisor [city]", "wealth management [location]"), life event keywords ("retirement planning", "selling a business"), and niche specialization keywords (if applicable). Avoid ultra-competitive generic terms. Long-tail keywords with clear intent often convert better than high-volume generic searches. We research your specific market, competition, and ideal client profile to build a targeted keyword strategy.',
-      },
-      {
-        question: 'How important are reviews for financial services SEO?',
-        answer:
-          'Reviews are critical for both rankings and trust. Google reviews are a major local ranking factor, and prospective clients heavily rely on reviews when choosing advisors. We implement compliant review generation strategies - some broker-dealers restrict soliciting reviews, so we work within your compliance framework. Even firms with restrictions can encourage organic reviews and respond professionally to build credibility.',
+          'National firms have brand recognition but are weak where independent advisors excel: personalized service, local expertise, fiduciary commitment, and specialized planning. Focus on your differentiators through targeted SEO content and GEO optimization. Create content around specific planning scenarios where you have expertise. Many clients actively prefer independent advisors and search specifically for alternatives to large firms.',
       },
     ],
+    ctaHeadline: 'Acquire More Clients',
+    ctaDescription:
+      "Let's generate qualified client leads with proven GEO, SEO, and PPL strategies built for financial advisors and insurance professionals.",
   },
 
   // 11. LAW FIRMS & LEGAL
@@ -1794,54 +1823,54 @@ export const solutions: IndustrySolution[] = [
       'Fill your caseload with qualified client inquiries through GEO, SEO, and PPL. Get found by people searching for legal representation.',
     challenges: [
       {
-        title: 'YMYL Search Scrutiny',
+        title: 'Strict Content Standards',
         description:
-          'Google applies strict standards to legal content. Ranking requires demonstrating expertise, credentials, and trustworthiness.',
-        icon: 'Shield',
+          'Google and AI assistants apply strict standards to legal content. Visibility requires demonstrating expertise and credentials.',
+        icon: 'Shield01Icon',
       },
       {
         title: 'Extreme Local Competition',
         description:
-          'Personal injury, family law, and criminal defense are among the most competitive local search markets. Standing out requires strategic SEO.',
-        icon: 'Users',
+          'Personal injury, family law, and criminal defense are intensely competitive. Standing out across search and AI requires strategic positioning.',
+        icon: 'UserGroupIcon',
       },
       {
-        title: 'Expensive Paid Alternatives',
+        title: 'High Customer Acquisition Costs',
         description:
-          'Legal keywords are among the most expensive in paid search ($50-$500+ per click). Without SEO, client acquisition costs are unsustainable.',
-        icon: 'DollarSign',
+          'Relying solely on paid ads is expensive and unsustainable. You need diversified channels including organic visibility and direct lead generation.',
+        icon: 'DollarCircleIcon',
       },
       {
         title: 'Bar Association Regulations',
         description:
-          'State bar advertising rules limit claims and require disclaimers. Balancing persuasive marketing with compliance is essential.',
-        icon: 'Scale',
+          'State bar advertising rules limit claims and require disclaimers. Balancing effective visibility with compliance is essential.',
+        icon: 'JusticeScale01Icon',
       },
     ],
     approach: [
       {
         title: 'Establish Authority',
         description:
-          'Build E-E-A-T through attorney profiles, case results, credentials, bar memberships, and legal expertise signals.',
-        icon: 'Award',
+          'Build E-E-A-T signals that search engines and AI assistants require for legal content recommendations.',
+        icon: 'Award01Icon',
       },
       {
         title: 'Own Locally',
         description:
-          'Own local search results for your practice areas. Rank for "[practice area] lawyer [city]" searches in your market.',
-        icon: 'MapPin',
+          'Build local visibility through Google Business Profile, practice area content, and AI recommendation optimization.',
+        icon: 'Location01Icon',
       },
       {
         title: 'Educate',
         description:
-          'Create compliant legal content that answers questions, demonstrates expertise, and guides potential clients to contact you.',
-        icon: 'BookOpen',
+          'Create compliant legal content that builds trust and positions you as the expert across all discovery channels.',
+        icon: 'Book02Icon',
       },
       {
         title: 'Convert',
         description:
-          'Optimize case inquiry forms, track lead quality, qualify leads effectively, and scale strategies that generate signed retainers.',
-        icon: 'FileSignature',
+          'Track lead quality across SEO, GEO, and PPL channels. Optimize intake forms and scale what generates signed retainers.',
+        icon: 'SignatureIcon',
       },
     ],
     services: [
@@ -1927,32 +1956,35 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
-        question: 'How competitive is legal SEO?',
+        question: 'How does GEO help law firms get found by potential clients?',
         answer:
-          'Legal SEO is among the most competitive industries, particularly for personal injury, criminal defense, and family law. However, this competition makes SEO MORE valuable, not less. Paid legal keywords cost $50-$500+ per click - a single page one ranking can save tens of thousands in ad spend monthly. The firms that invest in sustained SEO own their markets and reduce client acquisition costs dramatically.',
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend your firm when people ask for lawyer suggestions. When someone asks ChatGPT 'Best personal injury lawyer in Houston' or 'Recommend a family law attorney near me,' GEO optimization determines whether you appear. As more people use AI to find legal help, being optimized for these recommendations is becoming essential.",
+      },
+      {
+        question: 'What is Pay Per Lead for law firms?',
+        answer:
+          'PPL for law firms delivers potential clients with real cases. You only pay for verified case inquiries from people actively seeking legal representation, not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model is ideal for law firms because each qualified case can represent significant fee potential.',
       },
       {
         question:
-          "How do we rank with Google's strict standards for legal content?",
+          "How do we rank with Google's strict legal content standards?",
         answer:
-          'Google applies YMYL standards to legal content, requiring strong E-E-A-T signals. We build authority through comprehensive attorney profiles (education, bar admissions, case results), detailed practice area content demonstrating expertise, consistent NAP information, authentic client reviews, and professional credentials display. Law firms that invest in proper authority signals can absolutely own local legal searches.',
+          'Google applies YMYL standards to legal content, requiring strong E-E-A-T signals. We build authority through comprehensive attorney profiles (education, bar admissions, case results), detailed practice area content, authentic client reviews, and professional credentials display. Law firms that invest in proper authority signals can own local legal searches.',
       },
       {
         question: 'What about bar advertising rules and compliance?',
         answer:
-          "All our legal content strategies account for state bar advertising rules. We include required disclaimers, avoid prohibited claims, handle testimonials appropriately, and ensure all content meets your bar's requirements. We work with many law firms and understand the compliance landscape. Effective legal SEO and bar compliance are absolutely compatible - you just need strategies designed with regulations in mind.",
-      },
-      {
-        question: 'Which practice areas benefit most from SEO?',
-        answer:
-          'All practice areas benefit, but ROI varies. High-value, locally-searched practice areas (personal injury, family law, criminal defense, estate planning) see dramatic ROI because case values justify SEO investment and clients actively search. B2B practice areas (business law, IP, employment) benefit from content marketing and GEO that captures longer research cycles. We tailor strategies to your specific practice mix.',
+          'All our legal strategies account for state bar advertising rules. We include required disclaimers, avoid prohibited claims, and handle testimonials appropriately. Effective legal marketing and bar compliance are absolutely compatible. We work within regulations while maximizing visibility across SEO, GEO, and lead generation.',
       },
       {
         question: 'How long does law firm SEO take?',
         answer:
-          "Legal SEO typically shows meaningful results in 4-8 months due to high competition. You'll see initial improvements within 60-90 days from technical fixes and local optimization. Significant case inquiry increases typically arrive around month 6 as content gains authority. Law firms that commit to 12-18 months of strategic SEO often see organic search become their primary client source, dramatically reducing dependence on expensive paid advertising and referral fees.",
+          "Legal SEO typically shows meaningful results in 4-8 months due to high competition. You'll see initial improvements within 60-90 days from technical fixes and local optimization. Significant case inquiry increases typically arrive around month 6. Law firms that commit to 12-18 months often see organic search become their primary client source.",
       },
     ],
+    ctaHeadline: 'Sign More Retainers',
+    ctaDescription:
+      "Let's generate qualified case inquiries with proven GEO, SEO, and PPL strategies built for law firms.",
   },
 
   // 12. REAL ESTATE & DEVELOPMENT
@@ -1969,52 +2001,52 @@ export const solutions: IndustrySolution[] = [
       {
         title: 'Portal Dominance',
         description:
-          'Zillow, Realtor.com, and Redfin dominate property searches. Individual agents and brokerages struggle for visibility against platforms.',
-        icon: 'Building2',
+          'Zillow, Realtor.com, and Redfin dominate property discovery. Individual agents need direct channels to reach buyers and sellers.',
+        icon: 'Building06Icon',
       },
       {
         title: 'Hyperlocal Competition',
         description:
-          'Every real estate market has dozens of agents competing for the same searches. Standing out requires strategic differentiation.',
-        icon: 'Users',
+          'Every market has dozens of agents competing for the same clients. Standing out across search, AI, and lead channels requires differentiation.',
+        icon: 'UserGroupIcon',
       },
       {
         title: 'Market Fluctuations',
         description:
-          'Real estate markets shift between buyer and seller markets. SEO strategies must adapt to changing search behavior and inventory.',
-        icon: 'TrendingDown',
+          'Real estate markets shift between buyer and seller markets. Your visibility strategy must adapt to changing behavior and inventory.',
+        icon: 'ChartDecreaseIcon',
       },
       {
         title: 'Long Decision Cycles',
         description:
-          'Buyers and sellers research for months before acting. SEO must capture and nurture leads through extended decision processes.',
-        icon: 'Clock',
+          'Buyers and sellers research for months before acting. Your visibility must capture and nurture leads through extended decision processes.',
+        icon: 'Clock01Icon',
       },
     ],
     approach: [
       {
         title: 'Analyze',
         description:
-          'Research local market, competitor strategies, search behavior patterns, and identify opportunities for differentiation.',
-        icon: 'Search',
+          'Research your visibility across search, AI, and lead channels. Identify opportunities for differentiation in your market.',
+        icon: 'Search01Icon',
       },
       {
         title: 'Optimize',
         description:
-          'Fix technical SEO, optimize Google Business Profile, create neighborhood content, and build local market authority.',
-        icon: 'Settings',
+          'Improve your Google Business Profile and neighborhood content for visibility across search engines and AI assistants.',
+        icon: 'Settings01Icon',
       },
       {
         title: 'Localize',
         description:
-          'Create hyperlocal content that positions you as THE expert in specific neighborhoods, developments, and market segments.',
-        icon: 'MapPin',
+          'Create hyperlocal content that positions you as THE expert across all discovery channels in your target neighborhoods.',
+        icon: 'Location01Icon',
       },
       {
         title: 'Convert',
         description:
-          'Track lead quality, optimize contact forms, nurture prospects, and scale strategies that generate signed listings and buyers.',
-        icon: 'Target',
+          'Track lead quality across SEO, GEO, and PPL channels. Optimize contact forms and scale what generates listings and buyers.',
+        icon: 'Target01Icon',
       },
     ],
     services: [
@@ -2100,31 +2132,34 @@ export const solutions: IndustrySolution[] = [
     aggregateStats: [],
     faqs: [
       {
-        question: 'How do we compete with Zillow and Realtor.com?',
+        question: 'How does GEO help real estate agents get found?',
         answer:
-          'You can\'t outrank portals for generic "homes for sale" searches, but you can win where it matters: agent-specific searches, hyperlocal neighborhood queries, and specific buyer intent searches. Focus on becoming THE neighborhood expert through detailed local content. Create resources portals can\'t match - insider knowledge, market analysis, community insights. Plus, GEO optimization means AI assistants can recommend YOU directly when people ask for agent recommendations, bypassing portals entirely.',
+          "GEO (Generative Engine Optimization) ensures AI assistants recommend you when people ask for real estate agent suggestions. When someone asks ChatGPT 'Best realtor in Scottsdale' or 'Recommend a luxury home agent in Miami Beach,' GEO optimization determines whether you appear. As more buyers and sellers use AI to find agents, being optimized for these recommendations gives you an edge over competitors.",
       },
       {
-        question: 'What makes real estate SEO different from other industries?',
+        question: 'What is Pay Per Lead for real estate?',
         answer:
-          'Real estate SEO is hyperlocal and relationship-driven. Success comes from dominating specific neighborhoods, zip codes, and market segments rather than broad geographic areas. The content strategy focuses on demonstrating local expertise through neighborhood guides, market reports, and community knowledge. Unlike transactional industries, real estate SEO builds long-term brand awareness since buyers and sellers research for months before choosing an agent.',
+          'PPL for real estate delivers buyers and sellers actively seeking representation. You only pay for verified leads - listing appointments or qualified buyer inquiries - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model is ideal for real estate because each new client represents significant commission potential.',
+      },
+      {
+        question: 'How do we compete with Zillow and Realtor.com?',
+        answer:
+          "You can't outrank portals for generic 'homes for sale' searches, but you can win where it matters: agent-specific searches, hyperlocal neighborhood queries, and specific buyer intent searches. Focus on becoming THE neighborhood expert through detailed local content. Create resources portals can't match - insider knowledge, market analysis, community insights. GEO optimization means AI assistants can recommend YOU directly, bypassing portals.",
       },
       {
         question: 'How do we rank for neighborhood searches?',
         answer:
-          'Create comprehensive neighborhood landing pages that cover everything a buyer would want to know: housing inventory overview, price trends, school information, amenities, lifestyle factors, and market dynamics. Add regularly updated market reports, new listing highlights, and community news. Use structured data for local business and real estate. The agents who invest in deep neighborhood content become the default experts that both Google and AI assistants reference.',
-      },
-      {
-        question: 'Can SEO help luxury real estate and custom builders?',
-        answer:
-          'Absolutely. Luxury buyers do extensive online research before engaging agents. They search for specific neighborhoods, property features, architects, and builders. Creating premium content around luxury market expertise, showcasing high-end listings and projects, and building authority through quality signals all drive qualified luxury leads. Custom home builders benefit from portfolio showcasing, process content, and local builder authority building.',
+          'Create comprehensive neighborhood landing pages covering everything buyers want to know: housing inventory, price trends, school information, amenities, and market dynamics. Add regularly updated market reports and community news. Agents who invest in deep neighborhood content become the default experts that both Google and AI assistants reference for local recommendations.',
       },
       {
         question: 'How long does real estate SEO take?',
         answer:
-          'Real estate SEO typically shows initial results in 3-4 months for local searches and neighborhood content. Building true market authority takes 6-12 months of consistent content and optimization. The compounding nature of SEO means year two delivers dramatically better results than year one. Agents who commit to sustained SEO often see it become their primary lead source, reducing dependence on purchased leads and expensive portal advertising.',
+          'Real estate SEO typically shows initial results in 3-4 months for local searches and neighborhood content. Building true market authority takes 6-12 months of consistent content and optimization. The compounding nature means year two delivers dramatically better results than year one. Agents who commit to sustained SEO, GEO, and PPL often see these become their primary lead sources.',
       },
     ],
+    ctaHeadline: 'Close More Deals',
+    ctaDescription:
+      "Let's generate qualified buyer and seller leads with proven SEO, GEO, and PPL strategies built for real estate professionals.",
   },
 ];
 
