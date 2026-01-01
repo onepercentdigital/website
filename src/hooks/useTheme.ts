@@ -8,13 +8,18 @@ export function useTheme() {
 
   // Detect system preference and stored theme on mount
   useEffect(() => {
-    setMounted(true);
     const storedTheme = localStorage.getItem('theme') as Theme | null;
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
       .matches
       ? 'dark'
       : 'light';
-    setThemeState(storedTheme || systemTheme);
+    const detectedTheme = storedTheme || systemTheme;
+
+    setThemeState(detectedTheme);
+    // Ensure DOM class matches detected theme (in case of hydration desync)
+    document.documentElement.classList.toggle('dark', detectedTheme === 'dark');
+
+    setMounted(true);
   }, []);
 
   // Listen for system theme changes (when no explicit preference stored)
