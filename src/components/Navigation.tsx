@@ -41,7 +41,7 @@ export function Navigation() {
 
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList role="menubar">
+          <NavigationMenuList aria-orientation={undefined}>
             {navigation.main.map((item) =>
               item.type === 'dropdown' ? (
                 <NavigationMenuItem key={item.label}>
