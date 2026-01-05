@@ -1,7 +1,7 @@
 import {
   ArrowRight01Icon,
+  Building01Icon,
   ChartIncreaseIcon,
-  ChartLineData01Icon,
   DollarCircleIcon,
   Idea01Icon,
   Shield01Icon,
@@ -298,16 +298,16 @@ function ApplyPage() {
 
             <div className="text-center">
               <HugeiconsIcon
-                icon={ChartLineData01Icon}
+                icon={Building01Icon}
                 size={28}
                 strokeWidth={1.5}
                 className="mx-auto mb-3 text-primary"
               />
               <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                8X
+                All
               </div>
               <div className="text-muted-foreground text-sm">
-                Average Organic Growth
+                Industries Served
               </div>
             </div>
           </div>

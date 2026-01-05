@@ -183,7 +183,7 @@ function HomePage() {
                       847K
                     </span>
                     <span className="text-muted-foreground text-sm">
-                      impressions
+                      traffic
                     </span>
                   </div>
                   <svg
@@ -285,9 +285,9 @@ function HomePage() {
                 <Separator />
                 <div className="space-y-2 p-3">
                   {[
-                    { name: 'Marcus Chen', company: 'Apex Manufacturing' },
-                    { name: 'Sarah Johnson', company: 'Coastal Logistics' },
-                    { name: 'David Park', company: 'Summit Industries' },
+                    { name: 'James Crawford', company: 'Financial Planning' },
+                    { name: 'Robert Mitchell', company: 'Financial Planning' },
+                    { name: 'William Thompson', company: 'Financial Planning' },
                   ].map((lead) => (
                     <div
                       key={lead.name}

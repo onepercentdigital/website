@@ -66,7 +66,7 @@ export const solutions: IndustrySolution[] = [
       'Own local search and AI recommendations for restaurants, hotels, and hospitality venues. Fill every table and room with search-driven customers.',
     heroHeadline: 'Pack Your Restaurant, Fill Your Rooms',
     heroSubheadline:
-      'Fill tables and drive reservations with GEO, SEO, and PPL strategies built for hospitality. Beat OTAs, outrank chains, and capture your local market.',
+      'Fill tables and drive reservations with GEO and SEO strategies built for hospitality. Beat OTAs, outrank chains, and capture your local market.',
     challenges: [
       {
         title: 'OTAs Controlling Discovery',
@@ -186,17 +186,6 @@ export const solutions: IndustrySolution[] = [
           'Competitive benchmarking',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver pre-qualified customers ready to book. No retainers, no risk.',
-        features: [
-          'Pay only for qualified leads',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable customer acquisition',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Fill Tables and Drive Revenue',
     aggregateStats: [],
@@ -205,11 +194,6 @@ export const solutions: IndustrySolution[] = [
         question: 'What is GEO and why does it matter for restaurants?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants like ChatGPT, Perplexity, and voice assistants recommend your restaurant when people ask for dining suggestions. When someone asks 'What's the best Italian restaurant near me?' or 'Where should I eat in downtown Miami?', GEO optimization determines whether your venue appears in that recommendation. As more diners use AI to discover restaurants, GEO is becoming as important as traditional search visibility.",
-      },
-      {
-        question: 'How does Pay Per Lead work for hospitality businesses?',
-        answer:
-          "With PPL, you only pay for qualified customer inquiries, not clicks or impressions. We generate reservation requests, event inquiries, and catering leads through targeted campaigns, and you pay a fixed amount per verified lead. There are no retainers or monthly minimums. Leads are exclusive to you, not shared with competitors. It's a risk-free way to fill tables and book events because you're only paying for actual potential customers.",
       },
       {
         question:
@@ -230,7 +214,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Fill More Tables, Book More Rooms',
     ctaDescription:
-      "Let's fill your tables and drive reservations with proven GEO, SEO, and PPL strategies built for restaurants and hospitality businesses.",
+      "Let's fill your tables and drive reservations with proven GEO and SEO strategies built for restaurants and hospitality businesses.",
   },
 
   // 2. E-COMMERCE & RETAIL
@@ -242,7 +226,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified traffic and sales for online retailers. Compete with Amazon and win product searches with GEO, SEO, and PPL.',
     heroHeadline: 'Convert More Shoppers Into Customers',
     heroSubheadline:
-      'Compete with Amazon, outrank competitors, and capture high-intent buyers with GEO, SEO, and PPL built for e-commerce. Turn search traffic into revenue.',
+      'Compete with Amazon, outrank competitors, and capture high-intent buyers with GEO and SEO built for e-commerce. Turn search traffic into revenue.',
     challenges: [
       {
         title: 'Competing with Amazon and Marketplaces',
@@ -362,17 +346,6 @@ export const solutions: IndustrySolution[] = [
           'Conversion tracking and analysis',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-sale campaigns that deliver ready-to-buy customers. No retainers, pay only for results.',
-        features: [
-          'Pay only for conversions',
-          'Real-time customer acquisition',
-          'Exclusive leads (not shared)',
-          'Scalable revenue growth',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Drive Revenue and Market Share',
     aggregateStats: [],
@@ -381,11 +354,6 @@ export const solutions: IndustrySolution[] = [
         question: 'How does GEO help e-commerce stores compete with Amazon?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants recommend your products when shoppers ask for suggestions. When someone asks ChatGPT 'What's the best running shoe for flat feet?' or 'Recommend a coffee grinder under $100,' GEO optimization determines whether your products appear. Amazon dominates traditional search, but AI recommendations are a new battlefield where specialized retailers can win by having better, more helpful product information.",
-      },
-      {
-        question: 'What is Pay Per Lead for e-commerce?',
-        answer:
-          "For e-commerce, PPL typically means pay-per-sale or pay-per-qualified-inquiry campaigns. You only pay when we deliver an actual customer or high-intent lead, not for clicks or traffic. This is ideal for high-value products where each sale justifies the lead cost. We handle the customer acquisition, you handle fulfillment. It's a risk-free way to scale revenue because you're only paying for results.",
       },
       {
         question: 'How do we compete with Amazon in traditional search?',
@@ -405,7 +373,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Turn Browsers Into Buyers',
     ctaDescription:
-      "Let's drive revenue and capture market share with proven GEO, SEO, and PPL strategies built for online retailers.",
+      "Let's drive revenue and capture market share with proven GEO and SEO strategies built for online retailers.",
   },
 
   // 3. MANUFACTURING & INDUSTRIAL
@@ -417,7 +385,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified B2B leads for manufacturers and industrial companies. Lead high-value searches and reach decision-makers.',
     heroHeadline: 'Close More Contracts, Grow Your Pipeline',
     heroSubheadline:
-      'Generate qualified leads and reach procurement decision-makers with GEO, SEO, and PPL strategies built for complex B2B sales cycles.',
+      'Generate qualified leads and reach procurement decision-makers with GEO and SEO strategies built for complex B2B sales cycles.',
     challenges: [
       {
         title: 'Long, Complex Sales Cycles',
@@ -537,17 +505,6 @@ export const solutions: IndustrySolution[] = [
           'Competitive intelligence tracking',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver pre-qualified procurement contacts. No retainers, pay only for results.',
-        features: [
-          'Pay only for qualified leads',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable pipeline growth',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Drive High-Value B2B Leads',
     aggregateStats: [],
@@ -556,11 +513,6 @@ export const solutions: IndustrySolution[] = [
         question: 'How does GEO help manufacturers reach procurement teams?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants recommend your company when procurement professionals research suppliers. When a buyer asks ChatGPT 'Who manufactures custom aluminum enclosures?' or 'Best suppliers for industrial automation components,' GEO optimization determines whether your company appears. As more B2B buyers use AI for supplier research, being optimized for these recommendations is becoming critical for lead generation.",
-      },
-      {
-        question: 'What is Pay Per Lead for manufacturing?',
-        answer:
-          'PPL for manufacturing delivers pre-qualified procurement contacts and RFQ submissions. You only pay for verified leads from companies actively seeking your products or services, not for website traffic or ad impressions. Leads are exclusive to you and delivered in real-time. This model is particularly effective for manufacturers because each qualified lead can represent significant contract value.',
       },
       {
         question: 'How do you handle low search volume industrial keywords?',
@@ -580,7 +532,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Fill Your Pipeline With Qualified Leads',
     ctaDescription:
-      "Let's generate qualified B2B leads and grow your manufacturing business with proven GEO, SEO, and PPL strategies.",
+      "Let's generate qualified B2B leads and grow your manufacturing business with proven GEO and SEO strategies.",
   },
 
   // 4. LOGISTICS & TRANSPORTATION
@@ -592,7 +544,7 @@ export const solutions: IndustrySolution[] = [
       'Generate qualified shipping and logistics leads through search. Capture industry keywords and reach shippers searching for reliable partners.',
     heroHeadline: 'Book More Freight, Grow Your Fleet',
     heroSubheadline:
-      'Generate high-value shipping contracts and freight leads with GEO, SEO, and PPL built for logistics. Get found by shippers who need you.',
+      'Generate high-value shipping contracts and freight leads with GEO and SEO built for logistics. Get found by shippers who need you.',
     challenges: [
       {
         title: 'Competing with Load Boards',
@@ -712,17 +664,6 @@ export const solutions: IndustrySolution[] = [
           'Competitive lane analysis',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver shippers ready to book freight. No retainers, pay only for results.',
-        features: [
-          'Pay only for qualified shipper leads',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable freight acquisition',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Drive Profitable Freight Contracts',
     aggregateStats: [],
@@ -731,11 +672,6 @@ export const solutions: IndustrySolution[] = [
         question: 'How does GEO help logistics companies reach shippers?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants recommend your company when shippers ask for freight solutions. When someone asks ChatGPT 'Who handles refrigerated freight from Florida to Texas?' or 'Best logistics companies for e-commerce fulfillment,' GEO optimization determines whether you appear in that recommendation. As more shippers use AI to research logistics partners, being optimized for these queries is becoming essential.",
-      },
-      {
-        question: 'What is Pay Per Lead for logistics?',
-        answer:
-          'PPL for logistics delivers shippers actively seeking freight services. You only pay for verified quote requests from companies with real shipping needs, not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model works especially well for logistics because each new shipper relationship can represent significant ongoing revenue.',
       },
       {
         question: 'How do we compete with load boards like DAT and Freightos?',
@@ -755,7 +691,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Move More Freight',
     ctaDescription:
-      "Let's generate qualified shipping leads and grow your logistics business with proven GEO, SEO, and PPL strategies.",
+      "Let's generate qualified shipping leads and grow your logistics business with proven GEO and SEO strategies.",
   },
 
   // 5. AUTOMOTIVE
@@ -767,7 +703,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified leads for automotive businesses. Excel in local and specialty vehicle searches with proven GEO, SEO, and PPL.',
     heroHeadline: 'Move More Inventory, Grow Your Business',
     heroSubheadline:
-      'Fill your lot and drive revenue with GEO, SEO, and PPL built for automotive businesses. From classic cars to luxury rentals.',
+      'Fill your lot and drive revenue with GEO and SEO built for automotive businesses. From classic cars to luxury rentals.',
     challenges: [
       {
         title: 'Competing with National Dealer Groups',
@@ -887,17 +823,6 @@ export const solutions: IndustrySolution[] = [
           'ROI reporting by vehicle type',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver buyers ready to purchase. No retainers, pay only for results.',
-        features: [
-          'Pay only for qualified buyer leads',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable inventory turnover',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Fill Lots and Drive Sales',
     aggregateStats: [],
@@ -906,11 +831,6 @@ export const solutions: IndustrySolution[] = [
         question: 'How does GEO help automotive businesses get found?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants recommend your dealership or service when people ask for automotive suggestions. When someone asks ChatGPT 'Where can I find a classic Mustang restoration shop?' or 'Best exotic car rental in Miami,' GEO optimization determines whether you appear. As more car buyers use AI to research vehicles and services, being optimized for these recommendations is essential.",
-      },
-      {
-        question: 'What is Pay Per Lead for automotive?',
-        answer:
-          'PPL for automotive delivers buyers and service customers actively seeking what you offer. You only pay for verified leads - test drive requests, service appointments, or purchase inquiries - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model is ideal for high-value automotive sales where each qualified buyer represents significant revenue potential.',
       },
       {
         question: 'How do we compete with AutoTrader and large dealer groups?',
@@ -930,7 +850,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Sell More Vehicles',
     ctaDescription:
-      "Let's drive qualified leads and grow your automotive business with proven GEO, SEO, and PPL strategies.",
+      "Let's drive qualified leads and grow your automotive business with proven GEO and SEO strategies.",
   },
 
   // 6. CONSTRUCTION & CONTRACTORS
@@ -942,7 +862,7 @@ export const solutions: IndustrySolution[] = [
       'Generate qualified project leads for construction and contracting businesses. Win local searches and reach property owners who need you.',
     heroHeadline: 'Win More Bids, Book More Projects',
     heroSubheadline:
-      'Fill your pipeline with qualified project leads through GEO, SEO, and PPL. Get found by property owners searching for trusted contractors.',
+      'Fill your pipeline with qualified project leads through GEO and SEO. Get found by property owners searching for trusted contractors.',
     challenges: [
       {
         title: 'Intense Local Competition',
@@ -1062,17 +982,6 @@ export const solutions: IndustrySolution[] = [
           'Lead scoring and tracking',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver property owners with real projects. No retainers, pay only for results.',
-        features: [
-          'Pay only for qualified project leads',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable project pipeline',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Fill Your Project Pipeline',
     aggregateStats: [],
@@ -1081,11 +990,6 @@ export const solutions: IndustrySolution[] = [
         question: 'How does GEO help contractors get found by property owners?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants recommend your company when property owners ask for contractor suggestions. When someone asks ChatGPT 'Who's the best roofer in Austin?' or 'Recommend a kitchen remodeler near me,' GEO optimization determines whether you appear. As more homeowners use AI to find contractors, being optimized for these recommendations gives you an edge over competitors.",
-      },
-      {
-        question: 'How is Pay Per Lead different from HomeAdvisor?',
-        answer:
-          "Unlike platforms that send the same lead to multiple contractors, our PPL delivers exclusive leads directly to you. You only pay for verified project inquiries from property owners with real needs, not for shared leads where you're competing against five other bids. Leads are delivered in real-time, and there are no monthly fees or retainers. You control your volume and only pay for results.",
       },
       {
         question: 'How long does local contractor SEO take?',
@@ -1105,7 +1009,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Book More Projects',
     ctaDescription:
-      "Let's generate qualified project leads and grow your construction business with proven GEO, SEO, and PPL strategies.",
+      "Let's generate qualified project leads and grow your construction business with proven GEO and SEO strategies.",
   },
 
   // 7. AGRICULTURE & EQUIPMENT
@@ -1117,7 +1021,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified leads for agricultural equipment dealers and agribusinesses. Reach farmers and ranchers searching for machinery and solutions.',
     heroHeadline: 'Sell More Equipment, Grow Your Territory',
     heroSubheadline:
-      'Reach farmers researching equipment purchases. Generate qualified leads for tractors, implements, and agricultural services with GEO, SEO, and PPL.',
+      'Reach farmers researching equipment purchases. Generate qualified leads for tractors, implements, and agricultural services with GEO and SEO.',
     challenges: [
       {
         title: 'Competing with National Brands',
@@ -1237,17 +1141,6 @@ export const solutions: IndustrySolution[] = [
           'ROI reporting by equipment type',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver farmers ready to buy equipment. No retainers, pay only for results.',
-        features: [
-          'Pay only for qualified equipment leads',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable equipment sales pipeline',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Drive Equipment Sales and Service Revenue',
     aggregateStats: [],
@@ -1256,11 +1149,6 @@ export const solutions: IndustrySolution[] = [
         question: 'How does GEO help equipment dealers reach farmers?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants recommend your dealership when farmers research equipment. When someone asks ChatGPT 'Where can I find a John Deere dealer near Springfield?' or 'Best place to buy used tractors in Iowa,' GEO optimization determines whether you appear. As more farmers use AI for equipment research, being optimized for these recommendations gives you an advantage over competitors.",
-      },
-      {
-        question: 'What is Pay Per Lead for agricultural equipment?',
-        answer:
-          'PPL for agriculture delivers farmers actively seeking equipment purchases or service. You only pay for verified leads - quote requests, service appointments, or purchase inquiries - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model works well for equipment dealers because each qualified lead can represent significant sales value.',
       },
       {
         question: 'How do we compete with John Deere and other manufacturers?',
@@ -1280,7 +1168,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Grow Your Customer Base',
     ctaDescription:
-      "Let's drive qualified leads and grow your agricultural business with proven GEO, SEO, and PPL strategies.",
+      "Let's drive qualified leads and grow your agricultural business with proven GEO and SEO strategies.",
   },
 
   // 8. TECHNOLOGY & SAAS
@@ -1292,7 +1180,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified leads for technology companies and SaaS products. Command competitive tech searches and reach decision-makers.',
     heroHeadline: 'Acquire More Users, Scale Your SaaS',
     heroSubheadline:
-      'Generate qualified enterprise leads and product signups with GEO, SEO, and PPL built for technology companies. Reach decision-makers searching for solutions.',
+      'Generate qualified enterprise leads and product signups with GEO and SEO built for technology companies. Reach decision-makers searching for solutions.',
     challenges: [
       {
         title: 'Highly Competitive Markets',
@@ -1412,17 +1300,6 @@ export const solutions: IndustrySolution[] = [
           'Product-led growth SEO',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver demo requests and qualified trials. No retainers, pay only for results.',
-        features: [
-          'Pay only for qualified demos',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable customer acquisition',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Drive Product Growth and Enterprise Deals',
     aggregateStats: [],
@@ -1431,11 +1308,6 @@ export const solutions: IndustrySolution[] = [
         question: 'Why is GEO critical for SaaS and technology companies?',
         answer:
           "More tech buyers are asking ChatGPT, Perplexity, and AI assistants for software recommendations instead of Googling comparison lists. If your product doesn't appear in AI-generated recommendations, you're invisible to a growing segment of buyers. GEO optimization ensures AI assistants understand your product, recommend it for relevant queries, and cite your content. Most SaaS companies haven't optimized for GEO yet, so early movers have a significant advantage.",
-      },
-      {
-        question: 'What is Pay Per Lead for SaaS?',
-        answer:
-          'PPL for SaaS delivers demo requests and trial signups from companies actively evaluating solutions. You only pay for verified leads - qualified demo requests or high-intent trial signups - not for website traffic or ad impressions. Leads are exclusive to you and delivered in real-time. This model is ideal for SaaS with higher contract values where each qualified demo represents significant potential revenue.',
       },
       {
         question: 'How do we compete in expensive, competitive SaaS markets?',
@@ -1455,7 +1327,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Reach More Decision-Makers',
     ctaDescription:
-      "Let's accelerate your SaaS growth and reach decision-makers with proven GEO, SEO, and PPL strategies.",
+      "Let's accelerate your SaaS growth and reach decision-makers with proven GEO and SEO strategies.",
   },
 
   // 9. HEALTH & WELLNESS
@@ -1467,7 +1339,7 @@ export const solutions: IndustrySolution[] = [
       'Drive qualified clients for health and wellness businesses. Lead local searches and reach people seeking health solutions.',
     heroHeadline: 'Attract More Clients, Grow Your Practice',
     heroSubheadline:
-      'Fill your calendar with qualified clients through GEO, SEO, and PPL. Get found by people ready to invest in their wellbeing.',
+      'Fill your calendar with qualified clients through GEO and SEO. Get found by people ready to invest in their wellbeing.',
     challenges: [
       {
         title: 'Strict Content Standards',
@@ -1587,17 +1459,6 @@ export const solutions: IndustrySolution[] = [
           'Conversion tracking and analysis',
         ],
       },
-      {
-        title: 'Pay Per Lead Generation',
-        description:
-          'Pay-per-lead campaigns that deliver clients ready to book. No retainers, pay only for results.',
-        features: [
-          'Pay only for qualified client leads',
-          'Real-time lead delivery',
-          'Exclusive leads (not shared)',
-          'Scalable appointment booking',
-        ],
-      },
     ],
     resultsHeadline: 'Results That Fill Your Calendar and Grow Your Practice',
     aggregateStats: [],
@@ -1606,11 +1467,6 @@ export const solutions: IndustrySolution[] = [
         question: 'How does GEO help health and wellness practices get found?',
         answer:
           "GEO (Generative Engine Optimization) ensures AI assistants recommend your practice when people ask for health provider suggestions. When someone asks ChatGPT 'Best chiropractor near me' or 'Recommend a wellness clinic in Denver,' GEO optimization determines whether you appear. As more people use AI for health research, being optimized for these recommendations helps you reach clients your competitors miss.",
-      },
-      {
-        question: 'What is Pay Per Lead for health and wellness?',
-        answer:
-          'PPL for health and wellness delivers clients actively seeking your services. You only pay for verified leads - appointment requests or consultation inquiries - not for website traffic or impressions. Leads are exclusive to you and delivered in real-time. This model works well for practices because each new client represents ongoing revenue potential through repeat visits and referrals.',
       },
       {
         question:
@@ -1632,7 +1488,7 @@ export const solutions: IndustrySolution[] = [
     ],
     ctaHeadline: 'Attract More Clients',
     ctaDescription:
-      "Let's attract qualified clients and grow your wellness business with proven GEO, SEO, and PPL strategies.",
+      "Let's attract qualified clients and grow your wellness business with proven GEO and SEO strategies.",
   },
 
   // 10. FINANCE & INSURANCE
