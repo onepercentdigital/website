@@ -375,31 +375,31 @@ function PayPerLeadPage() {
                 <div className="space-y-2 p-4">
                   {[
                     {
-                      name: 'William Ashford',
+                      name: 'Thomas Hartley',
                       company: 'Mortgage Lending',
                       score: 'Hot',
                       time: '2 min ago',
                     },
                     {
-                      name: 'Edward Thornton',
+                      name: 'Frederick Mills',
                       company: 'Financial Planning',
                       score: 'Hot',
                       time: '8 min ago',
                     },
                     {
-                      name: 'George Whitmore',
+                      name: 'Arthur Pemberton',
                       company: 'Mortgage Lending',
                       score: 'Warm',
                       time: '15 min ago',
                     },
                     {
-                      name: 'Charles Pemberton',
+                      name: 'Edmund Sinclair',
                       company: 'Financial Planning',
                       score: 'Hot',
                       time: '23 min ago',
                     },
                     {
-                      name: 'Henry Blackwell',
+                      name: 'Richard Caldwell',
                       company: 'Financial Planning',
                       score: 'Warm',
                       time: '31 min ago',
@@ -445,7 +445,7 @@ function PayPerLeadPage() {
                 <Separator />
                 <div className="px-4 py-2.5 text-center">
                   <span className="text-muted-foreground text-xs">
-                    View all leads
+                    Showing 5 of 63 leads
                   </span>
                 </div>
               </Card>

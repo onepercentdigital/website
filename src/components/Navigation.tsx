@@ -41,7 +41,7 @@ export function Navigation() {
 
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
+          <NavigationMenuList role="menubar">
             {navigation.main.map((item) =>
               item.type === 'dropdown' ? (
                 <NavigationMenuItem key={item.label}>

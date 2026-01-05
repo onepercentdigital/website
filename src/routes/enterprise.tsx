@@ -270,7 +270,7 @@ function EnterprisePage() {
                   <div className="space-y-2">
                     {[
                       {
-                        text: 'New lead: William Hartford - Mortgage Lending',
+                        text: 'New lead: Jonathan Ashworth - Mortgage Lending',
                         time: '2 min ago',
                       },
                       {
@@ -1096,7 +1096,7 @@ function EnterprisePage() {
                 <Separator />
                 <div className="px-4 py-2.5 text-center">
                   <span className="text-muted-foreground text-xs">
-                    View detailed analytics
+                    Full analytics available in dashboard
                   </span>
                 </div>
               </Card>

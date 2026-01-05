@@ -645,7 +645,7 @@ function SEOPage() {
                     viewBox="0 0 400 120"
                     className="h-32 w-full"
                     preserveAspectRatio="none"
-                    aria-label="Traffic growth trend showing consistent increase over 12 months"
+                    aria-label="Traffic growth showing exponential increase over 12 months"
                     role="img"
                   >
                     {/* Grid lines */}
