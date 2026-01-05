@@ -95,7 +95,7 @@ function SolutionsLandingPage() {
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <h2 className="font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Why Industry-Specific SEO Matters
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-muted-foreground leading-relaxed">
@@ -167,7 +167,7 @@ function SolutionsLandingPage() {
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
-            <h2 className="font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
+            <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
               Find Your Industry
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground leading-relaxed">

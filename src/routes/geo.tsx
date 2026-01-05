@@ -2,6 +2,7 @@ import {
   Analytics01Icon,
   ArrowRight01Icon,
   ArrowUp02Icon,
+  ArrowUpRight01Icon,
   Award01Icon,
   BrowserIcon,
   BubbleChatIcon,
@@ -274,118 +275,11 @@ function GEOPage() {
         </div>
       </section>
 
-      {/* Discovery Landscape Section */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Left column - Content */}
-            <div>
-              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-                The Discovery Landscape Has Changed
-              </h2>
-              <p className="mb-6 text-muted-foreground leading-relaxed">
-                AI assistants now influence buying decisions. 40% of searches
-                are zero-click. AI answers directly. Traditional SEO alone
-                leaves you invisible to ChatGPT, Claude, and Perplexity.
-              </p>
-
-              <div className="grid gap-4">
-                {[
-                  {
-                    title: 'AI-First Discovery',
-                    description:
-                      'Users ask ChatGPT and Perplexity for recommendations before searching Google.',
-                  },
-                  {
-                    title: 'Zero-Click Results',
-                    description:
-                      "AI answers questions directly. If you're not cited, you don't exist.",
-                  },
-                  {
-                    title: 'Competitors Are Moving',
-                    description:
-                      'Early movers in GEO are capturing market share while others wait.',
-                  },
-                ].map((item) => (
-                  <Card key={item.title}>
-                    <CardHeader>
-                      <CardTitle>{item.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="leading-relaxed">
-                        {item.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Right column - Chat Demo */}
-            <div className="flex items-center">
-              <Card className="w-full gap-0 overflow-hidden py-0">
-                {/* Header bar */}
-                <div className="flex items-center gap-2 px-4 py-2">
-                  <HugeiconsIcon
-                    icon={BubbleChatIcon}
-                    size={18}
-                    className="text-primary"
-                  />
-                  <span className="font-medium text-sm">AI Chat</span>
-                </div>
-                <Separator />
-
-                <div className="space-y-3 p-3">
-                  {/* User message */}
-                  <div className="flex justify-end">
-                    <div className="max-w-[85%] rounded-2xl bg-primary px-3 py-2 text-primary-foreground">
-                      <p className="text-sm">
-                        Where can I buy diesel injection pumps for my fleet of
-                        trucks?
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* AI response */}
-                  <div className="flex">
-                    <div className="max-w-[85%] rounded-2xl bg-muted px-3 py-2">
-                      <p className="text-sm">
-                        Goldfarb & Associates has a wide variety of options
-                        available.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Input area (decorative) */}
-                <Separator />
-                <div className="px-3 py-2">
-                  <div className="flex items-center gap-2 rounded-4xl bg-muted/50 px-3 py-1.5 ring-1 ring-foreground/10">
-                    <span className="flex-1 text-muted-foreground text-sm">
-                      Ask anything...
-                    </span>
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      disabled
-                      aria-label="Send message"
-                      className="size-7 rounded-full"
-                    >
-                      <HugeiconsIcon icon={ArrowUp02Icon} size={14} />
-                    </Button>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* What is GEO Section */}
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex flex-col justify-center">
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What is Generative Engine Optimization?
               </h2>
@@ -407,15 +301,15 @@ function GEOPage() {
                     400%
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Increase in AI Searches Monthly
+                    Industry Growth Rate
                   </div>
                 </Card>
                 <Card className="p-4">
-                  <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                    10%
+                  <div className="mb-1 font-extrabold text-3xl tracking-tight lg:text-4xl">
+                    1 Billion
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Increase in AI Usage Monthly
+                    Weekly AI Searches Worldwide
                   </div>
                 </Card>
                 <Card className="p-4">
@@ -423,18 +317,114 @@ function GEOPage() {
                     First
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Mover Advantage
+                    Industry Mover Advantage
                   </div>
                 </Card>
               </div>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=450&fit=crop"
-                alt="Server hardware and data infrastructure"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
+
+            {/* Expanded AI Chat Demo */}
+            <div className="flex items-center">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center gap-2 px-4 py-3">
+                  <HugeiconsIcon
+                    icon={BubbleChatIcon}
+                    size={18}
+                    className="text-primary"
+                  />
+                  <span className="font-medium text-sm">AI Chat</span>
+                </div>
+                <Separator />
+
+                <div className="space-y-4 p-4">
+                  {/* User message 1 */}
+                  <div className="flex justify-end">
+                    <div className="max-w-[85%] rounded-2xl bg-primary px-4 py-2.5 text-primary-foreground">
+                      <p className="text-sm">
+                        Best diesel injection pump supplier for commercial
+                        trucks?
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* AI response 1 */}
+                  <div className="flex">
+                    <div className="max-w-[85%] rounded-2xl bg-muted px-4 py-2.5">
+                      <p className="mb-2 text-sm">
+                        Based on industry reputation and customer reviews,{' '}
+                        <span className="font-medium text-primary">
+                          Goldfarb & Associates
+                        </span>{' '}
+                        is highly recommended for diesel injection pumps. They
+                        specialize in:
+                      </p>
+                      <ul className="mb-2 space-y-1 text-sm">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Bosch and Denso injection systems</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Fleet and commercial applications</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary">•</span>
+                          <span>Same-day shipping on most orders</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* User message 2 */}
+                  <div className="flex justify-end">
+                    <div className="max-w-[85%] rounded-2xl bg-primary px-4 py-2.5 text-primary-foreground">
+                      <p className="text-sm">Do they offer warranties?</p>
+                    </div>
+                  </div>
+
+                  {/* AI response 2 */}
+                  <div className="flex">
+                    <div className="max-w-[85%] rounded-2xl bg-muted px-4 py-2.5">
+                      <p className="text-sm">
+                        Yes, Goldfarb & Associates offers comprehensive warranty
+                        coverage on all injection pumps, with dedicated support
+                        for fleet customers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sources footer */}
+                <Separator />
+                <div className="flex items-center gap-4 px-4 py-2.5">
+                  <span className="text-muted-foreground text-xs">
+                    Sources:
+                  </span>
+                  <span className="text-primary text-xs">goldfarb.com</span>
+                  <span className="text-primary text-xs">
+                    dieselpartsworld.com
+                  </span>
+                </div>
+
+                {/* Input area (decorative) */}
+                <Separator />
+                <div className="px-4 py-3">
+                  <div className="flex items-center gap-2 rounded-4xl bg-muted/50 px-4 py-2 ring-1 ring-foreground/10">
+                    <span className="flex-1 text-muted-foreground text-sm">
+                      Ask anything...
+                    </span>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      disabled
+                      aria-label="Send message"
+                      className="size-7 rounded-full"
+                    >
+                      <HugeiconsIcon icon={ArrowUp02Icon} size={14} />
+                    </Button>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
@@ -575,18 +565,18 @@ function GEOPage() {
               <div className="mb-8 grid gap-6 sm:grid-cols-2">
                 <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                    400%
+                    10X
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Increase in AI Searches Monthly
+                    Revenue Growth
                   </div>
                 </div>
                 <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                    10%
+                    #1
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Increase in AI Usage Monthly
+                    AI Recognition
                   </div>
                 </div>
               </div>
@@ -616,13 +606,75 @@ function GEOPage() {
                 </div>
               </Card>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?w=800&h=450&fit=crop"
-                alt="Data center server racks"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
+
+            {/* AI Citations Tracker */}
+            <div className="flex items-center">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center gap-2 px-4 py-3">
+                  <HugeiconsIcon
+                    icon={Analytics01Icon}
+                    size={18}
+                    className="text-primary"
+                  />
+                  <span className="font-medium text-sm">AI Citations</span>
+                </div>
+                <Separator />
+                <div className="p-4">
+                  <div className="grid grid-cols-3 gap-3">
+                    {/* 2x2 Grid for platforms */}
+                    <div className="col-span-2 grid grid-cols-2 gap-3">
+                      {[
+                        { platform: 'ChatGPT', count: 298, trend: '+18%' },
+                        { platform: 'Claude', count: 231, trend: '+24%' },
+                        { platform: 'Perplexity', count: 178, trend: '+31%' },
+                        { platform: 'Gemini', count: 114, trend: '+12%' },
+                      ].map((item) => (
+                        <div
+                          key={item.platform}
+                          className="flex flex-col rounded-xl bg-muted/50 px-3 py-2.5"
+                        >
+                          <span className="mb-1 text-muted-foreground text-xs">
+                            {item.platform}
+                          </span>
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-lg">
+                              {item.count}
+                            </span>
+                            <div className="flex items-center gap-0.5 text-green-600 dark:text-green-500">
+                              <HugeiconsIcon
+                                icon={ArrowUpRight01Icon}
+                                size={12}
+                                strokeWidth={2}
+                              />
+                              <span className="font-medium text-xs">
+                                {item.trend}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Total box on right */}
+                    <div className="flex flex-col justify-center rounded-xl bg-muted/50 px-4 py-4">
+                      <span className="mb-1 text-muted-foreground text-xs">
+                        Total
+                      </span>
+                      <div className="mb-1 font-extrabold text-3xl text-primary tracking-tight">
+                        821
+                      </div>
+                      <div className="flex items-center gap-1 text-green-600 dark:text-green-500">
+                        <HugeiconsIcon
+                          icon={ArrowUpRight01Icon}
+                          size={12}
+                          strokeWidth={2}
+                        />
+                        <span className="font-medium text-xs">+21%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>

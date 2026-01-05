@@ -28,6 +28,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -36,6 +37,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/ppl')({
@@ -307,8 +309,8 @@ function PayPerLeadPage() {
       {/* What is Pay Per Lead Generation Section */}
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex flex-col justify-center">
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What is Pay Per Lead Generation?
               </h2>
@@ -352,13 +354,101 @@ function PayPerLeadPage() {
                 </Card>
               </div>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop"
-                alt="Business meeting and lead generation"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
+
+            {/* Expanded Lead Pipeline Component */}
+            <div className="flex items-center">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center justify-between px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <HugeiconsIcon
+                      icon={UserGroupIcon}
+                      size={18}
+                      className="text-primary"
+                    />
+                    <span className="font-medium text-sm">Lead Pipeline</span>
+                  </div>
+                  <span className="font-bold text-primary text-sm">
+                    63 this week
+                  </span>
+                </div>
+                <Separator />
+                <div className="space-y-2 p-4">
+                  {[
+                    {
+                      name: 'Thomas Hartley',
+                      company: 'Mortgage Lending',
+                      score: 'Hot',
+                      time: '2 min ago',
+                    },
+                    {
+                      name: 'Frederick Mills',
+                      company: 'Financial Planning',
+                      score: 'Hot',
+                      time: '8 min ago',
+                    },
+                    {
+                      name: 'Arthur Pemberton',
+                      company: 'Mortgage Lending',
+                      score: 'Warm',
+                      time: '15 min ago',
+                    },
+                    {
+                      name: 'Edmund Sinclair',
+                      company: 'Financial Planning',
+                      score: 'Hot',
+                      time: '23 min ago',
+                    },
+                    {
+                      name: 'Richard Caldwell',
+                      company: 'Financial Planning',
+                      score: 'Warm',
+                      time: '31 min ago',
+                    },
+                  ].map((lead) => (
+                    <div
+                      key={lead.name}
+                      className="flex items-center gap-3 rounded-xl bg-muted/50 p-3"
+                    >
+                      <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-muted font-medium text-muted-foreground text-sm">
+                        {lead.name
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="truncate font-medium text-sm">
+                            {lead.name}
+                          </span>
+                          <Badge
+                            variant={
+                              lead.score === 'Hot' ? 'default' : 'secondary'
+                            }
+                            className="shrink-0 text-xs"
+                          >
+                            {lead.score}
+                          </Badge>
+                        </div>
+                        <div className="flex items-center gap-2 text-muted-foreground text-xs">
+                          <span className="truncate">{lead.company}</span>
+                          <span>•</span>
+                          <span className="shrink-0">{lead.time}</span>
+                        </div>
+                      </div>
+                      <div
+                        className="size-2 shrink-0 rounded-full bg-green-500"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <Separator />
+                <div className="px-4 py-2.5 text-center">
+                  <span className="text-muted-foreground text-xs">
+                    Showing 5 of 63 leads
+                  </span>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
@@ -568,13 +658,119 @@ function PayPerLeadPage() {
                 </div>
               </div>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop"
-                alt="Team collaboration and lead pipeline"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
+
+            {/* Revenue Growth Graph */}
+            <div className="flex items-center">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center justify-between px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <HugeiconsIcon
+                      icon={DollarCircleIcon}
+                      size={18}
+                      className="text-primary"
+                    />
+                    <span className="font-medium text-sm">Revenue Growth</span>
+                  </div>
+                </div>
+                <Separator />
+                <div className="p-4">
+                  {/* Main metric */}
+                  <div className="mb-4">
+                    <div className="font-extrabold text-3xl tracking-tight">
+                      $2.4M
+                    </div>
+                    <div className="text-muted-foreground text-sm">
+                      Total Revenue Generated
+                    </div>
+                  </div>
+
+                  {/* Graph with Y-axis */}
+                  <div className="flex gap-2">
+                    {/* Y-axis labels */}
+                    <div className="flex flex-col justify-between py-1 text-muted-foreground text-xs">
+                      <span>$2.5M</span>
+                      <span>$2M</span>
+                      <span>$1.5M</span>
+                      <span>$1M</span>
+                      <span>$500K</span>
+                      <span>$0</span>
+                    </div>
+
+                    {/* SVG Graph - Exponential curve */}
+                    <div className="flex-1">
+                      <svg
+                        viewBox="0 0 400 120"
+                        className="h-32 w-full"
+                        preserveAspectRatio="none"
+                        aria-label="Revenue growth showing exponential increase"
+                        role="img"
+                      >
+                        {/* Grid lines */}
+                        <line
+                          x1="0"
+                          y1="24"
+                          x2="400"
+                          y2="24"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                          className="text-muted-foreground/20"
+                        />
+                        <line
+                          x1="0"
+                          y1="48"
+                          x2="400"
+                          y2="48"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                          className="text-muted-foreground/20"
+                        />
+                        <line
+                          x1="0"
+                          y1="72"
+                          x2="400"
+                          y2="72"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                          className="text-muted-foreground/20"
+                        />
+                        <line
+                          x1="0"
+                          y1="96"
+                          x2="400"
+                          y2="96"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                          className="text-muted-foreground/20"
+                        />
+
+                        {/* Exponential growth curve */}
+                        <path
+                          d="M0,115 C50,114 100,112 150,105 C200,95 250,70 300,35 C350,10 375,5 400,3"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          className="text-primary"
+                        />
+
+                        {/* Fill under curve with gradient effect */}
+                        <path
+                          d="M0,115 C50,114 100,112 150,105 C200,95 250,70 300,35 C350,10 375,5 400,3 L400,120 L0,120 Z"
+                          fill="currentColor"
+                          className="text-primary/10"
+                        />
+                      </svg>
+
+                      {/* X-axis labels */}
+                      <div className="mt-2 flex justify-between text-muted-foreground text-xs">
+                        <span>Q1</span>
+                        <span>Q2</span>
+                        <span>Q3</span>
+                        <span>Q4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>

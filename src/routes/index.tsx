@@ -180,7 +180,7 @@ function HomePage() {
                 <div className="p-4">
                   <div className="mb-2 flex items-baseline gap-2">
                     <span className="font-extrabold text-2xl tracking-tight">
-                      847K
+                      982K
                     </span>
                     <span className="text-muted-foreground text-sm">
                       traffic
@@ -279,15 +279,15 @@ function HomePage() {
                     <span className="font-medium text-sm">Lead Pipeline</span>
                   </div>
                   <span className="font-bold text-primary text-sm">
-                    47 this week
+                    63 this week
                   </span>
                 </div>
                 <Separator />
                 <div className="space-y-2 p-3">
                   {[
-                    { name: 'James Crawford', company: 'Financial Planning' },
+                    { name: 'James Crawford', company: 'Mortgage Lending' },
                     { name: 'Robert Mitchell', company: 'Financial Planning' },
-                    { name: 'William Thompson', company: 'Financial Planning' },
+                    { name: 'William Thompson', company: 'Mortgage Lending' },
                   ].map((lead) => (
                     <div
                       key={lead.name}
