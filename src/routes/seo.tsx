@@ -3,6 +3,7 @@ import {
   ArrowRight01Icon,
   Award01Icon,
   BrowserIcon,
+  ChartIncreaseIcon,
   CheckmarkCircle02Icon,
   Clock01Icon,
   DollarCircleIcon,
@@ -10,6 +11,7 @@ import {
   Link01Icon,
   Search01Icon,
   SecurityCheckIcon,
+  SparklesIcon,
   Target01Icon,
   UserGroupIcon,
   ZapIcon,
@@ -31,6 +33,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
@@ -276,8 +279,8 @@ function SEOPage() {
       {/* What is SEO Section */}
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex flex-col justify-center">
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What is Search Engine Optimization?
               </h2>
@@ -320,13 +323,81 @@ function SEOPage() {
                 </Card>
               </div>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
-                alt="Search analytics and data visualization"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
+
+            {/* AI Overview Component */}
+            <div className="flex items-center">
+              <div className="w-full space-y-4">
+                {/* Google-style search bar */}
+                <div className="flex items-center gap-3 rounded-full bg-background px-5 py-3 shadow-sm ring-1 ring-foreground/10">
+                  <HugeiconsIcon
+                    icon={Search01Icon}
+                    size={18}
+                    className="shrink-0 text-muted-foreground"
+                  />
+                  <span className="text-sm">
+                    diesel injection pump supplier
+                  </span>
+                </div>
+
+                <Card className="w-full gap-0 overflow-hidden py-0">
+                  <div className="flex items-center gap-2 px-4 py-3">
+                    <HugeiconsIcon
+                      icon={SparklesIcon}
+                      size={18}
+                      className="text-primary"
+                    />
+                    <span className="font-medium text-sm">AI Overview</span>
+                  </div>
+                  <Separator />
+                  <div className="p-4">
+                    <p className="mb-4 text-sm leading-relaxed">
+                      For diesel injection pump replacement, industry experts
+                      recommend specialized suppliers like{' '}
+                      <span className="font-medium text-primary">
+                        Goldfarb & Associates
+                      </span>{' '}
+                      who offer OEM-quality parts with comprehensive warranty
+                      coverage. Key factors to consider include:
+                    </p>
+                    <ul className="mb-4 space-y-2 text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>
+                          Compatibility with your specific engine model and year
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>
+                          Warranty terms and technical support options
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary">•</span>
+                        <span>
+                          Shipping speed for fleet maintenance schedules
+                        </span>
+                      </li>
+                    </ul>
+                    <p className="text-sm leading-relaxed">
+                      Suppliers with established industry presence typically
+                      offer better parts quality and customer service for
+                      commercial applications.
+                    </p>
+                  </div>
+                  <Separator />
+                  <div className="flex items-center gap-4 px-4 py-2.5">
+                    <span className="text-muted-foreground text-xs">
+                      Sources:
+                    </span>
+                    <span className="text-primary text-xs">goldfarb.com</span>
+                    <span className="text-primary text-xs">
+                      dieselpartsworld.com
+                    </span>
+                    <span className="text-primary text-xs">fleetowner.com</span>
+                  </div>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
@@ -524,13 +595,149 @@ function SEOPage() {
                 </div>
               </Card>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Growth charts and analytics dashboard"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
+
+            {/* Expanded Traffic Graph */}
+            <div className="flex items-center">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center justify-between px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <HugeiconsIcon
+                      icon={ChartIncreaseIcon}
+                      size={18}
+                      className="text-primary"
+                    />
+                    <span className="font-medium text-sm">Search Console</span>
+                  </div>
+                  <span className="text-muted-foreground text-xs">
+                    Last 12 months
+                  </span>
+                </div>
+                <Separator />
+                <div className="p-4">
+                  {/* Metrics row */}
+                  <div className="mb-4 grid grid-cols-3 gap-4">
+                    <div>
+                      <div className="font-extrabold text-2xl tracking-tight">
+                        982K
+                      </div>
+                      <div className="text-muted-foreground text-xs">
+                        Total Traffic
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-extrabold text-2xl tracking-tight">
+                        3.1M
+                      </div>
+                      <div className="text-muted-foreground text-xs">
+                        Impressions
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-extrabold text-2xl tracking-tight">
+                        4.2%
+                      </div>
+                      <div className="text-muted-foreground text-xs">CTR</div>
+                    </div>
+                  </div>
+
+                  {/* SVG Graph */}
+                  <svg
+                    viewBox="0 0 400 120"
+                    className="h-32 w-full"
+                    preserveAspectRatio="none"
+                    aria-label="Traffic growth trend showing consistent increase over 12 months"
+                    role="img"
+                  >
+                    {/* Grid lines */}
+                    <line
+                      x1="0"
+                      y1="30"
+                      x2="400"
+                      y2="30"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      className="text-muted-foreground/20"
+                    />
+                    <line
+                      x1="0"
+                      y1="60"
+                      x2="400"
+                      y2="60"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      className="text-muted-foreground/20"
+                    />
+                    <line
+                      x1="0"
+                      y1="90"
+                      x2="400"
+                      y2="90"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      className="text-muted-foreground/20"
+                    />
+
+                    {/* Previous period line (dashed) - showing worse performance */}
+                    <path
+                      d="M0,100 Q50,98 100,95 T200,90 T300,85 T400,80"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeDasharray="4 4"
+                      className="text-muted-foreground/40"
+                    />
+
+                    {/* Current period line */}
+                    <path
+                      d="M0,100 Q50,95 100,80 T200,55 T300,30 T400,15"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      className="text-primary"
+                    />
+
+                    {/* Fill under current curve */}
+                    <path
+                      d="M0,100 Q50,95 100,80 T200,55 T300,30 T400,15 L400,120 L0,120 Z"
+                      fill="currentColor"
+                      className="text-primary/10"
+                    />
+                  </svg>
+
+                  {/* X-axis labels */}
+                  <div className="mt-2 flex justify-between text-muted-foreground text-xs">
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+                    <span>Nov</span>
+                    <span>Dec</span>
+                  </div>
+                </div>
+
+                {/* Legend */}
+                <Separator />
+                <div className="flex items-center gap-6 px-4 py-2.5">
+                  <div className="flex items-center gap-2">
+                    <div className="h-0.5 w-4 bg-primary" />
+                    <span className="text-muted-foreground text-xs">
+                      Current year
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="h-0.5 w-4 border-muted-foreground/40 border-t-2 border-dashed" />
+                    <span className="text-muted-foreground text-xs">
+                      Previous year
+                    </span>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>

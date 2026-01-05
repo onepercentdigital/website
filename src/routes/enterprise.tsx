@@ -1,5 +1,6 @@
 import {
   ArrowRight01Icon,
+  ArrowUpRight01Icon,
   Brain01Icon,
   ChartIncreaseIcon,
   ChartLineData01Icon,
@@ -15,6 +16,7 @@ import {
   Shield01Icon,
   Target01Icon,
   UserGroupIcon,
+  UserIcon,
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
@@ -33,6 +35,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/enterprise')({
@@ -106,7 +109,7 @@ function EnterprisePage() {
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
                 What Makes Enterprise Different
               </h2>
@@ -130,34 +133,169 @@ function EnterprisePage() {
                 drives success.
               </p>
             </div>
-            <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=450&fit=crop"
-                alt="Corporate strategy session"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
-            </div>
-          </div>
 
-          {/* Mini Stats */}
-          <div className="mt-16 grid gap-8 sm:grid-cols-2">
-            <Card className="p-8 text-center">
-              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                Worldwide
-              </div>
-              <div className="text-muted-foreground text-sm">
-                Brand Visibility
-              </div>
-            </Card>
-            <Card className="p-8 text-center">
-              <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                24/7
-              </div>
-              <div className="text-muted-foreground text-sm">
-                Priority Support Access
-              </div>
-            </Card>
+            {/* Client Portal Dashboard Component */}
+            <div className="flex items-center">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center gap-2 px-4 py-3">
+                  <HugeiconsIcon
+                    icon={UserIcon}
+                    size={18}
+                    className="text-primary"
+                  />
+                  <span className="font-medium text-sm">Client Portal</span>
+                </div>
+                <Separator />
+
+                {/* Metrics Summary Row */}
+                <div className="grid grid-cols-3 gap-3 p-4">
+                  <div className="rounded-xl bg-muted/50 p-3">
+                    <div className="mb-1 text-muted-foreground text-xs">
+                      AI Citations
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-lg">1,247</span>
+                      <div className="flex items-center gap-0.5 text-green-600 dark:text-green-500">
+                        <HugeiconsIcon
+                          icon={ArrowUpRight01Icon}
+                          size={12}
+                          strokeWidth={2}
+                        />
+                        <span className="font-medium text-xs">+23%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="rounded-xl bg-muted/50 p-3">
+                    <div className="mb-1 text-muted-foreground text-xs">
+                      Organic Traffic
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-lg">156K</span>
+                      <div className="flex items-center gap-0.5 text-green-600 dark:text-green-500">
+                        <HugeiconsIcon
+                          icon={ArrowUpRight01Icon}
+                          size={12}
+                          strokeWidth={2}
+                        />
+                        <span className="font-medium text-xs">+18%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="rounded-xl bg-muted/50 p-3">
+                    <div className="mb-1 text-muted-foreground text-xs">
+                      Qualified Leads
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-lg">89</span>
+                      <span className="text-muted-foreground text-xs">
+                        this month
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mini Charts Section */}
+                <div className="grid grid-cols-2 gap-3 px-4 pb-4">
+                  {/* Traffic sparkline */}
+                  <div className="rounded-xl bg-muted/50 p-3">
+                    <div className="mb-2 text-muted-foreground text-xs">
+                      Traffic (30 days)
+                    </div>
+                    <svg
+                      viewBox="0 0 100 32"
+                      className="h-8 w-full"
+                      preserveAspectRatio="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0,28 Q15,26 25,24 T50,18 T75,10 T100,6"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        className="text-primary"
+                      />
+                      <path
+                        d="M0,28 Q15,26 25,24 T50,18 T75,10 T100,6 L100,32 L0,32 Z"
+                        fill="currentColor"
+                        className="text-primary/10"
+                      />
+                    </svg>
+                  </div>
+                  {/* Conversion rate */}
+                  <div className="rounded-xl bg-muted/50 p-3">
+                    <div className="mb-2 text-muted-foreground text-xs">
+                      Conversion Rate
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="relative size-8">
+                        <svg
+                          viewBox="0 0 36 36"
+                          className="size-8 -rotate-90"
+                          aria-hidden="true"
+                        >
+                          <circle
+                            cx="18"
+                            cy="18"
+                            r="15"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                            className="text-muted"
+                          />
+                          <circle
+                            cx="18"
+                            cy="18"
+                            r="15"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                            strokeDasharray="94.2"
+                            strokeDashoffset="82.5"
+                            className="text-primary"
+                          />
+                        </svg>
+                      </div>
+                      <span className="font-bold text-lg">12.4%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Recent Activity */}
+                <div className="p-4">
+                  <div className="mb-2 text-muted-foreground text-xs">
+                    Recent Activity
+                  </div>
+                  <div className="space-y-2">
+                    {[
+                      {
+                        text: 'New lead: William Hartford - Mortgage Lending',
+                        time: '2 min ago',
+                      },
+                      {
+                        text: 'AI citation detected: ChatGPT',
+                        time: '15 min ago',
+                      },
+                      {
+                        text: 'Traffic milestone: 150K monthly visitors',
+                        time: '1 hour ago',
+                      },
+                    ].map((activity) => (
+                      <div
+                        key={activity.text}
+                        className="flex items-center justify-between text-sm"
+                      >
+                        <span className="truncate">{activity.text}</span>
+                        <span className="shrink-0 text-muted-foreground text-xs">
+                          {activity.time}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -853,13 +991,115 @@ function EnterprisePage() {
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="relative aspect-video overflow-hidden rounded-2xl lg:order-1">
-              <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-              <img
-                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=450&fit=crop"
-                alt="Executive business presentation"
-                className="relative z-20 h-full w-full object-cover brightness-60 grayscale"
-              />
+            {/* Monthly Performance Component */}
+            <div className="flex items-center lg:order-1">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center gap-2 px-4 py-3">
+                  <HugeiconsIcon
+                    icon={ChartLineData01Icon}
+                    size={18}
+                    className="text-primary"
+                  />
+                  <span className="font-medium text-sm">
+                    Monthly Performance
+                  </span>
+                </div>
+                <Separator />
+                <div className="p-4">
+                  {/* 2x2 Performance Grid */}
+                  <div className="grid grid-cols-2 gap-4">
+                    {/* SEO Performance */}
+                    <div className="space-y-3 rounded-xl bg-muted/50 p-3">
+                      <div className="font-medium text-muted-foreground text-xs">
+                        SEO Performance
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            Sessions
+                          </span>
+                          <span className="font-bold text-sm">43,892</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            Bounce Rate
+                          </span>
+                          <span className="font-bold text-sm">34.2%</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* GEO Performance */}
+                    <div className="space-y-3 rounded-xl bg-muted/50 p-3">
+                      <div className="font-medium text-muted-foreground text-xs">
+                        GEO Performance
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            AI Mentions
+                          </span>
+                          <span className="font-bold text-sm">312</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            Avg Position
+                          </span>
+                          <span className="font-bold text-sm">2.1</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Lead Generation */}
+                    <div className="space-y-3 rounded-xl bg-muted/50 p-3">
+                      <div className="font-medium text-muted-foreground text-xs">
+                        Lead Generation
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            New Leads
+                          </span>
+                          <span className="font-bold text-sm">89</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            Qualified
+                          </span>
+                          <span className="font-bold text-sm">67</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Revenue Impact */}
+                    <div className="space-y-3 rounded-xl bg-muted/50 p-3">
+                      <div className="font-medium text-muted-foreground text-xs">
+                        Revenue Impact
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            Pipeline Value
+                          </span>
+                          <span className="font-bold text-sm">$847K</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-muted-foreground text-xs">
+                            Closed Won
+                          </span>
+                          <span className="font-bold text-sm">$234K</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Separator />
+                <div className="px-4 py-2.5 text-center">
+                  <span className="text-muted-foreground text-xs">
+                    View detailed analytics
+                  </span>
+                </div>
+              </Card>
             </div>
             <div className="lg:order-2">
               <p className="mb-8 text-muted-foreground leading-relaxed">
