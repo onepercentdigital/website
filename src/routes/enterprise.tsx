@@ -270,7 +270,7 @@ function EnterprisePage() {
                   <div className="space-y-2">
                     {[
                       {
-                        text: 'New lead: Jonathan Ashworth - Mortgage Lending',
+                        text: 'New lead: Jonathan Ashworth',
                         time: '2 min ago',
                       },
                       {
