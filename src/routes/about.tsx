@@ -108,9 +108,8 @@ function AboutPage() {
                 One Percent Digital was founded on a simple principle: the best
                 marketing experts are the ones who run their own businesses.
                 We're not consultants who learned SEO from textbooks. We're
-                entrepreneurs who've scaled multiple E-commerce brands from the
-                ground up and understand the real challenges of growing a
-                business online.
+                entrepreneurs who built and successfully exited multiple
+                E-commerce brands, and now we're helping others do the same.
               </p>
               <p className="mb-6 text-muted-foreground leading-relaxed">
                 Since 2015, our team has worked with over 100 brands across
@@ -283,10 +282,10 @@ function AboutPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="leading-relaxed">
-                  We run our own successful E-commerce brands, so we understand
-                  the challenges you face. We're not consultants reading from a
-                  playbook. We're business owners who live and breathe the same
-                  struggles and victories you experience every day.
+                  We built and exited our own E-commerce brands using GEO, SEO,
+                  and paid advertising. We're not consultants reading from a
+                  playbook. We're entrepreneurs who've been through the journey
+                  and now help others achieve similar success.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -324,10 +323,10 @@ function AboutPage() {
               <CardContent>
                 <CardDescription className="leading-relaxed">
                   With over 100 brands served since 2015 and multiple co-founded
-                  E-commerce ventures, our strategies aren't theoretical.
-                  They're battle-tested. We've scaled businesses through
-                  algorithm updates, market changes, and competitive pressures.
-                  We know what works.
+                  and exited E-commerce ventures, our strategies aren't
+                  theoretical. They're battle-tested. We've scaled businesses
+                  through algorithm updates, market changes, and competitive
+                  pressures. We know what works.
                 </CardDescription>
               </CardContent>
             </Card>

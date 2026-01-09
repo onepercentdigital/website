@@ -28,7 +28,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Badge } from '@/components/ui/badge';
+
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -294,13 +294,6 @@ function PayPerLeadPage() {
                   data-icon="inline-end"
                 />
               </Button>
-              <Button
-                render={<Link to="/case-studies" />}
-                size="lg"
-                variant="outline"
-              >
-                View Case Studies
-              </Button>
             </div>
           </div>
         </div>
@@ -376,32 +369,27 @@ function PayPerLeadPage() {
                   {[
                     {
                       name: 'Thomas Hartley',
-                      company: 'Mortgage Lending',
-                      score: 'Hot',
+                      company: 'Financial Planning',
                       time: '2 min ago',
                     },
                     {
                       name: 'Frederick Mills',
                       company: 'Financial Planning',
-                      score: 'Hot',
                       time: '8 min ago',
                     },
                     {
                       name: 'Arthur Pemberton',
-                      company: 'Mortgage Lending',
-                      score: 'Warm',
+                      company: 'Financial Planning',
                       time: '15 min ago',
                     },
                     {
                       name: 'Edmund Sinclair',
                       company: 'Financial Planning',
-                      score: 'Hot',
                       time: '23 min ago',
                     },
                     {
                       name: 'Richard Caldwell',
                       company: 'Financial Planning',
-                      score: 'Warm',
                       time: '31 min ago',
                     },
                   ].map((lead) => (
@@ -420,14 +408,6 @@ function PayPerLeadPage() {
                           <span className="truncate font-medium text-sm">
                             {lead.name}
                           </span>
-                          <Badge
-                            variant={
-                              lead.score === 'Hot' ? 'default' : 'secondary'
-                            }
-                            className="shrink-0 text-xs"
-                          >
-                            {lead.score}
-                          </Badge>
                         </div>
                         <div className="flex items-center gap-2 text-muted-foreground text-xs">
                           <span className="truncate">{lead.company}</span>
@@ -435,10 +415,6 @@ function PayPerLeadPage() {
                           <span className="shrink-0">{lead.time}</span>
                         </div>
                       </div>
-                      <div
-                        className="size-2 shrink-0 rounded-full bg-green-500"
-                        aria-hidden="true"
-                      />
                     </div>
                   ))}
                 </div>
@@ -669,7 +645,9 @@ function PayPerLeadPage() {
                       size={18}
                       className="text-primary"
                     />
-                    <span className="font-medium text-sm">Revenue Growth</span>
+                    <span className="font-medium text-sm">
+                      PPL Revenue Growth
+                    </span>
                   </div>
                 </div>
                 <Separator />
@@ -677,10 +655,10 @@ function PayPerLeadPage() {
                   {/* Main metric */}
                   <div className="mb-4">
                     <div className="font-extrabold text-3xl tracking-tight">
-                      $2.4M
+                      $20.4M
                     </div>
                     <div className="text-muted-foreground text-sm">
-                      Total Revenue Generated
+                      Total PPL Revenue Generated
                     </div>
                   </div>
 
@@ -688,11 +666,11 @@ function PayPerLeadPage() {
                   <div className="flex gap-2">
                     {/* Y-axis labels */}
                     <div className="flex flex-col justify-between py-1 text-muted-foreground text-xs">
-                      <span>$2.5M</span>
-                      <span>$2M</span>
-                      <span>$1.5M</span>
-                      <span>$1M</span>
-                      <span>$500K</span>
+                      <span>$25M</span>
+                      <span>$20M</span>
+                      <span>$15M</span>
+                      <span>$10M</span>
+                      <span>$5M</span>
                       <span>$0</span>
                     </div>
 
@@ -822,13 +800,6 @@ function PayPerLeadPage() {
                 strokeWidth={2}
                 data-icon="inline-end"
               />
-            </Button>
-            <Button
-              render={<Link to="/case-studies" />}
-              size="lg"
-              variant="outline"
-            >
-              View Case Studies
             </Button>
           </div>
         </div>
