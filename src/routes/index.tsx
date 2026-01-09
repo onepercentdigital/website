@@ -180,10 +180,10 @@ function HomePage() {
                 <div className="p-4">
                   <div className="mb-2 flex items-baseline gap-2">
                     <span className="font-extrabold text-2xl tracking-tight">
-                      982K
+                      13.6M
                     </span>
                     <span className="text-muted-foreground text-sm">
-                      traffic
+                      impressions
                     </span>
                   </div>
                   <svg
@@ -285,9 +285,9 @@ function HomePage() {
                 <Separator />
                 <div className="space-y-2 p-3">
                   {[
-                    { name: 'James Crawford', company: 'Mortgage Lending' },
+                    { name: 'James Crawford', company: 'Financial Planning' },
                     { name: 'Robert Mitchell', company: 'Financial Planning' },
-                    { name: 'William Thompson', company: 'Mortgage Lending' },
+                    { name: 'William Thompson', company: 'Financial Planning' },
                   ].map((lead) => (
                     <div
                       key={lead.name}
@@ -307,11 +307,6 @@ function HomePage() {
                           {lead.company}
                         </div>
                       </div>
-                      <div
-                        className="size-2 rounded-full bg-green-500"
-                        aria-hidden="true"
-                      />
-                      <span className="sr-only">Active lead</span>
                     </div>
                   ))}
                 </div>
@@ -527,7 +522,7 @@ function HomePage() {
                 icon: UserGroupIcon,
                 title: 'Entrepreneur-Led',
                 description:
-                  'We run our own businesses, not just consultancies. We understand growth from the inside.',
+                  'We built and exited our own brands. Now we help others achieve the same success.',
               },
               {
                 icon: Target01Icon,

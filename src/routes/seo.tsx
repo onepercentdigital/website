@@ -618,15 +618,15 @@ function SEOPage() {
                   <div className="mb-4 grid grid-cols-3 gap-4">
                     <div>
                       <div className="font-extrabold text-2xl tracking-tight">
-                        982K
+                        195K
                       </div>
                       <div className="text-muted-foreground text-xs">
-                        Total Traffic
+                        Total Clicks
                       </div>
                     </div>
                     <div>
                       <div className="font-extrabold text-2xl tracking-tight">
-                        3.1M
+                        13.6M
                       </div>
                       <div className="text-muted-foreground text-xs">
                         Impressions
@@ -634,7 +634,7 @@ function SEOPage() {
                     </div>
                     <div>
                       <div className="font-extrabold text-2xl tracking-tight">
-                        4.2%
+                        1.5%
                       </div>
                       <div className="text-muted-foreground text-xs">CTR</div>
                     </div>

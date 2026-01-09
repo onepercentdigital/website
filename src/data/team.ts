@@ -21,7 +21,7 @@ export const team: TeamMember[] = [
     title: 'Co-Founder & Lead Optimization Architect',
     bio: [
       "Having worked with over 100 brands since 2015, Luke is a seasoned expert in top ranking SEO engineering and scaling strategies. His unique talent lies in effortlessly navigating Google algorithm updates while continuously boosting each client's online presence and securing maximum market share in their industry.",
-      "In addition to his SEO expertise, Luke co-owns multiple thriving E-commerce brands. This hands-on experience equips him with the insights needed to manage various marketing channels effectively at scale. All this skill and knowledge make him an SEO expert you can't afford to miss.",
+      'In addition to his SEO expertise, Luke has successfully exited multiple E-commerce brands he co-founded, leveraging GEO, SEO, and paid advertising to drive growth. This hands-on experience equips him with the insights needed to manage various marketing channels effectively at scale. Now he brings that same expertise to help other businesses achieve their goals.',
     ],
   },
   {
@@ -31,7 +31,7 @@ export const team: TeamMember[] = [
     title: 'Co-Founder & Lead Optimization Architect',
     bio: [
       "Best defined as the bright mind behind One Percent Digital's flawless operational procedures and execution, Mackey possesses a laser focus and attention to detail second to none. From onboarding to the end goal of any project, he treats each business like his own, delves deep into their unique needs and adds significant value to every SEO strategy.",
-      'Over the past decade, he has co-founded several successful E-commerce brands, which explains why he is so fluent in entrepreneurship. He is a businessman before an SEO expert and understands the ropes behind running a successful business – a quality many SEO agencies often lack.',
+      'Over the past decade, he co-founded and successfully exited several E-commerce brands using GEO, SEO, and paid advertising, which explains why he is so fluent in entrepreneurship. He is a businessman before an SEO expert and understands the ropes behind running a successful business. Now he channels that experience into helping others achieve similar success.',
     ],
   },
   {
