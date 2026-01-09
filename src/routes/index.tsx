@@ -180,10 +180,10 @@ function HomePage() {
                 <div className="p-4">
                   <div className="mb-2 flex items-baseline gap-2">
                     <span className="font-extrabold text-2xl tracking-tight">
-                      13.6M
+                      195K
                     </span>
                     <span className="text-muted-foreground text-sm">
-                      impressions
+                      traffic
                     </span>
                   </div>
                   <svg
