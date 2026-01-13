@@ -301,7 +301,7 @@ function GEOPage() {
                     400%
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Industry Growth Rate
+                    Industry Growth Rate YoY
                   </div>
                 </Card>
                 <Card className="p-4">

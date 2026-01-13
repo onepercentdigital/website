@@ -153,10 +153,10 @@ function CustomersPage() {
                 className="mx-auto mb-3 text-primary"
               />
               <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                8X
+                Exponential
               </div>
               <div className="text-muted-foreground text-sm">
-                Average Traffic Growth
+                Page 1 Growth Rate
               </div>
             </div>
 

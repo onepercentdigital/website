@@ -1110,31 +1110,31 @@ function EnterprisePage() {
                 deliver measurable ROI with white-glove service.
               </p>
 
-              <div className="grid gap-6 sm:grid-cols-3">
-                <Card className="p-6">
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     $200M
                   </div>
                   <div className="text-muted-foreground text-sm">
                     Revenue Generated
                   </div>
-                </Card>
-                <Card className="p-6">
+                </div>
+                <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                    8X
+                    Exponential
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Average Growth Rate
+                    Page 1 Growth Rate
                   </div>
-                </Card>
-                <Card className="p-6">
+                </div>
+                <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     1000%
                   </div>
                   <div className="text-muted-foreground text-sm">
                     Brand Visibility Growth
                   </div>
-                </Card>
+                </div>
               </div>
             </div>
           </div>

@@ -296,31 +296,31 @@ function SEOPage() {
                 improvements that continue driving qualified traffic, leads, and
                 revenue month after month.
               </p>
-              <div className="grid gap-4 sm:grid-cols-3">
-                <Card className="p-4">
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     100+
                   </div>
                   <div className="text-muted-foreground text-sm">
                     Businesses Served
                   </div>
-                </Card>
-                <Card className="p-4">
+                </div>
+                <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                    8X
+                    Exponential
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Avg Traffic Growth
+                    Page 1 Growth Rate
                   </div>
-                </Card>
-                <Card className="p-4">
+                </div>
+                <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
                     $200M+
                   </div>
                   <div className="text-muted-foreground text-sm">
                     Client Revenue Impact
                   </div>
-                </Card>
+                </div>
               </div>
             </div>
 
@@ -546,10 +546,10 @@ function SEOPage() {
                 </div>
                 <div>
                   <div className="mb-1 font-extrabold text-4xl tracking-tight lg:text-5xl">
-                    8X
+                    Exponential
                   </div>
                   <div className="text-muted-foreground text-sm">
-                    Average Traffic Increase
+                    Page 1 Growth Rate
                   </div>
                 </div>
                 <div>
