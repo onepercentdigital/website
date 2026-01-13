@@ -333,8 +333,8 @@ function HomePage() {
               },
               {
                 icon: UserGroupIcon,
-                value: '8X',
-                label: 'Avg Organic Traffic Growth',
+                value: 'Exponential',
+                label: 'Page 1 Growth Rate',
               },
               {
                 icon: Brain01Icon,
