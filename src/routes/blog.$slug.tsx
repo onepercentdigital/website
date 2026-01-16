@@ -6,54 +6,218 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
-import { useQuery } from 'convex/react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkGfm from 'remark-gfm';
+import { AuthorBox } from '@/components/AuthorBox';
+import { RelatedPosts } from '@/components/RelatedPosts';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
-import { generateMetaTags, getArticleSchema } from '@/lib/seo';
-import { api } from '../../convex/_generated/api';
+import { getPostWithCategory } from '@/lib/blog';
+import {
+  generateMetaTags,
+  getArticleSchema,
+  getBreadcrumbSchema,
+} from '@/lib/seo';
 import 'highlight.js/styles/github-dark.css';
 
 export const Route = createFileRoute('/blog/$slug')({
   component: BlogPostPage,
-  head: () => {
-    // Static meta tags for SSR
-    // Dynamic meta tags would require server-side data fetching
+  head: ({ params }) => {
+    // Get post data for SSR meta tags
+    const postData = getPostWithCategory(params.slug);
+
+    if (!postData) {
+      return generateMetaTags({
+        title: 'Post Not Found | One Percent Digital',
+        description: 'The requested blog post could not be found.',
+        url: `https://op.digital/blog/${params.slug}`,
+      });
+    }
+
+    const { post, category } = postData;
+
+    // Generate keywords from title and category
+    const keywords = generateKeywordsFromTitle(post.title, category?.name);
+
     return generateMetaTags({
-      title: 'Blog Post | One Percent Digital',
+      title: post.seo?.metaTitle || `${post.title} | One Percent Digital Blog`,
       description:
+        post.seo?.metaDescription ||
+        post.excerpt ||
         'Expert insights on GEO, SEO, and search optimization strategies.',
-      url: 'https://op.digital/blog',
+      url: `https://op.digital/blog/${post.slug}`,
+      ogImage: post.seo?.ogImage || post.featuredImage,
+      ogType: 'article',
+      article: {
+        publishedTime: post.publishedAt,
+        modifiedTime: post.modifiedAt,
+        author: post.authorName,
+        section: category?.name || 'SEO',
+        tags: keywords,
+      },
     });
   },
 });
 
-function BlogPostPage() {
-  const { slug } = Route.useParams();
-  const postData = useQuery(api.posts.getBySlug, { slug });
+/**
+ * Generate keywords from post title and category
+ */
+function generateKeywordsFromTitle(
+  title: string,
+  categoryName?: string,
+): string[] {
+  const keywords: string[] = [];
 
-  // Handle loading state
-  if (postData === undefined) {
-    return (
-      <div className="flex min-h-[60vh] items-center justify-center">
-        <div className="text-center">
-          <div className="mb-4 inline-flex h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-          <p className="text-muted-foreground">Loading post...</p>
-        </div>
-      </div>
-    );
+  // Add category as first keyword
+  if (categoryName) {
+    keywords.push(categoryName);
   }
 
+  // Extract meaningful words from title (exclude common stop words)
+  const stopWords = new Set([
+    'a',
+    'an',
+    'the',
+    'is',
+    'are',
+    'was',
+    'were',
+    'be',
+    'been',
+    'being',
+    'have',
+    'has',
+    'had',
+    'do',
+    'does',
+    'did',
+    'will',
+    'would',
+    'could',
+    'should',
+    'may',
+    'might',
+    'must',
+    'shall',
+    'can',
+    'need',
+    'dare',
+    'ought',
+    'used',
+    'to',
+    'of',
+    'in',
+    'for',
+    'on',
+    'with',
+    'at',
+    'by',
+    'from',
+    'as',
+    'into',
+    'through',
+    'during',
+    'before',
+    'after',
+    'above',
+    'below',
+    'between',
+    'under',
+    'again',
+    'further',
+    'then',
+    'once',
+    'here',
+    'there',
+    'when',
+    'where',
+    'why',
+    'how',
+    'all',
+    'each',
+    'few',
+    'more',
+    'most',
+    'other',
+    'some',
+    'such',
+    'no',
+    'nor',
+    'not',
+    'only',
+    'own',
+    'same',
+    'so',
+    'than',
+    'too',
+    'very',
+    'just',
+    'and',
+    'but',
+    'if',
+    'or',
+    'because',
+    'until',
+    'while',
+    'what',
+    'which',
+    'who',
+    'whom',
+    'this',
+    'that',
+    'these',
+    'those',
+    'am',
+    'vs',
+  ]);
+
+  const words = title
+    .toLowerCase()
+    .replace(/[?!.,]/g, '')
+    .split(/\s+/)
+    .filter((word) => word.length > 2 && !stopWords.has(word));
+
+  // Add unique words as keywords
+  for (const word of words) {
+    if (!keywords.includes(word)) {
+      keywords.push(word);
+    }
+  }
+
+  // Add common SEO-related keywords if relevant
+  const lowerTitle = title.toLowerCase();
+  if (
+    lowerTitle.includes('seo') &&
+    !keywords.includes('search engine optimization')
+  ) {
+    keywords.push('search engine optimization');
+  }
+  if (lowerTitle.includes('local') && !keywords.includes('local search')) {
+    keywords.push('local search');
+  }
+  if (
+    lowerTitle.includes('manufacturing') &&
+    !keywords.includes('industrial marketing')
+  ) {
+    keywords.push('industrial marketing');
+  }
+
+  return keywords.slice(0, 10); // Limit to 10 keywords
+}
+
+function BlogPostPage() {
+  const { slug } = Route.useParams();
+  const postData = getPostWithCategory(slug);
+
   // Handle not found
-  if (postData === null) {
+  if (!postData) {
     throw notFound();
   }
 
-  const { category, ...post } = postData;
+  const { post, category } = postData;
 
   // Calculate read time
   const wordCount = post.content.split(/\s+/).length;
@@ -74,22 +238,37 @@ function BlogPostPage() {
     day: 'numeric',
   });
 
-  // Generate Article structured data
+  // Generate keywords for structured data
+  const keywords = generateKeywordsFromTitle(post.title, category?.name);
+
+  // Generate Article structured data (GEO-optimized)
   const articleSchema = getArticleSchema({
     headline: post.title,
-    description: post.excerpt || '',
+    description: post.seo?.metaDescription || post.excerpt || '',
     url: `https://op.digital/blog/${post.slug}`,
     image: post.featuredImage || '',
-    datePublished: post.publishedAt
-      ? new Date(post.publishedAt).toISOString()
-      : new Date(post.modifiedAt).toISOString(),
-    dateModified: new Date(post.modifiedAt).toISOString(),
+    datePublished: post.publishedAt || post.modifiedAt,
+    dateModified: post.modifiedAt,
     author: post.authorName,
+    keywords,
+    articleSection: category?.name || 'SEO',
   });
+
+  // Generate BreadcrumbList structured data
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://op.digital/' },
+    { name: 'Blog', url: 'https://op.digital/blog' },
+    { name: post.title, url: `https://op.digital/blog/${post.slug}` },
+  ]);
 
   return (
     <>
-      <SEO structuredData={[{ type: 'Article', data: articleSchema }]} />
+      <SEO
+        structuredData={[
+          { type: 'Article', data: articleSchema },
+          { type: 'BreadcrumbList', data: breadcrumbSchema },
+        ]}
+      />
 
       {/* Breadcrumbs */}
       <nav className="px-6 py-4">
@@ -163,11 +342,13 @@ function BlogPostPage() {
             </div>
 
             {/* Last Modified */}
-            {post.publishedAt && post.modifiedAt > post.publishedAt + 60000 && (
-              <p className="mt-3 text-muted-foreground text-xs">
-                Last updated: {modifiedDate}
-              </p>
-            )}
+            {post.publishedAt &&
+              new Date(post.modifiedAt).getTime() >
+                new Date(post.publishedAt).getTime() + 60000 && (
+                <p className="mt-3 text-muted-foreground text-xs">
+                  Last updated: {modifiedDate}
+                </p>
+              )}
           </header>
 
           {/* Featured Image */}
@@ -176,6 +357,9 @@ function BlogPostPage() {
               <img
                 src={post.featuredImage}
                 alt={post.title}
+                width={1200}
+                height={630}
+                fetchPriority="high"
                 className="w-full rounded-2xl object-cover shadow-lg"
               />
             </div>
@@ -205,12 +389,40 @@ function BlogPostPage() {
         </div>
       </article>
 
-      {/* Back to Blog CTA */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <Button render={<Link to="/blog" />} variant="outline" size="lg">
-            ← Back to All Posts
-          </Button>
+      {/* Author Box */}
+      <section className="px-6 py-12">
+        <div className="mx-auto max-w-4xl">
+          <AuthorBox authorName={post.authorName} />
+        </div>
+      </section>
+
+      {/* Related Posts */}
+      <RelatedPosts currentSlug={post.slug} />
+
+      {/* Final CTA Section */}
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
+            Ready to Put These Insights Into Action?
+          </h2>
+          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
+            From GEO and SEO to PPL, we turn strategy into leads. Let's discuss
+            how to scale your business.
+          </p>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button render={<Link to="/apply" />} size="lg">
+              Apply To Work With Us
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                size={18}
+                strokeWidth={2}
+                data-icon="inline-end"
+              />
+            </Button>
+            <Button render={<Link to="/blog" />} size="lg" variant="outline">
+              Back to All Posts
+            </Button>
+          </div>
         </div>
       </section>
     </>

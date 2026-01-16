@@ -7,11 +7,12 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { useQuery } from 'convex/react';
+import { memo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { getAllPosts } from '@/lib/blog';
 import { generateMetaTags } from '@/lib/seo';
-import { api } from '../../convex/_generated/api';
+import type { BlogPostListItem } from '@/types/blog';
 
 export const Route = createFileRoute('/blog/')({
   component: BlogIndexPage,
@@ -25,9 +26,8 @@ export const Route = createFileRoute('/blog/')({
 });
 
 function BlogIndexPage() {
-  // Fetch published posts from Convex
-  const posts = useQuery(api.posts.list, { status: 'published' });
-  const isLoading = posts === undefined;
+  // Get all published posts from static data
+  const posts = getAllPosts();
 
   return (
     <>
@@ -50,29 +50,17 @@ function BlogIndexPage() {
       {/* Blog Posts Grid */}
       <section className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          {isLoading ? (
+          {posts.length === 0 ? (
             <div className="flex min-h-100 items-center justify-center">
               <div className="text-center">
                 <HugeiconsIcon
                   icon={File01Icon}
-                  size={48}
+                  size={28}
                   strokeWidth={1.5}
-                  className="mx-auto mb-4 animate-pulse text-primary"
+                  className="mx-auto mb-3 text-primary"
                 />
-                <p className="text-muted-foreground">Loading posts...</p>
-              </div>
-            </div>
-          ) : !posts || posts.length === 0 ? (
-            <div className="flex min-h-100 items-center justify-center">
-              <div className="text-center">
-                <HugeiconsIcon
-                  icon={File01Icon}
-                  size={48}
-                  strokeWidth={1.5}
-                  className="mx-auto mb-4 text-primary"
-                />
-                <h2 className="mb-3 font-bold text-2xl">No Posts Yet</h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <h2 className="mb-2 font-bold text-xl">No Posts Yet</h2>
+                <p className="max-w-sm text-muted-foreground text-sm leading-relaxed">
                   Blog posts will appear here once they're published. Check back
                   soon for expert insights on GEO and SEO.
                 </p>
@@ -81,7 +69,7 @@ function BlogIndexPage() {
           ) : (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (
-                <BlogPostCard key={post._id} post={post} />
+                <BlogPostCard key={post.slug} post={post} />
               ))}
             </div>
           )}
@@ -126,20 +114,10 @@ function BlogIndexPage() {
  * Blog Post Card Component
  */
 interface BlogPostCardProps {
-  post: {
-    _id: string;
-    title: string;
-    slug: string;
-    excerpt?: string;
-    featuredImage?: string;
-    authorName: string;
-    publishedAt?: number;
-    modifiedAt: number;
-    content: string;
-  };
+  post: BlogPostListItem;
 }
 
-function BlogPostCard({ post }: BlogPostCardProps) {
+const BlogPostCard = memo(function BlogPostCard({ post }: BlogPostCardProps) {
   // Calculate read time (rough estimate: 200 words per minute)
   const wordCount = post.content.split(/\s+/).length;
   const readTime = Math.ceil(wordCount / 200);
@@ -175,15 +153,18 @@ function BlogPostCard({ post }: BlogPostCardProps) {
           <img
             src={post.featuredImage}
             alt={post.title}
+            width={640}
+            height={360}
+            loading="lazy"
             className="aspect-video w-full object-cover"
           />
         ) : (
           <div className="flex aspect-video items-center justify-center bg-muted">
             <HugeiconsIcon
               icon={File01Icon}
-              size={48}
-              strokeWidth={1}
-              className="text-muted-foreground/30"
+              size={28}
+              strokeWidth={1.5}
+              className="text-muted-foreground/50"
             />
           </div>
         )}
@@ -205,17 +186,17 @@ function BlogPostCard({ post }: BlogPostCardProps) {
             <div className="flex items-center gap-1">
               <HugeiconsIcon
                 icon={Calendar01Icon}
-                size={14}
+                size={16}
                 strokeWidth={1.5}
               />
               <span>{formattedDate}</span>
             </div>
             <div className="flex items-center gap-1">
-              <HugeiconsIcon icon={Clock01Icon} size={14} strokeWidth={1.5} />
+              <HugeiconsIcon icon={Clock01Icon} size={16} strokeWidth={1.5} />
               <span>{readTime} min read</span>
             </div>
             <div className="flex items-center gap-1">
-              <HugeiconsIcon icon={UserIcon} size={14} strokeWidth={1.5} />
+              <HugeiconsIcon icon={UserIcon} size={16} strokeWidth={1.5} />
               <span>{post.authorName}</span>
             </div>
           </div>
@@ -223,4 +204,4 @@ function BlogPostCard({ post }: BlogPostCardProps) {
       </Card>
     </Link>
   );
-}
+});

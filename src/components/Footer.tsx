@@ -14,7 +14,7 @@ export function Footer() {
     <footer className="bg-background">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5 lg:gap-12">
           {footer.sections.map((section) => (
             <div key={section.title}>
               <h3 className="mb-4 font-semibold text-foreground text-sm">

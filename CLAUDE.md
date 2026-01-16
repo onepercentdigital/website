@@ -2,9 +2,9 @@
 
 ## Quick Reference
 
-**Stack:** TanStack Start + React 19 + Convex + Tailwind 4 + shadcn/ui Maia  
+**Stack:** TanStack Start + React 19 + Tailwind 4 + shadcn/ui Maia
 **Icons:** HugeIcons (not Lucide)  
-**Deploy:** Cloudflare Workers  
+**Deploy:** Railway  
 **Reference:** `src/routes/index.tsx` (homepage is the canonical implementation)
 
 ---
@@ -42,6 +42,8 @@ When auditing a page against homepage standards, check **every** element:
 - [ ] Theme toggle icons: `size={16}` acceptable
 - [ ] Inline list checkmarks (CheckmarkCircle02Icon): `size={20}` acceptable
 - [ ] Dense feature list checkmarks (SolutionPageTemplate): `size={16}` acceptable
+- [ ] Breadcrumb separator icons: `size={16}` acceptable
+- [ ] Inline metadata icons (dates, read time, author): `size={16}` acceptable
 
 ### Final CTA Section
 - [ ] Border: `border-y` (both top and bottom)
@@ -65,6 +67,8 @@ When auditing a page against homepage standards, check **every** element:
 - Add emojis unless requested
 - Use `tracking-wide` (not part of design system)
 - Add `cursor-pointer`, `group`, or hover effects to non-clickable cards
+- Omit `width` and `height` on `<img>` tags (causes CLS, always include dimensions)
+- Render list items without `memo()` (use `React.memo()` for list-rendered components)
 
 When auditing pages, compare element-by-element against the homepage. Use the Page Audit Checklist above.
 
@@ -270,11 +274,10 @@ function ExamplePage() {
 
 ```bash
 bun run dev          # Start dev server (port 3000)
-bunx convex dev      # Start Convex backend (separate terminal)
 bun run check-all    # Type check + lint
 bun run fix          # Auto-fix issues
-bun run build        # Production build
-bun run deploy       # Deploy to Cloudflare
+bun run build        # Production build (generates blog index + sitemap)
+bun run start        # Start production server
 ```
 
 ---
@@ -283,7 +286,7 @@ bun run deploy       # Deploy to Cloudflare
 
 ```
 src/
-├── components/ui/     # shadcn Maia components (52 components)
+├── components/ui/     # shadcn Maia components (17 components)
 ├── routes/            # File-based routing
 │   ├── index.tsx      # Homepage (reference implementation)
 │   ├── seo.tsx, geo.tsx, ppl.tsx  # Service pages
@@ -291,9 +294,9 @@ src/
 │   └── solutions.*.tsx  # 12 industry pages
 ├── config/brand.ts    # Nav, footer, SEO config
 ├── lib/seo.ts         # generateMetaTags(), schema helpers
-└── data/              # Static data (customers, case-studies, team)
-
-convex/                # Backend (schema, queries, mutations)
+├── lib/blog.ts        # Blog helper functions
+├── content/blog/      # Blog posts as MDX files
+└── data/              # Static data (customers, case-studies, team, categories)
 ```
 
 ---
@@ -332,13 +335,38 @@ convex/                # Backend (schema, queries, mutations)
 - Functional components only
 - No unused variables (strict TypeScript)
 - Biome: single quotes, 2-space indent, sorted Tailwind classes
-- Auto-generated (do not edit): `src/routeTree.gen.ts`, `convex/_generated/`
+- Auto-generated (do not edit): `src/routeTree.gen.ts`, `src/content/blog/_index.ts`
 
 ---
 
 ## Extended Docs
 
-- `docs/RESTORE-ADMIN-CMS.md` - Re-enable admin routes
-- `docs/BLOG-CMS.md` - Blog architecture
 - `docs/CLOUDFLARE-IMAGES.md` - Image CDN setup
 - `docs/KNOWN-ISSUES.md` - Platform limitations (iOS Safari)
+
+## Blog (Static MDX)
+
+Blog posts are stored as MDX files in `src/content/blog/`. Each file has YAML frontmatter with metadata.
+
+**To add a new post:**
+1. Create `src/content/blog/your-slug.mdx` with frontmatter and content
+2. Run `bun run scripts/generate-blog-index.ts` to regenerate the index
+3. The post will appear on `/blog` if status is "published"
+
+**Frontmatter schema:**
+```yaml
+---
+title: "Post Title"
+slug: "post-slug"
+excerpt: "Brief description..."
+featuredImage: "https://imagedelivery.net/..."
+category: "seo"
+authorName: "One Percent Digital"
+status: "published"
+publishedAt: "2024-01-15T00:00:00.000Z"
+modifiedAt: "2024-03-20T00:00:00.000Z"
+seo:
+  metaTitle: "Custom SEO Title"
+  metaDescription: "Custom meta description..."
+---
+```

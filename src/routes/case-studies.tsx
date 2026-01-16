@@ -7,6 +7,7 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { memo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -211,16 +212,18 @@ function CaseStudiesPage() {
                     "{featuredStudy.testimonial.quote}"
                   </p>
                   <div className="flex items-center gap-3">
-                    {caseStudyLogos[featuredStudy.id] && (
+                    {caseStudyLogos[featuredStudy.id] ? (
                       <img
                         src={getImageUrl(
                           caseStudyLogos[featuredStudy.id],
                           'thumbnail',
                         )}
                         alt={featuredStudy.client}
+                        width={100}
+                        height={40}
                         className="h-10 w-auto object-contain dark:invert"
                       />
-                    )}
+                    ) : null}
                     <div>
                       <div className="font-semibold text-foreground">
                         {featuredStudy.testimonial.author}
@@ -297,7 +300,9 @@ interface CaseStudyCardProps {
   study: CaseStudy;
 }
 
-function CaseStudyCard({ study }: CaseStudyCardProps) {
+const CaseStudyCard = memo(function CaseStudyCard({
+  study,
+}: CaseStudyCardProps) {
   return (
     <Card className="flex h-full flex-col">
       <CardContent className="flex flex-1 flex-col">
@@ -355,13 +360,15 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
               "{study.testimonial.quote}"
             </p>
             <div className="flex items-center gap-2">
-              {caseStudyLogos[study.id] && (
+              {caseStudyLogos[study.id] ? (
                 <img
                   src={getImageUrl(caseStudyLogos[study.id], 'thumbnail')}
                   alt={study.client}
+                  width={80}
+                  height={32}
                   className="h-8 w-auto object-contain dark:invert"
                 />
-              )}
+              ) : null}
               <div className="text-xs">
                 <div className="font-semibold text-foreground">
                   {study.testimonial.author}
@@ -376,4 +383,4 @@ function CaseStudyCard({ study }: CaseStudyCardProps) {
       </CardContent>
     </Card>
   );
-}
+});

@@ -234,6 +234,9 @@ function AboutPage() {
                   <img
                     src={getImageUrl(member.imageId, 'thumbnail')}
                     alt={member.name}
+                    width={80}
+                    height={80}
+                    loading="lazy"
                     className="size-20 rounded-full object-cover grayscale"
                   />
                   <CardTitle className="text-xl">{member.name}</CardTitle>

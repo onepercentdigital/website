@@ -1,13 +1,11 @@
 # One Percent Digital - Marketing Website
 
-Modern, high-performance marketing website built with TanStack Start for One Percent Digital's GEO, SEO, and PPL services. Production-ready with 25 routes (9 marketing + 2 blog + 13 solutions + 1 root layout) and a Convex-powered blog CMS.
+Modern, high-performance marketing website built with TanStack Start for One Percent Digital's GEO, SEO, and PPL services. Production-ready with 25 routes (9 marketing + 2 blog + 13 solutions + 1 root layout) and a static MDX blog.
 
 ## Quick Start
 
 ### Prerequisites
 - [Bun](https://bun.sh) 1.3+
-- [Node.js](https://nodejs.org) 18+
-- [Convex](https://convex.dev) account
 
 ### Setup
 
@@ -15,13 +13,10 @@ Modern, high-performance marketing website built with TanStack Start for One Per
 # Install dependencies
 bun install
 
-# Create .env.local with required variables:
-# VITE_CONVEX_URL, CONVEX_DEPLOYMENT, CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN
+# Create .env.local with:
+# CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN
 
-# Start Convex (terminal 1)
-bunx convex dev
-
-# Start dev server (terminal 2)
+# Start dev server
 bun run dev
 ```
 
@@ -31,10 +26,9 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 - **Framework**: TanStack Start + React 19 + TypeScript
 - **Routing**: TanStack Router (file-based, type-safe)
-- **Database**: Convex (real-time, TypeScript schema)
 - **Styling**: Tailwind CSS v4 + Shadcn/ui (Maia style) + DM Sans
 - **Images**: Cloudflare Images (CDN delivery)
-- **Deployment**: Cloudflare Workers
+- **Deployment**: Railway
 - **Linting**: Biome
 
 ## Project Structure
@@ -42,13 +36,13 @@ Visit [http://localhost:3000](http://localhost:3000)
 ```
 website/
 ├── src/
-│   ├── components/       # React components + Shadcn UI
+│   ├── components/       # React components + Shadcn UI (17 components)
 │   ├── routes/           # File-based routing (TanStack Router)
 │   ├── config/brand.ts   # Centralized brand configuration
 │   ├── lib/              # Utilities (seo.ts, cloudflare-images.ts)
+│   ├── content/blog/     # Blog posts (MDX files)
 │   └── data/             # TypeScript data files (customers, solutions, team)
-├── convex/               # Backend schema and functions
-├── scripts/              # Build scripts (sitemap, WordPress migration)
+├── scripts/              # Build scripts (blog index, sitemap)
 └── public/               # Static assets (sitemap.xml, robots.txt)
 ```
 
@@ -62,7 +56,7 @@ website/
 | `bun run check` | Lint + format check |
 | `bun run fix` | Auto-fix issues |
 | `bun run check-all` | Full check (types + lint) |
-| `bun run deploy` | Deploy to Cloudflare |
+| `bun run start` | Start production server |
 
 ## Routes
 
@@ -80,7 +74,6 @@ website/
 For detailed documentation including:
 - Architecture decisions and code standards
 - SEO best practices and structured data
-- Blog CMS implementation guide
 - Cloudflare Images setup
 - Design system (colors, typography, components)
 - Restoration guide for admin routes
@@ -89,4 +82,4 @@ See **[CLAUDE.md](./CLAUDE.md)**
 
 ## License
 
-Proprietary - © 2025 One Percent Digital. All rights reserved.
+Proprietary - © 2026 One Percent Digital. All rights reserved.

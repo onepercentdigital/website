@@ -75,21 +75,18 @@ export const brand: BrandConfig = {
 export const navigation = {
   main: [
     {
-      label: 'Services',
+      label: 'Organic Leads',
       type: 'dropdown' as const,
       items: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'PPL', href: '/ppl' },
+        { label: 'Maps', href: '/maps' },
       ],
     },
     {
-      label: 'Resources',
-      type: 'dropdown' as const,
-      items: [
-        { label: 'Customers', href: '/customers' },
-        { label: 'Case Studies', href: '/case-studies' },
-      ],
+      label: 'Pay Per Lead',
+      type: 'link' as const,
+      href: '/ppl',
     },
     {
       label: 'Solutions',
@@ -133,18 +130,23 @@ export const navigation = {
 export const footer = {
   sections: [
     {
-      title: 'Services',
+      title: 'Organic Leads',
       links: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
-        { label: 'PPL', href: '/ppl' },
+        { label: 'Maps', href: '/maps' },
       ],
+    },
+    {
+      title: 'Pay Per Lead',
+      links: [{ label: 'Pay Per Lead', href: '/ppl' }],
     },
     {
       title: 'Resources',
       links: [
         { label: 'Customers', href: '/customers' },
         { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Blog', href: '/blog' },
       ],
     },
     {
