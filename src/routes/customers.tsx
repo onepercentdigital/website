@@ -102,6 +102,9 @@ function CustomersPage() {
                     <img
                       src={getImageUrl(customer.logo, 'thumbnail')}
                       alt={customer.name}
+                      width={120}
+                      height={48}
+                      loading="lazy"
                       className="h-auto w-full max-w-30 object-contain dark:invert"
                     />
                   ) : (
@@ -200,13 +203,15 @@ function CustomersPage() {
                       "{customer.testimonial?.quote}"
                     </p>
                     <div className="flex items-center gap-3">
-                      {customer.logo && (
+                      {customer.logo ? (
                         <img
                           src={getImageUrl(customer.logo, 'thumbnail')}
                           alt={customer.name}
+                          width={100}
+                          height={40}
                           className="h-10 w-auto object-contain dark:invert"
                         />
-                      )}
+                      ) : null}
                       <div>
                         <div className="font-semibold text-foreground">
                           {customer.testimonial?.author}

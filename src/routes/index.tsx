@@ -29,6 +29,57 @@ import {
   getOrganizationSchema,
 } from '@/lib/seo';
 
+// Static data hoisted outside component for performance
+const STATS = [
+  {
+    icon: Award01Icon,
+    value: '100+',
+    label: 'Brands Served Since 2015',
+  },
+  {
+    icon: Target01Icon,
+    value: '$200M+',
+    label: 'Revenue Generated',
+  },
+  {
+    icon: UserGroupIcon,
+    value: 'Exponential',
+    label: 'Page 1 Growth Rate',
+  },
+  {
+    icon: Brain01Icon,
+    value: '10+',
+    label: 'Years of Experience',
+  },
+] as const;
+
+const WHY_ONE_PERCENT_FEATURES = [
+  {
+    icon: UserGroupIcon,
+    title: 'Entrepreneur-Led',
+    description:
+      'We built and exited our own brands. Now we help others achieve the same success.',
+  },
+  {
+    icon: Target01Icon,
+    title: 'Results-Focused',
+    description:
+      'We measure ROI and revenue, not vanity metrics. Your success is our success.',
+  },
+  {
+    icon: Brain01Icon,
+    title: 'Full-Stack Approach',
+    description:
+      'Complete funnel coverage. We own your entire discovery journey.',
+  },
+  {
+    icon: Award01Icon,
+    title: 'Proven Scale',
+    description:
+      "100+ brands across every industry. We've seen what works and what doesn't.",
+  },
+] as const;
+
 export const Route = createFileRoute('/')({
   component: HomePage,
   head: () =>
@@ -453,28 +504,7 @@ function HomePage() {
       <section className="border-border border-y px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: Award01Icon,
-                value: '100+',
-                label: 'Brands Served Since 2015',
-              },
-              {
-                icon: Target01Icon,
-                value: '$200M+',
-                label: 'Revenue Generated',
-              },
-              {
-                icon: UserGroupIcon,
-                value: 'Exponential',
-                label: 'Page 1 Growth Rate',
-              },
-              {
-                icon: Brain01Icon,
-                value: '10+',
-                label: 'Years of Experience',
-              },
-            ].map((stat) => (
+            {STATS.map((stat) => (
               <div key={stat.label} className="text-center">
                 <HugeiconsIcon
                   icon={stat.icon}
@@ -565,6 +595,8 @@ function HomePage() {
                       'medium',
                     )}
                     alt="Revology Cars"
+                    width={200}
+                    height={80}
                     className="h-16 w-auto object-contain lg:h-20 dark:invert"
                   />
                 </div>
@@ -629,6 +661,8 @@ function HomePage() {
                       'medium',
                     )}
                     alt="Goldfarb & Associates"
+                    width={200}
+                    height={80}
                     className="h-16 w-auto object-contain lg:h-20 dark:invert"
                   />
                 </div>
@@ -650,32 +684,7 @@ function HomePage() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: UserGroupIcon,
-                title: 'Entrepreneur-Led',
-                description:
-                  'We built and exited our own brands. Now we help others achieve the same success.',
-              },
-              {
-                icon: Target01Icon,
-                title: 'Results-Focused',
-                description:
-                  'We measure ROI and revenue, not vanity metrics. Your success is our success.',
-              },
-              {
-                icon: Brain01Icon,
-                title: 'Full-Stack Approach',
-                description:
-                  'Complete funnel coverage. We own your entire discovery journey.',
-              },
-              {
-                icon: Award01Icon,
-                title: 'Proven Scale',
-                description:
-                  "100+ brands across every industry. We've seen what works and what doesn't.",
-              },
-            ].map((item) => (
+            {WHY_ONE_PERCENT_FEATURES.map((item) => (
               <Card key={item.title}>
                 <CardHeader>
                   <HugeiconsIcon
@@ -724,6 +733,8 @@ function HomePage() {
                       'thumbnail',
                     )}
                     alt="Goldfarb & Associates"
+                    width={100}
+                    height={40}
                     className="h-10 w-auto object-contain dark:invert"
                   />
                   <div>
@@ -754,6 +765,8 @@ function HomePage() {
                       'thumbnail',
                     )}
                     alt="Royal Covers"
+                    width={100}
+                    height={40}
                     className="h-10 w-auto object-contain dark:invert"
                   />
                   <div>

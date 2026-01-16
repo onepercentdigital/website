@@ -7,6 +7,7 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { memo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { getAllPosts } from '@/lib/blog';
@@ -116,7 +117,7 @@ interface BlogPostCardProps {
   post: BlogPostListItem;
 }
 
-function BlogPostCard({ post }: BlogPostCardProps) {
+const BlogPostCard = memo(function BlogPostCard({ post }: BlogPostCardProps) {
   // Calculate read time (rough estimate: 200 words per minute)
   const wordCount = post.content.split(/\s+/).length;
   const readTime = Math.ceil(wordCount / 200);
@@ -152,6 +153,9 @@ function BlogPostCard({ post }: BlogPostCardProps) {
           <img
             src={post.featuredImage}
             alt={post.title}
+            width={640}
+            height={360}
+            loading="lazy"
             className="aspect-video w-full object-cover"
           />
         ) : (
@@ -200,4 +204,4 @@ function BlogPostCard({ post }: BlogPostCardProps) {
       </Card>
     </Link>
   );
-}
+});
