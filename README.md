@@ -36,7 +36,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 ```
 website/
 ├── src/
-│   ├── components/       # React components + Shadcn UI
+│   ├── components/       # React components + Shadcn UI (17 components)
 │   ├── routes/           # File-based routing (TanStack Router)
 │   ├── config/brand.ts   # Centralized brand configuration
 │   ├── lib/              # Utilities (seo.ts, cloudflare-images.ts)

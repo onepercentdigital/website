@@ -67,6 +67,8 @@ When auditing a page against homepage standards, check **every** element:
 - Add emojis unless requested
 - Use `tracking-wide` (not part of design system)
 - Add `cursor-pointer`, `group`, or hover effects to non-clickable cards
+- Omit `width` and `height` on `<img>` tags (causes CLS, always include dimensions)
+- Render list items without `memo()` (use `React.memo()` for list-rendered components)
 
 When auditing pages, compare element-by-element against the homepage. Use the Page Audit Checklist above.
 
@@ -284,7 +286,7 @@ bun run start        # Start production server
 
 ```
 src/
-├── components/ui/     # shadcn Maia components (52 components)
+├── components/ui/     # shadcn Maia components (17 components)
 ├── routes/            # File-based routing
 │   ├── index.tsx      # Homepage (reference implementation)
 │   ├── seo.tsx, geo.tsx, ppl.tsx  # Service pages
