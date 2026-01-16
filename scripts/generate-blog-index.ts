@@ -9,6 +9,7 @@
  * Run: bun run scripts/generate-blog-index.ts
  */
 
+import { execFileSync } from 'node:child_process'
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import matter from 'gray-matter'
@@ -109,6 +110,11 @@ export const posts: BlogPost[] = ${JSON.stringify(posts, null, 2)}
 `
 
   writeFileSync(outputPath, output, 'utf-8')
+
+  // Format the generated file with Biome
+  execFileSync('bunx', ['biome', 'format', '--write', outputPath], {
+    stdio: 'pipe',
+  })
 
   console.log(`\n📊 Index generated!`)
   console.log(`   Output: ${outputPath}`)
