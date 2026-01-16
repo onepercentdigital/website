@@ -4,7 +4,7 @@
 
 **Stack:** TanStack Start + React 19 + Convex + Tailwind 4 + shadcn/ui Maia  
 **Icons:** HugeIcons (not Lucide)  
-**Deploy:** Cloudflare Workers  
+**Deploy:** Railway  
 **Reference:** `src/routes/index.tsx` (homepage is the canonical implementation)
 
 ---
@@ -274,7 +274,7 @@ bunx convex dev      # Start Convex backend (separate terminal)
 bun run check-all    # Type check + lint
 bun run fix          # Auto-fix issues
 bun run build        # Production build
-bun run deploy       # Deploy to Cloudflare
+bun run start       # Start production server
 ```
 
 ---

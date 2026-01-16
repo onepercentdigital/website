@@ -11,15 +11,12 @@
   "chosenAddOns": [
     "biome",
     "start",
-    "clerk",
     "convex",
-    "sentry",
     "form",
     "shadcn",
     "table",
     "store",
     "tanstack-query",
-    "t3env",
-    "tanchat"
+    "t3env"
   ]
 }

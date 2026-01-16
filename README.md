@@ -6,7 +6,6 @@ Modern, high-performance marketing website built with TanStack Start for One Per
 
 ### Prerequisites
 - [Bun](https://bun.sh) 1.3+
-- [Node.js](https://nodejs.org) 18+
 - [Convex](https://convex.dev) account
 
 ### Setup
@@ -34,7 +33,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 - **Database**: Convex (real-time, TypeScript schema)
 - **Styling**: Tailwind CSS v4 + Shadcn/ui (Maia style) + DM Sans
 - **Images**: Cloudflare Images (CDN delivery)
-- **Deployment**: Cloudflare Workers
+- **Deployment**: Railway
 - **Linting**: Biome
 
 ## Project Structure
@@ -62,7 +61,7 @@ website/
 | `bun run check` | Lint + format check |
 | `bun run fix` | Auto-fix issues |
 | `bun run check-all` | Full check (types + lint) |
-| `bun run deploy` | Deploy to Cloudflare |
+| `bun run start` | Start production server |
 
 ## Routes
 
@@ -89,4 +88,4 @@ See **[CLAUDE.md](./CLAUDE.md)**
 
 ## License
 
-Proprietary - © 2025 One Percent Digital. All rights reserved.
+Proprietary - © 2026 One Percent Digital. All rights reserved.
