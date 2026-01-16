@@ -162,11 +162,106 @@ function HomePage() {
         </div>
       </section>
 
-      {/* SEO Section - Visual Left, Content Right */}
+      {/* PPL Section - Visual Left, Content Right */}
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="order-2 flex items-center lg:order-1">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center justify-between px-4 py-2">
+                  <div className="flex items-center gap-2">
+                    <HugeiconsIcon
+                      icon={UserGroupIcon}
+                      size={18}
+                      className="text-primary"
+                    />
+                    <span className="font-medium text-sm">Lead Pipeline</span>
+                  </div>
+                  <span className="font-bold text-primary text-sm">
+                    63 this week
+                  </span>
+                </div>
+                <Separator />
+                <div className="space-y-2 p-3">
+                  {[
+                    { name: 'James Crawford', company: 'Financial Planning' },
+                    { name: 'Robert Mitchell', company: 'Financial Planning' },
+                    { name: 'William Thompson', company: 'Financial Planning' },
+                  ].map((lead) => (
+                    <div
+                      key={lead.name}
+                      className="flex items-center gap-3 rounded-xl bg-muted/50 p-2"
+                    >
+                      <div className="flex size-8 items-center justify-center rounded-full bg-muted font-medium text-muted-foreground text-xs">
+                        {lead.name
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="truncate font-medium text-sm">
+                          {lead.name}
+                        </div>
+                        <div className="truncate text-muted-foreground text-xs">
+                          {lead.company}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </div>
+            <div className="order-1 flex flex-col justify-center lg:order-2">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
+                Get Qualified Leads on Demand
+              </h2>
+              <p className="mb-6 text-muted-foreground leading-relaxed">
+                We fund your marketing campaigns and deliver pre-qualified leads
+                directly to your pipeline. You only pay for results. Zero
+                upfront investment.
+              </p>
+              <div>
+                <Button render={<Link to="/ppl" />} size="lg">
+                  Pay Per Lead Generation
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={18}
+                    strokeWidth={2}
+                    data-icon="inline-end"
+                  />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Section - Content Left, Visual Right */}
+      <section className="px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex flex-col justify-center">
+              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
+                Rank on Page 1
+              </h2>
+              <p className="mb-6 text-muted-foreground leading-relaxed">
+                Rank on page 1 of Google and other search engines. Sustainable
+                organic growth through proven strategies that deliver qualified
+                traffic to your business.
+              </p>
+              <div>
+                <Button render={<Link to="/seo" />} size="lg">
+                  Search Engine Optimization
+                  <HugeiconsIcon
+                    icon={ArrowRight01Icon}
+                    size={18}
+                    strokeWidth={2}
+                    data-icon="inline-end"
+                  />
+                </Button>
+              </div>
+            </div>
+            <div className="flex items-center">
               <Card className="w-full gap-0 overflow-hidden py-0">
                 <div className="flex items-center gap-2 px-4 py-2">
                   <HugeiconsIcon
@@ -217,47 +312,130 @@ function HomePage() {
                 </div>
               </Card>
             </div>
-            <div className="order-1 flex flex-col justify-center lg:order-2">
-              <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-                Rank on Page 1
-              </h2>
-              <p className="mb-6 text-muted-foreground leading-relaxed">
-                Rank on page 1 of Google and other search engines. Sustainable
-                organic growth through proven strategies that deliver qualified
-                traffic to your business.
-              </p>
-              <div>
-                <Button render={<Link to="/seo" />} size="lg">
-                  Search Engine Optimization
-                  <HugeiconsIcon
-                    icon={ArrowRight01Icon}
-                    size={18}
-                    strokeWidth={2}
-                    data-icon="inline-end"
-                  />
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* PPL Section - Content Left, Visual Right */}
+      {/* Maps Section - Visual Left, Content Right */}
       <section className="px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="flex flex-col justify-center">
+            <div className="order-2 flex items-center lg:order-1">
+              <Card className="w-full gap-0 overflow-hidden py-0">
+                <div className="flex items-center gap-2 px-4 py-2">
+                  <HugeiconsIcon
+                    icon={Target01Icon}
+                    size={18}
+                    className="text-primary"
+                  />
+                  <span className="font-medium text-sm">Local Rankings</span>
+                </div>
+                <Separator />
+                <div className="relative p-4">
+                  {/* Simplified radius map */}
+                  <div className="relative mx-auto aspect-square max-w-[200px]">
+                    <svg
+                      viewBox="0 0 200 200"
+                      className="h-full w-full"
+                      role="img"
+                      aria-label="Service area map showing #1 rankings"
+                    >
+                      {/* Grid pattern */}
+                      <defs>
+                        <pattern
+                          id="homeGrid"
+                          width="25"
+                          height="25"
+                          patternUnits="userSpaceOnUse"
+                        >
+                          <path
+                            d="M 25 0 L 0 0 0 25"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="0.5"
+                            className="text-muted-foreground/10"
+                          />
+                        </pattern>
+                      </defs>
+                      <rect width="200" height="200" fill="url(#homeGrid)" />
+
+                      {/* Radius circles */}
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="80"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        strokeDasharray="4 4"
+                        className="text-muted-foreground/20"
+                      />
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="50"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1"
+                        strokeDasharray="4 4"
+                        className="text-muted-foreground/20"
+                      />
+
+                      {/* Center business marker */}
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="6"
+                        className="fill-primary"
+                      />
+                      <circle
+                        cx="100"
+                        cy="100"
+                        r="3"
+                        className="fill-primary-foreground"
+                      />
+                    </svg>
+
+                    {/* #1 pins */}
+                    {[
+                      { top: '20%', left: '50%' },
+                      { top: '35%', left: '75%' },
+                      { top: '35%', left: '25%' },
+                      { top: '60%', left: '20%' },
+                      { top: '60%', left: '80%' },
+                      { top: '75%', left: '50%' },
+                    ].map((pos) => (
+                      <div
+                        key={`home-pin-${pos.top}-${pos.left}`}
+                        className="absolute flex size-5 items-center justify-center rounded-full bg-green-500 font-bold text-white text-xs shadow-sm"
+                        style={{
+                          top: pos.top,
+                          left: pos.left,
+                          transform: 'translate(-50%, -50%)',
+                        }}
+                      >
+                        1
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-center text-muted-foreground text-xs">
+                    Rank #1 across your entire service area
+                  </p>
+                </div>
+              </Card>
+            </div>
+            <div className="order-1 flex flex-col justify-center lg:order-2">
               <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-                Get Qualified Leads on Demand
+                Own Your Local Map Results
               </h2>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                We fund your marketing campaigns and deliver pre-qualified leads
-                directly to your pipeline. You only pay for results. Zero
-                upfront investment.
+                Own Google Maps and local pack results. When customers search
+                nearby, be the first business they find with optimized Google
+                Business Profile and local search dominance.
               </p>
               <div>
-                <Button render={<Link to="/ppl" />} size="lg">
-                  Pay Per Lead Generation
+                <Button render={<Link to="/maps" />} size="lg">
+                  Maps Optimization
                   <HugeiconsIcon
                     icon={ArrowRight01Icon}
                     size={18}
@@ -266,51 +444,6 @@ function HomePage() {
                   />
                 </Button>
               </div>
-            </div>
-            <div className="flex items-center">
-              <Card className="w-full gap-0 overflow-hidden py-0">
-                <div className="flex items-center justify-between px-4 py-2">
-                  <div className="flex items-center gap-2">
-                    <HugeiconsIcon
-                      icon={UserGroupIcon}
-                      size={18}
-                      className="text-primary"
-                    />
-                    <span className="font-medium text-sm">Lead Pipeline</span>
-                  </div>
-                  <span className="font-bold text-primary text-sm">
-                    63 this week
-                  </span>
-                </div>
-                <Separator />
-                <div className="space-y-2 p-3">
-                  {[
-                    { name: 'James Crawford', company: 'Financial Planning' },
-                    { name: 'Robert Mitchell', company: 'Financial Planning' },
-                    { name: 'William Thompson', company: 'Financial Planning' },
-                  ].map((lead) => (
-                    <div
-                      key={lead.name}
-                      className="flex items-center gap-3 rounded-xl bg-muted/50 p-2"
-                    >
-                      <div className="flex size-8 items-center justify-center rounded-full bg-muted font-medium text-muted-foreground text-xs">
-                        {lead.name
-                          .split(' ')
-                          .map((n) => n[0])
-                          .join('')}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <div className="truncate font-medium text-sm">
-                          {lead.name}
-                        </div>
-                        <div className="truncate text-muted-foreground text-xs">
-                          {lead.company}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Card>
             </div>
           </div>
         </div>
@@ -644,8 +777,8 @@ function HomePage() {
             Ready to Dominate Your Industry?
           </h2>
           <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
-            Whether through GEO, SEO, or PPL, we help you generate the leads you
-            need to grow.
+            Whether through GEO, SEO, Maps, or PPL, we help you generate the
+            leads you need to grow.
           </p>
           <div className="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button render={<Link to="/apply" />} size="lg">
