@@ -2,7 +2,7 @@
 
 ## Quick Reference
 
-**Stack:** TanStack Start + React 19 + Convex + Tailwind 4 + shadcn/ui Maia  
+**Stack:** TanStack Start + React 19 + Tailwind 4 + shadcn/ui Maia
 **Icons:** HugeIcons (not Lucide)  
 **Deploy:** Railway  
 **Reference:** `src/routes/index.tsx` (homepage is the canonical implementation)
@@ -272,11 +272,10 @@ function ExamplePage() {
 
 ```bash
 bun run dev          # Start dev server (port 3000)
-bunx convex dev      # Start Convex backend (separate terminal)
 bun run check-all    # Type check + lint
 bun run fix          # Auto-fix issues
-bun run build        # Production build
-bun run start       # Start production server
+bun run build        # Production build (generates blog index + sitemap)
+bun run start        # Start production server
 ```
 
 ---
@@ -293,9 +292,9 @@ src/
 │   └── solutions.*.tsx  # 12 industry pages
 ├── config/brand.ts    # Nav, footer, SEO config
 ├── lib/seo.ts         # generateMetaTags(), schema helpers
-└── data/              # Static data (customers, case-studies, team)
-
-convex/                # Backend (schema, queries, mutations)
+├── lib/blog.ts        # Blog helper functions
+├── content/blog/      # Blog posts as MDX files
+└── data/              # Static data (customers, case-studies, team, categories)
 ```
 
 ---
@@ -334,13 +333,38 @@ convex/                # Backend (schema, queries, mutations)
 - Functional components only
 - No unused variables (strict TypeScript)
 - Biome: single quotes, 2-space indent, sorted Tailwind classes
-- Auto-generated (do not edit): `src/routeTree.gen.ts`, `convex/_generated/`
+- Auto-generated (do not edit): `src/routeTree.gen.ts`, `src/content/blog/_index.ts`
 
 ---
 
 ## Extended Docs
 
-- `docs/RESTORE-ADMIN-CMS.md` - Re-enable admin routes
-- `docs/BLOG-CMS.md` - Blog architecture
 - `docs/CLOUDFLARE-IMAGES.md` - Image CDN setup
 - `docs/KNOWN-ISSUES.md` - Platform limitations (iOS Safari)
+
+## Blog (Static MDX)
+
+Blog posts are stored as MDX files in `src/content/blog/`. Each file has YAML frontmatter with metadata.
+
+**To add a new post:**
+1. Create `src/content/blog/your-slug.mdx` with frontmatter and content
+2. Run `bun run scripts/generate-blog-index.ts` to regenerate the index
+3. The post will appear on `/blog` if status is "published"
+
+**Frontmatter schema:**
+```yaml
+---
+title: "Post Title"
+slug: "post-slug"
+excerpt: "Brief description..."
+featuredImage: "https://imagedelivery.net/..."
+category: "seo"
+authorName: "One Percent Digital"
+status: "published"
+publishedAt: "2024-01-15T00:00:00.000Z"
+modifiedAt: "2024-03-20T00:00:00.000Z"
+seo:
+  metaTitle: "Custom SEO Title"
+  metaDescription: "Custom meta description..."
+---
+```

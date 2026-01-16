@@ -10,17 +10,11 @@
 
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { ConvexHttpClient } from 'convex/browser'
 import { getAllSolutions } from '../src/data/solutions'
-import { api } from '../convex/_generated/api'
+import { getPostsForSitemap } from '../src/lib/blog'
 
 const baseUrl = 'https://op.digital'
 const currentDate = new Date().toISOString().split('T')[0]
-
-// Initialize Convex client
-const convex = new ConvexHttpClient(
-  process.env.VITE_CONVEX_URL || 'https://your-convex-url.convex.cloud'
-)
 
 // Static pages with their priorities and change frequencies
 const staticPages = [
@@ -38,11 +32,11 @@ const staticPages = [
 ]
 
 /**
- * Fetch published blog posts from Convex
+ * Get blog posts from static index
  */
-async function fetchBlogPosts() {
+function fetchBlogPosts() {
   try {
-    const posts = await convex.query(api.posts.getPublishedForSitemap, {})
+    const posts = getPostsForSitemap()
     return posts.map((post) => ({
       url: `/blog/${post.slug}`,
       lastmod: new Date(post.modifiedAt).toISOString().split('T')[0],
@@ -59,7 +53,7 @@ async function fetchBlogPosts() {
 /**
  * Main sitemap generation function
  */
-async function generateSitemap() {
+function generateSitemap() {
   console.log('🗺️  Generating sitemap.xml...')
 
   // Get dynamic solution pages
@@ -71,8 +65,8 @@ async function generateSitemap() {
     changefreq: 'monthly',
   }))
 
-  // Fetch blog posts
-  const blogPosts = await fetchBlogPosts()
+  // Fetch blog posts from static index
+  const blogPosts = fetchBlogPosts()
 
   // Combine all pages
   const allPages = [
@@ -110,7 +104,9 @@ ${allPages
 }
 
 // Run sitemap generation
-generateSitemap().catch((error) => {
+try {
+  generateSitemap()
+} catch (error) {
   console.error('❌ Failed to generate sitemap:', error)
   process.exit(1)
-})
+}

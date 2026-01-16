@@ -6,7 +6,6 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
-import { useQuery } from 'convex/react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
@@ -14,46 +13,47 @@ import rehypeSanitize from 'rehype-sanitize';
 import remarkGfm from 'remark-gfm';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
+import { getPostWithCategory } from '@/lib/blog';
 import { generateMetaTags, getArticleSchema } from '@/lib/seo';
-import { api } from '../../convex/_generated/api';
 import 'highlight.js/styles/github-dark.css';
 
 export const Route = createFileRoute('/blog/$slug')({
   component: BlogPostPage,
-  head: () => {
-    // Static meta tags for SSR
-    // Dynamic meta tags would require server-side data fetching
+  head: ({ params }) => {
+    // Get post data for SSR meta tags
+    const postData = getPostWithCategory(params.slug);
+
+    if (!postData) {
+      return generateMetaTags({
+        title: 'Post Not Found | One Percent Digital',
+        description: 'The requested blog post could not be found.',
+        url: `https://op.digital/blog/${params.slug}`,
+      });
+    }
+
+    const { post } = postData;
     return generateMetaTags({
-      title: 'Blog Post | One Percent Digital',
+      title: post.seo?.metaTitle || `${post.title} | One Percent Digital Blog`,
       description:
+        post.seo?.metaDescription ||
+        post.excerpt ||
         'Expert insights on GEO, SEO, and search optimization strategies.',
-      url: 'https://op.digital/blog',
+      url: `https://op.digital/blog/${post.slug}`,
+      ogImage: post.seo?.ogImage || post.featuredImage,
     });
   },
 });
 
 function BlogPostPage() {
   const { slug } = Route.useParams();
-  const postData = useQuery(api.posts.getBySlug, { slug });
-
-  // Handle loading state
-  if (postData === undefined) {
-    return (
-      <div className="flex min-h-[60vh] items-center justify-center">
-        <div className="text-center">
-          <div className="mb-4 inline-flex h-12 w-12 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-          <p className="text-muted-foreground">Loading post...</p>
-        </div>
-      </div>
-    );
-  }
+  const postData = getPostWithCategory(slug);
 
   // Handle not found
-  if (postData === null) {
+  if (!postData) {
     throw notFound();
   }
 
-  const { category, ...post } = postData;
+  const { post, category } = postData;
 
   // Calculate read time
   const wordCount = post.content.split(/\s+/).length;
@@ -80,10 +80,8 @@ function BlogPostPage() {
     description: post.excerpt || '',
     url: `https://op.digital/blog/${post.slug}`,
     image: post.featuredImage || '',
-    datePublished: post.publishedAt
-      ? new Date(post.publishedAt).toISOString()
-      : new Date(post.modifiedAt).toISOString(),
-    dateModified: new Date(post.modifiedAt).toISOString(),
+    datePublished: post.publishedAt || post.modifiedAt,
+    dateModified: post.modifiedAt,
     author: post.authorName,
   });
 
@@ -163,11 +161,13 @@ function BlogPostPage() {
             </div>
 
             {/* Last Modified */}
-            {post.publishedAt && post.modifiedAt > post.publishedAt + 60000 && (
-              <p className="mt-3 text-muted-foreground text-xs">
-                Last updated: {modifiedDate}
-              </p>
-            )}
+            {post.publishedAt &&
+              new Date(post.modifiedAt).getTime() >
+                new Date(post.publishedAt).getTime() + 60000 && (
+                <p className="mt-3 text-muted-foreground text-xs">
+                  Last updated: {modifiedDate}
+                </p>
+              )}
           </header>
 
           {/* Featured Image */}
