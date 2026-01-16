@@ -104,3 +104,29 @@ export function searchPosts(query: string): BlogPostListItem[] {
       post.content.toLowerCase().includes(searchLower),
   );
 }
+
+/**
+ * Get posts modified around the same time as the given post.
+ * Sorts by proximity to current post's modifiedAt date.
+ */
+export function getRelatedPosts(
+  currentSlug: string,
+  limit = 3,
+): BlogPostListItem[] {
+  const allPosts = getAllPosts().filter((p) => p.slug !== currentSlug);
+  const currentPost = getPostBySlug(currentSlug);
+
+  if (!currentPost || allPosts.length <= limit) {
+    return allPosts.slice(0, limit);
+  }
+
+  const currentTime = new Date(currentPost.modifiedAt).getTime();
+
+  return [...allPosts]
+    .sort((a, b) => {
+      const diffA = Math.abs(new Date(a.modifiedAt).getTime() - currentTime);
+      const diffB = Math.abs(new Date(b.modifiedAt).getTime() - currentTime);
+      return diffA - diffB;
+    })
+    .slice(0, limit);
+}

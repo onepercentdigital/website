@@ -174,7 +174,10 @@ export function getLocalBusinessSchema() {
 }
 
 /**
- * Generate Article structured data
+ * Generate Article structured data (GEO-optimized)
+ *
+ * Includes keywords, articleSection, and speakable properties
+ * for enhanced visibility in AI search engines and voice search.
  */
 export function getArticleSchema(config: {
   headline: string;
@@ -184,6 +187,8 @@ export function getArticleSchema(config: {
   dateModified: string;
   author: string;
   url: string;
+  keywords?: string[];
+  articleSection?: string;
 }) {
   return generateStructuredData({
     type: 'Article',
@@ -208,6 +213,15 @@ export function getArticleSchema(config: {
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': config.url,
+      },
+      // GEO optimizations for AI search engines
+      ...(config.keywords &&
+        config.keywords.length > 0 && { keywords: config.keywords.join(', ') }),
+      ...(config.articleSection && { articleSection: config.articleSection }),
+      // Speakable specification for voice search and AI assistants
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.prose h1', '.prose h2', '.prose p:first-of-type'],
       },
     },
   });

@@ -11,10 +11,16 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkGfm from 'remark-gfm';
+import { AuthorBox } from '@/components/AuthorBox';
+import { RelatedPosts } from '@/components/RelatedPosts';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { getPostWithCategory } from '@/lib/blog';
-import { generateMetaTags, getArticleSchema } from '@/lib/seo';
+import {
+  generateMetaTags,
+  getArticleSchema,
+  getBreadcrumbSchema,
+} from '@/lib/seo';
 import 'highlight.js/styles/github-dark.css';
 
 export const Route = createFileRoute('/blog/$slug')({
@@ -31,7 +37,11 @@ export const Route = createFileRoute('/blog/$slug')({
       });
     }
 
-    const { post } = postData;
+    const { post, category } = postData;
+
+    // Generate keywords from title and category
+    const keywords = generateKeywordsFromTitle(post.title, category?.name);
+
     return generateMetaTags({
       title: post.seo?.metaTitle || `${post.title} | One Percent Digital Blog`,
       description:
@@ -40,9 +50,163 @@ export const Route = createFileRoute('/blog/$slug')({
         'Expert insights on GEO, SEO, and search optimization strategies.',
       url: `https://op.digital/blog/${post.slug}`,
       ogImage: post.seo?.ogImage || post.featuredImage,
+      ogType: 'article',
+      article: {
+        publishedTime: post.publishedAt,
+        modifiedTime: post.modifiedAt,
+        author: post.authorName,
+        section: category?.name || 'SEO',
+        tags: keywords,
+      },
     });
   },
 });
+
+/**
+ * Generate keywords from post title and category
+ */
+function generateKeywordsFromTitle(
+  title: string,
+  categoryName?: string,
+): string[] {
+  const keywords: string[] = [];
+
+  // Add category as first keyword
+  if (categoryName) {
+    keywords.push(categoryName);
+  }
+
+  // Extract meaningful words from title (exclude common stop words)
+  const stopWords = new Set([
+    'a',
+    'an',
+    'the',
+    'is',
+    'are',
+    'was',
+    'were',
+    'be',
+    'been',
+    'being',
+    'have',
+    'has',
+    'had',
+    'do',
+    'does',
+    'did',
+    'will',
+    'would',
+    'could',
+    'should',
+    'may',
+    'might',
+    'must',
+    'shall',
+    'can',
+    'need',
+    'dare',
+    'ought',
+    'used',
+    'to',
+    'of',
+    'in',
+    'for',
+    'on',
+    'with',
+    'at',
+    'by',
+    'from',
+    'as',
+    'into',
+    'through',
+    'during',
+    'before',
+    'after',
+    'above',
+    'below',
+    'between',
+    'under',
+    'again',
+    'further',
+    'then',
+    'once',
+    'here',
+    'there',
+    'when',
+    'where',
+    'why',
+    'how',
+    'all',
+    'each',
+    'few',
+    'more',
+    'most',
+    'other',
+    'some',
+    'such',
+    'no',
+    'nor',
+    'not',
+    'only',
+    'own',
+    'same',
+    'so',
+    'than',
+    'too',
+    'very',
+    'just',
+    'and',
+    'but',
+    'if',
+    'or',
+    'because',
+    'until',
+    'while',
+    'what',
+    'which',
+    'who',
+    'whom',
+    'this',
+    'that',
+    'these',
+    'those',
+    'am',
+    'vs',
+  ]);
+
+  const words = title
+    .toLowerCase()
+    .replace(/[?!.,]/g, '')
+    .split(/\s+/)
+    .filter((word) => word.length > 2 && !stopWords.has(word));
+
+  // Add unique words as keywords
+  for (const word of words) {
+    if (!keywords.includes(word)) {
+      keywords.push(word);
+    }
+  }
+
+  // Add common SEO-related keywords if relevant
+  const lowerTitle = title.toLowerCase();
+  if (
+    lowerTitle.includes('seo') &&
+    !keywords.includes('search engine optimization')
+  ) {
+    keywords.push('search engine optimization');
+  }
+  if (lowerTitle.includes('local') && !keywords.includes('local search')) {
+    keywords.push('local search');
+  }
+  if (
+    lowerTitle.includes('manufacturing') &&
+    !keywords.includes('industrial marketing')
+  ) {
+    keywords.push('industrial marketing');
+  }
+
+  return keywords.slice(0, 10); // Limit to 10 keywords
+}
 
 function BlogPostPage() {
   const { slug } = Route.useParams();
@@ -74,20 +238,37 @@ function BlogPostPage() {
     day: 'numeric',
   });
 
-  // Generate Article structured data
+  // Generate keywords for structured data
+  const keywords = generateKeywordsFromTitle(post.title, category?.name);
+
+  // Generate Article structured data (GEO-optimized)
   const articleSchema = getArticleSchema({
     headline: post.title,
-    description: post.excerpt || '',
+    description: post.seo?.metaDescription || post.excerpt || '',
     url: `https://op.digital/blog/${post.slug}`,
     image: post.featuredImage || '',
     datePublished: post.publishedAt || post.modifiedAt,
     dateModified: post.modifiedAt,
     author: post.authorName,
+    keywords,
+    articleSection: category?.name || 'SEO',
   });
+
+  // Generate BreadcrumbList structured data
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://op.digital/' },
+    { name: 'Blog', url: 'https://op.digital/blog' },
+    { name: post.title, url: `https://op.digital/blog/${post.slug}` },
+  ]);
 
   return (
     <>
-      <SEO structuredData={[{ type: 'Article', data: articleSchema }]} />
+      <SEO
+        structuredData={[
+          { type: 'Article', data: articleSchema },
+          { type: 'BreadcrumbList', data: breadcrumbSchema },
+        ]}
+      />
 
       {/* Breadcrumbs */}
       <nav className="px-6 py-4">
@@ -207,6 +388,16 @@ function BlogPostPage() {
           </div>
         </div>
       </article>
+
+      {/* Author Box */}
+      <section className="px-6 py-12">
+        <div className="mx-auto max-w-4xl">
+          <AuthorBox authorName={post.authorName} />
+        </div>
+      </section>
+
+      {/* Related Posts */}
+      <RelatedPosts currentSlug={post.slug} />
 
       {/* Final CTA Section */}
       <section className="border-border border-y px-6 py-16 lg:py-20">
