@@ -359,7 +359,7 @@ function BlogPostPage() {
                 alt={post.title}
                 width={1200}
                 height={630}
-                loading="lazy"
+                fetchPriority="high"
                 className="w-full rounded-2xl object-cover shadow-lg"
               />
             </div>
