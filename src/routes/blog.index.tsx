@@ -55,11 +55,13 @@ function BlogIndexPage() {
               <div className="text-center">
                 <HugeiconsIcon
                   icon={File01Icon}
-                  size={48}
+                  size={28}
                   strokeWidth={1.5}
-                  className="mx-auto mb-4 animate-pulse text-primary"
+                  className="mx-auto mb-3 animate-pulse text-primary"
                 />
-                <p className="text-muted-foreground">Loading posts...</p>
+                <p className="text-muted-foreground text-sm">
+                  Loading posts...
+                </p>
               </div>
             </div>
           ) : !posts || posts.length === 0 ? (
@@ -67,12 +69,12 @@ function BlogIndexPage() {
               <div className="text-center">
                 <HugeiconsIcon
                   icon={File01Icon}
-                  size={48}
+                  size={28}
                   strokeWidth={1.5}
-                  className="mx-auto mb-4 text-primary"
+                  className="mx-auto mb-3 text-primary"
                 />
-                <h2 className="mb-3 font-bold text-2xl">No Posts Yet</h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <h2 className="mb-2 font-bold text-xl">No Posts Yet</h2>
+                <p className="max-w-sm text-muted-foreground text-sm leading-relaxed">
                   Blog posts will appear here once they're published. Check back
                   soon for expert insights on GEO and SEO.
                 </p>
@@ -181,9 +183,9 @@ function BlogPostCard({ post }: BlogPostCardProps) {
           <div className="flex aspect-video items-center justify-center bg-muted">
             <HugeiconsIcon
               icon={File01Icon}
-              size={48}
-              strokeWidth={1}
-              className="text-muted-foreground/30"
+              size={28}
+              strokeWidth={1.5}
+              className="text-muted-foreground/50"
             />
           </div>
         )}
@@ -205,17 +207,17 @@ function BlogPostCard({ post }: BlogPostCardProps) {
             <div className="flex items-center gap-1">
               <HugeiconsIcon
                 icon={Calendar01Icon}
-                size={14}
+                size={16}
                 strokeWidth={1.5}
               />
               <span>{formattedDate}</span>
             </div>
             <div className="flex items-center gap-1">
-              <HugeiconsIcon icon={Clock01Icon} size={14} strokeWidth={1.5} />
+              <HugeiconsIcon icon={Clock01Icon} size={16} strokeWidth={1.5} />
               <span>{readTime} min read</span>
             </div>
             <div className="flex items-center gap-1">
-              <HugeiconsIcon icon={UserIcon} size={14} strokeWidth={1.5} />
+              <HugeiconsIcon icon={UserIcon} size={16} strokeWidth={1.5} />
               <span>{post.authorName}</span>
             </div>
           </div>

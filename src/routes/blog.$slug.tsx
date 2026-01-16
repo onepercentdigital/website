@@ -208,12 +208,30 @@ function BlogPostPage() {
         </div>
       </article>
 
-      {/* Back to Blog CTA */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <Button render={<Link to="/blog" />} variant="outline" size="lg">
-            ← Back to All Posts
-          </Button>
+      {/* Final CTA Section */}
+      <section className="border-border border-y px-6 py-16 lg:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
+            Ready to Put These Insights Into Action?
+          </h2>
+          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
+            From GEO and SEO to PPL, we turn strategy into leads. Let's discuss
+            how to scale your business.
+          </p>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button render={<Link to="/apply" />} size="lg">
+              Apply To Work With Us
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                size={18}
+                strokeWidth={2}
+                data-icon="inline-end"
+              />
+            </Button>
+            <Button render={<Link to="/blog" />} size="lg" variant="outline">
+              Back to All Posts
+            </Button>
+          </div>
         </div>
       </section>
     </>

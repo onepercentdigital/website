@@ -42,6 +42,8 @@ When auditing a page against homepage standards, check **every** element:
 - [ ] Theme toggle icons: `size={16}` acceptable
 - [ ] Inline list checkmarks (CheckmarkCircle02Icon): `size={20}` acceptable
 - [ ] Dense feature list checkmarks (SolutionPageTemplate): `size={16}` acceptable
+- [ ] Breadcrumb separator icons: `size={16}` acceptable
+- [ ] Inline metadata icons (dates, read time, author): `size={16}` acceptable
 
 ### Final CTA Section
 - [ ] Border: `border-y` (both top and bottom)
