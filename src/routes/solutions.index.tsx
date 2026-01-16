@@ -34,24 +34,24 @@ export const Route = createFileRoute('/solutions/')({
     }),
 });
 
+// Icon mapping for industries - hoisted outside component to avoid recreation on each render
+const industryIcons: Record<string, typeof Restaurant01Icon> = {
+  hospitality: Restaurant01Icon,
+  ecommerce: ShoppingCart01Icon,
+  manufacturing: Factory01Icon,
+  logistics: DeliveryTruck01Icon,
+  automotive: DeliveryBox01Icon,
+  construction: Building06Icon,
+  agriculture: TractorIcon,
+  technology: CodeIcon,
+  'health-wellness': FavouriteIcon,
+  'finance-insurance': LibraryIcon,
+  legal: JusticeScale01Icon,
+  'real-estate': Home01Icon,
+};
+
 function SolutionsLandingPage() {
   const solutions = getAllSolutions();
-
-  // Icon mapping for industries
-  const industryIcons: Record<string, typeof Restaurant01Icon> = {
-    hospitality: Restaurant01Icon,
-    ecommerce: ShoppingCart01Icon,
-    manufacturing: Factory01Icon,
-    logistics: DeliveryTruck01Icon,
-    automotive: DeliveryBox01Icon,
-    construction: Building06Icon,
-    agriculture: TractorIcon,
-    technology: CodeIcon,
-    'health-wellness': FavouriteIcon,
-    'finance-insurance': LibraryIcon,
-    legal: JusticeScale01Icon,
-    'real-estate': Home01Icon,
-  };
 
   return (
     <div className="overflow-hidden">

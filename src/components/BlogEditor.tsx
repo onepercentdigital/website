@@ -9,12 +9,7 @@ import {
 import { HugeiconsIcon } from '@hugeicons/react';
 import { useQuery } from '@tanstack/react-query';
 import { createServerFn } from '@tanstack/react-start';
-import { useEffect, useRef, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import rehypeHighlight from 'rehype-highlight';
-import rehypeRaw from 'rehype-raw';
-import rehypeSanitize from 'rehype-sanitize';
-import remarkGfm from 'remark-gfm';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -35,7 +30,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { getImageUrl, uploadImage } from '@/lib/cloudflare-images';
 import { api } from '../../convex/_generated/api';
 import type { Id } from '../../convex/_generated/dataModel';
-import 'highlight.js/styles/github-dark.css';
+
+// Lazy load the markdown preview to reduce main bundle size
+// ReactMarkdown + rehype plugins add ~50KB+ to bundle
+const MarkdownPreview = lazy(() => import('@/components/MarkdownPreview'));
 
 // Server function for image upload
 const uploadImageServer = createServerFn({ method: 'POST' })
@@ -366,12 +364,23 @@ export function BlogEditor({
           {showPreview && (
             <div className="rounded-lg bg-card p-6 ring-1 ring-foreground/10">
               <div className="prose prose-sm dark:prose-invert max-w-none">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSanitize]}
+                <Suspense
+                  fallback={
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <HugeiconsIcon
+                        icon={Loading01Icon}
+                        size={16}
+                        strokeWidth={2}
+                        className="animate-spin"
+                      />
+                      Loading preview...
+                    </div>
+                  }
                 >
-                  {content || '*Preview will appear here...*'}
-                </ReactMarkdown>
+                  <MarkdownPreview
+                    content={content || '*Preview will appear here...*'}
+                  />
+                </Suspense>
               </div>
             </div>
           )}
