@@ -5,18 +5,51 @@
  * This script generates a static sitemap.xml file in the public directory.
  * It includes all static pages, dynamic solution pages, and published blog posts.
  *
+ * Modification dates are determined from git commit history for accuracy.
+ *
  * Run: bun run scripts/generate-sitemap.ts
  */
 
+import { execFileSync } from 'node:child_process'
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { getAllSolutions } from '../src/data/solutions'
 import { getPostsForSitemap } from '../src/lib/blog'
 
 const baseUrl = 'https://op.digital'
-const currentDate = new Date().toISOString().split('T')[0]
+const fallbackDate = new Date().toISOString().split('T')[0]
 
-// Static pages with their priorities and change frequencies
+/**
+ * Get the last modification date from git history for a file
+ * Returns YYYY-MM-DD format or null if unavailable
+ */
+function getGitLastModified(filepath: string): string | null {
+  try {
+    const result = execFileSync('git', ['log', '-1', '--format=%cI', '--', filepath], {
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'pipe'],
+    }).trim()
+    return result ? result.split('T')[0] : null
+  } catch {
+    return null
+  }
+}
+
+// Static pages with their source files, priorities, and change frequencies
+const staticPageSources: Record<string, string> = {
+  '': 'src/routes/index.tsx',
+  '/seo': 'src/routes/seo.tsx',
+  '/geo': 'src/routes/geo.tsx',
+  '/ppl': 'src/routes/ppl.tsx',
+  '/customers': 'src/routes/customers.tsx',
+  '/case-studies': 'src/routes/case-studies.tsx',
+  '/apply': 'src/routes/apply.tsx',
+  '/about': 'src/routes/about.tsx',
+  '/solutions': 'src/routes/solutions.index.tsx',
+  '/enterprise': 'src/routes/enterprise.tsx',
+  '/blog': 'src/routes/blog.index.tsx',
+}
+
 const staticPages = [
   { url: '', priority: '1.0', changefreq: 'weekly' }, // Homepage
   { url: '/seo', priority: '0.9', changefreq: 'monthly' },
@@ -32,17 +65,26 @@ const staticPages = [
 ]
 
 /**
- * Get blog posts from static index
+ * Get blog posts with git-based modification dates
  */
 function fetchBlogPosts() {
   try {
     const posts = getPostsForSitemap()
-    return posts.map((post) => ({
-      url: `/blog/${post.slug}`,
-      lastmod: new Date(post.modifiedAt).toISOString().split('T')[0],
-      priority: '0.7',
-      changefreq: 'weekly',
-    }))
+    return posts.map((post) => {
+      const filepath = `src/content/blog/${post.slug}.mdx`
+      const gitDate = getGitLastModified(filepath)
+
+      if (!gitDate) {
+        console.warn(`⚠️  No git history for blog post: ${post.slug}, using fallback date`)
+      }
+
+      return {
+        url: `/blog/${post.slug}`,
+        lastmod: gitDate ?? fallbackDate,
+        priority: '0.7',
+        changefreq: 'weekly',
+      }
+    })
   } catch (error) {
     console.warn('⚠️  Could not fetch blog posts:', error)
     console.warn('   Sitemap will be generated without blog posts')
@@ -56,24 +98,44 @@ function fetchBlogPosts() {
 function generateSitemap() {
   console.log('🗺️  Generating sitemap.xml...')
 
-  // Get dynamic solution pages
-  const solutions = getAllSolutions()
-  const solutionPages = solutions.map((solution) => ({
-    url: `/solutions/${solution.slug}`,
-    lastmod: currentDate,
-    priority: '0.8',
-    changefreq: 'monthly',
-  }))
+  // Get static pages with git-based dates
+  const staticPagesWithDates = staticPages.map((page) => {
+    const sourceFile = staticPageSources[page.url]
+    const gitDate = sourceFile ? getGitLastModified(sourceFile) : null
 
-  // Fetch blog posts from static index
+    if (!gitDate && sourceFile) {
+      console.warn(`⚠️  No git history for: ${sourceFile}, using fallback date`)
+    }
+
+    return {
+      ...page,
+      lastmod: gitDate ?? fallbackDate,
+    }
+  })
+
+  // Get dynamic solution pages with git-based dates
+  const solutions = getAllSolutions()
+  const solutionPages = solutions.map((solution) => {
+    const filepath = `src/routes/solutions.${solution.slug}.tsx`
+    const gitDate = getGitLastModified(filepath)
+
+    if (!gitDate) {
+      console.warn(`⚠️  No git history for solution: ${solution.slug}, using fallback date`)
+    }
+
+    return {
+      url: `/solutions/${solution.slug}`,
+      lastmod: gitDate ?? fallbackDate,
+      priority: '0.8',
+      changefreq: 'monthly',
+    }
+  })
+
+  // Fetch blog posts with git-based dates
   const blogPosts = fetchBlogPosts()
 
   // Combine all pages
-  const allPages = [
-    ...staticPages.map((page) => ({ ...page, lastmod: currentDate })),
-    ...solutionPages,
-    ...blogPosts,
-  ]
+  const allPages = [...staticPagesWithDates, ...solutionPages, ...blogPosts]
 
   // Generate XML
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
