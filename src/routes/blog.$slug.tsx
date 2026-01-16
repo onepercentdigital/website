@@ -176,6 +176,9 @@ function BlogPostPage() {
               <img
                 src={post.featuredImage}
                 alt={post.title}
+                width={1200}
+                height={630}
+                loading="lazy"
                 className="w-full rounded-2xl object-cover shadow-lg"
               />
             </div>
