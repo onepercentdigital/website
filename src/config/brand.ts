@@ -89,6 +89,15 @@ export const navigation = {
       href: '/ppl',
     },
     {
+      label: 'Resources',
+      type: 'dropdown' as const,
+      items: [
+        { label: 'Customers', href: '/customers' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Blog', href: '/blog' },
+      ],
+    },
+    {
       label: 'Solutions',
       type: 'dropdown' as const,
       items: [
