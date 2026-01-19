@@ -8,6 +8,7 @@ import {
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { memo } from 'react';
+import { Image } from '@/components/Image';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { getAllPosts } from '@/lib/blog';
@@ -150,12 +151,12 @@ const BlogPostCard = memo(function BlogPostCard({ post }: BlogPostCardProps) {
       <Card className="flex h-full flex-col overflow-hidden pt-0 transition-all hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/50">
         {/* Featured Image */}
         {post.featuredImage ? (
-          <img
+          <Image
             src={post.featuredImage}
             alt={post.title}
             width={640}
             height={360}
-            loading="lazy"
+            layout="constrained"
             className="aspect-video w-full object-cover"
           />
         ) : (

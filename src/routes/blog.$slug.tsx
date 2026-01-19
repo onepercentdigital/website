@@ -12,6 +12,7 @@ import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkGfm from 'remark-gfm';
 import { AuthorBox } from '@/components/AuthorBox';
+import { Image } from '@/components/Image';
 import { RelatedPosts } from '@/components/RelatedPosts';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -354,12 +355,13 @@ function BlogPostPage() {
           {/* Featured Image */}
           {post.featuredImage && (
             <div className="mb-12">
-              <img
+              <Image
                 src={post.featuredImage}
                 alt={post.title}
                 width={1200}
                 height={630}
-                fetchPriority="high"
+                priority
+                layout="constrained"
                 className="w-full rounded-2xl object-cover shadow-lg"
               />
             </div>
@@ -379,6 +381,31 @@ function BlogPostPage() {
                   }
                   return (
                     <a {...props} target="_blank" rel="noopener noreferrer" />
+                  );
+                },
+                // Custom image component for Cloudflare images
+                img: ({ node, ...props }) => {
+                  const src = props.src || '';
+                  // Extract image ID from Cloudflare URL
+                  const cloudflareMatch = src.match(
+                    /imagedelivery\.net\/[^/]+\/([^/]+)\//,
+                  );
+                  if (cloudflareMatch) {
+                    const imageId = cloudflareMatch[1];
+                    return (
+                      <Image
+                        src={imageId}
+                        alt={props.alt || ''}
+                        width={800}
+                        height={450}
+                        layout="constrained"
+                        className="rounded-lg"
+                      />
+                    );
+                  }
+                  // Fallback for non-Cloudflare images
+                  return (
+                    <img {...props} alt={props.alt || ''} loading="lazy" />
                   );
                 },
               }}

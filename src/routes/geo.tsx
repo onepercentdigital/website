@@ -17,6 +17,7 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { Image } from '@/components/Image';
 import { SEO } from '@/components/SEO';
 import {
   Accordion,
@@ -33,7 +34,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/geo')({
@@ -587,12 +587,13 @@ function GEOPage() {
                   recommend you by name, that's when you know you've made it."
                 </p>
                 <div className="flex items-center gap-4">
-                  <img
-                    src={getImageUrl(
-                      '51e5ac33-a0d2-4cdb-668e-581cba411a00',
-                      'thumbnail',
-                    )}
+                  <Image
+                    src="51e5ac33-a0d2-4cdb-668e-581cba411a00"
+                    variant="thumbnail"
                     alt="Goldfarb & Associates"
+                    width={100}
+                    height={40}
+                    layout="fixed"
                     className="h-10 w-auto object-contain dark:invert"
                   />
                   <div>
