@@ -35,7 +35,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { generateMetaTags } from '@/lib/seo';
+import { generateMetaTags, getFAQSchema } from '@/lib/seo';
 
 export const Route = createFileRoute('/seo')({
   component: SEOPage,
@@ -238,9 +238,12 @@ function SEOPage() {
     },
   };
 
+  const faqSchema = getFAQSchema(faqs);
+  const schemas = faqSchema ? [serviceSchema, faqSchema] : [serviceSchema];
+
   return (
     <div className="overflow-hidden">
-      <SEO structuredData={[serviceSchema]} />
+      <SEO structuredData={schemas} />
 
       {/* Hero Section */}
       <section className="px-6 py-16 lg:py-20">

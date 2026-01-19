@@ -247,6 +247,34 @@ export function getBreadcrumbSchema(
 }
 
 /**
+ * FAQ item interface for FAQ schema
+ */
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+/**
+ * Generate FAQPage structured data config
+ */
+export function getFAQSchema(faqs: FAQItem[]): StructuredDataConfig | null {
+  if (faqs.length === 0) return null;
+  return {
+    type: 'FAQPage',
+    data: {
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    },
+  };
+}
+
+/**
  * Generate Service structured data
  */
 export function getServiceSchema(config: {

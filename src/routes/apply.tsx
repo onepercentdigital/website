@@ -11,6 +11,7 @@ import {
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute } from '@tanstack/react-router';
 import { useEffect } from 'react';
+import { SEO } from '@/components/SEO';
 import {
   Accordion,
   AccordionContent,
@@ -24,7 +25,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { generateMetaTags } from '@/lib/seo';
+import { generateMetaTags, getFAQSchema } from '@/lib/seo';
 
 export const Route = createFileRoute('/apply')({
   component: ApplyPage,
@@ -37,9 +38,48 @@ export const Route = createFileRoute('/apply')({
     }),
 });
 
+const faqs = [
+  {
+    question: 'What happens during the qualification call?',
+    answer:
+      "Before our call, we research your business and current search presence. During our call, we discuss your goals, challenges, and growth opportunities. We'll share insights about your competitive landscape and determine if our GEO, SEO, or PPL services are a fit. If you qualify, we'll outline next steps for a partnership.",
+  },
+  {
+    question: 'Who is a good fit for your services?',
+    answer:
+      "We work with serious brands ready to invest in growth through AI and traditional search. Ideal clients vary by service: GEO clients want to appear in AI-powered search results, SEO clients seek sustainable organic growth, and PPL clients need qualified leads immediately. Whether you're building long-term visibility or generating leads now, we tailor our approach to your timeline and goals. We're selective because we're invested in delivering real results.",
+  },
+  {
+    question: 'What industries do you work with?',
+    answer:
+      "Since 2015, we've helped over 100 businesses across North America in diverse industries, from hospitality and E-commerce to manufacturing and professional services. We're frequently approached by multinational companies, digital marketing agencies, and other SEO agencies for consulting. Our strategies adapt to your specific market and competitive landscape.",
+  },
+];
+
 function ApplyPage() {
+  const serviceSchema = {
+    type: 'Service' as const,
+    data: {
+      name: 'Digital Marketing Consultation',
+      description:
+        'Schedule a strategy call to see if you qualify. We partner with serious brands ready to dominate AI search, Google rankings, and lead generation.',
+      url: 'https://op.digital/apply',
+      serviceType: 'Digital Marketing Consultation',
+      provider: {
+        '@type': 'Organization',
+        name: 'One Percent Digital',
+        url: 'https://op.digital',
+      },
+      areaServed: 'Worldwide',
+    },
+  };
+
+  const faqSchema = getFAQSchema(faqs);
+  const schemas = faqSchema ? [serviceSchema, faqSchema] : [serviceSchema];
+
   return (
     <>
+      <SEO structuredData={schemas} />
       {/* Hero Section with Calendly Embed */}
       <section className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
@@ -327,49 +367,16 @@ function ApplyPage() {
           </div>
 
           <Accordion className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                What happens during the qualification call?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Before our call, we research your business and current search
-                presence. During our call, we discuss your goals, challenges,
-                and growth opportunities. We'll share insights about your
-                competitive landscape and determine if our GEO, SEO, or PPL
-                services are a fit. If you qualify, we'll outline next steps for
-                a partnership.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                Who is a good fit for your services?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                We work with serious brands ready to invest in growth through AI
-                and traditional search. Ideal clients vary by service: GEO
-                clients want to appear in AI-powered search results, SEO clients
-                seek sustainable organic growth, and PPL clients need qualified
-                leads immediately. Whether you're building long-term visibility
-                or generating leads now, we tailor our approach to your timeline
-                and goals. We're selective because we're invested in delivering
-                real results.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                What industries do you work with?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Since 2015, we've helped over 100 businesses across North
-                America in diverse industries, from hospitality and E-commerce
-                to manufacturing and professional services. We're frequently
-                approached by multinational companies, digital marketing
-                agencies, and other SEO agencies for consulting. Our strategies
-                adapt to your specific market and competitive landscape.
-              </AccordionContent>
-            </AccordionItem>
+            {faqs.map((faq, index) => (
+              <AccordionItem key={faq.question} value={`item-${index + 1}`}>
+                <AccordionTrigger className="text-left font-semibold text-lg">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </section>
