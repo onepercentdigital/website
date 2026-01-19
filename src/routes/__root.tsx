@@ -42,6 +42,24 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         href: appCss,
       },
     ],
+    scripts: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: brand.seo.defaultTitle,
+          url: 'https://op.digital',
+          description: brand.seo.defaultDescription,
+          publisher: {
+            '@type': 'Organization',
+            name: brand.seo.defaultTitle,
+            url: 'https://op.digital',
+            logo: 'https://op.digital/logo.png',
+          },
+        }),
+      },
+    ],
   }),
 
   component: RootComponent,

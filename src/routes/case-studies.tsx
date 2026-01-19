@@ -8,6 +8,7 @@ import {
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { memo } from 'react';
+import { Image } from '@/components/Image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -16,7 +17,6 @@ import {
   getAllCaseStudies,
   getFeaturedCaseStudies,
 } from '@/data/case-studies';
-import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
 // Map case study IDs to their logo image IDs
@@ -213,14 +213,13 @@ function CaseStudiesPage() {
                   </p>
                   <div className="flex items-center gap-3">
                     {caseStudyLogos[featuredStudy.id] ? (
-                      <img
-                        src={getImageUrl(
-                          caseStudyLogos[featuredStudy.id],
-                          'thumbnail',
-                        )}
+                      <Image
+                        src={caseStudyLogos[featuredStudy.id]}
+                        variant="thumbnail"
                         alt={featuredStudy.client}
                         width={100}
                         height={40}
+                        layout="fixed"
                         className="h-10 w-auto object-contain dark:invert"
                       />
                     ) : null}
@@ -361,11 +360,13 @@ const CaseStudyCard = memo(function CaseStudyCard({
             </p>
             <div className="flex items-center gap-2">
               {caseStudyLogos[study.id] ? (
-                <img
-                  src={getImageUrl(caseStudyLogos[study.id], 'thumbnail')}
+                <Image
+                  src={caseStudyLogos[study.id]}
+                  variant="thumbnail"
                   alt={study.client}
                   width={80}
                   height={32}
+                  layout="fixed"
                   className="h-8 w-auto object-contain dark:invert"
                 />
               ) : null}

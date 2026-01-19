@@ -8,6 +8,7 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { Image } from '@/components/Image';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import {
@@ -18,7 +19,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { getAllTeamMembers } from '@/data/team';
-import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/about')({
@@ -231,12 +231,13 @@ function AboutPage() {
             {teamMembers.map((member) => (
               <Card key={member.name}>
                 <CardHeader className="justify-items-center text-center">
-                  <img
-                    src={getImageUrl(member.imageId, 'thumbnail')}
+                  <Image
+                    src={member.imageId}
+                    variant="thumbnail"
                     alt={member.name}
                     width={80}
                     height={80}
-                    loading="lazy"
+                    layout="fixed"
                     className="size-20 rounded-full object-cover grayscale"
                   />
                   <CardTitle className="text-xl">{member.name}</CardTitle>

@@ -67,7 +67,8 @@ When auditing a page against homepage standards, check **every** element:
 - Add emojis unless requested
 - Use `tracking-wide` (not part of design system)
 - Add `cursor-pointer`, `group`, or hover effects to non-clickable cards
-- Omit `width` and `height` on `<img>` tags (causes CLS, always include dimensions)
+- Use `<img>` tags directly (use `Image` component from `@/components/Image`)
+- Omit `width` and `height` on images (causes CLS, always include dimensions)
 - Render list items without `memo()` (use `React.memo()` for list-rendered components)
 
 When auditing pages, compare element-by-element against the homepage. Use the Page Audit Checklist above.
@@ -114,15 +115,80 @@ import { ArrowRight01Icon } from '@hugeicons/core-free-icons'
 <HugeiconsIcon icon={ArrowRight01Icon} size={18} strokeWidth={2} data-icon="inline-end" />
 ```
 
+### Images
+Use the `Image` component from `@/components/Image` for automatic responsive srcset, lazy loading, and priority loading.
+
+```tsx
+import { Image } from '@/components/Image'
+
+// With Cloudflare image ID (variant auto-selected based on width)
+<Image
+  src="abc123-image-id"
+  alt="Description"
+  width={200}
+  height={80}
+  layout="fixed"
+/>
+
+// Override variant if needed (thumbnail: 400px, medium: 800px, large: 1200px)
+<Image
+  src="abc123-image-id"
+  variant="thumbnail"
+  alt="Description"
+  width={200}
+  height={80}
+  layout="fixed"
+/>
+
+// With full URL (uses unpic for CDN optimization)
+<Image
+  src="https://example.com/image.jpg"
+  alt="Description"
+  width={800}
+  height={450}
+  layout="constrained"
+/>
+
+// Priority loading for above-fold images
+<Image
+  src={heroImageUrl}
+  alt="Hero"
+  width={1200}
+  height={630}
+  layout="constrained"
+  priority
+/>
+
+// Full-width banner with aspect ratio
+<Image
+  src={bannerUrl}
+  alt="Banner"
+  layout="fullWidth"
+  aspectRatio={21/9}
+/>
+```
+
+**Layout modes:**
+- `fixed` - exact dimensions, no responsive scaling (avatars, logos) - requires `width` + `height`
+- `constrained` - scales down but not up, maintains aspect ratio (blog cards, hero images) - requires `width` + `height`
+- `fullWidth` - fills container width (full-width banners) - uses `aspectRatio` instead of width/height
+
+**Variant selection:** For Cloudflare image IDs, the `variant` prop is optional. If omitted, the best variant is auto-selected based on `width` (thumbnail for <=400px, medium for <=800px, large otherwise).
+
+**Always include** `width` and `height` for `fixed`/`constrained` layouts to prevent layout shift.
+
 ### Image Cards
 ```tsx
 <Card className="group overflow-hidden pt-0">
   <div className="relative aspect-video overflow-hidden">
     <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-    <img 
+    <Image
       src={url}
       alt="..."
-      className="relative z-20 aspect-video w-full object-cover brightness-[0.6] grayscale transition-transform duration-300 group-hover:scale-105" 
+      width={640}
+      height={360}
+      layout="constrained"
+      className="relative z-20 aspect-video w-full object-cover brightness-[0.6] grayscale transition-transform duration-300 group-hover:scale-105"
     />
   </div>
   <CardHeader>
@@ -307,6 +373,7 @@ src/
 |---------|------|
 | Homepage (reference) | `src/routes/index.tsx` |
 | Global styles | `src/styles.css` |
+| Image component | `src/components/Image.tsx` |
 | Card component | `src/components/ui/card.tsx` |
 | Button component | `src/components/ui/button.tsx` |
 | SEO utilities | `src/lib/seo.ts` |
@@ -335,7 +402,7 @@ src/
 - Functional components only
 - No unused variables (strict TypeScript)
 - Biome: single quotes, 2-space indent, sorted Tailwind classes
-- Auto-generated (do not edit): `src/routeTree.gen.ts`, `src/content/blog/_index.ts`
+- Auto-generated (do not edit): `src/routeTree.gen.ts`
 
 ---
 
@@ -350,7 +417,7 @@ Blog posts are stored as MDX files in `src/content/blog/`. Each file has YAML fr
 
 **To add a new post:**
 1. Create `src/content/blog/your-slug.mdx` with frontmatter and content
-2. Run `bun run scripts/generate-blog-index.ts` to regenerate the index
+2. Blog posts are automatically indexed at build time via content-collections
 3. The post will appear on `/blog` if status is "published"
 
 **Frontmatter schema:**

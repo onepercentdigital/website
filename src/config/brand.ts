@@ -94,7 +94,6 @@ export const navigation = {
       items: [
         { label: 'Customers', href: '/customers' },
         { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Blog', href: '/blog' },
       ],
     },
     {
@@ -155,7 +154,6 @@ export const footer = {
       links: [
         { label: 'Customers', href: '/customers' },
         { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Blog', href: '/blog' },
       ],
     },
     {

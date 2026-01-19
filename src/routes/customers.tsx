@@ -11,6 +11,7 @@ import {
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
+import { Image } from '@/components/Image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -19,7 +20,6 @@ import {
   getCustomersWithTestimonials,
   getFeaturedCustomer,
 } from '@/data/customers';
-import { getImageUrl } from '@/lib/cloudflare-images';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/customers')({
@@ -99,12 +99,13 @@ function CustomersPage() {
               <Card key={customer.id}>
                 <CardContent className="flex items-center justify-center">
                   {customer.logo ? (
-                    <img
-                      src={getImageUrl(customer.logo, 'thumbnail')}
+                    <Image
+                      src={customer.logo}
+                      variant="thumbnail"
                       alt={customer.name}
                       width={120}
                       height={48}
-                      loading="lazy"
+                      layout="fixed"
                       className="h-auto w-full max-w-30 object-contain dark:invert"
                     />
                   ) : (
@@ -204,11 +205,13 @@ function CustomersPage() {
                     </p>
                     <div className="flex items-center gap-3">
                       {customer.logo ? (
-                        <img
-                          src={getImageUrl(customer.logo, 'thumbnail')}
+                        <Image
+                          src={customer.logo}
+                          variant="thumbnail"
                           alt={customer.name}
                           width={100}
                           height={40}
+                          layout="fixed"
                           className="h-10 w-auto object-contain dark:invert"
                         />
                       ) : null}

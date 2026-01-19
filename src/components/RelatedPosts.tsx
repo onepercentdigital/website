@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router';
+import { Image } from '@/components/Image';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { getRelatedPosts } from '@/lib/blog';
 
@@ -23,9 +24,12 @@ export function RelatedPosts({ currentSlug }: RelatedPostsProps) {
                 {post.featuredImage && (
                   <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 z-30 bg-primary opacity-50 mix-blend-color" />
-                    <img
+                    <Image
                       src={post.featuredImage}
                       alt={post.title}
+                      width={400}
+                      height={225}
+                      layout="constrained"
                       className="relative z-20 aspect-video w-full object-cover brightness-[0.6] grayscale transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>

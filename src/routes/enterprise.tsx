@@ -36,7 +36,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { generateMetaTags } from '@/lib/seo';
+import { generateMetaTags, getFAQSchema } from '@/lib/seo';
 
 export const Route = createFileRoute('/enterprise')({
   component: EnterprisePage,
@@ -49,15 +49,45 @@ export const Route = createFileRoute('/enterprise')({
     }),
 });
 
+const faqs = [
+  {
+    question: "What's the typical onboarding timeline?",
+    answer:
+      'Enterprise onboarding is a comprehensive process designed to set you up for long-term success. The initial discovery and audit phase takes 2-3 weeks, where we assess all locations, brands, and digital properties. Strategy development and stakeholder alignment takes another 2-3 weeks. Full implementation typically begins in month 2, with white-glove onboarding including custom training programs, documentation development, and tool integration. Most enterprise clients are fully operational within 60-90 days. We assign a dedicated onboarding team to ensure a smooth transition and minimal disruption to your business.',
+  },
+  {
+    question:
+      'What makes your enterprise solution different from standard marketing services?',
+    answer:
+      "Enterprise marketing isn't just \"more marketing.\" It's a fundamentally different approach across GEO, SEO, and Pay Per Lead Generation. You get a dedicated account team (not shared resources), custom reporting dashboards tailored to your KPIs, white-glove support with priority response times, 24/7 access, enterprise-grade security and compliance (SOC 2, GDPR), and integration with your existing enterprise tools (Salesforce, HubSpot, etc.). We become an extension of your team with quarterly business reviews, executive reporting, stakeholder training, and strategic planning. Our systems are built to manage complexity at scale, whether that's multiple locations, brands, or international markets.",
+  },
+  {
+    question: 'What kind of support do enterprise clients receive?',
+    answer:
+      "Enterprise clients receive white-glove support with dedicated account management and priority response times. Our standard enterprise support includes: rapid response for critical issues, priority handling for high-priority requests, quarterly business reviews with executive stakeholders, and monthly performance reporting against agreed KPIs. We also provide performance commitments in our contracts, with success metrics defined during the strategy phase. Support terms are customizable based on your organization's specific needs and can include custom reporting schedules, dedicated Slack channels, and escalation procedures.",
+  },
+  {
+    question:
+      'Can you integrate with our existing enterprise tools and systems?',
+    answer:
+      'Absolutely. Enterprise integration is a core part of our service. We have proven integrations with major platforms including Salesforce, HubSpot, Marketo, Google Analytics 360, Adobe Analytics, Tableau, Power BI, and most major CRM and marketing automation systems. Our team includes integration specialists who work with your IT and MarTech teams to ensure seamless data flow. We also provide API access for custom integrations and can work with proprietary systems. All integrations follow enterprise security protocols and can accommodate custom authentication, VPN access, and compliance requirements. Integration timelines are included in the onboarding process.',
+  },
+  {
+    question: 'How do you handle multi-location or franchise networks?',
+    answer:
+      "Multi-location management is one of our core competencies. We provide centralized strategy with local execution, meaning consistent brand governance while optimizing for each location's unique market. Our systems manage everything from local listings and review monitoring to location-specific landing pages and regional performance tracking. For franchise networks, we offer franchisee training programs, co-op marketing support, and tools that allow individual locations to manage their presence within brand guidelines. We've successfully managed networks ranging from 10 to 500+ locations across multiple states and countries, with custom reporting that shows performance at the corporate, regional, and individual location levels.",
+  },
+];
+
 function EnterprisePage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'Enterprise GEO, SEO & PPL Solutions',
+      name: 'Enterprise GEO, SEO & Lead Generation',
       description:
-        'Enterprise-grade GEO, SEO, and PPL services for large organizations with multiple locations, brands, or complex needs.',
+        'White-glove GEO, SEO, and PPL for multi-location enterprises. Dedicated support, custom reporting, and strategies built for organizations that demand results.',
       url: 'https://op.digital/enterprise',
-      serviceType: 'Search Engine Optimization',
+      serviceType: 'Enterprise Digital Marketing',
       provider: {
         '@type': 'Organization',
         name: 'One Percent Digital',
@@ -67,9 +97,12 @@ function EnterprisePage() {
     },
   };
 
+  const faqSchema = getFAQSchema(faqs);
+  const schemas = faqSchema ? [serviceSchema, faqSchema] : [serviceSchema];
+
   return (
     <>
-      <SEO structuredData={[serviceSchema]} />
+      <SEO structuredData={schemas} />
 
       {/* Hero Section */}
       <section className="px-6 py-16 lg:py-20">
@@ -1154,105 +1187,16 @@ function EnterprisePage() {
           </div>
 
           <Accordion className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                What's the typical onboarding timeline?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Enterprise onboarding is a comprehensive process designed to set
-                you up for long-term success. The initial discovery and audit
-                phase takes 2-3 weeks, where we assess all locations, brands,
-                and digital properties. Strategy development and stakeholder
-                alignment takes another 2-3 weeks. Full implementation typically
-                begins in month 2, with white-glove onboarding including custom
-                training programs, documentation development, and tool
-                integration. Most enterprise clients are fully operational
-                within 60-90 days. We assign a dedicated onboarding team to
-                ensure a smooth transition and minimal disruption to your
-                business.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                What makes your enterprise solution different from standard
-                marketing services?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Enterprise marketing isn't just "more marketing." It's a
-                fundamentally different approach across GEO, SEO, and Pay Per
-                Lead Generation. You get a dedicated account team (not shared
-                resources), custom reporting dashboards tailored to your KPIs,
-                white-glove support with priority response times, 24/7 access,
-                enterprise-grade security and compliance (SOC 2, GDPR), and
-                integration with your existing enterprise tools (Salesforce,
-                HubSpot, etc.). We become an extension of your team with
-                quarterly business reviews, executive reporting, stakeholder
-                training, and strategic planning. Our systems are built to
-                manage complexity at scale, whether that's multiple locations,
-                brands, or international markets.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                What kind of support do enterprise clients receive?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Enterprise clients receive white-glove support with dedicated
-                account management and priority response times. Our standard
-                enterprise support includes: rapid response for critical issues,
-                priority handling for high-priority requests, quarterly business
-                reviews with executive stakeholders, and monthly performance
-                reporting against agreed KPIs. We also provide performance
-                commitments in our contracts, with success metrics defined
-                during the strategy phase. Support terms are customizable based
-                on your organization's specific needs and can include custom
-                reporting schedules, dedicated Slack channels, and escalation
-                procedures.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                Can you integrate with our existing enterprise tools and
-                systems?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Absolutely. Enterprise integration is a core part of our
-                service. We have proven integrations with major platforms
-                including Salesforce, HubSpot, Marketo, Google Analytics 360,
-                Adobe Analytics, Tableau, Power BI, and most major CRM and
-                marketing automation systems. Our team includes integration
-                specialists who work with your IT and MarTech teams to ensure
-                seamless data flow. We also provide API access for custom
-                integrations and can work with proprietary systems. All
-                integrations follow enterprise security protocols and can
-                accommodate custom authentication, VPN access, and compliance
-                requirements. Integration timelines are included in the
-                onboarding process.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5">
-              <AccordionTrigger className="text-left font-semibold text-lg">
-                How do you handle multi-location or franchise networks?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Multi-location management is one of our core competencies. We
-                provide centralized strategy with local execution, meaning
-                consistent brand governance while optimizing for each location's
-                unique market. Our systems manage everything from local listings
-                and review monitoring to location-specific landing pages and
-                regional performance tracking. For franchise networks, we offer
-                franchisee training programs, co-op marketing support, and tools
-                that allow individual locations to manage their presence within
-                brand guidelines. We've successfully managed networks ranging
-                from 10 to 500+ locations across multiple states and countries,
-                with custom reporting that shows performance at the corporate,
-                regional, and individual location levels.
-              </AccordionContent>
-            </AccordionItem>
+            {faqs.map((faq, index) => (
+              <AccordionItem key={faq.question} value={`item-${index + 1}`}>
+                <AccordionTrigger className="text-left font-semibold text-lg">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
           </Accordion>
         </div>
       </section>

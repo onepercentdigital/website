@@ -2,12 +2,15 @@
  * Blog Library
  *
  * Helper functions for querying blog posts from the static index.
- * All data is loaded at build time from MDX files.
+ * All data is loaded at build time from MDX files via content-collections.
  */
 
-import { posts } from '@/content/blog/_index';
+import { allPosts } from 'content-collections';
 import { getCategoryBySlug } from '@/data/categories';
 import type { BlogPost, BlogPostListItem } from '@/types/blog';
+
+// Map content-collections posts to our BlogPost type
+const posts: BlogPost[] = allPosts;
 
 /**
  * Get all published posts, sorted by date (newest first)
@@ -73,16 +76,6 @@ export function getPostWithCategory(slug: string): {
     post,
     category,
   };
-}
-
-/**
- * Get all posts for sitemap generation (slug and modified date only)
- */
-export function getPostsForSitemap(): { slug: string; modifiedAt: string }[] {
-  return getAllPosts().map((post) => ({
-    slug: post.slug,
-    modifiedAt: post.modifiedAt,
-  }));
 }
 
 /**

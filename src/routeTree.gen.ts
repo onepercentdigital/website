@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SeoRouteImport } from './routes/seo'
 import { Route as PplRouteImport } from './routes/ppl'
 import { Route as MapsRouteImport } from './routes/maps'
+import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as GeoRouteImport } from './routes/geo'
 import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as CustomersRouteImport } from './routes/customers'
@@ -48,6 +49,11 @@ const PplRoute = PplRouteImport.update({
 const MapsRoute = MapsRouteImport.update({
   id: '/maps',
   path: '/maps',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
+  id: '/llms.txt',
+  path: '/llms.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GeoRoute = GeoRouteImport.update({
@@ -170,6 +176,7 @@ export interface FileRoutesByFullPath {
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/maps': typeof MapsRoute
   '/ppl': typeof PplRoute
   '/seo': typeof SeoRoute
@@ -186,8 +193,8 @@ export interface FileRoutesByFullPath {
   '/solutions/manufacturing': typeof SolutionsManufacturingRoute
   '/solutions/real-estate': typeof SolutionsRealEstateRoute
   '/solutions/technology': typeof SolutionsTechnologyRoute
-  '/blog': typeof BlogIndexRoute
-  '/solutions': typeof SolutionsIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -197,6 +204,7 @@ export interface FileRoutesByTo {
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/maps': typeof MapsRoute
   '/ppl': typeof PplRoute
   '/seo': typeof SeoRoute
@@ -225,6 +233,7 @@ export interface FileRoutesById {
   '/customers': typeof CustomersRoute
   '/enterprise': typeof EnterpriseRoute
   '/geo': typeof GeoRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/maps': typeof MapsRoute
   '/ppl': typeof PplRoute
   '/seo': typeof SeoRoute
@@ -254,6 +263,7 @@ export interface FileRouteTypes {
     | '/customers'
     | '/enterprise'
     | '/geo'
+    | '/llms.txt'
     | '/maps'
     | '/ppl'
     | '/seo'
@@ -270,8 +280,8 @@ export interface FileRouteTypes {
     | '/solutions/manufacturing'
     | '/solutions/real-estate'
     | '/solutions/technology'
-    | '/blog'
-    | '/solutions'
+    | '/blog/'
+    | '/solutions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -281,6 +291,7 @@ export interface FileRouteTypes {
     | '/customers'
     | '/enterprise'
     | '/geo'
+    | '/llms.txt'
     | '/maps'
     | '/ppl'
     | '/seo'
@@ -308,6 +319,7 @@ export interface FileRouteTypes {
     | '/customers'
     | '/enterprise'
     | '/geo'
+    | '/llms.txt'
     | '/maps'
     | '/ppl'
     | '/seo'
@@ -336,6 +348,7 @@ export interface RootRouteChildren {
   CustomersRoute: typeof CustomersRoute
   EnterpriseRoute: typeof EnterpriseRoute
   GeoRoute: typeof GeoRoute
+  LlmsDottxtRoute: typeof LlmsDottxtRoute
   MapsRoute: typeof MapsRoute
   PplRoute: typeof PplRoute
   SeoRoute: typeof SeoRoute
@@ -377,6 +390,13 @@ declare module '@tanstack/react-router' {
       path: '/maps'
       fullPath: '/maps'
       preLoaderRoute: typeof MapsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llms.txt': {
+      id: '/llms.txt'
+      path: '/llms.txt'
+      fullPath: '/llms.txt'
+      preLoaderRoute: typeof LlmsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/geo': {
@@ -431,14 +451,14 @@ declare module '@tanstack/react-router' {
     '/solutions/': {
       id: '/solutions/'
       path: '/solutions'
-      fullPath: '/solutions'
+      fullPath: '/solutions/'
       preLoaderRoute: typeof SolutionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
-      fullPath: '/blog'
+      fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -544,6 +564,7 @@ const rootRouteChildren: RootRouteChildren = {
   CustomersRoute: CustomersRoute,
   EnterpriseRoute: EnterpriseRoute,
   GeoRoute: GeoRoute,
+  LlmsDottxtRoute: LlmsDottxtRoute,
   MapsRoute: MapsRoute,
   PplRoute: PplRoute,
   SeoRoute: SeoRoute,

@@ -20,6 +20,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { IndustrySolution } from '@/data/solutions';
+import { getFAQSchema } from '@/lib/seo';
 import { type SolutionIconKey, solutionIcons } from '@/lib/solution-icons';
 
 interface SolutionPageTemplateProps {
@@ -47,9 +48,12 @@ export function SolutionPageTemplate({ solution }: SolutionPageTemplateProps) {
     },
   };
 
+  const faqSchema = getFAQSchema(solution.faqs);
+  const schemas = faqSchema ? [serviceSchema, faqSchema] : [serviceSchema];
+
   return (
     <>
-      <SEO structuredData={[serviceSchema]} />
+      <SEO structuredData={schemas} />
 
       {/* Hero Section */}
       <section className="px-6 py-16 lg:py-20">
