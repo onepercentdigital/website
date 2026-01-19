@@ -9,7 +9,6 @@ import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
-import rehypeSanitize from 'rehype-sanitize';
 import remarkGfm from 'remark-gfm';
 import { AuthorBox } from '@/components/AuthorBox';
 import { Image } from '@/components/Image';
@@ -26,6 +25,10 @@ import 'highlight.js/styles/github-dark.css';
 
 export const Route = createFileRoute('/blog/$slug')({
   component: BlogPostPage,
+  headers: () => ({
+    // Cache 1 hour, serve stale up to 7 days while revalidating
+    'Cache-Control': 'public, max-age=3600, stale-while-revalidate=604800',
+  }),
   head: ({ params }) => {
     // Get post data for SSR meta tags
     const postData = getPostWithCategory(params.slug);
@@ -371,7 +374,7 @@ function BlogPostPage() {
           <div className="prose prose-lg prose-slate dark:prose-invert max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSanitize]}
+              rehypePlugins={[rehypeHighlight, rehypeRaw]}
               components={{
                 // Custom link component for internal links
                 a: ({ node, ...props }) => {

@@ -17,6 +17,10 @@ import type { BlogPostListItem } from '@/types/blog';
 
 export const Route = createFileRoute('/blog/')({
   component: BlogIndexPage,
+  headers: () => ({
+    // Cache 1 hour, serve stale up to 7 days while revalidating
+    'Cache-Control': 'public, max-age=3600, stale-while-revalidate=604800',
+  }),
   head: () =>
     generateMetaTags({
       title: 'GEO & SEO Insights - One Percent Digital Blog',
