@@ -79,16 +79,6 @@ export function getPostWithCategory(slug: string): {
 }
 
 /**
- * Get all posts for sitemap generation (slug and modified date only)
- */
-export function getPostsForSitemap(): { slug: string; modifiedAt: string }[] {
-  return getAllPosts().map((post) => ({
-    slug: post.slug,
-    modifiedAt: post.modifiedAt,
-  }));
-}
-
-/**
  * Get recent posts (limited count)
  */
 export function getRecentPosts(limit = 5): BlogPostListItem[] {

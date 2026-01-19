@@ -24,6 +24,10 @@ const config = defineConfig({
         retryDelay: 2000,
         concurrency: 2,
       },
+      sitemap: {
+        enabled: true,
+        host: 'https://op.digital',
+      },
     }),
     viteReact(),
   ],
