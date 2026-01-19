@@ -10,14 +10,14 @@
  * Run: bun run scripts/generate-sitemap.ts
  */
 
-import { execFileSync } from 'node:child_process'
-import { writeFileSync } from 'node:fs'
-import { resolve } from 'node:path'
-import { getAllSolutions } from '../src/data/solutions'
-import { getPostsForSitemap } from '../src/lib/blog'
+import { execFileSync } from 'node:child_process';
+import { writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { getAllSolutions } from '../src/data/solutions';
+import { getPostsForSitemap } from '../src/lib/blog';
 
-const baseUrl = 'https://op.digital'
-const fallbackDate = new Date().toISOString().split('T')[0]
+const baseUrl = 'https://op.digital';
+const fallbackDate = new Date().toISOString().split('T')[0];
 
 /**
  * Get the last modification date from git history for a file
@@ -25,13 +25,17 @@ const fallbackDate = new Date().toISOString().split('T')[0]
  */
 function getGitLastModified(filepath: string): string | null {
   try {
-    const result = execFileSync('git', ['log', '-1', '--format=%cI', '--', filepath], {
-      encoding: 'utf-8',
-      stdio: ['pipe', 'pipe', 'pipe'],
-    }).trim()
-    return result ? result.split('T')[0] : null
+    const result = execFileSync(
+      'git',
+      ['log', '-1', '--format=%cI', '--', filepath],
+      {
+        encoding: 'utf-8',
+        stdio: ['pipe', 'pipe', 'pipe'],
+      },
+    ).trim();
+    return result ? result.split('T')[0] : null;
   } catch {
-    return null
+    return null;
   }
 }
 
@@ -49,7 +53,7 @@ const staticPageSources: Record<string, string> = {
   '/solutions': 'src/routes/solutions.index.tsx',
   '/enterprise': 'src/routes/enterprise.tsx',
   '/blog': 'src/routes/blog.index.tsx',
-}
+};
 
 const staticPages = [
   { url: '', priority: '1.0', changefreq: 'weekly' }, // Homepage
@@ -64,20 +68,22 @@ const staticPages = [
   { url: '/solutions', priority: '0.8', changefreq: 'monthly' },
   { url: '/enterprise', priority: '0.7', changefreq: 'monthly' },
   { url: '/blog', priority: '0.7', changefreq: 'daily' },
-]
+];
 
 /**
  * Get blog posts with git-based modification dates
  */
 function fetchBlogPosts() {
   try {
-    const posts = getPostsForSitemap()
+    const posts = getPostsForSitemap();
     return posts.map((post) => {
-      const filepath = `src/content/blog/${post.slug}.mdx`
-      const gitDate = getGitLastModified(filepath)
+      const filepath = `src/content/blog/${post.slug}.mdx`;
+      const gitDate = getGitLastModified(filepath);
 
       if (!gitDate) {
-        console.warn(`⚠️  No git history for blog post: ${post.slug}, using fallback date`)
+        console.warn(
+          `⚠️  No git history for blog post: ${post.slug}, using fallback date`,
+        );
       }
 
       return {
@@ -85,12 +91,12 @@ function fetchBlogPosts() {
         lastmod: gitDate ?? fallbackDate,
         priority: '0.7',
         changefreq: 'weekly',
-      }
-    })
+      };
+    });
   } catch (error) {
-    console.warn('⚠️  Could not fetch blog posts:', error)
-    console.warn('   Sitemap will be generated without blog posts')
-    return []
+    console.warn('⚠️  Could not fetch blog posts:', error);
+    console.warn('   Sitemap will be generated without blog posts');
+    return [];
   }
 }
 
@@ -98,31 +104,33 @@ function fetchBlogPosts() {
  * Main sitemap generation function
  */
 function generateSitemap() {
-  console.log('🗺️  Generating sitemap.xml...')
+  console.log('🗺️  Generating sitemap.xml...');
 
   // Get static pages with git-based dates
   const staticPagesWithDates = staticPages.map((page) => {
-    const sourceFile = staticPageSources[page.url]
-    const gitDate = sourceFile ? getGitLastModified(sourceFile) : null
+    const sourceFile = staticPageSources[page.url];
+    const gitDate = sourceFile ? getGitLastModified(sourceFile) : null;
 
     if (!gitDate && sourceFile) {
-      console.warn(`⚠️  No git history for: ${sourceFile}, using fallback date`)
+      console.warn(`⚠️  No git history for: ${sourceFile}, using fallback date`);
     }
 
     return {
       ...page,
       lastmod: gitDate ?? fallbackDate,
-    }
-  })
+    };
+  });
 
   // Get dynamic solution pages with git-based dates
-  const solutions = getAllSolutions()
+  const solutions = getAllSolutions();
   const solutionPages = solutions.map((solution) => {
-    const filepath = `src/routes/solutions.${solution.slug}.tsx`
-    const gitDate = getGitLastModified(filepath)
+    const filepath = `src/routes/solutions.${solution.slug}.tsx`;
+    const gitDate = getGitLastModified(filepath);
 
     if (!gitDate) {
-      console.warn(`⚠️  No git history for solution: ${solution.slug}, using fallback date`)
+      console.warn(
+        `⚠️  No git history for solution: ${solution.slug}, using fallback date`,
+      );
     }
 
     return {
@@ -130,14 +138,14 @@ function generateSitemap() {
       lastmod: gitDate ?? fallbackDate,
       priority: '0.8',
       changefreq: 'monthly',
-    }
-  })
+    };
+  });
 
   // Fetch blog posts with git-based dates
-  const blogPosts = fetchBlogPosts()
+  const blogPosts = fetchBlogPosts();
 
   // Combine all pages
-  const allPages = [...staticPagesWithDates, ...solutionPages, ...blogPosts]
+  const allPages = [...staticPagesWithDates, ...solutionPages, ...blogPosts];
 
   // Generate XML
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -149,28 +157,28 @@ ${allPages
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`
+  </url>`,
   )
   .join('\n')}
 </urlset>
-`
+`;
 
   // Write to public directory
-  const outputPath = resolve(process.cwd(), 'public', 'sitemap.xml')
-  writeFileSync(outputPath, xml, 'utf-8')
+  const outputPath = resolve(process.cwd(), 'public', 'sitemap.xml');
+  writeFileSync(outputPath, xml, 'utf-8');
 
-  console.log(`✅ Sitemap generated successfully!`)
-  console.log(`   Location: public/sitemap.xml`)
-  console.log(`   Pages: ${allPages.length} total`)
-  console.log(`   - Static pages: ${staticPages.length}`)
-  console.log(`   - Solution pages: ${solutionPages.length}`)
-  console.log(`   - Blog posts: ${blogPosts.length}`)
+  console.log(`✅ Sitemap generated successfully!`);
+  console.log(`   Location: public/sitemap.xml`);
+  console.log(`   Pages: ${allPages.length} total`);
+  console.log(`   - Static pages: ${staticPages.length}`);
+  console.log(`   - Solution pages: ${solutionPages.length}`);
+  console.log(`   - Blog posts: ${blogPosts.length}`);
 }
 
 // Run sitemap generation
 try {
-  generateSitemap()
+  generateSitemap();
 } catch (error) {
-  console.error('❌ Failed to generate sitemap:', error)
-  process.exit(1)
+  console.error('❌ Failed to generate sitemap:', error);
+  process.exit(1);
 }

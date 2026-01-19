@@ -15,6 +15,7 @@ const posts = defineCollection({
     status: z.enum(['draft', 'published', 'scheduled']),
     publishedAt: z.string().optional(),
     modifiedAt: z.string(),
+    content: z.string(),
     seo: z
       .object({
         metaTitle: z.string().optional(),
@@ -24,13 +25,6 @@ const posts = defineCollection({
       })
       .optional(),
   }),
-  // Transform adds the content to the document (frontmatter parser already provides it)
-  transform: (document) => {
-    return {
-      ...document,
-      // content is already provided by frontmatter parser
-    };
-  },
 });
 
 export default defineConfig({
