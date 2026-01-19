@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, notFound } from '@tanstack/react-router';
 import { SolutionPageTemplate } from '@/components/SolutionPageTemplate';
 import { getSolutionBySlug } from '@/data/solutions';
 import { generateMetaTags } from '@/lib/seo';
@@ -18,7 +18,7 @@ function HospitalityPage() {
   const solution = getSolutionBySlug('hospitality');
 
   if (!solution) {
-    return <div>Solution not found</div>;
+    throw notFound();
   }
 
   return <SolutionPageTemplate solution={solution} />;
