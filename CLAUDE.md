@@ -402,7 +402,7 @@ src/
 - Functional components only
 - No unused variables (strict TypeScript)
 - Biome: single quotes, 2-space indent, sorted Tailwind classes
-- Auto-generated (do not edit): `src/routeTree.gen.ts`, `src/content/blog/_index.ts`
+- Auto-generated (do not edit): `src/routeTree.gen.ts`
 
 ---
 
@@ -417,7 +417,7 @@ Blog posts are stored as MDX files in `src/content/blog/`. Each file has YAML fr
 
 **To add a new post:**
 1. Create `src/content/blog/your-slug.mdx` with frontmatter and content
-2. Run `bun run scripts/generate-blog-index.ts` to regenerate the index
+2. Blog posts are automatically indexed at build time via content-collections
 3. The post will appear on `/blog` if status is "published"
 
 **Frontmatter schema:**
