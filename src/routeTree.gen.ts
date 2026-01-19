@@ -186,8 +186,8 @@ export interface FileRoutesByFullPath {
   '/solutions/manufacturing': typeof SolutionsManufacturingRoute
   '/solutions/real-estate': typeof SolutionsRealEstateRoute
   '/solutions/technology': typeof SolutionsTechnologyRoute
-  '/blog': typeof BlogIndexRoute
-  '/solutions': typeof SolutionsIndexRoute
+  '/blog/': typeof BlogIndexRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -270,8 +270,8 @@ export interface FileRouteTypes {
     | '/solutions/manufacturing'
     | '/solutions/real-estate'
     | '/solutions/technology'
-    | '/blog'
-    | '/solutions'
+    | '/blog/'
+    | '/solutions/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -431,14 +431,14 @@ declare module '@tanstack/react-router' {
     '/solutions/': {
       id: '/solutions/'
       path: '/solutions'
-      fullPath: '/solutions'
+      fullPath: '/solutions/'
       preLoaderRoute: typeof SolutionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
-      fullPath: '/blog'
+      fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
