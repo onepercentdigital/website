@@ -44,6 +44,9 @@ When auditing a page against homepage standards, check **every** element:
 - [ ] Dense feature list checkmarks (SolutionPageTemplate): `size={16}` acceptable
 - [ ] Breadcrumb separator icons: `size={16}` acceptable
 - [ ] Inline metadata icons (dates, read time, author): `size={16}` acceptable
+- [ ] Navigation menu icons: `size={24}` acceptable
+- [ ] Sheet close button: `size={24}` acceptable
+- [ ] Small UI indicators (chat demos): `size={12}`-`size={14}` acceptable
 
 ### Final CTA Section
 - [ ] Border: `border-y` (both top and bottom)
@@ -98,6 +101,7 @@ When auditing pages, compare element-by-element against the homepage. Use the Pa
   </CardHeader>
   <CardContent>...</CardContent>
   <CardFooter>...</CardFooter>
+  <CardAction>Action button</CardAction>   {/* optional: positioned top-right */}
 </Card>
 ```
 
@@ -252,6 +256,17 @@ When a grid has fewer items than columns, center them to avoid "missing item" ap
 </div>
 ```
 
+### Solution Page Template
+Reusable template for industry solution pages with hero, challenges, approach, services, FAQs, and CTA sections.
+```tsx
+import { SolutionPageTemplate } from '@/components/SolutionPageTemplate'
+import { solutions } from '@/data/solutions'
+
+const solution = solutions.find(s => s.slug === 'hospitality')
+return <SolutionPageTemplate solution={solution} />
+```
+See `src/data/solutions.ts` for the `IndustrySolution` interface.
+
 ---
 
 ## Typography
@@ -277,22 +292,6 @@ When a grid has fewer items than columns, center them to avoid "missing item" ap
 | Hero section | `py-16 lg:py-20` (same as standard) |
 | Bordered section | `border-border border-y px-6 py-16 lg:py-20` |
 | Section container | `px-6` with `mx-auto max-w-7xl` |
-
----
-
-## Icon Mapping (Lucide to HugeIcons)
-
-| Lucide | HugeIcons |
-|--------|-----------|
-| ArrowRight | ArrowRight01Icon |
-| ArrowLeft | ArrowLeft01Icon |
-| Check | Tick02Icon |
-| Menu | Menu01Icon |
-| X | Cancel01Icon |
-| Sun | Sun01Icon |
-| Moon | Moon02Icon |
-| Search | Search01Icon |
-| ExternalLink | LinkSquare01Icon |
 
 ---
 
@@ -352,17 +351,22 @@ bun run start        # Start production server
 
 ```
 src/
-├── components/ui/     # shadcn Maia components (17 components)
+├── components/        # React components
+│   ├── ui/            # shadcn Maia components (17)
+│   └── *.tsx          # Custom: Image, Logo, Navigation, Footer, SEO, NotFound, AuthorBox, RelatedPosts, SolutionPageTemplate
+├── config/brand.ts    # Nav, footer, SEO config
+├── content/blog/      # Blog posts (MDX files)
+├── data/              # Static data (customers, case-studies, solutions, categories, team)
+├── hooks/             # Custom hooks (use-mobile, useTheme)
+├── integrations/      # TanStack Query setup (root-provider, devtools)
+├── lib/               # Utilities (utils, seo, blog, cloudflare-images, solution-icons)
 ├── routes/            # File-based routing
 │   ├── index.tsx      # Homepage (reference implementation)
-│   ├── seo.tsx, geo.tsx, ppl.tsx  # Service pages
+│   ├── seo.tsx, geo.tsx, ppl.tsx, maps.tsx, enterprise.tsx  # Service pages
+│   ├── about.tsx, customers.tsx, case-studies.tsx, apply.tsx  # Marketing pages
 │   ├── blog.index.tsx, blog.$slug.tsx  # Blog
-│   └── solutions.*.tsx  # 12 industry pages
-├── config/brand.ts    # Nav, footer, SEO config
-├── lib/seo.ts         # generateMetaTags(), schema helpers
-├── lib/blog.ts        # Blog helper functions
-├── content/blog/      # Blog posts as MDX files
-└── data/              # Static data (customers, case-studies, team, categories)
+│   └── solutions.*.tsx  # Solutions index + 12 industry pages
+└── types/             # TypeScript type definitions
 ```
 
 ---
@@ -378,6 +382,10 @@ src/
 | Button component | `src/components/ui/button.tsx` |
 | SEO utilities | `src/lib/seo.ts` |
 | Brand config | `src/config/brand.ts` |
+| Blog utilities | `src/lib/blog.ts` |
+| Solution template | `src/components/SolutionPageTemplate.tsx` |
+| Production server | `server.ts` |
+| Blog MDX config | `content-collections.ts` |
 
 ---
 
@@ -409,6 +417,7 @@ src/
 ## Extended Docs
 
 - `docs/CLOUDFLARE-IMAGES.md` - Image CDN setup
+- `docs/CLOUDFLARE-CACHE-RULES.md` - Cloudflare caching configuration
 - `docs/KNOWN-ISSUES.md` - Platform limitations (iOS Safari)
 
 ## Blog (Static MDX)

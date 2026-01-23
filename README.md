@@ -36,14 +36,17 @@ Visit [http://localhost:3000](http://localhost:3000)
 ```
 website/
 ├── src/
-│   ├── components/       # React components + Shadcn UI (17 components)
+│   ├── components/       # React components + Shadcn UI (17)
 │   ├── routes/           # File-based routing (TanStack Router)
 │   ├── config/brand.ts   # Centralized brand configuration
-│   ├── lib/              # Utilities (seo.ts, cloudflare-images.ts)
+│   ├── lib/              # Utilities (seo, blog, cloudflare-images)
 │   ├── content/blog/     # Blog posts (MDX files)
-│   └── data/             # TypeScript data files (customers, solutions, team)
-├── scripts/              # Build scripts (blog index, sitemap)
-└── public/               # Static assets (sitemap.xml, robots.txt)
+│   ├── data/             # TypeScript data files
+│   ├── hooks/            # Custom React hooks
+│   ├── integrations/     # External integrations (TanStack Query)
+│   └── types/            # TypeScript type definitions
+├── server.ts             # Production server
+└── public/               # Static assets
 ```
 
 ## Development
@@ -79,7 +82,6 @@ For detailed documentation including:
 - SEO best practices and structured data
 - Cloudflare Images setup
 - Design system (colors, typography, components)
-- Restoration guide for admin routes
 
 See **[CLAUDE.md](./CLAUDE.md)**
 
