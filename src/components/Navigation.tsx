@@ -113,13 +113,14 @@ function MobileMenu() {
               {navigation.cta.label}
             </SheetClose>
 
-            {/* Accordion nav items */}
-            <Accordion className="gap-2 rounded-none border-0">
-              {navigation.main
-                .filter((item) => item.type === 'dropdown')
-                .map((item) => (
+            {/* Nav items in order */}
+            {navigation.main.map((item) =>
+              item.type === 'dropdown' ? (
+                <Accordion
+                  key={item.label}
+                  className="gap-2 rounded-none border-0"
+                >
                   <AccordionItem
-                    key={item.label}
                     value={item.label}
                     className="border-none data-open:bg-transparent"
                   >
@@ -144,13 +145,8 @@ function MobileMenu() {
                       </div>
                     </AccordionContent>
                   </AccordionItem>
-                ))}
-            </Accordion>
-
-            {/* Plain links (Enterprise) */}
-            {navigation.main
-              .filter((item) => item.type === 'link')
-              .map((item) => (
+                </Accordion>
+              ) : (
                 <SheetClose
                   key={item.label}
                   render={
@@ -162,7 +158,8 @@ function MobileMenu() {
                 >
                   {item.label}
                 </SheetClose>
-              ))}
+              ),
+            )}
 
             {/* Theme toggle */}
             <div className="pt-4">
