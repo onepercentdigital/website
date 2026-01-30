@@ -99,7 +99,7 @@ const benefits = [
     icon: Clock01Icon,
     title: 'Immediate Results',
     description:
-      'Start receiving qualified leads within 7 days of setup. No waiting months for SEO to kick in or brand awareness to build.',
+      'Start receiving qualified leads in as little as 7 days. No waiting months for SEO to kick in or brand awareness to build.',
   },
   {
     icon: CheckmarkCircle02Icon,
@@ -226,7 +226,7 @@ const faqs = [
   {
     question: 'How quickly can I start receiving leads?',
     answer:
-      'Most clients start receiving qualified leads within 7 days of campaign launch. The setup process (defining criteria, building landing pages, creating ads) typically takes 3-5 business days. Once live, leads flow immediately.',
+      'Most clients start receiving qualified leads in as little as 7 days after campaign launch. The setup process (defining criteria, building landing pages, creating ads) typically takes 3-5 business days. Once live, leads flow immediately.',
   },
   {
     question: 'What industries do you work with?',
