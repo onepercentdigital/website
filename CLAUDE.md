@@ -392,7 +392,7 @@ src/
 ## Design System
 
 - **Style:** shadcn/ui Maia (soft, rounded, OKLCH colors)
-- **Primary:** Blue (`oklch(0.61 0.11 222)` light / `oklch(0.71 0.13 215)` dark)
+- **Primary:** Blue (`oklch(0.50 0.12 222)` light / `oklch(0.65 0.14 215)` dark)
 - **Font:** DM Sans Variable
 - **Radius:** `rounded-4xl` buttons, `rounded-2xl` cards
 
