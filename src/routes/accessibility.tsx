@@ -59,6 +59,11 @@ function AccessibilityPage() {
           <li>Semantic HTML with proper heading structure</li>
           <li>Visible focus indicators</li>
           <li>Reduced motion support for users who prefer it</li>
+          <li>
+            Accessibility Options widget (powered by AccessPro) for text sizing,
+            contrast adjustments, reading aids, and other accessibility
+            preferences
+          </li>
         </ul>
 
         <h2 className="font-semibold text-foreground text-xl">
@@ -98,11 +103,11 @@ function AccessibilityPage() {
           6. Third-Party Content
         </h2>
         <p>
-          Our website integrates with Calendly for scheduling consultations. We
-          select third-party vendors with accessibility commitments, but we
-          cannot guarantee their full compliance with WCAG standards. If you
-          have difficulty using any third-party features, please contact us for
-          alternative arrangements.
+          Our website integrates with Calendly for scheduling consultations and
+          AccessPro for accessibility customization tools. We select third-party
+          vendors with accessibility commitments, but we cannot guarantee their
+          full compliance with WCAG standards. If you have difficulty using any
+          third-party features, please contact us for alternative arrangements.
         </p>
 
         <h2 className="font-semibold text-foreground text-xl">

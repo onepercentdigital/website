@@ -62,6 +62,21 @@ function PrivacyPage() {
           </a>
           .
         </p>
+        <p>
+          We use AccessPro to provide accessibility customization options.
+          AccessPro may store your accessibility preferences locally in your
+          browser. AccessPro's privacy practices are governed by their privacy
+          policy at{' '}
+          <a
+            href="https://accesspro.ai/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline underline-offset-4"
+          >
+            accesspro.ai/privacy
+          </a>
+          .
+        </p>
 
         <h2 className="font-semibold text-foreground text-xl">
           3. Data Retention
