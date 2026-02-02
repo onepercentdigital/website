@@ -52,10 +52,34 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 flex items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {currentYear} {brand.displayName}. All rights reserved.
-          </p>
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className="text-muted-foreground text-sm">
+              © {currentYear} {brand.displayName}. All rights reserved.
+            </p>
+            <nav className="flex items-center gap-3 text-muted-foreground text-sm">
+              <Link
+                to="/terms"
+                className="transition-colors hover:text-foreground"
+              >
+                Terms
+              </Link>
+              <span aria-hidden="true">·</span>
+              <Link
+                to="/privacy"
+                className="transition-colors hover:text-foreground"
+              >
+                Privacy
+              </Link>
+              <span aria-hidden="true">·</span>
+              <Link
+                to="/accessibility"
+                className="transition-colors hover:text-foreground"
+              >
+                Accessibility
+              </Link>
+            </nav>
+          </div>
 
           <div className="flex items-center gap-4">
             {mounted && (

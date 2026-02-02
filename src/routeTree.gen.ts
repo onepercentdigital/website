@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SeoRouteImport } from './routes/seo'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PplRouteImport } from './routes/ppl'
@@ -38,6 +39,11 @@ import { Route as SolutionsAutomotiveRouteImport } from './routes/solutions.auto
 import { Route as SolutionsAgricultureRouteImport } from './routes/solutions.agriculture'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SeoRoute = SeoRouteImport.update({
   id: '/seo',
   path: '/seo',
@@ -194,6 +200,7 @@ export interface FileRoutesByFullPath {
   '/ppl': typeof PplRoute
   '/privacy': typeof PrivacyRoute
   '/seo': typeof SeoRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
@@ -224,6 +231,7 @@ export interface FileRoutesByTo {
   '/ppl': typeof PplRoute
   '/privacy': typeof PrivacyRoute
   '/seo': typeof SeoRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
@@ -255,6 +263,7 @@ export interface FileRoutesById {
   '/ppl': typeof PplRoute
   '/privacy': typeof PrivacyRoute
   '/seo': typeof SeoRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
@@ -287,6 +296,7 @@ export interface FileRouteTypes {
     | '/ppl'
     | '/privacy'
     | '/seo'
+    | '/terms'
     | '/blog/$slug'
     | '/solutions/agriculture'
     | '/solutions/automotive'
@@ -317,6 +327,7 @@ export interface FileRouteTypes {
     | '/ppl'
     | '/privacy'
     | '/seo'
+    | '/terms'
     | '/blog/$slug'
     | '/solutions/agriculture'
     | '/solutions/automotive'
@@ -347,6 +358,7 @@ export interface FileRouteTypes {
     | '/ppl'
     | '/privacy'
     | '/seo'
+    | '/terms'
     | '/blog/$slug'
     | '/solutions/agriculture'
     | '/solutions/automotive'
@@ -378,6 +390,7 @@ export interface RootRouteChildren {
   PplRoute: typeof PplRoute
   PrivacyRoute: typeof PrivacyRoute
   SeoRoute: typeof SeoRoute
+  TermsRoute: typeof TermsRoute
   BlogSlugRoute: typeof BlogSlugRoute
   SolutionsAgricultureRoute: typeof SolutionsAgricultureRoute
   SolutionsAutomotiveRoute: typeof SolutionsAutomotiveRoute
@@ -397,6 +410,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/seo': {
       id: '/seo'
       path: '/seo'
@@ -610,6 +630,7 @@ const rootRouteChildren: RootRouteChildren = {
   PplRoute: PplRoute,
   PrivacyRoute: PrivacyRoute,
   SeoRoute: SeoRoute,
+  TermsRoute: TermsRoute,
   BlogSlugRoute: BlogSlugRoute,
   SolutionsAgricultureRoute: SolutionsAgricultureRoute,
   SolutionsAutomotiveRoute: SolutionsAutomotiveRoute,

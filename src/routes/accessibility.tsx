@@ -1,11 +1,4 @@
-import {
-  ArrowRight01Icon,
-  CheckmarkCircle02Icon,
-} from '@hugeicons/core-free-icons';
-import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/accessibility')({
@@ -14,244 +7,147 @@ export const Route = createFileRoute('/accessibility')({
     generateMetaTags({
       title: 'Accessibility Statement',
       description:
-        'Our commitment to web accessibility. Learn about our efforts to make our website accessible to all users.',
+        'Accessibility information for op.digital. We aim to meet WCAG 2.2 Level AA standards.',
       url: 'https://op.digital/accessibility',
     }),
 });
 
-const ACCESSIBILITY_FEATURES = [
-  {
-    title: 'Keyboard Navigation',
-    description:
-      'All interactive elements can be accessed and operated using only a keyboard.',
-  },
-  {
-    title: 'Screen Reader Compatibility',
-    description:
-      'Our website is designed to work with assistive technologies including screen readers.',
-  },
-  {
-    title: 'Sufficient Color Contrast',
-    description:
-      'Text and interactive elements meet WCAG color contrast requirements for readability.',
-  },
-  {
-    title: 'Resizable Text',
-    description:
-      'Content remains functional and readable when text is resized up to 200%.',
-  },
-  {
-    title: 'Alternative Text',
-    description:
-      'Images include descriptive alternative text for users who cannot see them.',
-  },
-  {
-    title: 'Semantic HTML',
-    description:
-      'We use proper HTML structure with headings, landmarks, and ARIA labels where appropriate.',
-  },
-  {
-    title: 'Focus Indicators',
-    description:
-      'Visible focus indicators help keyboard users track their position on the page.',
-  },
-  {
-    title: 'Reduced Motion Support',
-    description:
-      'Animations respect user preferences for reduced motion when configured in their system.',
-  },
-];
-
-const COMPLIANCE_STANDARDS = [
-  {
-    title: 'WCAG 2.2 (Level AA)',
-    description:
-      'Web Content Accessibility Guidelines provide the foundation for our accessibility efforts.',
-  },
-  {
-    title: 'ADA Compliance',
-    description:
-      'We strive to meet the Americans with Disabilities Act requirements for digital accessibility.',
-  },
-  {
-    title: 'Section 508',
-    description:
-      'Our website aims to meet federal accessibility standards for electronic and information technology.',
-  },
-];
-
 function AccessibilityPage() {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl">
-          <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl">
-            Accessibility Statement
-          </h1>
-          <p className="text-muted-foreground leading-relaxed lg:text-lg">
-            We are committed to ensuring our website is accessible to all users,
-            regardless of ability or technology. Accessibility is not a one-time
-            effort but an ongoing commitment.
-          </p>
-        </div>
-      </section>
+    <article className="mx-auto max-w-3xl px-6 py-12 lg:py-16">
+      <h1 className="mb-2 font-bold text-3xl tracking-tight lg:text-4xl">
+        Accessibility Statement
+      </h1>
+      <p className="mb-8 text-muted-foreground text-sm">
+        Last updated: February 2, 2026
+      </p>
 
-      {/* Our Commitment */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-            Our Commitment
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            We believe the web should be accessible to everyone. We continually
-            work to improve the accessibility of our website, making it easier
-            for all visitors to access our content and services. This includes
-            people with visual, hearing, motor, and cognitive disabilities.
-          </p>
-        </div>
-      </section>
+      <div className="space-y-6 text-muted-foreground leading-relaxed">
+        <p>
+          This website aims to be accessible to all users, including those using
+          assistive technologies.
+        </p>
 
-      {/* Compliance Standards */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-            Compliance Standards
-          </h2>
-          <p className="mb-8 text-muted-foreground leading-relaxed">
-            We work to meet or exceed the following accessibility standards:
-          </p>
-          <div className="space-y-4">
-            {COMPLIANCE_STANDARDS.map((standard) => (
-              <Card key={standard.title}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{standard.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {standard.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+        <h2 className="font-semibold text-foreground text-xl">
+          1. Conformance Status
+        </h2>
+        <p>
+          We target WCAG 2.2 Level AA conformance. The website is partially
+          conformant with WCAG 2.2 Level AA, meaning some parts of the content
+          may not fully conform to the accessibility standard. We are actively
+          working toward full compliance.
+        </p>
 
-      {/* Accessibility Features */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-            Accessibility Features
-          </h2>
-          <p className="mb-8 text-muted-foreground leading-relaxed">
-            We have implemented the following accessibility features throughout
-            our website:
-          </p>
-          <div className="space-y-3">
-            {ACCESSIBILITY_FEATURES.map((feature) => (
-              <div key={feature.title} className="flex gap-3">
-                <HugeiconsIcon
-                  icon={CheckmarkCircle02Icon}
-                  size={20}
-                  className="mt-0.5 shrink-0 text-primary"
-                />
-                <div>
-                  <h3 className="font-medium">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <h2 className="font-semibold text-foreground text-xl">2. Standards</h2>
+        <p>We work to meet the following accessibility standards:</p>
+        <ul className="list-disc space-y-1 pl-5">
+          <li>Web Content Accessibility Guidelines (WCAG) 2.2 Level AA</li>
+          <li>Americans with Disabilities Act (ADA) requirements</li>
+          <li>Section 508 of the Rehabilitation Act</li>
+        </ul>
 
-      {/* Continuous Improvement */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-            Continuous Improvement
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Accessibility is an ongoing effort. We regularly review our website
-            to identify and address accessibility barriers. We test with various
-            assistive technologies and work to ensure new content and features
-            meet accessibility standards before release.
-          </p>
-        </div>
-      </section>
+        <h2 className="font-semibold text-foreground text-xl">
+          3. Accessibility Features
+        </h2>
+        <p>This website includes the following accessibility features:</p>
+        <ul className="list-disc space-y-1 pl-5">
+          <li>Keyboard navigation for all interactive elements</li>
+          <li>Screen reader compatibility</li>
+          <li>Color contrast meeting WCAG requirements</li>
+          <li>Text resizable up to 200%</li>
+          <li>Alternative text on images</li>
+          <li>Semantic HTML with proper heading structure</li>
+          <li>Visible focus indicators</li>
+          <li>Reduced motion support for users who prefer it</li>
+        </ul>
 
-      {/* Feedback */}
-      <section className="px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 font-bold text-4xl leading-[1.1] tracking-tight lg:text-5xl">
-            Feedback
-          </h2>
-          <p className="mb-4 text-muted-foreground leading-relaxed">
-            We welcome feedback on the accessibility of our website. If you
-            encounter any accessibility barriers or have suggestions for
-            improvement, please contact us:
-          </p>
-          <Card>
-            <CardContent className="pt-6">
-              <p className="text-muted-foreground leading-relaxed">
-                Email:{' '}
-                <a
-                  href="mailto:hello@op.digital"
-                  className="text-primary underline underline-offset-4"
-                >
-                  hello@op.digital
-                </a>
-              </p>
-              <p className="mt-2 text-muted-foreground text-sm leading-relaxed">
-                We aim to respond to accessibility feedback within 5 business
-                days and will work to resolve any issues as quickly as possible.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+        <h2 className="font-semibold text-foreground text-xl">
+          4. Known Limitations
+        </h2>
+        <p>
+          Despite our efforts, some areas of the website may have accessibility
+          limitations:
+        </p>
+        <ul className="list-disc space-y-1 pl-5">
+          <li>
+            Third-party embedded content (such as our Calendly booking
+            integration) may not fully meet accessibility standards. As a
+            workaround, you can email us directly to schedule a call.
+          </li>
+          <li>
+            Some older content may not yet have been updated to meet current
+            accessibility standards.
+          </li>
+        </ul>
 
-      {/* Last Updated */}
-      <section className="px-6 pb-16 lg:pb-20">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-muted-foreground text-sm">
-            Last updated: February 2, 2025
-          </p>
-        </div>
-      </section>
+        <h2 className="font-semibold text-foreground text-xl">
+          5. Assessment Methods
+        </h2>
+        <p>
+          We assess the accessibility of this website through the following
+          methods:
+        </p>
+        <ul className="list-disc space-y-1 pl-5">
+          <li>Self-evaluation by our development team</li>
+          <li>Automated testing using accessibility auditing tools</li>
+          <li>Manual testing with keyboard-only navigation</li>
+          <li>Screen reader testing</li>
+        </ul>
 
-      {/* Final CTA Section */}
-      <section className="border-border border-y px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 font-bold text-3xl tracking-tight lg:text-4xl">
-            Ready to Dominate Your Industry?
-          </h2>
-          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
-            Learn how we can help you grow with GEO, SEO, and PPL.
-          </p>
-          <div className="mb-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button render={<Link to="/apply" />} size="lg">
-              Apply To Work With Us
-              <HugeiconsIcon
-                icon={ArrowRight01Icon}
-                size={18}
-                strokeWidth={2}
-                data-icon="inline-end"
-              />
-            </Button>
-            <Button
-              render={<Link to="/case-studies" />}
-              size="lg"
-              variant="outline"
+        <h2 className="font-semibold text-foreground text-xl">
+          6. Third-Party Content
+        </h2>
+        <p>
+          Our website integrates with Calendly for scheduling consultations. We
+          select third-party vendors with accessibility commitments, but we
+          cannot guarantee their full compliance with WCAG standards. If you
+          have difficulty using any third-party features, please contact us for
+          alternative arrangements.
+        </p>
+
+        <h2 className="font-semibold text-foreground text-xl">
+          7. Updates to This Statement
+        </h2>
+        <p>
+          We review and update this accessibility statement periodically to
+          ensure it reflects the current state of our website. The "Last
+          updated" date at the top of this page indicates when the statement was
+          most recently revised.
+        </p>
+
+        <h2 className="font-semibold text-foreground text-xl">8. Feedback</h2>
+        <p>
+          We welcome your feedback on the accessibility of this website. If you
+          encounter accessibility barriers or have suggestions for improvement,
+          please contact us at{' '}
+          <a
+            href="mailto:hello@op.digital"
+            className="text-primary underline underline-offset-4"
+          >
+            hello@op.digital
+          </a>
+          . We aim to respond to accessibility feedback within 5 business days.
+        </p>
+
+        <div className="pt-4">
+          <p className="text-sm">
+            See also:{' '}
+            <Link
+              to="/terms"
+              className="text-primary underline underline-offset-4"
             >
-              View Case Studies
-            </Button>
-          </div>
+              Terms of Service
+            </Link>{' '}
+            and{' '}
+            <Link
+              to="/privacy"
+              className="text-primary underline underline-offset-4"
+            >
+              Privacy Policy
+            </Link>
+          </p>
         </div>
-      </section>
-    </>
+      </div>
+    </article>
   );
 }

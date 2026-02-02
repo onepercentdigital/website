@@ -162,8 +162,6 @@ export const footer = {
         { label: 'About', href: '/about' },
         { label: 'Enterprise', href: '/enterprise' },
         { label: 'Contact', href: '/apply' },
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Accessibility', href: '/accessibility' },
       ],
     },
   ],
