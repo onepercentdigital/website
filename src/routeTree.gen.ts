@@ -9,7 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SeoRouteImport } from './routes/seo'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PplRouteImport } from './routes/ppl'
 import { Route as MapsRouteImport } from './routes/maps'
 import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
@@ -18,6 +20,7 @@ import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as CustomersRouteImport } from './routes/customers'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ApplyRouteImport } from './routes/apply'
+import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
@@ -36,9 +39,19 @@ import { Route as SolutionsAutomotiveRouteImport } from './routes/solutions.auto
 import { Route as SolutionsAgricultureRouteImport } from './routes/solutions.agriculture'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SeoRoute = SeoRouteImport.update({
   id: '/seo',
   path: '/seo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PplRoute = PplRouteImport.update({
@@ -79,6 +92,11 @@ const CaseStudiesRoute = CaseStudiesRouteImport.update({
 const ApplyRoute = ApplyRouteImport.update({
   id: '/apply',
   path: '/apply',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccessibilityRoute = AccessibilityRouteImport.update({
+  id: '/accessibility',
+  path: '/accessibility',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -171,6 +189,7 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/accessibility': typeof AccessibilityRoute
   '/apply': typeof ApplyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
@@ -179,7 +198,9 @@ export interface FileRoutesByFullPath {
   '/llms.txt': typeof LlmsDottxtRoute
   '/maps': typeof MapsRoute
   '/ppl': typeof PplRoute
+  '/privacy': typeof PrivacyRoute
   '/seo': typeof SeoRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
@@ -199,6 +220,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/accessibility': typeof AccessibilityRoute
   '/apply': typeof ApplyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
@@ -207,7 +229,9 @@ export interface FileRoutesByTo {
   '/llms.txt': typeof LlmsDottxtRoute
   '/maps': typeof MapsRoute
   '/ppl': typeof PplRoute
+  '/privacy': typeof PrivacyRoute
   '/seo': typeof SeoRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
@@ -228,6 +252,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/accessibility': typeof AccessibilityRoute
   '/apply': typeof ApplyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/customers': typeof CustomersRoute
@@ -236,7 +261,9 @@ export interface FileRoutesById {
   '/llms.txt': typeof LlmsDottxtRoute
   '/maps': typeof MapsRoute
   '/ppl': typeof PplRoute
+  '/privacy': typeof PrivacyRoute
   '/seo': typeof SeoRoute
+  '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solutions/agriculture': typeof SolutionsAgricultureRoute
   '/solutions/automotive': typeof SolutionsAutomotiveRoute
@@ -258,6 +285,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/accessibility'
     | '/apply'
     | '/case-studies'
     | '/customers'
@@ -266,7 +294,9 @@ export interface FileRouteTypes {
     | '/llms.txt'
     | '/maps'
     | '/ppl'
+    | '/privacy'
     | '/seo'
+    | '/terms'
     | '/blog/$slug'
     | '/solutions/agriculture'
     | '/solutions/automotive'
@@ -286,6 +316,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/accessibility'
     | '/apply'
     | '/case-studies'
     | '/customers'
@@ -294,7 +325,9 @@ export interface FileRouteTypes {
     | '/llms.txt'
     | '/maps'
     | '/ppl'
+    | '/privacy'
     | '/seo'
+    | '/terms'
     | '/blog/$slug'
     | '/solutions/agriculture'
     | '/solutions/automotive'
@@ -314,6 +347,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/accessibility'
     | '/apply'
     | '/case-studies'
     | '/customers'
@@ -322,7 +356,9 @@ export interface FileRouteTypes {
     | '/llms.txt'
     | '/maps'
     | '/ppl'
+    | '/privacy'
     | '/seo'
+    | '/terms'
     | '/blog/$slug'
     | '/solutions/agriculture'
     | '/solutions/automotive'
@@ -343,6 +379,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AccessibilityRoute: typeof AccessibilityRoute
   ApplyRoute: typeof ApplyRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
   CustomersRoute: typeof CustomersRoute
@@ -351,7 +388,9 @@ export interface RootRouteChildren {
   LlmsDottxtRoute: typeof LlmsDottxtRoute
   MapsRoute: typeof MapsRoute
   PplRoute: typeof PplRoute
+  PrivacyRoute: typeof PrivacyRoute
   SeoRoute: typeof SeoRoute
+  TermsRoute: typeof TermsRoute
   BlogSlugRoute: typeof BlogSlugRoute
   SolutionsAgricultureRoute: typeof SolutionsAgricultureRoute
   SolutionsAutomotiveRoute: typeof SolutionsAutomotiveRoute
@@ -371,11 +410,25 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/seo': {
       id: '/seo'
       path: '/seo'
       fullPath: '/seo'
       preLoaderRoute: typeof SeoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ppl': {
@@ -432,6 +485,13 @@ declare module '@tanstack/react-router' {
       path: '/apply'
       fullPath: '/apply'
       preLoaderRoute: typeof ApplyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accessibility': {
+      id: '/accessibility'
+      path: '/accessibility'
+      fullPath: '/accessibility'
+      preLoaderRoute: typeof AccessibilityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -559,6 +619,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AccessibilityRoute: AccessibilityRoute,
   ApplyRoute: ApplyRoute,
   CaseStudiesRoute: CaseStudiesRoute,
   CustomersRoute: CustomersRoute,
@@ -567,7 +628,9 @@ const rootRouteChildren: RootRouteChildren = {
   LlmsDottxtRoute: LlmsDottxtRoute,
   MapsRoute: MapsRoute,
   PplRoute: PplRoute,
+  PrivacyRoute: PrivacyRoute,
   SeoRoute: SeoRoute,
+  TermsRoute: TermsRoute,
   BlogSlugRoute: BlogSlugRoute,
   SolutionsAgricultureRoute: SolutionsAgricultureRoute,
   SolutionsAutomotiveRoute: SolutionsAutomotiveRoute,

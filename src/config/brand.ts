@@ -75,7 +75,7 @@ export const brand: BrandConfig = {
 export const navigation = {
   main: [
     {
-      label: 'Organic Leads',
+      label: 'Organic Visibility',
       type: 'dropdown' as const,
       items: [
         { label: 'GEO', href: '/geo' },
@@ -138,7 +138,7 @@ export const navigation = {
 export const footer = {
   sections: [
     {
-      title: 'Organic Leads',
+      title: 'Organic Visibility',
       links: [
         { label: 'GEO', href: '/geo' },
         { label: 'SEO', href: '/seo' },
