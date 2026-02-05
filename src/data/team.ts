@@ -18,7 +18,7 @@ export const team: TeamMember[] = [
   {
     name: 'Luke Jordon',
     initials: 'LJ',
-    imageId: '5de21c0f-6df1-46dc-9a58-541429cc9500',
+    imageId: '8440624d-eb0f-49a8-792a-f630c4777400',
     title: 'Co-Founder & Lead Optimization Architect',
     bio: [
       "Having worked with over 100 brands since 2015, Luke is a seasoned expert in top ranking SEO engineering and scaling strategies. His unique talent lies in effortlessly navigating Google algorithm updates while continuously boosting each client's online presence and securing maximum market share in their industry.",
@@ -42,7 +42,7 @@ export const team: TeamMember[] = [
   {
     name: 'Austin Falk',
     initials: 'AF',
-    imageId: 'ac9f6908-abc3-4fa6-4ae9-d81591555500',
+    imageId: 'dbce3953-35ca-4e4f-2133-0b07a31c9000',
     title: 'Account Manager & Optimization Architect',
     bio: [
       "An advocate for sharing the stories of individuals and their passion projects, Austin develops strategic technical visions for One Percent Digital's clients with recommendations and roadmaps for proposed solutions. With a knack for efficiency and long-term adaptability, he helps clients traverse the ever-changing digital landscape.",
