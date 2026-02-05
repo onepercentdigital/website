@@ -18,7 +18,7 @@ export const team: TeamMember[] = [
   {
     name: 'Luke Jordon',
     initials: 'LJ',
-    imageId: '5de21c0f-6df1-46dc-9a58-541429cc9500',
+    imageId: '8440624d-eb0f-49a8-792a-f630c4777400',
     title: 'Co-Founder & Lead Optimization Architect',
     bio: [
       "Having worked with over 100 brands since 2015, Luke is a seasoned expert in top ranking SEO engineering and scaling strategies. His unique talent lies in effortlessly navigating Google algorithm updates while continuously boosting each client's online presence and securing maximum market share in their industry.",
