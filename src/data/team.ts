@@ -42,7 +42,7 @@ export const team: TeamMember[] = [
   {
     name: 'Austin Falk',
     initials: 'AF',
-    imageId: 'ac9f6908-abc3-4fa6-4ae9-d81591555500',
+    imageId: 'dbce3953-35ca-4e4f-2133-0b07a31c9000',
     title: 'Account Manager & Optimization Architect',
     bio: [
       "An advocate for sharing the stories of individuals and their passion projects, Austin develops strategic technical visions for One Percent Digital's clients with recommendations and roadmaps for proposed solutions. With a knack for efficiency and long-term adaptability, he helps clients traverse the ever-changing digital landscape.",
