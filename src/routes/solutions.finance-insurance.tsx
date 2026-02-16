@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/finance-insurance')({
   component: FinanceInsurancePage,
   head: () =>
     generateMetaTags({
-      title: 'Finance & Insurance Marketing - Rank in AI & Generate Clients',
+      title: 'Finance & Insurance SEO - Generate More Client Leads',
       description:
-        'Get recommended when prospects research financial services. Build trust and generate qualified leads through GEO, SEO, and targeted strategies.',
+        'Finance and insurance SEO that generates client leads. Build trust online and get found when prospects research financial services.',
       url: 'https://op.digital/solutions/finance-insurance',
     }),
 });

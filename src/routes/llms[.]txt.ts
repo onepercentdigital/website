@@ -15,12 +15,19 @@ export const Route = createFileRoute('/llms.txt')({
 - Google Maps Optimization: https://op.digital/maps
 
 ## Industries Served
-- Real Estate: https://op.digital/solutions/real-estate
-- Healthcare: https://op.digital/solutions/healthcare
-- Legal: https://op.digital/solutions/legal
-- Financial Services: https://op.digital/solutions/financial-services
-- Home Services: https://op.digital/solutions/home-services
-- And more at https://op.digital/solutions
+- Agriculture & Equipment: https://op.digital/solutions/agriculture
+- Automotive: https://op.digital/solutions/automotive
+- Construction & Contractors: https://op.digital/solutions/construction
+- E-commerce & Retail: https://op.digital/solutions/ecommerce
+- Finance & Insurance: https://op.digital/solutions/finance-insurance
+- Health & Wellness: https://op.digital/solutions/health-wellness
+- Hospitality & Restaurants: https://op.digital/solutions/hospitality
+- Law Firms & Legal: https://op.digital/solutions/legal
+- Logistics & Transportation: https://op.digital/solutions/logistics
+- Manufacturing & Industrial: https://op.digital/solutions/manufacturing
+- Real Estate & Development: https://op.digital/solutions/real-estate
+- Technology & SaaS: https://op.digital/solutions/technology
+- All Industries: https://op.digital/solutions
 
 ## Resources
 - Blog: https://op.digital/blog

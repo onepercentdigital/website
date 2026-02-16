@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/manufacturing')({
   component: ManufacturingPage,
   head: () =>
     generateMetaTags({
-      title: 'Manufacturing Marketing - Rank in AI & Generate B2B Leads',
+      title: 'Manufacturing SEO & Marketing - Generate B2B Leads',
       description:
-        'Get cited when AI recommends industrial suppliers. Drive qualified B2B leads through GEO, SEO, and targeted outreach to decision-makers.',
+        'Manufacturing SEO and B2B lead generation. Get found when buyers research industrial suppliers through search and AI.',
       url: 'https://op.digital/solutions/manufacturing',
     }),
 });

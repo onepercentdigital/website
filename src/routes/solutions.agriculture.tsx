@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/agriculture')({
   component: AgriculturePage,
   head: () =>
     generateMetaTags({
-      title: 'Agriculture Marketing - Rank in AI & Generate Equipment Leads',
+      title: 'Agriculture & Equipment SEO - Generate More Leads',
       description:
-        'Get recommended when farmers search for equipment and services. Reach agricultural buyers through GEO, SEO, and targeted lead generation.',
+        'Agriculture and equipment SEO that reaches farmers and buyers. Generate qualified leads through search, AI, and targeted outreach.',
       url: 'https://op.digital/solutions/agriculture',
     }),
 });

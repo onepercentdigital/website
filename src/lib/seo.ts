@@ -30,8 +30,6 @@ export function generateMetaTags(config: SEOConfig) {
   return {
     meta: [
       { title },
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'description', content: description },
 
       // Open Graph
@@ -97,7 +95,9 @@ export function generateMetaTags(config: SEOConfig) {
         : []),
     ].filter(Boolean),
     links: [
-      ...(canonical ? [{ rel: 'canonical', href: canonical }] : []),
+      ...(canonical || config.url
+        ? [{ rel: 'canonical', href: canonical || config.url }]
+        : []),
     ].filter(Boolean),
   };
 }

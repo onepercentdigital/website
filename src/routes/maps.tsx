@@ -41,9 +41,9 @@ export const Route = createFileRoute('/maps')({
   component: MapsPage,
   head: () =>
     generateMetaTags({
-      title: 'Maps Optimization - Own Local Search Results',
+      title: 'Google Maps SEO - Dominate Local Search Results',
       description:
-        'Own Google Maps and local search. Get found when customers search nearby with comprehensive GBP optimization, local pack rankings, and multi-location management.',
+        'Rank #1 on Google Maps and the local pack. GBP optimization, review management, and local SEO strategies for single and multi-location businesses.',
       url: 'https://op.digital/maps',
     }),
 });
@@ -224,9 +224,9 @@ function MapsPage() {
   const serviceSchema = {
     type: 'Service' as const,
     data: {
-      name: 'Maps Optimization',
+      name: 'Google Maps SEO',
       description:
-        'Own Google Maps and local search results. Comprehensive GBP optimization, local pack rankings, and multi-location management.',
+        'Rank #1 on Google Maps and the local pack. GBP optimization, review management, and local SEO strategies for single and multi-location businesses.',
       url: 'https://op.digital/maps',
       serviceType: 'Local Search Engine Optimization',
       provider: {
@@ -250,7 +250,7 @@ function MapsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
-              Own Local Search with Maps Optimization
+              Google Maps SEO That Wins Local Search
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Get found when customers search nearby. Rank #1 in Maps across

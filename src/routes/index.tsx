@@ -83,9 +83,9 @@ export const Route = createFileRoute('/')({
   component: HomePage,
   head: () =>
     generateMetaTags({
-      title: 'Dominate Your Industry - Rank in AI and Google',
+      title: 'One Percent Digital - GEO, SEO & Lead Generation Agency',
       description:
-        'Get recommended by ChatGPT and rank #1 on Google. GEO, SEO, and exclusive lead generation for brands ready to dominate their market.',
+        'One Percent Digital helps businesses get found in AI search, rank on Google, and generate exclusive leads through GEO, SEO, and PPL.',
       url: 'https://op.digital/',
     }),
 });
@@ -105,7 +105,7 @@ function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
-              Dominate Your Industry
+              Dominate Your Industry with GEO, SEO & PPL
             </h1>
 
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">

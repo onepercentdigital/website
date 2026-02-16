@@ -35,6 +35,16 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         title: brand.seo.defaultTitle,
       },
+      {
+        name: 'theme-color',
+        content: '#ffffff',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        name: 'theme-color',
+        content: '#252525',
+        media: '(prefers-color-scheme: dark)',
+      },
     ],
     links: [
       {
@@ -53,7 +63,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
           description: brand.seo.defaultDescription,
           publisher: {
             '@type': 'Organization',
-            name: brand.seo.defaultTitle,
+            name: brand.displayName,
             url: 'https://op.digital',
             logo: 'https://op.digital/logo.png',
           },

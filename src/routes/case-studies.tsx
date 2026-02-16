@@ -9,6 +9,7 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { memo } from 'react';
 import { Image } from '@/components/Image';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -30,7 +31,7 @@ export const Route = createFileRoute('/case-studies')({
   component: CaseStudiesPage,
   head: () =>
     generateMetaTags({
-      title: 'Case Studies - Real Results From Real Businesses',
+      title: 'SEO & Lead Generation Case Studies - Proven Results',
       description:
         'See how we helped Revology Cars exit, grew Goldfarb 10x, and made Royal Covers #1 in Arizona through GEO, SEO, and targeted lead generation.',
       url: 'https://op.digital/case-studies',
@@ -46,12 +47,34 @@ function CaseStudiesPage() {
 
   return (
     <>
+      <SEO
+        structuredData={{
+          type: 'BreadcrumbList',
+          data: {
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://op.digital/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Case Studies',
+                item: 'https://op.digital/case-studies',
+              },
+            ],
+          },
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Real Results from Real Businesses
+              SEO & Lead Generation Case Studies
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Don't just take our word for it. See how we've helped businesses
