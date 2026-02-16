@@ -12,6 +12,7 @@ import {
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { Image } from '@/components/Image';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -47,6 +48,28 @@ function CustomersPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <SEO
+        structuredData={{
+          type: 'BreadcrumbList',
+          data: {
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://op.digital/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Customers',
+                item: 'https://op.digital/customers',
+              },
+            ],
+          },
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">

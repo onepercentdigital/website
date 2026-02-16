@@ -55,7 +55,27 @@ function SolutionsLandingPage() {
 
   return (
     <div className="overflow-hidden">
-      <SEO />
+      <SEO
+        structuredData={{
+          type: 'BreadcrumbList',
+          data: {
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://op.digital/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Solutions',
+                item: 'https://op.digital/solutions',
+              },
+            ],
+          },
+        }}
+      />
 
       {/* Hero Section */}
       <section className="px-6 py-16 lg:py-20">

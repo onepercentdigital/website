@@ -97,7 +97,9 @@ export function generateMetaTags(config: SEOConfig) {
         : []),
     ].filter(Boolean),
     links: [
-      ...(canonical ? [{ rel: 'canonical', href: canonical }] : []),
+      ...(canonical || config.url
+        ? [{ rel: 'canonical', href: canonical || config.url }]
+        : []),
     ].filter(Boolean),
   };
 }

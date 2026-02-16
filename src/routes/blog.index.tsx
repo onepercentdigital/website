@@ -9,6 +9,7 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { memo } from 'react';
 import { Image } from '@/components/Image';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { getAllPosts } from '@/lib/blog';
@@ -36,6 +37,28 @@ function BlogIndexPage() {
 
   return (
     <>
+      <SEO
+        structuredData={{
+          type: 'BreadcrumbList',
+          data: {
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://op.digital/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Blog',
+                item: 'https://op.digital/blog',
+              },
+            ],
+          },
+        }}
+      />
+
       {/* Hero Section */}
       <section className="bg-background px-6 py-16 lg:py-20">
         <div className="mx-auto max-w-7xl">
