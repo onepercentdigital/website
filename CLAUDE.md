@@ -364,8 +364,11 @@ src/
 │   ├── index.tsx      # Homepage (reference implementation)
 │   ├── seo.tsx, geo.tsx, ppl.tsx, maps.tsx, enterprise.tsx  # Service pages
 │   ├── about.tsx, customers.tsx, case-studies.tsx, apply.tsx  # Marketing pages
+│   ├── accessibility.tsx, privacy.tsx, terms.tsx  # Legal pages
 │   ├── blog.index.tsx, blog.$slug.tsx  # Blog
-│   └── solutions.*.tsx  # Solutions index + 12 industry pages
+│   ├── solutions.*.tsx  # Solutions index + 12 industry pages
+│   └── llms[.]txt.ts  # LLM-friendly site documentation
+├── scripts/           # Build & maintenance scripts
 └── types/             # TypeScript type definitions
 ```
 
@@ -386,6 +389,7 @@ src/
 | Solution template | `src/components/SolutionPageTemplate.tsx` |
 | Production server | `server.ts` |
 | Blog MDX config | `content-collections.ts` |
+| Sitemap normalization | `scripts/normalize-sitemap.ts` |
 
 ---
 
@@ -419,6 +423,7 @@ src/
 - `docs/CLOUDFLARE-IMAGES.md` - Image CDN setup
 - `docs/CLOUDFLARE-CACHE-RULES.md` - Cloudflare caching configuration
 - `docs/KNOWN-ISSUES.md` - Platform limitations (iOS Safari)
+- `docs/ACCESSIBILITY.md` - Color contrast requirements (WCAG AA)
 
 ## Blog (Static MDX)
 
