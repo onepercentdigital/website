@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "start": "bun run server.ts",
-    "build": "vite build && tsc --noEmit",
+    "build": "vite build && bun run scripts/normalize-sitemap.ts && tsc --noEmit",
     "preview": "bun run build && bun run start",
     "test": "vitest run",
     "type": "tsc --noEmit",
