@@ -250,7 +250,7 @@ function SEOPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
-              Drive Sustainable Growth Through Search Excellence
+              SEO That Drives Sustainable Growth
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Proven SEO strategies that deliver qualified traffic, higher

@@ -25,7 +25,7 @@ export const Route = createFileRoute('/about')({
   component: AboutPage,
   head: () =>
     generateMetaTags({
-      title: 'Meet the Team - One Percent Digital',
+      title: 'About One Percent Digital - Our Team & Approach',
       description:
         'Entrepreneurs who built and sold their own brands. We bring 10+ years of experience in GEO, SEO, and lead generation to help you dominate your market.',
       url: 'https://op.digital/about',
@@ -67,7 +67,7 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
-              Meet the Team Behind Your Success
+              Meet the One Percent Digital Team
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               We're not just marketing experts. We're entrepreneurs with a

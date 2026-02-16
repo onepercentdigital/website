@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/real-estate')({
   component: RealEstatePage,
   head: () =>
     generateMetaTags({
-      title: 'Real Estate Marketing - Rank in AI & Generate Buyer Leads',
+      title: 'Real Estate SEO & Marketing - Generate Buyer & Seller Leads',
       description:
-        'Get recommended when buyers and sellers search for agents. Own property searches through GEO, SEO, and targeted lead generation.',
+        'Real estate SEO that generates buyer and seller leads. Rank for property searches and get recommended by AI in your market.',
       url: 'https://op.digital/solutions/real-estate',
     }),
 });

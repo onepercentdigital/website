@@ -27,9 +27,9 @@ export const Route = createFileRoute('/customers')({
   component: CustomersPage,
   head: () =>
     generateMetaTags({
-      title: 'Our Customers - Brands That Dominate Their Markets',
+      title: 'Our Clients & Results - One Percent Digital',
       description:
-        'Join Grove Bay Hospitality, Sorting Robotics, Revology Cars, and other industry leaders who trust us to drive AI visibility, search rankings, and qualified leads.',
+        'Grove Bay Hospitality, Sorting Robotics, Revology Cars, and other brands that trust One Percent Digital for GEO, SEO, and lead generation.',
       url: 'https://op.digital/customers',
     }),
 });
@@ -75,7 +75,7 @@ function CustomersPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Industry Leaders Who Trust Us
+              Our Clients and Their Results
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               From Michelin-recognized restaurants to cutting-edge robotics

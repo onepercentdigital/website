@@ -44,7 +44,7 @@ export const Route = createFileRoute('/enterprise')({
     generateMetaTags({
       title: 'Enterprise Solutions - GEO, SEO & Lead Generation at Scale',
       description:
-        'White-glove GEO, SEO, and PPL for multi-location enterprises. Dedicated support, custom reporting, and strategies built for organizations that demand results.',
+        'Enterprise GEO, SEO, and PPL for multi-location brands. Dedicated support, custom reporting, and strategies built for scale.',
       url: 'https://op.digital/enterprise',
     }),
 });
@@ -85,7 +85,7 @@ function EnterprisePage() {
     data: {
       name: 'Enterprise GEO, SEO & Lead Generation',
       description:
-        'White-glove GEO, SEO, and PPL for multi-location enterprises. Dedicated support, custom reporting, and strategies built for organizations that demand results.',
+        'Enterprise GEO, SEO, and PPL for multi-location brands. Dedicated support, custom reporting, and strategies built for scale.',
       url: 'https://op.digital/enterprise',
       serviceType: 'Enterprise Digital Marketing',
       provider: {

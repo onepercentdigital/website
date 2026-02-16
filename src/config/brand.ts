@@ -64,7 +64,7 @@ export const brand: BrandConfig = {
     defaultTitle: 'One Percent Digital',
     titleTemplate: '%s | One Percent Digital',
     defaultDescription:
-      'Recommended by ChatGPT. Page 1 on Google. Exclusive pre-qualified leads on demand. This is what market dominance looks like.',
+      'GEO, SEO, and pay-per-lead services from One Percent Digital. Get found in AI search, rank on Google, and generate exclusive leads.',
     defaultOgImage: '/og-image.png', // We'll create this
   },
 };

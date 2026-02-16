@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/ecommerce')({
   component: EcommercePage,
   head: () =>
     generateMetaTags({
-      title: 'E-commerce Marketing - Rank in AI & Drive Online Sales',
+      title: 'E-commerce SEO & Marketing - Drive More Online Sales',
       description:
-        'Get your products recommended by AI and rank on Google Shopping. Compete with Amazon through GEO, SEO, and conversion-focused strategies.',
+        'E-commerce SEO and marketing that drives online sales. Rank on Google Shopping, get cited by AI, and compete with Amazon.',
       url: 'https://op.digital/solutions/ecommerce',
     }),
 });

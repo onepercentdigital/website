@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/construction')({
   component: ConstructionPage,
   head: () =>
     generateMetaTags({
-      title: 'Construction Marketing - Rank in AI & Generate Project Leads',
+      title: 'Construction SEO & Marketing - Generate Project Leads',
       description:
-        'Get recommended when property owners search for contractors. Win local searches and drive qualified project leads through GEO, SEO, and PPL.',
+        'Construction SEO and lead generation for contractors. Win local searches and drive qualified project leads through SEO and PPL.',
       url: 'https://op.digital/solutions/construction',
     }),
 });

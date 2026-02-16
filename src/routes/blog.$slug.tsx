@@ -47,7 +47,7 @@ export const Route = createFileRoute('/blog/$slug')({
     const keywords = generateKeywordsFromTitle(post.title, category?.name);
 
     return generateMetaTags({
-      title: post.seo?.metaTitle || `${post.title} | One Percent Digital Blog`,
+      title: post.seo?.metaTitle || post.title,
       description:
         post.seo?.metaDescription ||
         post.excerpt ||

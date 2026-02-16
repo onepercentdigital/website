@@ -27,7 +27,7 @@ export const Route = createFileRoute('/solutions/')({
   component: SolutionsLandingPage,
   head: () =>
     generateMetaTags({
-      title: 'Industry Solutions - GEO, SEO & Lead Generation by Vertical',
+      title: 'Industry-Specific SEO & Marketing Solutions',
       description:
         'Discover AI visibility, search optimization, and lead generation strategies tailored to your industry. We drive results across 12 key verticals.',
       url: 'https://op.digital/solutions',
@@ -82,7 +82,7 @@ function SolutionsLandingPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
-              Industry-Specific Search Solutions
+              Industry-Specific SEO & Marketing Solutions
             </h1>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Tailored GEO, SEO, and PPL strategies for your industry. We

@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/automotive')({
   component: AutomotivePage,
   head: () =>
     generateMetaTags({
-      title: 'Automotive Marketing - Rank in AI & Generate Vehicle Leads',
+      title: 'Automotive SEO & Marketing - Generate Vehicle Leads',
       description:
-        'Get your dealership recommended by AI and dominate local search. Drive qualified buyers through GEO, SEO, and targeted lead generation.',
+        'Automotive SEO and lead generation for dealerships. Rank in local search, get cited by AI, and drive qualified buyers.',
       url: 'https://op.digital/solutions/automotive',
     }),
 });

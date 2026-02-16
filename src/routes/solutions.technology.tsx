@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/technology')({
   component: TechnologyPage,
   head: () =>
     generateMetaTags({
-      title: 'SaaS & Tech Marketing - Rank in AI & Drive Demo Requests',
+      title: 'SaaS & Tech SEO - Drive Demo Requests & Signups',
       description:
-        'Get your software recommended by AI when buyers research solutions. Accelerate growth through GEO, SEO, and qualified demo generation.',
+        'SaaS and tech SEO that drives demo requests and signups. Get recommended by AI when buyers research software solutions.',
       url: 'https://op.digital/solutions/technology',
     }),
 });

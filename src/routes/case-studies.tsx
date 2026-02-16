@@ -31,7 +31,7 @@ export const Route = createFileRoute('/case-studies')({
   component: CaseStudiesPage,
   head: () =>
     generateMetaTags({
-      title: 'Case Studies - Real Results From Real Businesses',
+      title: 'SEO & Lead Generation Case Studies - Proven Results',
       description:
         'See how we helped Revology Cars exit, grew Goldfarb 10x, and made Royal Covers #1 in Arizona through GEO, SEO, and targeted lead generation.',
       url: 'https://op.digital/case-studies',
@@ -74,7 +74,7 @@ function CaseStudiesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:text-7xl xl:text-8xl">
-              Real Results from Real Businesses
+              SEO & Lead Generation Case Studies
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Don't just take our word for it. See how we've helped businesses

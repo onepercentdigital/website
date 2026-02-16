@@ -40,7 +40,7 @@ export const Route = createFileRoute('/geo')({
   component: GEOPage,
   head: () =>
     generateMetaTags({
-      title: 'Generative Engine Optimization - Rank in AI Search',
+      title: 'Generative Engine Optimization (GEO) Services',
       description:
         'Get cited by ChatGPT, Claude, and Perplexity. GEO positions your brand as the answer when AI recommends solutions in your industry.',
       url: 'https://op.digital/geo',
@@ -249,7 +249,7 @@ function GEOPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 font-extrabold text-5xl leading-[0.95] tracking-tighter lg:mb-8 lg:text-7xl xl:text-8xl">
-              Lead AI Search Results and Capture Mind Share
+              Generative Engine Optimization for AI Search Leadership
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed lg:text-lg">
               Position your brand at the forefront of ChatGPT, Claude,

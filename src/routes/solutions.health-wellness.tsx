@@ -7,9 +7,9 @@ export const Route = createFileRoute('/solutions/health-wellness')({
   component: HealthWellnessPage,
   head: () =>
     generateMetaTags({
-      title: 'Health & Wellness Marketing - Rank in AI & Attract Patients',
+      title: 'Health & Wellness SEO - Attract More Patients Online',
       description:
-        'Get recommended when patients search for care. Build trust and attract qualified clients through GEO, SEO, and targeted lead generation.',
+        'Health and wellness SEO that attracts patients online. Build trust, rank locally, and generate qualified leads for your practice.',
       url: 'https://op.digital/solutions/health-wellness',
     }),
 });
