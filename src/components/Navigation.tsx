@@ -302,18 +302,8 @@ function MobileSolutionsAccordion() {
         <AccordionTrigger className="min-h-11 px-3 py-2 font-normal text-sm hover:no-underline">
           Solutions
         </AccordionTrigger>
-        <AccordionContent>
+        <AccordionContent className="[&_a]:no-underline">
           <div className="flex max-h-72 flex-col gap-1 overflow-y-auto pl-2">
-            <SheetClose
-              render={
-                <Link
-                  to="/solutions"
-                  className="min-h-11 rounded-lg px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-muted"
-                />
-              }
-            >
-              View All Solutions
-            </SheetClose>
             {solutions.map((solution) => {
               const icon = industryIcons[solution.slug] || fallbackIcon;
               return (
@@ -337,6 +327,16 @@ function MobileSolutionsAccordion() {
                 </SheetClose>
               );
             })}
+            <SheetClose
+              render={
+                <Link
+                  to="/solutions"
+                  className="min-h-11 rounded-lg px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-muted"
+                />
+              }
+            >
+              View All Solutions
+            </SheetClose>
           </div>
         </AccordionContent>
       </AccordionItem>
