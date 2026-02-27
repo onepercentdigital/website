@@ -108,6 +108,8 @@ function SolutionsFlyout() {
       <button
         type="button"
         onClick={handleClick}
+        aria-expanded={open}
+        aria-haspopup="true"
         className="flex w-full items-center justify-between gap-1.5 rounded-xl p-3 text-sm outline-none transition-all hover:bg-muted focus:bg-muted focus-visible:outline-1 focus-visible:ring-[3px] focus-visible:ring-ring/50"
       >
         Solutions
