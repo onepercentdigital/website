@@ -31,6 +31,7 @@ export const Route = createFileRoute('/llms.txt')({
 
 ## Resources
 - Blog: https://op.digital/blog
+- Customers: https://op.digital/customers
 - Case Studies: https://op.digital/case-studies
 - About Us: https://op.digital/about
 

@@ -1,19 +1,7 @@
 import {
   Agreement01Icon,
   ArrowRight01Icon,
-  Briefcase01Icon,
   Building06Icon,
-  CodeIcon,
-  DeliveryBox01Icon,
-  DeliveryTruck01Icon,
-  Factory01Icon,
-  FavouriteIcon,
-  Home01Icon,
-  JusticeScale01Icon,
-  LibraryIcon,
-  Restaurant01Icon,
-  ShoppingCart01Icon,
-  TractorIcon,
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { createFileRoute, Link } from '@tanstack/react-router';
@@ -21,6 +9,7 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAllSolutions } from '@/data/solutions';
+import { fallbackIcon, industryIcons } from '@/lib/industry-icons';
 import { generateMetaTags } from '@/lib/seo';
 
 export const Route = createFileRoute('/solutions/')({
@@ -33,22 +22,6 @@ export const Route = createFileRoute('/solutions/')({
       url: 'https://op.digital/solutions',
     }),
 });
-
-// Icon mapping for industries - hoisted outside component to avoid recreation on each render
-const industryIcons: Record<string, typeof Restaurant01Icon> = {
-  hospitality: Restaurant01Icon,
-  ecommerce: ShoppingCart01Icon,
-  manufacturing: Factory01Icon,
-  logistics: DeliveryTruck01Icon,
-  automotive: DeliveryBox01Icon,
-  construction: Building06Icon,
-  agriculture: TractorIcon,
-  technology: CodeIcon,
-  'health-wellness': FavouriteIcon,
-  'finance-insurance': LibraryIcon,
-  legal: JusticeScale01Icon,
-  'real-estate': Home01Icon,
-};
 
 function SolutionsLandingPage() {
   const solutions = getAllSolutions();
@@ -197,7 +170,7 @@ function SolutionsLandingPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((solution) => {
-              const icon = industryIcons[solution.slug] || Briefcase01Icon;
+              const icon = industryIcons[solution.slug] || fallbackIcon;
               return (
                 <Link
                   key={solution.id}

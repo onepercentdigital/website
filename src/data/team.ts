@@ -39,18 +39,6 @@ export const team: TeamMember[] = [
     shortBio:
       'Co-founder with a decade of e-commerce experience. Mackey treats each business like his own, bringing laser focus to every SEO and GEO strategy.',
   },
-  {
-    name: 'Austin Falk',
-    initials: 'AF',
-    imageId: 'dbce3953-35ca-4e4f-2133-0b07a31c9000',
-    title: 'Account Manager & Optimization Architect',
-    bio: [
-      "An advocate for sharing the stories of individuals and their passion projects, Austin develops strategic technical visions for One Percent Digital's clients with recommendations and roadmaps for proposed solutions. With a knack for efficiency and long-term adaptability, he helps clients traverse the ever-changing digital landscape.",
-      'A storyteller with public-facing experience in various industries, and an advocate for truth, Austin is constantly learning. He strives to leave a positive mark on this world through the power of storytelling, relentless effort, and camaraderie with fellow creatives and developers. His curious spirit delivers innovation and performant results consistently.',
-    ],
-    shortBio:
-      'Account manager who crafts strategic technical roadmaps for clients. Austin brings efficiency and adaptability to every digital challenge.',
-  },
 ];
 
 /**

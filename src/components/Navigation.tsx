@@ -1,6 +1,12 @@
-import { Menu09Icon, Moon02Icon, Sun01Icon } from '@hugeicons/core-free-icons';
+import {
+  ArrowRight01Icon,
+  Menu09Icon,
+  Moon02Icon,
+  Sun01Icon,
+} from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Link } from '@tanstack/react-router';
+import { useCallback, useState } from 'react';
 import { Logo } from '@/components/Logo';
 import {
   Accordion,
@@ -27,7 +33,11 @@ import {
 } from '@/components/ui/sheet';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { navigation } from '@/config/brand';
+import { getAllSolutions } from '@/data/solutions';
 import { useTheme } from '@/hooks/useTheme';
+import { fallbackIcon, industryIcons } from '@/lib/industry-icons';
+
+const solutions = getAllSolutions();
 
 export function Navigation() {
   return (
@@ -47,14 +57,18 @@ export function Navigation() {
                 <NavigationMenuItem key={item.label}>
                   <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    {item.items.map((subItem) => (
-                      <NavigationMenuLink
-                        key={subItem.href}
-                        render={<Link to={subItem.href} />}
-                      >
-                        {subItem.label}
-                      </NavigationMenuLink>
-                    ))}
+                    {item.items.map((subItem) =>
+                      subItem.href === '/solutions' ? (
+                        <SolutionsFlyout key={subItem.href} />
+                      ) : (
+                        <NavigationMenuLink
+                          key={subItem.href}
+                          render={<Link to={subItem.href} />}
+                        >
+                          {subItem.label}
+                        </NavigationMenuLink>
+                      ),
+                    )}
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               ) : (
@@ -79,6 +93,74 @@ export function Navigation() {
         <MobileMenu />
       </nav>
     </header>
+  );
+}
+
+function SolutionsFlyout() {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = useCallback(() => {
+    setOpen((prev) => !prev);
+  }, []);
+
+  return (
+    <div className="group/solutions relative">
+      <button
+        type="button"
+        onClick={handleClick}
+        aria-expanded={open}
+        aria-haspopup="true"
+        className="flex w-full items-center justify-between gap-1.5 rounded-xl p-3 text-sm outline-none transition-all hover:bg-muted focus:bg-muted focus-visible:outline-1 focus-visible:ring-[3px] focus-visible:ring-ring/50"
+      >
+        Solutions
+        <HugeiconsIcon
+          icon={ArrowRight01Icon}
+          size={16}
+          strokeWidth={2}
+          className="text-muted-foreground"
+        />
+      </button>
+      <div
+        className={`invisible absolute top-0 left-full pl-1 opacity-0 transition-[visibility,opacity] duration-150 group-focus-within/solutions:visible group-focus-within/solutions:opacity-100 group-hover/solutions:visible group-hover/solutions:opacity-100 ${open ? 'visible! opacity-100!' : ''}`}
+      >
+        <div className="w-64 rounded-2xl bg-popover p-2.5 pr-3 shadow-2xl ring-1 ring-foreground/5">
+          <div className="flex max-h-80 flex-col gap-0.5 overflow-y-auto">
+            {solutions.map((solution) => {
+              const icon = industryIcons[solution.slug] || fallbackIcon;
+              return (
+                <Link
+                  key={solution.slug}
+                  // biome-ignore lint/suspicious/noExplicitAny: Solutions use static routes
+                  to={`/solutions/${solution.slug}` as any}
+                  className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm outline-none transition-all hover:bg-muted focus:bg-muted focus-visible:outline-1 focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                >
+                  <HugeiconsIcon
+                    icon={icon}
+                    size={16}
+                    strokeWidth={1.5}
+                    className="shrink-0 text-muted-foreground"
+                  />
+                  {solution.name}
+                </Link>
+              );
+            })}
+          </div>
+          <Separator className="my-1.5" />
+          <Link
+            to="/solutions"
+            className="flex items-center gap-2 rounded-xl px-3 py-2 font-medium text-sm outline-none transition-all hover:bg-muted focus:bg-muted focus-visible:outline-1 focus-visible:ring-[3px] focus-visible:ring-ring/50"
+          >
+            View All Solutions
+            <HugeiconsIcon
+              icon={ArrowRight01Icon}
+              size={16}
+              strokeWidth={2}
+              className="text-muted-foreground"
+            />
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -128,20 +210,24 @@ function MobileMenu() {
                       {item.label}
                     </AccordionTrigger>
                     <AccordionContent className="[&_a]:no-underline">
-                      <div className="flex max-h-72 flex-col gap-1 overflow-y-auto">
-                        {item.items.map((subItem) => (
-                          <SheetClose
-                            key={subItem.href}
-                            render={
-                              <Link
-                                to={subItem.href}
-                                className="min-h-11 rounded-lg px-3 py-2 text-foreground text-sm transition-colors hover:bg-muted"
-                              />
-                            }
-                          >
-                            {subItem.label}
-                          </SheetClose>
-                        ))}
+                      <div className="flex flex-col gap-1">
+                        {item.items.map((subItem) =>
+                          subItem.href === '/solutions' ? (
+                            <MobileSolutionsAccordion key={subItem.href} />
+                          ) : (
+                            <SheetClose
+                              key={subItem.href}
+                              render={
+                                <Link
+                                  to={subItem.href}
+                                  className="min-h-11 rounded-lg px-3 py-2 text-foreground text-sm transition-colors hover:bg-muted"
+                                />
+                              }
+                            >
+                              {subItem.label}
+                            </SheetClose>
+                          ),
+                        )}
                       </div>
                     </AccordionContent>
                   </AccordionItem>
@@ -205,5 +291,57 @@ function MobileMenu() {
         </SheetContent>
       </Sheet>
     </div>
+  );
+}
+
+function MobileSolutionsAccordion() {
+  return (
+    <Accordion className="gap-0 rounded-none border-0">
+      <AccordionItem
+        value="solutions"
+        className="border-none data-open:bg-transparent"
+      >
+        <AccordionTrigger className="min-h-11 px-3 py-2 font-normal text-sm hover:no-underline">
+          Solutions
+        </AccordionTrigger>
+        <AccordionContent className="[&_a]:no-underline">
+          <div className="flex max-h-72 flex-col gap-1 overflow-y-auto pl-2">
+            {solutions.map((solution) => {
+              const icon = industryIcons[solution.slug] || fallbackIcon;
+              return (
+                <SheetClose
+                  key={solution.slug}
+                  render={
+                    <Link
+                      // biome-ignore lint/suspicious/noExplicitAny: Solutions use static routes
+                      to={`/solutions/${solution.slug}` as any}
+                      className="flex min-h-11 items-center gap-2.5 rounded-lg px-3 py-2 text-foreground text-sm transition-colors hover:bg-muted"
+                    />
+                  }
+                >
+                  <HugeiconsIcon
+                    icon={icon}
+                    size={16}
+                    strokeWidth={1.5}
+                    className="shrink-0 text-muted-foreground"
+                  />
+                  {solution.name}
+                </SheetClose>
+              );
+            })}
+            <SheetClose
+              render={
+                <Link
+                  to="/solutions"
+                  className="min-h-11 rounded-lg px-3 py-2 font-medium text-foreground text-sm transition-colors hover:bg-muted"
+                />
+              }
+            >
+              View All Solutions
+            </SheetClose>
+          </div>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   );
 }

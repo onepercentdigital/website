@@ -227,7 +227,7 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-4xl justify-center gap-8 lg:grid-cols-2">
             {teamMembers.map((member) => (
               <Card key={member.name}>
                 <CardHeader className="justify-items-center text-center">
